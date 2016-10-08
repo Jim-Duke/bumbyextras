@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contents xmlns="http://rjstevensmusic.com/PresentationCreator/Schema/HymnalInformation.xsd">
+  <hymnal>
+    <name>Bumby Extras</name>
+    <hymn number="B-001" title="My Shepherd Will Supply My Need">
+      <songLeaderInfo beatPattern="3" key="C" startingPitch="DO" time="3/4" startingBeat="3" />
+      <originator name="Isaac Watts" role="Writer" type="Individual" />
+      <originator name="American Folksong" role="Composer" type="Individual" />
+      <originator name="Michael Duke" role="Arranger" type="Individual" />
+      <copyright>
+        <copyrightHolder name="Michael Duke" type="Individual"></copyrightHolder>
+        <startYear>2013</startYear>
+        <scope>Standard</scope>
+        <portionCopyrighted>Arrangement</portionCopyrighted>
+      </copyright>
+      <scripture>Psalm 23</scripture>
+    </hymn>
+    <hymn number="B-002" title="Teach Me Lord To Wait">
+      <songLeaderInfo beatPattern="3" key="F" startingPitch="SOL" time="3/4" startingBeat="3" />
+      <originator name="Stuart Hamblen" role="Writer" type="Individual" />
+      <originator name="Stuart Hamblen" role="Composer" type="Individual" />
+      <copyright>
+        <copyrightHolder name="Hamblen Music Company" type="Business"></copyrightHolder>
+        <startYear>1953</startYear>
+        <scope>Standard</scope>
+        <portionCopyrighted>Hymn</portionCopyrighted>
+      </copyright>
+      <scripture>Isaiah 40:31</scripture>
+    </hymn>
+    <hymn number="B-003" title="In Christ Alone">
+      <songLeaderInfo beatPattern="3" key="Eb" startingPitch="SOL" time="3/4" startingBeat="1.5" />
+      <originator name="Keith Getty and Stuart Townsend" role="Writer" type="Individual" />
+      <originator name="Keith Getty and Stuart Townsend" role="Composer" type="Individual" />
+      <copyright>
+        <copyrightHolder name="Thankyou Music" type="Business"></copyrightHolder>
+        <startYear>2001</startYear>
+        <scope>Standard</scope>
+        <portionCopyrighted>Hymn</portionCopyrighted>
+      </copyright>
+      <scripture>Psalm 23</scripture>
+    </hymn>
+    <hymn number="B-004" title="How Beautiful (full version)">
+      <songLeaderInfo beatPattern="3" key="Eb" startingPitch="DO" time="3/4" startingBeat="3" />
+      <originator name="Twila Paris" role="Writer" type="Individual" />
+      <originator name="Twila Paris" role="Composer" type="Individual" />
+      <originator name="Ken Young" role="Arranger" type="Individual" />
+      <copyright>
+        <copyrightHolder name="JCL" type="Business"></copyrightHolder>
+        <startYear>1991</startYear>
+        <scope>Standard</scope>
+        <portionCopyrighted>Hymn</portionCopyrighted>
+      </copyright>
+      <scripture>Matthew 26:26-29</scripture>
+    </hymn>
+    <hymn number="B-005" title="Abide With Me (all verses)">
+      <songLeaderInfo beatPattern="4" key="Eb" startingPitch="MI" time="4/4" startingBeat="1" />
+      <originator name="Henry F. Lyte, 1820" role="Writer" type="Individual" />
+      <originator name="Wm. H. Monk, 1861" role="Composer" type="Individual" />
+      <scripture>Matthew 28:20</scripture>
+    </hymn>
+    <hymn number="B-006" title="Hark! I Hear the Harps Eternal">
+      <songLeaderInfo beatPattern="3" key="F" startingPitch="DO" time="3/4" startingBeat="3" />
+      <originator name="F. R. Warren" role="Writer" type="Individual" />
+      <originator name="Traditional" role="Composer" type="Individual" />
+      <originator name="Michael Duke" role="Arranger" type="Individual" />
+      <scripture>Matthew 28:20</scripture>
+    </hymn>
+    <electronicVersion>1.0.0.0</electronicVersion>
+  </hymnal>
+</contents>

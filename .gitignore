@@ -1,7 +1,12 @@
-*.pdf
-*.ps
-*.midi
-*.mid
+# ==============================================
+# Temporary files created in source directories
+# ==============================================
+Source/B-*/*.pdf
+Source/B-*/*.png
+Source/B-*/*.mid
+Source/B-*/*.midi
+Source/B-*/*.ps
+Source/B-*/*.eps
 *.log
 *~
 
