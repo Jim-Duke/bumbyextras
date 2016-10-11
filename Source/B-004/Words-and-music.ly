@@ -9,23 +9,33 @@ global = {
 \header {
   title = "How Beautiful"
   tune = "How Beautiful"
-  meter = "10.10.10.10"
-  composer = "William H. Monk (1861)"
-  poet = "Henry F. Lyte (1847)"
-  songNumber = "B-005"
-  copyright = ##f
-  license = ##f
+  meter = "8.8.8.8 with Chorus"
+  composer = "Twila Paris"
+  poet = "Twila Paris"
+  songNumber = "B-004"
+  copyright = "Copyright (c) 1990 Ariose Music and Mountain Spring Music"
+  license = "CCLI Song #443594, License #2055442"
+  scripture = \markup {
+    \override #'(line-width . 60)
+    \center-column {
+      \vspace #4
+      \abs-fontsize #24
+      \italic \wordwrap-string #"Then He took the cup, gave thanks and offered it to them. - Matthew 26:26-29"
+      \vspace #2
+      \abs-fontsize #24
+      \italic \wordwrap-string #"How beautiful are the feet of those who bring good news of good things! - Romans 10:15"
+    }
+  }
   tagline = ##f
 }
 
 sopranoVerse = \relative c' {
-  % Phrase 1
   \partial 4 ees4 \noBreak
   ees2 bes'4 \noBreak
   bes2~ bes8 \bar ""
   
   bes8 | \noBreak
-  c4.( bes8) aes8 bes8 | \noBreak
+  \autoBeamOff c4.( bes8) \autoBeamOn aes8( bes8) | \noBreak
   bes2 r8 \bar ""
   
   ees,8 | \noBreak
@@ -41,8 +51,8 @@ sopranoVerse = \relative c' {
   bes2~ bes8 \bar ""
   
   bes8 | \noBreak
-  c4.( bes8) aes8 bes8 | \noBreak
-  bes2 r8 \bar ""
+  \autoBeamOff c4.( bes8) \autoBeamOn aes8( bes8) | \noBreak
+  bes2 r8 \bar "" \break
   
   ees,8 | \noBreak
   aes4 bes4 c4 | \noBreak
@@ -50,8 +60,8 @@ sopranoVerse = \relative c' {
   
   ees,8 f8 | \noBreak
   g4 f4. ees8 | \noBreak
-  f4 \bar ""
-  
+  f4 \bar "" \break
+
   g4.( f8) | \noBreak
   ees2 bes'4 | \noBreak
   bes2.~ | \noBreak
@@ -74,7 +84,7 @@ sopranoVerse = \relative c' {
   ees,8 f8 | \noBreak
   g8 f4. ees4 | \noBreak
   ees2.~ | \noBreak
-  ees4 r4 \bar "|."
+  ees4 r4 s4 \bar "|."
 }
 
 altoVerse = \relative c' {
@@ -110,7 +120,7 @@ altoVerse = \relative c' {
   bes8 bes8 | \noBreak
   c4 c4. c8 | \noBreak
   d4 \bar ""
-  
+
   d2 | \noBreak
   ees2 ees4 | \noBreak
   ees2.~( | \noBreak
@@ -131,7 +141,7 @@ altoVerse = \relative c' {
   ees8 ees8 | \noBreak
   ees8 d4. c4 | \noBreak
   bes2.~ | \noBreak
-  bes4 r4 \bar "|."
+  bes4 r4 s4 \bar "|."
 }
 
 tenorVerse = \relative c' {
@@ -166,7 +176,7 @@ tenorVerse = \relative c' {
   g8 g8 | \noBreak
   a4 a4. a8 | \noBreak
   bes4 \bar ""
-  
+
   bes2 | \noBreak
   aes2 aes4 | \noBreak
   g2.( | \noBreak
@@ -187,7 +197,7 @@ tenorVerse = \relative c' {
   aes8 aes8 | \noBreak
   bes8 bes4. bes4 | \noBreak
   g2.~ | \noBreak
-  g4 r4 \bar "|."
+  g4 r4 s4 \bar "|."
 }
 
 bassVerse = \relative c {
@@ -196,7 +206,7 @@ bassVerse = \relative c {
   bes2~ bes8 \bar ""
   
   bes8 | \noBreak
-  aes4.( bes8) c8( d8) | \noBreak
+  \autoBeamOff aes4.( bes8) \autoBeamOn c8( d8) | \noBreak
   ees2 r8 \bar ""
   
   ees8 | \noBreak
@@ -212,7 +222,7 @@ bassVerse = \relative c {
   bes2~ bes8 \bar ""
   
   bes8 | \noBreak
-  aes4.( bes8) c8( d8) | \noBreak
+  \autoBeamOff aes4.( bes8) \autoBeamOn c8( d8) | \noBreak
   ees2 r8 \bar ""
   
   ees8 | \noBreak
@@ -222,7 +232,7 @@ bassVerse = \relative c {
   ees8 ees8 | \noBreak
   c4 c4. c8 | \noBreak
   bes4 \bar ""
-  
+
   bes2 | \noBreak
   c2 c4 | \noBreak
   bes2.( | \noBreak
@@ -243,53 +253,192 @@ bassVerse = \relative c {
   c8 c8 | \noBreak
   bes8 bes4. bes4 | \noBreak
   ees2.~ | \noBreak
-  ees4 r8 \bar "|."
+  ees4 r4 s4 \bar "|."
+}
+
+sopranoBridge = \relative c' {
+  ees4 g4 bes4 | \noBreak
+  c2. |
+
+  c2 f,4 | \noBreak
+  f2. |
+  
+  f4 g4 aes8( bes8) | \noBreak
+  bes2. |
+  
+  bes2 ees,4 | \noBreak
+  ees2. |
+  
+  ees4 f4 g4 | \noBreak
+  f2. |
+  
+  f4 g4 aes8( bes8) | \noBreak
+  bes2. | \break
+  
+  bes8 aes8~ aes8 g4. | \noBreak
+  ees2~ ees8 ees8 | \noBreak
+  ees2.~ | \noBreak
+  ees2 r4 | \break
+  
+  bes'8 aes8~ aes8 g8~ g8 aes8( | \noBreak
+  g2~ g8) ees8 | \noBreak
+  ees2.~ | \noBreak
+  ees2.~ | \noBreak
+  ees2 \bar "|."
+}
+
+altoBridge = \relative c' {
+  bes4 ees4 ees4 | \noBreak
+  ees2. |
+  
+  ees2 ees4 | \noBreak
+  d2. |
+  
+  d4 ees4 f4 | \noBreak
+  g2. |
+  
+  f2 ees4 | \noBreak
+  c2. |
+  
+  c4 d4 ees4 | \noBreak
+  d2. |
+  
+  d4 ees4 f4 | \noBreak
+  g2. |
+  
+  g8 f8~ f8 ees4. | \noBreak
+  c2~ c8 c8 | \noBreak
+  c2.( | \noBreak
+  bes2) r4 |
+  
+  ees8 ees8~ ees8 ees8~ ees8 c8~ | \noBreak
+  c2~ c8 c8 | \noBreak
+  c2.~ | \noBreak
+  c2.~ | \noBreak
+  c2 \bar "|."
+}
+
+tenorBridge = \relative c' {
+  g4 g4 g4 | \noBreak
+  aes2. |
+  
+  aes2 aes4 | \noBreak
+  bes2. |
+  
+  bes4 bes4 bes4 | \noBreak
+  bes2. |
+  
+  bes2 aes4 | \noBreak
+  g2. |
+  
+  aes4 aes4 aes4 | \noBreak
+  bes2. |
+  
+  bes4 bes4 bes4 | \noBreak
+  bes2. |
+  
+  bes8 bes8~ bes8 bes4. | \noBreak
+  aes2~ aes8 aes8 | \noBreak
+  g2.~ | \noBreak
+  g2 r4 |
+  
+  bes8 bes8~ bes8 bes8~ bes8 aes8~ | \noBreak
+  aes2~ aes8 aes8 | \noBreak
+  aes2.~ | \noBreak
+  aes2.~ | \noBreak
+  aes2 \bar "|."
+}
+
+bassBridge = \relative c {
+  ees4 ees4 ees4 | \noBreak
+  aes,2. |
+  
+  aes2 aes4 | \noBreak
+  ees'4( c4 ees4) |
+  
+  d4 ees4 d4 | \noBreak
+  ees2. |
+  
+  d2 c4 | \noBreak
+  c2. |
+  
+  c4 c4 c4 | \noBreak
+  bes2. |
+  
+  d4 ees4 d4 | \noBreak
+  ees2. |
+  
+  ees8 ees8~ ees8 ees4. | \noBreak
+  c2~ c8 c8 | \noBreak
+  ees2.~ | \noBreak
+  ees2 r4 |
+  
+  ees8 ees8~ ees8 ees8~ ees8 c8~ | \noBreak
+  c2~ c8 c8 | \noBreak
+  c2.~ | \noBreak
+  c2.~ | \noBreak
+  c2 \bar "|."
 }
 
 verseOne = \lyricmode {
   \set stanza = "1. "
-  How4 beau2 -- ti4 -- ful2 _
-  the8 hands2 that4 served2 \skip 8
+  How4 beau2 -- ti4 -- ful2 " "8
+  the8 hands2 that4 served2 " "8
   the8 wine4 and4 the4 bread2
   and8 the8 sons4 of4. the8 earth4
-  How2 beau2 -- ti4 -- ful2 _8
-  the8 feet2 that4 walked2 \skip 8
+  How2 beau2 -- ti4 -- ful2 " "8
+  the8 feet2 that4 walked2 " "8
   the8 long4 dust4 -- y4 roads2
   and8 the8 hill4 to4. the8 cross4
-  How2 beau2 -- ti4 -- ful,2. _2. _8
-  How2 beau2 -- ti4 -- ful,2. _2. _8
-  How2 beau2 -- ti4 -- ful,2. _4 \skip 4
-  is8 the8 bod8 -- y4. of4 Christ2. _4 \skip 4
 }
 
 verseTwo = \lyricmode {
   \set stanza = "2. "
-  Swift2 to4 its4 close2 ebbs2 out4 life's4 lit4 -- tle4 day;1
-  Earth's2 joys4 grow dim,2 Its2 glo4 -- ries4 pass4 a4 -- way;1
-  Change2 and4 de4 -- cay2 in2 all4 a4 -- round4 I4 see;1
-  O2 Thou4 who4 chang4 -- est4 not,4 a4 -- bide2 with2 me!1
+  How4 beau2 -- ti4 -- ful2 " "8
+  the8 heart2 that4 bled2 " "8
+  that8 took4 all4 my4 sin2
+  and4 bore4 it4. in8 -- stead.4
+  How2 beau2 -- ti4 -- ful2 " "8
+  the8 ten2 -- der4 eyes2 " "8
+  that8 choose4 to4 for4 -- give2
+  and4 ne4 -- ver4. de8 -- spise.4
 }
 
 verseThree = \lyricmode {
   \set stanza = "3. "
-  I2 need4 thy4 pres2 -- ence2 eve4 -- ry4 pass4 -- ing4 hour.1
-  What2 but4 Thy4 grace2 can2 foil4 the4 tempt4 -- er's4 pow'r?1
-  Who2 like4 Thy4 -- self2 my2 guide4 and4 stay4 can4 be?1
-  Through2 cloud4 and4 sun4 -- shine,4 Lord,4 a4 -- bide2 with2 me.1
+  How4 beau2 -- ti4 -- ful2 " "8
+  the8 ra2 -- diant4 bride2 " "8
+  who8 waits4 for4 the4 groom2
+  with8 His8 light4 in4. her8 eyes.4
+  How2 beau2 -- ti4 -- ful2 " "8
+  when8 hum4. -- ble8 hearts4 give2 " "8
+  the8 fruit4 of4 pure4 lives2
+  so8 that8 oth4 -- ers4. may8 live.4
 }
 
 verseFour = \lyricmode {
   \set stanza = "4. "
-  I2 fear4 no4 foe,2 with2 Thee4 at4 hand4 to4 bless;1
-  Ills2 have4 no4 weight,2 and2 tears4 no4 bit4 -- ter4 -- ness;1
-  Where2 is4 death's4 sting?2 Where,2 grave,4 thy4 vic4 -- to4 -- ry?1
-  I2 tri4 -- umph4 still,4 if4 Thou4 a4 -- bide2 with2 me.1
+  How4 beau2 -- ti4 -- ful2 " "8
+  the8 feet2 that4 bring2 " "8
+  the8 sound4 of4 good4 news2
+  and8 the8 love4 of4. the8 King.4
+  How2 beau2 -- ti4 -- ful2 " "8
+  the8 hands2 that4 serve2 " "8
+  the8 wine4 and4 the4 bread2
+  and8 the8 sons4 of4. the8 earth.4
 }
 
-verseFive = \lyricmode {
-  \set stanza = "5. "
-  Hold2 Thou4 Thy4 cross2 be2 -- fore4 my4 clos4 -- ing4 eyes;1
-  Shine2 thru4 the4 gloom2 and2 point4 me4 to4 the4 skies;1
-  Heav'n's2 morn4 -- ing4 breaks,2 and2 earth's4 vain4 sha4 -- dows4 flee;1
-  In2 life,4 in4 death,4 O4 Lord,4 a4 -- bide2 with2 me.1
+verseCommon = \lyricmode {
+  How2 beau2 -- ti4 -- ful,2. " "2. " "4
+  How2 beau2 -- ti4 -- ful,2. " "2. " "4
+  How2 beau2 -- ti4 -- ful,2. " "2
+  is8 the8 bod8 -- y4. of4 Christ1
+}
+
+bridgeLyrics = \lyricmode {
+  And4 as4 He4 laid2. down2 His4 life,2.
+  we4 of4 -- fer4 this2. sac2 -- ri4 -- fice,2.
+  that4 we4 might4 live2. just4 as4 He4 died,2.
+  Will8 -- ing4 to4. pay2 " "8 the8 price,2. " "2.
+  will8 -- ing4 to4 pay2 " "4 the8 price2. " "2. " "2
 }

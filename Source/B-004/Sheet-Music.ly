@@ -5,7 +5,7 @@
 %
 % Adjust the staff size to adjust the basic font size of the words and music.
 %
-#(set-global-staff-size 19)
+#(set-global-staff-size 18)
 
 % Standard full page format.
 \book {
@@ -20,7 +20,10 @@
     %
     % Various variables that can be used to tweak vertical spacing
     %
-    system-system-spacing #'basic-distance = #10
+    system-system-spacing #'basic-distance = #4
+    system-system-spacing #'minimum-distance = #4
+    score-markup-spacing #'basic-distance = #0
+    markup-system-spacing #'basic-distance = #0
     
     indent = 0
     left-margin = 1\in
@@ -46,12 +49,12 @@
 %            \char ##x2022 "arr. "
 %            \fromproperty #'header:arranger
           }
-%          \line {
-%            \fromproperty #'header:copyright
-%          }
-%          \line {
-%            \fromproperty #'header:license
-%          }
+          \line {
+            \fromproperty #'header:copyright
+          }
+          \line {
+            \fromproperty #'header:license
+          }
 %          \vspace #0.25
 %          \line {
 %            "Engraved using Lilypond (www.lilypond.org) for www.acapellaworship.org.  PDF "
@@ -90,49 +93,84 @@
   }
 
   \score {
+    % Verses Section
     \context ChoirStaff <<
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
             \global
-%            \partial 4
             \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-%            \partial 4
             \altoVerse
           }
         }
-        \context Lyrics = one { \verseOne }
+        \context Lyrics = one { \verseOne \verseCommon }
         \context Lyrics = two { \verseTwo }
         \context Lyrics = three { \verseThree }
         \context Lyrics = four { \verseFour }
-        \context Lyrics = five { \verseFive }
       >>
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors {
           \voiceOne {
             \global
-%            \partial 4
             \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-%            \partial 4
             \bassVerse
           }
         }
       >>
     >>
+      
     \layout {
       ragged-last = ##f
     }
+  }
+  \markup {	
+    \huge \bold "Bridge (after verse 2):"
+  }
+  \score {
+    \context ChoirStaff <<
+      \context Staff = upper <<
+        \context Voice = sopranos {
+          \voiceOne {
+            \global
+            \sopranoBridge
+          }
+        }
+        \context Voice = altos {
+          \voiceTwo {
+            \global
+            \altoBridge
+          }
+        }
+        \context Lyrics = bridge { \bridgeLyrics }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \context Voice = tenors {
+          \voiceOne {
+            \global
+            \tenorBridge
+          }
+        }
+        \context Voice = basses {
+          \voiceTwo {
+            \global
+            \bassBridge
+          }
+        }
+      >>
+    >>
+    \layout {}
   }
   %
   % Extra additional score containing all the music so we can have a single MIDI file
@@ -144,7 +182,7 @@
           \voiceOne {
             \global
 %            \partial 4
-            \sopranoVerse
+            \sopranoVerse \sopranoBridge
 %            \sopranoChorus
           }
         }
@@ -152,7 +190,7 @@
           \voiceTwo {
             \global
 %            \partial 4
-            \altoVerse
+            \altoVerse \altoBridge
 %            \altoChorus
           }
         }
@@ -163,7 +201,7 @@
           \voiceOne {
             \global
 %            \partial 4
-            \tenorVerse
+            \tenorVerse \tenorBridge
 %            \tenorChorus
           }
         }
@@ -171,7 +209,7 @@
           \voiceTwo {
             \global
 %            \partial 4
-            \bassVerse
+            \bassVerse \bassBridge
 %            \bassChorus
           }
         }

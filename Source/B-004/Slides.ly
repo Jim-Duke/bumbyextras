@@ -28,26 +28,19 @@
             \fromproperty #'header:meter
             \fromproperty #'header:poet
           }
-          \fromproperty #'header:copyright
+          \column {
+            \fromproperty #'header:copyright
+            \fromproperty #'header:license
+          }
           \column {
             \fromproperty #'header:tune
             \fromproperty #'header:composer
-%            \concat { "arr. " \fromproperty #'header:arranger }
           }
         }
-        {
-          \vspace #0.5
-          \fontsize #-2
-          \fromproperty #'header:license
-        }
-%        {
-%          \fontsize #-2
-%          "Engraved using Lilypond (www.lilypond.org) for www.acapellaworship.org"
-%        }
       }
     }
     bookTitleMarkup = \markup {
-      \column {
+      \center-column {
         \fill-line {
           \null
           {
@@ -62,39 +55,7 @@
           \bold
           \fromproperty #'header:title
         }
-        \vspace #1
-        \fill-line {
-          \abs-fontsize #20
-          \italic
-          "Abide with us, for it is toward evening, and the day is far spent. (Luke 24:29)"
-        }
-        \vspace #2
-        \fill-line {
-          \abs-fontsize #20
-          \italic
-          "\"O Death, where is your sting?"
-        }
-        \fill-line {
-          \abs-fontsize #20
-          \italic
-          "O Hades, where is your victory?\""
-        }
-        \vspace #1
-        \fill-line {
-          \abs-fontsize #20
-          \italic
-          "The sting of death is sin, and the strength of sin is the law."
-        }
-        \fill-line {
-          \abs-fontsize #20
-          \italic
-          "But thanks be to God, who gives us the victory through our"
-        }
-        \fill-line {
-          \abs-fontsize #20
-          \italic
-          "Lord Jesus Christ.  (1 Cor. 15:55-57)"
-        }
+        \fromproperty #'header:scripture
       }
     }
     scoreTitleMarkup = \markup {
@@ -132,7 +93,7 @@
             \altoVerse
           }
         }
-        \context Lyrics { \huge \verseOne }
+        \context Lyrics { \huge \verseOne \verseCommon }
       >>
       \context Staff = lower <<
         \clef bass
@@ -167,7 +128,7 @@
             \altoVerse
           }
         }
-        \context Lyrics { \huge \verseTwo }
+        \context Lyrics { \huge \verseTwo \verseCommon }
       >>
       \context Staff = lower <<
         \clef bass
@@ -202,7 +163,7 @@
             \altoVerse
           }
         }
-        \context Lyrics { \huge \verseThree }
+        \context Lyrics { \huge \verseThree \verseCommon }
       >>
       \context Staff = lower <<
         \clef bass
@@ -237,7 +198,7 @@
             \altoVerse
           }
         }
-        \context Lyrics { \huge \verseFour }
+        \context Lyrics { \huge \verseFour \verseCommon }
       >>
       \context Staff = lower <<
         \clef bass
@@ -263,29 +224,29 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \sopranoVerse
+            \sopranoBridge
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \altoVerse
+            \altoBridge
           }
         }
-        \context Lyrics { \huge \verseFive }
+        \context Lyrics { \huge \bridgeLyrics }
       >>
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors {
           \voiceOne {
             \global
-            \tenorVerse
+            \tenorBridge
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \bassVerse
+            \bassBridge
           }
         }
       >>
