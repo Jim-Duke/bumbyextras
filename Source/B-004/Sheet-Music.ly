@@ -95,6 +95,8 @@
   \score {
     % Verses Section
     \context ChoirStaff <<
+      %\override Score.BarNumber.break-visibility = ##(#t #t #t)
+      %\set Score.barNumberVisibility = #all-bar-numbers-visible
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
@@ -139,6 +141,8 @@
   }
   \score {
     \context ChoirStaff <<
+      %\override Score.BarNumber.break-visibility = ##(#t #t #t)
+      %\set Score.barNumberVisibility = #all-bar-numbers-visible
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
