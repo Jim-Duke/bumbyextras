@@ -46,8 +46,8 @@
             \fromproperty #'header:tune
             \char ##x2022
             \fromproperty #'header:composer
-%            \char ##x2022 "arr. "
-%            \fromproperty #'header:arranger
+            \char ##x2022 "arr. "
+            \fromproperty #'header:arranger
           }
           \line {
             \fromproperty #'header:copyright
@@ -74,9 +74,9 @@
           \abs-fontsize #24
           \bold
           \fill-line {
-            ""
-            \fromproperty #'header:title
             \fromproperty #'header:songNumber
+            \fromproperty #'header:title
+            ""
           }
           \fill-line {
             \large \bold

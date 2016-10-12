@@ -35,6 +35,9 @@
           \column {
             \fromproperty #'header:tune
             \fromproperty #'header:composer
+            \line {
+              "arr: " \fromproperty #'header:arranger
+            }
           }
         }
       }
@@ -120,15 +123,17 @@
           \voiceOne {
             \global
             \sopranoVerse
+            \sopranoBridge
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
             \altoVerse
+            \altoBridge
           }
         }
-        \context Lyrics { \huge \verseTwo \verseCommon }
+        \context Lyrics { \huge \verseTwo \verseCommon \bridgeLyrics }
       >>
       \context Staff = lower <<
         \clef bass
@@ -136,12 +141,14 @@
           \voiceOne {
             \global
             \tenorVerse
+            \tenorBridge
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
             \bassVerse
+            \bassBridge
           }
         }
       >>
@@ -212,41 +219,6 @@
           \voiceTwo {
             \global
             \bassVerse
-          }
-        }
-      >>
-    >>
-    \layout {}
-  }
-  \score {
-    \context ChoirStaff <<
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
-            \global
-            \sopranoBridge
-          }
-        }
-        \context Voice = altos {
-          \voiceTwo {
-            \global
-            \altoBridge
-          }
-        }
-        \context Lyrics { \huge \bridgeLyrics }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \context Voice = tenors {
-          \voiceOne {
-            \global
-            \tenorBridge
-          }
-        }
-        \context Voice = basses {
-          \voiceTwo {
-            \global
-            \bassBridge
           }
         }
       >>

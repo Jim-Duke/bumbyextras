@@ -15,15 +15,18 @@ global = {
   songNumber = "B-004"
   copyright = "Copyright (c) 1990 Ariose Music and Mountain Spring Music"
   license = "CCLI Song #443594, License #2055442"
+  arranger = "Ken Young"
   scripture = \markup {
     \override #'(line-width . 60)
     \center-column {
       \vspace #4
       \abs-fontsize #24
-      \italic \wordwrap-string #"Then He took the cup, gave thanks and offered it to them. - Matthew 26:26-29"
-      \vspace #2
-      \abs-fontsize #24
-      \italic \wordwrap-string #"How beautiful are the feet of those who bring good news of good things! - Romans 10:15"
+      \italic \wordwrap-string #"How lovely on the mountains
+         Are the feet of him who brings good news,
+         Who announces peace
+         And brings good news of happiness,
+         Who announces salvation,
+         And says to Zion, \"Your God reigns!\" - Isaiah 52:7"
     }
   }
   tagline = ##f
@@ -44,7 +47,7 @@ sopranoVerse = \relative c' {
   
   ees,8 f8 | \noBreak
   g4 f4. ees8 | \noBreak
-  f4 \bar "" \break
+  f8 r8 \bar "" \break
   
   g4.( f8) | \noBreak
   ees2 bes'4 | \noBreak
@@ -60,20 +63,20 @@ sopranoVerse = \relative c' {
   
   ees,8 f8 | \noBreak
   g4 f4. ees8 | \noBreak
-  f4 \bar "" \break
+  f8 r8 \bar "" \break
 
   g4.( f8) | \noBreak
   ees2 bes'4 | \noBreak
   bes2.~ | \noBreak
   bes2.~ | \noBreak
-  bes8 r8 \bar ""
+  bes4 \bar ""
   
   
   g4.( f8) | \noBreak
   ees2 bes'4 | \noBreak
   bes2.~ | \noBreak
   bes2.~ | \noBreak
-  bes8 r8 \bar ""
+  bes4 \bar ""
   
   
   g4.( f8) | \noBreak
@@ -84,7 +87,7 @@ sopranoVerse = \relative c' {
   ees,8 f8 | \noBreak
   g8 f4. ees4 | \noBreak
   ees2.~ | \noBreak
-  ees4 r4 s4 \bar "|."
+  ees2 s4 \bar "|."
 }
 
 altoVerse = \relative c' {
@@ -103,7 +106,7 @@ altoVerse = \relative c' {
   
   bes8 bes8 | \noBreak
   c4 c4. c8 | \noBreak
-  d4 \bar ""
+  d8 r8 \bar ""
   
   d2 | \noBreak
   ees2 ees4 | \noBreak
@@ -119,29 +122,29 @@ altoVerse = \relative c' {
   
   bes8 bes8 | \noBreak
   c4 c4. c8 | \noBreak
-  d4 \bar ""
+  d8 r8 \bar ""
 
   d2 | \noBreak
   ees2 ees4 | \noBreak
   ees2.~( | \noBreak
   ees2. | \noBreak
-  f8) r8 \bar ""
+  f4) \bar ""
   
-  d2 | \noBreak
+  f2 | \noBreak
   ees2 ees4 | \noBreak
-  ees2.~( | \noBreak
-  ees2. | \noBreak
-  f8) r8 \bar ""
+  f2.~( | \noBreak
+  f2. | \noBreak
+  ees4) \bar ""
   
-  d2 | \noBreak
+  ees2 | \noBreak
   ees2 ees4 | \noBreak
   f2.( | \noBreak
   ees4) r4 \bar ""
   
   ees8 ees8 | \noBreak
-  ees8 d4. c4 | \noBreak
+  ees8 ees4. d4 | \noBreak
   bes2.~ | \noBreak
-  bes4 r4 s4 \bar "|."
+  bes2 s4 \bar "|."
 }
 
 tenorVerse = \relative c' {
@@ -159,7 +162,7 @@ tenorVerse = \relative c' {
   
   g8 g8 | \noBreak
   a4 a4. a8 | \noBreak
-  bes4 \bar ""
+  bes8 r8 \bar ""
   
   bes4.( aes8) | \noBreak
   g2 g4 | \noBreak
@@ -175,19 +178,19 @@ tenorVerse = \relative c' {
   
   g8 g8 | \noBreak
   a4 a4. a8 | \noBreak
-  bes4 \bar ""
+  bes8 r8 \bar ""
 
   bes2 | \noBreak
   aes2 aes4 | \noBreak
   g2.( | \noBreak
   aes2. | \noBreak
-  bes8) r8 \bar ""
+  bes4) \bar ""
   
   bes2 | \noBreak
   aes2 aes4 | \noBreak
   f2.( | \noBreak
   aes2. | \noBreak
-  g8) r8
+  g4)
   
   bes2 | \noBreak
   aes2 aes4 | \noBreak
@@ -197,7 +200,7 @@ tenorVerse = \relative c' {
   aes8 aes8 | \noBreak
   bes8 bes4. bes4 | \noBreak
   g2.~ | \noBreak
-  g4 r4 s4 \bar "|."
+  g2 s4 \bar "|."
 }
 
 bassVerse = \relative c {
@@ -215,7 +218,7 @@ bassVerse = \relative c {
   
   ees8 ees8 | \noBreak
   c4 c4. c8 | \noBreak
-  bes4 \bar ""
+  bes8 r8 \bar ""
   
   bes2 | \noBreak
   ees2 ees4 | \noBreak
@@ -237,13 +240,13 @@ bassVerse = \relative c {
   c2 c4 | \noBreak
   bes2.( | \noBreak
   c2. | \noBreak
-  ees8) r8 \bar ""
+  ees4) \bar ""
   
   bes2 | \noBreak
   c2 c4 | \noBreak
   bes2.( | \noBreak
   c2. | \noBreak
-  ees8) r8 \bar ""
+  ees4) \bar ""
   
   bes2 | \noBreak
   c2 c4 | \noBreak
@@ -253,7 +256,7 @@ bassVerse = \relative c {
   c8 c8 | \noBreak
   bes8 bes4. bes4 | \noBreak
   ees2.~ | \noBreak
-  ees4 r4 s4 \bar "|."
+  ees2 s4 \bar "|."
 }
 
 sopranoBridge = \relative c' {
@@ -275,12 +278,12 @@ sopranoBridge = \relative c' {
   f4 g4 aes8( bes8) | \noBreak
   bes2. | \break
   
-  bes8 aes8~ aes8 g4. | \noBreak
+  bes8 aes4 g4. | \noBreak
   ees2~ ees8 ees8 | \noBreak
   ees2.~ | \noBreak
   ees2 r4 | \break
   
-  bes'8 aes8~ aes8 g8~ g8 aes8( | \noBreak
+  bes'8 aes4 g4 aes8( | \noBreak
   g2~ g8) ees8 | \noBreak
   ees2.~ | \noBreak
   ees2.~ | \noBreak
@@ -288,11 +291,11 @@ sopranoBridge = \relative c' {
 }
 
 altoBridge = \relative c' {
-  bes4 ees4 ees4 | \noBreak
-  ees2. |
+  ees4 ees4 ees4 | \noBreak
+  f2. |
   
-  ees2 ees4 | \noBreak
-  d2. |
+  f2 ees4 | \noBreak
+  ees2. |
   
   d4 ees4 f4 | \noBreak
   g2. |
@@ -306,12 +309,12 @@ altoBridge = \relative c' {
   d4 ees4 f4 | \noBreak
   g2. |
   
-  g8 f8~ f8 ees4. | \noBreak
+  g8 f4 ees4. | \noBreak
   c2~ c8 c8 | \noBreak
   c2.( | \noBreak
   bes2) r4 |
   
-  ees8 ees8~ ees8 ees8~ ees8 c8~ | \noBreak
+  ees8 ees4 ees4 c8~ | \noBreak
   c2~ c8 c8 | \noBreak
   c2.~ | \noBreak
   c2.~ | \noBreak
@@ -320,16 +323,16 @@ altoBridge = \relative c' {
 
 tenorBridge = \relative c' {
   g4 g4 g4 | \noBreak
-  aes2. |
+  a2. |
   
-  aes2 aes4 | \noBreak
+  a2 a4 | \noBreak
   bes2. |
   
   bes4 bes4 bes4 | \noBreak
   bes2. |
   
-  bes2 aes4 | \noBreak
-  g2. |
+  bes2 bes4 | \noBreak
+  aes2. |
   
   aes4 aes4 aes4 | \noBreak
   bes2. |
@@ -337,12 +340,12 @@ tenorBridge = \relative c' {
   bes4 bes4 bes4 | \noBreak
   bes2. |
   
-  bes8 bes8~ bes8 bes4. | \noBreak
+  bes8 bes4 bes4. | \noBreak
   aes2~ aes8 aes8 | \noBreak
   g2.~ | \noBreak
   g2 r4 |
   
-  bes8 bes8~ bes8 bes8~ bes8 aes8~ | \noBreak
+  bes8 bes4 bes4 aes8~ | \noBreak
   aes2~ aes8 aes8 | \noBreak
   aes2.~ | \noBreak
   aes2.~ | \noBreak
@@ -351,10 +354,10 @@ tenorBridge = \relative c' {
 
 bassBridge = \relative c {
   ees4 ees4 ees4 | \noBreak
-  aes,2. |
+  c2. |
   
-  aes2 aes4 | \noBreak
-  ees'4( c4 ees4) |
+  c2 c4 | \noBreak
+  ees4( c4 ees4) |
   
   d4 ees4 d4 | \noBreak
   ees2. |
@@ -368,12 +371,12 @@ bassBridge = \relative c {
   d4 ees4 d4 | \noBreak
   ees2. |
   
-  ees8 ees8~ ees8 ees4. | \noBreak
+  ees8 ees4 ees4. | \noBreak
   c2~ c8 c8 | \noBreak
   ees2.~ | \noBreak
   ees2 r4 |
   
-  ees8 ees8~ ees8 ees8~ ees8 c8~ | \noBreak
+  ees8 ees4 ees4 c8~ | \noBreak
   c2~ c8 c8 | \noBreak
   c2.~ | \noBreak
   c2.~ | \noBreak
@@ -432,7 +435,7 @@ verseCommon = \lyricmode {
   How2 beau2 -- ti4 -- ful,2. " "2. " "4
   How2 beau2 -- ti4 -- ful,2. " "2. " "4
   How2 beau2 -- ti4 -- ful,2. " "2
-  is8 the8 bod8 -- y4. of4 Christ1
+  is8 the8 bod8 -- y4. of4 Christ1 " "2
 }
 
 bridgeLyrics = \lyricmode {
