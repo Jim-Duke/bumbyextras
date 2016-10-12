@@ -192,7 +192,7 @@ tenorVerse = \relative c' {
   aes2. | \noBreak
   g4)
   
-  bes2 | \noBreak
+  g2 | \noBreak
   aes2 aes4 | \noBreak
   aes2.~ | \noBreak
   aes4 r4 \bar ""
@@ -240,15 +240,15 @@ bassVerse = \relative c {
   c2 c4 | \noBreak
   bes2.( | \noBreak
   c2. | \noBreak
-  ees4) \bar ""
+  d4) \bar ""
   
-  bes2 | \noBreak
+  d2 | \noBreak
   c2 c4 | \noBreak
   bes2.( | \noBreak
   c2. | \noBreak
   ees4) \bar ""
   
-  bes2 | \noBreak
+  ees2 | \noBreak
   c2 c4 | \noBreak
   bes2.( | \noBreak
   c4) r4 \bar ""
@@ -287,7 +287,7 @@ sopranoBridge = \relative c' {
   g2~ g8) ees8 | \noBreak
   ees2.~ | \noBreak
   ees2.~ | \noBreak
-  ees2 \bar "|."
+  ees4 r4 \bar "|."
 }
 
 altoBridge = \relative c' {
@@ -318,7 +318,7 @@ altoBridge = \relative c' {
   c2~ c8 c8 | \noBreak
   c2.~ | \noBreak
   c2.~ | \noBreak
-  c2 \bar "|."
+  c4 r4 \bar "|."
 }
 
 tenorBridge = \relative c' {
@@ -342,14 +342,14 @@ tenorBridge = \relative c' {
   
   bes8 bes4 bes4. | \noBreak
   aes2~ aes8 aes8 | \noBreak
-  g2.~ | \noBreak
-  g2 r4 |
+  aes2.( | \noBreak
+  g2) r4 |
   
   bes8 bes4 bes4 aes8~ | \noBreak
   aes2~ aes8 aes8 | \noBreak
   aes2.~ | \noBreak
   aes2.~ | \noBreak
-  aes2 \bar "|."
+  aes4 r4 \bar "|."
 }
 
 bassBridge = \relative c {
@@ -368,42 +368,42 @@ bassBridge = \relative c {
   c4 c4 c4 | \noBreak
   bes2. |
   
-  d4 ees4 d4 | \noBreak
+  bes4 bes4 bes4 | \noBreak
   ees2. |
   
   ees8 ees4 ees4. | \noBreak
   c2~ c8 c8 | \noBreak
-  ees2.~ | \noBreak
-  ees2 r4 |
+  c2.( | \noBreak
+  ees2) r4 |
   
   ees8 ees4 ees4 c8~ | \noBreak
   c2~ c8 c8 | \noBreak
   c2.~ | \noBreak
   c2.~ | \noBreak
-  c2 \bar "|."
+  c4 r4 \bar "|."
 }
 
 verseOne = \lyricmode {
   \set stanza = "1. "
   How4 beau2 -- ti4 -- ful2 " "8
   the8 hands2 that4 served2 " "8
-  the8 wine4 and4 the4 bread2
-  and8 the8 sons4 of4. the8 earth4
+  the8 wine4 and4 the4 bread,2
+  and8 the8 sons4 of4. the8 earth.4
   How2 beau2 -- ti4 -- ful2 " "8
   the8 feet2 that4 walked2 " "8
-  the8 long4 dust4 -- y4 roads2
-  and8 the8 hill4 to4. the8 cross4
+  the8 long4 dust4 -- y4 roads,2
+  and8 the8 hill4 to4. the8 cross.4
 }
 
 verseTwo = \lyricmode {
   \set stanza = "2. "
   How4 beau2 -- ti4 -- ful2 " "8
   the8 heart2 that4 bled2 " "8
-  that8 took4 all4 my4 sin2
+  that8 took4 all4 my4 sin,2
   and4 bore4 it4. in8 -- stead.4
   How2 beau2 -- ti4 -- ful2 " "8
   the8 ten2 -- der4 eyes2 " "8
-  that8 choose4 to4 for4 -- give2
+  that8 choose4 to4 for4 -- give,2
   and4 ne4 -- ver4. de8 -- spise.4
 }
 
@@ -423,18 +423,18 @@ verseFour = \lyricmode {
   \set stanza = "4. "
   How4 beau2 -- ti4 -- ful2 " "8
   the8 feet2 that4 bring2 " "8
-  the8 sound4 of4 good4 news2
+  the8 sound4 of4 good4 news,2
   and8 the8 love4 of4. the8 King.4
   How2 beau2 -- ti4 -- ful2 " "8
   the8 hands2 that4 serve2 " "8
-  the8 wine4 and4 the4 bread2
+  the8 wine4 and4 the4 bread,2
   and8 the8 sons4 of4. the8 earth.4
 }
 
 verseCommon = \lyricmode {
   How2 beau2 -- ti4 -- ful,2. " "2. " "4
-  How2 beau2 -- ti4 -- ful,2. " "2. " "4
-  How2 beau2 -- ti4 -- ful,2. " "2
+  how2 beau2 -- ti4 -- ful,2. " "2. " "4
+  how2 beau2 -- ti4 -- ful,2. " "2
   is8 the8 bod8 -- y4. of4 Christ1 " "2
 }
 
@@ -443,5 +443,5 @@ bridgeLyrics = \lyricmode {
   we4 of4 -- fer4 this2. sac2 -- ri4 -- fice,2.
   that4 we4 might4 live2. just4 as4 He4 died,2.
   Will8 -- ing4 to4. pay2 " "8 the8 price,2. " "2.
-  will8 -- ing4 to4 pay2 " "4 the8 price2. " "2. " "2
+  will8 -- ing4 to4 pay2 " "4 the8 price.2. " "2. " "2
 }
