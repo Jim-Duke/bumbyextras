@@ -39,18 +39,24 @@
       </copyright>
       <scripture>Psalm 23</scripture>
     </hymn>
-    <hymn number="B-004" title="How Beautiful (full version)">
+    <hymn number="B-004" title="How Beautiful">
       <songLeaderInfo beatPattern="3" key="Eb" startingPitch="DO" time="3/4" startingBeat="3" />
       <originator name="Twila Paris" role="Writer" type="Individual" />
       <originator name="Twila Paris" role="Composer" type="Individual" />
       <originator name="Ken Young" role="Arranger" type="Individual" />
       <copyright>
-        <copyrightHolder name="JCL" type="Business"></copyrightHolder>
-        <startYear>1991</startYear>
+        <copyrightHolder name="Ariose Music" type="Business"></copyrightHolder>
+        <startYear>1990</startYear>
         <scope>Standard</scope>
         <portionCopyrighted>Hymn</portionCopyrighted>
       </copyright>
-      <scripture>Matthew 26:26-29</scripture>
+      <copyright>
+        <copyrightHolder name="Mountain Spring Music" type="Business"></copyrightHolder>
+        <startYear>1990</startYear>
+        <scope>Standard</scope>
+        <portionCopyrighted>Hymn</portionCopyrighted>
+      </copyright>
+      <scripture>Isaiah 52:7</scripture>
     </hymn>
     <hymn number="B-005" title="Abide With Me (all verses)">
       <songLeaderInfo beatPattern="4" key="Eb" startingPitch="MI" time="4/4" startingBeat="1" />
