@@ -5,6 +5,9 @@ Bumby Extras is a supplementary hymnal used by the church of Christ at South Bum
 
 The basic structure of this repository has the basic project files such as this README.md file and three main directories outlined below:
 
+- **Documentation**  
+  Miscellaneous documentation including process documentation and other useful references.
+
 - **Published**  
   This directory contains an image of the hymnal as it should be published to the shared dropbox folder used by the South Bumby song leaders and media handlers.
 
@@ -40,3 +43,7 @@ Currently we use a very manual process.  The following describes the process und
 - [Windows Build Instructions](windows_build.md)
 - [MAC Build Instructions](mac_build.md)
 - [Linux Build Instructions](linux_build.md)
+
+## Process for Adding Songs
+
+Every song in the hymnal goes through a rigorous process to ensure that it is of high quality both in terms of content, but also in technical construction.  This process is laid in more detail in [Hymn Addition Process](Documentation/hymn_addition_process.md)
