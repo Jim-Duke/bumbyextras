@@ -22,14 +22,76 @@ global = {
       \vspace #4
       \abs-fontsize #24
       \italic \wordwrap-string #"How lovely on the mountains
-         Are the feet of him who brings good news,
-         Who announces peace
-         And brings good news of happiness,
-         Who announces salvation,
-         And says to Zion, \"Your God reigns!\" - Isaiah 52:7"
+         are the feet of him who brings good news,
+         who announces peace
+         and brings good news of happiness,
+         who announces salvation,
+         and says to Zion, \"Your God reigns!\" - Isaiah 52:7"
     }
   }
   tagline = ##f
+}
+
+%
+% Largely duplicates the soprano line, but makes a few changes
+% where needed to deal with lyrics issues.
+%
+alignVerse = \relative c' {
+  \partial 4 ees4 \noBreak
+  ees2 bes'4 \noBreak
+  bes2~ bes8 \bar ""
+  
+  bes8 | \noBreak
+  \autoBeamOff c4.( bes8) \autoBeamOn aes8( bes8) | \noBreak
+  bes2 r8 \bar ""
+  
+  ees,8 | \noBreak
+  aes4 bes4 c4 | \noBreak
+  bes2 \bar ""
+  
+  ees,8 f8 | \noBreak
+  g4 f4. ees8 | \noBreak
+  f8 r8 \bar "" \break
+  
+  g4.( f8) | \noBreak
+  ees2 bes'4 | \noBreak
+  bes2~ bes8 \bar ""
+  
+  bes8 | \noBreak
+  \autoBeamOff c4. bes8 \autoBeamOn aes8( bes8) | \noBreak
+  bes2 r8 \bar "" \break
+  
+  ees,8 | \noBreak
+  aes4 bes4 c4 | \noBreak
+  bes2 \bar ""
+  
+  ees,8 f8 | \noBreak
+  g4 f4. ees8 | \noBreak
+  f8 r8 \bar "" \break
+
+  g4.( f8) | \noBreak
+  ees2 bes'4 | \noBreak
+  bes2.~ | \noBreak
+  bes2.~ | \noBreak
+  bes4 \bar ""
+  
+  
+  g4.( f8) | \noBreak
+  ees2 bes'4 | \noBreak
+  bes2.~ | \noBreak
+  bes2.~ | \noBreak
+  bes4 \bar ""
+  
+  
+  g4.( f8) | \noBreak
+  ees2 bes'4 | \noBreak
+  bes2.~ | \noBreak
+  bes4 r4 \bar ""
+  
+  ees,8 f8 | \noBreak
+  g8 f4. ees4 | \noBreak
+  ees2.~ | \noBreak
+  ees2 s4 \bar "|."
 }
 
 sopranoVerse = \relative c' {
@@ -259,6 +321,41 @@ bassVerse = \relative c {
   ees2 s4 \bar "|."
 }
 
+%
+% Duplicates the soprano line but allows for slight deviation to
+% enable us to elegantly handle certain lyrics issues.
+%
+alignBridge = \relative c' {
+  ees4 g4 bes4 | \noBreak
+  c2. |
+
+  c2 f,4 | \noBreak
+  f2. |
+  
+  f4 g4 aes8( bes8) | \noBreak
+  bes2. |
+  
+  bes2 ees,4 | \noBreak
+  ees2. |
+  
+  ees4 f4 g4 | \noBreak
+  f2. |
+  
+  f4 g4 aes8( bes8) | \noBreak
+  bes2. | \break
+  
+  bes8 aes4 g4. | \noBreak
+  ees2~ ees8 ees8 | \noBreak
+  ees2.~ | \noBreak
+  ees2 r4 | \break
+  
+  bes'8 aes4 g4 aes8( | \noBreak
+  g2~ g8) ees8 | \noBreak
+  ees2.~ | \noBreak
+  ees2.~ | \noBreak
+  ees4 r4 \bar "|."
+}
+
 sopranoBridge = \relative c' {
   ees4 g4 bes4 | \noBreak
   c2. |
@@ -385,63 +482,63 @@ bassBridge = \relative c {
 
 verseOne = \lyricmode {
   \set stanza = "1. "
-  How4 beau2 -- ti4 -- ful2 " "8
-  the8 hands2 that4 served2 " "8
-  the8 wine4 and4 the4 bread,2
-  and8 the8 sons4 of4. the8 earth.4
-  How2 beau2 -- ti4 -- ful2 " "8
-  the8 feet2 that4 walked2 " "8
-  the8 long4 dust4 -- y4 roads,2
-  and8 the8 hill4 to4. the8 cross.4
+  How beau -- ti -- ful
+  the hands that served
+  the wine and the bread,
+  and the sons of the earth.
+  How beau -- ti -- ful
+  the feet that walked
+  the long dust -- y4 roads,
+  and the hill to the cross.
 }
 
 verseTwo = \lyricmode {
   \set stanza = "2. "
-  How4 beau2 -- ti4 -- ful2 " "8
-  the8 heart2 that4 bled2 " "8
-  that8 took4 all4 my4 sin,2
-  and4 bore4 it4. in8 -- stead.4
-  How2 beau2 -- ti4 -- ful2 " "8
-  the8 ten2 -- der4 eyes2 " "8
-  that8 choose4 to4 for4 -- give,2
-  and4 ne4 -- ver4. de8 -- spise.4
+  How beau -- ti -- ful
+  the heart that bled
+  that took all my4 sin,
+  and _ bore it in8 -- stead.
+  How beau -- ti -- ful
+  the ten -- der eyes
+  that choose to for -- give,
+  and _ ne -- ver de -- spise.
 }
 
 verseThree = \lyricmode {
   \set stanza = "3. "
-  How4 beau2 -- ti4 -- ful2 " "8
-  the8 ra2 -- diant4 bride2 " "8
-  who8 waits4 for4 the4 groom2
-  with8 His8 light4 in4. her8 eyes.4
-  How2 beau2 -- ti4 -- ful2 " "8
-  when8 hum4. -- ble8 hearts4 give2 " "8
-  the8 fruit4 of4 pure4 lives2
-  so8 that8 oth4 -- ers4. may8 live.4
+  How beau -- ti -- ful
+  the ra -- diant bride
+  who waits for the groom
+  with His light in her eyes.
+  How beau -- ti -- ful
+  when hum -- ble hearts give
+  the fruit of pure lives
+  so that oth -- ers may8 live.
 }
 
 verseFour = \lyricmode {
   \set stanza = "4. "
-  How4 beau2 -- ti4 -- ful2 " "8
-  the8 feet2 that4 bring2 " "8
-  the8 sound4 of4 good4 news,2
-  and8 the8 love4 of4. the8 King.4
-  How2 beau2 -- ti4 -- ful2 " "8
-  the8 hands2 that4 serve2 " "8
-  the8 wine4 and4 the4 bread,2
-  and8 the8 sons4 of4. the8 earth.4
+  How beau -- ti -- ful
+  the feet that bring
+  the sound of good news,
+  and the love of the King.
+  How beau -- ti -- ful
+  the hands that serve
+  the wine and the bread,
+  and the sons of the8 earth.
 }
 
 verseCommon = \lyricmode {
-  How2 beau2 -- ti4 -- ful,2. " "2. " "4
-  how2 beau2 -- ti4 -- ful,2. " "2. " "4
-  how2 beau2 -- ti4 -- ful,2. " "2
-  is8 the8 bod8 -- y4. of4 Christ1 " "2
+  How beau -- ti -- ful,
+  how beau -- ti -- ful,
+  how beau -- ti -- ful,
+  is the bod -- y of Christ
 }
 
 bridgeLyrics = \lyricmode {
-  And4 as4 He4 laid2. down2 His4 life,2.
-  we4 of4 -- fer4 this2. sac2 -- ri4 -- fice,2.
-  that4 we4 might4 live2. just4 as4 He4 died,2.
-  Will8 -- ing4 to4. pay2 " "8 the8 price,2. " "2.
-  will8 -- ing4 to4 pay2 " "4 the8 price.2. " "2. " "2
+  And as He laid down His life,
+  we of -- fer this sac -- ri -- fice,
+  that we might live just as He died,
+  Will -- ing to pay the price,
+  will -- ing to pay the price.
 }

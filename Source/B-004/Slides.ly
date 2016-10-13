@@ -96,7 +96,10 @@
             \altoVerse
           }
         }
-        \context Lyrics { \huge \verseOne \verseCommon }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \huge \verseOne \verseCommon
+        }
       >>
       \context Staff = lower <<
         \clef bass
@@ -133,7 +136,10 @@
             \altoBridge
           }
         }
-        \context Lyrics { \huge \verseTwo \verseCommon \bridgeLyrics }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \huge \verseTwo \verseCommon \bridgeLyrics
+        }
       >>
       \context Staff = lower <<
         \clef bass
@@ -170,7 +176,14 @@
             \altoVerse
           }
         }
-        \context Lyrics { \huge \verseThree \verseCommon }
+        \context NullVoice = align {
+          \global
+          \alignVerse
+        }
+        \new Lyrics \lyricsto "align" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \huge \verseThree \verseCommon
+        }
       >>
       \context Staff = lower <<
         \clef bass
@@ -205,7 +218,10 @@
             \altoVerse
           }
         }
-        \context Lyrics { \huge \verseFour \verseCommon }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \huge \verseFour \verseCommon \bridgeLyrics
+        }
       >>
       \context Staff = lower <<
         \clef bass

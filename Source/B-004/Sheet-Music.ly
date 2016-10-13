@@ -110,10 +110,26 @@
             \altoVerse
           }
         }
-        \context Lyrics = one { \verseOne \verseCommon }
-        \context Lyrics = two { \verseTwo }
-        \context Lyrics = three { \verseThree }
-        \context Lyrics = four { \verseFour }
+        \context NullVoice = align {
+          \global
+          \alignVerse
+        }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \verseOne \verseCommon
+        }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \verseTwo
+        }
+        \new Lyrics \lyricsto "align" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \verseThree
+        }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \verseFour
+        }
       >>
       \context Staff = lower <<
         \clef bass
@@ -137,7 +153,7 @@
     }
   }
   \markup {	
-    \huge \bold "Bridge (after verse 2):"
+    \huge \bold "Bridge (between verse 2 and 3):"
   }
   \score {
     \context ChoirStaff <<
@@ -156,7 +172,10 @@
             \altoBridge
           }
         }
-        \context Lyrics = bridge { \bridgeLyrics }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \bridgeLyrics
+        }
       >>
       \context Staff = lower <<
         \clef bass
