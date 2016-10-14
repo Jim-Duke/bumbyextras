@@ -46,9 +46,9 @@
 %            \char ##x2022 "arr. "
 %            \fromproperty #'header:arranger
           }
-%          \line {
-%            \fromproperty #'header:copyright
-%          }
+          \line {
+            \fromproperty #'header:copyright
+          }
 %          \line {
 %            \fromproperty #'header:license
 %          }
@@ -106,11 +106,26 @@
             \altoVerse
           }
         }
-        \context Lyrics = one { \verseOne }
-        \context Lyrics = two { \verseTwo }
-        \context Lyrics = three { \verseThree }
-        \context Lyrics = four { \verseFour }
-        \context Lyrics = five { \verseFive }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \verseOne
+        }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \verseTwo
+        }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \verseThree
+        }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \verseFour
+        }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \verseFive
+        }
       >>
       \context Staff = lower <<
         \clef bass

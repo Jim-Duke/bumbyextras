@@ -6,18 +6,32 @@ global = {
   \aikenHeads
 }
 
-songTitle = #"Abide with Me"
-
 \header {
-  title = \songTitle
+  title = "Abide with Me"
   tune = "EVENTIDE"
   meter = "10.10.10.10"
   composer = "William H. Monk (1861)"
   poet = "Henry F. Lyte (1847)"
   songNumber = "B-005"
-  copyright = ##f
+  copyright = "In the Public Domain"
   license = ##f
   tagline = ##f
+  scripture = \markup {
+    \override #'(line-width . 70)
+    \center-column {
+      \vspace #2
+      \abs-fontsize #24
+      \italic \wordwrap-string #"Abide with us, for it is toward evening,
+         and the day is far spent. - Luke 24:29"
+      \vspace #2
+      \abs-fontsize #24 \italic #"\"O Death, where is your sting?"
+      \abs-fontsize #24 \italic #"O Hades, where is your victory?\""
+      \vspace #1
+      \abs-fontsize #24 \italic \wordwrap-string #"The sting of death is sin, and the strength of sin is the law.
+         But thanks be to God, who gives us the victory through our
+         Lord Jesus Christ. - 1 Corinthians 15:55-57"
+    }
+  }
 }
 
 sopranoVerse = \relative c'' {

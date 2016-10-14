@@ -47,7 +47,7 @@
       }
     }
     bookTitleMarkup = \markup {
-      \column {
+      \center-column {
         \fill-line {
           \null
           {
@@ -62,39 +62,7 @@
           \bold
           \fromproperty #'header:title
         }
-        \vspace #1
-        \fill-line {
-          \abs-fontsize #20
-          \italic
-          "Abide with us, for it is toward evening, and the day is far spent. (Luke 24:29)"
-        }
-        \vspace #2
-        \fill-line {
-          \abs-fontsize #20
-          \italic
-          "\"O Death, where is your sting?"
-        }
-        \fill-line {
-          \abs-fontsize #20
-          \italic
-          "O Hades, where is your victory?\""
-        }
-        \vspace #1
-        \fill-line {
-          \abs-fontsize #20
-          \italic
-          "The sting of death is sin, and the strength of sin is the law."
-        }
-        \fill-line {
-          \abs-fontsize #20
-          \italic
-          "But thanks be to God, who gives us the victory through our"
-        }
-        \fill-line {
-          \abs-fontsize #20
-          \italic
-          "Lord Jesus Christ.  (1 Cor. 15:55-57)"
-        }
+        \fromproperty #'header:scripture
       }
     }
     scoreTitleMarkup = \markup {
@@ -132,7 +100,10 @@
             \altoVerse
           }
         }
-        \context Lyrics { \huge \verseOne }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \huge \verseOne
+        }
       >>
       \context Staff = lower <<
         \clef bass
@@ -167,7 +138,10 @@
             \altoVerse
           }
         }
-        \context Lyrics { \huge \verseTwo }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \huge \verseTwo
+        }
       >>
       \context Staff = lower <<
         \clef bass
@@ -202,7 +176,10 @@
             \altoVerse
           }
         }
-        \context Lyrics { \huge \verseThree }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \huge \verseThree
+        }
       >>
       \context Staff = lower <<
         \clef bass
@@ -237,7 +214,10 @@
             \altoVerse
           }
         }
-        \context Lyrics { \huge \verseFour }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \huge \verseFour
+        }
       >>
       \context Staff = lower <<
         \clef bass
@@ -272,7 +252,10 @@
             \altoVerse
           }
         }
-        \context Lyrics { \huge \verseFive }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \huge \verseFive
+        }
       >>
       \context Staff = lower <<
         \clef bass
