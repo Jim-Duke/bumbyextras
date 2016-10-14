@@ -30,3 +30,46 @@ Possible reasons for rejecting the hymn include:
 5. The song lacks sufficient worship benefit.  It lacks depth or breadth of meaning.
 
 The critical review team may also make recommendations on changes to the lyrics (if allowed), and which verses should be included or excluded.
+
+### Typesetting
+
+The process of typesetting a song is beyond the scope of this simple process document.  It involves the use of typesetting tools - specifically Lilypond and Frescobaldi - to format the music into letter sized sheet music, 4:3 format slides, and a MIDI file.
+
+### Technical Review
+
+The purpose of the technical review is to ensure that the typesetting faithfully transcribed the music into the various formats required and in accordance with the guidance from the critical review.  It works to ensure the following:
+
+1. The copyright attribution is correct.  This includes licensing information.
+   So if CCLI is used, that our license # is correct and the song # is correct.
+3. Artist attribution is correct and complete (Composer, Poet, Arranger, etc.)
+4. The Notes are correct.
+5. The Words are correct.
+6. The Layout looks good.
+7. The music and words on the slides look big enough and are easy to read.
+8. The layout is correct for where it will fit in our notebooks.
+
+### Publishing the final results
+
+Publishing the Sheet Music, Slides, and MIDI files involves the following steps:
+
+1. Using Frescobaldi, produce the Sheet-Music.PDF using the Publish option.  This
+   will create a high resolution Sheet-Music.pdf file and Sheet-Music.mid file.
+2. Change the name of the PDF file to B-### - NAME OF SONG - Sheet Music.pdf and
+   copy it to the appropriate Published subfolder.
+3. Change the name of the MIDI file to B-### - NAME OF SONG.mid and copy it to
+   the appropriate Published subfolder.
+4. Change the name of the Slides.pdf file to B-### - NAME OF SONG - Slides.pdf and
+   copy it to the appropriate Published subfolder.
+5. Open the B-### - NAME OF SONG - Slides.pdf file in Acrobat.  Using the Tools
+   option add a background to the first page and put the Template/Background.jpg file
+   as the background.  Save the file.
+6. Use the save as feature to save the file as a PNG.  That will create a set of
+   PNG files with the page number appended to the name.
+7. Rename the PNG files to the naming standard Presentation Creator expects; where
+   verses have the name 1.1 1.2 1.3 etc. 2.1 2.2 2.3 - for the slides for verse 1,
+   verse 2 etc.
+8. Create the XML snippet that includes the information about the song (meter,
+   copyright, verse, name, number).
+9. Check in all these new files to GitHub.
+10. Mark the pertinent ticket in the repository to show that the song has been
+    fully added.
