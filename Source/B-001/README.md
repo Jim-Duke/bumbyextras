@@ -1,67 +1,116 @@
 # B-001: My Shepherd Will Supply My Need
-This is an Isaac Watts hymn one of several of his adaptations of Psalm 23.  It has most commonly been set to a traditional American Folksong referred to by the tune name RESIGNATION as originally found in the hymnbook Southern Harmony.
+This is one of several Isaac Watts hymn that adapt Psalms to common meters.  It 
+has most commonly been set to tune RESIGNATION, a traditional American folk song
+found in the hymnbook Southern Harmony.
 
-## Copyright Information
-This hymn and tune are in the Public Domain.
+## Submission
 
-## About the Hymn
+### Submitted By
 
-[Expand on this] The hymn appears to have been written in 1719.  This hymn is one of
-many where Isaac Watts adapted the psalms to fit various common meters used in hymn singing in his day.  This adaptation of Psalm 23 was adapted to fit the common meter (8.6.8.6).
+Jim Duke
 
-## Sources
+### Reason for the Submission
 
-1. An excerpt from Isaac Watts publication in a 1740 printing of the 1719 publication Psalms of David is included [Issac Watts Hymnal 1740.pdf](Sources/Isaac_Watts_Hymnal_1740.pdf)
+In one of the many auditioned choirs Michael Duke participated in, one included
+a choral arrangement by Mack Wilberg.  A YouTube recording of the Mormon
+Tabernacle Choir singing the Mack Wilberg arrangement can be found
+[here](https://www.youtube.com/watch?v=yzARLyXJjec).  The words and music were
+so moving that I wanted to see if we could find the original and use it in our
+worship.
 
-## Original Verses
+## Research
 
-1. Abide with me; fast falls the eventide;  
-   The darkness deepens; Lord with me abide.  
-   When other helpers fail and comforts flee,  
-   Help of the helpless, O abide with me.
+Jim Duke did the research about this hymn.
 
-2. Swift to its close ebbs out life’s little day;  
-   Earth’s joys grow dim; its glories pass away;  
-   Change and decay in all around I see;  
-   O Thou who changest not, abide with me.
+### Copyright Information
 
-3. Not a brief glance I beg, a passing word;  
-   But as Thou dwell’st with Thy disciples, Lord,  
-   Familiar, condescending, patient, free.  
-   Come not to sojourn, but abide with me.
+The hymn and tune are in the Public Domain.
 
-4. Come not in terrors, as the King of kings,  
-   But kind and good, with healing in Thy wings,  
-   Tears for all woes, a heart for every plea—  
-   Come, Friend of sinners, and thus bide with me.
+### About the Hymn
 
-5. Thou on my head in early youth didst smile;  
-   And, though rebellious and perverse meanwhile,  
-   Thou hast not left me, oft as I left Thee,  
-   On to the close, O Lord, abide with me.
+The hymn appears to have been written in 1719.  This hymn is one of many where
+Isaac Watts adapted the psalms to fit various common meters used in hymn singing
+in his day.  This adaptation of Psalm 23 was adapted to fit the common meter
+(CM - 8.6.8.6).
 
-6. I need Thy presence every passing hour.  
-   What but Thy grace can foil the tempter’s power?  
-   Who, like Thyself, my guide and stay can be?  
-   Through cloud and sunshine, Lord, abide with me.
+### Sources
 
-7. I fear no foe, with Thee at hand to bless;  
-   Ills have no weight, and tears no bitterness.  
-   Where is death’s sting? Where, grave, thy victory?  
-   I triumph still, if Thou abide with me.
+1. An excerpt from Isaac Watts 1719 publication "The Psalms of David: Imitated
+   in the language of the New Testament" found in a 1740 printing is found in
+   [Issac Watts Hymnal 1740.pdf](Sources/Isaac_Watts_Hymnal_1740.pdf)
+2. An excerpt from the 1854 Southern Harmony edition that pairs the hymn with
+   the tune RESIGNATION can be found in
+   [Southern Harmony 1854.pdf](Sources/Southern_Harmony_1854.pdf)
+3. An improved harmonization of the tune, together with the Lutheran text
+   variation is found in [From Modern Lutheran Hymnal 2006.pdf](Sources/From_Modern_Lutheran_Hymnal_2006.pdf)
 
-8. Hold Thou Thy cross before my closing eyes;  
-   Shine through the gloom and point me to the skies.  
-   Heaven’s morning breaks, and earth’s vain shadows flee;  
-   In life, in death, O Lord, abide with me.
+### Original Verses
 
-## About this Version
+1. My Shepherd will supply my Need;  
+   Jehovah is his Name;  
+   In Pastures fresh he makes me feed,  
+   Beside the living Stream.
 
-Most hymnals include verses 1, 2, and 6.  This version appends verses 7 and 8 to that.
+2. He brings my wand'ring Spirit back  
+   When I forsake his Ways,  
+   And leads me for his Mercy's Sake
+   In Paths of Truth and Grace.
 
-## Maintenance Information
+3. When I walk through the Shades of Death,  
+   The Presence is my Stay;  
+   A Word of thy supporting Breath  
+   Drives all my Fears away.
 
-- Verses were selected by Timothy Duke
-- Lilypond source files were created by Jim Duke
-- Slides, Sheet Music, and MIDI files created by Jim Duke
-- Output published by Jim Duke
+4. Thy Hand in Spite of all my Foes  
+   Doth still my Table spread;  
+   My Cup with Blessings overflows,
+   Thine Oil anoints my Head.
+
+5. The sure Provisions of my God  
+   Attend me all my Days;  
+   O may thy House be mine Abode,  
+   And all my Work be Praise!
+
+6. There would I find a settled Rest,  
+   (While others go and come)  
+   No more a Stranger or a Guest,  
+   But like a Child at Home. 
+
+Capitalization and punctuation carefully follows the original Isaac Watts
+publication.
+
+### Variations in the text
+
+Besides minor modifications in capitalization and punctuation, the most
+significant variation is found in Lutheran hymnals where they modified the first
+verse by changing "will" to "you", and replacing "Jehovah is his Name" with
+"most holy is your name".  In most places where "He" appears it has been
+replaced with "You".
+
+One version omitted the 6th verse.  That wouldn't work with the tune pairing
+typically used because two verses of the original have to be combined to form a
+single verse to suit the length of the tune.
+
+### Tune
+
+The most dominant pairing of this hymn is with the traditional American tune
+that first appeared in Southern Harmony 1854 edition under the tune name
+RESIGNATION.
+
+### Researcher Recommendation
+
+I recommend that we use the modern harmonization found in the Lutheran hymnal
+but use the original text.  Don't follow the Capitalization scheme of Watts,
+but use standard modern practices.
+
+## Critical Review
+
+TBD
+
+## Typesetting
+
+TBD
+
+## Technical Review
+
+TBD
