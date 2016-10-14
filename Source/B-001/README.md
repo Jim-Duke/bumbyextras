@@ -12,11 +12,11 @@ Jim Duke
 ### Reason for the Submission
 
 In one of the many auditioned choirs Michael Duke participated in, one included
-a choral arrangement by Mack Wilberg.  A YouTube recording of the Mormon
-Tabernacle Choir singing the Mack Wilberg arrangement can be found
-[here](https://www.youtube.com/watch?v=yzARLyXJjec).  The words and music were
-so moving that I wanted to see if we could find the original and use it in our
-worship.
+a choral arrangement by Mack Wilberg of My Shepherd Will Supply My Need.  A
+YouTube recording of the Mormon Tabernacle Choir singing the Mack Wilberg
+arrangement can be found [here](https://www.youtube.com/watch?v=yzARLyXJjec).
+The words and music were so moving that I wanted to see if we could find the
+original and use it in our worship.
 
 ## Research
 
@@ -53,7 +53,7 @@ in his day.  This adaptation of Psalm 23 was adapted to fit the common meter
 
 2. He brings my wand'ring Spirit back  
    When I forsake his Ways,  
-   And leads me for his Mercy's Sake
+   And leads me for his Mercy's Sake  
    In Paths of Truth and Grace.
 
 3. When I walk through the Shades of Death,  
@@ -63,7 +63,7 @@ in his day.  This adaptation of Psalm 23 was adapted to fit the common meter
 
 4. Thy Hand in Spite of all my Foes  
    Doth still my Table spread;  
-   My Cup with Blessings overflows,
+   My Cup with Blessings overflows,  
    Thine Oil anoints my Head.
 
 5. The sure Provisions of my God  
