@@ -46,8 +46,8 @@
             \fromproperty #'header:tune
             \char ##x2022
             \fromproperty #'header:composer
-            \char ##x2022 "arr. "
-            \fromproperty #'header:arranger
+            %{\char ##x2022 "arr. "
+            \fromproperty #'header:arranger%}
           }
           \line {
             \fromproperty #'header:copyright
@@ -110,25 +110,17 @@
             \altoVerse
           }
         }
-        \context NullVoice = align {
-          \global
-          \alignVerse
-        }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
-          \verseOne \verseCommon
+          \verseOne
         }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
           \verseTwo
         }
-        \new Lyrics \lyricsto "align" {
-          \once \override LyricText.self-alignment-X = #CENTER
-          \verseThree
-        }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
-          \verseFour
+          \verseThree
         }
       >>
       \context Staff = lower <<
@@ -152,49 +144,6 @@
       ragged-last = ##f
     }
   }
-  \markup {	
-    \huge \bold "Bridge (between verse 2 and 3):"
-  }
-  \score {
-    \context ChoirStaff <<
-      %\override Score.BarNumber.break-visibility = ##(#t #t #t)
-      %\set Score.barNumberVisibility = #all-bar-numbers-visible
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
-            \global
-            \sopranoBridge
-          }
-        }
-        \context Voice = altos {
-          \voiceTwo {
-            \global
-            \altoBridge
-          }
-        }
-        \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
-          \bridgeLyrics
-        }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \context Voice = tenors {
-          \voiceOne {
-            \global
-            \tenorBridge
-          }
-        }
-        \context Voice = basses {
-          \voiceTwo {
-            \global
-            \bassBridge
-          }
-        }
-      >>
-    >>
-    \layout {}
-  }
   %
   % Extra additional score containing all the music so we can have a single MIDI file
   %
@@ -204,17 +153,13 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
-%            \partial 4
-            \sopranoVerse \sopranoBridge
-%            \sopranoChorus
+            \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-%            \partial 4
-            \altoVerse \altoBridge
-%            \altoChorus
+            \altoVerse
           }
         }
       >>
@@ -223,17 +168,13 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-%            \partial 4
-            \tenorVerse \tenorBridge
-%            \tenorChorus
+            \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-%            \partial 4
-            \bassVerse \bassBridge
-%            \bassChorus
+            \bassVerse
           }
         }
       >>

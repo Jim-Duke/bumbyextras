@@ -57,7 +57,7 @@ in his day.  This adaptation of Psalm 23 was adapted to fit the common meter
    In Paths of Truth and Grace.
 
 3. When I walk through the Shades of Death,  
-   The Presence is my Stay;  
+   Thy Presence is my Stay;  
    A Word of thy supporting Breath  
    Drives all my Fears away.
 
