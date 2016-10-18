@@ -1,0 +1,188 @@
+\version "2.18.2"
+
+global = {
+  \key g \major
+  \time 4/4
+  \aikenHeads
+}
+
+\header {
+  title = \markup {
+    \column {
+      \center-align "Hark! The Herald"
+      \center-align "Angels Sing"
+    }
+  }
+  tune = "MENDELSSOHN"
+  meter = "7.7.7.7.D with refrain"
+  composer = "Felix Mendelssohn (1840)"
+  poet = "Charles Wesley"
+  songNumber = "B-008"
+  copyright = "In the Public Domain"
+  license = ##f
+  arranger = "William H. Cummings"
+  scripture = ##f %{\markup {
+    \override #'(line-width . 60)
+    \center-column {
+      \vspace #4
+      \abs-fontsize #24
+      \italic \wordwrap-string #"How lovely on the mountains
+         are the feet of him who brings good news,
+         who announces peace
+         and brings good news of happiness,
+         who announces salvation,
+         and says to Zion, \"Your God reigns!\" - Isaiah 52:7"
+    }
+  }%}
+  tagline = ##f
+}
+
+sopranoVerse = \relative c' {
+  d4 g4 g4. fis8 | \noBreak
+  g4 b4 b4( a4) |
+  d4 d4 d4. c8 | \noBreak
+  b4 a4 b2 |
+  
+  d,4 g4 g4. fis8 | \noBreak
+  g4 b4 b4( a4) |
+  d4 a4 a4. fis8 | \noBreak
+  fis4 e4 d2 |
+  
+  d'4 d4 d4 g,4 | \noBreak
+  c4 b4 b4( a4) |
+  d4 d4 d4 g,4 | \noBreak
+  c4 b4 b4( a4) |
+
+  e'4 e4 e4 d4 | \noBreak
+  c4 b4 c2 |
+  a4 b8( c8) d4. g,8 | \noBreak
+  g4 a4 b2 |
+  
+  e4. e8 e4 d4 | \noBreak
+  c4 b4 c2 |
+  a4 b8( c8) d4. g,8 | \noBreak
+  g4 a4 g2 \bar "|."
+}
+
+altoVerse = \relative c' {
+  d4 d4 d4. d8 |
+  d4 g4 g4( fis4) |
+  g4 fis4 e4 a4 |
+  g4 fis4 g2 |
+  
+  d4 d4 d4. d8 |
+  b4 g'4 g2 |
+  fis4 e4 fis4. d8 |
+  d4 cis4 d2 |
+  
+  d4 d4 d4 g4 |
+  a4 g4 g4( fis4) |
+  d4 d4 d4 g4 |
+  a4 g4 g4( fis4) |
+  
+  c'4 c4 c4 b4 |
+  a4 gis4 a2 |
+  fis4 fis4 g4. d8 |
+  d4 fis4 g2 |
+  
+  c4 c4 c4 b4 |
+  a4 gis4 a2 |
+  d,4 fis4 g4. d8 |
+  d4 d4 d2 \bar "|."
+}
+
+tenorVerse = \relative c' {
+  b4 b4 b4. a8 |
+  g4 d'4 d2 |
+  d4 d4 e4 e4 |
+  d4 d4 d2 |
+  
+  b4 b4 b4. a8 |
+  g4 d'4 e2 |
+  b4 a4 a4. a8 |
+  b4 g4 fis2 |
+  
+  d'4 d4 d4 d4 |
+  d4 d4 d2 |
+  d4 d4 d4 d4 |
+  d4 d4 d2 |
+  
+  e4 e4 e4 e4 |
+  e4 e4 e2 |
+  d4 d4 d4. b8 |
+  b4 c4 b2 |
+  
+  e4 e4 e4 d4 |
+  c4 b4 c2 |
+  d4 d4 d4. b8 |
+  b4 c4 b2 \bar "|."
+}
+
+bassVerse = \relative c' {
+  g4 g4 g4 d4 |
+  b4 g4 d'2 |
+  b4 b4 c4 c4 |
+  d4 d4 g,2 |
+  
+  g'4 g4 g4 d4 |
+  e4 d4 cis2 |
+  b4 cis4 d4 fis,4 |
+  g4 a4 d2 |
+  
+  d'4 d4 d4 b4 |
+  fis4 g4 d2 |
+  d'4 d4 d4 b4 |
+  fis4 g4 d2 |
+  
+  c4 c4 c4 c4 |
+  c4 e4 a2 |
+  c4 c4 b4 g4 |
+  d4 d4 g,2 |
+  
+  c'4 c4 c4 b4 |
+  a4 gis4 a4( g4) |
+  fis4 c'4 b4 g4 |
+  d4 d4 g2 \bar "|."
+}
+
+verseOne = \lyricmode {
+  \set stanza = "1. "
+  Christ the Lord is ris'n to -- day,
+  Sons of Men and An -- gels say!
+  Raise your Joys and Tri -- umphs high,
+  Sing, ye Heav'ns and Earth re -- ply.
+  Vain the Stone, the Watch, the Seal,
+  Christ hath burst the Gate of Hell:
+  Death in vain for -- bids his Rise,
+  Christ hath o -- pen'd Par -- a -- dise.
+  Death in vain for -- bids his Rise,
+  Christ hath o -- pen'd Par -- a -- dise.
+}
+
+verseTwo = \lyricmode {
+  \set stanza = "2. "
+  Lives a -- gain our glor -- ious King,
+  Where, O Death, is now thy Sting?  
+  Once he dy'd our Souls to save;  
+  Where's thy Vict -- o -- ry, O Grave?
+  Soar we now where Christ hath led,  
+  Foll' -- wing our ex -- alt -- ed Head;  
+  Made like him, like him we rise,  
+  Ours the Cross, the Grave, the Skies.
+  Made like him, like him we rise,  
+  Ours the Cross, the Grave, the Skies.
+}
+
+verseThree = \lyricmode {
+  \set stanza = "3. "
+  Hail, the Lord of Earth and Heav'n!  
+  Praise to thee by both be giv'n!  
+  Thee we greet Tri -- um -- phant now  
+  Hail the Re -- sur -- rec -- tion thou!
+  King of Glo -- ry! Soul of bliss!  
+  Ev -- er -- last -- ing Life is this  
+  Thee to know thy Pow'r to prove,  
+  Thus to sing, and thus to love.
+  Thee to know thy Pow'r to prove,  
+  Thus to sing, and thus to love.
+}
