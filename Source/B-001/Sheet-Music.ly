@@ -5,7 +5,7 @@
 %
 % Adjust the staff size to adjust the basic font size of the words and music.
 %
-#(set-global-staff-size 18)
+#(set-global-staff-size 20)
 
 % Standard full page format.
 \book {
@@ -20,8 +20,8 @@
     %
     % Various variables that can be used to tweak vertical spacing
     %
-    system-system-spacing #'basic-distance = #4
-    system-system-spacing #'minimum-distance = #4
+    system-system-spacing #'basic-distance = #12
+    system-system-spacing #'minimum-distance = #8
     score-markup-spacing #'basic-distance = #0
     markup-system-spacing #'basic-distance = #0
     
@@ -74,9 +74,9 @@
           \abs-fontsize #24
           \bold
           \fill-line {
-            \fromproperty #'header:songNumber
-            \fromproperty #'header:title
             ""
+            \fromproperty #'header:title
+            \fromproperty #'header:songNumber
           }
           \fill-line {
             \large \bold
@@ -110,15 +110,19 @@
             \altoVerse
           }
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \context NullVoice = align {
+          \global
+          \sheetAlign
+        }
+        \new Lyrics \lyricsto "align" {
           \once \override LyricText.self-alignment-X = #CENTER
           \verseOne
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \new Lyrics \lyricsto "align" {
           \once \override LyricText.self-alignment-X = #CENTER
           \verseTwo
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \new Lyrics \lyricsto "align" {
           \once \override LyricText.self-alignment-X = #CENTER
           \verseThree
         }

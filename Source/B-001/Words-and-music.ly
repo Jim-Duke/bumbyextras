@@ -24,19 +24,114 @@ global = {
   scripture = \markup {
     \override #'(line-width . 60)
     \center-column {
-      \vspace #4
+      \vspace #3
       \abs-fontsize #24
-      \italic \wordwrap-string #"How lovely on the mountains
-         are the feet of him who brings good news,
-         who announces peace
-         and brings good news of happiness,
-         who announces salvation,
-         and says to Zion, \"Your God reigns!\" - Isaiah 52:7"
+      \italic \wordwrap-string #"The Lord is my shepherd; I shall not want,
+         He makes me to lie down in green pastures;
+         He leads me beside the still waters.
+         He restores my soul;
+         He leads me in the paths of righteousness
+         For His name's sake. - Psalm 23:1-3"
     }
   }
   tagline = ##f
 }
 
+slidesAlign = \relative c {
+  \partial 4 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 \bar "" \break
+  
+  c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2.~ | \noBreak
+  c2 \bar "" \break
+  
+  c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 \bar "" \break
+  
+  c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2.~ | \noBreak
+  c2 \bar "" \break
+  
+  c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 \bar "" \break
+  
+  c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2.~ | \noBreak
+  c2 \bar "" \break
+  
+  c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 \bar "" \break
+
+  c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2.~ | \noBreak
+  c2 \bar "|."
+}
+
+sheetAlign = \relative c {
+  \partial 4 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 \bar "" \noBreak
+  c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2.~ | \noBreak
+  c2 \bar "" \break
+  
+  c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 \bar "" \noBreak
+  c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2.~ | \noBreak
+  c2 \bar "" \break
+  
+  c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 \bar "" \noBreak
+  c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2.~ | \noBreak
+  c2 \bar "" \break
+  
+  c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 \bar "" \noBreak
+  c4 | \noBreak
+  c2 c4 | \noBreak
+  c2 c4 | \noBreak
+  c2.~ | \noBreak
+  c2 \bar "|."
+}
 sopranoVerse = \relative c' {
   \partial 4 c8( e8) \noBreak
   g2 e8( d8) \noBreak
@@ -255,10 +350,10 @@ verseTwo = \lyricmode {
   When I walk through the Shades of Death,  
   Thy Pre -- sence is my Stay;  
   A Word of thy sup -- port -- ing Breath  
-  Drives all my Fears away.
+  Drives all my Fears a -- way.
   Thy Hand in Spite of all my Foes  
   Doth still my Ta -- ble spread;  
-  My Cup with Bless -- ings over -- flows,  
+  My Cup with Bless -- ings o -- ver -- flows,  
   Thine Oil a -- noints my Head.
 
 }

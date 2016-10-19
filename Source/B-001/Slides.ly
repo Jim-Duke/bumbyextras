@@ -35,9 +35,9 @@
           \column {
             \fromproperty #'header:tune
             \fromproperty #'header:composer
-            \line {
+            %{\line {
               "arr: " \fromproperty #'header:arranger
-            }
+            }%}
           }
         }
       }
@@ -96,9 +96,13 @@
             \altoVerse
           }
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \context NullVoice = align {
+          \global
+          \slidesAlign
+        }
+        \new Lyrics \lyricsto "align" {
           \once \override LyricText.self-alignment-X = #CENTER
-          \huge \verseOne \verseCommon
+          \huge \verseOne
         }
       >>
       \context Staff = lower <<
@@ -113,48 +117,6 @@
           \voiceTwo {
             \global
             \bassVerse
-          }
-        }
-      >>
-    >>
-    \layout {}
-  }
-  \score {
-    \context ChoirStaff <<
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
-            \global
-            \sopranoVerse
-            \sopranoBridge
-          }
-        }
-        \context Voice = altos {
-          \voiceTwo {
-            \global
-            \altoVerse
-            \altoBridge
-          }
-        }
-        \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
-          \huge \verseTwo \verseCommon \bridgeLyrics
-        }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \context Voice = tenors {
-          \voiceOne {
-            \global
-            \tenorVerse
-            \tenorBridge
-          }
-        }
-        \context Voice = basses {
-          \voiceTwo {
-            \global
-            \bassVerse
-            \bassBridge
           }
         }
       >>
@@ -178,11 +140,11 @@
         }
         \context NullVoice = align {
           \global
-          \alignVerse
+          \slidesAlign
         }
         \new Lyrics \lyricsto "align" {
           \once \override LyricText.self-alignment-X = #CENTER
-          \huge \verseThree \verseCommon
+          \huge \verseTwo
         }
       >>
       \context Staff = lower <<
@@ -218,9 +180,13 @@
             \altoVerse
           }
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \context NullVoice = align {
+          \global
+          \slidesAlign
+        }
+        \new Lyrics \lyricsto "align" {
           \once \override LyricText.self-alignment-X = #CENTER
-          \huge \verseFour \verseCommon \bridgeLyrics
+          \huge \verseThree
         }
       >>
       \context Staff = lower <<
@@ -241,50 +207,4 @@
     >>
     \layout {}
   }
-%
-% Example of a Chorus slide
-%
-%  \pageBreak
-%  \score {
-%    \context ChoirStaff <<
-%      \context Staff = upper <<
-%        \context Voice = sopranos {
-%          \voiceOne {
-%            \global
-%            \partial 4
-%            \sopranoChorus
-%          }
-%        }
-%        \context Voice = altos {
-%          \voiceTwo {
-%            \global
-%            \partial 4
-%            \altoChorus
-%          }
-%        }
-%        \context Lyrics { \huge \chorus }
-%      >>
-%      \context Staff = lower <<
-%        \clef bass
-%        \context Voice = tenors {
-%          \voiceOne {
-%            \global
-%            \partial 4
-%            \tenorChorus
-%          }
-%        }
-%        \context Voice = basses {
-%          \voiceTwo {
-%            \global
-%            \partial 4
-%            \bassChorus
-%          }
-%        }
-%      >>
-%    >>
-%    \layout {}
-%    \header {
-%      title = \markup \bold { \fill-line { "Chorus:" "" } }
-%    }
-%  }
 }
