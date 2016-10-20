@@ -164,6 +164,7 @@ verseTwo = \lyricmode {
   Lives a -- gain our glor -- ious King,
   Where, O Death, is now thy Sting?  
   Once he dy'd our Souls to save;  
+  Where's thy Vic -- t'ry, boast -- ing Grave?
   Soar we now where Christ hath led,  
   Foll' -- wing our ex -- alt -- ed Head;  
   Made like him, like him we rise,  
