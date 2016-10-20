@@ -9,8 +9,8 @@ global = {
 \header {
   title = \markup {
     \column {
-      \center-align "Hark! The Herald"
-      \center-align "Angels Sing"
+      \center-align "Christ the Lord"
+      \center-align "is Risen Today"
     }
   }
   tune = "MENDELSSOHN"
@@ -164,7 +164,6 @@ verseTwo = \lyricmode {
   Lives a -- gain our glor -- ious King,
   Where, O Death, is now thy Sting?  
   Once he dy'd our Souls to save;  
-  Where's thy Vict -- o -- ry, O Grave?
   Soar we now where Christ hath led,  
   Foll' -- wing our ex -- alt -- ed Head;  
   Made like him, like him we rise,  
@@ -175,14 +174,14 @@ verseTwo = \lyricmode {
 
 verseThree = \lyricmode {
   \set stanza = "3. "
-  Hail, the Lord of Earth and Heav'n!  
-  Praise to thee by both be giv'n!  
-  Thee we greet Tri -- um -- phant now  
-  Hail the Re -- sur -- rec -- tion thou!
   King of Glo -- ry! Soul of bliss!  
   Ev -- er -- last -- ing Life is this  
   Thee to know thy Pow'r to prove,  
   Thus to sing, and thus to love.
-  Thee to know thy Pow'r to prove,  
-  Thus to sing, and thus to love.
+  Hail, the Lord of Earth and Heav'n!  
+  Praise to thee by both be giv'n!  
+  Thee we greet Tri -- um -- phant now  
+  Hail the Re -- sur -- rec -- tion thou!
+  Thee we greet Tri -- um -- phant now  
+  Hail the Re -- sur -- rec -- tion thou!
 }

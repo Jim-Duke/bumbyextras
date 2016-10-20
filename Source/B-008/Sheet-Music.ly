@@ -5,7 +5,7 @@
 %
 % Adjust the staff size to adjust the basic font size of the words and music.
 %
-#(set-global-staff-size 18)
+#(set-global-staff-size 16)
 
 % Standard full page format.
 \book {
@@ -20,8 +20,8 @@
     %
     % Various variables that can be used to tweak vertical spacing
     %
-    system-system-spacing #'basic-distance = #4
-    system-system-spacing #'minimum-distance = #4
+    system-system-spacing #'basic-distance = #10
+    system-system-spacing #'minimum-distance = #6
     score-markup-spacing #'basic-distance = #0
     markup-system-spacing #'basic-distance = #0
     
@@ -78,15 +78,15 @@
             \fromproperty #'header:title
             ""
           }
-          \fill-line {
+          %{\fill-line {
             \large \bold
             \fromproperty #'header:subtitle
           }
           \fill-line {
             \smaller \bold
             \fromproperty #'header:subsubtitle
-          }
-          \vspace #2
+          }%}
+          \vspace #1
         }
       }
     }
