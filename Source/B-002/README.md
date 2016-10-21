@@ -78,7 +78,7 @@ The original song, however, was arranged for a single vocalist with instrumental
 
 ## Critical Review
 
-TBD
+I am in full agreement with Jim's recommendations. Walcott
 
 ## Typesetting
 
