@@ -78,14 +78,6 @@
             \fromproperty #'header:title
             ""
           }
-          \fill-line {
-            \large \bold
-            \fromproperty #'header:subtitle
-          }
-          \fill-line {
-            \smaller \bold
-            \fromproperty #'header:subsubtitle
-          }
           \vspace #2
         }
       }
@@ -101,34 +93,39 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \sopranoVerse
+            \keepWithTag #'usePartials' \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \altoVerse
+            \keepWithTag #'usePartials' \altoVerse
           }
         }
-        \context NullVoice = align {
+%
+% Include the following if we want to break on phrases
+%
+%{
+        \context NullVoice = sheetMusicBreaks {
           \global
-          \alignVerse
+          \sheetMusicBreaks
         }
-        \new Lyrics \lyricsto "sopranos" {
+%}
+        \context NullVoice = verseOneAlign {
+          \global
+          \keepWithTag #'usePartials' \verseOneAlign
+        }
+        \context NullVoice = verseTwoAlign {
+          \global
+          \keepWithTag #'usePartials' \verseTwoAlign
+        }
+        \new Lyrics \lyricsto "verseOneAlign" {
           \once \override LyricText.self-alignment-X = #CENTER
-          \verseOne \verseCommon
+          \verseOne
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \new Lyrics \lyricsto "verseTwoAlign" {
           \once \override LyricText.self-alignment-X = #CENTER
           \verseTwo
-        }
-        \new Lyrics \lyricsto "align" {
-          \once \override LyricText.self-alignment-X = #CENTER
-          \verseThree
-        }
-        \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
-          \verseFour
         }
       >>
       \context Staff = lower <<
@@ -136,13 +133,13 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \tenorVerse
+            \keepWithTag #'usePartials' \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \bassVerse
+            \keepWithTag #'usePartials' \bassVerse
           }
         }
       >>
@@ -153,7 +150,7 @@
     }
   }
   \markup {	
-    \huge \bold "Bridge (between verse 2 and 3):"
+    \huge \bold "Chorus:"
   }
   \score {
     \context ChoirStaff <<
@@ -163,18 +160,18 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \sopranoBridge
+            \keepWithTag #'usePartials' \sopranoChorus
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \altoBridge
+            \keepWithTag #'usePartials' \altoChorus
           }
         }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
-          \bridgeLyrics
+          \chorusLyrics
         }
       >>
       \context Staff = lower <<
@@ -182,19 +179,19 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \tenorBridge
+            \keepWithTag #'usePartials' \tenorChorus
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \bassBridge
+            \keepWithTag #'usePartials' \bassChorus
           }
         }
       >>
     >>
     \layout {}
-  }
+  }%}
   %
   % Extra additional score containing all the music so we can have a single MIDI file
   %
@@ -204,17 +201,15 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
-%            \partial 4
-            \sopranoVerse \sopranoBridge
-%            \sopranoChorus
+            \keepWithTag #'usePartials' \sopranoVerse
+            \removeWithTag #'usePartials' \sopranoChorus
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-%            \partial 4
-            \altoVerse \altoBridge
-%            \altoChorus
+            \keepWithTag #'usePartials' \altoVerse
+            \removeWithTag #'usePartials' \altoChorus
           }
         }
       >>
@@ -223,17 +218,15 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-%            \partial 4
-            \tenorVerse \tenorBridge
-%            \tenorChorus
+            \keepWithTag #'usePartials' \tenorVerse
+            \removeWithTag #'usePartials' \tenorChorus
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-%            \partial 4
-            \bassVerse \bassBridge
-%            \bassChorus
+            \keepWithTag #'usePartials' \bassVerse
+            \removeWithTag #'usePartials' \bassChorus
           }
         }
       >>
