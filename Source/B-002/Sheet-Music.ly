@@ -5,7 +5,7 @@
 %
 % Adjust the staff size to adjust the basic font size of the words and music.
 %
-#(set-global-staff-size 18)
+#(set-global-staff-size 20)
 
 % Standard full page format.
 \book {
@@ -20,8 +20,8 @@
     %
     % Various variables that can be used to tweak vertical spacing
     %
-    system-system-spacing #'basic-distance = #4
-    system-system-spacing #'minimum-distance = #4
+    system-system-spacing #'basic-distance = #12
+    system-system-spacing #'minimum-distance = #8
     score-markup-spacing #'basic-distance = #0
     markup-system-spacing #'basic-distance = #0
     
@@ -31,6 +31,7 @@
     top-margin = 0.3\in
     bottom-margin = 0.25\in
     print-page-number = ##f
+    ragged-bottom = ##t
     oddFooterMarkup = \markup {
       \fontsize #-2
       \on-the-fly \last-page {
@@ -55,13 +56,6 @@
           \line {
             \fromproperty #'header:license
           }
-%          \vspace #0.25
-%          \line {
-%            "Engraved using Lilypond (www.lilypond.org) for www.acapellaworship.org.  PDF "
-%          }
-%          \line {
-%            "This hymn may be freely copied and distributed and we encourage its use in congregational acapella singing in worship everywhere."
-%          }
         }
       }
     }
@@ -102,15 +96,10 @@
             \keepWithTag #'usePartials' \altoVerse
           }
         }
-%
-% Include the following if we want to break on phrases
-%
-%{
         \context NullVoice = sheetMusicBreaks {
           \global
           \sheetMusicBreaks
         }
-%}
         \context NullVoice = verseOneAlign {
           \global
           \keepWithTag #'usePartials' \verseOneAlign
@@ -149,6 +138,7 @@
       ragged-last = ##f
     }
   }
+  \pageBreak
   \markup {	
     \huge \bold "Chorus:"
   }

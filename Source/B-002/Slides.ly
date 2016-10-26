@@ -99,93 +99,17 @@
             \altoVerse
           }
         }
-        \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
-          \huge \verseOne \verseCommon
-        }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \context Voice = tenors {
-          \voiceOne {
-            \global
-            \tenorVerse
-          }
-        }
-        \context Voice = basses {
-          \voiceTwo {
-            \global
-            \bassVerse
-          }
-        }
-      >>
-    >>
-    \layout {}
-  }
-  \score {
-    \context ChoirStaff <<
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
-            \global
-            \sopranoVerse
-            \sopranoBridge
-          }
-        }
-        \context Voice = altos {
-          \voiceTwo {
-            \global
-            \altoVerse
-            \altoBridge
-          }
-        }
-        \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
-          \huge \verseTwo \verseCommon \bridgeLyrics
-        }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \context Voice = tenors {
-          \voiceOne {
-            \global
-            \tenorVerse
-            \tenorBridge
-          }
-        }
-        \context Voice = basses {
-          \voiceTwo {
-            \global
-            \bassVerse
-            \bassBridge
-          }
-        }
-      >>
-    >>
-    \layout {}
-  }
-  \score {
-    \context ChoirStaff <<
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
-            \global
-            \sopranoVerse
-          }
-        }
-        \context Voice = altos {
-          \voiceTwo {
-            \global
-            \altoVerse
-          }
+        \context NullVoice = slideMusicBreaks {
+          \global
+          \slideMusicBreaks
         }
         \context NullVoice = align {
           \global
-          \alignVerse
+          \keepWithTag #'usePartials' \verseOneAlign
         }
         \new Lyrics \lyricsto "align" {
           \once \override LyricText.self-alignment-X = #CENTER
-          \huge \verseThree \verseCommon
+          \huge \verseOne
         }
       >>
       \context Staff = lower <<
@@ -221,9 +145,17 @@
             \altoVerse
           }
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \context NullVoice = slideMusicBreaks {
+          \global
+          \slideMusicBreaks
+        }
+        \context NullVoice = align {
+          \global
+          \keepWithTag #'usePartials' \verseTwoAlign
+        }
+        \new Lyrics \lyricsto "align" {
           \once \override LyricText.self-alignment-X = #CENTER
-          \huge \verseFour \verseCommon \bridgeLyrics
+          \huge \verseTwo
         }
       >>
       \context Staff = lower <<
@@ -244,50 +176,52 @@
     >>
     \layout {}
   }
-%
-% Example of a Chorus slide
-%
-%  \pageBreak
-%  \score {
-%    \context ChoirStaff <<
-%      \context Staff = upper <<
-%        \context Voice = sopranos {
-%          \voiceOne {
-%            \global
-%            \partial 4
-%            \sopranoChorus
-%          }
-%        }
-%        \context Voice = altos {
-%          \voiceTwo {
-%            \global
-%            \partial 4
-%            \altoChorus
-%          }
-%        }
-%        \context Lyrics { \huge \chorus }
-%      >>
-%      \context Staff = lower <<
-%        \clef bass
-%        \context Voice = tenors {
-%          \voiceOne {
-%            \global
-%            \partial 4
-%            \tenorChorus
-%          }
-%        }
-%        \context Voice = basses {
-%          \voiceTwo {
-%            \global
-%            \partial 4
-%            \bassChorus
-%          }
-%        }
-%      >>
-%    >>
-%    \layout {}
-%    \header {
-%      title = \markup \bold { \fill-line { "Chorus:" "" } }
-%    }
-%  }
+  \pageBreak
+  \score {
+    \context ChoirStaff <<
+      \context Staff = upper <<
+        \context Voice = sopranos {
+          \voiceOne {
+            \global
+            \sopranoChorus
+          }
+        }
+        \context Voice = altos {
+          \voiceTwo {
+            \global
+            \altoChorus
+          }
+        }
+        \context NullVoice = slideChorusBreaks {
+          \global
+          \slideChorusBreaks
+        }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \huge \chorusLyrics
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \context Voice = tenors {
+          \voiceOne {
+            \global
+            \tenorChorus
+          }
+        }
+        \context Voice = basses {
+          \voiceTwo {
+            \global
+            \bassChorus
+          }
+        }
+      >>
+    >>
+    \layout {
+      ragged-last = ##t
+    }
+    \header {
+      title = \markup \bold { \fill-line { "Chorus:" "" } }
+    }
+  }
 }

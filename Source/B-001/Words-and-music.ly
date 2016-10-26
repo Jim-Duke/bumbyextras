@@ -8,6 +8,9 @@ global = {
   \aikenHeads
 }
 
+topSystemOffset = \defaultTopSystemOffset
+bottomSystemOffset = \defaultBottomSystemOffset
+
 \header {
   title = \markup {
     \column {
@@ -42,56 +45,56 @@ global = {
 slideMusicBreaks = \relative c {
   \tag #'usePartials' { \partial 4 }
 
-  \topSystemMargin
+  \setSystemOffset \topSystemOffset
   s4    | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2    \bar "" \break
   
-  \bottomSystemMargin
-  s4    | \noBreak
-  s2 s4 | \noBreak
-  s2 s4 | \noBreak
-  s2.~  | \noBreak
-  s2    \bar "" \break
-  
-  \topSystemMargin
-  s4    | \noBreak
-  s2 s4 | \noBreak
-  s2 s4 | \noBreak
-  s2 s4 | \noBreak
-  s2    \bar "" \break
-  
-  \bottomSystemMargin
+  \setSystemOffset \bottomSystemOffset
   s4    | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2.~  | \noBreak
   s2    \bar "" \break
   
-  \topSystemMargin
+  \setSystemOffset \topSystemOffset
   s4    | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2    \bar "" \break
   
-  \bottomSystemMargin
+  \setSystemOffset \bottomSystemOffset
   s4    | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2.~  | \noBreak
   s2    \bar "" \break
   
-  \topSystemMargin
+  \setSystemOffset \topSystemOffset
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2    \bar "" \break
+  
+  \setSystemOffset \bottomSystemOffset
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2.~  | \noBreak
+  s2    \bar "" \break
+  
+  \setSystemOffset \topSystemOffset
   s4    | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2    \bar "" \break
 
-  \bottomSystemMargin
+  \setSystemOffset \bottomSystemOffset
   s4    | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak

@@ -1,10 +1,15 @@
 \version "2.18.2"
 
+\include "../common.ly"
+
 global = {
   \key f \major
   \time 3/4
   \aikenHeads
 }
+
+topSystemOffset = \defaultTopSystemOffset
+bottomSystemOffset = \defaultBottomSystemOffset
 
 \header {
   title = "Teach Me Lord to Wait"
@@ -64,24 +69,29 @@ sheetMusicBreaks = \relative c {
 
 slideMusicBreaks = \relative c {
   \tag #'usePartials' { \partial 4 }
+  
+  \setSystemOffset \topSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   s2. | \noBreak
   s2. | \noBreak
   s2 \bar "" \break
   
+  \setSystemOffset \bottomSystemOffset
   s4 | \noBreak
   s2. | \noBreak
   s2. | \noBreak
   s2. | \noBreak
   s2 \bar "" \break
   
+  \setSystemOffset \topSystemOffset
   s4 | \noBreak
   s2. | \noBreak
   s2. | \noBreak
   s2. | \noBreak
   s2 \bar "" \break
   
+  \setSystemOffset \bottomSystemOffset
   s4 | \noBreak
   s2. | \noBreak
   s2. | \noBreak
@@ -89,6 +99,56 @@ slideMusicBreaks = \relative c {
   s2 \bar "|."
 }
   
+slideChorusBreaks = \relative c {
+  \tag #'usePartials' { \partial 4 }
+  
+  % They that wait upon the Lord
+  \setSystemOffset \topSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break
+  
+  % shall renew their strength,
+  \setSystemOffset \bottomSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break
+  
+  % they shall mount up with wings
+  \setSystemOffset \topSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break
+  
+  % like eagles.  They shall
+  \setSystemOffset \bottomSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2. | \break
+  
+  % run and not be weary.
+  \setSystemOffset \topSystemOffset
+  s2. | \noBreak
+  s2  \bar "" \break
+  
+  % They shall walk and not faint."
+  \setSystemOffset \bottomSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break
+  
+  % Teach me Lord, Teach me Lord, to wait.
+  \setSystemOffset \topSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break
+  
+  % to wait.
+  \setSystemOffset \bottomSystemOffset
+  s4 | \noBreak
+  s2  \bar "|."
+}
+
 %
 % Notes for the Soprano part during the verses.
 % No break guidance is included.

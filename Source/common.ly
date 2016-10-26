@@ -1,4 +1,19 @@
 \version "2.18.2"
 
-topSystemMargin = \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details #'((Y-offset . 9))
-bottomSystemMargin = \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details #'((Y-offset . 38))
+setSystemOffset =
+#(define-music-function (parser location offset)
+   (number?)
+  #{
+     \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details.Y-offset #offset
+  #})
+
+
+%setSystemOffset =
+%#(define-music-function (parser location offset)
+%   (number?)
+%   #{
+%       \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details #'((Y-offset . #offset))
+%   #})
+
+defaultTopSystemOffset = #9
+defaultBottomSystemOffset = #38
