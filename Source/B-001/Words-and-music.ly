@@ -1,5 +1,7 @@
 \version "2.18.2"
 
+\include "../common.ly"
+
 global = {
   \key c \major
   \time 3/4
@@ -37,194 +39,207 @@ global = {
   tagline = ##f
 }
 
-slidesAlign = \relative c {
-  \partial 4 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 \bar "" \break
-  
-  c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2.~ | \noBreak
-  c2 \bar "" \break
-  
-  c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 \bar "" \break
-  
-  c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2.~ | \noBreak
-  c2 \bar "" \break
-  
-  c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 \bar "" \break
-  
-  c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2.~ | \noBreak
-  c2 \bar "" \break
-  
-  c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 \bar "" \break
+slideMusicBreaks = \relative c {
+  \tag #'usePartials' { \partial 4 }
 
-  c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2.~ | \noBreak
-  c2 \bar "|."
+  \topSystemMargin
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2    \bar "" \break
+  
+  \bottomSystemMargin
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2.~  | \noBreak
+  s2    \bar "" \break
+  
+  \topSystemMargin
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2    \bar "" \break
+  
+  \bottomSystemMargin
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2.~  | \noBreak
+  s2    \bar "" \break
+  
+  \topSystemMargin
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2    \bar "" \break
+  
+  \bottomSystemMargin
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2.~  | \noBreak
+  s2    \bar "" \break
+  
+  \topSystemMargin
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2    \bar "" \break
+
+  \bottomSystemMargin
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2.~  | \noBreak
+  s2    \bar "|."
 }
 
-sheetAlign = \relative c {
-  \partial 4 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 \bar "" \noBreak
-  c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2.~ | \noBreak
-  c2 \bar "" \break
+sheetMusicBreaks = \relative c {
+  \tag #'usePartials' { \partial 4 }
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2    \bar "" \noBreak
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2.~  | \noBreak
+  s2    \bar "" \break
   
-  c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 \bar "" \noBreak
-  c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2.~ | \noBreak
-  c2 \bar "" \break
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2    \bar "" \noBreak
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2.~  | \noBreak
+  s2    \bar "" \break
   
-  c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 \bar "" \noBreak
-  c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2.~ | \noBreak
-  c2 \bar "" \break
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2    \bar "" \noBreak
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2.~  | \noBreak
+  s2    \bar "" \break
   
-  c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 \bar "" \noBreak
-  c4 | \noBreak
-  c2 c4 | \noBreak
-  c2 c4 | \noBreak
-  c2.~ | \noBreak
-  c2 \bar "|."
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2    \bar "" \noBreak
+  s4 |  \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2.~  | \noBreak
+  s2    \bar "|."
 }
+
 sopranoVerse = \relative c' {
-  \partial 4 c8( e8) \noBreak
-  g2 e8( d8) \noBreak
-  e2 g4 \noBreak
-  c2 a8( g8) \noBreak
-  e2 \bar ""
+  \tag #'usePartials' { \partial 4 }
+  c8( e8) |
+  g2 e8( d8) |
+  e2 g4 |
+  c2 a8( g8) |
+  e2
   
-  c8( e8) \noBreak
-  g2 c,4 \noBreak
-  e2 d4 \noBreak
-  c2.~ \noBreak
-  c2 \bar ""
+  c8( e8) |
+  g2 c,4 |
+  e2 d4 |
+  c2.~ |
+  c2
 
-  c8( e8) \noBreak
-  g2 e8( d8) \noBreak
-  e2 g4 \noBreak
-  c2 a8( g8) \noBreak
-  e2 \bar ""
+  c8( e8) |
+  g2 e8( d8) |
+  e2 g4 |
+  c2 a8( g8) |
+  e2
   
-  c8( e8) \noBreak
-  g2 c,4 \noBreak
-  e2 d4 \noBreak
-  c2.~ \noBreak
-  c2 \bar ""
+  c8( e8) |
+  g2 c,4 |
+  e2 d4 |
+  c2.~ |
+  c2
 
-  g'4 \noBreak
-  c2 e8( c8) \noBreak
-  a2 c4 \noBreak
-  d2 c8( a8) \noBreak
-  g2 \bar ""
+  g'4 |
+  c2 e8( c8) |
+  a2 c4 |
+  d2 c8( a8) |
+  g2
   
-  e8( g8) \noBreak
-  a2 g8( a8) \noBreak
-  c2 d4 \noBreak
-  c2.~ \noBreak
-  c2 \bar ""
+  e8( g8) |
+  a2 g8( a8) |
+  c2 d4 |
+  c2.~ |
+  c2
   
-  c,8( e8) \noBreak
-  g2 e8( d8) \noBreak
-  e2 g4 \noBreak
-  c2 a8( g8) \noBreak
-  e2 \bar ""
+  c,8( e8) |
+  g2 e8( d8) |
+  e2 g4 |
+  c2 a8( g8) |
+  e2
   
-  c8( e8) \noBreak
-  g2 c,4 \noBreak
-  e2 d4 \noBreak
-  c2.~ \noBreak
-  c2 \bar "|."  
+  c8( e8) |
+  g2 c,4 |
+  e2 d4 |
+  c2.~ |
+  c2 \bar "|."
 }
 
 altoVerse = \relative c' {
-  % Phrase 1
-  \partial 4 c4 |
+  \tag #'usePartials' { \partial 4 }
+  c4 |
   b2 b4 |
   b4( c4) d4 |
   e2 f8( e8) |
-  c2 \bar ""
+  c2
   
   c4 |
   b2 c4 |
   c2 g4 |
   g2.~ |
-  g2 \bar ""
+  g2
   
   c4 |
   b2 b4 |
   b4( c4) d4 |
   e2 f8( e8) |
-  c2 \bar ""
+  c2
   
   c4 |
   d2 c4 |
   c2 b4 |
   c2.~ |
-  c2 \bar ""
+  c2
   
   e4 |
   e2 g4 |
   f2 a8( g8) |
   f2 g8( f8) |
-  d2 \bar ""
+  d2
   
   e4 |
   e2 g8( f8) |
   g2 f4 |
   e2.~ |
-  e2 \bar ""
+  e2
   
   c4 |
   d2 b4 |
   c2 d4 |
   c2 c4 |
-  b2 \bar ""
+  b2
   
   c4 |
   d2 c4 |
@@ -234,47 +249,48 @@ altoVerse = \relative c' {
 }
 
 tenorVerse = \relative c {
-  \partial 4 e4 |
+  \tag #'usePartials' { \partial 4 }
+  e4 |
   d2 g4 |
   g2 g4 |
   g2 f8( g8) |
-  a2 \bar ""
+  a2
   
   a4 |
   g2 e4 |
   e2 g4 |
   e2.~ |
-  e2 \bar ""
+  e2
   
   e4 |
   d2 g4 |
   g2 g4 |
   g2 f8( g8) |
-  a2 \bar ""
+  a2
   
   a4 |
   g2 e4 |
   g2 g4 |
   e2.~ |
-  e2 \bar ""
+  e2
 
   c'4 |
   c2 b8( c8) |
   c2 a4 |
   a2 g8( c) |
-  b2 \bar ""
+  b2
   
   c4 |
   c2 b8( d8) |
   c2 a4 |
   g2.~ |
-  g2 \bar ""
+  g2
   
   e4 |
   d2 g4 |
   g2 g4 |
   e2 e4 |
-  g2 \bar ""
+  g2
   
   e4 |
   d2 e4 |
@@ -284,47 +300,48 @@ tenorVerse = \relative c {
 }
 
 bassVerse = \relative c {
-  \partial 4 c4 |
+  \tag #'usePartials' { \partial 4 }
+  c4 |
   g2 g'4 |
   e2 b4 |
   c2 d8( e8) |
-  a2 \bar ""
+  a2
   
   a4 |
   e2 c4 |
   a2 b4 |
   c2.~ |
-  c2 \bar ""
+  c2
   
   c4 |
   g2 g'4 |
   e2 b4 |
   c2 d8( e8) |
-  a2 \bar ""
+  a2
   
   a,4 |
   b2 c4 |
   g2 g4 |
   c2.~ |
-  c2 \bar ""
+  c2
   
   c'4 |
   a2 g8( e8) |
   f2 f8( e8) |
   d2 e8( f8) |
-  g2 \bar ""
+  g2
   
   c4 |
   a2 e8( d8) |
   e2 f4 |
   c2.~ |
-  c2 \bar ""
+  c2
   
   c4 |
   b2 g4 |
   c2 b4 |
   a2 c4 |
-  e2 \bar ""
+  e2
   
   a,4 |
   b2 c4 |

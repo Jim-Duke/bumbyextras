@@ -101,28 +101,28 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \sopranoVerse
+            \keepWithTag #'usePartials' \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \altoVerse
+            \keepWithTag #'usePartials' \altoVerse
           }
         }
-        \context NullVoice = align {
+        \context NullVoice = breaks {
           \global
-          \sheetAlign
+          \sheetMusicBreaks
         }
-        \new Lyrics \lyricsto "align" {
+        \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
           \verseOne
         }
-        \new Lyrics \lyricsto "align" {
+        \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
           \verseTwo
         }
-        \new Lyrics \lyricsto "align" {
+        \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
           \verseThree
         }
@@ -132,13 +132,13 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \tenorVerse
+            \keepWithTag #'usePartials' \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \bassVerse
+            \keepWithTag #'usePartials' \bassVerse
           }
         }
       >>
@@ -157,13 +157,13 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \sopranoVerse
+            \keepWithTag #'usePartials' \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \altoVerse
+            \keepWithTag #'usePartials' \altoVerse
           }
         }
       >>
@@ -172,13 +172,13 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \tenorVerse
+            \keepWithTag #'usePartials' \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \bassVerse
+            \keepWithTag #'usePartials' \bassVerse
           }
         }
       >>
