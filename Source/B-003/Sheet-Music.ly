@@ -20,8 +20,8 @@
     %
     % Various variables that can be used to tweak vertical spacing
     %
-    system-system-spacing #'basic-distance = #4
-    system-system-spacing #'minimum-distance = #4
+    system-system-spacing #'basic-distance = #12
+    system-system-spacing #'minimum-distance = #8
     score-markup-spacing #'basic-distance = #0
     markup-system-spacing #'basic-distance = #0
     

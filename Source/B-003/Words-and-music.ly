@@ -1,5 +1,7 @@
 \version "2.18.2"
 
+\include "../common.ly"
+
 global = {
   \key ees \major
   \time 3/4
@@ -21,7 +23,7 @@ global = {
   scripture = \markup {
     \override #'(line-width . 60)
     \center-column {
-      \vspace #4
+      \vspace #2
       \abs-fontsize #24
       \italic \wordwrap-string #"“For I am persuaded that neither death nor life,
          nor angels nor principalities nor powers, nor things present nor things
@@ -65,34 +67,43 @@ sheetMusicBreaks = \relative c {
 
 slideMusicBreaks = \relative c {
   \tag #'usePartials' { \partial 4. }
+
+  \topSystemMargin
   s4. | \noBreak
   s2. | \noBreak
   s2  \bar "" \break
 
+  \bottomSystemMargin
   s4  | \noBreak
   s2. | \noBreak
   s4. \bar "" \break
   
+  \topSystemMargin
   s4. | \noBreak
   s2. | \noBreak
   s2  \bar "" \break
 
+  \bottomSystemMargin
   s4  | \noBreak
   s2. | \noBreak
   s4. \bar "" \break
   
+  \topSystemMargin
   s4. | \noBreak
   s2. | \noBreak
   s4. \bar "" \break
   
+  \bottomSystemMargin
   s4. | \noBreak
   s2. | \noBreak
   s4. \bar "" \break
   
+  \topSystemMargin
   s4. | \noBreak
   s2. | \noBreak
   s2  \bar "" \break
   
+  \bottomSystemMargin
   s4  | \noBreak
   s2. | \noBreak
   s4. \bar "|." \break
@@ -104,6 +115,7 @@ slideMusicBreaks = \relative c {
 %
 sopranoVerse = \relative c' {
   \tag #'usePartials' { \partial 4. }
+  \autoBeamOff
   bes8 c8. ees16 |
   ees4. bes8 c8 ees8 |
   f2 g8 f16 ees16 |
@@ -131,6 +143,7 @@ sopranoVerse = \relative c' {
 
 altoVerse = \relative c' {
   \tag #'usePartials' { \partial 4. }
+  \autoBeamOff
   bes8 c8. c16 |
   bes4. bes8 c8 ees8 |
   d2 ees8 d16 c16 |
@@ -158,6 +171,7 @@ altoVerse = \relative c' {
 
 tenorVerse = \relative c' {
   \tag #'usePartials' { \partial 4. }
+  \autoBeamOff
   bes8 aes8. aes16 |
   g4. g8 aes8 aes8 |
   bes2 bes8 bes16 bes16 |
@@ -185,6 +199,7 @@ tenorVerse = \relative c' {
 
 bassVerse = \relative c {
   \tag #'usePartials' { \partial 4. }
+  \autoBeamOff
   bes8 bes8. bes16 |
   ees4. ees8 c8 c8 |
   bes2 g8 g16 g16 |
