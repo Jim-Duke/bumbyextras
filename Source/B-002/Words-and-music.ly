@@ -61,6 +61,33 @@ sheetMusicBreaks = \relative c {
   s2. | \noBreak
   s2 \bar "|."
 }
+
+slideMusicBreaks = \relative c {
+  \tag #'usePartials' { \partial 4 }
+  s4  | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2 \bar "" \break
+  
+  s4 | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2 \bar "" \break
+  
+  s4 | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2 \bar "" \break
+  
+  s4 | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2 \bar "|."
+}
   
 %
 % Notes for the Soprano part during the verses.

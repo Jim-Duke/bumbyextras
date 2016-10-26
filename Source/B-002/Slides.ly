@@ -23,21 +23,24 @@
     oddFooterMarkup = \markup {
       \on-the-fly #first-page \column {
         \fontsize #-2
-        \fill-line {
-          \column {
+        \column {
+          \line {
+            "Hymn:"
             \fromproperty #'header:meter
+            \char ##x2022
             \fromproperty #'header:poet
           }
-          \column {
-            \fromproperty #'header:copyright
-            \fromproperty #'header:license
-          }
-          \column {
+          \line {
+            "Tune:"
             \fromproperty #'header:tune
+            \char ##x2022
             \fromproperty #'header:composer
-            \line {
-              "arr: " \fromproperty #'header:arranger
-            }
+            \char ##x2022
+            "arr:"
+            \fromproperty #'header:arranger
+          }
+          \line {
+            \fromproperty #'header:copyright
           }
         }
       }
