@@ -14,7 +14,9 @@ global = {
   meter = "LMD"
   composer = "Keith Getty and Stuart Townend (2001)"
   poet = "Keith Getty and Stuart Townend (2001)"
-  songNumber = "B-003"
+  songNumber = \in_christ_alone_number
+  songNumber_lhs = \in_christ_alone_number_lhs
+  songNumber_rhs = \in_christ_alone_number_rhs
   copyright = \markup {
      \char ##x00A9 "2001 Thankyou Music (admin. Capitol CMG Publishing)"
   }
@@ -68,42 +70,42 @@ sheetMusicBreaks = \relative c {
 slideMusicBreaks = \relative c {
   \tag #'usePartials' { \partial 4. }
 
-  \topSystemMargin
+  \setSystemOffset \defaultTopSystemOffset
   s4. | \noBreak
   s2. | \noBreak
   s2  \bar "" \break
 
-  \bottomSystemMargin
+  \setSystemOffset \defaultBottomSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   s4. \bar "" \break
   
-  \topSystemMargin
+  \setSystemOffset \defaultTopSystemOffset
   s4. | \noBreak
   s2. | \noBreak
   s2  \bar "" \break
 
-  \bottomSystemMargin
+  \setSystemOffset \defaultBottomSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   s4. \bar "" \break
   
-  \topSystemMargin
+  \setSystemOffset \defaultTopSystemOffset
   s4. | \noBreak
   s2. | \noBreak
   s4. \bar "" \break
   
-  \bottomSystemMargin
+  \setSystemOffset \defaultBottomSystemOffset
   s4. | \noBreak
   s2. | \noBreak
   s4. \bar "" \break
   
-  \topSystemMargin
+  \setSystemOffset \defaultTopSystemOffset
   s4. | \noBreak
   s2. | \noBreak
   s2  \bar "" \break
   
-  \bottomSystemMargin
+  \setSystemOffset \defaultBottomSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   s4. \bar "|." \break

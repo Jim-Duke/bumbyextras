@@ -1,5 +1,7 @@
 \version "2.18.2"
 
+\include "../common.ly"
+
 global = {
   \key f \major
   \time 3/4
@@ -8,24 +10,20 @@ global = {
 
 \header {
   title = "Hark! I Hear the Harps Eternal"
-  songNumber = "B-006"
-  scripture = \markup {
-    \override #'(line-width . 60)
-    \center-column {
-      \vspace #4
-      \abs-fontsize #24
-      \italic \wordwrap-string #"And I heard a voice from heaven, like the
+  songNumber = \hark_I_hear_the_harps_eternal_number
+  songNumber_lhs = \hark_I_hear_the_harps_eternal_number_lhs
+  songNumber_rhs = \hark_I_hear_the_harps_eternal_number_rhs
+  scripture = #"And I heard a voice from heaven, like the
          sound of many waters and like the sound of loud thunder, and the
          voice which I heard was like the sound of harpists playing on
          their harps. - Revelation 14:2"
-    }
-  }
+  
   meter = "8.7.8.7"
   poet = "F. R. Warren"
   translator = ##f
 
   tune = "INVITATION NEW"
-  composer = ##f
+  composer = "North American Traditional"
   arranger = "Michael Duke"
 
   maintainer = "Jim Duke"

@@ -1,5 +1,7 @@
 \version "2.18.2"
 
+\include "../common.ly"
+
 global = {
   \key ees \major
   \time 4/4
@@ -12,7 +14,9 @@ global = {
   meter = "10.10.10.10"
   composer = "William H. Monk (1861)"
   poet = "Henry F. Lyte (1847)"
-  songNumber = "B-005"
+  songNumber = \abide_with_me_number
+  songNumber_lhs = \abide_with_me_number_lhs
+  songNumber_rhs = \abide_with_me_number_rhs
   copyright = "In the Public Domain"
   license = ##f
   tagline = ##f

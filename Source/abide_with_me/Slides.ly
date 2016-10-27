@@ -32,18 +32,8 @@
           \column {
             \fromproperty #'header:tune
             \fromproperty #'header:composer
-%            \concat { "arr. " \fromproperty #'header:arranger }
           }
         }
-        {
-          \vspace #0.5
-          \fontsize #-2
-          \fromproperty #'header:license
-        }
-%        {
-%          \fontsize #-2
-%          "Engraved using Lilypond (www.lilypond.org) for www.acapellaworship.org"
-%        }
       }
     }
     bookTitleMarkup = \markup {
@@ -275,50 +265,4 @@
     >>
     \layout {}
   }
-%
-% Example of a Chorus slide
-%
-%  \pageBreak
-%  \score {
-%    \context ChoirStaff <<
-%      \context Staff = upper <<
-%        \context Voice = sopranos {
-%          \voiceOne {
-%            \global
-%            \partial 4
-%            \sopranoChorus
-%          }
-%        }
-%        \context Voice = altos {
-%          \voiceTwo {
-%            \global
-%            \partial 4
-%            \altoChorus
-%          }
-%        }
-%        \context Lyrics { \huge \chorus }
-%      >>
-%      \context Staff = lower <<
-%        \clef bass
-%        \context Voice = tenors {
-%          \voiceOne {
-%            \global
-%            \partial 4
-%            \tenorChorus
-%          }
-%        }
-%        \context Voice = basses {
-%          \voiceTwo {
-%            \global
-%            \partial 4
-%            \bassChorus
-%          }
-%        }
-%      >>
-%    >>
-%    \layout {}
-%    \header {
-%      title = \markup \bold { \fill-line { "Chorus:" "" } }
-%    }
-%  }
 }

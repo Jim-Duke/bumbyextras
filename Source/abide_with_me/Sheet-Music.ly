@@ -43,22 +43,10 @@
             \fromproperty #'header:tune
             \char ##x2022
             \fromproperty #'header:composer
-%            \char ##x2022 "arr. "
-%            \fromproperty #'header:arranger
           }
           \line {
             \fromproperty #'header:copyright
           }
-%          \line {
-%            \fromproperty #'header:license
-%          }
-%          \vspace #0.25
-%          \line {
-%            "Engraved using Lilypond (www.lilypond.org) for www.acapellaworship.org.  PDF "
-%          }
-%          \line {
-%            "This hymn may be freely copied and distributed and we encourage its use in congregational acapella singing in worship everywhere."
-%          }
         }
       }
     }
@@ -71,17 +59,9 @@
           \abs-fontsize #24
           \bold
           \fill-line {
-            ""
+            \fromproperty #'header:songNumber_lhs
             \fromproperty #'header:title
-            \fromproperty #'header:songNumber
-          }
-          \fill-line {
-            \large \bold
-            \fromproperty #'header:subtitle
-          }
-          \fill-line {
-            \smaller \bold
-            \fromproperty #'header:subsubtitle
+            \fromproperty #'header:songNumber_rhs
           }
           \vspace #2
         }
@@ -95,14 +75,12 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
-%            \partial 4
             \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-%            \partial 4
             \altoVerse
           }
         }
@@ -132,14 +110,12 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-%            \partial 4
             \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-%            \partial 4
             \bassVerse
           }
         }
@@ -158,17 +134,13 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
-%            \partial 4
             \sopranoVerse
-%            \sopranoChorus
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-%            \partial 4
             \altoVerse
-%            \altoChorus
           }
         }
       >>
@@ -177,17 +149,13 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-%            \partial 4
             \tenorVerse
-%            \tenorChorus
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-%            \partial 4
             \bassVerse
-%            \bassChorus
           }
         }
       >>

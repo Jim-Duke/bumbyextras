@@ -1,5 +1,7 @@
 \version "2.18.2"
 
+\include "../common.ly"
+
 global = {
   \key g \major
   \time 4/4
@@ -17,7 +19,9 @@ global = {
   meter = "7.7.7.7.D with refrain"
   composer = "Felix Mendelssohn (1840)"
   poet = "Charles Wesley"
-  songNumber = "B-008"
+  songNumber = \christ_the_lord_is_risen_today_mendelssohn_number
+  songNumber_lhs = \christ_the_lord_is_risen_today_mendelssohn_number_lhs
+  songNumber_rhs = \christ_the_lord_is_risen_today_mendelssohn_number_rhs
   copyright = "In the Public Domain"
   license = ##f
   arranger = "William H. Cummings"

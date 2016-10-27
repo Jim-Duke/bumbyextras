@@ -1,5 +1,4 @@
 \version "2.18.2"
-\include "english.ly"
 
 \include "Words-and-music.ly"
 
@@ -53,7 +52,7 @@
           \abs-fontsize #48
           \bold
           \override #'(line-width . 60) {
-            \wordwrap-string \title
+            \wordwrap-field #'header:title
           }
         }
         \vspace #1
@@ -61,7 +60,7 @@
           \abs-fontsize #20
           \italic
           \override #'(line-width . 50) {
-            \wordwrap-string \scripture
+            \wordwrap-field #'header:scripture
           }
         }
       }

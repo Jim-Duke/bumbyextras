@@ -1,5 +1,7 @@
 \version "2.18.2"
 
+\include "../common.ly"
+
 global = {
   \key ees \major
   \time 3/4
@@ -12,7 +14,9 @@ global = {
   meter = "8.8.8.8 with Chorus"
   composer = "Twila Paris"
   poet = "Twila Paris"
-  songNumber = "B-004"
+  songNumber = \how_beautiful_number
+  songNumber_lhs = \how_beautiful_number_lhs
+  songNumber_rhs = \how_beautiful_number_rhs
   copyright = "Copyright (c) 1990 Ariose Music and Mountain Spring Music"
   license = "CCLI Song #443594, License #2055442"
   arranger = "Ken Young"

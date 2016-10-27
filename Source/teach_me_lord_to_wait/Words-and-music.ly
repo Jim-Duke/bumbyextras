@@ -17,7 +17,9 @@ bottomSystemOffset = \defaultBottomSystemOffset
   meter = ""
   composer = "Stuart Hamblen, 1953"
   poet = "Stuart Hamblen, 1953"
-  songNumber = "B-002"
+  songNumber = \teach_me_lord_to_wait_number
+  songNumber_lhs = \teach_me_lord_to_wait_number_lhs
+  songNumber_rhs = \teach_me_lord_to_wait_number_rhs
   copyright = \markup {
     "Copyright " \char ##x00A9 " 1953.  Renewal 1981 by Hamblen Music Co., Inc."
   }

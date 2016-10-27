@@ -68,9 +68,9 @@
           \abs-fontsize #24
           \bold
           \fill-line {
-            \fromproperty #'header:songNumber
+            \fromproperty #'header:songNumber_lhs
             \fromproperty #'header:title
-            ""
+            \fromproperty #'header:songNumber_rhs
           }
           \vspace #2
         }
