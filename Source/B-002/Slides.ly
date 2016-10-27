@@ -42,6 +42,9 @@
           \line {
             \fromproperty #'header:copyright
           }
+          \line {
+            \fromproperty #'header:license
+          }
         }
       }
     }
@@ -206,6 +209,7 @@
         \context Voice = tenors {
           \voiceOne {
             \global
+            \override Voice.TextScript.font-size = #3
             \tenorChorus
           }
         }
@@ -218,7 +222,7 @@
       >>
     >>
     \layout {
-      ragged-last = ##t
+      ragged-last = ##f
     }
     \header {
       title = \markup \bold { \fill-line { "Chorus:" "" } }

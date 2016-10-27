@@ -78,7 +78,17 @@ The original song, however, was arranged for a single vocalist with instrumental
 
 ## Critical Review
 
-I am in full agreement with Jim's recommendations. Walcott
+Walcott Steele and Greg Kline were in agreement with the recommendations with one exception.  Greg Kline thought that the recommendation was to use the word "right" in the first verse and concurred with using that because it fits the rhythm better.
+
+### Recommendations for use of the song
+
+The song can be used with the following recommendations:
+
+1. The song has a strong message drawn from Isaiah 40:31 and its musical setting wonderfully supports the message.
+2. The song is not difficult and our congregation should have no difficulty singing it.
+3. We should use the Gerald Moore SATB Acapella arrangement.
+4. We should treat the refrain as a chorus.
+5. Insert the word "right" before "knees" on the first verse.
 
 ## Typesetting
 

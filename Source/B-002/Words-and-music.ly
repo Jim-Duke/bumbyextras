@@ -120,14 +120,15 @@ slideChorusBreaks = \relative c {
   s2. | \noBreak
   s2  \bar "" \break
   
-  % like eagles.  They shall
+  % like eagles.
   \setSystemOffset \bottomSystemOffset
   s4  | \noBreak
   s2. | \noBreak
-  s2. | \break
+  s2  \bar "" \break
   
-  % run and not be weary.
+  % They shall run and not be weary.
   \setSystemOffset \topSystemOffset
+  s4  | \noBreak
   s2. | \noBreak
   s2  \bar "" \break
   
@@ -137,15 +138,14 @@ slideChorusBreaks = \relative c {
   s2. | \noBreak
   s2  \bar "" \break
   
-  % Teach me Lord, Teach me Lord, to wait.
+  % Teach me Lord, Teach me
   \setSystemOffset \topSystemOffset
   s4  | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break
   
-  % to wait.
+  %  Lord, to wait.
   \setSystemOffset \bottomSystemOffset
-  s4 | \noBreak
+  s2. | \noBreak
   s2  \bar "|."
 }
 
@@ -423,7 +423,7 @@ bassChorus = \relative c {
 
 verseOne = \lyricmode {
   \set stanza = "1. "
-  Teach me Lord, to wait \markup { \raise #1 \musicglyph #"rests.3" } down on my knees,
+  Teach me Lord, to wait right down on my knees,
   Till in Your own good time You an -- swer my pleas;
   Teach me not to re -- ly on what oth -- ers do,
   But to wait in prayer for an an -- swer from You.
