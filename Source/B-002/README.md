@@ -78,6 +78,7 @@ The original song, however, was arranged for a single vocalist with instrumental
 
 ## Critical Review
 
+I very much support the use of this song. I concur with using the word "right" in the first verse, as I also think it fits the rhythm better. Kashka and I both like singing the chorus twice. I am in full agreement. Greg
 I am in full agreement with Jim's recommendations. Walcott
 
 ## Typesetting
