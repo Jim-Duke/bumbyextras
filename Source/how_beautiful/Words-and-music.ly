@@ -19,21 +19,86 @@ global = {
   songNumber_rhs = \how_beautiful_number_rhs
   copyright = "Copyright (c) 1990 Ariose Music and Mountain Spring Music"
   license = "CCLI Song #443594, License #2055442"
-  arranger = "Ken Young"
-  scripture = \markup {
-    \override #'(line-width . 60)
-    \center-column {
-      \vspace #4
-      \abs-fontsize #24
-      \italic \wordwrap-string #"How lovely on the mountains
+  scripture = #"How lovely on the mountains
          are the feet of him who brings good news,
          who announces peace
          and brings good news of happiness,
          who announces salvation,
          and says to Zion, \"Your God reigns!\" - Isaiah 52:7"
-    }
-  }
+  arranger = "Ken Young"
   tagline = ##f
+}
+
+sheetMusicBreaks = \relative c {
+  \tag #'usePartials' { \partial 4 }
+  s4    | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2 s8 \bar "" \break
+  
+  s8    | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s4    \bar "" \break
+  
+  s2    | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2 s8 \bar "" \break
+  
+  s8    | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s4    \bar "" \break
+
+  s2    | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s4    \bar "" \break
+
+  s2    | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2    \bar "|."
+}
+
+sheetMusicBridgeBreaks = \relative c {
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \break
+  
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \break
+  
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \break
+  
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2  \bar "|."
 }
 
 %
@@ -41,288 +106,292 @@ global = {
 % where needed to deal with lyrics issues.
 %
 alignVerse = \relative c' {
-  \partial 4 ees4 \noBreak
-  ees2 bes'4 \noBreak
-  bes2~ bes8 \bar ""
+  \tag #'usePartials' { \partial 4 }
+  ees4 |
+  ees2 bes'4 |
+  bes2~ bes8
   
-  bes8 | \noBreak
-  \autoBeamOff c4.( bes8) \autoBeamOn aes8( bes8) | \noBreak
-  bes2 r8 \bar ""
+  bes8 |
+  \autoBeamOff c4.( bes8) \autoBeamOn aes8( bes8) |
+  bes2 r8
   
-  ees,8 | \noBreak
-  aes4 bes4 c4 | \noBreak
-  bes2 \bar ""
+  ees,8 |
+  aes4 bes4 c4 |
+  bes2
   
-  ees,8 f8 | \noBreak
-  g4 f4. ees8 | \noBreak
-  f8 r8 \bar "" \break
+  ees,8 f8 |
+  g4 f4. ees8 |
+  f8 r8
   
-  g4.( f8) | \noBreak
-  ees2 bes'4 | \noBreak
-  bes2~ bes8 \bar ""
+  g4.( f8) |
+  ees2 bes'4 |
+  bes2~ bes8
   
-  bes8 | \noBreak
-  \autoBeamOff c4. bes8 \autoBeamOn aes8( bes8) | \noBreak
-  bes2 r8 \bar "" \break
+  bes8 |
+  \autoBeamOff c4. bes8 \autoBeamOn aes8( bes8) |
+  bes2 r8
   
-  ees,8 | \noBreak
-  aes4 bes4 c4 | \noBreak
-  bes2 \bar ""
+  ees,8 |
+  aes4 bes4 c4 |
+  bes2
   
-  ees,8 f8 | \noBreak
-  g4 f4. ees8 | \noBreak
-  f8 r8 \bar "" \break
+  ees,8 f8 |
+  g4 f4. ees8 |
+  f8 r8
 
-  g4.( f8) | \noBreak
-  ees2 bes'4 | \noBreak
-  bes2.~ | \noBreak
-  bes2.~ | \noBreak
-  bes4 \bar ""
+  g4.( f8) |
+  ees2 bes'4 |
+  bes2.~ |
+  bes2.~ |
+  bes4
   
   
-  g4.( f8) | \noBreak
-  ees2 bes'4 | \noBreak
-  bes2.~ | \noBreak
-  bes2.~ | \noBreak
-  bes4 \bar ""
+  g4.( f8) |
+  ees2 bes'4 |
+  bes2.~ |
+  bes2.~ |
+  bes4
   
   
-  g4.( f8) | \noBreak
-  ees2 bes'4 | \noBreak
-  bes2.~ | \noBreak
-  bes4 r4 \bar ""
+  g4.( f8) |
+  ees2 bes'4 |
+  bes2.~ |
+  bes4 r4
   
-  ees,8 f8 | \noBreak
-  g8 f4. ees4 | \noBreak
-  ees2.~ | \noBreak
-  ees2 s4 \bar "|."
+  ees,8 f8 |
+  g8 f4. ees4 |
+  ees2.~ |
+  ees2 \bar "|."
 }
 
 sopranoVerse = \relative c' {
-  \partial 4 ees4 \noBreak
-  ees2 bes'4 \noBreak
-  bes2~ bes8 \bar ""
+  \tag #'usePartials' { \partial 4 }
+  ees4 |
+  ees2 bes'4 |
+  bes2~ bes8
   
-  bes8 | \noBreak
-  \autoBeamOff c4.( bes8) \autoBeamOn aes8( bes8) | \noBreak
-  bes2 r8 \bar ""
+  bes8 |
+  \autoBeamOff c4.( bes8) \autoBeamOn aes8( bes8) |
+  bes2 r8
   
-  ees,8 | \noBreak
-  aes4 bes4 c4 | \noBreak
-  bes2 \bar ""
+  ees,8 |
+  aes4 bes4 c4 |
+  bes2
   
-  ees,8 f8 | \noBreak
-  g4 f4. ees8 | \noBreak
-  f8 r8 \bar "" \break
+  ees,8 f8 |
+  g4 f4. ees8 |
+  f8 r8
   
-  g4.( f8) | \noBreak
-  ees2 bes'4 | \noBreak
-  bes2~ bes8 \bar ""
+  g4.( f8) |
+  ees2 bes'4 |
+  bes2~ bes8
   
-  bes8 | \noBreak
-  \autoBeamOff c4.( bes8) \autoBeamOn aes8( bes8) | \noBreak
-  bes2 r8 \bar "" \break
+  bes8 |
+  \autoBeamOff c4.( bes8) \autoBeamOn aes8( bes8) |
+  bes2 r8
   
-  ees,8 | \noBreak
-  aes4 bes4 c4 | \noBreak
-  bes2 \bar ""
+  ees,8 |
+  aes4 bes4 c4 |
+  bes2
   
-  ees,8 f8 | \noBreak
-  g4 f4. ees8 | \noBreak
-  f8 r8 \bar "" \break
+  ees,8 f8 |
+  g4 f4. ees8 |
+  f8 r8
 
-  g4.( f8) | \noBreak
-  ees2 bes'4 | \noBreak
-  bes2.~ | \noBreak
-  bes2.~ | \noBreak
-  bes4 \bar ""
+  g4.( f8) |
+  ees2 bes'4 |
+  bes2.~ |
+  bes2.~ |
+  bes4
   
   
-  g4.( f8) | \noBreak
-  ees2 bes'4 | \noBreak
-  bes2.~ | \noBreak
-  bes2.~ | \noBreak
-  bes4 \bar ""
+  g4.( f8) |
+  ees2 bes'4 |
+  bes2.~ |
+  bes2.~ |
+  bes4
   
   
-  g4.( f8) | \noBreak
-  ees2 bes'4 | \noBreak
-  bes2.~ | \noBreak
-  bes4 r4 \bar ""
+  g4.( f8) |
+  ees2 bes'4 |
+  bes2.~ |
+  bes4 r4
   
-  ees,8 f8 | \noBreak
-  g8 f4. ees4 | \noBreak
-  ees2.~ | \noBreak
-  ees2 s4 \bar "|."
+  ees,8 f8 |
+  g8 f4. ees4 |
+  ees2.~ |
+  ees2 \bar "|."
 }
 
 altoVerse = \relative c' {
-  % Phrase 1
-  \partial 4 ees4 | \noBreak
-  ees2 ees4 | \noBreak
-  d2~ d8 \bar ""
+  \tag #'usePartials' { \partial 4 }
+  ees4 |
+  ees2 ees4 |
+  d2~ d8
   
-  d8 | \noBreak
-  c2 c4 | \noBreak
-  bes2 r8 \bar ""
+  d8 |
+  c2 c4 |
+  bes2 r8
   
-  bes8 | \noBreak
-  c4 c4 c4 | \noBreak
-  bes2 \bar ""
+  bes8 |
+  c4 c4 c4 |
+  bes2
   
-  bes8 bes8 | \noBreak
-  c4 c4. c8 | \noBreak
-  d8 r8 \bar ""
+  bes8 bes8 |
+  c4 c4. c8 |
+  d8 r8
   
-  d2 | \noBreak
-  ees2 ees4 | \noBreak
-  d2~ d8 \bar ""
+  d2 |
+  ees2 ees4 |
+  d2~ d8
   
-  d8 | \noBreak
-  c2 c4 | \noBreak
-  bes2 r8 \bar ""
+  d8 |
+  c2 c4 |
+  bes2 r8
   
-  bes8 | \noBreak
-  c4 c4 c4 | \noBreak
-  bes2 \bar ""
+  bes8 |
+  c4 c4 c4 |
+  bes2
   
-  bes8 bes8 | \noBreak
-  c4 c4. c8 | \noBreak
-  d8 r8 \bar ""
+  bes8 bes8 |
+  c4 c4. c8 |
+  d8 r8
 
-  d2 | \noBreak
-  ees2 ees4 | \noBreak
-  ees2.~( | \noBreak
-  ees2. | \noBreak
-  f4) \bar ""
+  d2 |
+  ees2 ees4 |
+  ees2.~( |
+  ees2. |
+  f4)
   
-  f2 | \noBreak
-  ees2 ees4 | \noBreak
-  f2.~( | \noBreak
-  f2. | \noBreak
-  ees4) \bar ""
+  f2 |
+  ees2 ees4 |
+  f2.~( |
+  f2. |
+  ees4)
   
-  ees2 | \noBreak
-  ees2 ees4 | \noBreak
-  f2.( | \noBreak
-  ees4) r4 \bar ""
+  ees2 |
+  ees2 ees4 |
+  f2.( |
+  ees4) r4
   
-  ees8 ees8 | \noBreak
-  ees8 ees4. d4 | \noBreak
-  bes2.~ | \noBreak
-  bes2 s4 \bar "|."
+  ees8 ees8 |
+  ees8 ees4. d4 |
+  bes2.~ |
+  bes2 \bar "|."
 }
 
 tenorVerse = \relative c' {
-  \partial 4 g4 | \noBreak
-  g2 g4 | \noBreak
-  f2~ f8 \bar ""
+  \tag #'usePartials' { \partial 4 }
+  g4 |
+  g2 g4 |
+  f2~ f8
   
-  f8 | \noBreak
-  ees2 ees4 | \noBreak
-  g2 r8 \bar ""
+  f8 |
+  ees2 ees4 |
+  g2 r8
   
-  g8 | \noBreak
-  aes4 aes4 aes4 | \noBreak
-  g2 \bar ""
+  g8 |
+  aes4 aes4 aes4 |
+  g2
   
-  g8 g8 | \noBreak
-  a4 a4. a8 | \noBreak
-  bes8 r8 \bar ""
+  g8 g8 |
+  a4 a4. a8 |
+  bes8 r8
   
-  bes4.( aes8) | \noBreak
-  g2 g4 | \noBreak
-  f2~ f8 \bar ""
+  bes4.( aes8) |
+  g2 g4 |
+  f2~ f8
   
-  f8 | \noBreak
-  ees2 ees8 f8 | \noBreak
-  g2 r8 \bar ""
+  f8 |
+  ees2 ees8 f8 |
+  g2 r8
   
-  g8 | \noBreak
-  aes4 aes4 aes4 | \noBreak
-  g2 \bar ""
+  g8 |
+  aes4 aes4 aes4 |
+  g2
   
-  g8 g8 | \noBreak
-  a4 a4. a8 | \noBreak
-  bes8 r8 \bar ""
+  g8 g8 |
+  a4 a4. a8 |
+  bes8 r8
 
-  bes2 | \noBreak
-  aes2 aes4 | \noBreak
-  g2.( | \noBreak
-  aes2. | \noBreak
-  bes4) \bar ""
+  bes2 |
+  aes2 aes4 |
+  g2.( |
+  aes2. |
+  bes4)
   
-  bes2 | \noBreak
-  aes2 aes4 | \noBreak
-  f2.( | \noBreak
-  aes2. | \noBreak
+  bes2 |
+  aes2 aes4 |
+  f2.( |
+  aes2. |
   g4)
   
-  g2 | \noBreak
-  aes2 aes4 | \noBreak
-  aes2.~ | \noBreak
-  aes4 r4 \bar ""
+  g2 |
+  aes2 aes4 |
+  aes2.~ |
+  aes4 r4
   
-  aes8 aes8 | \noBreak
-  bes8 bes4. bes4 | \noBreak
-  g2.~ | \noBreak
-  g2 s4 \bar "|."
+  aes8 aes8 |
+  bes8 bes4. bes4 |
+  g2.~ |
+  g2 \bar "|."
 }
 
 bassVerse = \relative c {
-  \partial 4 ees4 | \noBreak
-  ees2 ees4 | \noBreak
-  bes2~ bes8 \bar ""
+  \tag #'usePartials' { \partial 4 }
+  ees4 |
+  ees2 ees4 |
+  bes2~ bes8
   
-  bes8 | \noBreak
-  \autoBeamOff aes4.( bes8) \autoBeamOn c8( d8) | \noBreak
-  ees2 r8 \bar ""
+  bes8 |
+  \autoBeamOff aes4.( bes8) \autoBeamOn c8( d8) |
+  ees2 r8
   
-  ees8 | \noBreak
-  ees4 ees4 ees4 | \noBreak
-  ees2 \bar ""
+  ees8 |
+  ees4 ees4 ees4 |
+  ees2
   
-  ees8 ees8 | \noBreak
-  c4 c4. c8 | \noBreak
-  bes8 r8 \bar ""
+  ees8 ees8 |
+  c4 c4. c8 |
+  bes8 r8
   
-  bes2 | \noBreak
-  ees2 ees4 | \noBreak
-  bes2~ bes8 \bar ""
+  bes2 |
+  ees2 ees4 |
+  bes2~ bes8
   
-  bes8 | \noBreak
-  \autoBeamOff aes4.( bes8) \autoBeamOn c8( d8) | \noBreak
-  ees2 r8 \bar ""
+  bes8 |
+  \autoBeamOff aes4.( bes8) \autoBeamOn c8( d8) |
+  ees2 r8
   
-  ees8 | \noBreak
-  ees4 ees4 ees4 | \noBreak
-  ees2 \bar ""
+  ees8 |
+  ees4 ees4 ees4 |
+  ees2
   
-  ees8 ees8 | \noBreak
-  c4 c4. c8 | \noBreak
-  bes4 \bar ""
+  ees8 ees8 |
+  c4 c4. c8 |
+  bes4
 
-  bes2 | \noBreak
-  c2 c4 | \noBreak
-  bes2.( | \noBreak
-  c2. | \noBreak
-  d4) \bar ""
+  bes2 |
+  c2 c4 |
+  bes2.( |
+  c2. |
+  d4)
   
-  d2 | \noBreak
-  c2 c4 | \noBreak
-  bes2.( | \noBreak
-  c2. | \noBreak
-  ees4) \bar ""
+  d2 |
+  c2 c4 |
+  bes2.( |
+  c2. |
+  ees4)
   
-  ees2 | \noBreak
-  c2 c4 | \noBreak
-  bes2.( | \noBreak
-  c4) r4 \bar ""
+  ees2 |
+  c2 c4 |
+  bes2.( |
+  c4) r4
   
-  c8 c8 | \noBreak
-  bes8 bes4. bes4 | \noBreak
-  ees2.~ | \noBreak
-  ees2 s4 \bar "|."
+  c8 c8 |
+  bes8 bes4. bes4 |
+  ees2.~ |
+  ees2 \bar "|."
 }
 
 %
@@ -330,157 +399,157 @@ bassVerse = \relative c {
 % enable us to elegantly handle certain lyrics issues.
 %
 alignBridge = \relative c' {
-  ees4 g4 bes4 | \noBreak
+  ees4 g4 bes4 |
   c2. |
 
-  c2 f,4 | \noBreak
+  c2 f,4 |
   f2. |
   
-  f4 g4 aes8( bes8) | \noBreak
+  f4 g4 aes8( bes8) |
   bes2. |
   
-  bes2 ees,4 | \noBreak
+  bes2 ees,4 |
   ees2. |
   
-  ees4 f4 g4 | \noBreak
+  ees4 f4 g4 |
   f2. |
   
-  f4 g4 aes8( bes8) | \noBreak
-  bes2. | \break
+  f4 g4 aes8( bes8) |
+  bes2. |
   
-  bes8 aes4 g4. | \noBreak
-  ees2~ ees8 ees8 | \noBreak
-  ees2.~ | \noBreak
-  ees2 r4 | \break
+  bes8 aes4 g4. |
+  ees2~ ees8 ees8 |
+  ees2.~ |
+  ees2 r4 |
   
-  bes'8 aes4 g4 aes8( | \noBreak
-  g2~ g8) ees8 | \noBreak
-  ees2.~ | \noBreak
-  ees2.~ | \noBreak
+  bes'8 aes4 g4 aes8( |
+  g2~ g8) ees8 |
+  ees2.~ |
+  ees2.~ |
   ees4 r4 \bar "|."
 }
 
 sopranoBridge = \relative c' {
-  ees4 g4 bes4 | \noBreak
+  ees4 g4 bes4 |
   c2. |
 
-  c2 f,4 | \noBreak
+  c2 f,4 |
   f2. |
   
-  f4 g4 aes8( bes8) | \noBreak
+  f4 g4 aes8( bes8) |
   bes2. |
   
-  bes2 ees,4 | \noBreak
+  bes2 ees,4 |
   ees2. |
   
-  ees4 f4 g4 | \noBreak
+  ees4 f4 g4 |
   f2. |
   
-  f4 g4 aes8( bes8) | \noBreak
-  bes2. | \break
+  f4 g4 aes8( bes8) |
+  bes2. |
   
-  bes8 aes4 g4. | \noBreak
-  ees2~ ees8 ees8 | \noBreak
-  ees2.~ | \noBreak
-  ees2 r4 | \break
+  bes8 aes4 g4. |
+  ees2~ ees8 ees8 |
+  ees2.~ |
+  ees2 r4 |
   
-  bes'8 aes4 g4 aes8( | \noBreak
-  g2~ g8) ees8 | \noBreak
-  ees2.~ | \noBreak
-  ees2.~ | \noBreak
+  bes'8 aes4 g4 aes8( |
+  g2~ g8) ees8 |
+  ees2.~ |
+  ees2.~ |
   ees4 r4 \bar "|."
 }
 
 altoBridge = \relative c' {
-  ees4 ees4 ees4 | \noBreak
+  ees4 ees4 ees4 |
   f2. |
   
-  f2 ees4 | \noBreak
+  f2 ees4 |
   ees2. |
   
-  d4 ees4 f4 | \noBreak
+  d4 ees4 f4 |
   g2. |
   
-  f2 ees4 | \noBreak
+  f2 ees4 |
   c2. |
   
-  c4 d4 ees4 | \noBreak
+  c4 d4 ees4 |
   d2. |
   
-  d4 ees4 f4 | \noBreak
+  d4 ees4 f4 |
   g2. |
   
-  g8 f4 ees4. | \noBreak
-  c2~ c8 c8 | \noBreak
-  c2.( | \noBreak
+  g8 f4 ees4. |
+  c2~ c8 c8 |
+  c2.( |
   bes2) r4 |
   
-  ees8 ees4 ees4 c8~ | \noBreak
-  c2~ c8 c8 | \noBreak
-  c2.~ | \noBreak
-  c2.~ | \noBreak
+  ees8 ees4 ees4 c8~ |
+  c2~ c8 c8 |
+  c2.~ |
+  c2.~ |
   c4 r4 \bar "|."
 }
 
 tenorBridge = \relative c' {
-  g4 g4 g4 | \noBreak
+  g4 g4 g4 |
   a2. |
   
-  a2 a4 | \noBreak
+  a2 a4 |
   bes2. |
   
-  bes4 bes4 bes4 | \noBreak
+  bes4 bes4 bes4 |
   bes2. |
   
-  bes2 bes4 | \noBreak
+  bes2 bes4 |
   aes2. |
   
-  aes4 aes4 aes4 | \noBreak
+  aes4 aes4 aes4 |
   bes2. |
   
-  bes4 bes4 bes4 | \noBreak
+  bes4 bes4 bes4 |
   bes2. |
   
-  bes8 bes4 bes4. | \noBreak
-  aes2~ aes8 aes8 | \noBreak
-  aes2.( | \noBreak
+  bes8 bes4 bes4. |
+  aes2~ aes8 aes8 |
+  aes2.( |
   g2) r4 |
   
-  bes8 bes4 bes4 aes8~ | \noBreak
-  aes2~ aes8 aes8 | \noBreak
-  aes2.~ | \noBreak
-  aes2.~ | \noBreak
+  bes8 bes4 bes4 aes8~ |
+  aes2~ aes8 aes8 |
+  aes2.~ |
+  aes2.~ |
   aes4 r4 \bar "|."
 }
 
 bassBridge = \relative c {
-  ees4 ees4 ees4 | \noBreak
+  ees4 ees4 ees4 |
   c2. |
   
-  c2 c4 | \noBreak
+  c2 c4 |
   ees4( c4 ees4) |
   
-  d4 ees4 d4 | \noBreak
+  d4 ees4 d4 |
   ees2. |
   
-  d2 c4 | \noBreak
+  d2 c4 |
   c2. |
   
-  c4 c4 c4 | \noBreak
+  c4 c4 c4 |
   bes2. |
   
-  bes4 bes4 bes4 | \noBreak
+  bes4 bes4 bes4 |
   ees2. |
   
-  ees8 ees4 ees4. | \noBreak
-  c2~ c8 c8 | \noBreak
-  c2.( | \noBreak
+  ees8 ees4 ees4. |
+  c2~ c8 c8 |
+  c2.( |
   ees2) r4 |
   
-  ees8 ees4 ees4 c8~ | \noBreak
-  c2~ c8 c8 | \noBreak
-  c2.~ | \noBreak
-  c2.~ | \noBreak
+  ees8 ees4 ees4 c8~ |
+  c2~ c8 c8 |
+  c2.~ |
+  c2.~ |
   c4 r4 \bar "|."
 }
 
