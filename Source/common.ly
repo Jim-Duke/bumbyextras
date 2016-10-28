@@ -65,10 +65,10 @@ hark_I_hear_the_harps_eternal_number_lhs = ""
 hark_I_hear_the_harps_eternal_number_rhs = \hark_I_hear_the_harps_eternal_number
 
 % B-008 - Two Pages
-% Just As I Am - I Am Broken - Guess Two Pages
-just_as_I_am_I_am_broken_number = "B-008"
-just_as_I_am_I_am_broken_number_lhs = \just_as_I_am_I_am_broken_number
-just_as_I_am_I_am_broken_number_rhs = ""
+% Just As I Am - I Come Broken - Guess Two Pages
+just_as_I_am_I_come_broken_number = "B-008"
+just_as_I_am_I_come_broken_number_lhs = \just_as_I_am_I_come_broken_number
+just_as_I_am_I_come_broken_number_rhs = ""
 
 % B-009 - Two Pages
 % Magnificat - Guess Two Pages
