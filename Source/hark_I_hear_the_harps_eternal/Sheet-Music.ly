@@ -1,9 +1,8 @@
 \version "2.18.2"
-\include "english.ly"
 
 \include "Words-and-music.ly"
 
-#(set-global-staff-size 16)
+#(set-global-staff-size 20)
 % Standard full page format.
 \book {
   \paper {
@@ -34,9 +33,6 @@
           }
           \line {
             \fromproperty #'header:copyright
-          }
-          \line {
-            \fromproperty #'header:license
           }
         }
       }
@@ -76,9 +72,18 @@
             \altoVerse
           }
         }
-        \context Lyrics = one { \verseOne }
-        \context Lyrics = two \verseTwo
-        \context Lyrics = three \verseThree
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \verseOne
+        }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \verseTwo
+        }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \verseThree
+        }
       >>
       \context Staff = lower <<
         \clef bass
@@ -120,7 +125,10 @@
             \altoChorus
           }
         }
-        \context Lyrics = chorus \chorus
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \chorus
+        }
       >>
       \context Staff = lower <<
         \clef bass
@@ -141,26 +149,6 @@
       >>
     >>
     \layout {}
-  }
-  \markup {
-    \vspace #2
-    \larger {
-      \fill-line {
-        ""
-        \column {
-          \verseFourText
-          \vspace #1
-          \verseFiveText
-        }
-        ""
-        \column {
-          \verseSixText
-          \vspace #1
-          \verseSevenText
-        }
-        ""
-      }
-    }
   }
   %
   % Extra additional score containing all the music so we can have a single MIDI file
