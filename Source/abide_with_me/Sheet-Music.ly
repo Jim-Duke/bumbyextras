@@ -84,6 +84,10 @@
             \altoVerse
           }
         }
+        \context NullVoice = sheetMusicBreaks {
+          \global
+          \sheetMusicBreaks
+        }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
           \verseOne

@@ -23,15 +23,25 @@
     oddFooterMarkup = \markup {
       \on-the-fly #first-page \column {
         \fontsize #-2
-        \fill-line {
-          \column {
+        \column {
+          \line {
+            "Hymn:"
             \fromproperty #'header:meter
+            \char ##x2022
             \fromproperty #'header:poet
           }
-          \fromproperty #'header:copyright
-          \column {
+          \line {
+            "Tune:"
             \fromproperty #'header:tune
+            \char ##x2022
             \fromproperty #'header:composer
+            \char ##x2022
+          }
+          \line {
+            \fromproperty #'header:copyright
+          }
+          \line {
+            \fromproperty #'header:license
           }
         }
       }
@@ -77,6 +87,7 @@
 
   \score {
     \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
@@ -89,6 +100,10 @@
             \global
             \altoVerse
           }
+        }
+        \context NullVoice = slideMusicBreaks {
+          \global
+          \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
@@ -115,6 +130,7 @@
   }
   \score {
     \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
@@ -127,6 +143,10 @@
             \global
             \altoVerse
           }
+        }
+        \context NullVoice = slideMusicBreaks {
+          \global
+          \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
@@ -153,6 +173,7 @@
   }
   \score {
     \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
@@ -165,6 +186,10 @@
             \global
             \altoVerse
           }
+        }
+        \context NullVoice = slideMusicBreaks {
+          \global
+          \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
@@ -191,6 +216,7 @@
   }
   \score {
     \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
@@ -203,6 +229,10 @@
             \global
             \altoVerse
           }
+        }
+        \context NullVoice = slideMusicBreaks {
+          \global
+          \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
@@ -229,6 +259,7 @@
   }
   \score {
     \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
@@ -241,6 +272,10 @@
             \global
             \altoVerse
           }
+        }
+        \context NullVoice = slideMusicBreaks {
+          \global
+          \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
