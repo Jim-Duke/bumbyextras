@@ -35,7 +35,6 @@
             \fromproperty #'header:tune
             \char ##x2022
             \fromproperty #'header:composer
-            \char ##x2022
           }
           \line {
             \fromproperty #'header:copyright
