@@ -72,7 +72,6 @@
             \fromproperty #'header:songNumber_rhs
           }
           \vspace #0.5
-          %\override #'(line-width . 100)
           \fill-line {
             \override #'(line-width . 20) ""
             \override #'(line-width . 80) \center-column {
@@ -157,6 +156,7 @@
   }
   \score {
     \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
       %\override Score.BarNumber.break-visibility = ##(#t #t #t)
       %\set Score.barNumberVisibility = #all-bar-numbers-visible
       \context Staff = upper <<

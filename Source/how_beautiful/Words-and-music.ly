@@ -101,6 +101,93 @@ sheetMusicBridgeBreaks = \relative c {
   s2  \bar "|."
 }
 
+slideMusicBreaks = \relative c {
+  \tag #'usePartials' { \partial 4 }
+  \setSystemOffset \defaultTopSystemOffset
+  s4    | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2 s8 \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s8    | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s4    \bar "" \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s2    | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2 s8 \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s8    | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s4    \bar "" \pageBreak
+
+  \setSystemOffset \defaultTopSystemOffset
+  s2    | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s4    \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s2    | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s4    \bar "" \pageBreak
+
+  \setSystemOffset \defaultTopSystemOffset
+  s2    | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2.   | \noBreak
+  s2    \bar "|." \pageBreak
+}
+
+slideMusicBridgeBreaks = \relative c {
+  \setSystemOffset \defaultTopSystemOffset
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \break \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \break \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2  \bar "|." \pageBreak
+}
+
 %
 % Largely duplicates the soprano line, but makes a few changes
 % where needed to deal with lyrics issues.
