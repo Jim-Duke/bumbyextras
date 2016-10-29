@@ -78,20 +78,25 @@
   \score {
     % Verses Section
     \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
       %\override Score.BarNumber.break-visibility = ##(#t #t #t)
       %\set Score.barNumberVisibility = #all-bar-numbers-visible
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \sopranoVerse
+            \keepWithTag #'usePartials' \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \altoVerse
+            \keepWithTag #'usePartials' \altoVerse
           }
+        }
+        \new NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials' \sheetMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
@@ -111,13 +116,13 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \tenorVerse
+            \keepWithTag #'usePartials' \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \bassVerse
+            \keepWithTag #'usePartials' \bassVerse
           }
         }
       >>

@@ -25,46 +25,108 @@ global = {
   copyright = "In the Public Domain"
   license = ##f
   arranger = "William H. Cummings"
-  scripture = ##f %{\markup {
+  scripture = \markup {
     \override #'(line-width . 60)
     \center-column {
-      \vspace #4
+      \vspace #2
       \abs-fontsize #24
-      \italic \wordwrap-string #"How lovely on the mountains
-         are the feet of him who brings good news,
-         who announces peace
-         and brings good news of happiness,
-         who announces salvation,
-         and says to Zion, \"Your God reigns!\" - Isaiah 52:7"
+      \italic \wordwrap-string #"But the angel answered and said to the women,
+                                 “Do not be afraid, for I know that you seek Jesus who was crucified.
+                                 He is not here; for He is risen, as He said.
+                                 Come, see the place where the Lord lay.” (Matthew 28:5–6, NKJV)"
     }
-  }%}
+  }
   tagline = ##f
 }
 
+sheetMusicBreaks = \relative c {
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \break
+  
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \break
+  
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \break
+  
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \break
+  
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 \bar "|." \break
+}
+
+slideMusicBreaks = \relative c {
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 | \break
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 | \break
+
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 | \break
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 | \break
+
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 | \break
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 | \break
+
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 | \break
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 | \break
+
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 | \break
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 \bar "|."
+}
+
 sopranoVerse = \relative c' {
-  d4 g4 g4. fis8 | \noBreak
+  d4 g4 g4. fis8 |
   g4 b4 b4( a4) |
-  d4 d4 d4. c8 | \noBreak
+  d4 d4 d4. c8 |
   b4 a4 b2 |
   
-  d,4 g4 g4. fis8 | \noBreak
+  d,4 g4 g4. fis8 |
   g4 b4 b4( a4) |
-  d4 a4 a4. fis8 | \noBreak
+  d4 a4 a4. fis8 |
   fis4 e4 d2 |
   
-  d'4 d4 d4 g,4 | \noBreak
+  d'4 d4 d4 g,4 |
   c4 b4 b4( a4) |
-  d4 d4 d4 g,4 | \noBreak
+  d4 d4 d4 g,4 |
   c4 b4 b4( a4) |
 
-  e'4 e4 e4 d4 | \noBreak
+  e'4 e4 e4 d4 |
   c4 b4 c2 |
-  a4 b8( c8) d4. g,8 | \noBreak
+  a4 b8( c8) d4. g,8 |
   g4 a4 b2 |
   
-  e4. e8 e4 d4 | \noBreak
+  e4. e8 e4 d4 |
   c4 b4 c2 |
-  a4 b8( c8) d4. g,8 | \noBreak
+  a4 b8( c8) d4. g,8 |
   g4 a4 g2 \bar "|."
 }
 
