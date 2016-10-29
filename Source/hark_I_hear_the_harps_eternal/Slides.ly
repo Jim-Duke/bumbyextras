@@ -2,7 +2,7 @@
 
 \include "Words-and-music.ly"
 
-#(set-global-staff-size 42)
+#(set-global-staff-size 36)
 % Standard full page format.
 \book {
   \paper {
@@ -23,22 +23,32 @@
     oddFooterMarkup = \markup {
       \on-the-fly #first-page \column {
         \fontsize #-2
-        \fill-line {
-          \column {
+        \column {
+          \line {
+            "Hymn:"
             \fromproperty #'header:meter
+            \char ##x2022
             \fromproperty #'header:poet
           }
-          \fromproperty #'header:copyright
-          \column {
+          \line {
+            "Tune:"
             \fromproperty #'header:tune
+            \char ##x2022
             \fromproperty #'header:composer
-            \concat { "arr. " \fromproperty #'header:arranger }
+            \char ##x2022 "arr."
+            \fromproperty #'header:arranger
+          }
+          \line {
+            \fromproperty #'header:copyright
+          }
+          \line {
+            \fromproperty #'header:license
           }
         }
       }
     }
     bookTitleMarkup = \markup {
-      \column {
+      \center-column {
         \fill-line {
           \null
           {
@@ -48,21 +58,11 @@
           }
         }
         \vspace #3
-        \fill-line {
-          \abs-fontsize #48
-          \bold
-          \override #'(line-width . 60) {
-            \wordwrap-field #'header:title
-          }
-        }
-        \vspace #1
-        \fill-line {
-          \abs-fontsize #20
-          \italic
-          \override #'(line-width . 50) {
-            \wordwrap-field #'header:scripture
-          }
-        }
+        \abs-fontsize #48
+        \bold
+        \fromproperty #'header:title
+        \vspace #2
+        \fromproperty #'header:scripture
       }
     }
     scoreTitleMarkup = \markup {
@@ -86,37 +86,38 @@
 
   \score {
     \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \partial 4
-            \sopranoVerse
+            \keepWithTag #'usePartials' \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \partial 4
-            \altoVerse
+            \keepWithTag #'usePartials' \altoVerse
           }
         }
-        \context Lyrics { \huge \verseOne }
+        \new NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials' \slideMusicVerseBreaks
+        }
+        \context Lyrics \lyricsto "sopranos" { \huge \verseOne }
       >>
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors {
           \voiceOne {
             \global
-            \partial 4
-            \tenorVerse
+            \keepWithTag #'usePartials' \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \partial 4
-            \bassVerse
+            \keepWithTag #'usePartials' \bassVerse
           }
         }
       >>
@@ -125,37 +126,38 @@
   }
   \score {
     \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \partial 4
-            \sopranoVerse
+            \keepWithTag #'usePartials' \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \partial 4
-            \altoVerse
+            \keepWithTag #'usePartials' \altoVerse
           }
         }
-        \context Lyrics { \huge \verseTwo }
+        \new NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials' \slideMusicVerseBreaks
+        }
+        \context Lyrics \lyricsto "sopranos" { \huge \verseTwo }
       >>
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors {
           \voiceOne {
             \global
-            \partial 4
-            \tenorVerse
+            \keepWithTag #'usePartials' \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \partial 4
-            \bassVerse
+            \keepWithTag #'usePartials' \bassVerse
           }
         }
       >>
@@ -164,193 +166,38 @@
   }
   \score {
     \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \partial 4
-            \sopranoVerse
+            \keepWithTag #'usePartials' \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \partial 4
-            \altoVerse
+            \keepWithTag #'usePartials' \altoVerse
           }
         }
-        \context Lyrics { \huge \verseThree }
+        \new NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials' \slideMusicVerseBreaks
+        }
+        \context Lyrics \lyricsto "sopranos" { \huge \verseThree }
       >>
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors {
           \voiceOne {
             \global
-            \partial 4
-            \tenorVerse
+            \keepWithTag #'usePartials' \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \partial 4
-            \bassVerse
-          }
-        }
-      >>
-    >>
-    \layout {}
-  }
-  \score {
-    \context ChoirStaff <<
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
-            \global
-            \partial 4
-            \sopranoVerse
-          }
-        }
-        \context Voice = altos {
-          \voiceTwo {
-            \global
-            \partial 4
-            \altoVerse
-          }
-        }
-        \context Lyrics { \huge \verseFour }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \context Voice = tenors {
-          \voiceOne {
-            \global
-            \partial 4
-            \tenorVerse
-          }
-        }
-        \context Voice = basses {
-          \voiceTwo {
-            \global
-            \partial 4
-            \bassVerse
-          }
-        }
-      >>
-    >>
-    \layout {}
-  }
-  \score {
-    \context ChoirStaff <<
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
-            \global
-            \partial 4
-            \sopranoVerse
-          }
-        }
-        \context Voice = altos {
-          \voiceTwo {
-            \global
-            \partial 4
-            \altoVerse
-          }
-        }
-        \context Lyrics { \huge \verseFive }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \context Voice = tenors {
-          \voiceOne {
-            \global
-            \partial 4
-            \tenorVerse
-          }
-        }
-        \context Voice = basses {
-          \voiceTwo {
-            \global
-            \partial 4
-            \bassVerse
-          }
-        }
-      >>
-    >>
-    \layout {}
-  }
-  \score {
-    \context ChoirStaff <<
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
-            \global
-            \partial 4
-            \sopranoVerse
-          }
-        }
-        \context Voice = altos {
-          \voiceTwo {
-            \global
-            \partial 4
-            \altoVerse
-          }
-        }
-        \context Lyrics { \huge \verseSix }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \context Voice = tenors {
-          \voiceOne {
-            \global
-            \partial 4
-            \tenorVerse
-          }
-        }
-        \context Voice = basses {
-          \voiceTwo {
-            \global
-            \partial 4
-            \bassVerse
-          }
-        }
-      >>
-    >>
-    \layout {}
-  }
-  \score {
-    \context ChoirStaff <<
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
-            \global
-            \partial 4
-            \sopranoVerse
-          }
-        }
-        \context Voice = altos {
-          \voiceTwo {
-            \global
-            \partial 4
-            \altoVerse
-          }
-        }
-        \context Lyrics { \huge \verseSeven }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \context Voice = tenors {
-          \voiceOne {
-            \global
-            \partial 4
-            \tenorVerse
-          }
-        }
-        \context Voice = basses {
-          \voiceTwo {
-            \global
-            \partial 4
-            \bassVerse
+            \keepWithTag #'usePartials' \bassVerse
           }
         }
       >>
@@ -360,37 +207,38 @@
   \pageBreak
   \score {
     \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \partial 4
-            \sopranoChorus
+            \keepWithTag #'usePartials' \sopranoChorus
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \partial 4
-            \altoChorus
+            \keepWithTag #'usePartials' \altoChorus
           }
         }
-        \context Lyrics { \huge \chorus }
+        \new NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials' \slideMusicChorusBreaks
+        }
+        \context Lyrics \lyricsto "sopranos" { \huge \chorus }
       >>
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors {
           \voiceOne {
             \global
-            \partial 4
-            \tenorChorus
+            \keepWithTag #'usePartials' \tenorChorus
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \partial 4
-            \bassChorus
+            \keepWithTag #'usePartials' \bassChorus
           }
         }
       >>

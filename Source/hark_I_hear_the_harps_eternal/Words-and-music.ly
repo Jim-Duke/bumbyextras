@@ -9,15 +9,26 @@ global = {
 }
 
 \header {
-  title = "Hark! I Hear the Harps Eternal"
+  title = \markup {
+    \column {
+      \center-align "Hark! I Hear"
+      \center-align "the Harps Eternal"
+    }
+  }
   songNumber = \hark_I_hear_the_harps_eternal_number
   songNumber_lhs = \hark_I_hear_the_harps_eternal_number_lhs
   songNumber_rhs = \hark_I_hear_the_harps_eternal_number_rhs
-  scripture = #"And I heard a voice from heaven, like the
+  scripture = \markup {
+    \override #'(line-width . 70)
+    \center-column {
+      \abs-fontsize #24
+      \italic \wordwrap-string #"And I heard a voice from heaven, like the
          sound of many waters and like the sound of loud thunder, and the
          voice which I heard was like the sound of harpists playing on
          their harps. - Revelation 14:2"
-  
+
+    }
+  }
   meter = "8.7.8.7"
   poet = "F. R. Warren"
   translator = ##f
@@ -34,181 +45,231 @@ global = {
   license = ##f
 }
 
+sheetMusicVerseBreaks = \relative c {
+  \tag #'usePartials' { \partial 4 }
+  s4  | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break
+  
+  s4  | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2  \bar "|."
+}
+
+slideMusicVerseBreaks = \relative c {
+  \tag #'usePartials' { \partial 4 }
+  \setSystemOffset \defaultTopSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2  \bar "|."
+}
+
+sheetMusicChorusBreaks = \relative c {
+  \tag #'usePartials' { \partial 4 }
+  s4  | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break
+  
+  s4  | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2  \bar "|."
+}
+
+slideMusicChorusBreaks = \relative c {
+  \tag #'usePartials' { \partial 4 }
+  \setSystemOffset \defaultTopSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2  \bar "|."
+}
+
 sopranoVerse = \relative c' {
-  % Phrase 1
-  f8 f \noBreak
-  a4 a8.( g16) f8 f \noBreak
-  g16( f8.) d4 \bar ""
+  \tag #'usePartials' { \partial 4 }
+  f8 f |
+  a4 a8.( g16) f8 f |
+  g16( f8.) d4
 
-  % Phrase 2
-  f8 f \noBreak
-  a4 c f,8 f16( d) \noBreak
-  f2 \bar ""
+  f8 f |
+  a4 c f,8 f16( d) |
+  f2
 
-  % Phrase 3
-  f8 f \noBreak
-  a4 a8.( g16) f8 f \noBreak
-  g16( f8.) d4 \bar ""
+  f8 f |
+  a4 a8.( g16) f8 f |
+  g16( f8.) d4
 
-  % Phrase 4
-  f8 f \noBreak
-  a4 c f,8 f16( d) \noBreak
-  f2 \bar "||"
+  f8 f |
+  a4 c f,8 f16( d) |
+  f2 \bar "|."
 }
 
 altoVerse = \relative c' {
-  % Phrase 1
-  c8 c \noBreak
-  f4 f c8 c \noBreak
-  d4 d \bar ""
+  \tag #'usePartials' { \partial 4 }
+  c8 c |
+  f4 f c8 c |
+  d4 d
 
-  % Phrase 2
-  d8 d \noBreak
-  f4 f f8 f16( d) \noBreak
-  c2 \bar ""
+  d8 d |
+  f4 f f8 f16( d) |
+  c2
 
-  % Phrase 3
-  c8 c \noBreak
-  f4 f c8 c \noBreak
-  d4 d \bar ""
+  c8 c |
+  f4 f c8 c |
+  d4 d
 
-  %Phrase 4
-  d8 d \noBreak
-  f4 f f8 f16( d) \noBreak
-  c2 \bar "||"
+  d8 d |
+  f4 f f8 f16( d) |
+  c2 \bar "|."
 }
 
 tenorVerse = \relative c' {
-  % Phrase 1
-  a8 a \noBreak
-  c4 c a8 a \noBreak
+  \tag #'usePartials' { \partial 4 }
+  a8 a |
+  c4 c a8 a |
   d4 a
-  \bar ""
 
-  % Phrase 2
-  a8 a \noBreak
-  c4 a g8 g \noBreak
+  a8 a |
+  c4 a g8 g |
   a2
-  \bar ""
 
-  % Phrase 3
-  a8 a \noBreak
-  c4 c a8 a \noBreak
-  d4 a \bar ""
+  a8 a |
+  c4 c a8 a |
+  d4 a
 
-  % Phrase 4
-  a8 a \noBreak
-  c4 a g8 g \noBreak
-  a2 \bar "||"
+  a8 a |
+  c4 a g8 g |
+  a2 \bar "|."
 }
 
 bassVerse = \relative c {
-  % Phrase 1
-  f8 f \noBreak
-  f4 f f8 f \noBreak
-  d4 d \bar ""
+  \tag #'usePartials' { \partial 4 }
+  f8 f |
+  f4 f f8 f |
+  d4 d
 
-  % Phrase 2
-  d8 d \noBreak
-  c4 c c8 d \noBreak
-  f2 \bar ""
+  d8 d |
+  c4 c c8 d |
+  f2
 
-  % Phrase 3
-  f8 f \noBreak
-  f4 f f8 f \noBreak
-  d4 d \bar ""
+  f8 f |
+  f4 f f8 f |
+  d4 d
 
-  % Phrase 4
-  d8 d \noBreak
-  c4 c c8 d \noBreak
-  f2 \bar "||"
+  d8 d |
+  c4 c c8 d |
+  f2 \bar "|."
 }
 
 sopranoChorus = \relative c'' {
-  % Phrase 1
-  c8 d16( f) \noBreak
-  f4 c d8 c \noBreak
-  c4 a \bar ""
+  \tag #'usePartials' { \partial 4 }
+  c8 d16( f) |
+  f4 c d8 c |
+  c4 a
 
-  % Phrase 2
-  c8 d16( f) \noBreak
-  f4 c a8 c \noBreak
-  d2 \bar ""
+  c8 d16( f) |
+  f4 c a8 c |
+  d2
 
-  % Phrase 3
-  f8 f16( d) \noBreak
-  c4 a8.( g16) f8 f \noBreak
-  g16( f8.) d4 \bar ""
+  f8 f16( d) |
+  c4 a8.( g16) f8 f |
+  g16( f8.) d4
 
-  % Phrase 4
-  f8 f \noBreak
-  a4 c f,8 f16( d) \noBreak
+  f8 f |
+  a4 c f,8 f16( d) |
   f2 \bar "|."
 }
 
 altoChorus = \relative c'' {
-  % Phrase 1
-  c8 d16( c) \noBreak
-  a4 a a8 a \noBreak
-  a4 f \bar ""
+  \tag #'usePartials' { \partial 4 }
+  c8 d16( c) |
+  a4 a a8 a |
+  a4 f
 
-  % Phrase 2
-  c'8 d16( c) \noBreak
-  a4 a f8 f \noBreak
-  a2 \bar ""
+  c'8 d16( c) |
+  a4 a f8 f |
+  a2
 
-  % Phrase 3
-  a8 a \noBreak
-  f4 f c8 c \noBreak
-  a4 d \bar ""
+  a8 a |
+  f4 f c8 c |
+  a4 d
 
-  % Phrase 4
-  d8 d \noBreak
-  f4 f f8 f16( d) \noBreak
+  d8 d |
+  f4 f f8 f16( d) |
   c2 \bar "|."
 }
 
 tenorChorus = \relative c' {
-  % Phrase 1
-  a8 a \noBreak
-  c4 f f8 f \noBreak
-  f4 c \bar ""
+  \tag #'usePartials' { \partial 4 }
+  a8 a |
+  c4 f f8 f |
+  f4 c
 
-  % Phrase 2
-  a8 a \noBreak
-  c4 f c8 c \noBreak
-  a2 \bar ""
+  a8 a |
+  c4 f c8 c |
+  a2
 
-  % Phrase 3
-  c8 c \noBreak
-  a4 c a8 a \noBreak
-  d4 a \bar ""
+  c8 c |
+  a4 c a8 a |
+  d4 a
 
-  % Phrase 4
-  a8 a \noBreak
-  c4 a a8 a \noBreak
-  a2 \bar ""
+  a8 a |
+  c4 a a8 a |
+  a2 \bar "|."
 }
 
 bassChorus = \relative c {
-  % Phrase 1
-  f8 f \noBreak
-  f4 f f8 f \noBreak
-  f4 f \bar ""
+  \tag #'usePartials' { \partial 4 }
+  f8 f |
+  f4 f f8 f |
+  f4 f
 
-  % Phrase 2
-  f8 f \noBreak
-  f4 f f8 f \noBreak
-  d2 \bar ""
+  f8 f |
+  f4 f f8 f |
+  d2
 
-  % Phrase 3
-  f8 f \noBreak
-  f4 f f8 f \noBreak
-  d4 d \bar ""
+  f8 f |
+  f4 f f8 f |
+  d4 d
 
-  % Phrase 4
-  d8 d \noBreak
-  c4 c f8 f \noBreak
+  d8 d |
+  c4 c f8 f |
   f2 \bar "|."
 }
 

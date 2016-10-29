@@ -42,7 +42,7 @@
       \column {
         \override #'(baseline-skip . 3.5)
         \column {
-          \abs-fontsize #20
+          \abs-fontsize #24
           \bold
           \fill-line {
             \fromproperty #'header:songNumber_lhs
@@ -57,20 +57,23 @@
 
   \score {
     \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \partial 4
-            \sopranoVerse
+            \keepWithTag #'usePartials' \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \partial 4
-            \altoVerse
+            \keepWithTag #'usePartials' \altoVerse
           }
+        }
+        \new NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials' \sheetMusicVerseBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
@@ -90,15 +93,13 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \partial 4
-            \tenorVerse
+            \keepWithTag #'usePartials' \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \partial 4
-            \bassVerse
+            \keepWithTag #'usePartials' \bassVerse
           }
         }
       >>
@@ -110,20 +111,23 @@
   }
   \score {
     \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \partial 4
-            \sopranoChorus
+            \keepWithTag #'usePartials' \sopranoChorus
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \partial 4
-            \altoChorus
+            \keepWithTag #'usePartials' \altoChorus
           }
+        }
+        \new NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials' \sheetMusicChorusBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
@@ -135,15 +139,13 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \partial 4
-            \tenorChorus
+            \keepWithTag #'usePartials' \tenorChorus
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \partial 4
-            \bassChorus
+            \keepWithTag #'usePartials' \bassChorus
           }
         }
       >>
@@ -159,17 +161,15 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \partial 4
-            \sopranoVerse
-            \sopranoChorus
+            \keepWithTag #'usePartials' \sopranoVerse
+            \removeWithTag #'usePartials' \sopranoChorus
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \partial 4
-            \altoVerse
-            \altoChorus
+            \keepWithTag #'usePartials' \altoVerse
+            \removeWithTag #'usePartials' \altoChorus
           }
         }
       >>
@@ -178,17 +178,15 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \partial 4
-            \tenorVerse
-            \tenorChorus
+            \keepWithTag #'usePartials' \tenorVerse
+            \removeWithTag #'usePartials' \tenorChorus
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \partial 4
-            \bassVerse
-            \bassChorus
+            \keepWithTag #'usePartials' \bassVerse
+            \removeWithTag #'usePartials' \bassChorus
           }
         }
       >>
