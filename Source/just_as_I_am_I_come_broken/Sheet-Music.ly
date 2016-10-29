@@ -21,7 +21,7 @@
     % Various variables that can be used to tweak vertical spacing
     %
     system-system-spacing #'basic-distance = #12
-    system-system-spacing #'minimum-distance = #8
+    system-system-spacing #'minimum-distance = #4
     score-markup-spacing #'basic-distance = #0
     markup-system-spacing #'basic-distance = #0
     
@@ -45,9 +45,13 @@
           \line {
             "Tune:"
             \fromproperty #'header:tune
-            \char ##x2022
+          }
+          \line {
+            "Composer:"
             \fromproperty #'header:composer
-            \char ##x2022 "arr. "
+          }
+          \line {
+            "Arranger:"
             \fromproperty #'header:arranger
           }
           \line {
@@ -62,7 +66,6 @@
     bookTitleMarkup = \markup {
       \override #'(baseline-skip . 3.5)
       \column {
-        \fill-line { \fromproperty #'header:dedication }
         \override #'(baseline-skip . 3.5)
         \column {
           \abs-fontsize #24
@@ -72,7 +75,7 @@
             \fromproperty #'header:title
             \fromproperty #'header:songNumber_rhs
           }
-          \vspace #2
+          \vspace #0.5
         }
       }
     }
@@ -85,13 +88,13 @@
       %\override Score.BarNumber.break-visibility = ##(#t #t #t)
       %\set Score.barNumberVisibility = #all-bar-numbers-visible
       \context Staff = upper <<
-        \context Voice = sopranos {
+        \context Voice = "sopranos" {
           \voiceOne {
             \global
             \keepWithTag #'usePartials' \sopranoVerse
           }
         }
-        \context Voice = altos {
+        \context Voice = "altos" {
           \voiceTwo {
             \global
             \keepWithTag #'usePartials' \altoVerse
@@ -101,15 +104,10 @@
           \global
           \sheetMusicBreaks
         }
-%{        \context NullVoice = verseOneAlign {
+        \context NullVoice = "align" {
           \global
-          \keepWithTag #'usePartials' \verseOneAlign
+          \keepWithTag #'usePartials' \thirdVerseAlign
         }
-        \context NullVoice = verseTwoAlign {
-          \global
-          \keepWithTag #'usePartials' \verseTwoAlign
-        }
-%}
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
           \verseOne
@@ -118,11 +116,10 @@
           \once \override LyricText.self-alignment-X = #CENTER
           \verseTwo
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \new Lyrics \lyricsto "align" {
           \once \override LyricText.self-alignment-X = #CENTER
           \verseThree
         }
-%}
       >>
       \context Staff = lower <<
         \clef bass
@@ -145,10 +142,9 @@
       ragged-last = ##f
     }
   }
-%{
   \pageBreak
-  \markup {	
-    \huge \bold "Chorus:"
+  \markup {
+    \huge \bold "Refrain:"
   }
   \score {
     \context ChoirStaff <<
@@ -167,6 +163,10 @@
             \global
             \keepWithTag #'usePartials' \altoChorus
           }
+        }
+        \context NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials' \sheetMusicRefrainBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
@@ -191,7 +191,55 @@
     >>
     \layout {}
   }
-%}
+  \markup {
+    \column {
+      \vspace #1
+      \huge \bold "CODA:"
+    }
+  }
+  \score {
+    \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
+      %\override Score.BarNumber.break-visibility = ##(#t #t #t)
+      %\set Score.barNumberVisibility = #all-bar-numbers-visible
+      \context Staff = upper <<
+        \context Voice = sopranos {
+          \voiceOne {
+            \global
+            \keepWithTag #'usePartials' \sopranoCoda
+          }
+        }
+        \context Voice = altos {
+          \voiceTwo {
+            \global
+            \keepWithTag #'usePartials' \altoCoda
+          }
+        }
+        \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricText.self-alignment-X = #CENTER
+          \codaLyrics
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \context Voice = tenors {
+          \voiceOne {
+            \global
+            \keepWithTag #'usePartials' \tenorCoda
+          }
+        }
+        \context Voice = basses {
+          \voiceTwo {
+            \global
+            \keepWithTag #'usePartials' \bassCoda
+          }
+        }
+      >>
+    >>
+    \layout {
+      ragged-last = ##f
+    }
+  }
   %
   % Extra additional score containing all the music so we can have a single MIDI file
   %
@@ -202,14 +250,16 @@
           \voiceOne {
             \global
             \keepWithTag #'usePartials' \sopranoVerse
-%            \removeWithTag #'usePartials' \sopranoChorus
+            \removeWithTag #'usePartials' \sopranoChorus
+            \removeWithTag #'usePartials' \sopranoCoda
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
             \keepWithTag #'usePartials' \altoVerse
-%            \removeWithTag #'usePartials' \altoChorus
+            \removeWithTag #'usePartials' \altoChorus
+            \removeWithTag #'usePartials' \altoCoda
           }
         }
       >>
@@ -219,14 +269,16 @@
           \voiceOne {
             \global
             \keepWithTag #'usePartials' \tenorVerse
-%            \removeWithTag #'usePartials' \tenorChorus
+            \removeWithTag #'usePartials' \tenorChorus
+            \removeWithTag #'usePartials' \tenorCoda
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
             \keepWithTag #'usePartials' \bassVerse
-%            \removeWithTag #'usePartials' \bassChorus
+            \removeWithTag #'usePartials' \bassChorus
+            \removeWithTag #'usePartials' \bassCoda
           }
         }
       >>

@@ -7,7 +7,6 @@ setSystemOffset =
      \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details.Y-offset #offset
   #})
 
-
 %setSystemOffset =
 %#(define-music-function (parser location offset)
 %   (number?)
@@ -65,10 +64,10 @@ hark_I_hear_the_harps_eternal_number_lhs = ""
 hark_I_hear_the_harps_eternal_number_rhs = \hark_I_hear_the_harps_eternal_number
 
 % B-008 - Two Pages
-% Just As I Am - I Come Broken - Guess Two Pages
+% Just As I Am - I Come Broken - Two Pages
 just_as_I_am_I_come_broken_number = "B-008"
 just_as_I_am_I_come_broken_number_lhs = \just_as_I_am_I_come_broken_number
-just_as_I_am_I_come_broken_number_rhs = ""
+just_as_I_am_I_come_broken_number_rhs = ##f
 
 % B-009 - Two Pages
 % Magnificat - Guess Two Pages
