@@ -21,7 +21,7 @@ songNumber = \my_shepherd_will_supply_my_need_number
   tune = "RESIGNATION"
   meter = "CM"
   composer = "Traditional North American"
-  poet = "Isaac Watts"
+  poet = "Isaac Watts, altered"
   songNumber = \songNumber
   songNumber_lhs = \my_shepherd_will_supply_my_need_number_lhs
   songNumber_rhs = \my_shepherd_will_supply_my_need_number_rhs
@@ -355,44 +355,6 @@ bassVerse = \relative c {
   c2 \bar "|."
 }
 
-%{ Original Watts Verses
-verseOne = \lyricmode {
-  \set stanza = "1. "
-  My Shep -- herd will sup -- ply my need;
-  Je -- ho -- vah is his Name;
-  In pas -- tures fresh he makes me feed,
-  Be -- side the liv -- ing stream.
-  He brings my wan -- d'ring spir -- it back
-  When I for -- sake His ways,
-  And leads me, for His mer -- cy's sake,
-  In paths of truth and grace.
-}
-
-verseTwo = \lyricmode {
-  \set stanza = "2. "
-  When I walk through the Shades of Death,  
-  Thy Pre -- sence is my Stay;  
-  A Word of thy sup -- port -- ing Breath  
-  Drives all my Fears a -- way.
-  Thy Hand in Spite of all my Foes  
-  Doth still my Ta -- ble spread;  
-  My Cup with Bless -- ings o -- ver -- flows,  
-  Thine Oil a -- noints my Head.
-
-}
-
-verseThree = \lyricmode {
-  \set stanza = "3. "
-  The sure Pro -- vis -- ions of my God  
-  At -- tend me all my Days;  
-  O may thy House be mine A -- bode,  
-  And all my Work be Praise!
-  There would I find a set -- tled Rest,  
-  (While oth -- ers go and come)  
-  No more a Strang -- er or a Guest,  
-  But like a Child at Home. 
-}
-%}
 verseOne = \lyricmode {
   \set stanza = "1. "
   My Shep -- herd will sup -- ply my need;
