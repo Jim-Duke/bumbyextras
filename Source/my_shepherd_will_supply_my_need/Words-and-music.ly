@@ -355,6 +355,7 @@ bassVerse = \relative c {
   c2 \bar "|."
 }
 
+%{ Original Watts Verses
 verseOne = \lyricmode {
   \set stanza = "1. "
   My Shep -- herd will sup -- ply my need;
@@ -391,4 +392,41 @@ verseThree = \lyricmode {
   No more a Strang -- er or a Guest,  
   But like a Child at Home. 
 }
+%}
+verseOne = \lyricmode {
+  \set stanza = "1. "
+  My Shep -- herd will sup -- ply my need;
+  Je -- ho -- vah is His name;
+  in past -- ures fresh He makes me feed,
+  be -- side the liv -- ing stream.
+  He brings my wan -- d’ring spir -- it back
+  when I for -- sake His ways,
+  and leads me for His mer -- cy’s sake
+  in paths of truth and grace.
+}
+
+verseTwo = \lyricmode {
+  \set stanza = "2. "
+  When I walk through the shades of death,
+  His pre -- sence is my stay;
+  one word of His sup -- port -- ing breath
+  drives all my fears a -- way.
+  His hand in sight of all my foes
+  does still my ta -- ble spread;
+  my cup with bless -- ings ov -- er -- flows,
+  His oil anoints my head.
+}
+
+verseThree = \lyricmode {
+  \set stanza = "3. "
+  The sure pro -- vis -- ions of my God
+  at -- tend me all my days;
+  O may His house be my a -- bode,
+  and all my work be praise!
+  There would I find a set -- tled rest,
+  (while oth -- ers go and come)
+  no more a strang -- er or a guest,
+  but like a child at home.
+}
+
 

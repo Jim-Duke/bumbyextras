@@ -105,7 +105,37 @@ but use standard modern practices.
 
 ## Critical Review
 
-TBD
+During the critical review a desire to modernize the words was raised.  The Lutheran hymnal words were nice, but they made some changes that deviated too much from the Psalm 23 text.  After an analysis comparing the two versions (Watts, Lutheran) with Psalm 23, a third rendition that took the best of both.  The recommended verses are as follows:
+
+1. My Shepherd will supply my need;  
+   Jehovah is His name;  
+   in pastures fresh He makes me feed,  
+   beside the living stream.
+
+2. He brings my wand’ring spirit back  
+   when I forsake His ways,  
+   and leads me for His mercy’s sake  
+   in paths of truth and grace.
+
+3. When I walk through the shades of death,  
+   His presence is my stay;  
+   one word of His supporting breath  
+   drives all my fears away.
+
+4. His hand in sight of all my foes  
+   does still my table spread;  
+   my cup with blessings overflows,  
+   His oil anoints my head.
+
+5. The sure provisions of my God  
+   attend me all my days;  
+   O may His house be my abode,  
+   and all my work be praise!
+
+6. There would I find a settled rest,  
+   (while others go and come)  
+   no more a stranger or a guest,  
+   but like a child at home.
 
 ## Typesetting
 
