@@ -1,5 +1,5 @@
-# Song Name - Including Song # once assigned
-Summary of the song and tune.
+# Hark! I Hear the Harps Eternal
+A hymn that invokes imagery of approaching the end of life and hearing those who have gone on before singing praises to Jesus and to God.
 
 ## Submission
 
