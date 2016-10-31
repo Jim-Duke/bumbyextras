@@ -1,11 +1,11 @@
-# B-008: Christ the Lord is Risen Today
+# Christ the Lord is Risen Today
 This is a pairing of the hymn, Christ the Lord is Risen Today, with the tune used with Hark! The Herald Angels Sing. 
 
 ## Submission
 
 ### Submitted By
 
-Jim Duke
+Jim Duke, Tim Duke, and Michael Duke
 
 ### Reason for the Submission
 
