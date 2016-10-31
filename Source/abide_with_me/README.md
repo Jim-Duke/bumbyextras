@@ -1,12 +1,34 @@
 # B-005: Abide With Me
 This version of Abide with Me includes 5 of the 8 original verses.  Over the years most hymnals only include 3 verses.  Several include 5, a few 6.  Hardly any include all 8..
 
-## Copyright Information
-This version of Abide with Me is in the Public Domain
+## Submission
 
-## About the Hymn
+### Submitted By
 
-TBD
+This song was requested by Tim Duke
+
+### Reason for the Submission
+
+After becoming aware of the additional verses of the original Hymn and how meaningful some of them are, Tim felt that adding two additional verses from the original would greatly enhance the hymn in our worship.
+
+## Research
+
+### Research Conducted By
+
+Jim Duke
+
+### Copyright Information
+
+The hymn and tune are in the Public Domain.
+
+### Sources
+
+1. [Hymnary Entry on Abide With Me](http://www.hymnary.org/text/abide_with_me_fast_falls_the_eventide)
+2. [Cyber Hymnal Entry on Abide With Me](http://www.cyberhymnal.org/htm/a/b/abidewme.htm)
+
+### Hymn
+
+See the Hymnary or Cyberhymnal entries to see the history of the hymn.
 
 ## Original Verses
 
@@ -50,13 +72,35 @@ TBD
    Heaven’s morning breaks, and earth’s vain shadows flee;  
    In life, in death, O Lord, abide with me.
 
-## About this Version
+### Recommendation
 
-Most hymnals include verses 1, 2, and 6.  This version appends verses 7 and 8 to that.
+Hymns for Worship (R. J. Stevens) includes verses 1, 2, and 6 of the original.  Songs, Hymns, and Spiritual Songs (Sumphonia) includes verses 1, 2, 4, and 6 in the music; and 7 and 8 as additional verses.
 
-## Maintenance Information
+5 Verses fit nicely into the music on a single page.  I recommend that we include verses 1, 2, 6, 7, and 8 in the version we put together.  The resulting hymn verses would then be:
 
-- Verses were selected by Timothy Duke
-- Lilypond source files were created by Jim Duke
-- Slides, Sheet Music, and MIDI files created by Jim Duke
-- Output published by Jim Duke
+1. Abide with me; fast falls the eventide;  
+   The darkness deepens; Lord with me abide.  
+   When other helpers fail and comforts flee,  
+   Help of the helpless, O abide with me.
+
+2. Swift to its close ebbs out life’s little day;  
+   Earth’s joys grow dim; its glories pass away;  
+   Change and decay in all around I see;  
+   O Thou who changest not, abide with me.
+
+3. I need Thy presence every passing hour.  
+   What but Thy grace can foil the tempter’s power?  
+   Who, like Thyself, my guide and stay can be?  
+   Through cloud and sunshine, Lord, abide with me.
+
+4. I fear no foe, with Thee at hand to bless;  
+   Ills have no weight, and tears no bitterness.  
+   Where is death’s sting? Where, grave, thy victory?  
+   I triumph still, if Thou abide with me.
+
+5. Hold Thou Thy cross before my closing eyes;  
+   Shine through the gloom and point me to the skies.  
+   Heaven’s morning breaks, and earth’s vain shadows flee;  
+   In life, in death, O Lord, abide with me.
+
+I also recommend that we keep the archaic language.  Abide With Me with the existing archaic language is too familiar to change.

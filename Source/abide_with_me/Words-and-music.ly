@@ -190,7 +190,7 @@ verseTwo = \lyricmode {
   Swift to its close ebbs out life's lit -- tle day;
   Earth's joys grow dim, Its glo -- ries pass a -- way;
   Change and de -- cay in all a -- round I see;
-  O2 Thou who chang -- est not, a -- bide with me!
+  O Thou who chang -- est not, a -- bide with me!
 }
 
 verseThree = \lyricmode {
