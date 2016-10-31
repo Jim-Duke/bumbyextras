@@ -112,7 +112,7 @@ and what modifications should be done (which verses to use, any rewording etc.)
 
 ## Critical Review
 
-TBD
+During my research I encountered a couple objections that some have raised regarding the use of this song. After consulting with Robert Harkrider, Josh Creel, Walcott Steele, Greg Kline, and Ralph Kline we all came to the conclusion that the objections were without merit and that the song is very much appropriate for use in our worship.
 
 ## Typesetting
 
