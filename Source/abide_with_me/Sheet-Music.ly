@@ -1,14 +1,11 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "Words-and-music.ly"
 
-%
-% Adjust the staff size to adjust the basic font size of the words and music.
-%
 #(set-global-staff-size 19)
 
-% Standard full page format.
 \book {
+  \bookOutputName #(string-append build_dir songNumber " - " title " - Sheet Music")
   \paper {
     #(set-paper-size "letter")
     
@@ -20,7 +17,7 @@
     %
     % Various variables that can be used to tweak vertical spacing
     %
-    system-system-spacing #'basic-distance = #10
+    system-system-spacing.basic-distance = #10
     
     indent = 0
     left-margin = 1\in
@@ -71,6 +68,7 @@
 
   \score {
     \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
@@ -127,53 +125,6 @@
     >>
     \layout {
       ragged-last = ##f
-    }
-  }
-  %
-  % Extra additional score containing all the music so we can have a single MIDI file
-  %
-  \score {
-    \context ChoirStaff <<
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
-            \global
-            \sopranoVerse
-          }
-        }
-        \context Voice = altos {
-          \voiceTwo {
-            \global
-            \altoVerse
-          }
-        }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \context Voice = tenors {
-          \voiceOne {
-            \global
-            \tenorVerse
-          }
-        }
-        \context Voice = basses {
-          \voiceTwo {
-            \global
-            \bassVerse
-          }
-        }
-      >>
-    >>
-    \midi {
-      \context {
-        \Staff
-        \remove "Staff_performer"
-      }
-      \context {
-        \Voice
-          \consists "Staff_performer"
-      }
-      \tempo 4 = 110
     }
   }
 }

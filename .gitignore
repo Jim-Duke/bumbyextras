@@ -7,6 +7,8 @@ Source/*/*.mid
 Source/*/*.midi
 Source/*/*.ps
 Source/*/*.eps
+Build/*.pdf
+Build/*.mid
 *.log
 *~
 

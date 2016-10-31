@@ -1,14 +1,11 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "Words-and-music.ly"
 
-%
-% Adjust the staff size to adjust the basic font size of the words and music.
-%
 #(set-global-staff-size 18)
 
-% Standard full page format.
 \book {
+  \bookOutputName #(string-append build_dir songNumber " - " title " - Sheet Music")
   \paper {
     #(set-paper-size "letter")
     
@@ -20,10 +17,10 @@
     %
     % Various variables that can be used to tweak vertical spacing
     %
-    system-system-spacing #'basic-distance = #4
-    system-system-spacing #'minimum-distance = #4
-    score-markup-spacing #'basic-distance = #0
-    markup-system-spacing #'basic-distance = #0
+    system-system-spacing.basic-distance = #4
+    system-system-spacing.minimum-distance = #4
+    score-markup-spacing.basic-distance = #0
+    markup-system-spacing.basic-distance = #0
     
     indent = 0
     left-margin = 1\in
@@ -198,52 +195,5 @@
       >>
     >>
     \layout {}
-  }
-  %
-  % Extra additional score containing all the music so we can have a single MIDI file
-  %
-  \score {
-    \context ChoirStaff <<
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
-            \global
-            \sopranoVerse s4 \sopranoBridge
-          }
-        }
-        \context Voice = altos {
-          \voiceTwo {
-            \global
-            \altoVerse s4 \altoBridge
-          }
-        }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \context Voice = tenors {
-          \voiceOne {
-            \global
-            \tenorVerse s4 \tenorBridge
-          }
-        }
-        \context Voice = basses {
-          \voiceTwo {
-            \global
-            \bassVerse s4 \bassBridge
-          }
-        }
-      >>
-    >>
-    \midi {
-      \context {
-        \Staff
-        \remove "Staff_performer"
-      }
-      \context {
-        \Voice
-          \consists "Staff_performer"
-      }
-      \tempo 4 = 110
-    }
   }
 }

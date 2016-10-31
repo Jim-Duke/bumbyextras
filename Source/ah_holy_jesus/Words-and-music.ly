@@ -1,22 +1,25 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "../common.ly"
 
 global = {
   \key g \minor
   \time 4/4
-  \aikenHeadsMinor
+  \aikenHeads
 }
 
+title = "Ah Holy Jesus"
+songNumber = \ah_holy_jesus_number
+
 \header {
-  title = "Ah Holy Jesus"
+  title = \title
   tune = "HERZLIEBSTER JESU"
   meter = "11.11.11.5"
   composer = "Johann Crüger (1640)"
   arranger = ##f
   poet = "Johann Heermann (1630)"
   translator = "Robert S. Bridges (1899)"
-  songNumber = \ah_holy_jesus_number
+  songNumber = \songNumber
   songNumber_lhs = \ah_holy_jesus_number_lhs
   songNumber_rhs = \ah_holy_jesus_number_rhs
   copyright = "In the Public Domain"

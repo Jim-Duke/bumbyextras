@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "../common.ly"
 
@@ -8,8 +8,8 @@ global = {
   \aikenHeads
 }
 
-topSystemOffset = \defaultTopSystemOffset
-bottomSystemOffset = \defaultBottomSystemOffset
+title = "Just As I Am - I Come Broken"
+songNumber = \just_as_I_am_I_come_broken_number
 
 \header {
   title = \markup {

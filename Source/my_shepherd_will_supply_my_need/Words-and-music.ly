@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "../common.ly"
 
@@ -8,8 +8,8 @@ global = {
   \aikenHeads
 }
 
-topSystemOffset = \defaultTopSystemOffset
-bottomSystemOffset = \defaultBottomSystemOffset
+title = "My Shepherd Will Supply My Need"
+songNumber = \my_shepherd_will_supply_my_need_number
 
 \header {
   title = \markup {
@@ -22,7 +22,7 @@ bottomSystemOffset = \defaultBottomSystemOffset
   meter = "CM"
   composer = "Traditional North American"
   poet = "Isaac Watts"
-  songNumber = \my_shepherd_will_supply_my_need_number
+  songNumber = \songNumber
   songNumber_lhs = \my_shepherd_will_supply_my_need_number_lhs
   songNumber_rhs = \my_shepherd_will_supply_my_need_number_rhs
   copyright = "In the Public Domain"
@@ -47,56 +47,56 @@ bottomSystemOffset = \defaultBottomSystemOffset
 slideMusicBreaks = \relative c {
   \tag #'usePartials' { \partial 4 }
 
-  \setSystemOffset \topSystemOffset
+  \setSystemOffset \defaultTopSystemOffset
   s4    | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2    \bar "" \break
   
-  \setSystemOffset \bottomSystemOffset
-  s4    | \noBreak
-  s2 s4 | \noBreak
-  s2 s4 | \noBreak
-  s2.~  | \noBreak
-  s2    \bar "" \break
-  
-  \setSystemOffset \topSystemOffset
-  s4    | \noBreak
-  s2 s4 | \noBreak
-  s2 s4 | \noBreak
-  s2 s4 | \noBreak
-  s2    \bar "" \break
-  
-  \setSystemOffset \bottomSystemOffset
+  \setSystemOffset \defaultBottomSystemOffset
   s4    | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2.~  | \noBreak
   s2    \bar "" \break
   
-  \setSystemOffset \topSystemOffset
+  \setSystemOffset \defaultTopSystemOffset
   s4    | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2    \bar "" \break
   
-  \setSystemOffset \bottomSystemOffset
+  \setSystemOffset \defaultBottomSystemOffset
   s4    | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2.~  | \noBreak
   s2    \bar "" \break
   
-  \setSystemOffset \topSystemOffset
+  \setSystemOffset \defaultTopSystemOffset
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2    \bar "" \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4    | \noBreak
+  s2 s4 | \noBreak
+  s2 s4 | \noBreak
+  s2.~  | \noBreak
+  s2    \bar "" \break
+  
+  \setSystemOffset \defaultTopSystemOffset
   s4    | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2    \bar "" \break
 
-  \setSystemOffset \bottomSystemOffset
+  \setSystemOffset \defaultBottomSystemOffset
   s4    | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak

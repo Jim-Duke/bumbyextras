@@ -1,11 +1,12 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "Words-and-music.ly"
 
 #(set-global-staff-size 36)
 % Standard full page format.
 \book {
-  \paper {
+ \bookOutputName #(string-append build_dir songNumber " - " title " - Slides")
+ \paper {
     #(set-paper-size "arch a" 'landscape )
 
     %

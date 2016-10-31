@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "../common.ly"
 
@@ -7,6 +7,9 @@ global = {
   \time 4/4
   \aikenHeads
 }
+
+title = "Christ the Lord is Risen Today - Mendelssohn"
+songNumber = \christ_the_lord_is_risen_today_mendelssohn_number
 
 \header {
   title = \markup {
@@ -19,7 +22,7 @@ global = {
   meter = "7.7.7.7.D with refrain"
   composer = "Felix Mendelssohn (1840)"
   poet = "Charles Wesley"
-  songNumber = \christ_the_lord_is_risen_today_mendelssohn_number
+  songNumber = \songNumber
   songNumber_lhs = \christ_the_lord_is_risen_today_mendelssohn_number_lhs
   songNumber_rhs = \christ_the_lord_is_risen_today_mendelssohn_number_rhs
   copyright = "In the Public Domain"

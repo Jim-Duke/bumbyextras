@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.19.49"
 
 setSystemOffset =
 #(define-music-function (parser location offset)
@@ -6,6 +6,8 @@ setSystemOffset =
   #{
      \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details.Y-offset #offset
   #})
+
+#(if (not (defined? 'build_dir)) (define build_dir ""))
 
 %setSystemOffset =
 %#(define-music-function (parser location offset)

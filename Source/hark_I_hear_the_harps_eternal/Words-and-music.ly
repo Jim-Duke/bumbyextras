@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "../common.ly"
 
@@ -8,6 +8,9 @@ global = {
   \aikenHeads
 }
 
+title = "Hark I Hear the Harps Eternal"
+songNumber = \hark_I_hear_the_harps_eternal_number
+
 \header {
   title = \markup {
     \column {
@@ -15,7 +18,7 @@ global = {
       \center-align "the Harps Eternal"
     }
   }
-  songNumber = \hark_I_hear_the_harps_eternal_number
+  songNumber = \songNumber
   songNumber_lhs = \hark_I_hear_the_harps_eternal_number_lhs
   songNumber_rhs = \hark_I_hear_the_harps_eternal_number_rhs
   scripture = \markup {

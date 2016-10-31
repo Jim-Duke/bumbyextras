@@ -1,0 +1,41 @@
+#!/bin/sh
+
+pushd abide_with_me
+lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
+popd
+
+pushd ah_holy_jesus
+lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
+popd
+
+pushd christ_the_lord_is_risen_today_mendelssohn
+lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
+popd
+
+pushd hark_I_hear_the_harps_eternal
+lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
+popd
+
+pushd how_beautiful
+lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
+popd
+
+pushd in_christ_alone
+lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
+popd
+
+pushd just_as_I_am_I_come_broken
+lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
+popd
+
+pushd magnificat
+lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
+popd
+
+pushd my_shepherd_will_supply_my_need
+lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
+popd
+
+pushd teach_me_lord_to_wait
+lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
+popd

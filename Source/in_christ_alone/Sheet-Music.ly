@@ -1,14 +1,11 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "Words-and-music.ly"
 
-%
-% Adjust the staff size to adjust the basic font size of the words and music.
-%
 #(set-global-staff-size 18)
 
-% Standard full page format.
 \book {
+  \bookOutputName #(string-append build_dir songNumber " - " title " - Sheet Music")
   \paper {
     #(set-paper-size "letter")
     
@@ -20,10 +17,10 @@
     %
     % Various variables that can be used to tweak vertical spacing
     %
-    system-system-spacing #'basic-distance = #12
-    system-system-spacing #'minimum-distance = #8
-    score-markup-spacing #'basic-distance = #0
-    markup-system-spacing #'basic-distance = #0
+    system-system-spacing.basic-distance = #12
+    system-system-spacing.minimum-distance = #8
+    score-markup-spacing.basic-distance = #0
+    markup-system-spacing.basic-distance = #0
     
     indent = 0
     left-margin = 0.75\in
@@ -55,13 +52,6 @@
           \line {
             \fromproperty #'header:license
           }
-%          \vspace #0.25
-%          \line {
-%            "Engraved using Lilypond (www.lilypond.org) for www.acapellaworship.org.  PDF "
-%          }
-%          \line {
-%            "This hymn may be freely copied and distributed and we encourage its use in congregational acapella singing in worship everywhere."
-%          }
         }
       }
     }
@@ -102,9 +92,6 @@
             \keepWithTag #'usePartials' \altoVerse
           }
         }
-%
-% Include the following if we want to break on phrases
-%
         \context NullVoice = sheetMusicBreaks {
           \global
           \sheetMusicBreaks
@@ -145,53 +132,6 @@
       
     \layout {
       ragged-last = ##f
-    }
-  }
-  %
-  % Extra additional score containing all the music so we can have a single MIDI file
-  %
-  \score {
-    \context ChoirStaff <<
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
-            \global
-            \keepWithTag #'usePartials' \sopranoVerse
-          }
-        }
-        \context Voice = altos {
-          \voiceTwo {
-            \global
-            \keepWithTag #'usePartials' \altoVerse
-          }
-        }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \context Voice = tenors {
-          \voiceOne {
-            \global
-            \keepWithTag #'usePartials' \tenorVerse
-          }
-        }
-        \context Voice = basses {
-          \voiceTwo {
-            \global
-            \keepWithTag #'usePartials' \bassVerse
-          }
-        }
-      >>
-    >>
-    \midi {
-      \context {
-        \Staff
-        \remove "Staff_performer"
-      }
-      \context {
-        \Voice
-          \consists "Staff_performer"
-      }
-      \tempo 4 = 80
     }
   }
 }

@@ -1,10 +1,11 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "Words-and-music.ly"
 
 #(set-global-staff-size 36)
-% Standard full page format.
+
 \book {
+  \bookOutputName #(string-append build_dir songNumber " - " title " - Slides")
   \paper {
     #(set-paper-size "arch a" 'landscape )
 
@@ -104,11 +105,11 @@
           \global
           \slideMusicBreaks
         }
-        \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
-          \huge \verseOne
-        }
       >>
+      \new Lyrics \lyricsto "sopranos" {
+        \once \override LyricText.self-alignment-X = #CENTER
+        \huge \verseOne
+      }
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors {

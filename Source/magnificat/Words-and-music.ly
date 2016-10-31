@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "../common.ly"
 
@@ -8,8 +8,8 @@ global = {
   \aikenHeads
 }
 
-topSystemOffset = \defaultTopSystemOffset
-bottomSystemOffset = \defaultBottomSystemOffset
+title = "Magnificat"
+songNumber = \magnificat_number
 
 \header {
   title = "Magnificat"
@@ -17,7 +17,7 @@ bottomSystemOffset = \defaultBottomSystemOffset
   meter = ""
   composer = "Randy Gill"
   poet = "Randy Gill"
-  songNumber = \magnificat_number
+  songNumber = \songNumber
   songNumber_lhs = \magnificat_number_lhs
   songNumber_rhs = \magnificat_number_rhs
   copyright = \markup {

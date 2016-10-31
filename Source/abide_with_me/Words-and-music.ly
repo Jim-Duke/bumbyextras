@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "../common.ly"
 
@@ -8,13 +8,16 @@ global = {
   \aikenHeads
 }
 
+title = "Abide With Me"
+songNumber = \abide_with_me_number
+
 \header {
-  title = "Abide with Me"
+  title = \title
   tune = "EVENTIDE"
   meter = "10.10.10.10"
   composer = "William H. Monk (1861)"
   poet = "Henry F. Lyte (1847)"
-  songNumber = \abide_with_me_number
+  songNumber = \songNumber
   songNumber_lhs = \abide_with_me_number_lhs
   songNumber_rhs = \abide_with_me_number_rhs
   copyright = "In the Public Domain"

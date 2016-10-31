@@ -1,14 +1,11 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "Words-and-music.ly"
 
-%
-% Adjust the staff size to adjust the basic font size of the words and music.
-%
 #(set-global-staff-size 20)
 
-% Standard full page format.
 \book {
+  \bookOutputName #(string-append build_dir songNumber " - " title " - Sheet Music")
   \paper {
     #(set-paper-size "letter")
     
@@ -20,10 +17,10 @@
     %
     % Various variables that can be used to tweak vertical spacing
     %
-    system-system-spacing #'basic-distance = #14
-    system-system-spacing #'minimum-distance = #14
-    score-markup-spacing #'basic-distance = #0
-    markup-system-spacing #'basic-distance = #0
+    system-system-spacing.basic-distance = #14
+    system-system-spacing.minimum-distance = #14
+    score-markup-spacing.basic-distance = #0
+    markup-system-spacing.basic-distance = #0
     
     indent = 0
     left-margin = 1\in
@@ -147,62 +144,6 @@
       "2nd time through - add Bass"
       "3rd time through - add Alto"
       "4th time through - add Tenor"
-    }
-  }
-  %
-  % Extra additional score containing all the music so we can have a single MIDI file
-  %
-  \score {
-    \new ChoirStaff <<
-      \new Staff {
-        \new Voice = "sopranos" {
-          \global
-          \keepWithTag #'(usePartials sheetMusic) \sopranoVerse
-          \keepWithTag #'sheetMusic \sopranoVerse
-          \keepWithTag #'sheetMusic \sopranoVerse
-          \keepWithTag #'sheetMusic \sopranoVerse
-        }
-      }
-      \new Staff {
-        \new Voice = "altos" {
-          \global
-          \keepWithTag #'usePartials \silentVerse
-          \removeWithTag #'usePartials \silentVerse
-          \removeWithTag #'usePartials \altoVerse
-          \removeWithTag #'usePartials \altoVerse
-        }
-      }
-      \new Staff {
-        \new Voice = "tenors" {
-          \clef bass
-          \global
-          \keepWithTag #'usePartials \silentVerse
-          \removeWithTag #'usePartials \silentVerse
-          \removeWithTag #'usePartials \silentVerse
-          \removeWithTag #'usePartials \tenorVerse
-        }
-      }
-      \new Staff {
-        \new Voice = "basses" {
-          \clef bass
-          \global
-          \keepWithTag #'usePartials \silentVerse
-          \removeWithTag #'usePartials \bassVerse
-          \removeWithTag #'usePartials \bassVerse
-          \removeWithTag #'usePartials \bassVerse
-        }
-      }
-    >>
-    \midi {
-      \context {
-        \Staff
-        \remove "Staff_performer"
-      }
-      \context {
-        \Voice
-          \consists "Staff_performer"
-      }
-      \tempo 4 = 135
     }
   }
 }

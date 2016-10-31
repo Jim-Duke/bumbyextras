@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "../common.ly"
 
@@ -8,13 +8,16 @@ global = {
   \aikenHeads
 }
 
+title = "How Beautiful"
+songNumber = \how_beautiful_number
+
 \header {
-  title = "How Beautiful"
+  title = \title
   tune = "How Beautiful"
   meter = "8.8.8.8 with Chorus"
   composer = "Twila Paris"
   poet = "Twila Paris"
-  songNumber = \how_beautiful_number
+  songNumber = \songNumber
   songNumber_lhs = \how_beautiful_number_lhs
   songNumber_rhs = \how_beautiful_number_rhs
   copyright = "Copyright (c) 1990 Ariose Music and Mountain Spring Music"

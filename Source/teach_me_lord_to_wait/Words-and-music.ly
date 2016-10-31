@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "../common.ly"
 
@@ -8,8 +8,8 @@ global = {
   \aikenHeads
 }
 
-topSystemOffset = \defaultTopSystemOffset
-bottomSystemOffset = \defaultBottomSystemOffset
+title = "Teach Me Lord to Wait"
+songNumber = \teach_me_lord_to_wait_number
 
 \header {
   title = "Teach Me Lord to Wait"
@@ -17,7 +17,7 @@ bottomSystemOffset = \defaultBottomSystemOffset
   meter = ""
   composer = "Stuart Hamblen, 1953"
   poet = "Stuart Hamblen, 1953"
-  songNumber = \teach_me_lord_to_wait_number
+  songNumber = \songNumber
   songNumber_lhs = \teach_me_lord_to_wait_number_lhs
   songNumber_rhs = \teach_me_lord_to_wait_number_rhs
   copyright = \markup {
@@ -72,28 +72,28 @@ sheetMusicBreaks = \relative c {
 slideMusicBreaks = \relative c {
   \tag #'usePartials' { \partial 4 }
   
-  \setSystemOffset \topSystemOffset
+  \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   s2. | \noBreak
   s2. | \noBreak
   s2 \bar "" \break
   
-  \setSystemOffset \bottomSystemOffset
+  \setSystemOffset \defaultBottomSystemOffset
   s4 | \noBreak
   s2. | \noBreak
   s2. | \noBreak
   s2. | \noBreak
   s2 \bar "" \break
   
-  \setSystemOffset \topSystemOffset
+  \setSystemOffset \defaultTopSystemOffset
   s4 | \noBreak
   s2. | \noBreak
   s2. | \noBreak
   s2. | \noBreak
   s2 \bar "" \break
   
-  \setSystemOffset \bottomSystemOffset
+  \setSystemOffset \defaultBottomSystemOffset
   s4 | \noBreak
   s2. | \noBreak
   s2. | \noBreak
@@ -105,48 +105,48 @@ slideChorusBreaks = \relative c {
   \tag #'usePartials' { \partial 4 }
   
   % They that wait upon the Lord
-  \setSystemOffset \topSystemOffset
+  \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   s2  \bar "" \break
   
   % shall renew their strength,
-  \setSystemOffset \bottomSystemOffset
+  \setSystemOffset \defaultBottomSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   s2  \bar "" \break
   
   % they shall mount up with wings
-  \setSystemOffset \topSystemOffset
+  \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   s2  \bar "" \break
   
   % like eagles.
-  \setSystemOffset \bottomSystemOffset
+  \setSystemOffset \defaultBottomSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   s2  \bar "" \break
   
   % They shall run and not be weary.
-  \setSystemOffset \topSystemOffset
+  \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   s2  \bar "" \break
   
   % They shall walk and not faint."
-  \setSystemOffset \bottomSystemOffset
+  \setSystemOffset \defaultBottomSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   s2  \bar "" \break
   
   % Teach me Lord, Teach me
-  \setSystemOffset \topSystemOffset
+  \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   
   %  Lord, to wait.
-  \setSystemOffset \bottomSystemOffset
+  \setSystemOffset \defaultBottomSystemOffset
   s2. | \noBreak
   s2  \bar "|."
 }

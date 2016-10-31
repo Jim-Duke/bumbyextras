@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.19.49"
 
 \include "../common.ly"
 
@@ -8,13 +8,16 @@ global = {
   \aikenHeads
 }
 
+title = "In Christ Alone"
+songNumber = \in_christ_alone_number
+
 \header {
-  title = "In Christ Alone"
+  title = \title
   tune = "In Christ Alone"
   meter = "LMD"
   composer = "Keith Getty and Stuart Townend (2001)"
   poet = "Keith Getty and Stuart Townend (2001)"
-  songNumber = \in_christ_alone_number
+  songNumber = \songNumber
   songNumber_lhs = \in_christ_alone_number_lhs
   songNumber_rhs = \in_christ_alone_number_rhs
   copyright = \markup {
