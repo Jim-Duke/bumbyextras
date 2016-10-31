@@ -19,7 +19,7 @@ Jim Duke
 
 ### Copyright Information
 
-The hymn and tune are in the Public Domain.
+The hymn and tune are in the Public Domain.  The most noteable aspect of the history of the hymn is that the author had tuberculosis and died 3 weeks after the hymn was written.
 
 ### Sources
 
