@@ -1,5 +1,5 @@
 # Magnificat
-Magnificat by Randy Gill is a popular hymn similar to The Greatest Command in that it is setup where each voice part sings a different tune and words; and it starts with one part and builds adding one part a round; until all the parts are singing their individual parts and words together.  The words and music are designed to complement one another.
+Magnificat by Randy Gill is a popular hymn similar to The Greatest Command in that it is setup where each voice part sings a different tune and words; and it starts with one part and builds adding one part a round; until all the parts are singing their individual parts and words together.  The words are drawn from the Magnificat - the prayer of Mary as recorded in Luke 1:46-55; specifically verses 1:46-50.
 
 ## Submission
 
@@ -15,38 +15,58 @@ I don't recall the reason.
 
 ### Research Conducted By
 
-Name of the person or persons who did the research
+Jim Duke
 
 ### Copyright Information
 
-The identification and status of any current copyright.  If there is an active
-copyright, then licensing information should also be determined.
+The song is copyright Randy Gill, of the Zoe group.  It is in the CCLI Catalog.
+
+Copyright 2003 Randy Gill.
+CCLI Song #: 5107766
 
 ### Sources
 
-List of documents that can serve as authoritative sources of the hymn and/or the
-tune.  These should be placed in the Sources subdirectory of the song folder.
+1. [Sheet Music from Taylor Publications](Sources/Magnificat.pdf).
 
 ### Hymn
 
-Background/Historical information about the hymn.
+I don't know of any special history of the song.  It was written and published as part of the Zoe group.
 
 ### Original Verses
 
-The original verses of the song.  Usually drawn from one of the listed sources.
+Each voice part has its own unique verse; when all parts are singing, 4 different verses are being sung simultaneously.
+
+Sopranos:  
+ - My soul magnifies the Lord,  
+ - My spirit rejoices in God my savior.  
+ - My soul magnifies the Lord,  
+ - My spirit rejoices in God.
+
+Altos:  
+ - He has been mindful of His servant,  
+ - He has been mindful of me.  
+ - I will be blessed forever, forever,  
+ - Holy is His name.
+
+Tenors:  
+ - God alone is mighty, mighty;  
+ - Our God alone has done great things.  
+ - God alone is worthy, worthy;  
+ - Holy is His name.
+
+Basses:
+ - Glory be to God the Father  
+ - And glory be to God the Son.  
+ - Glory be to God the Spirit,  
+ - Glory be to God.
 
 ### Variations in the text
 
-Description and analysis of dominant or interesting variations of the text
-
-### Tune
-
-Background/Historical information about the tune.
+I do not know of any variations of this song.
 
 ### Researcher Recommendation
 
-Recommendation from the researcher about whether or not the hymn/tune should be accepted
-and what modifications should be done (which verses to use, any rewording etc.)
+This song is popular among the summer camp group, in particular.  It's fun to sing and is rooted in scripture.  It doesn't have a great deal of depth; but is still acceptable for use in worship.  I recommend that we include this song in our hymnal and use it exactly as written.
 
 ## Critical Review
 
