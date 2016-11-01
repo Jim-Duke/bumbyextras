@@ -26,7 +26,7 @@ songNumber = \just_as_I_am_I_come_broken_number
   songNumber_lhs = \just_as_I_am_I_come_broken_number_lhs
   songNumber_rhs = \just_as_I_am_I_come_broken_number_rhs
   copyright = \markup {
-    "Copyright " \char ##x00A9 " 2009 CCTB MusicFirst Hand Revelation MusicUniversal Music - Brentwood Benson Publishing"
+    "Copyright " \char ##x00A9 " 2009 CCTB Music, First Hand Revelation Music, Universal Music - Brentwood Benson Publishing"
   }
   license = "CCLI Song #5635850, License #2055442"
   arranger = "Sam Souder"
