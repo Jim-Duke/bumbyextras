@@ -81,7 +81,7 @@ There are vast variations available as described above.
 
 ### Objections
 
-Some may have trouble accepting the phrase "I crucified You."  Some may object with this personalization of the doctrine of substitutionary atonement.
+Some may have trouble accepting the phrase "I crucified You."  Some may object with this personalization of the doctrine of substitutionary atonement.  In that aspect Ah, holy Jesus is similar to "I'm the One".
 
 ### Tune
 
@@ -91,7 +91,15 @@ HERZLIEBSTER JESU is a sober tune in minor tonality; it provides a strong match 
 
 ### Researcher Recommendation
 
-I have no objections to the text.  Isaiah 53; 
+I have no objections to the text.  On the contrary, I find it extremely powerful.
+
+“Surely He has borne our griefs And carried our sorrows; Yet we esteemed Him stricken, Smitten by God, and afflicted. But He was wounded for our transgressions, He was bruised for our iniquities; The chastisement for our peace was upon Him, And by His stripes we are healed. All we like sheep have gone astray; We have turned, every one, to his own way; And the LORD has laid on Him the iniquity of us all.” (Isaiah 53:4–6, NKJV)
+
+“For He made Him who knew no sin to be sin for us, that we might become the righteousness of God in Him.” (2 Corinthians 5:21, NKJV)
+
+“who was delivered up because of our offenses, and was raised because of our justification.” (Romans 4:25, NKJV)
+
+“who Himself bore our sins in His own body on the tree, that we, having died to sins, might live for righteousness—by whose stripes you were healed.” (1 Peter 2:24, NKJV)
 
 ## Critical Review
 
