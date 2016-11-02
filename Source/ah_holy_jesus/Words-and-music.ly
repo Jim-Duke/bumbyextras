@@ -201,7 +201,7 @@ verseFour = \lyricmode {
 
 verseFive = \lyricmode {
   \set stanza = "5. "
-  There -- fore, dear je -- sus, since I can -- not pay You.
+  There -- fore, dear Je -- sus, since I can -- not pay You.
   I do a -- dore You, and will ev -- er pray You.
   Think on Your pit -- y and Your love un -- swerv -- ing,
   Not my de -- serv -- ing.
