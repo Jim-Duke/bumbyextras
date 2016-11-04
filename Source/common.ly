@@ -82,3 +82,12 @@ magnificat_number_rhs = ""
 ah_holy_jesus_number = "B-010"
 ah_holy_jesus_number_lhs = \ah_holy_jesus_number
 ah_holy_jesus_number_rhs = ""
+
+%
+% Unassigned Songs
+%
+
+% Just For Today
+just_for_today_number = "B-999"
+just_for_today_number_lhs = ""
+just_for_today_number_rhs = \just_for_today_number
