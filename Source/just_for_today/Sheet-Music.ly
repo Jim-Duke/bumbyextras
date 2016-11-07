@@ -2,7 +2,7 @@
 
 \include "Words-and-music.ly"
 
-#(set-global-staff-size 19)
+#(set-global-staff-size 20)
 
 \book {
   \bookOutputName #(string-append build_dir songNumber " - " title " - Sheet Music")
@@ -17,7 +17,7 @@
     %
     % Various variables that can be used to tweak vertical spacing
     %
-    system-system-spacing.basic-distance = #10
+    system-system-spacing.basic-distance = #12
     
     indent = 0
     left-margin = 1\in
@@ -25,6 +25,7 @@
     top-margin = 0.3\in
     bottom-margin = 0.25\in
     print-page-number = ##f
+    ragged-bottom = ##t
     oddFooterMarkup = \markup {
       \fontsize #-2
       \on-the-fly \last-page {
@@ -34,6 +35,7 @@
             \fromproperty #'header:meter
             \char ##x2022
             \fromproperty #'header:poet
+            \char ##x2022 "altered"
           }
           \line {
             "Tune:"
@@ -93,27 +95,13 @@
         \new Lyrics \lyricsto "sopranos" {
           \override Lyrics.LyricSpace.minimum-distance = #2.0
           \once \override LyricText.self-alignment-X = #CENTER
-          \verseOne
+          \verseOneLyrics
         }
         \new Lyrics \lyricsto "sopranos" {
           \override Lyrics.LyricSpace.minimum-distance = #2.0
           \once \override LyricText.self-alignment-X = #CENTER
-          \verseTwo
+          \verseTwoLyrics
         }
-        %{
-        \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
-          \verseThree
-        }
-        \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
-          \verseFour
-        }
-        \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
-          \verseFive
-        }
-        %}
       >>
       \context Staff = lower <<
         \clef bass
@@ -129,6 +117,61 @@
             \keepWithTag #'usePartials \bassVerse
           }
         }
+      >>
+    >>
+    \layout {
+      ragged-last = ##f
+    }
+  }
+  \pageBreak
+  \markup { \bold "Refrain:" }
+  \score {
+    <<
+      \new Staff {
+        \new Voice = "descant" {
+          \global
+          \keepWithTag #'usePartials \descant
+        }
+      }
+      \new Lyrics \lyricsto "descant" {
+        \descantLyrics
+      }
+      \context ChoirStaff <<
+        \override Score.BarNumber.break-visibility = ##(#f #f #f)
+        \context Staff = upper <<
+          \context Voice = sopranos {
+            \voiceOne {
+              \global
+              \keepWithTag #'usePartials \sopranoRefrain
+            }
+          }
+          \context Voice = altos {
+            \voiceTwo {
+              \global
+              \keepWithTag #'usePartials \altoRefrain
+            }
+          }
+          \new Lyrics \lyricsto "sopranos" {
+            \override Lyrics.LyricSpace.minimum-distance = #2.0
+            \once \override LyricText.self-alignment-X = #CENTER
+            \refrainLyrics
+          }
+        >>
+        \context Staff = lower <<
+          \clef bass
+          \context Voice = tenors {
+            \voiceOne {
+              \global
+              \keepWithTag #'usePartials \tenorRefrain
+            }
+          }
+          \context Voice = basses {
+            \voiceTwo {
+              \global
+              \keepWithTag #'usePartials \bassRefrain
+            }
+          }
+        >>
       >>
     >>
     \layout {

@@ -5,37 +5,46 @@
 \book {
   \bookOutputName #(string-append build_dir songNumber " - " title " - Audio")
   \score {
-    \context ChoirStaff <<
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
-            \global
-            \keepWithTag #'usePartials \sopranoVerse
+    \unfoldRepeats {
+      \context ChoirStaff <<
+        \context Staff = upper <<
+          \context Voice = sopranos {
+            \voiceOne {
+              \global
+              \keepWithTag #'usePartials \sopranoVerse
+              <<
+                \removeWithTag #'usePartials \descant
+                \removeWithTag #'usePartials \sopranoRefrain
+              >>
+            }
           }
-        }
-        \context Voice = altos {
-          \voiceTwo {
-            \global
-            \keepWithTag #'usePartials \altoVerse
+          \context Voice = altos {
+            \voiceTwo {
+              \global
+              \keepWithTag #'usePartials \altoVerse
+              \removeWithTag #'usePartials \altoRefrain
+            }
           }
-        }
+        >>
+        \context Staff = lower <<
+          \clef bass
+          \context Voice = tenors {
+            \voiceOne {
+              \global
+              \keepWithTag #'usePartials \tenorVerse
+              \removeWithTag #'usePartials \tenorRefrain
+            }
+          }
+          \context Voice = basses {
+            \voiceTwo {
+              \global
+              \keepWithTag #'usePartials \bassVerse
+              \removeWithTag #'usePartials \bassRefrain
+            }
+          }
+        >>
       >>
-      \context Staff = lower <<
-        \clef bass
-        \context Voice = tenors {
-          \voiceOne {
-            \global
-            \keepWithTag #'usePartials \tenorVerse
-          }
-        }
-        \context Voice = basses {
-          \voiceTwo {
-            \global
-            \keepWithTag #'usePartials \bassVerse
-          }
-        }
-      >>
-    >>
+    }
     \midi {
       \context {
         \Staff
@@ -45,7 +54,7 @@
         \Voice
           \consists "Staff_performer"
       }
-      \tempo 4 = 60
+      \tempo 4 = 65
     }
   }
 }
