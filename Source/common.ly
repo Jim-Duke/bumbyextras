@@ -72,14 +72,20 @@ just_as_I_am_I_come_broken_number_lhs = \just_as_I_am_I_come_broken_number
 just_as_I_am_I_come_broken_number_rhs = ##f
 
 % B-009 - Two Pages
-% Magnificat - Guess Two Pages
+% Magnificat - Two Pages
 magnificat_number = "B-009"
 magnificat_number_lhs = \magnificat_number
 magnificat_number_rhs = ""
 
-% B-010 - One Page
+% B-010 - Two Pages
+% Just For Today - Two Pages
+just_for_today_number = "B-010"
+just_for_today_number_lhs = \just_for_today_number
+just_for_today_number_rhs = ""
+
+% B-011 - One Page
 % Ah Holy Jesus - Guess One Page
-ah_holy_jesus_number = "B-010"
+ah_holy_jesus_number = "B-011"
 ah_holy_jesus_number_lhs = \ah_holy_jesus_number
 ah_holy_jesus_number_rhs = ""
 
@@ -87,7 +93,3 @@ ah_holy_jesus_number_rhs = ""
 % Unassigned Songs
 %
 
-% Just For Today
-just_for_today_number = "B-999"
-just_for_today_number_lhs = ""
-just_for_today_number_rhs = \just_for_today_number
