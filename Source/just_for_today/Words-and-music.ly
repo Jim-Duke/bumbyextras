@@ -10,6 +10,19 @@ global = {
 
 title = "Just For Today"
 songNumber = \just_for_today_number
+leaderHints = \markup {
+  \fontsize #-4
+  \normal-text { "E - 4 - DO" }
+}
+number_on_rhs = \just_for_today_number_rhs
+
+#(if number_on_rhs
+     (begin
+      (define lhs leaderHints)
+      (define rhs songNumber))
+     (begin
+      (define lhs songNumber)
+      (define rhs leaderHints)))
 
 \header {
   title = \title
@@ -19,24 +32,17 @@ songNumber = \just_for_today_number
   poet = "Marc Schelske (1995)"
   altered = ##t
   songNumber = \songNumber
-  songNumber_lhs = \just_for_today_number_lhs
-  songNumber_rhs = \just_for_today_number_rhs
+  lhs = \lhs
+  rhs = \rhs
   copyright = \markup { \char ##x00A9 " Copyright 1995 Marc Schelske Music." }
   license = "CCLI Song #1984677, License #2055442"
   arranger = "Jim Duke"
   tagline = ##f
-  scripture = \markup {
-    \override #'(line-width . 70)
-    \center-column {
-      \vspace #2
-      \abs-fontsize #24
-      \italic \wordwrap-string #"I beseech you therefore, brethren, by the mercies of God,
+  scripture = #"I beseech you therefore, brethren, by the mercies of God,
          that you present your bodies a living sacrifice, holy, acceptable to God, which
          is your reasonable service. And do not be conformed to this world, but be transformed
          by the renewing of your mind, that you may prove what is that good and acceptable and
          perfect will of God.  (Romans 12:1-2 NKJV)"
-    }
-  }
 }
 
 sheetMusicVerseBreaks = \relative c {
@@ -104,22 +110,34 @@ slideMusicRefrainBreaks = \relative c {
   \tag #'usePartials { \partial 4 }
   \setSystemOffset \defaultTopSystemOffset
   c4  | \noBreak
-  c1  | \noBreak
-  s2. \bar "" \break
+  c2. \bar "" \break
   
   \setSystemOffset \defaultBottomSystemOffset
   c4  | \noBreak
-  c1  | \noBreak
+  c2. \bar "" \break
+  
+  \setSystemOffset \defaultTopSystemOffset
+  c4  | \noBreak
+  c2  \bar "" \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  c2  | \noBreak
   c2. \bar "" \break
 
   \setSystemOffset \defaultTopSystemOffset
   c4  | \noBreak
-  c1  | \noBreak
   c2. \bar "" \break
   
   \setSystemOffset \defaultBottomSystemOffset
   c4  | \noBreak
-  c1  | \noBreak
+  c2. \bar "" \break
+
+  \setSystemOffset \defaultTopSystemOffset
+  c4  | \noBreak
+  c2  \bar "" \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  c2  | \noBreak
   c2. \bar "" \break
 }
 

@@ -10,28 +10,30 @@ global = {
 
 title = "Hark I Hear the Harps Eternal"
 songNumber = \hark_I_hear_the_harps_eternal_number
+leaderHints = \markup {
+  \fontsize #-4
+  \normal-text { "F - 3 - DO" }
+}
+number_on_rhs = \hark_I_hear_the_harps_eternal_number_rhs
+
+#(if number_on_rhs
+     (begin
+      (define lhs leaderHints)
+      (define rhs songNumber))
+     (begin
+      (define lhs songNumber)
+      (define rhs leaderHints)))
+
 
 \header {
-  title = \markup {
-    \column {
-      \center-align "Hark! I Hear"
-      \center-align "the Harps Eternal"
-    }
-  }
+  title = "Hark! I Hear the Harps Eternal!"
   songNumber = \songNumber
-  songNumber_lhs = \hark_I_hear_the_harps_eternal_number_lhs
-  songNumber_rhs = \hark_I_hear_the_harps_eternal_number_rhs
-  scripture = \markup {
-    \override #'(line-width . 70)
-    \center-column {
-      \abs-fontsize #24
-      \italic \wordwrap-string #"And I heard a voice from heaven, like the
+  lhs = \lhs
+  rhs = \rhs
+  scripture = #"And I heard a voice from heaven, like the
          sound of many waters and like the sound of loud thunder, and the
          voice which I heard was like the sound of harpists playing on
          their harps. - Revelation 14:2"
-
-    }
-  }
   meter = "8.7.8.7"
   poet = "F. R. Warren"
   translator = ##f

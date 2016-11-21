@@ -10,6 +10,20 @@ global = {
 
 title = "Ah Holy Jesus"
 songNumber = \ah_holy_jesus_number
+leaderHints = \markup {
+  \fontsize #-4
+  \normal-text { "B" \musicglyph #"accidentals.flat" " (Gm) - 4 - LA" }
+}
+number_on_rhs = \ah_holy_jesus_number_rhs
+
+#(if number_on_rhs
+     (begin
+      (define lhs leaderHints)
+      (define rhs songNumber))
+     (begin
+      (define lhs songNumber)
+      (define rhs leaderHints)))
+
 
 \header {
   title = \title
@@ -20,24 +34,16 @@ songNumber = \ah_holy_jesus_number
   poet = "Johann Heermann (1630)"
   translator = "Robert S. Bridges (1899)"
   songNumber = \songNumber
-  songNumber_lhs = \ah_holy_jesus_number_lhs
-  songNumber_rhs = \ah_holy_jesus_number_rhs
+  lhs = \lhs
+  rhs = \rhs
   copyright = "In the Public Domain"
   license = ##f
-  scripture = \markup {
-    \override #'(line-width . 70)
-    \center-column {
-      \vspace #2
-      \abs-fontsize #24
-      \italic \wordwrap-string 
-         #"“Surely He has borne our griefs And carried our sorrows;
-            Yet we esteemed Him stricken, Smitten by God, and afflicted.
-            But He was wounded for our transgressions,
-            He was bruised for our iniquities;
-            The chastisement for our peace was upon Him,
-            And by His stripes we are healed.” (Isaiah 53:4–5, NKJV)"
-    }
-  }
+  scripture = #"“Surely He has borne our griefs And carried our sorrows;
+                 Yet we esteemed Him stricken, Smitten by God, and afflicted.
+                 But He was wounded for our transgressions,
+                 He was bruised for our iniquities;
+                 The chastisement for our peace was upon Him,
+                 And by His stripes we are healed.” (Isaiah 53:4–5, NKJV)"
 }
 
 sheetMusicBreaks = \relative c {

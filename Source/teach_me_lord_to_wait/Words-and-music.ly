@@ -10,6 +10,19 @@ global = {
 
 title = "Teach Me Lord to Wait"
 songNumber = \teach_me_lord_to_wait_number
+leaderHints = \markup {
+  \fontsize #-4
+  \normal-text { "F - 3 - SOL" }
+}
+number_on_rhs = \teach_me_lord_to_wait_number_rhs
+
+#(if number_on_rhs
+     (begin
+      (define lhs leaderHints)
+      (define rhs songNumber))
+     (begin
+      (define lhs songNumber)
+      (define rhs leaderHints)))
 
 \header {
   title = "Teach Me Lord to Wait"
@@ -18,24 +31,17 @@ songNumber = \teach_me_lord_to_wait_number
   composer = "Stuart Hamblen, 1953"
   poet = "Stuart Hamblen, 1953"
   songNumber = \songNumber
-  songNumber_lhs = \teach_me_lord_to_wait_number_lhs
-  songNumber_rhs = \teach_me_lord_to_wait_number_rhs
+  lhs = \lhs
+  rhs = \rhs
   copyright = \markup {
     "Copyright " \char ##x00A9 " 1953.  Renewal 1981 by Hamblen Music Co., Inc."
   }
   license = "CCLI Song #31463, License #2055442"
   arranger = "Gerald Moore, 1992"
-  scripture = \markup {
-    \override #'(line-width . 60)
-    \center-column {
-      \vspace #4
-      \abs-fontsize #24
-      \italic \wordwrap-string #"“But those who wait on the LORD Shall renew their strength;
+  scripture = #"“But those who wait on the LORD Shall renew their strength;
          They shall mount up with wings like eagles,
          They shall run and not be weary,
          They shall walk and not faint.” (Isaiah 40:31, NKJV)"
-    }
-  }
   tagline = ##f
 }
 
@@ -73,30 +79,42 @@ slideMusicBreaks = \relative c {
   \tag #'usePartials' { \partial 4 }
   
   \setSystemOffset \defaultTopSystemOffset
-  s4  | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2 \bar "" \break
+  s4    | \noBreak
+  s2.   | \noBreak
+  s2 s8 \bar "" \break
   
   \setSystemOffset \defaultBottomSystemOffset
-  s4 | \noBreak
+  s8  | \noBreak
   s2. | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2 \bar "" \break
+  s2  \bar "" \break \pageBreak
   
   \setSystemOffset \defaultTopSystemOffset
-  s4 | \noBreak
+  s4  | \noBreak
   s2. | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2 \bar "" \break
+  s2  \bar "" \break
   
   \setSystemOffset \defaultBottomSystemOffset
-  s4 | \noBreak
+  s4  | \noBreak
   s2. | \noBreak
+  s2  \bar "" \break \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s4  | \noBreak
   s2. | \noBreak
+  s2  \bar "" \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2 \bar "" \break \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s4  | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4  | \noBreak
   s2. | \noBreak
   s2 \bar "|."
 }
@@ -108,42 +126,42 @@ slideChorusBreaks = \relative c {
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break
+  s2  \bar "" \break \noPageBreak
   
   % shall renew their strength,
   \setSystemOffset \defaultBottomSystemOffset
   s4  | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break
+  s2  \bar "" \break \pageBreak
   
   % they shall mount up with wings
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break
+  s2  \bar "" \break \noPageBreak
   
   % like eagles.
   \setSystemOffset \defaultBottomSystemOffset
   s4  | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break
+  s2  \bar "" \break \pageBreak
   
   % They shall run and not be weary.
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break
+  s2  \bar "" \break \noPageBreak
   
   % They shall walk and not faint."
   \setSystemOffset \defaultBottomSystemOffset
   s4  | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break
+  s2  \bar "" \break \pageBreak
   
   % Teach me Lord, Teach me
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
-  s2. | \noBreak
+  s2. | \break \noPageBreak
   
   %  Lord, to wait.
   \setSystemOffset \defaultBottomSystemOffset
@@ -441,7 +459,7 @@ verseTwo = \lyricmode {
 
 chorusLyrics = \lyricmode {
   "\"They" that wait up -- on the Lord shall re -- new their strength,
-  They shall mount up with wings like ea -- gles.
+  They shall mount up with wings like ea -- gles. __
   They shall run and not be wea -- ry.
   They shall walk and not "faint.\""
   Teach me Lord, Teach me Lord, to wait.

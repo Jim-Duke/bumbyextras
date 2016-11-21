@@ -10,6 +10,19 @@ global = {
 
 title = "In Christ Alone"
 songNumber = \in_christ_alone_number
+leaderHints = \markup {
+  \fontsize #-4
+  \normal-text { "E" \musicglyph #"accidentals.flat" " - 3 - SOL" }
+}
+number_on_rhs = \in_christ_alone_number_rhs
+
+#(if number_on_rhs
+     (begin
+      (define lhs leaderHints)
+      (define rhs songNumber))
+     (begin
+      (define lhs songNumber)
+      (define rhs leaderHints)))
 
 \header {
   title = \title
@@ -18,25 +31,18 @@ songNumber = \in_christ_alone_number
   composer = "Keith Getty and Stuart Townend (2001)"
   poet = "Keith Getty and Stuart Townend (2001)"
   songNumber = \songNumber
-  songNumber_lhs = \in_christ_alone_number_lhs
-  songNumber_rhs = \in_christ_alone_number_rhs
+  lhs = \lhs
+  rhs = \rhs
   copyright = \markup {
      \char ##x00A9 "2001 Thankyou Music (admin. Capitol CMG Publishing)"
   }
   license = "CCLI Song #3350395, License #2055442"
   arranger = "D. J. Bulls"
-  scripture = \markup {
-    \override #'(line-width . 60)
-    \center-column {
-      \vspace #2
-      \abs-fontsize #24
-      \italic \wordwrap-string #"“For I am persuaded that neither death nor life,
+  scripture = #"“For I am persuaded that neither death nor life,
          nor angels nor principalities nor powers, nor things present nor things
          to come, nor height nor depth, nor any other created thing, shall be able
          to separate us from the love of God which is in Christ Jesus our Lord.”
          Romans 8:38-39"
-    }
-  }
   tagline = ##f
 }
 

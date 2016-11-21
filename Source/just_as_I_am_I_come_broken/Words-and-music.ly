@@ -10,34 +10,35 @@ global = {
 
 title = "Just As I Am - I Come Broken"
 songNumber = \just_as_I_am_I_come_broken_number
+leaderHints = \markup {
+  \fontsize #-4
+  \normal-text { "B" \musicglyph #"accidentals.flat" " - 3 - DO" }
+}
+number_on_rhs = \just_as_I_am_I_come_broken_number_rhs
+
+#(if number_on_rhs
+     (begin
+      (define lhs leaderHints)
+      (define rhs songNumber))
+     (begin
+      (define lhs songNumber)
+      (define rhs leaderHints)))
 
 \header {
-  title = \markup {
-    \column {
-      \center-align "Just As I Am"
-      \center-align "(I Come Broken)"
-    }
-  }
+  title = "Just As I Am - I Come Broken"
   tune = "Just As I Am - I Come Broken"
   meter = ""
   composer = "Charlotte Elliott, David Moffitt, Sue C. Smith, Travis Cottrell, William Batchelder Bradbury"
   poet = "Charlotte Elliott, David Moffitt, Sue C. Smith, Travis Cottrell, William Batchelder Bradbury"
-  songNumber = \just_as_I_am_I_come_broken_number
-  songNumber_lhs = \just_as_I_am_I_come_broken_number_lhs
-  songNumber_rhs = \just_as_I_am_I_come_broken_number_rhs
+  songNumber = \songNumber
+  lhs = \lhs
+  rhs = \rhs
   copyright = \markup {
     "Copyright " \char ##x00A9 " 2009 CCTB Music, First Hand Revelation Music, Universal Music - Brentwood Benson Publishing"
   }
   license = "CCLI Song #5635850, License #2055442"
   arranger = "Sam Souder"
-  scripture = \markup {
-    \override #'(line-width . 60)
-    \center-column {
-      \vspace #4
-      \abs-fontsize #24
-      \italic \wordwrap-string #"“Your sins shall be as white as snow” - Isaiah 1:18"
-    }
-  }
+  scripture = #"“Your sins shall be as white as snow” - Isaiah 1:18"
   tagline = ##f
 }
 
@@ -226,13 +227,13 @@ sopranoVerse = \relative c' {
   d2 d4 |
   f4( ees4) d4 |
   c4( d4) ees4 |
-  d4. r8
+  d4. ees8\rest
   
   f4 |
   f4( c4) d4 |
   ees2 g4 |
   g2 f4 |
-  d4. r8
+  d4. ees8\rest
   
   bes8( c8) |
   d2 d4 |
@@ -243,10 +244,10 @@ sopranoVerse = \relative c' {
   g4 |
   f2 f4 |
   f4( ees4) d4 |
-  c2 r4 |
+  c2 ees4\rest |
   f2. |
   d2.~ |
-  d4 r4 \bar "|."
+  d4 ees4\rest \bar "|."
 }
 
 altoVerse = \relative c' {
@@ -255,13 +256,13 @@ altoVerse = \relative c' {
   bes2 bes4 |
   d4( c4) bes4 |
   a4( bes4) c4 |
-  bes4. r8
+  bes4. \hide r8
   
   d4 |
   c4( c4) bes4 |
   c2 ees4 |
   ees2 d4 |
-  bes4. r8
+  bes4. \hide r8
   
   bes4 |
   bes2 bes4 |
@@ -272,10 +273,10 @@ altoVerse = \relative c' {
   ees4 |
   d2 d4 |
   d4( c4) bes4 |
-  a2 r4 |
+  a2 \hide r4 |
   c2. |
   bes2.~ |
-  bes4 r4 \bar "|."
+  bes4 \hide r4 \bar "|."
 }
 
 tenorVerse = \relative c {
@@ -284,13 +285,13 @@ tenorVerse = \relative c {
   f2 f4 |
   f2 f4 |
   f2 f4 |
-  f4. r8
+  f4. f8\rest
   
   bes4 |
   a4( a4) f4 |
   f2 a4 |
   bes2 bes4 |
-  f4. r8
+  f4. f8\rest
   
   d8( ees8) |
   f2 f4 |
@@ -301,10 +302,10 @@ tenorVerse = \relative c {
   bes4 |
   bes2 bes4 |
   bes2 f4 |
-  f2 r4 |
+  f2 f4\rest |
   a2. |
   f2.~ |
-  f4 r4 \bar "|."
+  f4 f4\rest \bar "|."
 }
 
 bassVerse = \relative c {
@@ -313,13 +314,13 @@ bassVerse = \relative c {
   bes2 bes4 |
   bes2 bes4 |
   f'2 f4 |
-  bes,4. r8
+  bes,4. \hide r8
   
   bes8( d8) |
   f4( f4) f4 |
   f2 f4 |
   bes,2 bes4 |
-  bes4. r8
+  bes4. \hide r8
   
   bes4 |
   bes2 bes4 |
@@ -330,10 +331,10 @@ bassVerse = \relative c {
   ees4 |
   bes2 bes4 |
   bes4.( c8) d8( ees8) |
-  f2 r4 |
+  f2 \hide r4 |
   <f f,>2.
   bes,2.~ |
-  bes4 r4 \bar "|."
+  bes4 \hide r4 \bar "|."
 }
 
 sopranoChorus = \relative c'' {
@@ -344,13 +345,13 @@ sopranoChorus = \relative c'' {
   
   f8 bes8 |
   bes4 bes4 f8 c'8 |
-  c4 r4
+  c4 bes4\rest
   
   bes8 a8 |
   g4 g4 bes8 a8 |
   g4 g4 f8 bes8 |
   bes4 bes4 f8 c'8 |
-  c4 r4
+  c4 bes4\rest
   
   d8 c8 |
   c4 bes4 d8 c8 |
@@ -359,12 +360,12 @@ sopranoChorus = \relative c'' {
   g2
   
   bes8 a8 |
-  g4 g4 r8 a8 |
+  g4 g4 g8\rest a8 |
   a8 bes8 bes4 c4 |
-  bes4 r4 g4 |
+  bes4 bes4\rest g4 |
   a2 bes4 |
   bes2.~ |
-  bes4 r4 \bar "|."
+  bes4 bes4\rest \bar "|."
 }
 
 altoChorus = \relative c' {
@@ -373,13 +374,13 @@ altoChorus = \relative c' {
   d4 d4 f8 f8 |
   f4 ees4 ees8 f8 |
   f4 f4 f8 f8 |
-  a4 r4
+  a4 \hide r4
   
   f8 f8 |
   d4 d4 f8 f8 |
   f4 ees4 ees8 f8 |
   f4 f4 f8 f8 |
-  a4 r4
+  a4 \hide r4
   
   bes8 a8 |
   a4 g4 bes8 a8 |
@@ -388,12 +389,12 @@ altoChorus = \relative c' {
   f4( ees4)
   
   f8 f8 |
-  f4 ees4 r8 f8 |
+  f4 ees4 \hide r8 f8 |
   f8 f8 f4 f4 |
-  g4 r4 ees4 |
+  g4 \hide r4 ees4 |
   f2 f4 |
   f2.~ |
-  f4 r4 \bar "|."
+  f4 \hide r4 \bar "|."
 }
 
 tenorChorus = \relative c' {
@@ -402,27 +403,27 @@ tenorChorus = \relative c' {
   bes4 bes4 d8 c8 |
   bes4 bes4 bes8 bes8 |
   ees4 d4 d8 f8 |
-  f4 r4
+  f4 f,4\rest
   
-  d8 c8 |
+  d'8 c8 |
   bes4 bes4 d8 c8 |
   bes4 bes4 bes8 bes8 |
   ees4 d4 d8 f8 |
-  f4 r4
+  f4 f,4\rest
   
-  f8 f8 |
+  f'8 f8 |
   f4 d4 f8 f8 |
   ees4 ees4 d8 ees8 |
   f4. f8 f8 d8 |
   bes2
   
   d8 c8 |
-  bes4 bes4 r8 c8 |
+  bes4 bes4 f8\rest c'8 |
   c8 d8 d4 d4 |
-  ees4 r4 bes4 |
+  ees4 f,4\rest bes4 |
   c2 ees4 |
   ees2.( |
-  d4) r4 \bar "|."
+  d4) f,4\rest \bar "|."
 }
 
 bassChorus = \relative c {
@@ -431,13 +432,13 @@ bassChorus = \relative c {
   g4 g4 g8 g8 |
   ees4 ees4 ees8 ees8 |
   bes4 bes4 bes8 bes8 |
-  f'4 r4
+  f'4 \hide r4
   
   f8 f8 |
   g4 g4 g8 g8 |
   ees4 ees4 ees8 ees8 |
   bes4 bes4 bes8 bes8 |
-  f'4 r4
+  f'4 \hide r4
   
   f8 f8 |
   g4 g4 g8 g8 |
@@ -446,18 +447,18 @@ bassChorus = \relative c {
   ees2
   
   ees8 ees8 |
-  ees4 ees4 r8 f8 |
+  ees4 ees4 \hide r8 f8 |
   g8 g8 g4 g4 |
-  ees4 r4 ees4 |
+  ees4 \hide r4 ees4 |
   f2 f4 |
   bes,2.~ |
-  bes4 r4 \bar "|."
+  bes4 \hide r4 \bar "|."
 }
 
 sopranoCoda = \relative c'' {
   \tag #'usePartials' { \partial 4 }
   c4 |
-  bes4 r4 g4 |
+  bes4 bes4\rest g4 |
   a2 bes4 |
   bes2.~ |
   bes2 \bar "|."
@@ -466,7 +467,7 @@ sopranoCoda = \relative c'' {
 altoCoda = \relative c'' {
   \tag #'usePartials' { \partial 4 }
   g4 |
-  g4 r4 ees4 |
+  g4 \hide r4 ees4 |
   f2 f4 |
   f2.~ |
   f2 \bar "|."
@@ -475,7 +476,7 @@ altoCoda = \relative c'' {
 tenorCoda = \relative c' {
   \tag #'usePartials' { \partial 4 }
   ees4 |
-  ees4 r4 bes4 |
+  ees4 f,4\rest bes4 |
   c2 ees4 |
   ees2.( |
   d2) \bar "|."
@@ -484,7 +485,7 @@ tenorCoda = \relative c' {
 bassCoda = \relative c {
   \tag #'usePartials' { \partial 4 }
   ees4 |
-  ees4 r4 ees4 |
+  ees4 \hide r4 ees4 |
   f2 f4 |
   bes,2.~ |
   bes2 \bar "|."

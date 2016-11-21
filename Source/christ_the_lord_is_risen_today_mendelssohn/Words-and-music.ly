@@ -10,35 +10,37 @@ global = {
 
 title = "Christ the Lord is Risen Today - Mendelssohn"
 songNumber = \christ_the_lord_is_risen_today_mendelssohn_number
+leaderHints = \markup {
+  \fontsize #-4
+  \normal-text { "G - 4 - SOL" }
+}
+number_on_rhs = \christ_the_lord_is_risen_today_mendelssohn_number_rhs
+
+#(if number_on_rhs
+     (begin
+      (define lhs leaderHints)
+      (define rhs songNumber))
+     (begin
+      (define lhs songNumber)
+      (define rhs leaderHints)))
+
 
 \header {
-  title = \markup {
-    \column {
-      \center-align "Christ the Lord"
-      \center-align "is Risen Today"
-    }
-  }
+  title = "Christ the Lord is Risen Today"
   tune = "MENDELSSOHN"
   meter = "7.7.7.7.D with refrain"
   composer = "Felix Mendelssohn (1840)"
   poet = "Charles Wesley"
   songNumber = \songNumber
-  songNumber_lhs = \christ_the_lord_is_risen_today_mendelssohn_number_lhs
-  songNumber_rhs = \christ_the_lord_is_risen_today_mendelssohn_number_rhs
+  lhs = \lhs
+  rhs = \rhs
   copyright = "In the Public Domain"
   license = ##f
   arranger = "William H. Cummings"
-  scripture = \markup {
-    \override #'(line-width . 60)
-    \center-column {
-      \vspace #2
-      \abs-fontsize #24
-      \italic \wordwrap-string #"But the angel answered and said to the women,
-                                 “Do not be afraid, for I know that you seek Jesus who was crucified.
-                                 He is not here; for He is risen, as He said.
-                                 Come, see the place where the Lord lay.” (Matthew 28:5–6, NKJV)"
-    }
-  }
+  scripture = #"But the angel answered and said to the women,
+                “Do not be afraid, for I know that you seek Jesus who was crucified.
+                 He is not here; for He is risen, as He said.
+                 Come, see the place where the Lord lay.” (Matthew 28:5–6, NKJV)"
   tagline = ##f
 }
 

@@ -10,6 +10,19 @@ global = {
 
 title = "Abide With Me"
 songNumber = \abide_with_me_number
+leaderHints = \markup {
+  \fontsize #-4
+  \normal-text { "E" \musicglyph #"accidentals.flat" " - 4 - MI" }
+}
+number_on_rhs = \abide_with_me_number_rhs
+
+#(if number_on_rhs
+     (begin
+      (define lhs leaderHints)
+      (define rhs songNumber))
+     (begin
+      (define lhs songNumber)
+      (define rhs leaderHints)))
 
 \header {
   title = \title
@@ -18,19 +31,19 @@ songNumber = \abide_with_me_number
   composer = "William H. Monk (1861)"
   poet = "Henry F. Lyte (1847)"
   songNumber = \songNumber
-  songNumber_lhs = \abide_with_me_number_lhs
-  songNumber_rhs = \abide_with_me_number_rhs
+  lhs = \lhs
+  rhs = \rhs
   copyright = "In the Public Domain"
   license = ##f
   tagline = ##f
   scripture = \markup {
-    \override #'(line-width . 70)
+    \override #'(line-width . 60)
     \center-column {
-      \vspace #2
+      \vspace #1
       \abs-fontsize #24
       \italic \wordwrap-string #"Abide with us, for it is toward evening,
          and the day is far spent. - Luke 24:29"
-      \vspace #2
+      \vspace #1
       \abs-fontsize #24 \italic #"\"O Death, where is your sting?"
       \abs-fontsize #24 \italic #"O Hades, where is your victory?\""
       \vspace #1
@@ -198,7 +211,7 @@ verseThree = \lyricmode {
   I need thy pres -- ence eve -- ry pass -- ing hour.
   What but Thy grace can foil the tempt -- er's pow'r?
   Who like Thy -- self my guide and stay can be?
-  Through cloud and sun -- shine, Lord, a -- bide with me.
+  Thru cloud and sun -- shine, Lord, a -- bide with me.
 }
 
 verseFour = \lyricmode {
