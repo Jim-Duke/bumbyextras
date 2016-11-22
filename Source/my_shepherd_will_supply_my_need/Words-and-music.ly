@@ -8,39 +8,41 @@ global = {
   \aikenHeads
 }
 
-title = "My Shepherd Will Supply My Need"
+title = #"My Shepherd Will Supply My Need"
 songNumber = \my_shepherd_will_supply_my_need_number
+leaderHints = \markup {
+  \fontsize #-4
+  \normal-text { "C - 3 - DO" }
+}
+number_on_rhs = \my_shepherd_will_supply_my_need_number_rhs
+
+#(if number_on_rhs
+     (begin
+      (define lhs leaderHints)
+      (define rhs songNumber))
+     (begin
+      (define lhs songNumber)
+      (define rhs leaderHints)))
 
 \header {
-  title = \markup {
-    \column {
-      "My Shepherd Will"
-      "Supply My Need"
-    }
-  }
+  title = #"My Shepherd will Supply My Need"
   tune = "RESIGNATION"
   meter = "CM"
   composer = "Traditional North American"
   poet = "Isaac Watts, altered"
   songNumber = \songNumber
-  songNumber_lhs = \my_shepherd_will_supply_my_need_number_lhs
-  songNumber_rhs = \my_shepherd_will_supply_my_need_number_rhs
+  lhs = \lhs
+  rhs = \rhs
+
   copyright = "In the Public Domain"
   license = ##f
   arranger = ##f
-  scripture = \markup {
-    \override #'(line-width . 60)
-    \center-column {
-      \vspace #3
-      \abs-fontsize #24
-      \italic \wordwrap-string #"The Lord is my shepherd; I shall not want,
-         He makes me to lie down in green pastures;
-         He leads me beside the still waters.
-         He restores my soul;
-         He leads me in the paths of righteousness
-         For His name's sake. - Psalm 23:1-3"
-    }
-  }
+  scripture = #"The Lord is my shepherd; I shall not want,
+                He makes me to lie down in green pastures;
+                He leads me beside the still waters.
+                He restores my soul;
+                He leads me in the paths of righteousness
+                For His name's sake. - Psalm 23:1-3"
   tagline = ##f
 }
 
@@ -52,7 +54,7 @@ slideMusicBreaks = \relative c {
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
-  s2    \bar "" \break
+  s2    \bar "" \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s4    | \noBreak
@@ -66,7 +68,7 @@ slideMusicBreaks = \relative c {
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
-  s2    \bar "" \break
+  s2    \bar "" \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s4    | \noBreak
@@ -80,7 +82,7 @@ slideMusicBreaks = \relative c {
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
-  s2    \bar "" \break
+  s2    \bar "" \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s4    | \noBreak
@@ -94,7 +96,7 @@ slideMusicBreaks = \relative c {
   s2 s4 | \noBreak
   s2 s4 | \noBreak
   s2 s4 | \noBreak
-  s2    \bar "" \break
+  s2    \bar "" \break \noPageBreak
 
   \setSystemOffset \defaultBottomSystemOffset
   s4    | \noBreak
@@ -376,7 +378,7 @@ verseTwo = \lyricmode {
   His hand in sight of all my foes
   does still my ta -- ble spread;
   my cup with bless -- ings ov -- er -- flows,
-  His oil anoints my head.
+  His oil a -- noints my head.
 }
 
 verseThree = \lyricmode {

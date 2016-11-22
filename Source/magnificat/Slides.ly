@@ -2,8 +2,8 @@
 
 \include "Words-and-music.ly"
 
-#(set-global-staff-size 36)
-% Standard full page format.
+#(set-global-staff-size 44)
+
 \book {
   \bookOutputName #(string-append build_dir songNumber " - " title " - Slides")
   \paper {
@@ -60,40 +60,27 @@
           }
         }
         \vspace #3
-        \fill-line {
+        \override #'(line-width . 70)
+        \center-column {
           \abs-fontsize #48
           \bold
-          \fromproperty #'header:title
+          \wordwrap-field #'header:title
         }
         \vspace #2
-        \override #'(line-width . 70) \center-column {
+        \override #'(line-width . 60)
+        \center-column {
           \abs-fontsize #24
-          \italic \wordwrap-field #'header:scripture
+          \italic
+          \wordwrap-field #'header:scripture
         }
       }
     }
-    scoreTitleMarkup = \markup {
-      \override #'(baseline-skip . 6.0 )
-      \column {
-        \fill-line {
-          \null
-          {
-            \abs-fontsize #32
-            \fromproperty #'header:title
-          }
-          {
-            \abs-fontsize #32
-            \fromproperty #'header:songNumber
-          }
-        }
-        \vspace #1
-      }
-    }
+    scoreTitleMarkup = ##f
   }
   \pageBreak
 
   \score {
-    \new ChoirStaff <<
+    <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       %\override Score.BarNumber.break-visibility = ##(#t #t #t)
       %\set Score.barNumberVisibility = #all-bar-numbers-visible
@@ -115,10 +102,15 @@
       
     \layout {
       ragged-last = ##f
+      
+      \context {
+        \Lyrics
+        \override LyricSpace #'minimum-distance = #1.5
+      }
     }
   }
   \score {
-    \new ChoirStaff <<
+    <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       %\override Score.BarNumber.break-visibility = ##(#t #t #t)
       %\set Score.barNumberVisibility = #all-bar-numbers-visible
@@ -151,10 +143,15 @@
       
     \layout {
       ragged-last = ##f
+      
+      \context {
+        \Lyrics
+        \override LyricSpace #'minimum-distance = #1.5
+      }
     }
   }
   \score {
-    \new ChoirStaff <<
+    <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       %\override Score.BarNumber.break-visibility = ##(#t #t #t)
       %\set Score.barNumberVisibility = #all-bar-numbers-visible
@@ -197,10 +194,15 @@
       
     \layout {
       ragged-last = ##f
+      
+      \context {
+        \Lyrics
+        \override LyricSpace #'minimum-distance = #1.5
+      }
     }
   }
   \score {
-    \new ChoirStaff <<
+    <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       %\override Score.BarNumber.break-visibility = ##(#t #t #t)
       %\set Score.barNumberVisibility = #all-bar-numbers-visible
@@ -254,6 +256,11 @@
       
     \layout {
       ragged-last = ##f
+      
+      \context {
+        \Lyrics
+        \override LyricSpace #'minimum-distance = #1.5
+      }
     }
   }
 }

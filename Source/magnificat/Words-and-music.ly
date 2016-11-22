@@ -10,6 +10,19 @@ global = {
 
 title = "Magnificat"
 songNumber = \magnificat_number
+leaderHints = \markup {
+  \fontsize #-4
+  \normal-text { "E - 3 - DO" }
+}
+number_on_rhs = \magnificat_number_rhs
+
+#(if number_on_rhs
+     (begin
+      (define lhs leaderHints)
+      (define rhs songNumber))
+     (begin
+      (define lhs songNumber)
+      (define rhs leaderHints)))
 
 \header {
   title = "Magnificat"
@@ -18,8 +31,8 @@ songNumber = \magnificat_number
   composer = "Randy Gill"
   poet = "Randy Gill"
   songNumber = \songNumber
-  songNumber_lhs = \magnificat_number_lhs
-  songNumber_rhs = \magnificat_number_rhs
+  lhs = \lhs
+  rhs = \rhs
   copyright = \markup {
     "Copyright " \char ##x00A9 " 2003 Randy Gill"
   }

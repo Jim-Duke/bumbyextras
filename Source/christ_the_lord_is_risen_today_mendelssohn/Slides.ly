@@ -2,8 +2,8 @@
 
 \include "Words-and-music.ly"
 
-#(set-global-staff-size 36)
-% Standard full page format.
+#(set-global-staff-size 44)
+
 \book {
   \bookOutputName #(string-append build_dir songNumber " - " title " - Slides")
   \paper {
@@ -57,36 +57,27 @@
           }
         }
         \vspace #3
-        \fill-line {
+        \override #'(line-width . 70)
+        \center-column {
           \abs-fontsize #48
           \bold
-          \fromproperty #'header:title
+          \wordwrap-field #'header:title
         }
-        \fromproperty #'header:scripture
+        \vspace #2
+        \override #'(line-width . 60)
+        \center-column {
+          \abs-fontsize #24
+          \italic
+          \wordwrap-field #'header:scripture
+        }
       }
     }
-    scoreTitleMarkup = \markup {
-      \override #'(baseline-skip . 6.0 )
-      \column {
-        \fill-line {
-          \null
-          {
-            \abs-fontsize #32
-            \fromproperty #'header:title
-          }
-          {
-            \abs-fontsize #32
-            \fromproperty #'header:songNumber
-          }
-        }
-        \vspace #1
-      }
-    }
+    scoreTitleMarkup = ##f
   }
   \pageBreak
 
   \score {
-    \context ChoirStaff <<
+    <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
@@ -126,10 +117,15 @@
         }
       >>
     >>
-    \layout {}
+    \layout {
+      \context {
+        \Lyrics
+        \override LyricSpace #'minimum-distance = #1.5
+      }
+    }
   }
   \score {
-    \context ChoirStaff <<
+    <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
@@ -169,10 +165,15 @@
         }
       >>
     >>
-    \layout {}
+    \layout {
+      \context {
+        \Lyrics
+        \override LyricSpace #'minimum-distance = #1.5
+      }
+    }
   }
   \score {
-    \context ChoirStaff <<
+    <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
@@ -212,6 +213,11 @@
         }
       >>
     >>
-    \layout {}
+    \layout {
+      \context {
+        \Lyrics
+        \override LyricSpace #'minimum-distance = #1.5
+      }
+    }
   }
 }

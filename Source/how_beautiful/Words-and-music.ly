@@ -10,6 +10,19 @@ global = {
 
 title = "How Beautiful"
 songNumber = \how_beautiful_number
+leaderHints = \markup {
+  \fontsize #-4
+  \normal-text { "E" \musicglyph #"accidentals.flat" " - 3 - DO" }
+}
+number_on_rhs = \how_beautiful_number_rhs
+
+#(if number_on_rhs
+     (begin
+      (define lhs leaderHints)
+      (define rhs songNumber))
+     (begin
+      (define lhs songNumber)
+      (define rhs leaderHints)))
 
 \header {
   title = \title
@@ -18,8 +31,8 @@ songNumber = \how_beautiful_number
   composer = "Twila Paris"
   poet = "Twila Paris"
   songNumber = \songNumber
-  songNumber_lhs = \how_beautiful_number_lhs
-  songNumber_rhs = \how_beautiful_number_rhs
+  lhs = \lhs
+  rhs = \rhs
   copyright = "Copyright (c) 1990 Ariose Music and Mountain Spring Music"
   license = "CCLI Song #443594, License #2055442"
   scripture = #"How lovely on the mountains
@@ -262,7 +275,7 @@ sopranoVerse = \relative c' {
   
   bes8 |
   \autoBeamOff c4.( bes8) \autoBeamOn aes8( bes8) |
-  bes2 r8
+  bes2 bes8\rest
   
   ees,8 |
   aes4 bes4 c4 |
@@ -270,7 +283,7 @@ sopranoVerse = \relative c' {
   
   ees,8 f8 |
   g4 f4. ees8 |
-  f8 r8
+  f8 f8\rest
   
   g4.( f8) |
   ees2 bes'4 |
@@ -278,7 +291,7 @@ sopranoVerse = \relative c' {
   
   bes8 |
   \autoBeamOff c4.( bes8) \autoBeamOn aes8( bes8) |
-  bes2 r8
+  bes2 bes8\rest
   
   ees,8 |
   aes4 bes4 c4 |
@@ -286,7 +299,7 @@ sopranoVerse = \relative c' {
   
   ees,8 f8 |
   g4 f4. ees8 |
-  f8 r8
+  f8 f8\rest
 
   g4.( f8) |
   ees2 bes'4 |
@@ -305,7 +318,7 @@ sopranoVerse = \relative c' {
   g4.( f8) |
   ees2 bes'4 |
   bes2.~ |
-  bes4 r4
+  bes4 bes4\rest
   
   ees,8 f8 |
   g8 f4. ees4 |
@@ -321,7 +334,7 @@ altoVerse = \relative c' {
   
   d8 |
   c2 c4 |
-  bes2 r8
+  bes2 \hide r8
   
   bes8 |
   c4 c4 c4 |
@@ -329,7 +342,7 @@ altoVerse = \relative c' {
   
   bes8 bes8 |
   c4 c4. c8 |
-  d8 r8
+  d8 \hide r8
   
   d2 |
   ees2 ees4 |
@@ -337,7 +350,7 @@ altoVerse = \relative c' {
   
   d8 |
   c2 c4 |
-  bes2 r8
+  bes2 \hide r8
   
   bes8 |
   c4 c4 c4 |
@@ -345,7 +358,7 @@ altoVerse = \relative c' {
   
   bes8 bes8 |
   c4 c4. c8 |
-  d8 r8
+  d8 \hide r8
 
   d2 |
   ees2 ees4 |
@@ -362,7 +375,7 @@ altoVerse = \relative c' {
   ees2 |
   ees2 ees4 |
   f2.( |
-  ees4) r4
+  ees4) \hide r4
   
   ees8 ees8 |
   ees8 ees4. d4 |
@@ -378,7 +391,7 @@ tenorVerse = \relative c' {
   
   f8 |
   ees2 ees4 |
-  g2 r8
+  g2 f8\rest
   
   g8 |
   aes4 aes4 aes4 |
@@ -386,7 +399,7 @@ tenorVerse = \relative c' {
   
   g8 g8 |
   a4 a4. a8 |
-  bes8 r8
+  bes8 f8\rest
   
   bes4.( aes8) |
   g2 g4 |
@@ -394,7 +407,7 @@ tenorVerse = \relative c' {
   
   f8 |
   ees2 ees8 f8 |
-  g2 r8
+  g2 g8\rest
   
   g8 |
   aes4 aes4 aes4 |
@@ -402,7 +415,7 @@ tenorVerse = \relative c' {
   
   g8 g8 |
   a4 a4. a8 |
-  bes8 r8
+  bes8 f8\rest
 
   bes2 |
   aes2 aes4 |
@@ -419,7 +432,7 @@ tenorVerse = \relative c' {
   g2 |
   aes2 aes4 |
   aes2.~ |
-  aes4 r4
+  aes4 f4\rest
   
   aes8 aes8 |
   bes8 bes4. bes4 |
@@ -435,7 +448,7 @@ bassVerse = \relative c {
   
   bes8 |
   \autoBeamOff aes4.( bes8) \autoBeamOn c8( d8) |
-  ees2 r8
+  ees2 \hide r8
   
   ees8 |
   ees4 ees4 ees4 |
@@ -443,7 +456,7 @@ bassVerse = \relative c {
   
   ees8 ees8 |
   c4 c4. c8 |
-  bes8 r8
+  bes8 \hide r8
   
   bes2 |
   ees2 ees4 |
@@ -451,7 +464,7 @@ bassVerse = \relative c {
   
   bes8 |
   \autoBeamOff aes4.( bes8) \autoBeamOn c8( d8) |
-  ees2 r8
+  ees2 \hide r8
   
   ees8 |
   ees4 ees4 ees4 |
@@ -459,7 +472,7 @@ bassVerse = \relative c {
   
   ees8 ees8 |
   c4 c4. c8 |
-  bes4
+  bes8 \hide r8
 
   bes2 |
   c2 c4 |
@@ -476,7 +489,7 @@ bassVerse = \relative c {
   ees2 |
   c2 c4 |
   bes2.( |
-  c4) r4
+  c4) \hide r4
   
   c8 c8 |
   bes8 bes4. bes4 |
@@ -541,13 +554,13 @@ sopranoBridge = \relative c' {
   bes8 aes4 g4. |
   ees2~ ees8 ees8 |
   ees2.~ |
-  ees2 r4 |
+  ees2 ees4\rest |
   
   bes'8 aes4 g4 aes8( |
   g2~ g8) ees8 |
   ees2.~ |
   ees2.~ |
-  ees4 r4 \bar "|."
+  ees4 ees4\rest \bar "|."
 }
 
 altoBridge = \relative c' {
@@ -572,13 +585,13 @@ altoBridge = \relative c' {
   g8 f4 ees4. |
   c2~ c8 c8 |
   c2.( |
-  bes2) r4 |
+  bes2) \hide r4 |
   
   ees8 ees4 ees4 c8~ |
   c2~ c8 c8 |
   c2.~ |
   c2.~ |
-  c4 r4 \bar "|."
+  c4 \hide r4 \bar "|."
 }
 
 tenorBridge = \relative c' {
@@ -603,13 +616,13 @@ tenorBridge = \relative c' {
   bes8 bes4 bes4. |
   aes2~ aes8 aes8 |
   aes2.( |
-  g2) r4 |
+  g2) f4\rest |
   
   bes8 bes4 bes4 aes8~ |
   aes2~ aes8 aes8 |
   aes2.~ |
   aes2.~ |
-  aes4 r4 \bar "|."
+  aes4 f4\rest \bar "|."
 }
 
 bassBridge = \relative c {
@@ -634,13 +647,13 @@ bassBridge = \relative c {
   ees8 ees4 ees4. |
   c2~ c8 c8 |
   c2.( |
-  ees2) r4 |
+  ees2) \hide r4 |
   
   ees8 ees4 ees4 c8~ |
   c2~ c8 c8 |
   c2.~ |
   c2.~ |
-  c4 r4 \bar "|."
+  c4 \hide r4 \bar "|."
 }
 
 verseOne = \lyricmode {

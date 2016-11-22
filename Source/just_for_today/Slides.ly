@@ -2,7 +2,7 @@
 
 \include "Words-and-music.ly"
 
-#(set-global-staff-size 36)
+#(set-global-staff-size 44)
 
 \book {
   \bookOutputName #(string-append build_dir songNumber " - " title " - Slides")
@@ -57,100 +57,96 @@
           }
         }
         \vspace #3
-        \fill-line {
+        \override #'(line-width . 70)
+        \center-column {
           \abs-fontsize #48
           \bold
-          \fromproperty #'header:title
+          \wordwrap-field #'header:title
         }
-        \fromproperty #'header:scripture
+        \vspace #2
+        \override #'(line-width . 60)
+        \center-column {
+          \abs-fontsize #24
+          \italic
+          \wordwrap-field #'header:scripture
+        }
       }
     }
-    scoreTitleMarkup = \markup {
-      \override #'(baseline-skip . 6.0 )
-      \column {
-        \fill-line {
-          \null
-          {
-            \abs-fontsize #32
-            \fromproperty #'header:title
-          }
-          {
-            \abs-fontsize #32
-            \fromproperty #'header:songNumber
-          }
-        }
-        \vspace #1
-      }
-    }
+    scoreTitleMarkup = ##f
   }
   \pageBreak
 
   \score {
-    \context ChoirStaff <<
+    <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \sopranoVerse
+            \keepWithTag #'(usePartials verseOneRhythms) \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \altoVerse
+            \keepWithTag #'(usePartials verseOneRhythms) \altoVerse
           }
         }
-        \context NullVoice = slideMusicBreaks {
+        \context NullVoice = slideMusicVerseBreaks {
           \global
-          \slideMusicBreaks
+          \slideMusicVerseBreaks
         }
       >>
       \new Lyrics \lyricsto "sopranos" {
         \once \override LyricText.self-alignment-X = #CENTER
-        \huge \verseOne
+        \huge \verseOneLyrics
       }
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors {
           \voiceOne {
             \global
-            \tenorVerse
+            \keepWithTag #'(usePartials verseOneRhythms) \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \bassVerse
+            \keepWithTag #'(usePartials verseOneRhythms) \bassVerse
           }
         }
       >>
     >>
-    \layout {}
+    \layout {
+      \context {
+        \Lyrics
+        \override LyricSpace #'minimum-distance = #1.5
+      }
+    }
   }
   \score {
-    \context ChoirStaff <<
+    <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \sopranoVerse
+            \keepWithTag #'(usePartials verseTwoRhythms) \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \altoVerse
+            \keepWithTag #'(usePartials verseTwoRhythms) \altoVerse
           }
         }
         \context NullVoice = slideMusicBreaks {
           \global
-          \slideMusicBreaks
+          \slideMusicVerseBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
-          \huge \verseTwo
+          \huge \verseTwoLyrics
         }
       >>
       \context Staff = lower <<
@@ -158,42 +154,47 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \tenorVerse
+            \keepWithTag #'(usePartials verseTwoRhythms) \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \bassVerse
+            \keepWithTag #'(usePartials verseTwoRhythms) \bassVerse
           }
         }
       >>
     >>
-    \layout {}
+    \layout {
+      \context {
+        \Lyrics
+        \override LyricSpace #'minimum-distance = #1.5
+      }
+    }
   }
   \score {
-    \context ChoirStaff <<
+    <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \sopranoVerse
+            \keepWithTag #'usePartials \sopranoRefrain
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \altoVerse
+            \keepWithTag #'usePartials \altoRefrain
           }
         }
-        \context NullVoice = slideMusicBreaks {
+        \context NullVoice = slideMusicRefrainBreaks {
           \global
-          \slideMusicBreaks
+          \slideMusicRefrainBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
           \once \override LyricText.self-alignment-X = #CENTER
-          \huge \verseThree
+          \huge \refrainLyrics
         }
       >>
       \context Staff = lower <<
@@ -201,103 +202,22 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \tenorVerse
+            \keepWithTag #'usePartials \tenorRefrain
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \bassVerse
+            \keepWithTag #'usePartials \bassRefrain
           }
         }
       >>
     >>
-    \layout {}
-  }
-  \score {
-    \context ChoirStaff <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
-            \global
-            \sopranoVerse
-          }
-        }
-        \context Voice = altos {
-          \voiceTwo {
-            \global
-            \altoVerse
-          }
-        }
-        \context NullVoice = slideMusicBreaks {
-          \global
-          \slideMusicBreaks
-        }
-        \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
-          \huge \verseFour
-        }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \context Voice = tenors {
-          \voiceOne {
-            \global
-            \tenorVerse
-          }
-        }
-        \context Voice = basses {
-          \voiceTwo {
-            \global
-            \bassVerse
-          }
-        }
-      >>
-    >>
-    \layout {}
-  }
-  \score {
-    \context ChoirStaff <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
-            \global
-            \sopranoVerse
-          }
-        }
-        \context Voice = altos {
-          \voiceTwo {
-            \global
-            \altoVerse
-          }
-        }
-        \context NullVoice = slideMusicBreaks {
-          \global
-          \slideMusicBreaks
-        }
-        \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
-          \huge \verseFive
-        }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \context Voice = tenors {
-          \voiceOne {
-            \global
-            \tenorVerse
-          }
-        }
-        \context Voice = basses {
-          \voiceTwo {
-            \global
-            \bassVerse
-          }
-        }
-      >>
-    >>
-    \layout {}
+    \layout {
+      \context {
+        \Lyrics
+        \override LyricSpace #'minimum-distance = #1.5
+      }
+    }
   }
 }

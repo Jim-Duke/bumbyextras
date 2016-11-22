@@ -68,11 +68,12 @@
           \abs-fontsize #24
           \bold
           \fill-line {
-            \fromproperty #'header:songNumber_lhs
-            \fromproperty #'header:title
-            \fromproperty #'header:songNumber_rhs
+            \fromproperty #'header:lhs
+            \override #'(line-width . 60)
+            \wordwrap-field #'header:title
+            \fromproperty #'header:rhs
           }
-          \vspace #0.5
+          \vspace #1
         }
       }
     }

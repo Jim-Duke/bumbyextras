@@ -52,38 +52,23 @@
           \line {
             \fromproperty #'header:license
           }
-%          \vspace #0.25
-%          \line {
-%            "Engraved using Lilypond (www.lilypond.org) for www.acapellaworship.org.  PDF "
-%          }
-%          \line {
-%            "This hymn may be freely copied and distributed and we encourage its use in congregational acapella singing in worship everywhere."
-%          }
         }
       }
     }
     bookTitleMarkup = \markup {
       \override #'(baseline-skip . 3.5)
       \column {
-        \fill-line { \fromproperty #'header:dedication }
         \override #'(baseline-skip . 3.5)
         \column {
           \abs-fontsize #24
           \bold
           \fill-line {
-            \fromproperty #'header:songNumber_lhs
-            \fromproperty #'header:title
-            \fromproperty #'header:songNumber_rhs
+            \fromproperty #'header:lhs
+            \override #'(line-width . 60)
+            \wordwrap-field #'header:title
+            \fromproperty #'header:rhs
           }
-          \fill-line {
-            \large \bold
-            \fromproperty #'header:subtitle
-          }
-          \fill-line {
-            \smaller \bold
-            \fromproperty #'header:subsubtitle
-          }
-          \vspace #2
+          \vspace #1
         }
       }
     }

@@ -45,8 +45,6 @@
             \fromproperty #'header:tune
             \char ##x2022
             \fromproperty #'header:composer
-%            \char ##x2022 "arranger:"
-%            \fromproperty #'header:arranger
           }
           \line {
             \fromproperty #'header:copyright
@@ -57,15 +55,15 @@
     bookTitleMarkup = \markup {
       \override #'(baseline-skip . 3.5)
       \column {
-        \fill-line { \fromproperty #'header:dedication }
         \override #'(baseline-skip . 3.5)
         \column {
-          \abs-fontsize #20
+          \abs-fontsize #24
           \bold
           \fill-line {
-            \fromproperty #'header:songNumber_lhs
-            \fromproperty #'header:title
-            \fromproperty #'header:songNumber_rhs
+            \fromproperty #'header:lhs
+            \override #'(line-width . 60)
+            \wordwrap-field #'header:title
+            \fromproperty #'header:rhs
           }
           \vspace #1
         }

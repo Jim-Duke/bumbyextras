@@ -28,6 +28,10 @@ pushd just_as_I_am_I_come_broken
 lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
 popd
 
+pushd just_for_today
+lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
+popd
+
 pushd magnificat
 lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
 popd
