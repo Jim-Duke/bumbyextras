@@ -79,33 +79,25 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \keepWithTag #'(usePartials sheetMusicRhythms) \sopranoVerse
+            \keepWithTag #'usePartials \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \keepWithTag #'(usePartials sheetMusicRhythms) \altoVerse
+            \keepWithTag #'usePartials \altoVerse
           }
         }
         \context NullVoice = sheetMusicVerseBreaks {
           \global
           \keepWithTag #'usePartials \sheetMusicVerseBreaks
         }
-        \context NullVoice = sopranosVerseOneRhythms {
-          \global
-          \keepWithTag #'(usePartials verseOneRhythms) \sopranoVerse
-        }
-        \context NullVoice = sopranosVerseTwoRhythms {
-          \global
-          \keepWithTag #'(usePartials verseTwoRhythms) \sopranoVerse
-        }
-        \new Lyrics \lyricsto "sopranosVerseOneRhythms" {
+        \new Lyrics \lyricsto "sopranos" {
           \override Lyrics.LyricSpace.minimum-distance = #2.0
           \once \override LyricText.self-alignment-X = #CENTER
           \verseOneLyrics
         }
-        \new Lyrics \lyricsto "sopranosVerseTwoRhythms" {
+        \new Lyrics \lyricsto "sopranos" {
           \override Lyrics.LyricSpace.minimum-distance = #2.0
           \once \override LyricText.self-alignment-X = #CENTER
           \verseTwoLyrics
@@ -116,13 +108,13 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \keepWithTag #'(usePartials sheetMusicRhythms) \tenorVerse
+            \keepWithTag #'usePartials \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \keepWithTag #'(usePartials sheetMusicRhythms) \bassVerse
+            \keepWithTag #'usePartials \bassVerse
           }
         }
       >>
