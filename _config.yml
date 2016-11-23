@@ -1,5 +1,33 @@
-name: Bumby Extras Hymnal Project
+title: Bumby Hymnal Project
+email: jim@dukeboys.org
+description: >
+        The Bumby Hymnals Project provides hymns for use in worship by the
+        church of Christ at South Bumby.  It does this by selecting hymns
+        not currently available to the congregation and creating sheet music,
+        slides, and MIDI files.
+baseurl: "/bumbyextras" # the subpath of your site, e.g. /blog
+url: "https://jim-duke.github.io" # the base hostname & protocol for your site
+
+# Logo settings
+logo-image-url:
+font-awesome-icon-logo:
+
+# Social settings
+github_username: jim-duke
+twitter_username:
+facebook_URL:
+instagram_username:
+
+# Build settings
+markdown: kramdown
 markdown: kramdown
 
 # Reading Controls
-exclude: ["Source/", "Review/", "Published/", "Build/", "Documentation/", "Template/", "To Be Determined/"]
+exclude:
+  - "Source/"
+  - "Review/"
+  - "Published/"
+  - "Build/"
+  - "Documentation/"
+  - "Template/"
+  - "To Be Determined/"

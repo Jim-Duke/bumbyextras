@@ -127,6 +127,10 @@
     >>
       
     \layout {
+      \context {
+        \Lyrics
+        \override LyricText #'font-size = #-1
+      }
       ragged-last = ##f
     }
   }
