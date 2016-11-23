@@ -1,2 +1,6 @@
 name: Bumby Extras Hymnal Project
 markdown: kramdown
+
+# Reading Controls
+exclude: ["/"]
+include: ["index.html", "about/", "hymns/"]
