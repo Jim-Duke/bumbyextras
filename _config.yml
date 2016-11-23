@@ -2,5 +2,4 @@ name: Bumby Extras Hymnal Project
 markdown: kramdown
 
 # Reading Controls
-exclude: ["/"]
-include: ["index.html", "about/", "hymns/"]
+exclude: ["Source/", "Review/", "Published/", "Build/", "Documentation/", "Template/", "To Be Determined/"]
