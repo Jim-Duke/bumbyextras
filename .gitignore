@@ -11,6 +11,9 @@ Build/*.pdf
 Build/*.mid
 *.log
 *~
+*.swp
+
+_site
 
 # =========================
 # Operating System Files

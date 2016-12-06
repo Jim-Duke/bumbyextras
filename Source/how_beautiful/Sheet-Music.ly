@@ -17,17 +17,19 @@
     %
     % Various variables that can be used to tweak vertical spacing
     %
-    system-system-spacing.basic-distance = #4
-    system-system-spacing.minimum-distance = #4
+    system-system-spacing.basic-distance = #10
+    system-system-spacing.minimum-distance = #6
     score-markup-spacing.basic-distance = #0
     markup-system-spacing.basic-distance = #0
     
     indent = 0
-    left-margin = 1\in
-    right-margin = 1\in
-    top-margin = 0.3\in
+    left-margin = 0.75\in
+    right-margin = 0.75\in
+    top-margin = 0.25\in
     bottom-margin = 0.25\in
     print-page-number = ##f
+    ragged-right = ##f
+
     oddFooterMarkup = \markup {
       \fontsize #-2
       \on-the-fly \last-page {
@@ -60,28 +62,11 @@
       \column {
         \override #'(baseline-skip . 3.5)
         \column {
-          \abs-fontsize #24
+          \abs-fontsize #20
           \bold
           \fill-line {
             \fromproperty #'header:lhs
-            \override #'(line-width . 60)
-            \wordwrap-field #'header:title
-            \fromproperty #'header:rhs
-          }
-          \vspace #1
-        }
-      }
-    }
-    bookTitleMarkup = \markup {
-      \override #'(baseline-skip . 3.5)
-      \column {
-        \override #'(baseline-skip . 3.5)
-        \column {
-          \abs-fontsize #24
-          \bold
-          \fill-line {
-            \fromproperty #'header:lhs
-            \override #'(line-width . 60)
+            \override #'(line-width . 85)
             \wordwrap-field #'header:title
             \fromproperty #'header:rhs
           }
@@ -94,12 +79,11 @@
             }
             \override #'(line-width . 20) ""
           }
-          \vspace #1
+          \vspace #0.5
         }
       }
     }
   }
-
   \score {
     % Verses Section
     \context ChoirStaff <<
@@ -110,12 +94,14 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \altoVerse
           }
         }
@@ -149,12 +135,14 @@
         \context Voice = tenors {
           \voiceOne {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \bassVerse
           }
         }
@@ -162,6 +150,10 @@
     >>
       
     \layout {
+      \context {
+        \Lyrics \override LyricText #'font-size = #0
+      }
+
       ragged-last = ##f
     }
   }
@@ -177,12 +169,14 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \sopranoBridge
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \altoBridge
           }
         }
@@ -200,17 +194,25 @@
         \context Voice = tenors {
           \voiceOne {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \tenorBridge
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \bassBridge
           }
         }
       >>
     >>
-    \layout {}
+    \layout {
+      \context {
+        \Lyrics \override LyricText #'font-size = #0
+      }
+
+      ragged-last = ##f
+    }
   }
 }

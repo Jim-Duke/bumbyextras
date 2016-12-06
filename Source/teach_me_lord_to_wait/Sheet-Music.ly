@@ -2,7 +2,7 @@
 
 \include "Words-and-music.ly"
 
-#(set-global-staff-size 20)
+#(set-global-staff-size 18)
 
 \book {
   \bookOutputName #(string-append build_dir songNumber " - " title " - Sheet Music")
@@ -23,9 +23,9 @@
     markup-system-spacing.basic-distance = #0
     
     indent = 0
-    left-margin = 1\in
-    right-margin = 1\in
-    top-margin = 0.3\in
+    left-margin = 0.75\in
+    right-margin = 0.75\in
+    top-margin = 0.25\in
     bottom-margin = 0.25\in
     print-page-number = ##f
     ragged-bottom = ##t
@@ -61,7 +61,7 @@
       \column {
         \override #'(baseline-skip . 3.5)
         \column {
-          \abs-fontsize #24
+          \abs-fontsize #20
           \bold
           \fill-line {
             \fromproperty #'header:lhs
@@ -69,7 +69,7 @@
             \wordwrap-field #'header:title
             \fromproperty #'header:rhs
           }
-          \vspace #1
+          \vspace #0.5
         }
       }
     }
@@ -85,12 +85,14 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \altoVerse
           }
         }
@@ -120,12 +122,14 @@
         \context Voice = tenors {
           \voiceOne {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \bassVerse
           }
         }
@@ -149,12 +153,14 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \sopranoChorus
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \altoChorus
           }
         }
@@ -168,12 +174,14 @@
         \context Voice = tenors {
           \voiceOne {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \tenorChorus
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
+            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \bassChorus
           }
         }
