@@ -1,5 +1,5 @@
 # Just For Today (Father God)
-Just For Today is a popular contemporary Christian.  It is simple and fun to sing.  It is a prayer to God to direct our walk: "May my steps be worship; may my thoughts be praise; may my words bring honor to your name."
+Just For Today is a popular contemporary Christian song.  It is simple and fun to sing.  It is a prayer to God to direct our walk: "May my steps be worship; may my thoughts be praise; may my words bring honor to your name."
 
 ## Submission
 
@@ -9,7 +9,7 @@ Walcott Steele
 
 ### Reason for the Submission
 
-Thus song was written by Marc Alan Schelske. We visited with a congregation where this was sung and it was very uplifting. I believe we can benefit from this simple song.
+This song was written by Marc Alan Schelske. We visited with a congregation where this was sung and it was very uplifting. I believe we can benefit from this simple song.
 
 ## Research
 
