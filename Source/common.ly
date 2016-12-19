@@ -18,6 +18,7 @@ setSystemOffset =
 
 defaultTopSystemOffset = #2
 defaultBottomSystemOffset = #29
+defaultMinimumWordSeparation = #3
 
 %
 % Using this file to set the hymnal numbers used by each song.  The convention is

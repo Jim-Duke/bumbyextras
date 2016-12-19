@@ -99,14 +99,17 @@
           \sheetMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
+          \override Lyrics.LyricSpace.minimum-distance = \defaultMinimumWordSeparation
           \once \override LyricText.self-alignment-X = #CENTER
           \verseOne
         }
         \new Lyrics \lyricsto "sopranos" {
+          \override Lyrics.LyricSpace.minimum-distance = \defaultMinimumWordSeparation
           \once \override LyricText.self-alignment-X = #CENTER
           \verseTwo
         }
         \new Lyrics \lyricsto "sopranos" {
+          \override Lyrics.LyricSpace.minimum-distance = \defaultMinimumWordSeparation
           \once \override LyricText.self-alignment-X = #CENTER
           \verseThree
         }
