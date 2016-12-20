@@ -2,6 +2,8 @@
 
 \include "Words-and-music.ly"
 
+lyricSpacing = #3.0
+
 #(set-global-staff-size 18)
 
 \book {
@@ -178,6 +180,7 @@
           \keepWithTag #'usePartials' \sheetMusicRefrainBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
+          \override Lyrics.LyricSpace.minimum-distance = \lyricSpacing
           \once \override LyricText.self-alignment-X = #CENTER
           \chorusLyrics
         }
@@ -233,6 +236,7 @@
           }
         }
         \new Lyrics \lyricsto "sopranos" {
+          \once \override LyricSpace.minimum-distance = \lyricSpacing
           \once \override LyricText.self-alignment-X = #CENTER
           \codaLyrics
         }
