@@ -109,10 +109,12 @@
           \keepWithTag #'usePartials' \verseTwoAlign
         }
         \new Lyrics \lyricsto "verseOneAlign" {
+          \override Lyrics.LyricSpace.minimum-distance = \defaultMinimumWordSeparation
           \once \override LyricText.self-alignment-X = #CENTER
           \verseOne
         }
         \new Lyrics \lyricsto "verseTwoAlign" {
+          \override Lyrics.LyricSpace.minimum-distance = \defaultMinimumWordSeparation
           \once \override LyricText.self-alignment-X = #CENTER
           \verseTwo
         }
@@ -165,6 +167,7 @@
           }
         }
         \new Lyrics \lyricsto "sopranos" {
+          \override Lyrics.LyricSpace.minimum-distance = \defaultMinimumWordSeparation
           \once \override LyricText.self-alignment-X = #CENTER
           \chorusLyrics
         }

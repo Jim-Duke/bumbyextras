@@ -462,5 +462,5 @@ chorusLyrics = \lyricmode {
   They shall mount up with wings like ea -- gles. __
   They shall run and not be wea -- ry.
   They shall walk and not "faint.\""
-  Teach me Lord, Teach me Lord, to wait.
+  Teach me Lord, teach me Lord, to wait.
 }

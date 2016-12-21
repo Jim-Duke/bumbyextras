@@ -126,7 +126,7 @@
     >>
     \layout {
       \context {
-        \Lyrics \override LyricSpace #'minimum-distance = #1.5
+        \Lyrics \override LyricSpace #'minimum-distance = \defaultMinimumWordSeparation
       }
     }
   }
@@ -178,7 +178,7 @@
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1.5
+        \override LyricSpace #'minimum-distance = \defaultMinimumWordSeparation
       }
     }
   }
@@ -230,7 +230,7 @@
       
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1.5
+        \override LyricSpace #'minimum-distance = \defaultMinimumWordSeparation
       }
     }
   }
