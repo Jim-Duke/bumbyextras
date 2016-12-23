@@ -5,6 +5,7 @@ Source/*/*.pdf
 Source/*/*.png
 Source/*/*.mid
 Source/*/*.midi
+Source/*/*.mp3
 Source/*/*.ps
 Source/*/*.eps
 Build/*.pdf
@@ -65,3 +66,4 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
