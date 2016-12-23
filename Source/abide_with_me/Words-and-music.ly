@@ -39,14 +39,14 @@ number_on_rhs = \abide_with_me_number_rhs
   scripture = \markup {
     \override #'(line-width . 60)
     \center-column {
-      \vspace #1
+      \vspace #0.75
       \abs-fontsize #24
       \italic \wordwrap-string #"Abide with us, for it is toward evening,
          and the day is far spent. - Luke 24:29"
-      \vspace #1
+      \vspace #1.5
       \abs-fontsize #24 \italic #"\"O Death, where is your sting?"
       \abs-fontsize #24 \italic #"O Hades, where is your victory?\""
-      \vspace #1
+      \vspace #0.25
       \abs-fontsize #24 \italic \wordwrap-string #"The sting of death is sin, and the strength of sin is the law.
          But thanks be to God, who gives us the victory through our
          Lord Jesus Christ. - 1 Corinthians 15:55-57"
@@ -192,40 +192,48 @@ bassVerse = \relative c {
 
 verseOne = \lyricmode {
   \set stanza = "1. "
-  A -- bide with me; fast falls the e -- ven -- tide;
-  The dark -- ness deep -- ens; Lord with me a -- bide.
-  When oth -- er help -- ers fail and com -- forts flee,
-  Help of the help -- less, O a -- bide with me.
+  A -- bide with me! fast falls the e -- ven -- tide;
+  The dark -- ness deep -- ens: Lord, with me a -- bide!
+  When oth -- er help -- ers fail, and com -- forts flee,
+  Help of the help -- less, O a -- bide with me!
 }
 
 verseTwo = \lyricmode {
   \set stanza = "2. "
   Swift to its close ebbs out life's lit -- tle day;
-  Earth's joys grow dim, Its glo -- ries pass a -- way;
+  Earth's joys grow dim, its glo -- ries pass a -- way;
   Change and de -- cay in all a -- round I see;
   O Thou who chang -- est not, a -- bide with me!
 }
 
 verseThree = \lyricmode {
   \set stanza = "3. "
-  I need thy pres -- ence eve -- ry pass -- ing hour.
-  What but Thy grace can foil the tempt -- er's pow'r?
-  Who like Thy -- self my guide and stay can be?
-  Thru cloud and sun -- shine, Lord, a -- bide with me.
+  Come not in ter -- rors as the King of kings,
+  But kind and good, with heal -- ing in Thy wings;
+  Tears for all woes, a heart for ev' -- ry plea;
+  O Friend of sin -- ners, thus a -- bide with me!
 }
 
 verseFour = \lyricmode {
   \set stanza = "4. "
-  I fear no foe, with Thee at hand to bless;
-  Ills have no weight, and tears no bit -- ter -- ness;
-  Where is death's sting? Where, grave, thy vic -- to -- ry?
-  I tri -- umph still, if Thou a -- bide with me.
+  I need Thy pres -- ence eve -- ry pass -- ing hour:
+  What but Thy grace can foil the tempt -- er's pow'r?
+  Who like Thy -- self my guide and stay can be?
+  Through cloud and sun -- shine, O a -- bide with me!
 }
 
 verseFive = \lyricmode {
   \set stanza = "5. "
-  Hold Thou Thy cross be -- fore my clos -- ing eyes;
+  I fear no foe, with Thee at hand to bless:
+  Ills have no weight, and tears no bit -- ter -- ness.
+  Where is death's sting? where, grave, thy vic -- to -- ry?
+  I tri -- umph still, if Thou a -- bide with me!
+}
+
+verseSix = \lyricmode {
+  \set stanza = "6. "
+  Hold Thou Thy Cross be -- fore my clos -- ing eyes,
   Shine thru the gloom and point me to the skies;
   Heav'n's morn -- ing breaks, and earth's vain sha -- dows flee;
-  In life, in death, O Lord, a -- bide with me.
+  In life, in death, O Lord, a -- bide with me!
 }

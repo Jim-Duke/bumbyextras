@@ -79,7 +79,7 @@ I was not able to locate an authoritative source of the original verses.  The ea
 
 Hymns for Worship (R. J. Stevens) includes verses 1, 2, and 6 of the original.  Songs, Hymns, and Spiritual Songs (Sumphonia) includes verses 1, 2, 4, and 6 in the music; and 7 and 8 as additional verses.
 
-5 Verses fit nicely into the music on a single page.  I recommend that we include verses 1, 2, 6, 7, and 8 in the version we put together.  I furthermore recommend that we retain the archaic language, capitalize in poetic forms, and punctuate as in the 1880 Evangelical Lutheran Hymnal.  The resulting hymn verses would then be:
+6 Verses fit nicely into the music on a single page.  I recommend that we include verses 1, 2, 4, 6, 7, and 8 in the version we put together.  I furthermore recommend that we retain the archaic language, capitalize in poetic forms, and punctuate as in the 1880 Evangelical Lutheran Hymnal.  The resulting hymn verses would then be:
 
 1. Abide with me! fast falls the eventide;  
    The darkness deepens; Lord, with me abide!  
@@ -91,17 +91,22 @@ Hymns for Worship (R. J. Stevens) includes verses 1, 2, and 6 of the original.  
    Change and decay in all around I see.  
    O Thou who changes not, abide with me!
 
-3. I need Thy presence every passing hour:  
+3. Come not in terrors as the King of kings,  
+   But kind and good, with healing on Thy wings;  
+   Tears for all woes, a heart for every plea;  
+   O Friend of sinners, thus abide with me!
+
+4. I need Thy presence every passing hour:  
    What but thy grace can foil the tempter's power?  
    Who like Thyself my guide and stay can be?  
    Through cloud and sunshine, O abide with me!
 
-4. I fear no foe, with Thee at hand to bless:  
+5. I fear no foe, with Thee at hand to bless:  
    Ills have no weight, and tears no bitterness.  
    Where is death's sting? where, grave, thy victory?  
    I triumph still, if Thou abide with me!
 
-5. Hold Thou Thy Cross before my closing eyes,  
+6. Hold Thou Thy Cross before my closing eyes,  
    Shine through the gloom, and point me to the skies:  
    Heaven's morning breaks, and earth's vain shadows flee;  
    In life, in death, O Lord, abide with me!

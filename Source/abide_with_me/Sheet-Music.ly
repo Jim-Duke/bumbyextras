@@ -77,14 +77,12 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \override NoteHead #'font-size = #1
             \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \override NoteHead #'font-size = #1
             \altoVerse
           }
         }
@@ -93,24 +91,22 @@
           \sheetMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \verseOne
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \verseTwo
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \verseThree
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \verseFour
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \verseFive
+        }
+        \new Lyrics \lyricsto "sopranos" {
+          \verseSix
         }
       >>
       \context Staff = lower <<
@@ -118,14 +114,12 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \override NoteHead #'font-size = #1
             \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \override NoteHead #'font-size = #1
             \bassVerse
           }
         }
@@ -133,7 +127,14 @@
     >>
     \layout {
       \context {
-        \Lyrics \override LyricText #'font-size = #0
+        \Lyrics
+        \override LyricText.font-size = #0
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricSpace.minimum-distance = \defaultMinimumWordSeparation
+      }
+      \context {
+        \Staff
+        \override NoteHead.font-size = #1
       }
 
       ragged-last = ##f
