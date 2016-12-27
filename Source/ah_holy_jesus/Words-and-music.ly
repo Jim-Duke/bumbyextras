@@ -5,7 +5,7 @@
 global = {
   \key g \minor
   \time 4/4
-  \aikenHeads
+  \aikenHeadsMinor
 }
 
 title = "Ah Holy Jesus"
@@ -114,7 +114,7 @@ sopranoVerse = \relative c'' {
 }
 
 altoVerse = \relative c' {
-  d2 ees4 c |
+  d2 ees4 ees4 |
   c2 d |
   d4 d g f |
   ees2 d |
@@ -173,51 +173,10 @@ bassVerse = \relative c' {
   d2 g,2 \bar "|."
 }
 
-%{
 verseOne = \lyricmode {
   \set stanza = "1. "
-  Ah ho -- ly Jes -- us, how have You of -- fend -- ed
-  That mor tal judg -- ment has on You de -- scend -- ed?
-  By foes de -- rid -- ed, by Your own re -- ject -- ed,
-  O most af -- flict -- ed.
-}
-
-verseTwo = \lyricmode {
-  \set stanza = "2. "
-  Who was the guilt -- y? Who brought this up -- on You?
-  It is my trea -- son, Lord, that has un -- done You.
-  'Twas I, Lord Je -- sus. I it was de -- nied You;
-  I cru -- ci -- fied You.
-}
-
-verseThree = \lyricmode {
-  \set stanza = "3. "
-  Lo, the Good Shep -- herd for the sheep is of -- fered;
-  The slave has sinned, and yet the Son has suf -- fered.
-  For my a -- tone -- ment, though I noth -- ing heed -- ed,
-  God in -- ter -- ced -- ed.
-}
-
-verseFour = \lyricmode {
-  \set stanza = "4. "
-  For me, kind Je -- sus, was Your in -- car -- na -- tion,
-  Your mor -- tal sor -- row and Your life's ob -- la -- tion,
-  Your death of an -- guish and Your bit -- ter pas -- sion,
-  For my sal -- va -- tion.
-}
-
-verseFive = \lyricmode {
-  \set stanza = "5. "
-  There -- fore, dear Je -- sus, since I can -- not pay You.
-  I do a -- dore You, and will ev -- er pray You.
-  Think on Your pit -- y and Your love un -- swerv -- ing,
-  Not my de -- serv -- ing.
-}
-%}
-verseOne = \lyricmode {
-  \set stanza = "1. "
-  Ah ho -- ly Jes -- us, how hast Thou of -- fend -- ed
-  That mor tal judg -- ment has on Thee de -- scend -- ed?
+  Ah, ho -- ly Jes -- us, how hast Thou of -- fend -- ed,
+  That mor -- tal judg -- ment hath on Thee de -- scend -- ed?
   By foes de -- rid -- ed, by Thine own re -- ject -- ed,
   O most af -- flict -- ed.
 }
@@ -225,7 +184,7 @@ verseOne = \lyricmode {
 verseTwo = \lyricmode {
   \set stanza = "2. "
   Who was the guilt -- y? Who brought this up -- on Thee?
-  It is my trea -- son, Lord, that has un -- done Thee.
+  It is my trea -- son, Lord, that hath un -- done Thee.
   'Twas I, Lord Je -- sus. I it was de -- nied Thee;
   I cru -- ci -- fied Thee.
 }
@@ -233,7 +192,7 @@ verseTwo = \lyricmode {
 verseThree = \lyricmode {
   \set stanza = "3. "
   Lo, the Good Shep -- herd for the sheep is of -- fered;
-  The slave hath sinned, and yet the Son hath suf -- fered.
+  The slave hath sin -- ned, and the Son hath suf -- fered.
   For my a -- tone -- ment, though I noth -- ing heed -- ed,
   God in -- ter -- ced -- ed.
 }
@@ -241,14 +200,14 @@ verseThree = \lyricmode {
 verseFour = \lyricmode {
   \set stanza = "4. "
   For me, kind Je -- sus, was Thy in -- car -- na -- tion,
-  Thy mor -- tal sor -- row and Thy life's ob -- la -- tion,
+  Thy mor -- tal sor -- row, and Thy life's ob -- la -- tion;
   Thy death of an -- guish and Thy bit -- ter pas -- sion,
   For my sal -- va -- tion.
 }
 
 verseFive = \lyricmode {
   \set stanza = "5. "
-  There -- fore, dear Je -- sus, since I can -- not pay Thee.
+  There -- fore, dear Je -- sus, since I can -- not pay Thee,
   I do a -- dore Thee, and will ev -- er pray Thee.
   Think on Thy pit -- y and Thy love un -- swerv -- ing,
   Not my de -- serv -- ing.
