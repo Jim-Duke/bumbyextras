@@ -100,7 +100,6 @@
           \keepWithTag #'usePartials' \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \huge \verseOne
         }
       >>
@@ -125,6 +124,11 @@
         \Lyrics
         \override LyricSpace #'minimum-distance = #1
         \override LyricText #'font-size = #-0.25
+        \override LyricText.self-alignment-X = #CENTER
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \defaultStaffLineThickness
       }
     }
   }
@@ -149,7 +153,6 @@
           \keepWithTag #'usePartials' \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \huge \verseTwo
         }
       >>
@@ -174,6 +177,11 @@
         \Lyrics
         \override LyricSpace #'minimum-distance = #1
         \override LyricText #'font-size = #-0.25
+        \override LyricText.self-alignment-X = #CENTER
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \defaultStaffLineThickness
       }
     }
   }
@@ -198,7 +206,6 @@
           \keepWithTag #'usePartials' \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \huge \verseThree
         }
       >>
@@ -223,6 +230,11 @@
         \Lyrics
         \override LyricSpace #'minimum-distance = #1
         \override LyricText #'font-size = #-0.25
+        \override LyricText.self-alignment-X = #CENTER
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \defaultStaffLineThickness
       }
     }
   }
@@ -247,7 +259,6 @@
           \keepWithTag #'usePartials' \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \huge \verseFour
         }
       >>
@@ -272,6 +283,11 @@
         \Lyrics
         \override LyricSpace #'minimum-distance = #1
         \override LyricText #'font-size = #-0.25
+        \override LyricText.self-alignment-X = #CENTER
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \defaultStaffLineThickness
       }
     }
   }
@@ -296,7 +312,6 @@
           \keepWithTag #'usePartials' \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \huge \verseFive
         }
       >>
@@ -321,6 +336,11 @@
         \Lyrics
         \override LyricSpace #'minimum-distance = #1
         \override LyricText #'font-size = #-0.25
+        \override LyricText.self-alignment-X = #CENTER
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \defaultStaffLineThickness
       }
     }
   }
