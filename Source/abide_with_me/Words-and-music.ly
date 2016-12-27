@@ -218,7 +218,7 @@ verseFour = \lyricmode {
   \set stanza = "4. "
   I need Thy pres -- ence eve -- ry pass -- ing hour:
   What but Thy grace can foil the tempt -- er's pow'r?
-  Who like Thy -- self my guide and stay can be?
+  Who, like Thy -- self, my guide and stay can be?
   Through cloud and sun -- shine, O a -- bide with me!
 }
 
@@ -233,7 +233,7 @@ verseFive = \lyricmode {
 verseSix = \lyricmode {
   \set stanza = "6. "
   Hold Thou Thy Cross be -- fore my clos -- ing eyes,
-  Shine thru the gloom and point me to the skies;
+  Shine through the gloom and point me to the skies;
   Heav'n's morn -- ing breaks, and earth's vain sha -- dows flee;
   In life, in death, O Lord, a -- bide with me!
 }
