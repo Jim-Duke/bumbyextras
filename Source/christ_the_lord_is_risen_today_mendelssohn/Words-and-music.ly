@@ -219,41 +219,41 @@ bassVerse = \relative c' {
 verseOne = \lyricmode {
   \set stanza = "1. "
   Christ the Lord is ris'n to -- day,
-  Sons of Men and An -- gels say!
-  Raise your Joys and Tri -- umphs high,
-  Sing, ye Heav'ns and Earth re -- ply.
-  Vain the Stone, the Watch, the Seal,
-  Christ hath burst the Gate of Hell:
-  Death in vain for -- bids his Rise,
-  Christ hath o -- pen'd Par -- a -- dise.
-  Death in vain for -- bids his Rise,
-  Christ hath o -- pen'd Par -- a -- dise.
+  Sons of men and an -- gels say!
+  Raise your joys and tri -- umphs high,
+  Sing, ye heav'ns and earth re -- ply.
+  Vain the stone, the watch, the seal,
+  Christ hath burst the gates of hell:
+  Death in vain for -- bids His rise,
+  Christ hath o -- pened par -- a -- dise.
+  Death in vain for -- bids His rise,
+  Christ hath o -- pened par -- a -- dise.
 }
 
 verseTwo = \lyricmode {
   \set stanza = "2. "
   Lives a -- gain our glor -- ious King,
-  Where, O Death, is now thy Sting?  
-  Once he dy'd our Souls to save;  
-  Where's thy Vic -- t'ry, boast -- ing Grave?
+  Where, O death, is now thy sting?  
+  Once he died our Souls to save;  
+  Where's thy vic -- t'ry, boast -- ing grave?
   Soar we now where Christ hath led,  
   Foll' -- wing our ex -- alt -- ed Head;  
-  Made like him, like him we rise,  
-  Ours the Cross, the Grave, the Skies.
-  Made like him, like him we rise,  
-  Ours the Cross, the Grave, the Skies.
+  Made like Him, like Him we rise,  
+  Ours the cross, the grave, the skies.
+  Made like Him, like Him we rise,  
+  Ours the cross, the grave, the skies.
 }
 
 verseThree = \lyricmode {
   \set stanza = "3. "
-  King of Glo -- ry! Soul of bliss!  
-  Ev -- er -- last -- ing Life is this  
-  Thee to know thy Pow'r to prove,  
+  King of glo -- ry! Soul of bliss!  
+  Ev -- er -- last -- ing life is this  
+  Thee to know, Thy pow'r to prove,  
   Thus to sing, and thus to love.
-  Hail, the Lord of Earth and Heav'n!  
-  Praise to thee by both be giv'n!  
-  Thee we greet Tri -- um -- phant now  
-  Hail the Re -- sur -- rec -- tion thou!
-  Thee we greet Tri -- um -- phant now  
-  Hail the Re -- sur -- rec -- tion thou!
+  Hail, the Lord of earth and heav'n!  
+  Praise to Thee by both be giv'n!  
+  Thee we greet tri -- um -- phant now,  
+  Hail the re -- sur -- rec -- tion thou!
+  Thee we greet tri -- um -- phant now,  
+  Hail the re -- sur -- rec -- tion thou!
 }
