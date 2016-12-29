@@ -88,20 +88,16 @@
     % Verses Section
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      %\override Score.BarNumber.break-visibility = ##(#t #t #t)
-      %\set Score.barNumberVisibility = #all-bar-numbers-visible
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \altoVerse
           }
         }
@@ -114,19 +110,15 @@
           \keepWithTag #'usePartials' \alignVerse
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \verseOne \verseCommon
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \verseTwo
         }
         \new Lyrics \lyricsto "align" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \verseThree
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \verseFour
         }
       >>
@@ -135,14 +127,12 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \bassVerse
           }
         }
@@ -151,7 +141,14 @@
       
     \layout {
       \context {
-        \Lyrics \override LyricText #'font-size = #0
+        \Lyrics
+        \override LyricText.font-size = #0
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricSpace.minimum-distance = \defaultMinimumWordSeparation
+      }
+      \context {
+        \Staff
+        \override NoteHead.font-size = #1
       }
 
       ragged-last = ##f
@@ -163,20 +160,16 @@
   \score {
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      %\override Score.BarNumber.break-visibility = ##(#t #t #t)
-      %\set Score.barNumberVisibility = #all-bar-numbers-visible
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \sopranoBridge
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \altoBridge
           }
         }
@@ -185,7 +178,6 @@
           \keepWithTag #'usePartials' \sheetMusicBridgeBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \bridgeLyrics
         }
       >>
@@ -194,14 +186,12 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \tenorBridge
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \bassBridge
           }
         }
@@ -209,7 +199,14 @@
     >>
     \layout {
       \context {
-        \Lyrics \override LyricText #'font-size = #0
+        \Lyrics
+        \override LyricText.font-size = #0
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricSpace.minimum-distance = \defaultMinimumWordSeparation
+      }
+      \context {
+        \Staff
+        \override NoteHead.font-size = #1
       }
 
       ragged-last = ##f

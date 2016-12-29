@@ -122,28 +122,41 @@ slideMusicBreaks = \relative c {
   \setSystemOffset \defaultTopSystemOffset
   s4    | \noBreak
   s2.   | \noBreak
-  s2.   | \noBreak
-  s2.   | \noBreak
   s2 s8 \bar "" \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s8    | \noBreak
   s2.   | \noBreak
+  s2 s8 \bar "" \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s8    | \noBreak
   s2.   | \noBreak
+  s2    \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4    | \noBreak
   s2.   | \noBreak
   s4    \bar "" \pageBreak
   
   \setSystemOffset \defaultTopSystemOffset
   s2    | \noBreak
   s2.   | \noBreak
-  s2.   | \noBreak
-  s2.   | \noBreak
   s2 s8 \bar "" \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
+  
   s8    | \noBreak
   s2.   | \noBreak
+  s2 s8 \bar "" \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s8    | \noBreak
   s2.   | \noBreak
+  s2    \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4    | \noBreak
   s2.   | \noBreak
   s4    \bar "" \pageBreak
 
@@ -165,7 +178,10 @@ slideMusicBreaks = \relative c {
   s2    | \noBreak
   s2.   | \noBreak
   s2.   | \noBreak
-  s2.   | \noBreak
+  s2    \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4    | \noBreak
   s2.   | \noBreak
   s2.   | \noBreak
   s2    \bar "|." \pageBreak
@@ -321,7 +337,12 @@ sopranoVerse = \relative c' {
   bes4 bes4\rest
   
   ees,8 f8 |
-  g8 f4. ees4 |
+  \newSpacingSection
+  \override Score.SpacingSpanner.spacing-increment = #2
+  g8
+  \newSpacingSection
+  \revert Score.SpacingSpanner.spacing-increment
+  f4. ees4 |
   ees2.~ |
   ees2 \bar "|."
 }
@@ -551,12 +572,22 @@ sopranoBridge = \relative c' {
   f4 g4 aes8( bes8) |
   bes2. |
   
-  bes8 aes4 g4. |
+  \newSpacingSection
+  \override Score.SpacingSpanner.spacing-increment = #3
+  bes8 
+  \newSpacingSection
+  \revert Score.SpacingSpanner.spacing-increment
+  aes4 g4. |
   ees2~ ees8 ees8 |
   ees2.~ |
   ees2 ees4\rest |
   
-  bes'8 aes4 g4 aes8( |
+  \newSpacingSection
+  \override Score.SpacingSpanner.spacing-increment = #3
+  bes'8
+  \newSpacingSection
+  \revert Score.SpacingSpanner.spacing-increment
+  aes4 g4 aes8( |
   g2~ g8) ees8 |
   ees2.~ |
   ees2.~ |
@@ -708,13 +739,13 @@ verseCommon = \lyricmode {
   How beau -- ti -- ful,
   how beau -- ti -- ful,
   how beau -- ti -- ful,
-  is the bod -- y of Christ
+  is the bod -- y of Christ.
 }
 
 bridgeLyrics = \lyricmode {
   And as He laid down His life,
   we of -- fer this sac -- ri -- fice,
-  that we might live just as He died,
-  Will -- ing to pay the price,
+  that we might live just as He died:
+  will -- ing to pay the price,
   will -- ing to pay the price.
 }

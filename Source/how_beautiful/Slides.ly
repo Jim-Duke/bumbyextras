@@ -4,6 +4,11 @@
 
 #(set-global-staff-size 44)
 
+minimumDistance = #3
+lyricFontSize = #0
+hyphenThickness = #2
+hyphenLength = #1.0
+
 \book {
   \bookOutputName #(string-append build_dir songNumber " - " title " - Slides")
   \paper {
@@ -99,7 +104,6 @@
           \keepWithTag #'usePartials' \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \huge \verseOne \verseCommon
         }
       >>
@@ -122,8 +126,15 @@
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1
-        \override LyricText #'font-size = #-0.2
+        \override LyricSpace.minimum-distance = \minimumDistance
+        \override LyricText.font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \defaultStaffLineThickness
       }
     }
   }
@@ -148,7 +159,6 @@
           \keepWithTag #'usePartials' \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \huge \verseTwo \verseCommon
         }
       >>
@@ -171,7 +181,15 @@
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1
+        \override LyricSpace.minimum-distance = \minimumDistance
+        \override LyricText.font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \defaultStaffLineThickness
       }
     }
   }
@@ -196,7 +214,6 @@
           \keepWithTag #'usePartials' \slideMusicBridgeBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \huge \bridgeLyrics
         }
       >>
@@ -219,7 +236,15 @@
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1
+        \override LyricSpace.minimum-distance = \minimumDistance
+        \override LyricText.font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \defaultStaffLineThickness
       }
     }
   }
@@ -248,7 +273,6 @@
           \alignVerse
         }
         \new Lyrics \lyricsto "align" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \huge \verseThree \verseCommon
         }
       >>
@@ -271,8 +295,15 @@
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1
-        \override LyricText #'font-size = #-0.2
+        \override LyricSpace.minimum-distance = \minimumDistance
+        \override LyricText.font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \defaultStaffLineThickness
       }
     }
   }
@@ -297,7 +328,6 @@
           \keepWithTag #'usePartials' \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \huge \verseFour \verseCommon \bridgeLyrics
         }
       >>
@@ -320,8 +350,15 @@
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1
-        \override LyricText #'font-size = #-0.2
+        \override LyricSpace.minimum-distance = \minimumDistance
+        \override LyricText.font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \defaultStaffLineThickness
       }
     }
   }
