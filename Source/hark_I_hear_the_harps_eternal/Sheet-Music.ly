@@ -80,14 +80,12 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \altoVerse
           }
         }
@@ -96,15 +94,12 @@
           \keepWithTag #'usePartials' \sheetMusicVerseBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \verseOne
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \verseTwo
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \verseThree
         }
       >>
@@ -113,14 +108,12 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \bassVerse
           }
         }
@@ -128,7 +121,14 @@
     >>
     \layout {
       \context {
-        \Lyrics \override LyricText #'font-size = #0
+        \Lyrics
+        \override LyricText.font-size = #0
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricSpace.minimum-distance = #2
+      }
+      \context {
+        \Staff
+        \override NoteHead.font-size = #1
       }
 
       ragged-last = ##f
@@ -145,14 +145,12 @@
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \sopranoChorus
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \altoChorus
           }
         }
@@ -161,7 +159,6 @@
           \keepWithTag #'usePartials' \sheetMusicChorusBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \chorus
         }
       >>
@@ -170,14 +167,12 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \tenorChorus
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \bassChorus
           }
         }
@@ -185,7 +180,14 @@
     >>
     \layout {
       \context {
-        \Lyrics \override LyricText #'font-size = #0
+        \Lyrics
+        \override LyricText.font-size = #0
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricSpace.minimum-distance = \defaultMinimumWordSeparation
+      }
+      \context {
+        \Staff
+        \override NoteHead.font-size = #1
       }
 
       ragged-last = ##f

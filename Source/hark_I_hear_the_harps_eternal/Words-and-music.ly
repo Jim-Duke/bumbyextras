@@ -280,7 +280,7 @@ bassChorus = \relative c {
 
 verseOne = \lyricmode {
   \set stanza = "1. "
-  Hark! I hear the harps e -- ter -- nal
+  Hark! I hear the harps e -- ter -- nal,
   Ring -- ing on the far -- ther shore,
   As I near those swoll -- en wa -- ters,
   With their deep and sol -- emn roar.
@@ -288,15 +288,15 @@ verseOne = \lyricmode {
 
 verseTwo = \lyricmode {
   \set stanza = "2. "
-  And my soul, tho' stain'd with sor -- row,
-  fad -- ing as the light of day,
+  And my soul, tho' stained with sor -- row,
+  Fad -- ing as the light of day,
   Pass -- es swift -- ly o'er those wat -- ers,
   To the ci -- ty far a -- way.
 }
 
 verseThree = \lyricmode {
   \set stanza = "3. "
-  Souls have cross'd be -- fore me, saint -- ly,
+  Souls have crossed be -- fore me, saint -- ly,
   To that land of per -- fect rest;
   And I hear them sing -- ing faint -- ly,
   In the mans -- ions of the blest.
@@ -307,5 +307,5 @@ chorus = \lyricmode {
   Hal -- le -- lu -- jah! Praise the Lamb!
 
   Hal -- le -- lu -- jah! Hal -- le -- lu -- jah!
-  Glo -- ry to the Great I Am!
+  Glo -- ry to the great I AM!
 }

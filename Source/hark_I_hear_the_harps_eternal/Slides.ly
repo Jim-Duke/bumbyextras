@@ -4,6 +4,9 @@
 
 #(set-global-staff-size 44)
 
+minimumDistance = #3
+lyricFontSize = #0
+
 \book {
   \bookOutputName #(string-append build_dir songNumber " - " title " - Slides")
   \paper {
@@ -119,7 +122,13 @@
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1.5
+        \override LyricSpace #'minimum-distance = \minimumDistance
+        \override LyricText #'font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \defaultStaffLineThickness
       }
     }
   }
@@ -164,7 +173,13 @@
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1.5
+        \override LyricSpace #'minimum-distance = \minimumDistance
+        \override LyricText #'font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \defaultStaffLineThickness
       }
     }
   }
@@ -209,7 +224,13 @@
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1.5
+        \override LyricSpace #'minimum-distance = \minimumDistance
+        \override LyricText #'font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \defaultStaffLineThickness
       }
     }
   }
@@ -255,7 +276,13 @@
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1.5
+        \override LyricSpace #'minimum-distance = \minimumDistance
+        \override LyricText #'font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \defaultStaffLineThickness
       }
     }
   }
