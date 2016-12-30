@@ -106,14 +106,13 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
+        \context Voice = treble {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
             \keepWithTag #'usePartials' \sopranoVerse
           }
-        }
-        \context Voice = altos {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \altoVerse
           }
@@ -122,20 +121,23 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
           \global
           \keepWithTag #'usePartials' \slideMusicBreaks
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \context NullVoice = align {
+          \global
+          \keepWithTag #'usePartials' \sopranoVerse
+        }
+        \new Lyrics \lyricsto "align" {
           \huge \verseOne
         }
       >>
       \context Staff = lower <<
         \clef bass
-        \context Voice = tenors {
-          \voiceOne {
+        \context Voice = bass {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
             \keepWithTag #'usePartials' \tenorVerse
           }
-        }
-        \context Voice = basses {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \bassVerse
           }
@@ -161,14 +163,13 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
   \score {
     <<
       \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
+        \context Voice = treble {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
             \keepWithTag #'usePartials' \sopranoVerse
           }
-        }
-        \context Voice = altos {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \altoVerse
           }
@@ -177,22 +178,25 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
           \global
           \keepWithTag #'usePartials' \slideMusicBreaks
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \context NullVoice = align {
+          \global
+          \keepWithTag #'usePartials' \sopranoVerse
+        }
+        \new Lyrics \lyricsto "align" {
           \huge \verseTwo
         }
       >>
       \context Staff = lower <<
         \clef bass
-        \context Voice = tenors {
-          \voiceOne {
+        \context Voice = bass {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
-            \tenorVerse
+            \keepWithTag #'usePartials' \tenorVerse
           }
-        }
-        \context Voice = basses {
-          \voiceTwo {
+          {
             \global
-            \bassVerse
+            \keepWithTag #'usePartials' \bassVerse
           }
         }
       >>
@@ -216,14 +220,13 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
   \score {
     <<
       \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
+        \context Voice = treble {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
             \keepWithTag #'usePartials' \sopranoVerse
           }
-        }
-        \context Voice = altos {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \altoVerse
           }
@@ -242,16 +245,15 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
       >>
       \context Staff = lower <<
         \clef bass
-        \context Voice = tenors {
-          \voiceOne {
+        \context Voice = bass {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
-            \tenorVerse
+            \keepWithTag #'usePartials' \tenorVerse
           }
-        }
-        \context Voice = basses {
-          \voiceTwo {
+          {
             \global
-            \bassVerse
+            \keepWithTag #'usePartials' \bassVerse
           }
         }
       >>
@@ -275,14 +277,13 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
   \score {
     <<
       \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
+        \context Voice = treble {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
             \keepWithTag #'usePartials' \sopranoChorus
           }
-        }
-        \context Voice = altos {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \altoChorus
           }
@@ -291,20 +292,23 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
           \global
           \keepWithTag #'usePartials' \slideMusicRefrainBreaks
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \context NullVoice = align {
+          \global
+          \keepWithTag #'usePartials' \alignChorus
+        }
+        \new Lyrics \lyricsto "align" {
           \huge \chorusLyrics
         }
       >>
       \context Staff = lower <<
         \clef bass
-        \context Voice = tenors {
-          \voiceOne {
+        \context Voice = bass {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
             \keepWithTag #'usePartials' \tenorChorus
           }
-        }
-        \context Voice = basses {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \bassChorus
           }
@@ -333,32 +337,34 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
+        \context Voice = treble {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
             \keepWithTag #'usePartials' \sopranoCoda
           }
-        }
-        \context Voice = altos {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \altoCoda
           }
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \context NullVoice = align {
+          \global
+          \keepWithTag #'usePartials' \sopranoCoda
+        }
+        \new Lyrics \lyricsto "align" {
           \codaLyrics
         }
       >>
       \context Staff = lower <<
         \clef bass
-        \context Voice = tenors {
-          \voiceOne {
+        \context Voice = bass {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
             \keepWithTag #'usePartials' \tenorCoda
           }
-        }
-        \context Voice = basses {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \bassCoda
           }

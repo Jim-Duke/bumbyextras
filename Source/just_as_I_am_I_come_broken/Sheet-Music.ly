@@ -2,8 +2,6 @@
 
 \include "Words-and-music.ly"
 
-lyricSpacing = #3.0
-
 #(set-global-staff-size 18)
 
 %
@@ -118,14 +116,13 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
-        \context Voice = "sopranos" {
-          \voiceOne {
+        \context Voice = "treble" {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
             \keepWithTag #'usePartials' \sopranoVerse
           }
-        }
-        \context Voice = "altos" {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \altoVerse
           }
@@ -134,30 +131,33 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
           \global
           \sheetMusicBreaks
         }
-        \context NullVoice = "align" {
+        \context NullVoice = "alignMain" {
+          \global
+          \keepWithTag #'usePartials' \sopranoVerse
+        }
+        \context NullVoice = "alignThird" {
           \global
           \keepWithTag #'usePartials' \thirdVerseAlign
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \new Lyrics \lyricsto "alignMain" {
           \verseOne
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \new Lyrics \lyricsto "alignMain" {
           \verseTwo
         }
-        \new Lyrics \lyricsto "align" {
+        \new Lyrics \lyricsto "alignThird" {
           \verseThree
         }
       >>
       \context Staff = lower <<
         \clef bass
-        \context Voice = tenors {
-          \voiceOne {
+        \context Voice = bass {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
             \keepWithTag #'usePartials' \tenorVerse
           }
-        }
-        \context Voice = basses {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \bassVerse
           }
@@ -178,6 +178,7 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
         \Staff
         \override StaffSymbol.thickness = \staffLineThickness
         \override NoteHead.font-size = \noteHeadFontSize
+        \override Stem.length-fraction = #(magstep 2.0)
       }
 
       ragged-last = ##f
@@ -185,20 +186,19 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
   }
   \pageBreak
   \markup {
-    \huge \bold "Refrain:"
+    \huge \bold "Chorus:"
   }
   \score {
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
+        \context Voice = treble {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
             \keepWithTag #'usePartials' \sopranoChorus
           }
-        }
-        \context Voice = altos {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \altoChorus
           }
@@ -207,20 +207,23 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
           \global
           \keepWithTag #'usePartials' \sheetMusicRefrainBreaks
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \context NullVoice = align {
+          \global
+          \keepWithTag #'usePartials' \alignChorus
+        }
+        \new Lyrics \lyricsto "align" {
           \chorusLyrics
         }
       >>
       \context Staff = lower <<
         \clef bass
-        \context Voice = tenors {
-          \voiceOne {
+        \context Voice = bass {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
             \keepWithTag #'usePartials' \tenorChorus
           }
-        }
-        \context Voice = basses {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \bassChorus
           }
@@ -240,45 +243,48 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
         \Staff
         \override StaffSymbol.thickness = \staffLineThickness
         \override NoteHead.font-size = \noteHeadFontSize
+        \override Stem.length-fraction = #(magstep 2.0)
       }
     }
   }
   \markup {
     \column {
       \vspace #1
-      \huge \bold "CODA:"
+      \huge \bold "CODA: (sung after the chorus on the final verse)"
     }
   }
   \score {
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
+        \context Voice = treble {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
             \keepWithTag #'usePartials' \sopranoCoda
           }
-        }
-        \context Voice = altos {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \altoCoda
           }
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \context NullVoice = align {
+          \global
+          \keepWithTag #'usePartials' \sopranoCoda
+        }
+        \new Lyrics \lyricsto "align" {
           \codaLyrics
         }
       >>
       \context Staff = lower <<
         \clef bass
-        \context Voice = tenors {
-          \voiceOne {
+        \context Voice = bass {
+          \aikenPartCombine #'(2 . 20)
+          {
             \global
             \keepWithTag #'usePartials' \tenorCoda
           }
-        }
-        \context Voice = basses {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \bassCoda
           }
@@ -298,6 +304,8 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
         \Staff
         \override StaffSymbol.thickness = \staffLineThickness
         \override NoteHead.font-size = \noteHeadFontSize
+        \override Stem.length-fraction = #(magstep 2.0)
+        \override VerticalAxisGroup.staff-staff-spacing = #100
       }
 
       ragged-last = ##f
