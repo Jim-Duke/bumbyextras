@@ -110,45 +110,45 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
+        \context Voice = treble {
+          \aikenPartCombine #'(2 . 12)
+          {
             \global
             \keepWithTag #'usePartials' \sopranoVerse
           }
-        }
-        \context Voice = altos {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \altoVerse
           }
         }
+        \context NullVoice = align {
+          \keepWithTag #'usePartials' \sopranoVerse
+        }
         \context NullVoice = sheetMusicBreaks {
-          \global
           \sheetMusicBreaks
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \new Lyrics \lyricsto "align" {
           \verseOne
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \new Lyrics \lyricsto "align" {
           \verseTwo
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \new Lyrics \lyricsto "align" {
           \verseThree
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \new Lyrics \lyricsto "align" {
           \verseFour
         }
       >>
       \context Staff = lower <<
         \clef bass
-        \context Voice = tenors {
-          \voiceOne {
+        \context Voice = bass {
+          \aikenPartCombine #'(2 . 12)
+          {
             \global
             \keepWithTag #'usePartials' \tenorVerse
           }
-        }
-        \context Voice = basses {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \bassVerse
           }
@@ -169,6 +169,7 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
         \Staff
         \override StaffSymbol.thickness = \staffLineThickness
         \override NoteHead.font-size = \noteHeadFontSize
+        \override Stem.length-fraction = #(magstep 2.0)
       }
 
       ragged-last = ##f

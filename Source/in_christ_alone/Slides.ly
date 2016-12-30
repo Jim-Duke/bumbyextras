@@ -103,36 +103,38 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
   \score {
     <<
       \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
+        \context Voice = treble {
+          \aikenPartCombine #'(2 . 12)
+          {
             \global
             \keepWithTag #'usePartials' \sopranoVerse
           }
-        }
-        \context Voice = altos {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \altoVerse
           }
+        }
+        \context NullVoice = align {
+          \global
+          \keepWithTag #'usePartials' \sopranoVerse
         }
         \context NullVoice = slideMusicBreaks {
           \global
           \slideMusicBreaks
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \new Lyrics \lyricsto "align" {
           \huge \verseOne
         }
       >>
       \context Staff = lower <<
         \clef bass
-        \context Voice = tenors {
-          \voiceOne {
+        \context Voice = bass {
+          \aikenPartCombine #'(2 . 12)
+          {
             \global
             \keepWithTag #'usePartials' \tenorVerse
           }
-        }
-        \context Voice = basses {
-          \voiceTwo {
+          {
             \global
             \keepWithTag #'usePartials' \bassVerse
           }
