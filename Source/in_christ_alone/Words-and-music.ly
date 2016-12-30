@@ -126,7 +126,7 @@ slideMusicBreaks = \relative c {
 %
 sopranoVerse = \relative c' {
   \tag #'usePartials' { \partial 4. }
-  \autoBeamOff
+  \set Staff.autoBeaming = ##f
   bes8 c8. ees16 |
   ees4. bes8 c8 ees8 |
   f2 g8 f16 ees16 |
@@ -154,7 +154,7 @@ sopranoVerse = \relative c' {
 
 altoVerse = \relative c' {
   \tag #'usePartials' { \partial 4. }
-  \autoBeamOff
+  \set Staff.autoBeaming = ##f
   bes8 c8. c16 |
   bes4. bes8 c8 ees8 |
   d2 ees8 d16 c16 |
@@ -182,7 +182,7 @@ altoVerse = \relative c' {
 
 tenorVerse = \relative c' {
   \tag #'usePartials' { \partial 4. }
-  \autoBeamOff
+  \set Staff.autoBeaming = ##f
   bes8 aes8. aes16 |
   g4. g8 aes8 aes8 |
   bes2 bes8 bes16 bes16 |
@@ -210,17 +210,17 @@ tenorVerse = \relative c' {
 
 bassVerse = \relative c {
   \tag #'usePartials' { \partial 4. }
-  \autoBeamOff
+  \set Staff.autoBeaming = ##f
   bes8 bes8. bes16 |
   ees4. ees8 c8 c8 |
   bes2 g8 g16 g16 |
-  aes8 g8 bes4. bes8 |
+  aes8 f8 bes4. bes8 |
   ees4.
   
   bes8 bes8. bes16 |
   ees4. ees8 c8 c8 |
   bes2 g8 g16 g16 |
-  aes8 g8 bes4. bes8 |
+  aes8 f8 bes4. bes8 |
   ees4.
   
   ees8 ees8 ees8 |
@@ -232,13 +232,13 @@ bassVerse = \relative c {
   bes8 bes8. bes16 |
   ees4. ees8 c8 c8 |
   bes2 g8 g16 g16 |
-  aes8 g8 bes4. bes8 |
+  aes8 f8 bes4. bes8 |
   ees4. \bar "|."
 }
 
 verseOne = \lyricmode {
   \set stanza = "1. "
-   In Christ a -- lone my hope is found,  
+   In Christ a -- lone my hope is found;  
    He is my light, my strength, my song;  
    This Cor -- ner -- stone, this sol -- id Ground,  
    Firm through the fier -- cest drought and storm.  
@@ -253,9 +253,9 @@ verseTwo = \lyricmode {
    In Christ a -- lone! who took on flesh,  
    Full -- ness of God in help -- less babe.  
    This gift of love and right -- eous -- ness,  
-   Scorned by the ones He came to save:  
+   Scorned by the ones He came to save.  
    Till on that cross as Je -- sus died,  
-   The wrath of God was sat -- is -- fied  
+   The wrath of God was sat -- is -- fied;  
    For eve -- ry sin on Him was laid;  
    Here in the death of Christ I live.
 }
@@ -263,12 +263,12 @@ verseTwo = \lyricmode {
 verseThree = \lyricmode {
   \set stanza = "3. "
    There in the ground His bod -- y lay,  
-   Light of the world by dark -- ness slain:  
-   Then burst -- ing forth in glo -- rious day  
+   Light of the world by dark -- ness slain;  
+   Then burst -- ing forth in glo -- rious day,  
    Up from the grave He rose a -- gain!  
-   And as He stands in vic -- to -- ry  
-   Sin's curse has lost its grip on me,  
-   For I am His and He is mine  
+   And as He stands in vic -- to -- ry,  
+   Sin's curse has lost its grip on me;  
+   For I am His and He is mine,  
    Bought with the pre -- cious blood of Christ.
 }
 
@@ -279,7 +279,7 @@ verseFour = \lyricmode {
    From life's first cry to fi -- nal breath,  
    Je -- sus com -- mands my des -- ti -- ny.  
    No pow'r of hell, no scheme of man,  
-   Can ev -- er pluck me from His hand:  
+   Can ev -- er pluck me from His hand;  
    Till He re -- turns or calls me home,  
    Here in the pow'r of Christ I'll stand.
 }
