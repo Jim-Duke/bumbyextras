@@ -44,7 +44,7 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
     score-markup-spacing.basic-distance = #0
     markup-system-spacing.basic-distance = #0
     
-    indent = 0
+    indent = #20
     left-margin = \defaultSheetMusicLeftMargin
     right-margin = \defaultSheetMusicRightMargin
     top-margin = \defaultSheetMusicTopMargin
@@ -105,7 +105,7 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
   \score {
     \new ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \new Staff \with { instrumentName = \markup { \fontsize #2 \circle { 1 } \hspace #1 } } <<
+      \new Staff \with { instrumentName = \markup { "Soprano" \fontsize #2 \circle { 1 } \hspace #1 } } <<
         \new Voice = "sopranos" {
           \global
           \keepWithTag #'(usePartials sheetMusic) \sopranoVerse
@@ -118,7 +118,7 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
       \new Lyrics \lyricsto "sopranos" {
         \sopranoLyrics
       }
-      \new Staff \with { instrumentName = \markup { \fontsize #2 \circle { 3 } \hspace #1 } } {
+      \new Staff \with { instrumentName = \markup { "Alto" \fontsize #2 \circle { 3 } \hspace #1 } } {
         \new Voice = "altos" {
           \global
           \keepWithTag #'usePartials \altoVerse
@@ -127,7 +127,7 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
       \new Lyrics \lyricsto "altos" {
         \altoLyrics
       }
-      \new Staff  \with { instrumentName = \markup { \fontsize #2 \circle { 4 } \hspace #1 } } {
+      \new Staff  \with { instrumentName = \markup { "Tenor" \fontsize #2 \circle { 4 } \hspace #1 } } {
         \new Voice = "tenors" {
           \clef bass
           \global
@@ -137,7 +137,7 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
       \new Lyrics \lyricsto "tenors" {
         \tenorLyrics
       }
-      \new Staff  \with { instrumentName = \markup { \fontsize #2 \circle { 2 } \hspace #1 } } {
+      \new Staff  \with { instrumentName = \markup { "Bass" \fontsize #2 \circle { 2 } \hspace #1 } } {
         \new Voice = "basses" {
           \clef bass
           \global
@@ -162,6 +162,7 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
         \Staff
         \override StaffSymbol.thickness = \staffLineThickness
         \override NoteHead.font-size = \noteHeadFontSize
+        \override InstrumentName.self-alignment-X = #RIGHT
       }
       
       ragged-last = ##f
