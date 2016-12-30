@@ -136,6 +136,6 @@
       <originator name="Robert S. Bridges (1899)" type="Individual" role="Writer"/>
       <scripture>Romans Isaiah 53:4-5</scripture>
     </hymn>
-    <electronicVersion>0.1.0.1</electronicVersion>
+    <electronicVersion>1.0.0.0</electronicVersion>
   </hymnal>
 </contents>
