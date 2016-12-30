@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <contents xmlns="http://rjstevensmusic.com/PresentationCreator/Schema/HymnalInformation.xsd">
   <hymnal>
-    <name>Bumby Extras</name>
+    <name>Bumby Supplemental Hymnal</name>
     <hymn number="B-001" title="My Shepherd Will Supply My Need">
       <songLeaderInfo beatPattern="3" key="C" startingPitch="DO" time="3/4" startingBeat="3" />
       <originator name="Isaac Watts" role="Writer" type="Individual" />
