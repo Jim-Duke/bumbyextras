@@ -1,5 +1,12 @@
 \version "2.19.49"
 
+%
+% Sets the build directory variable if not already set.  This allows you to
+% set an alternative build directory from the command line, or from another
+% source.
+%
+#(if (not (defined? 'build_dir)) (define build_dir ""))
+
 setSystemOffset =
 #(define-music-function (parser location offset)
    (number?)
@@ -7,20 +14,43 @@ setSystemOffset =
      \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details.Y-offset #offset
   #})
 
-#(if (not (defined? 'build_dir)) (define build_dir ""))
-
-%setSystemOffset =
-%#(define-music-function (parser location offset)
-%   (number?)
-%   #{
-%       \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details #'((Y-offset . #offset))
-%   #})
-
 defaultTopSystemOffset = #2
 defaultBottomSystemOffset = #29
-defaultMinimumWordSeparation = #3
-defaultStaffLineThickness = #2
 
+%
+% Default settings for sheet music
+%
+defaultSheetMusicLyricMinimumDistance = #3
+defaultSheetMusicLyricFontSize = #0
+defaultSheetMusicHyphenThickness = #1
+defaultSheetMusicHyphenLength = #1.0
+
+defaultSheetMusicStaffLineThickness = #1
+defaultSheetMusicNoteHeadFontSize = #1
+
+
+%
+% Default settings for slide music
+%
+defaultSlideMusicLyricMinimumDistance = #3
+defaultSlideMusicLyricFontSize = #0
+defaultSlideMusicHyphenThickness = #2
+defaultSlideMusicHyphenLength = #1.2
+
+defaultSlideMusicStaffLineThickness = #2
+defaultSlideMusicNoteHeadFontSize = #0
+
+%
+% Sheet Music Margins (in millimeters)
+%
+defaultSheetMusicLeftMargin   = #12
+defaultSheetMusicRightMargin  = #12
+defaultSheetMusicTopMargin    = #6
+defaultSheetMusicBottomMargin = #6
+
+%
+% MIDI Settings
+%
 allMaxVolume = #1.0
 allMinVolume = #0.8
 allPan = #0.0

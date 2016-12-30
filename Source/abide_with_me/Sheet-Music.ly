@@ -4,6 +4,28 @@
 
 #(set-global-staff-size 18)
 
+%
+% Common layout controls.
+%
+% This allows us to either use the defaults or override them.  We try to use
+% the same local variable names in the body in order to maintain as common a
+% template as possible.
+%
+
+%
+% Lyric controls
+%
+lyricMinimumDistance = \defaultSheetMusicLyricMinimumDistance
+lyricFontSize = \defaultSheetMusicLyricFontSize
+hyphenThickness = \defaultSheetMusicHyphenThickness
+hyphenLength = \defaultSheetMusicHyphenLength
+
+%
+% Staff controls
+%
+staffLineThickness = \defaultSheetMusicStaffLineThickness
+noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
+
 \book {
   \bookOutputName #(string-append build_dir songNumber " - " title " - Sheet Music")
   \paper {
@@ -23,10 +45,10 @@
     markup-system-spacing.basic-distance = #0
     
     indent = 0
-    left-margin = 0.75\in
-    right-margin = 0.75\in
-    top-margin = 0.25\in
-    bottom-margin = 0.25\in
+    left-margin = \defaultSheetMusicLeftMargin
+    right-margin = \defaultSheetMusicRightMargin
+    top-margin = \defaultSheetMusicTopMargin
+    bottom-margin = \defaultSheetMusicBottomMargin
     print-page-number = ##f
     ragged-bottom = ##f
     oddFooterMarkup = \markup {
@@ -128,13 +150,16 @@
     \layout {
       \context {
         \Lyrics
-        \override LyricText.font-size = #0
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
+        \override LyricText.font-size = \lyricFontSize
         \override LyricText.self-alignment-X = #CENTER
-        \override LyricSpace.minimum-distance = \defaultMinimumWordSeparation
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
       }
       \context {
         \Staff
-        \override NoteHead.font-size = #1
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
 
       ragged-last = ##f

@@ -4,8 +4,27 @@
 
 #(set-global-staff-size 44)
 
-wordSeparation = #1.5
+%
+% Common layout controls.
+%
+% This allows us to either use the defaults or override them.  We try to use
+% the same local variable names in the body in order to maintain as common a
+% template as possible.
+%
+
+%
+% Lyric controls
+%
+lyricMinimumDistance = #1.5
 lyricFontSize = #0
+hyphenThickness = \defaultSlideMusicHyphenThickness
+hyphenLength = \defaultSlideMusicHyphenLength
+
+%
+% Staff controls
+%
+staffLineThickness = \defaultSlideMusicStaffLineThickness
+noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
 
 \book {
   \bookOutputName #(string-append build_dir songNumber " - " title " - Slides")
@@ -122,13 +141,16 @@ lyricFontSize = #0
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = \wordSeparation
-        \override LyricText #'font-size = \lyricFontSize
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
+        \override LyricText.font-size = \lyricFontSize
         \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
       }
       \context {
         \Staff
-        \override StaffSymbol.thickness = \defaultStaffLineThickness
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }
@@ -175,13 +197,16 @@ lyricFontSize = #0
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = \wordSeparation
-        \override LyricText #'font-size = \lyricFontSize
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
+        \override LyricText.font-size = \lyricFontSize
         \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
       }
       \context {
         \Staff
-        \override StaffSymbol.thickness = \defaultStaffLineThickness
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }
@@ -228,13 +253,16 @@ lyricFontSize = #0
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = \wordSeparation
-        \override LyricText #'font-size = \lyricFontSize
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
+        \override LyricText.font-size = \lyricFontSize
         \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
       }
       \context {
         \Staff
-        \override StaffSymbol.thickness = \defaultStaffLineThickness
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }

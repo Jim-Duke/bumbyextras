@@ -4,10 +4,27 @@
 
 #(set-global-staff-size 44)
 
-minimumDistance = #3
-lyricFontSize = #0
-hyphenThickness = #2
-hyphenLength = #1.0
+%
+% Common layout controls.
+%
+% This allows us to either use the defaults or override them.  We try to use
+% the same local variable names in the body in order to maintain as common a
+% template as possible.
+%
+
+%
+% Lyric controls
+%
+lyricMinimumDistance = \defaultSlideMusicLyricMinimumDistance
+lyricFontSize = \defaultSlideMusicLyricFontSize
+hyphenThickness = \defaultSlideMusicHyphenThickness
+hyphenLength = \defaultSlideMusicHyphenLength
+
+%
+% Staff controls
+%
+staffLineThickness = \defaultSlideMusicStaffLineThickness
+noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
 
 \book {
   \bookOutputName #(string-append build_dir songNumber " - " title " - Slides")
@@ -126,7 +143,7 @@ hyphenLength = #1.0
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace.minimum-distance = \minimumDistance
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
         \override LyricText.font-size = \lyricFontSize
         \override LyricText.self-alignment-X = #CENTER
         \override LyricHyphen.thickness = \hyphenThickness
@@ -134,7 +151,8 @@ hyphenLength = #1.0
       }
       \context {
         \Staff
-        \override StaffSymbol.thickness = \defaultStaffLineThickness
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }
@@ -181,7 +199,7 @@ hyphenLength = #1.0
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace.minimum-distance = \minimumDistance
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
         \override LyricText.font-size = \lyricFontSize
         \override LyricText.self-alignment-X = #CENTER
         \override LyricHyphen.thickness = \hyphenThickness
@@ -189,7 +207,8 @@ hyphenLength = #1.0
       }
       \context {
         \Staff
-        \override StaffSymbol.thickness = \defaultStaffLineThickness
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }
@@ -236,7 +255,7 @@ hyphenLength = #1.0
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace.minimum-distance = \minimumDistance
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
         \override LyricText.font-size = \lyricFontSize
         \override LyricText.self-alignment-X = #CENTER
         \override LyricHyphen.thickness = \hyphenThickness
@@ -244,7 +263,8 @@ hyphenLength = #1.0
       }
       \context {
         \Staff
-        \override StaffSymbol.thickness = \defaultStaffLineThickness
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }
@@ -295,7 +315,7 @@ hyphenLength = #1.0
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace.minimum-distance = \minimumDistance
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
         \override LyricText.font-size = \lyricFontSize
         \override LyricText.self-alignment-X = #CENTER
         \override LyricHyphen.thickness = \hyphenThickness
@@ -303,7 +323,8 @@ hyphenLength = #1.0
       }
       \context {
         \Staff
-        \override StaffSymbol.thickness = \defaultStaffLineThickness
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }
@@ -350,7 +371,7 @@ hyphenLength = #1.0
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace.minimum-distance = \minimumDistance
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
         \override LyricText.font-size = \lyricFontSize
         \override LyricText.self-alignment-X = #CENTER
         \override LyricHyphen.thickness = \hyphenThickness
@@ -358,7 +379,8 @@ hyphenLength = #1.0
       }
       \context {
         \Staff
-        \override StaffSymbol.thickness = \defaultStaffLineThickness
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }

@@ -4,6 +4,28 @@
 
 #(set-global-staff-size 44)
 
+%
+% Common layout controls.
+%
+% This allows us to either use the defaults or override them.  We try to use
+% the same local variable names in the body in order to maintain as common a
+% template as possible.
+%
+
+%
+% Lyric controls
+%
+lyricMinimumDistance = #1.0
+lyricFontSize = #-0.25
+hyphenThickness = \defaultSlideMusicHyphenThickness
+hyphenLength = \defaultSlideMusicHyphenLength
+
+%
+% Staff controls
+%
+staffLineThickness = \defaultSlideMusicStaffLineThickness
+noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
+
 \book {
   \bookOutputName #(string-append build_dir songNumber " - " title " - Slides")
   \paper {
@@ -98,7 +120,6 @@
           \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \huge \verseOne
         }
       >>
@@ -121,7 +142,16 @@
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1.5
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
+        \override LyricText.font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }
@@ -145,7 +175,6 @@
           \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \huge \verseTwo
         }
       >>
@@ -168,7 +197,16 @@
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1.5
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
+        \override LyricText.font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }
@@ -192,7 +230,6 @@
           \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \huge \verseThree
         }
       >>
@@ -215,7 +252,16 @@
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1.5
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
+        \override LyricText.font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }
@@ -239,7 +285,6 @@
           \slideMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \once \override LyricText.self-alignment-X = #CENTER
           \huge \verseFour
         }
       >>
@@ -262,7 +307,16 @@
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1.5
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
+        \override LyricText.font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }

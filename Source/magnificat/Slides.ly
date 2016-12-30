@@ -4,6 +4,28 @@
 
 #(set-global-staff-size 44)
 
+%
+% Common layout controls.
+%
+% This allows us to either use the defaults or override them.  We try to use
+% the same local variable names in the body in order to maintain as common a
+% template as possible.
+%
+
+%
+% Lyric controls
+%
+lyricMinimumDistance = #1.0
+lyricFontSize = #-0.25
+hyphenThickness = \defaultSlideMusicHyphenThickness
+hyphenLength = \defaultSlideMusicHyphenLength
+
+%
+% Staff controls
+%
+staffLineThickness = \defaultSlideMusicStaffLineThickness
+noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
+
 \book {
   \bookOutputName #(string-append build_dir songNumber " - " title " - Slides")
   \paper {
@@ -82,8 +104,6 @@
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      %\override Score.BarNumber.break-visibility = ##(#t #t #t)
-      %\set Score.barNumberVisibility = #all-bar-numbers-visible
       \new Staff <<
         \new Voice = "sopranos" {
           \global
@@ -95,7 +115,6 @@
         }
       >>
       \new Lyrics \lyricsto "sopranos" {
-        \once \override LyricText.self-alignment-X = #CENTER
         \sopranoLyrics
       }
     >>
@@ -105,15 +124,22 @@
       
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1.5
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
+        \override LyricText.font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      %\override Score.BarNumber.break-visibility = ##(#t #t #t)
-      %\set Score.barNumberVisibility = #all-bar-numbers-visible
       \new Staff <<
         \new Voice = "sopranos" {
           \global
@@ -125,7 +151,6 @@
         }
       >>
       \new Lyrics \lyricsto "sopranos" {
-        \once \override LyricText.self-alignment-X = #CENTER
         \sopranoLyrics
       }
       \new Staff {
@@ -136,7 +161,6 @@
         }
       }
       \new Lyrics \lyricsto "basses" {
-        \once \override LyricText.self-alignment-X = #CENTER
         \bassLyrics
       }
     >>
@@ -146,15 +170,22 @@
       
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1.5
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
+        \override LyricText.font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      %\override Score.BarNumber.break-visibility = ##(#t #t #t)
-      %\set Score.barNumberVisibility = #all-bar-numbers-visible
       \new Staff <<
         \new Voice = "sopranos" {
           \global
@@ -166,7 +197,6 @@
         }
       >>
       \new Lyrics \lyricsto "sopranos" {
-        \once \override LyricText.self-alignment-X = #CENTER
         \sopranoLyrics
       }
       \new Staff {
@@ -176,7 +206,6 @@
         }
       }
       \new Lyrics \lyricsto "altos" {
-        \once \override LyricText.self-alignment-X = #CENTER
         \altoLyrics
       }
       \new Staff {
@@ -187,7 +216,6 @@
         }
       }
       \new Lyrics \lyricsto "basses" {
-        \once \override LyricText.self-alignment-X = #CENTER
         \bassLyrics
       }
     >>
@@ -197,15 +225,22 @@
       
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1.5
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
+        \override LyricText.font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      %\override Score.BarNumber.break-visibility = ##(#t #t #t)
-      %\set Score.barNumberVisibility = #all-bar-numbers-visible
       \new Staff <<
         \new Voice = "sopranos" {
           \global
@@ -217,7 +252,6 @@
         }
       >>
       \new Lyrics \lyricsto "sopranos" {
-        \once \override LyricText.self-alignment-X = #CENTER
         \sopranoLyrics
       }
       \new Staff {
@@ -227,7 +261,6 @@
         }
       }
       \new Lyrics \lyricsto "altos" {
-        \once \override LyricText.self-alignment-X = #CENTER
         \altoLyrics
       }
       \new Staff {
@@ -238,7 +271,6 @@
         }
       }
       \new Lyrics \lyricsto "tenors" {
-        \once \override LyricText.self-alignment-X = #CENTER
         \tenorLyrics
       }
       \new Staff {
@@ -249,7 +281,6 @@
         }
       }
       \new Lyrics \lyricsto "basses" {
-        \once \override LyricText.self-alignment-X = #CENTER
         \bassLyrics
       }
     >>
@@ -259,7 +290,16 @@
       
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1.5
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
+        \override LyricText.font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }

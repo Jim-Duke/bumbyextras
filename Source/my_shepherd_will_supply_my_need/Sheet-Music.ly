@@ -4,6 +4,28 @@
 
 #(set-global-staff-size 18)
 
+%
+% Common layout controls.
+%
+% This allows us to either use the defaults or override them.  We try to use
+% the same local variable names in the body in order to maintain as common a
+% template as possible.
+%
+
+%
+% Lyric controls
+%
+lyricMinimumDistance = \defaultSheetMusicLyricMinimumDistance
+lyricFontSize = \defaultSheetMusicLyricFontSize
+hyphenThickness = \defaultSheetMusicHyphenThickness
+hyphenLength = \defaultSheetMusicHyphenLength
+
+%
+% Staff controls
+%
+staffLineThickness = \defaultSheetMusicStaffLineThickness
+noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
+
 \book {
   \bookOutputName #(string-append build_dir songNumber " - " title " - Sheet Music")
   \paper {
@@ -23,10 +45,10 @@
     markup-system-spacing.basic-distance = #0
     
     indent = 0
-    left-margin = 0.75\in
-    right-margin = 0.75\in
-    top-margin = 0.25\in
-    bottom-margin = 0.25\in
+    left-margin = \defaultSheetMusicLeftMargin
+    right-margin = \defaultSheetMusicRightMargin
+    top-margin = \defaultSheetMusicTopMargin
+    bottom-margin = \defaultSheetMusicBottomMargin
     print-page-number = ##f
     oddFooterMarkup = \markup {
       \fontsize #-2
@@ -69,6 +91,15 @@
             \fromproperty #'header:rhs
           }
           \vspace #0.5
+          \fill-line {
+            \override #'(line-width . 20) ""
+            \override #'(line-width . 80) \center-column {
+              \abs-fontsize #10
+              \italic \wordwrap-field #'header:scripture
+            }
+            \override #'(line-width . 20) ""
+          }
+          \vspace #0.5
         }
       }
     }
@@ -77,20 +108,16 @@
   \score {
     % Verses Section
     \context ChoirStaff <<
-      %\override Score.BarNumber.break-visibility = ##(#t #t #t)
-      %\set Score.barNumberVisibility = #all-bar-numbers-visible
       \context Staff = upper <<
         \context Voice = sopranos {
           \voiceOne {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \sopranoVerse
           }
         }
         \context Voice = altos {
           \voiceTwo {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \altoVerse
           }
         }
@@ -99,18 +126,12 @@
           \sheetMusicBreaks
         }
         \new Lyrics \lyricsto "sopranos" {
-          \override Lyrics.LyricSpace.minimum-distance = \defaultMinimumWordSeparation
-          \once \override LyricText.self-alignment-X = #CENTER
           \verseOne
         }
         \new Lyrics \lyricsto "sopranos" {
-          \override Lyrics.LyricSpace.minimum-distance = \defaultMinimumWordSeparation
-          \once \override LyricText.self-alignment-X = #CENTER
           \verseTwo
         }
         \new Lyrics \lyricsto "sopranos" {
-          \override Lyrics.LyricSpace.minimum-distance = \defaultMinimumWordSeparation
-          \once \override LyricText.self-alignment-X = #CENTER
           \verseThree
         }
       >>
@@ -119,14 +140,12 @@
         \context Voice = tenors {
           \voiceOne {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \tenorVerse
           }
         }
         \context Voice = basses {
           \voiceTwo {
             \global
-            \override NoteHead #'font-size = #1
             \keepWithTag #'usePartials' \bassVerse
           }
         }
@@ -135,8 +154,19 @@
       
     \layout {
       \context {
-        \Lyrics \override LyricText #'font-size = #0
+        \Lyrics
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
+        \override LyricText.font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
       }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
+      }
+      
       ragged-last = ##f
     }
   }
