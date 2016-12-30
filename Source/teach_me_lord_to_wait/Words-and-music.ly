@@ -443,24 +443,24 @@ bassChorus = \relative c {
 
 verseOne = \lyricmode {
   \set stanza = "1. "
-  Teach me Lord, to wait right down on my knees,
+  Teach me, Lord, to "wait! " __ right down on my knees.
   Till in Your own good time You an -- swer my pleas;
-  Teach me not to re -- ly on what oth -- ers do,
+  Teach me not to re -- ly on what oth -- ers do.
   But to wait in prayer for an an -- swer from You.
 }
 
 verseTwo = \lyricmode {
   \set stanza = "2. "
-  Teach me Lord, to wait while hearts are a -- flame,
+  Teach me Lord, to "wait! " __ while hearts are a -- flame.
   Let me hum -- ble my pride and call on Your name.
-  Keep my faith re -- newed, my eyes on Thee,
+  Keep my faith re -- newed, my eyes on Thee.
   Let me be on this earth what you want me to be.
 }
 
 chorusLyrics = \lyricmode {
-  "\"They" that wait up -- on the Lord shall re -- new their strength,
+  "\"They" that wait up -- on the Lord shall re -- new their strength.
   They shall mount up with wings like ea -- gles. __
-  They shall run and not be wea -- ry.
-  They shall walk and not "faint.\""
-  Teach me Lord, teach me Lord, to wait.
+  They shall run and not be wea -- ry,
+  they shall walk and not "faint.\""
+  Teach me, Lord, teach me, Lord, to wait.
 }
