@@ -412,7 +412,7 @@ verseTwoLyrics = \lyricmode {
   \set stanza = "2. "
   Here I am, just for to -- day,
   Live in me, and have Your way.
-  My de -- sire when the race is run,
+  My de -- sire, when the race is run,
   Is to hear You say, "\"Well" "done!\""
 }
 
