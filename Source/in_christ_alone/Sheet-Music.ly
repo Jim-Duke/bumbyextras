@@ -111,7 +111,7 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \context Voice = treble {
-          \aikenPartCombine #'(2 . 12)
+          \partcombine #'(2 . 12)
           {
             \global
             \keepWithTag #'usePartials' \sopranoVerse
@@ -143,7 +143,7 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
       \context Staff = lower <<
         \clef bass
         \context Voice = bass {
-          \aikenPartCombine #'(2 . 12)
+          \partcombine #'(2 . 12)
           {
             \global
             \keepWithTag #'usePartials' \tenorVerse
@@ -170,6 +170,7 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
         \override StaffSymbol.thickness = \staffLineThickness
         \override NoteHead.font-size = \noteHeadFontSize
         \override Stem.length-fraction = #(magstep 2.0)
+        \aikenHeads
       }
 
       ragged-last = ##f

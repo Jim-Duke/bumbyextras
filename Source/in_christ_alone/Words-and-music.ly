@@ -5,7 +5,6 @@
 global = {
   \key ees \major
   \time 3/4
-  \aikenHeads
 }
 
 title = "In Christ Alone"
