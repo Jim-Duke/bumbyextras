@@ -194,7 +194,16 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
     \layout {
       \context {
         \Lyrics
-        \override LyricSpace #'minimum-distance = #1.5
+        \override LyricSpace.minimum-distance = \lyricMinimumDistance
+        \override LyricText.font-size = \lyricFontSize
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = \hyphenThickness
+        \override LyricHyphen.length = \hyphenLength
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = \staffLineThickness
+        \override NoteHead.font-size = \noteHeadFontSize
       }
     }
   }
