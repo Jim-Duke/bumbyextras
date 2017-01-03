@@ -434,6 +434,12 @@ BuildDir = #(ly:parser-lookup 'build_dir)
         \override LyricText.self-alignment-X = #CENTER
         \override LyricHyphen.thickness = #1
         \override LyricHyphen.length = #1.0
+        \override VerticalAxisGroup.nonstaff-nonstaff-spacing =
+            #'((basic-distance . 0)
+               (minimum-distance . 0)
+               (padding . 0.85)
+               (stretchability . 0))
+
       }
       \context {
         \Staff
