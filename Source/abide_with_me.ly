@@ -1,38 +1,33 @@
 \version "2.19.49"
 
-\include "../common.ly"
+\include "common.ly"
 
-global = {
-  \key ees \major
+Key = \key ees \major
+
+Time = {
   \time 4/4
-  \aikenHeads
+  \tempo 4 = 110
 }
 
-title = "Abide With Me"
-songNumber = \abide_with_me_number
-leaderHints = \markup {
+Title = "Abide With Me"
+SongNumber = \abide_with_me_number
+
+LeaderHints = \markup {
   \fontsize #-4
   \normal-text { "E" \musicglyph #"accidentals.flat" " - 4 - MI" }
 }
-number_on_rhs = \abide_with_me_number_rhs
 
-#(if number_on_rhs
-     (begin
-      (define lhs leaderHints)
-      (define rhs songNumber))
-     (begin
-      (define lhs songNumber)
-      (define rhs leaderHints)))
+FirstPage = #(if abide_with_me_number_rhs 1 2)
 
 \header {
-  title = \title
+  title = \Title
   tune = "EVENTIDE"
   meter = "10.10.10.10"
   composer = "William H. Monk (1861)"
   poet = "Henry F. Lyte (1847)"
-  songNumber = \songNumber
-  lhs = \lhs
-  rhs = \rhs
+  songNumber = \SongNumber
+  lhs = #(if abide_with_me_number_rhs LeaderHints abide_with_me_number)
+  rhs = #(if abide_with_me_number_rhs abide_with_me_number LeaderHints)
   copyright = "In the Public Domain"
   license = ##f
   tagline = ##f
@@ -54,55 +49,7 @@ number_on_rhs = \abide_with_me_number_rhs
   }
 }
 
-sheetMusicBreaks = \relative c {
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \break
-
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \break
-
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \break
-
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 \bar "|."
-}
-
-slideMusicBreaks = \relative c {
-  \setSystemOffset \defaultTopSystemOffset
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \break
-
-  \setSystemOffset \defaultBottomSystemOffset
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \break
-
-  \setSystemOffset \defaultTopSystemOffset
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \break
-
-  \setSystemOffset \defaultBottomSystemOffset
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 \bar "|."
-}
-
-sopranoVerse = \relative c'' {
+SopranoMusic = \relative c'' {
   g2 g4 f |
   ees2 bes' |
   c4 bes bes aes |
@@ -124,7 +71,7 @@ sopranoVerse = \relative c'' {
   ees1 \bar "|."
 }
 
-altoVerse = \relative c' {
+AltoMusic = \relative c' {
   ees2 d4 d |
   ees2 ees |
   ees4 d ees f |
@@ -146,7 +93,7 @@ altoVerse = \relative c' {
   ees1 \bar "|."
 }
 
-tenorVerse = \relative c' {
+TenorMusic = \relative c' {
   bes2 bes4 aes |
   g2 ees |
   ees4 bes' bes bes |
@@ -168,7 +115,7 @@ tenorVerse = \relative c' {
   g1 \bar "|."
 }
 
-bassVerse = \relative c {
+BassMusic = \relative c {
   ees2 bes4 bes |
   c2 g |
   aes4 bes c d |
@@ -190,7 +137,85 @@ bassVerse = \relative c {
   ees1 \bar "|."
 }
 
-verseOne = \lyricmode {
+AlignMusic = \relative c'' {
+  c2 c4 c4 |
+  c2 c2 |
+  c4 c4 c4 c4 |
+  c1 |
+
+  c2 c4 c4 |
+  c2 c2 |
+  c4 c4 c4 c4 |
+  c1 |
+
+  c2 c4 c4 |
+  c2 c2 |
+  c4 c4 c4 c4 |
+  c1 |
+
+  c2 c4 c4 |
+  c4 c4 c4 c4 |
+  c2 c2 |
+  c1 \bar "|."
+}
+
+SheetMusicBreaks = \relative c {
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \break
+
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \break
+
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \break
+
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 \bar "|."
+}
+
+SlidesBreaks = \relative c {
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 | \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 | \break
+
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 | \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 | \break
+
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 | \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 | \break
+
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 | \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 \bar "|."
+}
+
+VerseOne = \lyricmode {
   \set stanza = "1. "
   A -- bide with me! fast falls the e -- ven -- tide;
   The dark -- ness deep -- ens: Lord, with me a -- bide!
@@ -198,7 +223,7 @@ verseOne = \lyricmode {
   Help of the help -- less, O a -- bide with me!
 }
 
-verseTwo = \lyricmode {
+VerseTwo = \lyricmode {
   \set stanza = "2. "
   Swift to its close ebbs out life's lit -- tle day;
   Earth's joys grow dim, its glo -- ries pass a -- way;
@@ -206,7 +231,7 @@ verseTwo = \lyricmode {
   O Thou who chang -- est not, a -- bide with me!
 }
 
-verseThree = \lyricmode {
+VerseThree = \lyricmode {
   \set stanza = "3. "
   Come not in ter -- rors as the King of kings,
   But kind and good, with heal -- ing in Thy wings;
@@ -214,7 +239,7 @@ verseThree = \lyricmode {
   O Friend of sin -- ners, thus a -- bide with me!
 }
 
-verseFour = \lyricmode {
+VerseFour = \lyricmode {
   \set stanza = "4. "
   I need Thy pres -- ence eve -- ry pass -- ing hour:
   What but Thy grace can foil the tempt -- er's pow'r?
@@ -222,7 +247,7 @@ verseFour = \lyricmode {
   Through cloud and sun -- shine, O a -- bide with me!
 }
 
-verseFive = \lyricmode {
+VerseFive = \lyricmode {
   \set stanza = "5. "
   I fear no foe, with Thee at hand to bless:
   Ills have no weight, and tears no bit -- ter -- ness.
@@ -230,10 +255,16 @@ verseFive = \lyricmode {
   I tri -- umph still, if Thou a -- bide with me!
 }
 
-verseSix = \lyricmode {
+VerseSix = \lyricmode {
   \set stanza = "6. "
   Hold Thou Thy Cross be -- fore my clos -- ing eyes,
   Shine through the gloom and point me to the skies;
   Heav'n's morn -- ing breaks, and earth's vain sha -- dows flee;
   In life, in death, O Lord, a -- bide with me!
 }
+
+MajorKey = ##t
+%SlideLyricMinimumDistance = #1.8
+SlideLyricFontSize = #4
+
+\include "bumby-hymnal-style.ly"

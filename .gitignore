@@ -8,6 +8,13 @@ Source/*/*.midi
 Source/*/*.mp3
 Source/*/*.ps
 Source/*/*.eps
+Source/*.pdf
+Source/*.png
+Source/*.mid
+Source/*.midi
+Source/*.mp3
+Source/*.ps
+Source/*.eps
 Build/*.pdf
 Build/*.mid
 *.log
