@@ -1,12 +1,5 @@
 \version "2.19.49"
 
-%
-% Sets the build directory variable if not already set.  This allows you to
-% set an alternative build directory from the command line, or from another
-% source.
-%
-#(if (not (defined? 'build_dir)) (define build_dir ""))
-
 setSystemOffset =
 #(define-music-function (parser location offset)
    (number?)

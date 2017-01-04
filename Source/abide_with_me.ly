@@ -2,12 +2,15 @@
 
 \include "common.ly"
 
-Key = \key ees \major
+%%
+%% Tweaks
+%%
 
-Time = {
-  \time 4/4
-  \tempo 4 = 110
-}
+SlideLyricFontSize = #4
+
+%%
+%% Hymn Metadata Variables
+%%
 
 Title = "Abide With Me"
 SongNumber = \abide_with_me_number
@@ -18,6 +21,25 @@ LeaderHints = \markup {
 }
 
 FirstPage = #(if abide_with_me_number_rhs 1 2)
+
+Scripture = \markup {
+  \override #'(line-width . 60)
+  \center-column {
+    \vspace #0.75
+    \abs-fontsize #24
+    \italic \wordwrap-string #"Abide with us, for it is toward evening,
+       and the day is far spent. - Luke 24:29"
+    \vspace #1.5
+    \abs-fontsize #24 \italic #"\"O Death, where is your sting?"
+    \abs-fontsize #24 \italic #"O Hades, where is your victory?\""
+    \vspace #0.25
+    \abs-fontsize #24 \italic \wordwrap-string #"The sting of death is sin, and the strength of sin is the law.
+       But thanks be to God, who gives us the victory through our
+       Lord Jesus Christ. - 1 Corinthians 15:55-57"
+  }
+}
+
+ShowScriptureOnSheetMusic = ##f
 
 \header {
   title = \Title
@@ -31,25 +53,21 @@ FirstPage = #(if abide_with_me_number_rhs 1 2)
   copyright = "In the Public Domain"
   license = ##f
   tagline = ##f
-  scripture = \markup {
-    \override #'(line-width . 60)
-    \center-column {
-      \vspace #0.75
-      \abs-fontsize #24
-      \italic \wordwrap-string #"Abide with us, for it is toward evening,
-         and the day is far spent. - Luke 24:29"
-      \vspace #1.5
-      \abs-fontsize #24 \italic #"\"O Death, where is your sting?"
-      \abs-fontsize #24 \italic #"O Hades, where is your victory?\""
-      \vspace #0.25
-      \abs-fontsize #24 \italic \wordwrap-string #"The sting of death is sin, and the strength of sin is the law.
-         But thanks be to God, who gives us the victory through our
-         Lord Jesus Christ. - 1 Corinthians 15:55-57"
-    }
-  }
 }
 
-SopranoMusic = \relative c'' {
+%%
+%% Music and Lyrics Variables
+%%
+
+Key = \key ees \major
+MajorKey = ##t
+
+Time = {
+  \time 4/4
+  \tempo 4 = 110
+}
+
+SopranoVerseMusic = \relative c'' {
   g2 g4 f |
   ees2 bes' |
   c4 bes bes aes |
@@ -71,7 +89,7 @@ SopranoMusic = \relative c'' {
   ees1 \bar "|."
 }
 
-AltoMusic = \relative c' {
+AltoVerseMusic = \relative c' {
   ees2 d4 d |
   ees2 ees |
   ees4 d ees f |
@@ -93,7 +111,7 @@ AltoMusic = \relative c' {
   ees1 \bar "|."
 }
 
-TenorMusic = \relative c' {
+TenorVerseMusic = \relative c' {
   bes2 bes4 aes |
   g2 ees |
   ees4 bes' bes bes |
@@ -115,7 +133,7 @@ TenorMusic = \relative c' {
   g1 \bar "|."
 }
 
-BassMusic = \relative c {
+BassVerseMusic = \relative c {
   ees2 bes4 bes |
   c2 g |
   aes4 bes c d |
@@ -137,7 +155,7 @@ BassMusic = \relative c {
   ees1 \bar "|."
 }
 
-AlignMusic = \relative c'' {
+AlignVerseMusic = \relative c {
   c2 c4 c4 |
   c2 c2 |
   c4 c4 c4 c4 |
@@ -159,7 +177,7 @@ AlignMusic = \relative c'' {
   c1 \bar "|."
 }
 
-SheetMusicBreaks = \relative c {
+SheetMusicVerseBreaks = \relative c {
   s1 | \noBreak
   s1 | \noBreak
   s1 | \noBreak
@@ -181,7 +199,7 @@ SheetMusicBreaks = \relative c {
   s1 \bar "|."
 }
 
-SlidesBreaks = \relative c {
+SlidesVerseBreaks = \relative c {
   \setSystemOffset \defaultTopSystemOffset
   s1 | \noBreak
   s1 | \break
@@ -262,9 +280,5 @@ VerseSix = \lyricmode {
   Heav'n's morn -- ing breaks, and earth's vain sha -- dows flee;
   In life, in death, O Lord, a -- bide with me!
 }
-
-MajorKey = ##t
-%SlideLyricMinimumDistance = #1.8
-SlideLyricFontSize = #4
 
 \include "bumby-hymnal-style.ly"

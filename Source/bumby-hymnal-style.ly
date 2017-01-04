@@ -23,14 +23,14 @@
   \header { ... }
   Key = { ... }
   Time = { ... }
-  SopranoMusic = \relative { ... }
-  AltoMusic = \relative { ... }
+  SopranoVerseMusic = \relative { ... }
+  AltoVerseMusic = \relative { ... }
   VerseOne = \lyricmode { ... }
   VerseTwo = \lyricmode { ... }
   ...
   VerseNine = \lyricmode { ... }
-  TenorMusic = \relative { ... }
-  BassMusic = \relative { ... }
+  TenorVerseMusic = \relative { ... }
+  BassVerseMusic = \relative { ... }
   \include "bumby-hymnal-style.ly"
 
   All of the definitions are optional. Staves with no music will be
@@ -53,6 +53,106 @@ TBD: revise from here down
 
 %}
 
+%%%
+%%%
+%%% TBD: Test for the presence of required input variables
+%%%
+%%%
+
+%
+% The Scripture variable can come in two forms: preformatted, or
+% just as a string.
+%
+
+#(if (null? (ly:parser-lookup (string->symbol "Scripture")))
+     (begin
+      (ly:error "Missing Scripture Variable")
+      (ly:exit 1)))
+
+SlideScripture = #(if (string? (ly:parser-lookup (string->symbol "Scripture")))
+  #{
+    \markup {
+      \vspace #2
+      \override #'(line-width . 60)
+      \center-column {
+        \abs-fontsize #24
+        \italic
+        \wordwrap-string \Scripture
+      }
+    }
+  #}
+  (ly:parser-lookup (string->symbol "Scripture")))
+
+#(if (null? (ly:parser-lookup (string->symbol "ShowScriptureOnSheetMusic")))
+     (begin
+      (ly:error "Missing ShowScriptureOnSheetMusic variable")
+      (ly:exit 1)))
+
+SheetMusicScripture = #(if ShowScriptureOnSheetMusic
+  (if (string? (ly:parser-lookup (string->symbol "Scripture")))
+    #{
+      \markup {
+        \vspace #0.5
+        \fill-line {
+          \override #'(line-width . 5) ""
+          \override #'(line-width . 80) \center-column {
+            \abs-fontsize #10
+            \italic \wordwrap-string \Scripture
+          }
+          \override #'(line-width . 5) ""
+        }
+      }
+    #}
+    (ly:parser-lookup (string->symbol "Scripture")))
+  #{
+    \markup { }
+  #})
+
+#(if (null? (ly:parser-lookup (string->symbol "SopranoVerseMusic")))
+     (begin
+      (ly:error "Missing SopranoVerseMusic Variable")
+      (ly:exit 1)))
+
+#(if (null? (ly:parser-lookup (string->symbol "AltoVerseMusic")))
+     (begin
+      (ly:error "Missing AltoVerseMusic Variable")
+      (ly:exit 1)))
+
+#(if (null? (ly:parser-lookup (string->symbol "TenorVerseMusic")))
+     (begin
+      (ly:error "Missing TenorVerseMusic Variable")
+      (ly:exit 1)))
+
+#(if (null? (ly:parser-lookup (string->symbol "BassVerseMusic")))
+     (begin
+      (ly:error "Missing BassVerseMusic Variable")
+      (ly:exit 1)))
+
+#(if (null? (ly:parser-lookup (string->symbol "SopranoChorusMusic")))
+     (define HasChorus #f)
+     (define HasChorus #t))
+
+%%%
+%%%
+%%% TBD: Ensure optional variables exist
+%%%
+%%%
+
+#(if (null? (ly:parser-lookup (string->symbol "SheetMusicRaggedLast")))
+     (ly:parser-define! (string->symbol "SheetMusicRaggedLast") #f))
+
+#(if (null? (ly:parser-lookup (string->symbol "SlideLyricMinimumDistance")))
+     (ly:parser-define! (string->symbol "SlideLyricMinimumDistance") 3))
+
+#(if (null? (ly:parser-lookup (string->symbol "SlideLyricFontSize")))
+     (ly:parser-define! (string->symbol "SlideLyricFontSize") 3))
+
+#(if (null? (ly:parser-lookup (string->symbol "SlideNoteHeadFontSize")))
+     (ly:parser-define! (string->symbol "SlideNoteHeadFontSize") 2))
+
+#(if (null? (ly:parser-lookup (string->symbol "SheetMusicLyricsMinimumDistance")))
+     (ly:parser-define! (string->symbol "SheetMusicLyricsMinimumDistance") 3))
+
 %%% These are the general utility functions and storage
 %   used by the built-in templates and the template kits
 %   (tkits) supporting them.
@@ -63,20 +163,23 @@ TBD: revise from here down
    "Return the identifier with the value str"
    (ly:parser-lookup (string->symbol str)))
 
-#(define (make-id a b)
+#(define (make-id a b c)
   "Return the identifier formed from concatenating the
    two strings provided as arguments."
-   (get-id (string-append a b)))
+   (get-id (string-append a b c)))
 
-#(define (cartesian a b)
+#(define (cartesian a b c)
   "Return a list formed from concatenating every element
    of list a with every element of list b (the cartesian
    product a X b)."
    (append-map
     (lambda (x)
-      (map
+      (append-map
        (lambda (y)
-         (string-append x y))
+         (map
+          (lambda (z)
+           (string-append x y z))
+          c))
        b))
     a))
 
@@ -99,7 +202,7 @@ TBD: revise from here down
 % by the template, and may be set to any values there.
 #(define voice-prefixes '())   % eg "Soprano"
 #(define staff-names '())      % eg "WomenDividedStaff"
-#(define all-music-names '())  % eg "SopranoMusic"
+#(define all-music-names '())  % eg "SopranoVerseMusic"
 #(define lyrics-postfixes '())	% eg "Lyrics"
 #(define lyrics-names '())     % eg "VerseOne"
 
@@ -127,6 +230,12 @@ TBD: revise from here down
    '("WomenDividedStaff"
      "MenDividedStaff"))
 
+#(define section-names
+   ;; These names are used verbatim in code, so may not be changed
+   '("Verse"
+     "Chorus"
+     "Coda"))
+
 #(define output-types
    ;; These names are used verbatim in code, so may not be changed
    '("SheetMusic"
@@ -152,22 +261,35 @@ TBD: revise from here down
 #(define (output-type? x)
    (member x output-types))
 
-#(define (verses? x)
-   (member x lyrics-names))
+#(define (section? x)
+   (member x section-names))
 
+#(define (verses? x)
+   (member x (append lyrics-names '("ChorusLyrics" "CodaLyrics"))))
 
 #(define (set-music-definitions! prefixes lyr-names)
   "Populate the name definitions and their derivatives
    with the values provided by the calling template"
+   (ly:message "Step 1.1")
    (set! voice-prefixes prefixes)
+   (ly:message "Step 1.2")
    (append! variable-names lyr-names)
+   (ly:message "Step 1.3")
    (set! all-music-names
-         (cartesian voice-prefixes '("Music")))
+         (cartesian voice-prefixes '("Verse" "Chorus" "Coda") '("Music")))
+   (ly:message "Step 1.4")
+   (for-each
+      (lambda (id)
+        (ly:message id))
+      all-music-names)
+   (ly:message "Step 1.5")
    (set! lyrics-names lyr-names)
+   (ly:message "Step 1.6")
    (define-missing-variables! (append
                                   variable-names
                                   all-music-names
                                   lyrics-names))
+   (ly:message "Step 1.7")
    (set! AllMusic
      (make-simultaneous-music
       (filter ly:music?
@@ -175,19 +297,21 @@ TBD: revise from here down
                (lambda (x)
                  (get-id x))
                all-music-names))))
+   (ly:message "Step 1.8")
    (set! KeepAlive
          (skip-of-length AllMusic))
+   (ly:message "Step 1.9")
    (set! have-music
          (ly:moment<?
           (ly:make-moment 0)
           (ly:music-length KeepAlive))))
 
 make-voice =
-#(define-music-function (name) (voice-prefix?)
+#(define-music-function (name section) (voice-prefix? section?)
    (define music (make-id name "Music"))
    (if music
        #{
-         \new Voice = #(string-append name "Voice") <<
+         \new Voice = #(string-append name section "Voice") <<
            #(if KeepAlive KeepAlive)
            #(if Time Time )
            #music
@@ -227,89 +351,76 @@ make-one-stanza =
 % The last two lists of names are used as-is.
 
 make-two-voice-staff =
-#(define-music-function (outputType addBreaks clef v1name v2name)
-   (output-type? boolean? clef? voice-prefix? voice-prefix?)
+#(define-music-function (outputType section addBreaks clef v1name v2name)
+   (output-type? section? boolean? clef? voice-prefix? voice-prefix?)
 
    "Make a vocal staff with two voices
       clef: the clef to use
     v1name: the prefix to the name of voice one
     v2name: the prefix to the name of voice two "
 
-   (define v1music (make-id v1name "Music"))
-   (define v2music (make-id v2name "Music"))
-   (define amusic (get-id "AlignMusic"))
-   (define breakmusic (make-id outputType "Breaks"))
+   (define v1music (make-id v1name section "Music"))
+   (define v2music (make-id v2name section "Music"))
+   (define amusic (make-id "Align" section "Music"))
+   (define breakmusic (make-id outputType section "Breaks"))
    (if (or v1music v2music)
-       #{
+     #{
+       <<
+         \new Staff
+         \with {
+           \remove "Staff_performer"
+         }
          <<
-           \new Staff
-           \with {
-             \remove "Staff_performer"
-           }
-           <<
-             #(if Key Key)
-             #(if Time Time)
-             \clef #clef
+           #(if Key Key)
+           #(if Time Time)
+           \clef #clef
 
-             #(make-directed-part-combine-music #f '(2 . 12) v1music v2music
-                #{ \with { \voiceOne \override DynamicLineSpanner.direction = #UP } #}
-                #{ \with { \voiceTwo \override DynamicLineSpanner.direction = #DOWN } #}
-                #{ #} )
+           #(make-directed-part-combine-music #f '(2 . 12) v1music v2music
+              #{ \with { \voiceOne \override DynamicLineSpanner.direction = #UP } #}
+              #{ \with { \voiceTwo \override DynamicLineSpanner.direction = #DOWN } #}
+              #{ #} )
              
-             \new NullVoice = "AlignVoice" {
-               #amusic
-             }
+           \new NullVoice = "AlignVoice" {
+             \keepWithTag #'usePartials #amusic
+           }
              
-             #(if addBreaks #{ \new NullVoice = "Breaks" { #breakmusic } #} )
+           #(if addBreaks #{ \new NullVoice = "Breaks" { \keepWithTag #'usePartials #breakmusic } #} )
                
-           >>
          >>
-       #}
-        (make-music 'SequentialMusic 'void #t)))
+       >>
+     #}
+     (make-music 'SequentialMusic 'void #t)))
 
 make-two-vocal-staves-with-stanzas =
 #(define-music-function
-  (outputType verses)
-  (output-type? list?)
+  (outputType section verses)
+  (output-type? section? list?)
 
   "Make two two-voice vocal staves with several stanzas between them.
 The number of stanzas is determined by the number of populated verse names.
  outputType: The type of output (sheet music, slides, or audio)
      vxname: the prefix to the name of voice x, x = 1..4
      verses: the list of verse names containing the stanzas"
-
   (make-simultaneous-music
    (list
-    (make-two-voice-staff outputType #t "treble" "Soprano" "Alto")
+    (make-two-voice-staff outputType section #t "treble" "Soprano" "Alto")
     (make-simultaneous-music
      (map
       (lambda (verse-name)
         (make-one-stanza verse-name))
         verses))
-    (make-two-voice-staff outputType #f "bass" "Tenor" "Bass"))))
+    (make-two-voice-staff outputType section #f "bass" "Tenor" "Bass"))))
 
 
 #(define satb-voice-prefixes
    ;; These define the permitted prefixes to various names.
    ;; They are combined with a fixed set of postfixes to form
-   ;; names such as AltoMusic, BassInstrumentName, etc.
+   ;; names such as AltoVerseMusic, BassInstrumentName, etc.
    ;; These names may be redefined.
    '("Alto"
      "Bass"
      "Soprano"
      "Tenor"))
-
-%{#(define satb-lyrics-postfixes
-   ;; These define the permitted postfixes to the names of lyrics.
-   ;; They are combined with the prefixes to form names like
-   ;; AltoLyrics, etc.
-   ;; These names may be redefined or extended.
-  '("Lyrics"
-    "LyricsOne"
-    "LyricsTwo"
-    "LyricsThree"
-    "LyricsFour"))
-%}
 
 #(define satb-lyrics-variable-names
    ;; These define the names which may be used to specify stanzas
@@ -325,10 +436,16 @@ The number of stanzas is determined by the number of populated verse names.
     "VerseEight"
     "VerseNine"))
 
+#(define chorus-lyrics-variable-names
+   '("ChorusLyrics"))
+
+#(ly:message "Step 1")
 %% make the above definitions available
 #(set-music-definitions!
   satb-voice-prefixes
   satb-lyrics-variable-names)
+
+#(ly:message "Step 2")
 
 \layout {
   \context {
@@ -341,7 +458,12 @@ The number of stanzas is determined by the number of populated verse names.
 SongNumber = #(ly:parser-lookup 'SongNumber)
 Title = #(ly:parser-lookup 'Title)
 FirstPage = #(ly:parser-lookup 'FirstPage)
-BuildDir = #(ly:parser-lookup 'build_dir)
+UseBuildDir = #(not (null? (ly:parser-lookup (string->symbol "build_dir"))))
+
+#(ly:message "Step 3")
+
+#(if UseBuildDir
+     #{ BuildDir = #(ly:parser-lookup 'build_dir) #})
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                        %
@@ -349,8 +471,100 @@ BuildDir = #(ly:parser-lookup 'build_dir)
 %                                                        %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+#(ly:message "Step 4")
+
+SheetMusicVerseLayout = \layout {
+      #(layout-set-staff-size 18)
+      \context {
+        \Lyrics
+        \override LyricSpace.minimum-distance = \SheetMusicLyricsMinimumDistance
+        \override LyricText.font-size = #0
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = #1
+        \override LyricHyphen.length = #1.0
+        \override VerticalAxisGroup.nonstaff-nonstaff-spacing =
+            #'((basic-distance . 0)
+               (minimum-distance . 0)
+               (padding . 0.85)
+               (stretchability . 0))
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = #1
+        \override NoteHead.font-size = #1
+        #(if 'MajorKey #{ \aikenHeads #} #{ \aikenHeadsMinor #})
+      }
+      \context {
+        \Score
+        \override SpacingSpanner.uniform-stretching = ##t
+        \override SpacingSpanner.shortest-duration-space = #2.0
+        \override SpacingSpanner.common-shortest-duration = #(ly:make-moment 1/2)
+        \remove "Bar_number_engraver"
+      }
+    }
+
+SheetMusicChorusLayout = \layout {
+      #(layout-set-staff-size 18)
+      \context {
+        \Lyrics
+        \override LyricSpace.minimum-distance = \SheetMusicLyricsMinimumDistance
+        \override LyricText.font-size = #0
+        \override LyricText.self-alignment-X = #CENTER
+        \override LyricHyphen.thickness = #1
+        \override LyricHyphen.length = #1.0
+        \override VerticalAxisGroup.nonstaff-nonstaff-spacing =
+            #'((basic-distance . 0)
+               (minimum-distance . 0)
+               (padding . 0.85)
+               (stretchability . 0))
+      }
+      \context {
+        \Staff
+        \override StaffSymbol.thickness = #1
+        \override NoteHead.font-size = #1
+        #(if 'MajorKey #{ \aikenHeads #} #{ \aikenHeadsMinor #})
+      }
+      \context {
+        \Score
+        \override SpacingSpanner.uniform-stretching = ##t
+        \override SpacingSpanner.shortest-duration-space = #2.0
+        \override SpacingSpanner.common-shortest-duration = #(ly:make-moment 1/2)
+        \remove "Bar_number_engraver"
+        \remove "Metronome_mark_engraver"
+      }
+    }
+
+ChorusMarkup = #(if HasChorus
+  #{
+    \markup {
+      \vspace #2
+      \huge \bold "Chorus:"
+    }
+  #}
+  #{
+    \markup { }
+  #} )
+
+ChorusScore = #(if HasChorus
+  #{
+    \score {
+      <<
+        \new ChoirStaff <<
+          \make-two-vocal-staves-with-stanzas
+            "SheetMusic"
+            "Chorus"
+            #chorus-lyrics-variable-names
+        >>
+      >>
+      \SheetMusicChorusLayout
+    }
+  #})
+
 \book {
-  \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Sheet Music")
+  #(if UseBuildDir
+    #{
+      \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Sheet Music")
+    #})
   \paper {
     #(set-paper-size "letter")
     
@@ -375,6 +589,8 @@ BuildDir = #(ly:parser-lookup 'build_dir)
     binding-offset = 0.5\in
     top-margin = 0.25\in
     bottom-margin = 0.25\in
+    ragged-right = ##f
+    ragged-last = \SheetMusicRaggedLast
     print-page-number = ##f
     ragged-bottom = ##f
     oddFooterMarkup = \markup {
@@ -412,6 +628,7 @@ BuildDir = #(ly:parser-lookup 'build_dir)
             \wordwrap-field #'header:title
             \fromproperty #'header:rhs
           }
+          \SheetMusicScripture
         }
       }
       \vspace #0.5
@@ -422,37 +639,14 @@ BuildDir = #(ly:parser-lookup 'build_dir)
       \new ChoirStaff <<
         \make-two-vocal-staves-with-stanzas
           "SheetMusic"
+          "Verse"
           #satb-lyrics-variable-names
       >>
     >>
-    \layout {
-      #(layout-set-staff-size 18)
-      \context {
-        \Lyrics
-        \override LyricSpace.minimum-distance = #3
-        \override LyricText.font-size = #0
-        \override LyricText.self-alignment-X = #CENTER
-        \override LyricHyphen.thickness = #1
-        \override LyricHyphen.length = #1.0
-        \override VerticalAxisGroup.nonstaff-nonstaff-spacing =
-            #'((basic-distance . 0)
-               (minimum-distance . 0)
-               (padding . 0.85)
-               (stretchability . 0))
-
-      }
-      \context {
-        \Staff
-        \override StaffSymbol.thickness = #1
-        \override NoteHead.font-size = #1
-        #(if MajorKey #{ \aikenHeads #} #{ \aikenHeadsMinor #})
-      }
-      \context {
-        \Score
-        \remove "Bar_number_engraver"
-      }
-    }
+    \SheetMusicVerseLayout
   }
+  \ChorusMarkup
+  \ChorusScore
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -461,32 +655,29 @@ BuildDir = #(ly:parser-lookup 'build_dir)
 %                                                        %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-#(if (null? (ly:parser-lookup (string->symbol "SlideLyricMinimumDistance")))
-     (ly:parser-define! (string->symbol "SlideLyricMinimumDistance") 3))
-
-#(if (null? (ly:parser-lookup (string->symbol "SlideLyricFontSize")))
-     (ly:parser-define! (string->symbol "SlideLyricFontSize") 0))
-
 SlideLayout = \layout {
   \context {
     \Lyrics
-    \override LyricSpace.minimum-distance = #(ly:parser-lookup (string->symbol "SlideLyricMinimumDistance"))
-    \override LyricText.font-size = #(ly:parser-lookup (string->symbol "SlideLyricFontSize"))
+    \override LyricSpace.minimum-distance = \SlideLyricMinimumDistance
+    \override LyricText.font-size = \SlideLyricFontSize
     \override LyricText.self-alignment-X = #CENTER
     \override LyricHyphen.thickness = #2
     \override LyricHyphen.length = #1.2
+    \override StanzaNumber.font-size = \SlideLyricFontSize
     \override VerticalAxisGroup.staff-affinity = #CENTER
   }
   \context {
     \Staff
     \override StaffSymbol.thickness = #2
-    \override NoteHead.font-size = #0
+    \override NoteHead.font-size = \SlideNoteHeadFontSize
+    \override Stem.length-fraction = #(magstep SlideNoteHeadFontSize)
     \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 20))
     \aikenHeads
   }
   \context {
     \Score
     \remove "Bar_number_engraver"
+    \remove "Metronome_mark_engraver"
   }
 }
 
@@ -496,6 +687,7 @@ VerseOneScore = #(if (get-id "VerseOne")
          \new ChoirStaff <<
            \make-two-vocal-staves-with-stanzas
              "Slides"
+             "Verse"
              #'("VerseOne")
          >>
        >>
@@ -509,6 +701,7 @@ VerseTwoScore = #(if (get-id "VerseTwo")
          \new ChoirStaff <<
            \make-two-vocal-staves-with-stanzas
              "Slides"
+             "Verse"
              #'("VerseTwo")
          >>
        >>
@@ -522,6 +715,7 @@ VerseThreeScore = #(if (get-id "VerseThree")
          \new ChoirStaff <<
            \make-two-vocal-staves-with-stanzas
              "Slides"
+             "Verse"
              #'("VerseThree")
          >>
        >>
@@ -535,6 +729,7 @@ VerseFourScore = #(if (get-id "VerseFour")
          \new ChoirStaff <<
            \make-two-vocal-staves-with-stanzas
              "Slides"
+             "Verse"
              #'("VerseFour")
          >>
        >>
@@ -548,6 +743,7 @@ VerseFiveScore = #(if (get-id "VerseFive")
          \new ChoirStaff <<
            \make-two-vocal-staves-with-stanzas
              "Slides"
+             "Verse"
              #'("VerseFive")
          >>
        >>
@@ -561,6 +757,7 @@ VerseSixScore = #(if (get-id "VerseSix")
          \new ChoirStaff <<
            \make-two-vocal-staves-with-stanzas
              "Slides"
+             "Verse"
              #'("VerseSix")
          >>
        >>
@@ -574,6 +771,7 @@ VerseSevenScore = #(if (get-id "VerseSeven")
          \new ChoirStaff <<
            \make-two-vocal-staves-with-stanzas
              "Slides"
+             "Verse"
              #'("VerseSeven")
          >>
        >>
@@ -581,11 +779,53 @@ VerseSevenScore = #(if (get-id "VerseSeven")
      } #}
      (make-music 'SequentialMusic 'void #t))
 
-VerseEightScore = #(make-music 'SequentialMusic 'void #t)
-VerseNineScore = #(make-music 'SequentialMusic 'void #t)
+VerseEightScore = #(if (get-id "VerseEight")
+  #{ \score {
+       <<
+         \new ChoirStaff <<
+           \make-two-vocal-staves-with-stanzas
+             "Slides"
+             "Verse"
+             #'("VerseEight")
+         >>
+       >>
+       \SlideLayout
+     } #}
+     (make-music 'SequentialMusic 'void #t))
+
+VerseNineScore = #(if (get-id "VerseNine")
+  #{ \score {
+       <<
+         \new ChoirStaff <<
+           \make-two-vocal-staves-with-stanzas
+             "Slides"
+             "Verse"
+             #'("VerseNine")
+         >>
+       >>
+       \SlideLayout
+     } #}
+     (make-music 'SequentialMusic 'void #t))
+
+SlideChorusScore = #(if HasChorus
+  #{ \score {
+       <<
+         \new ChoirStaff <<
+           \make-two-vocal-staves-with-stanzas
+             "Slides"
+             "Chorus"
+             #'("ChorusLyrics")
+         >>
+       >>
+       \SlideLayout
+     } #}
+     (make-music 'SequentialMusic 'void #t))
 
 \book {
-  \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Slides")
+  #(if UseBuildDir
+    #{
+      \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Slides")
+    #} )
   \paper {
     #(set-paper-size "arch a" 'landscape )
 
@@ -643,11 +883,11 @@ VerseNineScore = #(make-music 'SequentialMusic 'void #t)
           \bold
           \wordwrap-field #'header:title
         }
-        \fromproperty #'header:scripture
+        \SlideScripture
       }
     }
     scoreTitleMarkup = ##f
-    #(layout-set-staff-size 48)
+    #(layout-set-staff-size 44)
   }
   \pageBreak
   \VerseOneScore
@@ -659,97 +899,381 @@ VerseNineScore = #(make-music 'SequentialMusic 'void #t)
   \VerseSevenScore
   \VerseEightScore
   \VerseNineScore
-  %{
-  #(if (get-id "VerseOne")
-       #{
-         \score {
-           <<
-             \new ChoirStaff <<
-               \make-two-vocal-staves-with-stanzas
-               "Slides"
-               #'("VerseOne")
-             >>
-           >>
-           \layout {
-             \context {
-               \Lyrics
-               \override LyricSpace.minimum-distance = #3
-               \override LyricText.font-size = #0
-               \override LyricText.self-alignment-X = #CENTER
-               \override LyricHyphen.thickness = #2
-               \override LyricHyphen.length = #1.2
-             }
-             \context {
-               \Staff
-               \override StaffSymbol.thickness = #2
-               \override NoteHead.font-size = #0
-             }
-           }
-         }
-       #})%}
+  \SlideChorusScore
 }
 
-%  \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Slides")
-%{
-             \layout {
-               \context {
-                 \Lyrics
-                 \override LyricSpace.minimum-distance = #3
-                 \override LyricText.font-size = #0
-                 \override LyricText.self-alignment-X = #CENTER
-                 \override LyricHyphen.thickness = #2
-                 \override LyricHyphen.length = #1.2
-               }
-               \context {
-                 \Staff
-                 \override StaffSymbol.thickness = #2
-                 \override NoteHead.font-size = #0
-               }
-             }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                        %
+%                       MIDI FILES                       %
+%                                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-#(define slide-scores '())
-#(map
-  (lambda (verse-name)
-    (if (get-id verse-name)
-        (append slide-scores
-          (ly:make-score
-           #{
-             <<
-               \new ChoirStaff <<
-                 \make-two-vocal-staves-with-stanzas
-                 "Slides"
-                 #(list verse-name)
-               >>
-             >>
-           #}))))
-  lyrics-names)
+\book {
+  #(if UseBuildDir
+    #{
+      \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Audio - All")
+    #} )
+  \score {
+    \context ChoirStaff <<
+      \context Staff = upper <<
+        \context Voice = sopranos \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \allMaxVolume
+          midiMinimumVolume = \allMinVolume
+          midiPanPosition = \allPan
+        } {
+          \voiceOne {
+            #(if Time Time)
+            \keepWithTag #'usePartials \SopranoVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \SopranoChorusMusic #})
+          }
+        }
+        \context Voice = altos \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \allMaxVolume
+          midiMinimumVolume = \allMinVolume
+          midiPanPosition = \allPan
+        } {
+          \voiceTwo {
+            #(if Time Time)
+            \keepWithTag #'usePartials \AltoVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \AltoChorusMusic #})
+          }
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \context Voice = tenors \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \allMaxVolume
+          midiMinimumVolume = \allMinVolume
+          midiPanPosition = \allPan
+        } {
+          \voiceOne {
+            #(if Time Time)
+            \keepWithTag #'usePartials \TenorVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \TenorChorusMusic #})
+          }
+        }
+        \context Voice = basses \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \allMaxVolume
+          midiMinimumVolume = \allMinVolume
+          midiPanPosition = \allPan
+        } {
+          \voiceTwo {
+            #(if Time Time)
+            \keepWithTag #'usePartials \BassVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \BassChorusMusic #})
+          }
+        }
+      >>
+    >>
+    \midi {
+      \context {
+        \Staff
+        \remove "Staff_performer"
+      }
+      \context {
+        \Voice
+          \consists "Staff_performer"
+      }
+    }
+  }
+}
 
-#(ly:make-book slidePaperBlock slide-scores)
-%{     (if verse-name
-       #{
-         \score {
-           <<
-             \new ChoirStaff <<
-               \make-two-vocal-staves-with-stanzas
-               "Slides"
-               #'(verse-name)
-             >>
-           >>
-           \layout {
-             \context {
-               \Lyrics
-               \override LyricSpace.minimum-distance = \lyricMinimumDistance
-               \override LyricText.font-size = \lyricFontSize
-               \override LyricText.self-alignment-X = #CENTER
-               \override LyricHyphen.thickness = \hyphenThickness
-               \override LyricHyphen.length = \hyphenLength
-             }
-             \context {
-               \Staff
-               \override StaffSymbol.thickness = \staffLineThickness
-               \override NoteHead.font-size = \noteHeadFontSize
-             }
-           }
-         }
-       #} ) %}
-%}
+\book {
+  #(if UseBuildDir
+    #{
+      \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Audio - Soprano")
+    #} )
+  \score {
+    \context ChoirStaff <<
+      \context Staff = upper <<
+        \context Voice = sopranos \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \dominantMaxVolume
+          midiMinimumVolume = \dominantMinVolume
+          midiPanPosition = \dominantPan
+        } {
+          \voiceOne {
+            #(if Time Time)
+            \keepWithTag #'usePartials \SopranoVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \SopranoChorusMusic #})
+          }
+        }
+        \context Voice = altos \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \diminishedMaxVolume
+          midiMinimumVolume = \diminishedMinVolume
+          midiPanPosition = \diminishedPan
+        } {
+          \voiceTwo {
+            #(if Time Time)
+            \keepWithTag #'usePartials \AltoVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \AltoChorusMusic #})
+          }
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \context Voice = tenors \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \diminishedMaxVolume
+          midiMinimumVolume = \diminishedMinVolume
+          midiPanPosition = \diminishedPan
+        } {
+          \voiceOne {
+            #(if Time Time)
+            \keepWithTag #'usePartials \TenorVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \TenorChorusMusic #})
+          }
+        }
+        \context Voice = basses \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \diminishedMaxVolume
+          midiMinimumVolume = \diminishedMinVolume
+          midiPanPosition = \diminishedPan
+        } {
+          \voiceTwo {
+            #(if Time Time)
+            \keepWithTag #'usePartials \BassVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \BassChorusMusic #})
+          }
+        }
+      >>
+    >>
+    \midi {
+      \context {
+        \Staff
+        \remove "Staff_performer"
+      }
+      \context {
+        \Voice
+          \consists "Staff_performer"
+      }
+    }
+  }
+}
+
+\book {
+  #(if UseBuildDir
+    #{
+      \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Audio - Alto")
+    #} )
+  \score {
+    \context ChoirStaff <<
+      \context Staff = upper <<
+        \context Voice = sopranos \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \diminishedMaxVolume
+          midiMinimumVolume = \diminishedMinVolume
+          midiPanPosition = \diminishedPan
+        } {
+          \voiceOne {
+            #(if Time Time)
+            \keepWithTag #'usePartials \SopranoVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \SopranoChorusMusic #})
+          }
+        }
+        \context Voice = altos \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \dominantMaxVolume
+          midiMinimumVolume = \dominantMinVolume
+          midiPanPosition = \dominantPan
+        } {
+          \voiceTwo {
+            #(if Time Time)
+            \keepWithTag #'usePartials \AltoVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \AltoChorusMusic #})
+          }
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \context Voice = tenors \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \diminishedMaxVolume
+          midiMinimumVolume = \diminishedMinVolume
+          midiPanPosition = \diminishedPan
+        } {
+          \voiceOne {
+            #(if Time Time)
+            \keepWithTag #'usePartials \TenorVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \TenorChorusMusic #})
+          }
+        }
+        \context Voice = basses \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \diminishedMaxVolume
+          midiMinimumVolume = \diminishedMinVolume
+          midiPanPosition = \diminishedPan
+        } {
+          \voiceTwo {
+            #(if Time Time)
+            \keepWithTag #'usePartials \BassVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \BassChorusMusic #})
+          }
+        }
+      >>
+    >>
+    \midi {
+      \context {
+        \Staff
+        \remove "Staff_performer"
+      }
+      \context {
+        \Voice
+          \consists "Staff_performer"
+      }
+    }
+  }
+}
+
+\book {
+  #(if UseBuildDir
+    #{
+      \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Audio - Tenor")
+    #} )
+  \score {
+    \context ChoirStaff <<
+      \context Staff = upper <<
+        \context Voice = sopranos \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \diminishedMaxVolume
+          midiMinimumVolume = \diminishedMinVolume
+          midiPanPosition = \diminishedPan
+        } {
+          \voiceOne {
+            #(if Time Time)
+            \keepWithTag #'usePartials \SopranoVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \SopranoChorusMusic #})
+          }
+        }
+        \context Voice = altos \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \diminishedMaxVolume
+          midiMinimumVolume = \diminishedMinVolume
+          midiPanPosition = \diminishedPan
+        } {
+          \voiceTwo {
+            #(if Time Time)
+            \keepWithTag #'usePartials \AltoVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \AltoChorusMusic #})
+          }
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \context Voice = tenors \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \dominantMaxVolume
+          midiMinimumVolume = \dominantMinVolume
+          midiPanPosition = \dominantPan
+        } {
+          \voiceOne {
+            #(if Time Time)
+            \keepWithTag #'usePartials \TenorVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \TenorChorusMusic #})
+          }
+        }
+        \context Voice = basses \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \diminishedMaxVolume
+          midiMinimumVolume = \diminishedMinVolume
+          midiPanPosition = \diminishedPan
+        } {
+          \voiceTwo {
+            #(if Time Time)
+            \keepWithTag #'usePartials \BassVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \BassChorusMusic #})
+          }
+        }
+      >>
+    >>
+    \midi {
+      \context {
+        \Staff
+        \remove "Staff_performer"
+      }
+      \context {
+        \Voice
+          \consists "Staff_performer"
+      }
+    }
+  }
+}
+
+\book {
+  #(if UseBuildDir
+    #{
+      \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Audio - Bass")
+    #} )
+  \score {
+    \context ChoirStaff <<
+      \context Staff = upper <<
+        \context Voice = sopranos \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \diminishedMaxVolume
+          midiMinimumVolume = \diminishedMinVolume
+          midiPanPosition = \diminishedPan
+        } {
+          \voiceOne {
+            #(if Time Time)
+            \keepWithTag #'usePartials \SopranoVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \SopranoChorusMusic #})
+          }
+        }
+        \context Voice = altos \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \diminishedMaxVolume
+          midiMinimumVolume = \diminishedMinVolume
+          midiPanPosition = \diminishedPan
+        } {
+          \voiceTwo {
+            #(if Time Time)
+            \keepWithTag #'usePartials \AltoVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \AltoChorusMusic #})
+          }
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \context Voice = tenors \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \diminishedMaxVolume
+          midiMinimumVolume = \diminishedMinVolume
+          midiPanPosition = \diminishedPan
+        } {
+          \voiceOne {
+            #(if Time Time)
+            \keepWithTag #'usePartials \TenorVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \TenorChorusMusic #})
+          }
+        }
+        \context Voice = basses \with {
+          midiInstrument = "voice oohs"
+          midiMaximumVolume = \dominantMaxVolume
+          midiMinimumVolume = \dominantMinVolume
+          midiPanPosition = \dominantPan
+        } {
+          \voiceTwo {
+            #(if Time Time)
+            \keepWithTag #'usePartials \BassVerseMusic
+            #(if HasChorus #{ \removeWithTag #'usePartials \BassChorusMusic #})
+          }
+        }
+      >>
+    >>
+    \midi {
+      \context {
+        \Staff
+        \remove "Staff_performer"
+      }
+      \context {
+        \Voice
+          \consists "Staff_performer"
+      }
+    }
+  }
+}

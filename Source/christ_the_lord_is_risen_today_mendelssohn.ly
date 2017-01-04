@@ -1,114 +1,56 @@
 \version "2.19.49"
 
-\include "../common.ly"
+\include "common.ly"
 
-global = {
-  \key g \major
+%%
+%% Tweaks
+%%
+
+%%
+%% Music Variables
+%%
+
+Key = \key g \major
+MajorKey = ##t
+
+Time = {
   \time 4/4
-  \aikenHeads
+  \tempo 4=125
 }
 
-title = "Christ the Lord is Risen Today - Mendelssohn"
-songNumber = \christ_the_lord_is_risen_today_mendelssohn_number
-leaderHints = \markup {
+Title = "Christ the Lord is Risen Today"
+SongNumber = \christ_the_lord_is_risen_today_mendelssohn_number
+
+LeaderHints = \markup {
   \fontsize #-4
   \normal-text { "G - 4 - SOL" }
 }
-number_on_rhs = \christ_the_lord_is_risen_today_mendelssohn_number_rhs
 
-#(if number_on_rhs
-     (begin
-      (define lhs leaderHints)
-      (define rhs songNumber))
-     (begin
-      (define lhs songNumber)
-      (define rhs leaderHints)))
+FirstPage = #(if christ_the_lord_is_risen_today_mendelssohn_number_rhs 1 2)
 
+Scripture = "But the angel answered and said to the women,
+             “Do not be afraid, for I know that you seek Jesus who was crucified.
+             He is not here; for He is risen, as He said.
+             Come, see the place where the Lord lay.” (Matthew 28:5–6, NKJV)"
+
+ShowScriptureOnSheetMusic = ##f
 
 \header {
-  title = "Christ the Lord is Risen Today"
+  title = \Title
   tune = "MENDELSSOHN"
   meter = "7.7.7.7.D with refrain"
   composer = "Felix Mendelssohn (1840)"
   poet = "Charles Wesley"
-  songNumber = \songNumber
-  lhs = \lhs
-  rhs = \rhs
+  songNumber = \SongNumber
+  lhs = #(if christ_the_lord_is_risen_today_mendelssohn_number_rhs LeaderHints christ_the_lord_is_risen_today_mendelssohn_number)
+  rhs = #(if christ_the_lord_is_risen_today_mendelssohn_number_rhs christ_the_lord_is_risen_today_mendelssohn_number LeaderHints)
   copyright = "In the Public Domain"
   license = ##f
   arranger = "William H. Cummings"
-  scripture = #"But the angel answered and said to the women,
-                “Do not be afraid, for I know that you seek Jesus who was crucified.
-                 He is not here; for He is risen, as He said.
-                 Come, see the place where the Lord lay.” (Matthew 28:5–6, NKJV)"
   tagline = ##f
 }
 
-sheetMusicBreaks = \relative c {
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \break
-  
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \break
-  
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \break
-  
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \break
-  
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 \bar "|." \break
-}
-
-slideMusicBreaks = \relative c {
-  \setSystemOffset \defaultTopSystemOffset
-  s1 | \noBreak
-  s1 | \break
-  \setSystemOffset \defaultBottomSystemOffset
-  s1 | \noBreak
-  s1 | \break
-
-  \setSystemOffset \defaultTopSystemOffset
-  s1 | \noBreak
-  s1 | \break
-  \setSystemOffset \defaultBottomSystemOffset
-  s1 | \noBreak
-  s1 | \break
-
-  \setSystemOffset \defaultTopSystemOffset
-  s1 | \noBreak
-  s1 | \break
-  \setSystemOffset \defaultBottomSystemOffset
-  s1 | \noBreak
-  s1 | \break
-
-  \setSystemOffset \defaultTopSystemOffset
-  s1 | \noBreak
-  s1 | \break
-  \setSystemOffset \defaultBottomSystemOffset
-  s1 | \noBreak
-  s1 | \break
-
-  \setSystemOffset \defaultTopSystemOffset
-  s1 | \noBreak
-  s1 | \break
-  \setSystemOffset \defaultBottomSystemOffset
-  s1 | \noBreak
-  s1 \bar "|."
-}
-
-sopranoVerse = \relative c' {
+SopranoVerseMusic = \relative c' {
   d4 g4 g4. fis8 |
   g4 b4 b4( a4) |
   d4 d4 d4. c8 |
@@ -135,7 +77,7 @@ sopranoVerse = \relative c' {
   g4 a4 g2 \bar "|."
 }
 
-altoVerse = \relative c' {
+AltoVerseMusic = \relative c' {
   d4 d4 d4. d8 |
   d4 g4 g4( fis4) |
   g4 fis4 e4 a4 |
@@ -162,7 +104,7 @@ altoVerse = \relative c' {
   d4 d4 d2 \bar "|."
 }
 
-tenorVerse = \relative c' {
+TenorVerseMusic = \relative c' {
   b4 b4 b4. a8 |
   g4 d'4 d2 |
   d4 d4 e4 e4 |
@@ -189,7 +131,7 @@ tenorVerse = \relative c' {
   b4 c4 b2 \bar "|."
 }
 
-bassVerse = \relative c' {
+BassVerseMusic = \relative c' {
   g4 g4 g4 d4 |
   b4 g4 d'2 |
   b4 b4 c4 c4 |
@@ -216,7 +158,103 @@ bassVerse = \relative c' {
   d4 d4 g2 \bar "|."
 }
 
-verseOne = \lyricmode {
+AlignVerseMusic = \relative c' {
+  c4 c4 c4. c8 |
+  c4 c4 c2 |
+  c4 c4 c4. c8 |
+  c4 c4 c2 |
+  
+  c4 c4 c4. c8 |
+  c4 c4 c2 |
+  c4 c4 c4. c8 |
+  c4 c4 c2 |
+  
+  c4 c4 c4 c4 |
+  c4 c4 c2 |
+  c4 c4 c4 c4 |
+  c4 c4 c2 |
+
+  c4 c4 c4 c4 |
+  c4 c4 c2 |
+  c4 c4 c4. c8 |
+  c4 c4 c2 |
+  
+  c4. c8 c4 c4 |
+  c4 c4 c2 |
+  c4 c4 c4. c8 |
+  c4 c4 c2 \bar "|."
+}
+
+SheetMusicVerseBreaks = \relative c {
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \break
+  
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \break
+  
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \break
+  
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \break
+  
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 \bar "|." \break
+}
+
+SlidesVerseBreaks = \relative c {
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 | \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 | \break
+
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 | \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 | \break
+
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 | \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 | \break
+
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 | \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 | \break
+
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 | \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 \bar "|."
+}
+
+VerseOne = \lyricmode {
   \set stanza = "1. "
   Christ the Lord is ris'n to -- day,
   Sons of men and an -- gels say!
@@ -230,7 +268,7 @@ verseOne = \lyricmode {
   Christ hath o -- pened par -- a -- dise.
 }
 
-verseTwo = \lyricmode {
+VerseTwo = \lyricmode {
   \set stanza = "2. "
   Lives a -- gain our glor -- ious King,
   Where, O death, is now thy sting?  
@@ -244,7 +282,7 @@ verseTwo = \lyricmode {
   Ours the cross, the grave, the skies.
 }
 
-verseThree = \lyricmode {
+VerseThree = \lyricmode {
   \set stanza = "3. "
   King of glo -- ry! Soul of bliss!  
   Ev -- er -- last -- ing life is this  
@@ -257,3 +295,5 @@ verseThree = \lyricmode {
   Thee we greet tri -- um -- phant now,  
   Hail the re -- sur -- rec -- tion thou!
 }
+
+\include "bumby-hymnal-style.ly"
