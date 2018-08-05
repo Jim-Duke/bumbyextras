@@ -34,7 +34,7 @@ number_on_rhs = \how_beautiful_number_rhs
   lhs = \lhs
   rhs = \rhs
   copyright = "Copyright (c) 1990 Ariose Music and Mountain Spring Music"
-  license = "CCLI Song #443594, License #2055442"
+  license = #(string-append "CCLI Song #443594, License #" ccli_license)
   scripture = #"How lovely on the mountains
          are the feet of him who brings good news,
          who announces peace

@@ -15,8 +15,8 @@
 %
 % Lyric controls
 %
-lyricMinimumDistance = #1.5
-lyricFontSize = #0
+lyricMinimumDistance = \defaultSlideMusicLyricMinimumDistance
+lyricFontSize = \defaultSlideMusicLyricFontSize
 hyphenThickness = \defaultSlideMusicHyphenThickness
 hyphenLength = \defaultSlideMusicHyphenLength
 

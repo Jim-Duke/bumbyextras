@@ -36,7 +36,7 @@ number_on_rhs = \magnificat_number_rhs
   copyright = \markup {
     "Copyright " \char ##x00A9 " 2003 Randy Gill"
   }
-  license = "CCLI Song #5107766, License #2055442"
+  license = #(string-append "CCLI Song #5107766, License #" ccli_license)
   arranger = ##f
   scripture = #"And Mary said: “My soul magnifies the Lord,
                 And my spirit has rejoiced in God my Savior.

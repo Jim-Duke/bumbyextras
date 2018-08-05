@@ -79,26 +79,34 @@ sheetMusicBreaks = \relative c {
 slideMusicBreaks = \relative c {
   \setSystemOffset \defaultTopSystemOffset
   s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
   s1 | \break
 
   \setSystemOffset \defaultBottomSystemOffset
-  s1 | \noBreak
-  s1 | \noBreak
   s1 | \noBreak
   s1 | \break
 
   \setSystemOffset \defaultTopSystemOffset
   s1 | \noBreak
+  s1 | \break
+
+  \setSystemOffset \defaultBottomSystemOffset
   s1 | \noBreak
+  s1 | \break
+
+  \setSystemOffset \defaultTopSystemOffset
   s1 | \noBreak
   s1 | \break
 
   \setSystemOffset \defaultBottomSystemOffset
   s1 | \noBreak
+  s1 | \break
+
+  \setSystemOffset \defaultTopSystemOffset
   s1 | \noBreak
-  s1 | \noBreak
+  s2. \bar "" \break
+
+  \setSystemOffset \defaultBottomSystemOffset
+  s4 | s1 | \noBreak
   s1 \bar "|."
 }
 

@@ -36,7 +36,7 @@ number_on_rhs = \teach_me_lord_to_wait_number_rhs
   copyright = \markup {
     "Copyright " \char ##x00A9 " 1953.  Renewal 1981 by Hamblen Music Co., Inc."
   }
-  license = "CCLI Song #31463, License #2055442"
+  license = #(string-append "CCLI Song #31463, License #" ccli_license)
   arranger = "Gerald Moore, 1992"
   scripture = #"“But those who wait on the LORD Shall renew their strength;
          They shall mount up with wings like eagles,

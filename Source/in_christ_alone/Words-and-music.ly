@@ -35,7 +35,7 @@ number_on_rhs = \in_christ_alone_number_rhs
   copyright = \markup {
      \char ##x00A9 "2001 Thankyou Music (admin. Capitol CMG Publishing)"
   }
-  license = "CCLI Song #3350395, License #2055442"
+  license = #(string-append "CCLI Song #3350395, License #" ccli_license)
   arranger = "D. J. Bulls"
   scripture = #"“For I am persuaded that neither death nor life,
          nor angels nor principalities nor powers, nor things present nor things

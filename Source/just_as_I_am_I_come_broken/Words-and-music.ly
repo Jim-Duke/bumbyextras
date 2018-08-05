@@ -36,7 +36,7 @@ number_on_rhs = \just_as_I_am_I_come_broken_number_rhs
   copyright = \markup {
     "Copyright " \char ##x00A9 " 2009 CCTB Music, First Hand Revelation Music, Universal Music - Brentwood Benson Publishing"
   }
-  license = "CCLI Song #5635850, License #2055442"
+  license = #(string-append "CCLI Song #5635850, License #" ccli_license)
   arranger = "Sam Souder"
   scripture = #"“Your sins shall be as white as snow” - Isaiah 1:18"
   tagline = ##f

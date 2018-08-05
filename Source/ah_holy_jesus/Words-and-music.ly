@@ -69,25 +69,31 @@ sheetMusicBreaks = \relative c {
 slideMusicBreaks = \relative c {
   \setSystemOffset \defaultTopSystemOffset
   s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
   s1 | \break
-  
+
   \setSystemOffset \defaultBottomSystemOffset
   s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \break
+  s1 | \pageBreak
   
   \setSystemOffset \defaultTopSystemOffset
   s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
   s1 | \break
-  
+
   \setSystemOffset \defaultBottomSystemOffset
   s1 | \noBreak
-  s1 \bar "|."
+  s1 | \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 | \break
+
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 | \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s1 \bar "|." \pageBreak
 }
 
 sopranoVerse = \relative c'' {
