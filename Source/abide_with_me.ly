@@ -14,6 +14,7 @@ SlideLyricFontSize = #4
 
 Title = "Abide With Me"
 SongNumber = \abide_with_me_number
+build_dir = "../Build"
 
 LeaderHints = \markup {
   \fontsize #-4

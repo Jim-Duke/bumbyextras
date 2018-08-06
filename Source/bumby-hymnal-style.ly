@@ -458,12 +458,9 @@ The number of stanzas is determined by the number of populated verse names.
 SongNumber = #(ly:parser-lookup 'SongNumber)
 Title = #(ly:parser-lookup 'Title)
 FirstPage = #(ly:parser-lookup 'FirstPage)
-UseBuildDir = #(not (null? (ly:parser-lookup (string->symbol "build_dir"))))
+BuildDir = ""
 
 #(ly:message "Step 3")
-
-#(if UseBuildDir
-     #{ BuildDir = #(ly:parser-lookup 'build_dir) #})
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                        %
@@ -561,10 +558,9 @@ ChorusScore = #(if HasChorus
   #})
 
 \book {
-  #(if UseBuildDir
-    #{
-      \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Sheet Music")
-    #})
+  {
+    \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Sheet Music")
+  }
   \paper {
     #(set-paper-size "letter")
     
@@ -822,10 +818,9 @@ SlideChorusScore = #(if HasChorus
      (make-music 'SequentialMusic 'void #t))
 
 \book {
-  #(if UseBuildDir
-    #{
-      \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Slides")
-    #} )
+  {
+    \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Slides")
+  }
   \paper {
     #(set-paper-size "arch a" 'landscape )
 
@@ -909,10 +904,9 @@ SlideChorusScore = #(if HasChorus
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \book {
-  #(if UseBuildDir
-    #{
-      \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Audio - All")
-    #} )
+  {
+    \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Audio - All")
+  }
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
@@ -983,10 +977,9 @@ SlideChorusScore = #(if HasChorus
 }
 
 \book {
-  #(if UseBuildDir
-    #{
-      \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Audio - Soprano")
-    #} )
+  {
+    \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Audio - Soprano")
+  }
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
@@ -1057,10 +1050,9 @@ SlideChorusScore = #(if HasChorus
 }
 
 \book {
-  #(if UseBuildDir
-    #{
-      \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Audio - Alto")
-    #} )
+  {
+    \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Audio - Alto")
+  }
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
@@ -1131,10 +1123,9 @@ SlideChorusScore = #(if HasChorus
 }
 
 \book {
-  #(if UseBuildDir
-    #{
-      \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Audio - Tenor")
-    #} )
+  {
+    \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Audio - Tenor")
+  }
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
@@ -1205,10 +1196,9 @@ SlideChorusScore = #(if HasChorus
 }
 
 \book {
-  #(if UseBuildDir
-    #{
-      \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Audio - Bass")
-    #} )
+  {
+    \bookOutputName #(string-append BuildDir SongNumber " - " Title " - Audio - Bass")
+  }
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
