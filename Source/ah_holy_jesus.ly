@@ -10,8 +10,16 @@ SlideLyricFontSize = #4
 SheetMusicRaggedLast = ##t
 
 %%
-%% Hymn Metadata Variables
+%% Music Variables
 %%
+
+Key = \key g \minor
+MajorKey = ##f
+
+Time = {
+  \time 4/4
+  \tempo 4=85
+}
 
 Title = "Ah Holy Jesus"
 SongNumber = \ah_holy_jesus_number
@@ -45,18 +53,6 @@ ShowScriptureOnSheetMusic = ##t
   rhs = #(if ah_holy_jesus_number_rhs abide_with_me_number LeaderHints)
   copyright = "In the Public Domain"
   license = ##f
-}
-
-%%
-%% Music Variables
-%%
-
-Key = \key g \minor
-MajorKey = ##f
-
-Time = {
-  \time 4/4
-  \tempo 4=85
 }
 
 SopranoVerseMusic = \relative c'' {
