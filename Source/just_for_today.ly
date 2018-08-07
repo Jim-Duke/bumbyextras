@@ -3,11 +3,6 @@
 \include "common.ly"
 
 %%
-%% TBD: Can't finish this one until we work out a mechanism for
-%%      verse specific alignments
-%%
-
-%%
 %% Tweaks
 %%
 
@@ -76,9 +71,9 @@ SopranoVerseMusic = \relative c' {
   
   e8 fis8 |
   gis2~ gis8
-  \tag #'verseOneRhythms { gis8 }
-  \tag #'verseTwoRhythms { gis16 gis16 }
-  \tag #'sheetMusicRhythms { gis16~ gis16 }
+  \tag #'VerseOne { gis8 }
+  \tag #'VerseTwo { gis16 gis16 }
+  \tag #'merged { gis16~ gis16 }
   a8 b8 |
   \autoBeamOn
   b4( fis2)
@@ -91,7 +86,7 @@ SopranoVerseMusic = \relative c' {
   \autoBeamOff
 }
 
-altoVerse = \relative c' {
+AltoVerseMusic = \relative c' {
   \tag #'usePartials { \partial 4 }
   \autoBeamOff
   b8 dis8 |
@@ -107,9 +102,9 @@ altoVerse = \relative c' {
   
   cis8 dis8 |
   e2~ e8
-  \tag #'verseOneRhythms { e8 }
-  \tag #'verseTwoRhythms { e16 e16 }
-  \tag #'sheetMusicRhythms { e16~ e16 }
+  \tag #'VerseOne { e8 }
+  \tag #'VerseTwo { e16 e16 }
+  \tag #'merged { e16~ e16 }
   e8 gis8 |
   fis2.
 
@@ -118,7 +113,7 @@ altoVerse = \relative c' {
   e2( dis4) \bar "|."
 }
 
-tenorVerse = \relative c' {
+TenorVerseMusic = \relative c' {
   \tag #'usePartials { \partial 4 }
   \autoBeamOff
   gis8 b8 |
@@ -131,9 +126,9 @@ tenorVerse = \relative c' {
   
   gis8 b8 |
   b2~ b8
-  \tag #'verseOneRhythms { b8 }
-  \tag #'verseTwoRhythms { b16 b16 }
-  \tag #'sheetMusicRhythms { b16~ b16 }
+  \tag #'VerseOne { b8 }
+  \tag #'VerseTwo { b16 b16 }
+  \tag #'merged { b16~ b16 }
   cis8 e8 |
   dis2.
   
@@ -142,7 +137,7 @@ tenorVerse = \relative c' {
   b2. \bar "|."
 }
 
-bassVerse = \relative c {
+BassVerseMusic = \relative c {
   \tag #'usePartials { \partial 4 }
   \autoBeamOff
   e8 b8 |
@@ -155,9 +150,9 @@ bassVerse = \relative c {
   
   b8 b8 |
   e2~ e8
-  \tag #'verseOneRhythms { e8 }
-  \tag #'verseTwoRhythms { e16 e16 }
-  \tag #'sheetMusicRhythms { e16~ e16 }
+  \tag #'VerseOne { e8 }
+  \tag #'VerseTwo { e16 e16 }
+  \tag #'merged { e16~ e16 }
   e8 e8 |
   b2.
   
@@ -166,7 +161,29 @@ bassVerse = \relative c {
   e2( b4) \bar "|."
 }
 
-sheetMusicVerseBreaks = \relative c {
+AlignVerseMusic = \relative c' {
+  \tag #'usePartials { \partial 4 }
+  c8 c8 |
+  c2~ c8 c8 c8. c16 |
+  c2.
+  
+  c8 c8 |
+  c2~ c8 c8 c8 c8 |
+  c2.
+  
+  c8 c8 |
+  c2~ c8
+  \tag #'VerseOne { c8 }
+  \tag #'VerseTwo { c16 c16 }
+  c8 c8 |
+  c2.
+
+  c8 c8 |
+  c2~ c8 c8 c8 c8 |
+  c2. \bar "|."
+}
+
+SheetMusicVerseBreaks = \relative c {
   \tag #'usePartials { \partial 4 }
   s4  | \noBreak
   s1  | \noBreak
@@ -185,26 +202,7 @@ sheetMusicVerseBreaks = \relative c {
   s2. \bar "|."
 }
 
-sheetMusicRefrainBreaks = \relative c {
-  \tag #'usePartials { \partial 4 }
-  c4  | \noBreak
-  c1  | \noBreak
-  s2. \bar "" \break
-  
-  c4  | \noBreak
-  c1  | \noBreak
-  c2. \bar "" \break
-
-  c4  | \noBreak
-  c1  | \noBreak
-  c2. \bar "" \break
-  
-  c4  | \noBreak
-  c1  | \noBreak
-  c2. \bar "" \break
-}
-
-slideMusicVerseBreaks = \relative c {
+SlidesVerseBreaks = \relative c {
   \tag #'usePartials { \partial 4 }
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
@@ -227,42 +225,7 @@ slideMusicVerseBreaks = \relative c {
   s2. \bar "|."
 }
 
-slideMusicRefrainBreaks = \relative c {
-  \tag #'usePartials { \partial 4 }
-  \setSystemOffset \defaultTopSystemOffset
-  c4  | \noBreak
-  c2. \bar "" \break
-  
-  \setSystemOffset \defaultBottomSystemOffset
-  c4  | \noBreak
-  c2. \bar "" \break
-  
-  \setSystemOffset \defaultTopSystemOffset
-  c4  | \noBreak
-  c2  \bar "" \break
-  
-  \setSystemOffset \defaultBottomSystemOffset
-  c2  | \noBreak
-  c2. \bar "" \break
-
-  \setSystemOffset \defaultTopSystemOffset
-  c4  | \noBreak
-  c2. \bar "" \break
-  
-  \setSystemOffset \defaultBottomSystemOffset
-  c4  | \noBreak
-  c2. \bar "" \break
-
-  \setSystemOffset \defaultTopSystemOffset
-  c4  | \noBreak
-  c2  \bar "" \break
-  
-  \setSystemOffset \defaultBottomSystemOffset
-  c2  | \noBreak
-  c2. \bar "" \break
-}
-
-sopranoRefrain = \relative c' {
+SopranoChorusMusic = \relative c' {
   \tag #'usePartials { \partial 4 }
   % May my
   \autoBeamOff
@@ -298,6 +261,10 @@ sopranoRefrain = \relative c' {
   \bar "|."
 }
 
+%
+% This isn't currently being used.  But we're keeping it in case
+% we change our mind.
+%
 descant = \relative c'' {
   \tag #'usePartials { \partial 4 }
   \hide r4 |
@@ -312,7 +279,7 @@ descant = \relative c'' {
   }
 }
 
-altoRefrain = \relative c' {
+AltoChorusMusic = \relative c' {
   \tag #'usePartials { \partial 4 }
   % May my
   \autoBeamOff
@@ -348,7 +315,7 @@ altoRefrain = \relative c' {
   \bar "|."
 }
 
-tenorRefrain = \relative c' {
+TenorChorusMusic = \relative c' {
   \tag #'usePartials { \partial 4 }
   % May my
   \autoBeamOff
@@ -382,7 +349,7 @@ tenorRefrain = \relative c' {
   \bar "|."
 }
 
-bassRefrain = \relative c {
+BassChorusMusic = \relative c {
   \tag #'usePartials { \partial 4 }
   % May my
   \autoBeamOff
@@ -416,7 +383,94 @@ bassRefrain = \relative c {
   \bar "|."
 }
 
-verseOneLyrics = \lyricmode {
+AlignChorusMusic = \relative c' {
+  \tag #'usePartials { \partial 4 }
+  % May my
+  c8 c8 |
+  % steps be wor -- ship,
+  c8 r8 c4 c8 c8
+  % may my
+  c8 c8 |
+  % thoughts be praise
+  c8 r8 c4 c4
+  % may my
+  c8 c8 |
+  % words bring ho -- nor to Your
+  c4. c8 c8 c16 c8. c8 |
+  %name.
+  c2.
+  % may my
+  c8 c8 |
+  % steps be wor -- ship,
+  c8 r8 c4 c8 c8
+  % may my
+  c8 c8 |
+  % thoughts be praise
+  c8 r8 c4 c4
+  % may my
+  c8 c8 |
+  % words bring ho -- nor to Your
+  c4. c8 c8 c16 c8. c8 |
+  % name.
+  c2 r4
+  \bar "|."
+}
+
+SheetMusicChorusBreaks = \relative c {
+  \tag #'usePartials { \partial 4 }
+  c4  | \noBreak
+  c1  | \noBreak
+  s2. \bar "" \break
+  
+  c4  | \noBreak
+  c1  | \noBreak
+  c2. \bar "" \break
+
+  c4  | \noBreak
+  c1  | \noBreak
+  c2. \bar "" \break
+  
+  c4  | \noBreak
+  c1  | \noBreak
+  c2. \bar "" \break
+}
+
+SlidesChorusBreaks = \relative c {
+  \tag #'usePartials { \partial 4 }
+  \setSystemOffset \defaultTopSystemOffset
+  c4  | \noBreak
+  c2. \bar "" \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  c4  | \noBreak
+  c2. \bar "" \break
+  
+  \setSystemOffset \defaultTopSystemOffset
+  c4  | \noBreak
+  c2  \bar "" \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  c2  | \noBreak
+  c2. \bar "" \break
+
+  \setSystemOffset \defaultTopSystemOffset
+  c4  | \noBreak
+  c2. \bar "" \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  c4  | \noBreak
+  c2. \bar "" \break
+
+  \setSystemOffset \defaultTopSystemOffset
+  c4  | \noBreak
+  c2  \bar "" \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  c2  | \noBreak
+  c2. \bar "" \break
+}
+
+VerseOne = \lyricmode {
   \set stanza = "1. "
   Fa -- ther God, just for to -- day,
   Help me walk Your nar -- row way.
@@ -424,7 +478,7 @@ verseOneLyrics = \lyricmode {
   Lend me strength to hear Your call.
 }
 
-verseTwoLyrics = \lyricmode {
+VerseTwo = \lyricmode {
   \set stanza = "2. "
   Here I am, just for to -- day,
   Live in me, and have Your way.
@@ -432,7 +486,7 @@ verseTwoLyrics = \lyricmode {
   Is to hear You say, "\"Well" "done!\""
 }
 
-refrainLyrics = \lyricmode {
+ChorusLyrics = \lyricmode {
   May my steps be wor -- ship,
   May my thoughts be praise,
   May my words bring ho -- nor to Your name.
@@ -441,9 +495,11 @@ refrainLyrics = \lyricmode {
   May my words bring ho -- nor to Your name.
 }
 
-descantLyrics = \lyricmode {
+DescantLyrics = \lyricmode {
   May my steps be wor -- ship,
   May my thoughts be praise.
   May my steps be wor -- ship,
   May my thoughts be praise.
 }
+
+\include "bumby-hymnal-style.ly"

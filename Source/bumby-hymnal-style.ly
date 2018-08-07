@@ -270,26 +270,15 @@ SheetMusicScripture = #(if ShowScriptureOnSheetMusic
 #(define (set-music-definitions! prefixes lyr-names)
   "Populate the name definitions and their derivatives
    with the values provided by the calling template"
-   (ly:message "Step 1.1")
    (set! voice-prefixes prefixes)
-   (ly:message "Step 1.2")
    (append! variable-names lyr-names)
-   (ly:message "Step 1.3")
    (set! all-music-names
          (cartesian voice-prefixes '("Verse" "Chorus" "Coda") '("Music")))
-   (ly:message "Step 1.4")
-   (for-each
-      (lambda (id)
-        (ly:message id))
-      all-music-names)
-   (ly:message "Step 1.5")
    (set! lyrics-names lyr-names)
-   (ly:message "Step 1.6")
    (define-missing-variables! (append
                                   variable-names
                                   all-music-names
                                   lyrics-names))
-   (ly:message "Step 1.7")
    (set! AllMusic
      (make-simultaneous-music
       (filter ly:music?
@@ -297,10 +286,8 @@ SheetMusicScripture = #(if ShowScriptureOnSheetMusic
                (lambda (x)
                  (get-id x))
                all-music-names))))
-   (ly:message "Step 1.8")
    (set! KeepAlive
          (skip-of-length AllMusic))
-   (ly:message "Step 1.9")
    (set! have-music
          (ly:moment<?
           (ly:make-moment 0)
@@ -332,7 +319,7 @@ make-one-stanza =
    (let* ((stanza (get-id lyrics)))
    (if stanza  ;we need lyrics
         #{
-          \new Lyrics \lyricsto "AlignVoice"
+          \new Lyrics \lyricsto #(string-append "Align" lyrics "Voice")
           { #stanza }
         #}
         (make-music 'SequentialMusic 'void #t))))
@@ -351,8 +338,9 @@ make-one-stanza =
 % The last two lists of names are used as-is.
 
 make-two-voice-staff =
-#(define-music-function (outputType section addBreaks clef v1name v2name)
-   (output-type? section? boolean? clef? voice-prefix? voice-prefix?)
+#(define-music-function
+   (outputType section addBreaks musicTag alignVoices clef v1name v2name)
+   (output-type? section? boolean? symbol? list? clef? voice-prefix? voice-prefix?)
 
    "Make a vocal staff with two voices
       clef: the clef to use
@@ -375,14 +363,26 @@ make-two-voice-staff =
            #(if Time Time)
            \clef #clef
 
-           #(make-directed-part-combine-music #f '(2 . 12) v1music v2music
+           #(make-directed-part-combine-music #f '(2 . 12)
+              (music-filter
+                (tags-keep-predicate (list 'usePartials musicTag))
+                v1music)
+              (music-filter
+                (tags-keep-predicate (list 'usePartials musicTag))
+                v2music)
               #{ \with { \voiceOne \override DynamicLineSpanner.direction = #UP } #}
               #{ \with { \voiceTwo \override DynamicLineSpanner.direction = #DOWN } #}
               #{ #} )
-             
-           \new NullVoice = "AlignVoice" {
-             \keepWithTag #'usePartials #amusic
-           }
+
+           #(make-simultaneous-music
+             (map
+              (lambda (align-name)
+                #{
+                  \new NullVoice = #(string-append "Align" align-name "Voice") {
+                    \keepWithTag #(list 'usePartials (string->symbol align-name)) #amusic
+                  }
+                #})
+              alignVoices))
              
            #(if addBreaks #{ \new NullVoice = "Breaks" { \keepWithTag #'usePartials #breakmusic } #} )
                
@@ -393,8 +393,8 @@ make-two-voice-staff =
 
 make-two-vocal-staves-with-stanzas =
 #(define-music-function
-  (outputType section verses)
-  (output-type? section? list?)
+  (outputType section musicTag alignVoices verses)
+  (output-type? section? symbol? list? list?)
 
   "Make two two-voice vocal staves with several stanzas between them.
 The number of stanzas is determined by the number of populated verse names.
@@ -403,14 +403,13 @@ The number of stanzas is determined by the number of populated verse names.
      verses: the list of verse names containing the stanzas"
   (make-simultaneous-music
    (list
-    (make-two-voice-staff outputType section #t "treble" "Soprano" "Alto")
+    (make-two-voice-staff outputType section #t musicTag alignVoices "treble" "Soprano" "Alto")
     (make-simultaneous-music
      (map
       (lambda (verse-name)
         (make-one-stanza verse-name))
         verses))
-    (make-two-voice-staff outputType section #f "bass" "Tenor" "Bass"))))
-
+    (make-two-voice-staff outputType section #f musicTag '() "bass" "Tenor" "Bass"))))
 
 #(define satb-voice-prefixes
    ;; These define the permitted prefixes to various names.
@@ -439,13 +438,10 @@ The number of stanzas is determined by the number of populated verse names.
 #(define chorus-lyrics-variable-names
    '("ChorusLyrics"))
 
-#(ly:message "Step 1")
 %% make the above definitions available
 #(set-music-definitions!
   satb-voice-prefixes
   satb-lyrics-variable-names)
-
-#(ly:message "Step 2")
 
 \layout {
   \context {
@@ -460,8 +456,6 @@ Title = #(ly:parser-lookup 'Title)
 FirstPage = #(ly:parser-lookup 'FirstPage)
 UseBuildDir = #(not (null? (ly:parser-lookup (string->symbol "build_dir"))))
 
-#(ly:message "Step 3")
-
 #(if UseBuildDir
      #{ BuildDir = #(ly:parser-lookup 'build_dir) #})
 
@@ -470,8 +464,6 @@ UseBuildDir = #(not (null? (ly:parser-lookup (string->symbol "build_dir"))))
 %                   SHEET MUSIC LAYOUT                   %
 %                                                        %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-#(ly:message "Step 4")
 
 SheetMusicVerseLayout = \layout {
       #(layout-set-staff-size 18)
@@ -553,6 +545,8 @@ ChorusScore = #(if HasChorus
           \make-two-vocal-staves-with-stanzas
             "SheetMusic"
             "Chorus"
+            #'merged
+            #'()
             #chorus-lyrics-variable-names
         >>
       >>
@@ -640,6 +634,8 @@ ChorusScore = #(if HasChorus
         \make-two-vocal-staves-with-stanzas
           "SheetMusic"
           "Verse"
+          #'merged
+          #satb-lyrics-variable-names
           #satb-lyrics-variable-names
       >>
     >>
