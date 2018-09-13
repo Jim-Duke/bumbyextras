@@ -91,7 +91,7 @@ defaultTempo = 110
         } {
           \voiceOne {
             \global
-            \sopranoVerse s4 \sopranoBridge
+            \sopranoVerse s4 \sopranoVerse s4 \sopranoBridge \sopranoVerse s4 \sopranoVerse
           }
         }
         \context Voice = altos \with {
@@ -102,7 +102,7 @@ defaultTempo = 110
         } {
           \voiceTwo {
             \global
-            \altoVerse s4 \altoBridge
+            \altoVerse s4 \altoVerse s4 \altoBridge \altoVerse s4 \altoVerse
           }
         }
       >>
@@ -116,7 +116,7 @@ defaultTempo = 110
         } {
           \voiceOne {
             \global
-            \tenorVerse s4 \tenorBridge
+            \tenorVerse s4 \tenorVerse s4 \tenorBridge \tenorVerse s4 \tenorVerse
           }
         }
         \context Voice = basses \with {
@@ -127,7 +127,7 @@ defaultTempo = 110
         } {
           \voiceTwo {
             \global
-            \bassVerse s4 \bassBridge
+            \bassVerse s4 \bassVerse s4 \bassBridge \bassVerse s4 \bassVerse
           }
         }
       >>
@@ -159,7 +159,7 @@ defaultTempo = 110
         } {
           \voiceOne {
             \global
-            \sopranoVerse s4 \sopranoBridge
+            \sopranoVerse s4 \sopranoVerse s4 \sopranoBridge \sopranoVerse s4 \sopranoVerse
           }
         }
         \context Voice = altos \with {
@@ -170,7 +170,7 @@ defaultTempo = 110
         } {
           \voiceTwo {
             \global
-            \altoVerse s4 \altoBridge
+            \altoVerse s4 \altoVerse s4 \altoBridge \altoVerse s4 \altoVerse
           }
         }
       >>
@@ -184,7 +184,7 @@ defaultTempo = 110
         } {
           \voiceOne {
             \global
-            \tenorVerse
+            \tenorVerse s4 \tenorVerse s4 \tenorBridge \tenorVerse s4 \tenorVerse
           }
         }
         \context Voice = basses \with {
@@ -195,7 +195,7 @@ defaultTempo = 110
         } {
           \voiceTwo {
             \global
-            \bassVerse s4 \bassBridge
+            \bassVerse s4 \bassVerse s4 \bassBridge \bassVerse s4 \bassVerse
           }
         }
       >>
@@ -227,7 +227,7 @@ defaultTempo = 110
         } {
           \voiceOne {
             \global
-            \sopranoVerse s4 \sopranoBridge
+            \sopranoVerse s4 \sopranoVerse s4 \sopranoBridge \sopranoVerse s4 \sopranoVerse
           }
         }
         \context Voice = altos \with {
@@ -238,7 +238,7 @@ defaultTempo = 110
         } {
           \voiceTwo {
             \global
-            \altoVerse s4 \altoBridge
+            \altoVerse s4 \altoVerse s4 \altoBridge \altoVerse s4 \altoVerse
           }
         }
       >>
@@ -252,7 +252,7 @@ defaultTempo = 110
         } {
           \voiceOne {
             \global
-            \tenorVerse s4 \tenorBridge
+            \tenorVerse s4 \tenorVerse s4 \tenorBridge \tenorVerse s4 \tenorVerse
           }
         }
         \context Voice = basses \with {
@@ -263,7 +263,7 @@ defaultTempo = 110
         } {
           \voiceTwo {
             \global
-            \bassVerse s4 \bassBridge
+            \bassVerse s4 \bassVerse s4 \bassBridge \bassVerse s4 \bassVerse
           }
         }
       >>
@@ -295,7 +295,7 @@ defaultTempo = 110
         } {
           \voiceOne {
             \global
-            \sopranoVerse s4 \sopranoBridge
+            \sopranoVerse s4 \sopranoVerse s4 \sopranoBridge \sopranoVerse s4 \sopranoVerse
           }
         }
         \context Voice = altos \with {
@@ -306,7 +306,7 @@ defaultTempo = 110
         } {
           \voiceTwo {
             \global
-            \altoVerse s4 \altoBridge
+            \altoVerse s4 \altoVerse s4 \altoBridge \altoVerse s4 \altoVerse
           }
         }
       >>
@@ -320,7 +320,7 @@ defaultTempo = 110
         } {
           \voiceOne {
             \global
-            \tenorVerse s4 \tenorBridge
+            \tenorVerse s4 \tenorVerse s4 \tenorBridge \tenorVerse s4 \tenorVerse
           }
         }
         \context Voice = basses \with {
@@ -331,7 +331,7 @@ defaultTempo = 110
         } {
           \voiceTwo {
             \global
-            \bassVerse s4 \bassBridge
+            \bassVerse s4 \bassVerse s4 \bassBridge \bassVerse s4 \bassVerse
           }
         }
       >>

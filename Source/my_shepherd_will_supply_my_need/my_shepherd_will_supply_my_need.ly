@@ -2,20 +2,10 @@
 #(use-modules (guile-user))
 
 #(ly:set-option 'relative-includes #t)
-\include "../../LilypondTemplates/functions.ly"
-\include "../../LilypondTemplates/midi.ly"
-\include "../../LilypondTemplates/hymns.ly"
-\include "hymn_settings.ly"
-
-%%
-%% Tweaks
-%%
-
-% SlideLyricMinimumDistance = #2
-
-%%
-%% Hymn Metadata Variables
-%%
+\include "../../../LilypondTemplates/functions.ly"
+\include "../../../LilypondTemplates/midi.ly"
+\include "../../../LilypondTemplates/hymns.ly"
+\include "../hymn_settings.ly"
 
 Title = #"My Shepherd Will Supply My Need"
 SongNumber = \my_shepherd_will_supply_my_need_number
@@ -462,4 +452,4 @@ VerseThree = \lyricmode {
   but like a child at home.
 }
 
-\include "../../LilypondTemplates/bumby-hymnal-template.ly"
+\include "../../../LilypondTemplates/bumby-hymnal-template.ly"

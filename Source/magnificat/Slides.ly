@@ -2,34 +2,19 @@
 
 \include "Words-and-music.ly"
 
-#(set-global-staff-size 44)
+SlideLyricFontSize = 2
 
-%
-% Common layout controls.
-%
-% This allows us to either use the defaults or override them.  We try to use
-% the same local variable names in the body in order to maintain as common a
-% template as possible.
-%
+\include "../../../LilypondTemplates/standard-elements.ly"
 
-%
-% Lyric controls
-%
-lyricMinimumDistance = \defaultSlideMusicLyricMinimumDistance
-lyricFontSize = \defaultSlideMusicLyricFontSize
-hyphenThickness = \defaultSlideMusicHyphenThickness
-hyphenLength = \defaultSlideMusicHyphenLength
-
-%
-% Staff controls
-%
-staffLineThickness = \defaultSlideMusicStaffLineThickness
-noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
+#(ly:parser-define! (string->symbol "outputName")
+   (if (null? (ly:parser-lookup (string->symbol "BuildDir")))
+       "Slides"
+       (string-append BuildDir songNumber " - " title " - Slides")))
 
 \book {
-  \bookOutputName #(string-append build_dir songNumber " - " title " - Slides")
+  \bookOutputName \outputName
   \paper {
-    #(set-paper-size "arch a" 'landscape )
+    #(set-paper-size "arch alandscape" )
 
     %
     % Turn on to see spacing details while you tweek the layout
@@ -58,9 +43,6 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
             \fromproperty #'header:tune
             \char ##x2022
             \fromproperty #'header:composer
-            \char ##x2022
-            "arr:"
-            \fromproperty #'header:arranger
           }
           \line {
             \fromproperty #'header:copyright
@@ -88,16 +70,11 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
           \bold
           \wordwrap-field #'header:title
         }
-        \vspace #2
-        \override #'(line-width . 60)
-        \center-column {
-          \abs-fontsize #24
-          \italic
-          \wordwrap-field #'header:scripture
-        }
+        \SlideScripture
       }
     }
     scoreTitleMarkup = ##f
+    #(layout-set-staff-size 44)
   }
   \pageBreak
 
@@ -111,31 +88,14 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
         }
         \new NullVoice = "breaks" {
           \global
-          \keepWithTag #'usePartials' \slideMusicFirstBreaks
+          \keepWithTag #'usePartials \slideMusicFirstBreaks
         }
       >>
       \new Lyrics \lyricsto "sopranos" {
         \sopranoLyrics
       }
     >>
-      
-    \layout {
-      ragged-last = ##f
-      
-      \context {
-        \Lyrics
-        \override LyricSpace.minimum-distance = \lyricMinimumDistance
-        \override LyricText.font-size = \lyricFontSize
-        \override LyricText.self-alignment-X = #CENTER
-        \override LyricHyphen.thickness = \hyphenThickness
-        \override LyricHyphen.length = \hyphenLength
-      }
-      \context {
-        \Staff
-        \override StaffSymbol.thickness = \staffLineThickness
-        \override NoteHead.font-size = \noteHeadFontSize
-      }
-    }
+    \SlideLayout
   }
   \score {
     <<
@@ -147,7 +107,7 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
         }
         \new NullVoice = "breaks" {
           \global
-          \keepWithTag #'usePartials' \slideMusicSecondBreaks
+          \keepWithTag #'usePartials \slideMusicSecondBreaks
         }
       >>
       \new Lyrics \lyricsto "sopranos" {
@@ -157,31 +117,14 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
         \new Voice = "basses" {
           \clef bass
           \global
-          \keepWithTag #'usePartials' \bassVerse
+          \keepWithTag #'usePartials \bassVerse
         }
       }
       \new Lyrics \lyricsto "basses" {
         \bassLyrics
       }
     >>
-      
-    \layout {
-      ragged-last = ##f
-      
-      \context {
-        \Lyrics
-        \override LyricSpace.minimum-distance = \lyricMinimumDistance
-        \override LyricText.font-size = \lyricFontSize
-        \override LyricText.self-alignment-X = #CENTER
-        \override LyricHyphen.thickness = \hyphenThickness
-        \override LyricHyphen.length = \hyphenLength
-      }
-      \context {
-        \Staff
-        \override StaffSymbol.thickness = \staffLineThickness
-        \override NoteHead.font-size = \noteHeadFontSize
-      }
-    }
+    \SlideLayout
   }
   \score {
     <<
@@ -193,7 +136,7 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
         }
         \new NullVoice = "breaks" {
           \global
-          \keepWithTag #'usePartials' \slideMusicThirdBreaks
+          \keepWithTag #'usePartials \slideMusicThirdBreaks
         }
       >>
       \new Lyrics \lyricsto "sopranos" {
@@ -212,31 +155,14 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
         \new Voice = "basses" {
           \clef bass
           \global
-          \keepWithTag #'usePartials' \bassVerse
+          \keepWithTag #'usePartials \bassVerse
         }
       }
       \new Lyrics \lyricsto "basses" {
         \bassLyrics
       }
     >>
-      
-    \layout {
-      ragged-last = ##f
-      
-      \context {
-        \Lyrics
-        \override LyricSpace.minimum-distance = \lyricMinimumDistance
-        \override LyricText.font-size = \lyricFontSize
-        \override LyricText.self-alignment-X = #CENTER
-        \override LyricHyphen.thickness = \hyphenThickness
-        \override LyricHyphen.length = \hyphenLength
-      }
-      \context {
-        \Staff
-        \override StaffSymbol.thickness = \staffLineThickness
-        \override NoteHead.font-size = \noteHeadFontSize
-      }
-    }
+    \SlideLayout
   }
   \score {
     <<
@@ -248,7 +174,7 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
         }
         \new NullVoice = "breaks" {
           \global
-          \keepWithTag #'usePartials' \slideMusicFourthBreaks
+          \keepWithTag #'usePartials \slideMusicFourthBreaks
         }
       >>
       \new Lyrics \lyricsto "sopranos" {
@@ -267,7 +193,7 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
         \new Voice = "tenors" {
           \clef bass
           \global
-          \keepWithTag #'usePartials' \tenorVerse
+          \keepWithTag #'usePartials \tenorVerse
         }
       }
       \new Lyrics \lyricsto "tenors" {
@@ -277,30 +203,13 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
         \new Voice = "basses" {
           \clef bass
           \global
-          \keepWithTag #'usePartials' \bassVerse
+          \keepWithTag #'usePartials \bassVerse
         }
       }
       \new Lyrics \lyricsto "basses" {
         \bassLyrics
       }
     >>
-      
-    \layout {
-      ragged-last = ##f
-      
-      \context {
-        \Lyrics
-        \override LyricSpace.minimum-distance = \lyricMinimumDistance
-        \override LyricText.font-size = \lyricFontSize
-        \override LyricText.self-alignment-X = #CENTER
-        \override LyricHyphen.thickness = \hyphenThickness
-        \override LyricHyphen.length = \hyphenLength
-      }
-      \context {
-        \Staff
-        \override StaffSymbol.thickness = \staffLineThickness
-        \override NoteHead.font-size = \noteHeadFontSize
-      }
-    }
+    \SlideLayout
   }
 }

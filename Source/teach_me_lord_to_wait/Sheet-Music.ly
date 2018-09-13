@@ -2,55 +2,45 @@
 
 \include "Words-and-music.ly"
 
-#(set-global-staff-size 18)
+ShowScriptureOnSheetMusic = ##t
 
-%
-% Common layout controls.
-%
-% This allows us to either use the defaults or override them.  We try to use
-% the same local variable names in the body in order to maintain as common a
-% template as possible.
-%
+\include "../../../LilypondTemplates/standard-elements.ly"
 
-%
-% Lyric controls
-%
-lyricMinimumDistance = \defaultSheetMusicLyricMinimumDistance
-lyricFontSize = \defaultSheetMusicLyricFontSize
-hyphenThickness = \defaultSheetMusicHyphenThickness
-hyphenLength = \defaultSheetMusicHyphenLength
-
-%
-% Staff controls
-%
-staffLineThickness = \defaultSheetMusicStaffLineThickness
-noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
+#(ly:parser-define! (string->symbol "outputName")
+   (if (null? (ly:parser-lookup (string->symbol "BuildDir")))
+       "Sheet-Music"
+       (string-append BuildDir songNumber " - " title " - Sheet Music")))
 
 \book {
-  \bookOutputName #(string-append build_dir songNumber " - " title " - Sheet Music")
+  \bookOutputName \outputName
   \paper {
     #(set-paper-size "letter")
-    
+      
     %
     % Turn on to see spacing details while you tweek the layout
     %
     % annotate-spacing = ##t
-    
+      
     %
     % Various variables that can be used to tweak vertical spacing
     %
-    system-system-spacing.basic-distance = #12
-    system-system-spacing.minimum-distance = #8
+    system-system-spacing.basic-distance = #10
+    system-system-spacing.minimum-distance = #6
     score-markup-spacing.basic-distance = #0
     markup-system-spacing.basic-distance = #0
-    
+      
     indent = 0
-    left-margin = \defaultSheetMusicLeftMargin
-    right-margin = \defaultSheetMusicRightMargin
-    top-margin = \defaultSheetMusicTopMargin
-    bottom-margin = \defaultSheetMusicBottomMargin
+    first-page-number = \FirstPage
+    two-sided = ##t
+    inner-margin = 0.25\in
+    outer-margin = 0.25\in
+    binding-offset = 0.5\in
+    top-margin = 0.25\in
+    bottom-margin = 0.25\in
+    ragged-right = ##f
+    ragged-last = \SheetMusicRaggedLast
     print-page-number = ##f
-    ragged-bottom = ##t
+    ragged-bottom = \SheetMusicRaggedBottom
     oddFooterMarkup = \markup {
       \fontsize #-2
       \on-the-fly \last-page {
@@ -66,14 +56,9 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
             \fromproperty #'header:tune
             \char ##x2022
             \fromproperty #'header:composer
-            \char ##x2022 "arr. "
-            \fromproperty #'header:arranger
           }
           \line {
             \fromproperty #'header:copyright
-          }
-          \line {
-            \fromproperty #'header:license
           }
         }
       }
@@ -87,53 +72,41 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
           \bold
           \fill-line {
             \fromproperty #'header:lhs
-            \override #'(line-width . 60)
+            \override #'(line-width . 85)
             \wordwrap-field #'header:title
             \fromproperty #'header:rhs
           }
-          \vspace #0.5
-          \fill-line {
-            \override #'(line-width . 20) ""
-            \override #'(line-width . 80) \center-column {
-              \abs-fontsize #10
-              \italic \wordwrap-field #'header:scripture
-            }
-            \override #'(line-width . 20) ""
-          }
-          \vspace #0.5
+          \SheetMusicScripture
         }
       }
+      \vspace #0.5
     }
   }
-
   \score {
     % Verses Section
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
+      \context Staff = upper \with { printPartCombineTexts = ##f } <<
+        \partcombine
+          {
             \global
-            \keepWithTag #'usePartials' \sopranoVerse
+            \keepWithTag #'(usePartials sheetMusicRhythms) \sopranoVerse
           }
-        }
-        \context Voice = altos {
-          \voiceTwo {
+          {
             \global
-            \keepWithTag #'usePartials' \altoVerse
+            \keepWithTag #'(usePartials sheetMusicRhythms) \altoVerse
           }
-        }
         \context NullVoice = sheetMusicBreaks {
           \global
           \sheetMusicBreaks
         }
         \context NullVoice = verseOneAlign {
           \global
-          \keepWithTag #'usePartials' \verseOneAlign
+          \keepWithTag #'(usePartials verseOneRhythms) \sopranoVerse
         }
         \context NullVoice = verseTwoAlign {
           \global
-          \keepWithTag #'usePartials' \verseTwoAlign
+          \keepWithTag #'(usePartials verseTwoRhythms) \sopranoVerse
         }
         \new Lyrics \lyricsto "verseOneAlign" {
           \verseOne
@@ -142,40 +115,20 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
           \verseTwo
         }
       >>
-      \context Staff = lower <<
+      \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass
-        \context Voice = tenors {
-          \voiceOne {
+        \partcombine
+          {
             \global
-            \keepWithTag #'usePartials' \tenorVerse
+            \keepWithTag #'(usePartials sheetMusicRhythms) \tenorVerse
           }
-        }
-        \context Voice = basses {
-          \voiceTwo {
+          {
             \global
-            \keepWithTag #'usePartials' \bassVerse
+            \keepWithTag #'(usePartials sheetMusicRhythms) \bassVerse
           }
-        }
       >>
     >>
-      
-    \layout {
-      \context {
-        \Lyrics
-        \override LyricSpace.minimum-distance = \lyricMinimumDistance
-        \override LyricText.font-size = \lyricFontSize
-        \override LyricText.self-alignment-X = #CENTER
-        \override LyricHyphen.thickness = \hyphenThickness
-        \override LyricHyphen.length = \hyphenLength
-      }
-      \context {
-        \Staff
-        \override StaffSymbol.thickness = \staffLineThickness
-        \override NoteHead.font-size = \noteHeadFontSize
-      }
-      
-      ragged-last = ##f
-    }
+    \SheetMusicVerseLayout
   }
   \pageBreak
   \markup {	
@@ -184,53 +137,37 @@ noteHeadFontSize = \defaultSheetMusicNoteHeadFontSize
   \score {
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \context Voice = sopranos {
-          \voiceOne {
+      \context Staff = upper \with { printPartCombineTexts = ##f } <<
+        \partcombine
+          {
             \global
-            \keepWithTag #'usePartials' \sopranoChorus
+            \keepWithTag #'usePartials \sopranoChorus
           }
-        }
-        \context Voice = altos {
-          \voiceTwo {
+          {
             \global
-            \keepWithTag #'usePartials' \altoChorus
+            \keepWithTag #'usePartials \altoChorus
           }
+        \context NullVoice = chorusAlign {
+            \global
+            \keepWithTag #'usePartials \sopranoChorus
         }
-        \new Lyrics \lyricsto "sopranos" {
+        \new Lyrics \lyricsto "chorusAlign" {
           \chorusLyrics
         }
       >>
-      \context Staff = lower <<
+      \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass
-        \context Voice = tenors {
-          \voiceOne {
+        \partcombine
+          {
             \global
-            \keepWithTag #'usePartials' \tenorChorus
+            \keepWithTag #'usePartials \tenorChorus
           }
-        }
-        \context Voice = basses {
-          \voiceTwo {
+          {
             \global
-            \keepWithTag #'usePartials' \bassChorus
+            \keepWithTag #'usePartials \bassChorus
           }
-        }
       >>
     >>
-    \layout {
-      \context {
-        \Lyrics
-        \override LyricSpace.minimum-distance = \lyricMinimumDistance
-        \override LyricText.font-size = \lyricFontSize
-        \override LyricText.self-alignment-X = #CENTER
-        \override LyricHyphen.thickness = \hyphenThickness
-        \override LyricHyphen.length = \hyphenLength
-      }
-      \context {
-        \Staff
-        \override StaffSymbol.thickness = \staffLineThickness
-        \override NoteHead.font-size = \noteHeadFontSize
-      }
-    }
+    \SheetMusicChorusLayout
   }
 }

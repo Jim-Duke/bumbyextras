@@ -1,6 +1,8 @@
 \version "2.19.49"
 
-\include "../common.ly"
+\include "../../../LilypondTemplates/functions.ly"
+\include "../../../LilypondTemplates/hymns.ly"
+\include "../hymn_settings.ly"
 
 global = {
   \key e \major
@@ -24,6 +26,10 @@ number_on_rhs = \magnificat_number_rhs
       (define lhs songNumber)
       (define rhs leaderHints)))
 
+FirstPage = #(if in_christ_alone_number_rhs 1 2)
+ShowScriptureOnSheetMusic = ##t
+SlideStaffStaffSpacing = 12
+
 \header {
   title = "Magnificat"
   tune = "Magnificat"
@@ -38,15 +44,15 @@ number_on_rhs = \magnificat_number_rhs
   }
   license = #(string-append "CCLI Song #5107766, License #" ccli_license)
   arranger = ##f
-  scripture = #"And Mary said: “My soul magnifies the Lord,
-                And my spirit has rejoiced in God my Savior.
-                For He has regarded the lowly state of His maidservant;
-                For behold, henceforth all generations will call me blessed.
-                For He who is mighty has done great things for me,
-                And holy is His name.” (Luke 1:46–49, NKJV)"
-
   tagline = ##f
 }
+
+Scripture = #"And Mary said: “My soul magnifies the Lord,
+ And my spirit has rejoiced in God my Savior.
+ For He has regarded the lowly state of His maidservant;
+ For behold, henceforth all generations will call me blessed.
+ For He who is mighty has done great things for me,
+ And Holy is His name.” (Luke 1:46–49, NKJV)"
 
 %
 % Rhythms for the sheet music with line break controls
@@ -105,7 +111,7 @@ slideMusicFirstBreaks = \relative c {
   s2. | \noBreak
   s2. | \noBreak
   s2. | \noBreak
-  s2  \bar "|." \break \pageBreak
+  s2  \bar "|." \pageBreak
 }
 
 slideMusicSecondBreaks = \relative c {
@@ -122,7 +128,7 @@ slideMusicSecondBreaks = \relative c {
   s2. | \noBreak
   s2. | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break \pageBreak
+  s2  \bar "" \pageBreak
   
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
@@ -136,7 +142,7 @@ slideMusicSecondBreaks = \relative c {
   s2. | \noBreak
   s2. | \noBreak
   s2. | \noBreak
-  s2  \bar "|." \break \pageBreak
+  s2  \bar "|." \pageBreak
 }
 
 slideMusicThirdBreaks = \relative c {
@@ -146,60 +152,32 @@ slideMusicThirdBreaks = \relative c {
   s2. | \noBreak
   s2. | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break \pageBreak
+  s2  \bar "" \pageBreak
   
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   s2. | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break \pageBreak
+  s2  \bar "" \pageBreak
   
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   s2. | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break \pageBreak
+  s2  \bar "" \pageBreak
   
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   s2. | \noBreak
   s2. | \noBreak
-  s2  \bar "|." \break \pageBreak
+  s2  \bar "|." \pageBreak
 }
 
-slideMusicFourthBreaks = \relative c {
-  \tag #'usePartials' { \partial 4 }
-  \setSystemOffset \defaultTopSystemOffset
-  s4  | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2  \bar "" \break \pageBreak
-  
-  \setSystemOffset \defaultTopSystemOffset
-  s4  | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2  \bar "" \break \pageBreak
-  
-  \setSystemOffset \defaultTopSystemOffset
-  s4  | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2  \bar "" \break \pageBreak
-  
-  \setSystemOffset \defaultTopSystemOffset
-  s4  | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2  \bar "|." \break \pageBreak
-}
+slideMusicFourthBreaks = \slideMusicThirdBreaks
+
 %
 % Notes for the Soprano part during the verses.
 % No break guidance is included.

@@ -1,6 +1,8 @@
 \version "2.19.49"
 
-\include "../common.ly"
+\include "../../../LilypondTemplates/functions.ly"
+\include "../../../LilypondTemplates/hymns.ly"
+\include "../hymn_settings.ly"
 
 global = {
   \key f \major
@@ -15,6 +17,7 @@ leaderHints = \markup {
   \normal-text { "F - 3 - SOL" }
 }
 number_on_rhs = \teach_me_lord_to_wait_number_rhs
+FirstPage = \just_for_today_pages
 
 #(if number_on_rhs
      (begin
@@ -38,18 +41,19 @@ number_on_rhs = \teach_me_lord_to_wait_number_rhs
   }
   license = #(string-append "CCLI Song #31463, License #" ccli_license)
   arranger = "Gerald Moore, 1992"
-  scripture = #"“But those who wait on the LORD Shall renew their strength;
+  tagline = ##f
+}
+
+Scripture = #"“But those who wait on the LORD Shall renew their strength;
          They shall mount up with wings like eagles,
          They shall run and not be weary,
          They shall walk and not faint.” (Isaiah 40:31, NKJV)"
-  tagline = ##f
-}
 
 %
 % Rhythms for the sheet music with line break controls
 %
 sheetMusicBreaks = \relative c {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   s4  | \noBreak
   s2. | \noBreak
   s2. | \noBreak
@@ -76,7 +80,7 @@ sheetMusicBreaks = \relative c {
 }
 
 slideMusicBreaks = \relative c {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   
   \setSystemOffset \defaultTopSystemOffset
   s4    | \noBreak
@@ -120,7 +124,7 @@ slideMusicBreaks = \relative c {
 }
   
 slideChorusBreaks = \relative c {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   
   % They that wait upon the Lord
   \setSystemOffset \defaultTopSystemOffset
@@ -174,7 +178,7 @@ slideChorusBreaks = \relative c {
 % No break guidance is included.
 %
 sopranoVerse = \relative c' {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   c8. d16 |
   f2 f4 |
   f8.( d16 c4.) f8 |
@@ -188,20 +192,29 @@ sopranoVerse = \relative c' {
   a8.( g16 f4) \bar ""
   
   g8. a16 |
-  bes4( bes4) bes4 |
+  \tag #'verseOneRhythms { bes4 bes4 }
+  \tag #'verseTwoRhythms { bes2 }
+  \tag #'sheetMusicRhythms { bes4( bes4) }
+  bes4 |
   bes4( f4) g4 |
-  a4( a4) gis4 |
+  \tag #'verseOneRhythms { a4 a4 }
+  \tag #'verseTwoRhythms { a2 }
+  \tag #'sheetMusicRhythms { a4( a4) }
+  gis4 |
   a8.( g16 f4) \bar ""
   
   e8. f16 |
-  g4( g4) g4 |
+  \tag #'verseOneRhythms { g2 }
+  \tag #'verseTwoRhythms { g4 g4 }
+  \tag #'sheetMusicRhythms { g4( g4) }
+  g4 |
   g4( a4) a8. g16 |
   f4 f4 f4 |
   f2 \bar "|."
 }
 
 altoVerse = \relative c' {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   c8. d16 |
   c2 c4 |
   c8.( d16 c4.) c8 |
@@ -215,20 +228,29 @@ altoVerse = \relative c' {
   f8.( d16 c4) \bar ""
   
   c8. f16 |
-  f4( f4) f4 |
+  \tag #'verseOneRhythms { f4 f4 }
+  \tag #'verseTwoRhythms { f2 }
+  \tag #'sheetMusicRhythms { f4( f4) }
+  f4 |
   f2 f4 |
-  f4( f4) f4 |
+  \tag #'verseOneRhythms { f4 f4 }
+  \tag #'verseTwoRhythms { f2 }
+  \tag #'sheetMusicRhythms { f4( f4) }
+  f4 |
   f8.( d16 c4) \bar ""
   
   c8. d16 |
-  e4( e4) e4 |
+  \tag #'verseOneRhythms { e2 }
+  \tag #'verseTwoRhythms { e4 e4 }
+  \tag #'sheetMusicRhythms { e4( e4) }
+  e4 |
   e2 e8. e16 |
   f4 c4 d4 |
   c2 \bar "|."
 }
 
 tenorVerse = \relative c' {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   a8. a16 |
   a2 a4 |
   a8.( bes16 a4.) a8 |
@@ -241,20 +263,29 @@ tenorVerse = \relative c' {
   c8.( bes16 a4) \bar ""
   
   ees'8. ees16 |
-  d4( d4) d4 |
+  \tag #'verseOneRhythms { d4 d4 }
+  \tag #'verseTwoRhythms { d2 }
+  \tag #'sheetMusicRhythms { d4( d4) }
+  d4 |
   d2 des4 |
-  c4( c4) b4 |
+  \tag #'verseOneRhythms { c4 c4 }
+  \tag #'verseTwoRhythms { c2 }
+  \tag #'sheetMusicRhythms { c4( c4) }
+  b4 |
   c8.( bes16 a4) \bar ""
   
   g8. a16 |
-  bes4( bes4) bes4 |
+  \tag #'verseOneRhythms { bes2 }
+  \tag #'verseTwoRhythms { bes4 bes4 }
+  \tag #'sheetMusicRhythms { bes4( bes4) }
+  bes4 |
   bes4( c4) c8. bes16 |
   a4 a4 bes4 |
   a2 \bar "|."
 }
 
 bassVerse = \relative c {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   f8. f16 |
   f2 f4 |
   f4~ f4. f8 |
@@ -268,81 +299,29 @@ bassVerse = \relative c {
   f2 \bar ""
   
   c'8. c16 |
-  bes4( bes4) bes4 |
+  \tag #'verseOneRhythms { bes4 bes4 }
+  \tag #'verseTwoRhythms { bes2 }
+  \tag #'sheetMusicRhythms { bes4( bes4) }
+  bes4 |
   bes2 bes4 |
-  f4( f4) f4 |
+  \tag #'verseOneRhythms { f4 f4 }
+  \tag #'verseTwoRhythms { f2 }
+  \tag #'sheetMusicRhythms { f4( f4) }
+  f4 |
   f2 \bar ""
   
   c8. c16 |
-  c4( c4) c4 |
+  \tag #'verseOneRhythms { c2 }
+  \tag #'verseTwoRhythms { c4 c4 }
+  \tag #'sheetMusicRhythms { c4( c4) }
+  c4 |
   c2 c8. c16 |
   f4 f4 f4 |
   f2 \bar "|."
 }
 
-%
-% Rhythms to align the first verse
-%
-verseOneAlign = \relative c {
-  \tag #'usePartials' { \partial 4 }
-  c8. c16 |
-  c2 c4 |
-  c8.( c16 c4.) c8 |
-  c4 c4 c4 |
-  c8.( c16 c4) \bar ""
-  
-  c8. c16 |
-  c4 c4 c4 |
-  c4( c4) c4 |
-  c4 c4 c4 |
-  c8.( c16 c4) \bar ""
-  
-  c8. c16 |
-  c4 c4 c4 |
-  c4( c4) c4 |
-  c4 c4 c4 |
-  c8.( c16 c4) \bar ""
-  
-  c8. c16 |
-  c4( c4) c4 |
-  c4( c4) c8. c16 |
-  c4 c4 c4 |
-  c2 \bar "|."
-}
-
-
-%
-% Rhythms to align the second verse
-%
-verseTwoAlign = \relative c {
-  \tag #'usePartials' { \partial 4 }
-  c8. c16 |
-  c2 c4 |
-  c8.( c16 c4.) c8 |
-  c4 c4 c4 |
-  c8.( c16 c4) \bar ""
-  
-  c8. c16 |
-  c4 c4 c4 |
-  c4( c4) c4 |
-  c4 c4 c4 |
-  c8.( c16 c4) \bar ""
-  
-  c8. c16 |
-  c4~ c4 c4 |
-  c4~ c4 c4 |
-  c4~ c4 c4 |
-  c8.( c16 c4) \bar ""
-  
-  c8. c16 |
-  c4 c4 c4 |
-  c4( c4) c8. c16 |
-  c4 c4 c4 |
-  c2 \bar "|."
-}
-
 sopranoChorus = \relative c' {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   c8. d16 |
   f4. d8 f8. d16 |
   f8.( d16 c4) \bar ""
@@ -367,7 +346,7 @@ sopranoChorus = \relative c' {
 }
 
 altoChorus = \relative c' {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   c8. d16 |
   c4. d8 c8. d16 |
   c8.( d16 c4) \bar ""
@@ -392,7 +371,7 @@ altoChorus = \relative c' {
 }
 
 tenorChorus = \relative c' {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   a8. bes16 |
   a4. bes8 a8. bes16 |
   a8.( bes16 a4) \bar ""
@@ -417,7 +396,7 @@ tenorChorus = \relative c' {
 }
 
 bassChorus = \relative c {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   f8. f16 |
   f4. f8 f8. f16 |
   f2 \bar ""

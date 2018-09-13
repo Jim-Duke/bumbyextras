@@ -2,10 +2,10 @@
 #(use-modules (guile-user))
 
 #(ly:set-option 'relative-includes #t)
-\include "../../LilypondTemplates/functions.ly"
-\include "../../LilypondTemplates/midi.ly"
-\include "../../LilypondTemplates/hymns.ly"
-\include "hymn_settings.ly"
+\include "../../../LilypondTemplates/functions.ly"
+\include "../../../LilypondTemplates/midi.ly"
+\include "../../../LilypondTemplates/hymns.ly"
+\include "../hymn_settings.ly"
 
 %%
 %% Tweaks
@@ -26,6 +26,7 @@ Time = {
 }
 
 Title = "Ah Holy Jesus"
+RightFirstPage = \ah_holy_jesus_number_rhs
 SongNumber = \ah_holy_jesus_number
 
 LeaderHints = \markup {
@@ -50,9 +51,9 @@ ShowScriptureOnSheetMusic = ##t
   arranger = ##f
   poet = "Johann Heermann (1630)"
   translator = "Robert S. Bridges (1899)"
-  songNumber = \SongNumber
-  lhs = #(if ah_holy_jesus_number_rhs LeaderHints abide_with_me_number)
-  rhs = #(if ah_holy_jesus_number_rhs abide_with_me_number LeaderHints)
+  songNumber = \ah_holy_jesus_number
+  lhs = #(if RightFirstPage LeaderHints ah_holy_jesus_number)
+  rhs = #(if RightFirstPage ah_holy_jesus_number LeaderHints)
   copyright = "In the Public Domain"
   license = ##f
 }
@@ -250,4 +251,4 @@ VerseFive = \lyricmode {
   Not my de -- serv -- ing.
 }
 
-\include "../../LilypondTemplates/bumby-hymnal-template.ly"
+\include "../../../LilypondTemplates/bumby-hymnal-template.ly"

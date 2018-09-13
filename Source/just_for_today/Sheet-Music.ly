@@ -4,9 +4,9 @@
 \include "../../../LilypondTemplates/standard-elements.ly"
 
 #(ly:parser-define! (string->symbol "outputName")
-   (if (null? (ly:parser-lookup (string->symbol "build_dir")))
+   (if (null? (ly:parser-lookup (string->symbol "BuildDir")))
        "Sheet-Music"
-       (string-append build_dir songNumber " - " title " - Sheet Music")))
+       (string-append BuildDir songNumber " - " title " - Sheet Music")))
 
 \book {
   \bookOutputName \outputName
@@ -27,7 +27,7 @@
     markup-system-spacing.basic-distance = #0
       
     indent = 0
-    first-page-number = #2
+    first-page-number = \FirstPage
     two-sided = ##t
     inner-margin = 0.25\in
     outer-margin = 0.25\in

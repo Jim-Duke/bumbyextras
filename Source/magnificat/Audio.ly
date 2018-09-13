@@ -1,16 +1,22 @@
 \version "2.19.49"
 
 \include "Words-and-music.ly"
+\include "../../../LilypondTemplates/midi.ly"
+
+#(ly:parser-define! (string->symbol "outputName")
+   (if (null? (ly:parser-lookup (string->symbol "BuildDir")))
+       "Audio"
+       (string-append BuildDir songNumber " - " title " - Audio")))
 
 defaultTempo = 135
 
 \book {
-  \bookOutputName #(string-append build_dir songNumber " - " title " - Audio - All")
+  \bookOutputName #(string-append outputName " - All")
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
         \context Voice = sopranos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \allInstrument
           midiMaximumVolume = \allMaxVolume
           midiMinimumVolume = \allMinVolume
           midiPanPosition = \allPan
@@ -24,7 +30,7 @@ defaultTempo = 135
           }
         }
         \context Voice = altos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \allInstrument
           midiMaximumVolume = \allMaxVolume
           midiMinimumVolume = \allMinVolume
           midiPanPosition = \allPan
@@ -41,7 +47,7 @@ defaultTempo = 135
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \allInstrument
           midiMaximumVolume = \allMaxVolume
           midiMinimumVolume = \allMinVolume
           midiPanPosition = \allPan
@@ -55,7 +61,7 @@ defaultTempo = 135
           }
         }
         \context Voice = basses \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \allInstrument
           midiMaximumVolume = \allMaxVolume
           midiMinimumVolume = \allMinVolume
           midiPanPosition = \allPan
@@ -85,12 +91,12 @@ defaultTempo = 135
 }
 
 \book {
-  \bookOutputName #(string-append build_dir songNumber " - " title " - Audio - Soprano")
+  \bookOutputName #(string-append outputName " - Soprano")
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
         \context Voice = sopranos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \dominantInstrument
           midiMaximumVolume = \dominantMaxVolume
           midiMinimumVolume = \dominantMinVolume
           midiPanPosition = \dominantPan
@@ -104,7 +110,7 @@ defaultTempo = 135
           }
         }
         \context Voice = altos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
@@ -121,7 +127,7 @@ defaultTempo = 135
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
@@ -135,7 +141,7 @@ defaultTempo = 135
           }
         }
         \context Voice = basses \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
@@ -165,12 +171,12 @@ defaultTempo = 135
 }
 
 \book {
-  \bookOutputName #(string-append build_dir songNumber " - " title " - Audio - Alto")
+  \bookOutputName #(string-append outputName " - Alto")
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
         \context Voice = sopranos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
@@ -184,7 +190,7 @@ defaultTempo = 135
           }
         }
         \context Voice = altos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \dominantInstrument
           midiMaximumVolume = \dominantMaxVolume
           midiMinimumVolume = \dominantMinVolume
           midiPanPosition = \dominantPan
@@ -201,7 +207,7 @@ defaultTempo = 135
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
@@ -215,7 +221,7 @@ defaultTempo = 135
           }
         }
         \context Voice = basses \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
@@ -245,12 +251,12 @@ defaultTempo = 135
 }
 
 \book {
-  \bookOutputName #(string-append build_dir songNumber " - " title " - Audio - Tenor")
+  \bookOutputName #(string-append outputName " - Tenor")
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
         \context Voice = sopranos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
@@ -264,7 +270,7 @@ defaultTempo = 135
           }
         }
         \context Voice = altos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
@@ -281,7 +287,7 @@ defaultTempo = 135
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \dominantInstrument
           midiMaximumVolume = \dominantMaxVolume
           midiMinimumVolume = \dominantMinVolume
           midiPanPosition = \dominantPan
@@ -295,7 +301,7 @@ defaultTempo = 135
           }
         }
         \context Voice = basses \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
@@ -325,12 +331,12 @@ defaultTempo = 135
 }
 
 \book {
-  \bookOutputName #(string-append build_dir songNumber " - " title " - Audio - Bass")
+  \bookOutputName #(string-append outputName " - Bass")
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
         \context Voice = sopranos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
@@ -344,7 +350,7 @@ defaultTempo = 135
           }
         }
         \context Voice = altos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
@@ -361,7 +367,7 @@ defaultTempo = 135
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
@@ -375,7 +381,7 @@ defaultTempo = 135
           }
         }
         \context Voice = basses \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \dominantInstrument
           midiMaximumVolume = \dominantMaxVolume
           midiMinimumVolume = \dominantMinVolume
           midiPanPosition = \dominantPan

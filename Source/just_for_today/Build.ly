@@ -1,6 +1,6 @@
 \version "2.19.49"
 
-build_dir = "../../Build/"
+BuildDir = "../../Build/"
 
 \include "Sheet-Music.ly"
 \include "Slides.ly"

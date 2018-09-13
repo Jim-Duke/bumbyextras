@@ -2,10 +2,10 @@
 #(use-modules (guile-user))
 
 #(ly:set-option 'relative-includes #t)
-\include "../../LilypondTemplates/functions.ly"
-\include "../../LilypondTemplates/midi.ly"
-\include "../../LilypondTemplates/hymns.ly"
-\include "hymn_settings.ly"
+\include "../../../LilypondTemplates/functions.ly"
+\include "../../../LilypondTemplates/midi.ly"
+\include "../../../LilypondTemplates/hymns.ly"
+\include "../hymn_settings.ly"
 
 %%
 %% Hymn Metadata Variables
@@ -31,6 +31,8 @@ LeaderHints = \markup {
   \fontsize #-4
   \normal-text { "E" \musicglyph #"accidentals.flat" " - 4 - MI" }
 }
+
+FirstPage = #(if abide_with_me_number_rhs 1 2)
 
 Scripture = \markup {
   \override #'(line-width . 60)
@@ -291,4 +293,4 @@ VerseSix = \lyricmode {
   In life, in death, O Lord, a -- bide with me!
 }
 
-\include "../../LilypondTemplates/bumby-hymnal-template.ly"
+\include "../../../LilypondTemplates/bumby-hymnal-template.ly"

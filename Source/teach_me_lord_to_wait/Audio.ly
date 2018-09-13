@@ -1,63 +1,77 @@
 \version "2.19.49"
 
 \include "Words-and-music.ly"
+\include "../../../LilypondTemplates/midi.ly"
+
+#(ly:parser-define! (string->symbol "outputName")
+   (if (null? (ly:parser-lookup (string->symbol "BuildDir")))
+       "Audio"
+       (string-append BuildDir songNumber " - " title " - Audio")))
 
 defaultTempo = 100
 
 \book {
-  \bookOutputName #(string-append build_dir songNumber " - " title " - Audio - All")
+  \bookOutputName #(string-append outputName " - All")
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
         \context Voice = sopranos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \allInstrument
           midiMaximumVolume = \allMaxVolume
           midiMinimumVolume = \allMinVolume
           midiPanPosition = \allPan
         } {
           \voiceOne {
             \global
-            \keepWithTag #'usePartials' \sopranoVerse
-            \removeWithTag #'usePartials' \sopranoChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \sopranoVerse
+            \removeWithTag #'usePartials \sopranoChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \sopranoVerse
+            \removeWithTag #'usePartials \sopranoChorus
           }
         }
         \context Voice = altos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \allInstrument
           midiMaximumVolume = \allMaxVolume
           midiMinimumVolume = \allMinVolume
           midiPanPosition = \allPan
         } {
           \voiceTwo {
             \global
-            \keepWithTag #'usePartials' \tenorVerse
-            \removeWithTag #'usePartials' \tenorChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \altoVerse
+            \removeWithTag #'usePartials \altoChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \altoVerse
+            \removeWithTag #'usePartials \altoChorus
           }
         }
       >>
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \allInstrument
           midiMaximumVolume = \allMaxVolume
           midiMinimumVolume = \allMinVolume
           midiPanPosition = \allPan
         } {
           \voiceOne {
             \global
-            \keepWithTag #'usePartials' \tenorVerse
-            \removeWithTag #'usePartials' \tenorChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \tenorVerse
+            \removeWithTag #'usePartials \tenorChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \tenorVerse
+            \removeWithTag #'usePartials \tenorChorus
           }
         }
         \context Voice = basses \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \allInstrument
           midiMaximumVolume = \allMaxVolume
           midiMinimumVolume = \allMinVolume
           midiPanPosition = \allPan
         } {
           \voiceTwo {
             \global
-            \keepWithTag #'usePartials' \bassVerse
-            \removeWithTag #'usePartials' \bassChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \bassVerse
+            \removeWithTag #'usePartials \bassChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \bassVerse
+            \removeWithTag #'usePartials \bassChorus
           }
         }
       >>
@@ -77,59 +91,67 @@ defaultTempo = 100
 }
 
 \book {
-  \bookOutputName #(string-append build_dir songNumber " - " title " - Audio - Soprano")
+  \bookOutputName #(string-append outputName " - Soprano")
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
         \context Voice = sopranos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \dominantInstrument
           midiMaximumVolume = \dominantMaxVolume
           midiMinimumVolume = \dominantMinVolume
           midiPanPosition = \dominantPan
         } {
           \voiceOne {
             \global
-            \keepWithTag #'usePartials' \sopranoVerse
-            \removeWithTag #'usePartials' \sopranoChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \sopranoVerse
+            \removeWithTag #'usePartials \sopranoChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \sopranoVerse
+            \removeWithTag #'usePartials \sopranoChorus
           }
         }
         \context Voice = altos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
           \voiceTwo {
             \global
-            \keepWithTag #'usePartials' \tenorVerse
-            \removeWithTag #'usePartials' \tenorChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \altoVerse
+            \removeWithTag #'usePartials \altoChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \altoVerse
+            \removeWithTag #'usePartials \altoChorus
           }
         }
       >>
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
           \voiceOne {
             \global
-            \keepWithTag #'usePartials' \tenorVerse
-            \removeWithTag #'usePartials' \tenorChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \tenorVerse
+            \removeWithTag #'usePartials \tenorChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \tenorVerse
+            \removeWithTag #'usePartials \tenorChorus
           }
         }
         \context Voice = basses \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
           \voiceTwo {
             \global
-            \keepWithTag #'usePartials' \bassVerse
-            \removeWithTag #'usePartials' \bassChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \bassVerse
+            \removeWithTag #'usePartials \bassChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \bassVerse
+            \removeWithTag #'usePartials \bassChorus
           }
         }
       >>
@@ -149,59 +171,67 @@ defaultTempo = 100
 }
 
 \book {
-  \bookOutputName #(string-append build_dir songNumber " - " title " - Audio - Alto")
+  \bookOutputName #(string-append outputName " - Alto")
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
         \context Voice = sopranos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
           \voiceOne {
             \global
-            \keepWithTag #'usePartials' \sopranoVerse
-            \removeWithTag #'usePartials' \sopranoChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \sopranoVerse
+            \removeWithTag #'usePartials \sopranoChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \sopranoVerse
+            \removeWithTag #'usePartials \sopranoChorus
           }
         }
         \context Voice = altos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \dominantInstrument
           midiMaximumVolume = \dominantMaxVolume
           midiMinimumVolume = \dominantMinVolume
           midiPanPosition = \dominantPan
         } {
           \voiceTwo {
             \global
-            \keepWithTag #'usePartials' \tenorVerse
-            \removeWithTag #'usePartials' \tenorChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \altoVerse
+            \removeWithTag #'usePartials \altoChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \altoVerse
+            \removeWithTag #'usePartials \altoChorus
           }
         }
       >>
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
           \voiceOne {
             \global
-            \keepWithTag #'usePartials' \tenorVerse
-            \removeWithTag #'usePartials' \tenorChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \tenorVerse
+            \removeWithTag #'usePartials \tenorChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \tenorVerse
+            \removeWithTag #'usePartials \tenorChorus
           }
         }
         \context Voice = basses \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
           \voiceTwo {
             \global
-            \keepWithTag #'usePartials' \bassVerse
-            \removeWithTag #'usePartials' \bassChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \bassVerse
+            \removeWithTag #'usePartials \bassChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \bassVerse
+            \removeWithTag #'usePartials \bassChorus
           }
         }
       >>
@@ -221,59 +251,67 @@ defaultTempo = 100
 }
 
 \book {
-  \bookOutputName #(string-append build_dir songNumber " - " title " - Audio - Tenor")
+  \bookOutputName #(string-append outputName " - Tenor")
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
         \context Voice = sopranos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
           \voiceOne {
             \global
-            \keepWithTag #'usePartials' \sopranoVerse
-            \removeWithTag #'usePartials' \sopranoChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \sopranoVerse
+            \removeWithTag #'usePartials \sopranoChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \sopranoVerse
+            \removeWithTag #'usePartials \sopranoChorus
           }
         }
         \context Voice = altos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
           \voiceTwo {
             \global
-            \keepWithTag #'usePartials' \tenorVerse
-            \removeWithTag #'usePartials' \tenorChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \altoVerse
+            \removeWithTag #'usePartials \altoChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \altoVerse
+            \removeWithTag #'usePartials \altoChorus
           }
         }
       >>
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \dominantInstrument
           midiMaximumVolume = \dominantMaxVolume
           midiMinimumVolume = \dominantMinVolume
           midiPanPosition = \dominantPan
         } {
           \voiceOne {
             \global
-            \keepWithTag #'usePartials' \tenorVerse
-            \removeWithTag #'usePartials' \tenorChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \tenorVerse
+            \removeWithTag #'usePartials \tenorChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \tenorVerse
+            \removeWithTag #'usePartials \tenorChorus
           }
         }
         \context Voice = basses \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
           \voiceTwo {
             \global
-            \keepWithTag #'usePartials' \bassVerse
-            \removeWithTag #'usePartials' \bassChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \bassVerse
+            \removeWithTag #'usePartials \bassChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \bassVerse
+            \removeWithTag #'usePartials \bassChorus
           }
         }
       >>
@@ -293,59 +331,67 @@ defaultTempo = 100
 }
 
 \book {
-  \bookOutputName #(string-append build_dir songNumber " - " title " - Audio - Bass")
+  \bookOutputName #(string-append outputName " - Bass")
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
         \context Voice = sopranos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
           \voiceOne {
             \global
-            \keepWithTag #'usePartials' \sopranoVerse
-            \removeWithTag #'usePartials' \sopranoChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \sopranoVerse
+            \removeWithTag #'usePartials \sopranoChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \sopranoVerse
+            \removeWithTag #'usePartials \sopranoChorus
           }
         }
         \context Voice = altos \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
           \voiceTwo {
             \global
-            \keepWithTag #'usePartials' \tenorVerse
-            \removeWithTag #'usePartials' \tenorChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \altoVerse
+            \removeWithTag #'usePartials \altoChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \altoVerse
+            \removeWithTag #'usePartials \altoChorus
           }
         }
       >>
       \context Staff = lower <<
         \clef bass
         \context Voice = tenors \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \diminishedInstrument
           midiMaximumVolume = \diminishedMaxVolume
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
           \voiceOne {
             \global
-            \keepWithTag #'usePartials' \tenorVerse
-            \removeWithTag #'usePartials' \tenorChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \tenorVerse
+            \removeWithTag #'usePartials \tenorChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \tenorVerse
+            \removeWithTag #'usePartials \tenorChorus
           }
         }
         \context Voice = basses \with {
-          midiInstrument = "voice oohs"
+          midiInstrument = \dominantInstrument
           midiMaximumVolume = \dominantMaxVolume
           midiMinimumVolume = \dominantMinVolume
           midiPanPosition = \dominantPan
         } {
           \voiceTwo {
             \global
-            \keepWithTag #'usePartials' \bassVerse
-            \removeWithTag #'usePartials' \bassChorus
+            \keepWithTag #'(usePartials verseOneRhythms) \bassVerse
+            \removeWithTag #'usePartials \bassChorus
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoRhythms \bassVerse
+            \removeWithTag #'usePartials \bassChorus
           }
         }
       >>

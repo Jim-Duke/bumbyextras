@@ -133,7 +133,8 @@
     >>
     \SheetMusicVerseLayout
   }
-  \markup {	
+  \markup {
+    \vspace #3
     \huge \bold "Bridge (between verse 2 and 3):"
   }
   \score {
