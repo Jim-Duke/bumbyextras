@@ -3,36 +3,29 @@
 
 #(ly:set-option 'relative-includes #t)
 \include "../../../LilypondTemplates/functions.ly"
-\include "../../../LilypondTemplates/midi.ly"
 \include "../../../LilypondTemplates/hymns.ly"
 \include "../hymn_settings.ly"
+
+global = {
+  \key ees \major
+  \time 4/4
+  \tempo 4 = 110
+  \aikenHeads
+}
 
 %%
 %% Hymn Metadata Variables
 %%
 
 Title = "Abide With Me"
-
-%%
-%% Provide defaults for things that would be assigned by external
-%% mechanisms.
-%%
-%% SongNumber       provides the song number assigned within a hymnal to this
-%%                  hymn.
-%%
-%% RightirstPage    specifies if the first page of the hymn occurs on the
-%%                  right (#t - true), or left (#f - false).
-%%
-
 SongNumber = \abide_with_me_number
 RightFirstPage = \abide_with_me_number_rhs
+FirstPage = #(if RightFirstPage 1 2)
 
 LeaderHints = \markup {
   \fontsize #-4
   \normal-text { "E" \musicglyph #"accidentals.flat" " - 4 - MI" }
 }
-
-FirstPage = #(if abide_with_me_number_rhs 1 2)
 
 Scripture = \markup {
   \override #'(line-width . 60)
@@ -67,103 +60,91 @@ ShowScriptureOnSheetMusic = ##f
   tagline = ##f
 }
 
-%%
-%% Music and Lyrics Variables
-%%
-
-Key = \key ees \major
-MajorKey = ##t
-
-Time = {
-  \time 4/4
-  \tempo 4 = 110
-}
-
 SopranoVerseMusic = \relative c'' {
-  g2 g4 f |
-  ees2 bes' |
-  c4 bes bes aes |
+  g2 g4 f4 |
+  ees2 bes'2 |
+  c4 bes4 bes4 aes4 |
   g1 |
 
-  g2 aes4 bes |
-  c2 bes |
-  aes4 f g a |
+  g2 aes4 bes4 |
+  c2 bes2 |
+  aes4 f4 g4 a4 |
   bes1 |
 
-  g2 g4 f |
-  ees2 bes' |
-  bes4 aes aes g |
+  g2 g4 f4 |
+  ees2 bes'2 |
+  bes4 aes4 aes4 g4 |
   f1 |
 
-  f2 g4 aes |
-  g f ees aes |
-  g2 f |
+  f2 g4 aes4 |
+  g4 f4 ees4 aes4 |
+  g2 f2 |
   ees1 \bar "|."
 }
 
 AltoVerseMusic = \relative c' {
-  ees2 d4 d |
-  ees2 ees |
-  ees4 d ees f |
+  ees2 d4 d4 |
+  ees2 ees2 |
+  ees4 d4 ees4 f4 |
   ees1 |
 
-  ees2 ees4 ees |
-  ees2 ees |
-  ees4 f ees ees |
+  ees2 ees4 ees4 |
+  ees2 ees2 |
+  ees4 f4 ees4 ees4 |
   d1 |
 
-  ees2 d4 d |
-  ees2 ees |
-  ees4 ees e e |
+  ees2 d4 d4 |
+  ees2 ees2 |
+  ees4 ees4 e4 e4 |
   f1 |
 
-  d2 ees4 d |
-  ees d ees f |
-  ees2 d
+  d2 ees4 d4 |
+  ees4 d4 ees4 f4 |
+  ees2 d2
   ees1 \bar "|."
 }
 
 TenorVerseMusic = \relative c' {
-  bes2 bes4 aes |
-  g2 ees |
-  ees4 bes' bes bes |
+  bes2 bes4 aes4 |
+  g2 ees2 |
+  ees4 bes'4 bes4 bes4 |
   bes1 |
 
-  bes2 aes4 g |
-  aes2 g |
-  c4 bes bes ees, |
+  bes2 aes4 g4 |
+  aes2 g2 |
+  c4 bes4 bes4 ees,4 |
   f1 |
 
-  g4( aes) bes aes |
-  g2 ees'4( d) |
-  c c c bes |
+  g4( aes4) bes4 aes4 |
+  g2 ees'4( d4) |
+  c4 c4 c4 bes4 |
   aes1 |
 
-  bes2 bes4 bes |
-  bes aes g c |
+  bes2 bes4 bes4 |
+  bes4 aes4 g4 c4 |
   bes2. aes4 |
   g1 \bar "|."
 }
 
 BassVerseMusic = \relative c {
-  ees2 bes4 bes |
-  c2 g |
-  aes4 bes c d |
+  ees2 bes4 bes4 |
+  c2 g2 |
+  aes4 bes4 c4 d4 |
   ees1 |
 
-  ees4( d) c bes |
+  ees4( d4) c4 bes4 |
   aes2 ees'2 |
-  f4 d ees c |
+  f4 d4 ees4 c4 |
   bes1 |
 
-  ees2 bes4 bes |
-  c2 g |
-  aes4. bes8 c4 c |
+  ees2 bes4 bes4 |
+  c2 g2 |
+  aes4. bes8 c4 c4 |
   f1 |
 
-  aes2 g4 f |
-  ees bes c aes |
-  bes2 bes |
+  aes2 g4 f4 |
+  ees4 bes4 c4 aes4 |
+  bes2 bes2 |
   ees1 \bar "|."
 }
 
@@ -292,5 +273,3 @@ VerseSix = \lyricmode {
   Heav'n's morn -- ing breaks, and earth's vain sha -- dows flee;
   In life, in death, O Lord, a -- bide with me!
 }
-
-\include "../../../LilypondTemplates/bumby-hymnal-template.ly"

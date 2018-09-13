@@ -10,12 +10,13 @@ global = {
   \aikenHeads
 }
 
-title = "How Beautiful"
-songNumber = \how_beautiful_number
-leaderHints = \markup {
+Title = "How Beautiful"
+SongNumber = \how_beautiful_number
+LeaderHints = \markup {
   \fontsize #-4
   \normal-text { "E" \musicglyph #"accidentals.flat" " - 3 - DO" }
 }
+
 number_on_rhs = \how_beautiful_number_rhs
 
 #(if number_on_rhs

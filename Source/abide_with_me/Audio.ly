@@ -6,9 +6,7 @@
 #(ly:parser-define! (string->symbol "outputName")
    (if (null? (ly:parser-lookup (string->symbol "BuildDir")))
        "Audio"
-       (string-append BuildDir SongNumber " - " title " - Audio")))
-
-defaultTempo = 110
+       (string-append BuildDir SongNumber " - " Title " - Audio")))
 
 \book {
   \bookOutputName #(string-append outputName " - All")
@@ -23,7 +21,7 @@ defaultTempo = 110
         } {
           \voiceOne {
             \global
-            \sopranoVerse s4 \sopranoVerse s4 \sopranoBridge \sopranoVerse s4 \sopranoVerse
+            \repeat unfold 6 \SopranoVerseMusic
           }
         }
         \context Voice = altos \with {
@@ -34,7 +32,7 @@ defaultTempo = 110
         } {
           \voiceTwo {
             \global
-            \altoVerse s4 \altoVerse s4 \altoBridge \altoVerse s4 \altoVerse
+            \repeat unfold 6 \AltoVerseMusic
           }
         }
       >>
@@ -48,7 +46,7 @@ defaultTempo = 110
         } {
           \voiceOne {
             \global
-            \tenorVerse s4 \tenorVerse s4 \tenorBridge \tenorVerse s4 \tenorVerse
+            \repeat unfold 6 \TenorVerseMusic
           }
         }
         \context Voice = basses \with {
@@ -59,7 +57,7 @@ defaultTempo = 110
         } {
           \voiceTwo {
             \global
-            \bassVerse s4 \bassVerse s4 \bassBridge \bassVerse s4 \bassVerse
+            \repeat unfold 6 \BassVerseMusic
           }
         }
       >>
@@ -73,7 +71,6 @@ defaultTempo = 110
         \Voice
           \consists "Staff_performer"
       }
-      \tempo 4 = \defaultTempo
     }
   }
 }
@@ -91,7 +88,7 @@ defaultTempo = 110
         } {
           \voiceOne {
             \global
-            \sopranoVerse s4 \sopranoVerse s4 \sopranoBridge \sopranoVerse s4 \sopranoVerse
+            \repeat unfold 6 \SopranoVerseMusic
           }
         }
         \context Voice = altos \with {
@@ -102,7 +99,7 @@ defaultTempo = 110
         } {
           \voiceTwo {
             \global
-            \altoVerse s4 \altoVerse s4 \altoBridge \altoVerse s4 \altoVerse
+            \repeat unfold 6 \AltoVerseMusic
           }
         }
       >>
@@ -159,7 +156,7 @@ defaultTempo = 110
         } {
           \voiceOne {
             \global
-            \sopranoVerse s4 \sopranoVerse s4 \sopranoBridge \sopranoVerse s4 \sopranoVerse
+            \repeat unfold 6 \SopranoVerseMusic
           }
         }
         \context Voice = altos \with {
@@ -170,7 +167,7 @@ defaultTempo = 110
         } {
           \voiceTwo {
             \global
-            \altoVerse s4 \altoVerse s4 \altoBridge \altoVerse s4 \altoVerse
+            \repeat unfold 6 \AltoVerseMusic
           }
         }
       >>
@@ -227,7 +224,7 @@ defaultTempo = 110
         } {
           \voiceOne {
             \global
-            \sopranoVerse s4 \sopranoVerse s4 \sopranoBridge \sopranoVerse s4 \sopranoVerse
+            \repeat unfold 6 \SopranoVerseMusic
           }
         }
         \context Voice = altos \with {
@@ -238,7 +235,7 @@ defaultTempo = 110
         } {
           \voiceTwo {
             \global
-            \altoVerse s4 \altoVerse s4 \altoBridge \altoVerse s4 \altoVerse
+            \repeat unfold 6 \AltoVerseMusic
           }
         }
       >>
@@ -295,7 +292,7 @@ defaultTempo = 110
         } {
           \voiceOne {
             \global
-            \sopranoVerse s4 \sopranoVerse s4 \sopranoBridge \sopranoVerse s4 \sopranoVerse
+            \repeat unfold 6 \SopranoVerseMusic
           }
         }
         \context Voice = altos \with {
