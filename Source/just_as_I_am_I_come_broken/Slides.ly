@@ -1,35 +1,17 @@
 \version "2.19.49"
 
 \include "Words-and-music.ly"
+\include "../../../LilypondTemplates/standard-elements.ly"
 
-#(set-global-staff-size 44)
-
-%
-% Common layout controls.
-%
-% This allows us to either use the defaults or override them.  We try to use
-% the same local variable names in the body in order to maintain as common a
-% template as possible.
-%
-
-%
-% Lyric controls
-%
-lyricMinimumDistance = \defaultSlideMusicLyricMinimumDistance
-lyricFontSize = \defaultSlideMusicLyricFontSize
-hyphenThickness = \defaultSlideMusicHyphenThickness
-hyphenLength = \defaultSlideMusicHyphenLength
-
-%
-% Staff controls
-%
-staffLineThickness = \defaultSlideMusicStaffLineThickness
-noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
+#(ly:parser-define! (string->symbol "outputName")
+   (if (null? (ly:parser-lookup (string->symbol "build_dir")))
+       "Slides"
+       (string-append build_dir songNumber " - " title " - Slides")))
 
 \book {
-  \bookOutputName #(string-append build_dir songNumber " - " title " - Slides")
+  \bookOutputName \outputName
   \paper {
-    #(set-paper-size "arch a" 'landscape )
+    #(set-paper-size "arch alandscape" )
 
     %
     % Turn on to see spacing details while you tweek the layout
@@ -99,84 +81,66 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
       }
     }
     scoreTitleMarkup = ##f
+    #(layout-set-staff-size 44)
   }
   \pageBreak
-
+  #(ly:message "first verse")
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \context Voice = treble {
-          \aikenPartCombine #'(2 . 20)
+      \context Staff = upper \with { printPartCombineTexts = ##f } <<
+        \partcombine
           {
             \global
-            \keepWithTag #'usePartials' \sopranoVerse
+            \keepWithTag #'usePartials \sopranoVerse
           }
           {
             \global
-            \keepWithTag #'usePartials' \altoVerse
+            \keepWithTag #'usePartials \altoVerse
           }
-        }
         \context NullVoice = slideMusicBreaks {
           \global
-          \keepWithTag #'usePartials' \slideMusicBreaks
+          \keepWithTag #'usePartials \slideMusicBreaks
         }
         \context NullVoice = align {
           \global
-          \keepWithTag #'usePartials' \sopranoVerse
+          \keepWithTag #'usePartials \sopranoVerse
         }
         \new Lyrics \lyricsto "align" {
           \huge \verseOne
         }
       >>
-      \context Staff = lower <<
+      \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass
-        \context Voice = bass {
-          \aikenPartCombine #'(2 . 20)
+        \partcombine
           {
             \global
-            \keepWithTag #'usePartials' \tenorVerse
+            \keepWithTag #'usePartials \tenorVerse
           }
           {
             \global
-            \keepWithTag #'usePartials' \bassVerse
+            \keepWithTag #'usePartials \bassVerse
           }
-        }
       >>
     >>
-    \layout {
-      \context {
-        \Lyrics
-        \override LyricSpace.minimum-distance = \lyricMinimumDistance
-        \override LyricText.font-size = \lyricFontSize
-        \override LyricText.self-alignment-X = #CENTER
-        \override LyricHyphen.thickness = \hyphenThickness
-        \override LyricHyphen.length = \hyphenLength
-      }
-      \context {
-        \Staff
-        \override StaffSymbol.thickness = \staffLineThickness
-        \override NoteHead.font-size = \noteHeadFontSize
-      }
-    }
+    \SlideLayout
   }
+  #(ly:message "second verse")
   \score {
     <<
-      \context Staff = upper <<
-        \context Voice = treble {
-          \aikenPartCombine #'(2 . 20)
+      \context Staff = upper \with { printPartCombineTexts = ##f } <<
+        \partcombine
           {
             \global
-            \keepWithTag #'usePartials' \sopranoVerse
+            \keepWithTag #'usePartials \sopranoVerse
           }
           {
             \global
-            \keepWithTag #'usePartials' \altoVerse
+            \keepWithTag #'usePartials \altoVerse
           }
-        }
         \context NullVoice = slideMusicBreaks {
           \global
-          \keepWithTag #'usePartials' \slideMusicBreaks
+          \keepWithTag #'usePartials \slideMusicBreaks
         }
         \context NullVoice = align {
           \global
@@ -186,207 +150,136 @@ noteHeadFontSize = \defaultSlideMusicNoteHeadFontSize
           \huge \verseTwo
         }
       >>
-      \context Staff = lower <<
+      \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass
-        \context Voice = bass {
-          \aikenPartCombine #'(2 . 20)
+        \partcombine
           {
             \global
-            \keepWithTag #'usePartials' \tenorVerse
+            \keepWithTag #'usePartials \tenorVerse
           }
           {
             \global
-            \keepWithTag #'usePartials' \bassVerse
+            \keepWithTag #'usePartials \bassVerse
           }
-        }
       >>
     >>
-    \layout {
-      \context {
-        \Lyrics
-        \override LyricSpace.minimum-distance = \lyricMinimumDistance
-        \override LyricText.font-size = \lyricFontSize
-        \override LyricText.self-alignment-X = #CENTER
-        \override LyricHyphen.thickness = \hyphenThickness
-        \override LyricHyphen.length = \hyphenLength
-      }
-      \context {
-        \Staff
-        \override StaffSymbol.thickness = \staffLineThickness
-        \override NoteHead.font-size = \noteHeadFontSize
-      }
-    }
+    \SlideLayout
   }
+  #(ly:message "third verse")
   \score {
     <<
-      \context Staff = upper <<
-        \context Voice = treble {
-          \aikenPartCombine #'(2 . 20)
+      \context Staff = upper \with { printPartCombineTexts = ##f } <<
+        \partcombine
           {
             \global
-            \keepWithTag #'usePartials' \sopranoVerse
+            \keepWithTag #'usePartials \sopranoVerse
           }
           {
             \global
-            \keepWithTag #'usePartials' \altoVerse
+            \keepWithTag #'usePartials \altoVerse
           }
-        }
         \context NullVoice = slideMusicBreaks {
           \global
-          \keepWithTag #'usePartials' \slideMusicBreaks
+          \keepWithTag #'usePartials \slideMusicBreaks
         }
         \context NullVoice = align {
           \global
-          \keepWithTag #'usePartials' \thirdVerseAlign
+          \keepWithTag #'usePartials \thirdVerseAlign
         }
         \new Lyrics \lyricsto "align" {
           \huge \verseThree
         }
       >>
-      \context Staff = lower <<
+      \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass
-        \context Voice = bass {
-          \aikenPartCombine #'(2 . 20)
+        \partcombine
           {
             \global
-            \keepWithTag #'usePartials' \tenorVerse
+            \keepWithTag #'usePartials \tenorVerse
           }
           {
             \global
-            \keepWithTag #'usePartials' \bassVerse
+            \keepWithTag #'usePartials \bassVerse
           }
-        }
       >>
     >>
-    \layout {
-      \context {
-        \Lyrics
-        \override LyricSpace.minimum-distance = \lyricMinimumDistance
-        \override LyricText.font-size = \lyricFontSize
-        \override LyricText.self-alignment-X = #CENTER
-        \override LyricHyphen.thickness = \hyphenThickness
-        \override LyricHyphen.length = \hyphenLength
-      }
-      \context {
-        \Staff
-        \override StaffSymbol.thickness = \staffLineThickness
-        \override NoteHead.font-size = \noteHeadFontSize
-      }
-    }
+    \SlideLayout
   }
+  #(ly:message "chorus")
   \score {
     <<
-      \context Staff = upper <<
-        \context Voice = treble {
-          \aikenPartCombine #'(2 . 20)
+      \context Staff = upper \with { printPartCombineTexts = ##f } <<
+        \partcombine
           {
             \global
-            \keepWithTag #'usePartials' \sopranoChorus
+            \keepWithTag #'usePartials \sopranoChorus
           }
           {
             \global
-            \keepWithTag #'usePartials' \altoChorus
+            \keepWithTag #'usePartials \altoChorus
           }
-        }
         \context NullVoice = breaks {
           \global
-          \keepWithTag #'usePartials' \slideMusicRefrainBreaks
+          \keepWithTag #'usePartials \slideMusicRefrainBreaks
         }
         \context NullVoice = align {
           \global
-          \keepWithTag #'usePartials' \alignChorus
+          \keepWithTag #'usePartials \alignChorus
         }
         \new Lyrics \lyricsto "align" {
           \huge \chorusLyrics
         }
       >>
-      \context Staff = lower <<
+      \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass
-        \context Voice = bass {
-          \aikenPartCombine #'(2 . 20)
+        \partcombine
           {
             \global
-            \keepWithTag #'usePartials' \tenorChorus
+            \keepWithTag #'usePartials \tenorChorus
           }
           {
             \global
-            \keepWithTag #'usePartials' \bassChorus
+            \keepWithTag #'usePartials \bassChorus
           }
-        }
       >>
     >>
-    \layout {
-      ragged-last = ##f
-
-      \context {
-        \Lyrics
-        \override LyricSpace.minimum-distance = \lyricMinimumDistance
-        \override LyricText.font-size = \lyricFontSize
-        \override LyricText.self-alignment-X = #CENTER
-        \override LyricHyphen.thickness = \hyphenThickness
-        \override LyricHyphen.length = \hyphenLength
-      }
-      \context {
-        \Staff
-        \override StaffSymbol.thickness = \staffLineThickness
-        \override NoteHead.font-size = \noteHeadFontSize
-      }
-    }
+    \SlideLayout
   }
+  #(ly:message "coda")
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \context Voice = treble {
-          \aikenPartCombine #'(2 . 20)
+      \context Staff = upper \with { printPartCombineTexts = ##f } <<
+        \partcombine
           {
             \global
-            \keepWithTag #'usePartials' \sopranoCoda
+            \keepWithTag #'usePartials \sopranoCoda
           }
           {
             \global
-            \keepWithTag #'usePartials' \altoCoda
+            \keepWithTag #'usePartials \altoCoda
           }
-        }
         \context NullVoice = align {
           \global
-          \keepWithTag #'usePartials' \sopranoCoda
+          \keepWithTag #'usePartials \sopranoCoda
         }
         \new Lyrics \lyricsto "align" {
           \codaLyrics
         }
       >>
-      \context Staff = lower <<
+      \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass
-        \context Voice = bass {
-          \aikenPartCombine #'(2 . 20)
+        \partcombine
           {
             \global
-            \keepWithTag #'usePartials' \tenorCoda
+            \keepWithTag #'usePartials \tenorCoda
           }
           {
             \global
-            \keepWithTag #'usePartials' \bassCoda
+            \keepWithTag #'usePartials \bassCoda
           }
-        }
       >>
     >>
-    \layout {
-      ragged-last = ##f
-
-      \context {
-        \Lyrics
-        \override LyricSpace.minimum-distance = \lyricMinimumDistance
-        \override LyricText.font-size = \lyricFontSize
-        \override LyricText.self-alignment-X = #CENTER
-        \override LyricHyphen.thickness = \hyphenThickness
-        \override LyricHyphen.length = \hyphenLength
-      }
-      \context {
-        \Staff
-        \override StaffSymbol.thickness = \staffLineThickness
-        \override NoteHead.font-size = \noteHeadFontSize
-      }
-    }
+    \SlideLayout
   }
 }

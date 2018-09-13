@@ -1,6 +1,8 @@
 \version "2.19.49"
 
-\include "../common.ly"
+\include "../../../LilypondTemplates/functions.ly"
+\include "../../../LilypondTemplates/hymns.ly"
+\include "../hymn_settings.ly"
 
 global = {
   \key bes \major
@@ -46,7 +48,7 @@ number_on_rhs = \just_as_I_am_I_come_broken_number_rhs
 % Rhythms for the sheet music with line break controls
 %
 sheetMusicBreaks = \relative c {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   s4  | \noBreak
   s2. | \noBreak
   s2. | \noBreak
@@ -75,7 +77,7 @@ sheetMusicBreaks = \relative c {
 }
 
 slideMusicBreaks = \relative c {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
@@ -111,7 +113,7 @@ slideMusicBreaks = \relative c {
 % Special space notes to capture the rhythm of the 3rd verse
 %
 thirdVerseAlign = \relative c {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   % Just as I am I would be lost,
   c8( c8) |
   c2 c4 |
@@ -144,7 +146,7 @@ thirdVerseAlign = \relative c {
 }
 
 sheetMusicRefrainBreaks = \relative c {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   s4  | \noBreak
   s2. | \noBreak
   s2. | \noBreak
@@ -173,7 +175,7 @@ sheetMusicRefrainBreaks = \relative c {
 }
 
 slideMusicRefrainBreaks = \relative c {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
@@ -222,19 +224,19 @@ slideMusicRefrainBreaks = \relative c {
 % No break guidance is included.
 %
 sopranoVerse = \relative c' {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   \set Staff.autoBeaming = ##f
   bes8[( c8]) |
   d2 d4 |
   f4( ees4) d4 |
   c4( d4) ees4 |
-  d4. ees8\rest
+  d4. r8
   
   f4 |
   f4( c4) d4 |
   ees2 g4 |
   g2 f4 |
-  d4. ees8\rest
+  d4. r8
   
   bes8[( c8]) |
   d2 d4 |
@@ -245,26 +247,26 @@ sopranoVerse = \relative c' {
   g4 |
   f2 f4 |
   f4( ees4) d4 |
-  c2 ees4\rest |
+  c2 r4 |
   f2. |
   d2.~ |
-  d4 ees4\rest \bar "|."
+  d4 r4 \bar "|."
 }
 
 altoVerse = \relative c' {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   \set Staff.autoBeaming = ##f
   bes4 |
   bes2 bes4 |
   d4( c4) bes4 |
   a4( bes4) c4 |
-  bes4. \hide r8
+  bes4. r8
   
   d4 |
-  c4( c4) bes4 |
+  c4~ c4 bes4 |
   c2 ees4 |
   ees2 d4 |
-  bes4. \hide r8
+  bes4. r8
   
   bes4 |
   bes2 bes4 |
@@ -275,26 +277,26 @@ altoVerse = \relative c' {
   ees4 |
   d2 d4 |
   d4( c4) bes4 |
-  a2 \hide r4 |
+  a2 r4 |
   c2. |
   bes2.~ |
-  bes4 \hide r4 \bar "|."
+  bes4 r4 \bar "|."
 }
 
 tenorVerse = \relative c {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   \set Staff.autoBeaming = ##f
   d8[( ees8]) |
   f2 f4 |
   f2 f4 |
   f2 f4 |
-  f4. f8\rest
+  f4. r8
   
   bes4 |
   a4( a4) f4 |
   f2 a4 |
   bes2 bes4 |
-  f4. f8\rest
+  f4. r8
   
   d8[( ees8]) |
   f2 f4 |
@@ -305,26 +307,26 @@ tenorVerse = \relative c {
   bes4 |
   bes2 bes4 |
   bes2 f4 |
-  f2 f4\rest |
+  f2 r4 |
   a2. |
   f2.~ |
-  f4 f4\rest \bar "|."
+  f4 r4 \bar "|."
 }
 
 bassVerse = \relative c {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   \set Staff.autoBeaming = ##f
   bes4 |
   bes2 bes4 |
   bes2 bes4 |
   f'2 f4 |
-  bes,4. \hide r8
+  bes,4. r8
   
   bes8[( d8]) |
   f4( f4) f4 |
   f2 f4 |
   bes,2 bes4 |
-  bes4. \hide r8
+  bes4. r8
   
   bes4 |
   bes2 bes4 |
@@ -335,14 +337,14 @@ bassVerse = \relative c {
   ees4 |
   bes2 bes4 |
   bes4.( c8) d8[( ees8]) |
-  f2 \hide r4 |
+  f2 r4 |
   <f f,>2.
   bes,2.~ |
-  bes4 \hide r4 \bar "|."
+  bes4 r4 \bar "|."
 }
 
 alignChorus = \relative c'' {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   c8 c8 |
   c4 c4 c8 c8 |
   c4 c4
@@ -373,7 +375,7 @@ alignChorus = \relative c'' {
 }
 
 sopranoChorus = \relative c'' {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   \set Staff.autoBeaming = ##f
   bes8[ a8] |
   g4 g4 bes8[ a8] |
@@ -381,13 +383,13 @@ sopranoChorus = \relative c'' {
   
   f8[ bes8] |
   bes4 bes4 f8[ c'8] |
-  c4 bes4\rest
+  c4 r4
   
   bes8[ a8] |
   g4 g4 bes8[ a8] |
   g4 g4 f8[ bes8] |
   bes4 bes4 f8[ c'8] |
-  c4 bes4\rest
+  c4 r4
   
   d8[ c8] |
   c4 bes4 d8[ c8] |
@@ -396,28 +398,28 @@ sopranoChorus = \relative c'' {
   g2
   
   bes8[ a8] |
-  g4 g4 g8\rest a8 |
+  g4 g4 r8 a8 |
   a8[ bes8] bes4 c4 |
-  bes4 bes4\rest g4 |
+  bes4 r4 g4 |
   a2 bes4 |
   bes2.~ |
-  bes4 bes4\rest \bar "|."
+  bes4 r4 \bar "|."
 }
 
 altoChorus = \relative c' {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   \set Staff.autoBeaming = ##f
   f8[ f8] |
   d4 d4 f8[ f8] |
   f4 ees4 ees8[ f8] |
   f4 f4 f8[ f8] |
-  a4 \hide r4
+  a4 r4
   
   f8[ f8] |
   d4 d4 f8[ f8] |
   f4 ees4 ees8[ f8] |
   f4 f4 f8[ f8] |
-  a4 \hide r4
+  a4 r4
   
   bes8[ a8] |
   a4 g4 bes8[ a8] |
@@ -426,30 +428,30 @@ altoChorus = \relative c' {
   f4( ees4)
   
   f8[ f8] |
-  f4 ees4 \hide r8 f8 |
+  f4 ees4 r8 f8 |
   f8[ f8] f4 f4 |
-  g4 \hide r4 ees4 |
+  g4 r4 ees4 |
   f2 f4 |
   f2.~ |
-  f4 \hide r4 \bar "|."
+  f4 r4 \bar "|."
 }
 
 tenorChorus = \relative c' {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   \set Staff.autoBeaming = ##f
   d8[ c8] |
   bes4 bes4 d8[ c8] |
   bes4 bes4 bes8[ bes8] |
   ees4 d4 d8[ f8] |
-  f4 f,4\rest
+  f4 r4
   
-  d'8[ c8] |
+  d8[ c8] |
   bes4 bes4 d8[ c8] |
   bes4 bes4 bes8[ bes8] |
   ees4 d4 d8[ f8] |
-  f4 f,4\rest
+  f4 r4
   
-  f'8[ f8] |
+  f8[ f8] |
   f4 d4 f8[ f8] |
   ees4 ees4 d8[ ees8] |
   f4. f8 f8[ d8] |
@@ -458,26 +460,26 @@ tenorChorus = \relative c' {
   d8[ c8] |
   bes4 bes4 f8\rest c'8 |
   c8[ d8] d4 d4 |
-  ees4 f,4\rest bes4 |
+  ees4 r4 bes4 |
   c2 ees4 |
   ees2.( |
-  d4) f,4\rest \bar "|."
+  d4) r4 \bar "|."
 }
 
 bassChorus = \relative c {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   \set Staff.autoBeaming = ##f
   f8[ f8] |
   g4 g4 g8[ g8] |
   ees4 ees4 ees8[ ees8] |
   bes4 bes4 bes8[ bes8] |
-  f'4 \hide r4
+  f'4 r4
   
   f8[ f8] |
   g4 g4 g8[ g8] |
   ees4 ees4 ees8[ ees8] |
   bes4 bes4 bes8[ bes8] |
-  f'4 \hide r4
+  f'4 r4
   
   f8[ f8] |
   g4 g4 g8[ g8] |
@@ -486,19 +488,19 @@ bassChorus = \relative c {
   ees2
   
   ees8[ ees8] |
-  ees4 ees4 \hide r8 f8 |
+  ees4 ees4 r8 f8 |
   g8[ g8] g4 g4 |
-  ees4 \hide r4 ees4 |
+  ees4 r4 ees4 |
   f2 f4 |
   bes,2.( |
-  bes4) \hide r4 \bar "|."
+  bes4) r4 \bar "|."
 }
 
 sopranoCoda = \relative c'' {
-  \tag #'usePartials' { \partial 4 }
+  \tag #'usePartials { \partial 4 }
   \set Staff.autoBeaming = ##f
   c4 |
-  bes4 bes4\rest g4 |
+  bes4 r4 g4 |
   a2 bes4 |
   bes2.~ |
   bes2 \bar "|."
@@ -508,7 +510,7 @@ altoCoda = \relative c'' {
   \tag #'usePartials' { \partial 4 }
   \set Staff.autoBeaming = ##f
   g4 |
-  g4 \hide r4 ees4 |
+  g4 r4 ees4 |
   f2 f4 |
   f2.~ |
   f2 \bar "|."
@@ -518,7 +520,7 @@ tenorCoda = \relative c' {
   \tag #'usePartials' { \partial 4 }
   \set Staff.autoBeaming = ##f
   ees4 |
-  ees4 f,4\rest bes4 |
+  ees4 r4 bes4 |
   c2 ees4 |
   ees2.( |
   d2) \bar "|."
@@ -528,7 +530,7 @@ bassCoda = \relative c {
   \tag #'usePartials' { \partial 4 }
   \set Staff.autoBeaming = ##f
   ees4 |
-  ees4 \hide r4 ees4 |
+  ees4 r4 ees4 |
   f2 f4 |
   bes,2.( |
   bes2) \bar "|."
