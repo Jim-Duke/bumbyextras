@@ -81,32 +81,43 @@ slideMusicBreaks = \relative c {
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2  \bar "" \break
+  s2 \bar "" \break
   
   \setSystemOffset \defaultBottomSystemOffset
+  s4 | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
+  s2 \bar "" \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4 | \noBreak
   s2. | \noBreak
+  s2 \bar "" \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s4  | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break
+  s2 \bar "" \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4 | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \pageBreak
   
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
   s2. | \noBreak
-  s2. | \noBreak
-  s2  \bar "" \break
+  s2. | \break
   
   \setSystemOffset \defaultBottomSystemOffset
-  s4  | \noBreak
   s2. | \noBreak
   s2. | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2  \bar "|." \break
+  s2  \bar "|." \pageBreak
 }
 
 %
