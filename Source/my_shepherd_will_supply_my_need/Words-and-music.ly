@@ -3,7 +3,6 @@
 
 #(ly:set-option 'relative-includes #t)
 \include "../../../LilypondTemplates/functions.ly"
-\include "../../../LilypondTemplates/midi.ly"
 \include "../../../LilypondTemplates/hymns.ly"
 \include "../hymn_settings.ly"
 
@@ -46,12 +45,11 @@ ShowScriptureOnSheetMusic = ##t
 %% Music and Lyrics Variables
 %%
 
-Key = \key c \major
-MajorKey = ##t
-
-Time = {
+global = {
+  \key c \major
   \time 3/4
   \tempo 4=105
+  \aikenHeads
 }
 
 SopranoVerseMusic = \relative c' {
@@ -451,5 +449,3 @@ VerseThree = \lyricmode {
   No more a strang -- er or a guest,
   but like a child at home.
 }
-
-\include "../../../LilypondTemplates/bumby-hymnal-template.ly"
