@@ -1,6 +1,9 @@
 \version "2.19.49"
 
 \include "Words-and-music.ly"
+
+SheetMusicLyricsMinimumDistance = 2
+
 \include "../../../LilypondTemplates/standard-elements.ly"
 
 #(ly:parser-define! (string->symbol "outputName")
@@ -110,15 +113,6 @@
         \new Lyrics \lyricsto "align" {
           \VerseThree
         }
-        \new Lyrics \lyricsto "align" {
-          \VerseFour
-        }
-        \new Lyrics \lyricsto "align" {
-          \VerseFive
-        }
-        \new Lyrics \lyricsto "align" {
-          \VerseSix
-        }
       >>
       \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass
@@ -134,5 +128,50 @@
       >>
     >>
     \SheetMusicVerseLayout
+  }
+  \markup {
+    \vspace #3
+    \bold "Chorus:"
+  }
+  \score {
+    % Verses Section
+    \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
+      \context Staff = upper \with { printPartCombineTexts = ##f } <<
+        \partcombine
+          {
+            \global
+            \keepWithTag #'usePartials \SopranoChorusMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \AltoChorusMusic
+          }
+        \context NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials \SheetMusicChorusBreaks
+        }
+        \context NullVoice = align {
+          \global
+          \keepWithTag #'usePartials \SopranoChorusMusic
+        }
+        \new Lyrics \lyricsto "align" {
+          \ChorusLyrics
+        }
+      >>
+      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+        \clef bass
+        \partcombine
+          {
+            \global
+            \keepWithTag #'usePartials \TenorChorusMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \BassChorusMusic
+          }
+      >>
+    >>
+    \SheetMusicChorusLayout
   }
 }

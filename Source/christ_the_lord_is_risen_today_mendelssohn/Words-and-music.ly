@@ -7,20 +7,11 @@
 \include "../../../LilypondTemplates/hymns.ly"
 \include "../hymn_settings.ly"
 
-%%
-%% Tweaks
-%%
-
-%%
-%% Music Variables
-%%
-
-Key = \key g \major
-MajorKey = ##t
-
-Time = {
+global = {
+  \key g \major
   \time 4/4
   \tempo 4=125
+  \aikenHeads
 }
 
 Title = "Christ the Lord is Risen Today"
@@ -163,33 +154,6 @@ BassVerseMusic = \relative c' {
   d4 d4 g2 \bar "|."
 }
 
-AlignVerseMusic = \relative c' {
-  c4 c4 c4. c8 |
-  c4 c4 c2 |
-  c4 c4 c4. c8 |
-  c4 c4 c2 |
-  
-  c4 c4 c4. c8 |
-  c4 c4 c2 |
-  c4 c4 c4. c8 |
-  c4 c4 c2 |
-  
-  c4 c4 c4 c4 |
-  c4 c4 c2 |
-  c4 c4 c4 c4 |
-  c4 c4 c2 |
-
-  c4 c4 c4 c4 |
-  c4 c4 c2 |
-  c4 c4 c4. c8 |
-  c4 c4 c2 |
-  
-  c4. c8 c4 c4 |
-  c4 c4 c2 |
-  c4 c4 c4. c8 |
-  c4 c4 c2 \bar "|."
-}
-
 SheetMusicVerseBreaks = \relative c {
   s1 | \noBreak
   s1 | \noBreak
@@ -300,5 +264,3 @@ VerseThree = \lyricmode {
   Thee we greet tri -- um -- phant now,  
   Hail the re -- sur -- rec -- tion thou!
 }
-
-\include "../../../LilypondTemplates/bumby-hymnal-template.ly"

@@ -148,28 +148,6 @@ BassVerseMusic = \relative c {
   ees1 \bar "|."
 }
 
-AlignVerseMusic = \relative c {
-  c2 c4 c4 |
-  c2 c2 |
-  c4 c4 c4 c4 |
-  c1 |
-
-  c2 c4 c4 |
-  c2 c2 |
-  c4 c4 c4 c4 |
-  c1 |
-
-  c2 c4 c4 |
-  c2 c2 |
-  c4 c4 c4 c4 |
-  c1 |
-
-  c2 c4 c4 |
-  c4 c4 c4 c4 |
-  c2 c2 |
-  c1 \bar "|."
-}
-
 SheetMusicVerseBreaks = \relative c {
   s1 | \noBreak
   s1 | \noBreak
@@ -219,9 +197,10 @@ SlidesVerseBreaks = \relative c {
 
   \setSystemOffset \defaultTopSystemOffset
   s1 | \noBreak
-  s1 | \break
+  s2. \bar "" \break
   
   \setSystemOffset \defaultBottomSystemOffset
+  s4 | \noBreak
   s1 | \noBreak
   s1 \bar "|."
 }

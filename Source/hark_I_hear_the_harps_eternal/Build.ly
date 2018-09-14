@@ -2,4 +2,6 @@
 
 BuildDir = "../../Build/"
 
-\include "hark_I_hear_the_harps_eternal.ly"
+\include "Sheet-Music.ly"
+\include "Slides.ly"
+\include "Audio.ly"

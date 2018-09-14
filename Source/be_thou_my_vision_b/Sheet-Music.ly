@@ -116,9 +116,6 @@
         \new Lyrics \lyricsto "align" {
           \VerseFive
         }
-        \new Lyrics \lyricsto "align" {
-          \VerseSix
-        }
       >>
       \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass

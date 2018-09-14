@@ -203,22 +203,22 @@
         \partcombine
           {
             \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
+            \keepWithTag #'usePartials \SopranoChorusMusic
           }
           {
             \global
-            \keepWithTag #'usePartials \AltoVerseMusic
+            \keepWithTag #'usePartials \AltoChorusMusic
           }
         \new NullVoice = breaks {
           \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
+          \keepWithTag #'usePartials \SlidesChorusBreaks
         }
         \new NullVoice = alignVoice {
           \global
-          \keepWithTag #'usePartials \SopranoVerseMusic
+          \keepWithTag #'usePartials \SopranoChorusMusic
         }
         \new Lyrics \lyricsto "alignVoice" {
-          \huge \VerseFour
+          \huge \ChorusLyrics
         }
       >>
       \context Staff = lower \with { printPartCombineTexts = ##f } <<
@@ -226,91 +226,11 @@
         \partcombine
           {
             \global
-            \keepWithTag #'usePartials \TenorVerseMusic
+            \keepWithTag #'usePartials \TenorChorusMusic
           }
           {
             \global
-            \keepWithTag #'usePartials \BassVerseMusic
-          }
-      >>
-    >>
-    \SlideLayout
-  }
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
-          {
-            \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \AltoVerseMusic
-          }
-        \new NullVoice = breaks {
-          \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
-        }
-        \new NullVoice = alignVoice {
-          \global
-          \keepWithTag #'usePartials \SopranoVerseMusic
-        }
-        \new Lyrics \lyricsto "alignVoice" {
-          \huge \VerseFive
-        }
-      >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
-        \clef bass
-        \partcombine
-          {
-            \global
-            \keepWithTag #'usePartials \TenorVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \BassVerseMusic
-          }
-      >>
-    >>
-    \SlideLayout
-  }
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
-          {
-            \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \AltoVerseMusic
-          }
-        \new NullVoice = breaks {
-          \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
-        }
-        \new NullVoice = alignVoice {
-          \global
-          \keepWithTag #'usePartials \SopranoVerseMusic
-        }
-        \new Lyrics \lyricsto "alignVoice" {
-          \huge \VerseSix
-        }
-      >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
-        \clef bass
-        \partcombine
-          {
-            \global
-            \keepWithTag #'usePartials \TenorVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \BassVerseMusic
+            \keepWithTag #'usePartials \BassChorusMusic
           }
       >>
     >>

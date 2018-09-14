@@ -8,7 +8,7 @@
        "Audio"
        (string-append BuildDir SongNumber " - " Title " - Audio")))
 
-NumVerses = 6
+NumVerses = 5
 
 \book {
   \bookOutputName #(string-append outputName " - All")

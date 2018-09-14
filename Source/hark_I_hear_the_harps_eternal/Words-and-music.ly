@@ -7,18 +7,8 @@
 \include "../../../LilypondTemplates/hymns.ly"
 \include "../hymn_settings.ly"
 
-%%
-%% Tweaks
-%%
-
-%%
-%% Music Variables
-%%
-
-Key = \key f \major
-MajorKey = ##t
-
-Time = {
+global = {
+  \key f \major
   \time 3/4
   \tempo 4=90
 }
@@ -137,25 +127,6 @@ BassVerseMusic = \relative c {
   d8 d |
   c4 c c8 d |
   f2 \bar "|."
-}
-
-AlignVerseMusic = \relative c' {
-  \tag #'usePartials { \partial 4 }
-  c8 c8 |
-  c4 c4 c8 c8 |
-  c4 c4
-
-  c8 c8 |
-  c4 c4 c8 c8 |
-  c2
-
-  c8 c8 |
-  c4 c4 c8 c8 |
-  c4 c4
-
-  c8 c8 |
-  c4 c4 c8 c8 |
-  c2 \bar "|."
 }
 
 SheetMusicVerseBreaks = \relative c {
@@ -360,5 +331,3 @@ ChorusLyrics = \lyricmode {
   Hal -- le -- lu -- jah! Hal -- le -- lu -- jah!
   Glo -- ry to the great I AM!
 }
-
-\include "../../../LilypondTemplates/bumby-hymnal-template.ly"

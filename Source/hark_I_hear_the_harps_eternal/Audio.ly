@@ -8,8 +8,6 @@
        "Audio"
        (string-append BuildDir SongNumber " - " Title " - Audio")))
 
-NumVerses = 6
-
 \book {
   \bookOutputName #(string-append outputName " - All")
   \score {
@@ -23,7 +21,12 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \SopranoVerseMusic
+            \keepWithTag #'usePartials \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
           }
         }
         \context Voice = altos \with {
@@ -34,7 +37,12 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \AltoVerseMusic
+            \keepWithTag #'usePartials \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
           }
         }
       >>
@@ -48,7 +56,12 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \TenorVerseMusic
+            \keepWithTag #'usePartials \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
           }
         }
         \context Voice = basses \with {
@@ -59,7 +72,12 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \BassVerseMusic
+            \keepWithTag #'usePartials \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
           }
         }
       >>
@@ -90,7 +108,12 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \SopranoVerseMusic
+            \keepWithTag #'usePartials \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
           }
         }
         \context Voice = altos \with {
@@ -101,7 +124,12 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \AltoVerseMusic
+            \keepWithTag #'usePartials \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
           }
         }
       >>
@@ -115,7 +143,12 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \TenorVerseMusic
+            \keepWithTag #'usePartials \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
           }
         }
         \context Voice = basses \with {
@@ -126,7 +159,12 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \BassVerseMusic
+            \keepWithTag #'usePartials \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
           }
         }
       >>
@@ -157,7 +195,12 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \SopranoVerseMusic
+            \keepWithTag #'usePartials \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
           }
         }
         \context Voice = altos \with {
@@ -168,7 +211,12 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \AltoVerseMusic
+            \keepWithTag #'usePartials \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
           }
         }
       >>
@@ -182,7 +230,12 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \TenorVerseMusic
+            \keepWithTag #'usePartials \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
           }
         }
         \context Voice = basses \with {
@@ -193,7 +246,12 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \BassVerseMusic
+            \keepWithTag #'usePartials \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
           }
         }
       >>
@@ -224,7 +282,12 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \SopranoVerseMusic
+            \keepWithTag #'usePartials \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
           }
         }
         \context Voice = altos \with {
@@ -235,7 +298,12 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \AltoVerseMusic
+            \keepWithTag #'usePartials \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
           }
         }
       >>
@@ -249,7 +317,12 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \TenorVerseMusic
+            \keepWithTag #'usePartials \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
           }
         }
         \context Voice = basses \with {
@@ -260,7 +333,12 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \BassVerseMusic
+            \keepWithTag #'usePartials \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
           }
         }
       >>
@@ -291,7 +369,12 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \SopranoVerseMusic
+            \keepWithTag #'usePartials \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
           }
         }
         \context Voice = altos \with {
@@ -302,7 +385,12 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \AltoVerseMusic
+            \keepWithTag #'usePartials \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
           }
         }
       >>
@@ -316,7 +404,12 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \TenorVerseMusic
+            \keepWithTag #'usePartials \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
           }
         }
         \context Voice = basses \with {
@@ -327,7 +420,12 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \BassVerseMusic
+            \keepWithTag #'usePartials \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
           }
         }
       >>

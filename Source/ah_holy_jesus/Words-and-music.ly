@@ -17,24 +17,26 @@ SheetMusicRaggedLast = ##t
 %% Music Variables
 %%
 
-Key = \key g \minor
-MajorKey = ##f
-
-Time = {
+global = {
+  \key g \minor
   \time 4/4
-  \tempo 4=85
+  \tempo 4 = 85
+  \aikenHeads
 }
 
+%%
+%% Hymn Metadata Variables
+%%
+
 Title = "Ah Holy Jesus"
-RightFirstPage = \ah_holy_jesus_number_rhs
 SongNumber = \ah_holy_jesus_number
+RightFirstPage = \ah_holy_jesus_number_rhs
+FirstPage = #(if RightFirstPage 1 2)
 
 LeaderHints = \markup {
   \fontsize #-4
   \normal-text { "B" \musicglyph #"accidentals.flat" " (Gm) - 4 - LA" }
 }
-
-FirstPage = #(if ah_holy_jesus_number_rhs 1 2)
 
 Scripture = "“But He was wounded for our transgressions,
               He was bruised for our iniquities;
@@ -59,106 +61,86 @@ ShowScriptureOnSheetMusic = ##t
 }
 
 SopranoVerseMusic = \relative c'' {
-  g2 g4 g |
-  f2 d |
-  g4 a bes bes |
-  c2 a |
+  g2 g4 g4 |
+  f2 d2 |
+  g4 a4 bes4 bes4 |
+  c2 a2 |
 
-  a2 bes4 c |
-  d2 bes |
-  ees4 ees d d |
-  c2 bes |
+  a2 bes4 c4 |
+  d2 bes2 |
+  ees4 ees4 d4 d4 |
+  c2 bes2 |
 
-  bes2 a4 g |
-  f2 d |
-  f4 f g f |
-  ees2 d |
-
-  d'2 c4 bes |
-  a2 g \bar "|."
-}
-
-AltoVerseMusic = \relative c' {
-  d2 ees4 ees4 |
-  c2 d |
-  d4 d g f |
-  ees2 d |
-
-  d2 d4 f |
-  f2 ees |
-  ees4 ees f f |
-  f2 d |
-
-  g2 f4 ees |
-  d2 bes |
-  d4 c d d |
-  c2 bes |
-
-  d2 ees4 d |
-  d4.( c8) bes2 \bar "|."
-}
-
-TenorVerseMusic = \relative c' {
-  bes2 bes4 c |
-  a2 bes |
-  bes4 a g bes |
-  g2 fis |
-
-  fis2 g4 a |
-  bes2 g |
-  g4 g8( a) bes4 bes |
-  bes4( a) bes2 |
-
-  d2 d4 bes |
-  bes2 f |
-  f4 f bes bes |
-  g2 g |
-
-  f4( bes) g g |
-  g( fis) g2 \bar "|."
-}
-
-BassVerseMusic = \relative c' {
-  g2 ees4 c |
-  f2 bes, |
-  g'4 f ees d |
-  c2 d |
-
-  d2 d4 c |
-  bes4( d) ees2 |
-  c4 c d4.( ees8) |
-  f2 bes, |
-
-  g2 d'4 ees |
-  bes2 bes |
-  bes4 a g bes |
-  c2 g |
-
-  bes2 c4 d |
-  d2 g,2 \bar "|."
-}
-
-AlignVerseMusic = \relative c {
-  c2 c4 c4 |
-  c2 c2 |
-  c4 c4 c4 c4 |
-  c2 c2 |
-
-  c2 c4 c4 |
-  c2 c2 |
-  c4 c4 c4 c4 |
-  c2 bes |
-
-  c2 c4 c4 |
-  c2 c2 |
-  c4 c4 c4 c4 |
-  c2 c2 |
+  bes2 a4 g4 |
+  f2 d2 |
+  f4 f4 g4 f4 |
+  ees2 d2 |
 
   \newSpacingSection
   \override Score.SpacingSpanner.spacing-increment = #3.8
 
-  c2 c4 c4 |
-  c2 c2 \bar "|."
+  d'2 c4 bes4 |
+  a2 g2 \bar "|."
+}
+
+AltoVerseMusic = \relative c' {
+  d2 ees4 ees4 |
+  c2 d2 |
+  d4 d4 g4 f4 |
+  ees2 d2 |
+
+  d2 d4 f4 |
+  f2 ees2 |
+  ees4 ees4 f4 f4 |
+  f2 d2 |
+
+  g2 f4 ees4 |
+  d2 bes2 |
+  d4 c4 d4 d4 |
+  c2 bes2 |
+
+  d2 ees4 d4 |
+  d4.( c8) bes2 \bar "|."
+}
+
+TenorVerseMusic = \relative c' {
+  bes2 bes4 c4 |
+  a2 bes2 |
+  bes4 a4 g4 bes4 |
+  g2 fis2 |
+
+  fis2 g4 a4 |
+  bes2 g2 |
+  g4 g8( a8) bes4 bes4 |
+  bes4( a) bes2 |
+
+  d2 d4 bes4 |
+  bes2 f2 |
+  f4 f4 bes4 bes4 |
+  g2 g2 |
+
+  f4( bes4) g4 g4 |
+  g4( fis4) g2 \bar "|."
+}
+
+BassVerseMusic = \relative c' {
+  g2 ees4 c4 |
+  f2 bes,2 |
+  g'4 f4 ees4 d4 |
+  c2 d2 |
+
+  d2 d4 c4 |
+  bes4( d4) ees2 |
+  c4 c4 d4.( ees8) |
+  f2 bes, |
+
+  g2 d'4 ees4 |
+  bes2 bes2 |
+  bes4 a4 g4 bes4 |
+  c2 g2 |
+
+  bes2 c4 d4 |
+  d2 g,2 \bar "|."
 }
 
 SheetMusicVerseBreaks = \relative c {
@@ -250,5 +232,3 @@ VerseFive = \lyricmode {
   Think on Thy pit -- y and Thy love un -- swerv -- ing,
   Not my de -- serv -- ing.
 }
-
-\include "../../../LilypondTemplates/bumby-hymnal-template.ly"

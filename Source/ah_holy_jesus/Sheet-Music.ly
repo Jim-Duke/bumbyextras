@@ -87,15 +87,15 @@
         \partcombine
           {
             \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
+            \keepWithTag #'usePartials' \SopranoVerseMusic
           }
           {
             \global
-            \keepWithTag #'usePartials \AltoVerseMusic
+            \keepWithTag #'usePartials' \AltoVerseMusic
           }
         \context NullVoice = breaks {
           \global
-          \keepWithTag #'usePartials \SheetMusicVerseBreaks
+          \keepWithTag #'usePartials' \SheetMusicVerseBreaks
         }
         \context NullVoice = align {
           \global
@@ -116,20 +116,17 @@
         \new Lyrics \lyricsto "align" {
           \VerseFive
         }
-        \new Lyrics \lyricsto "align" {
-          \VerseSix
-        }
       >>
       \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass
         \partcombine
           {
             \global
-            \keepWithTag #'usePartials \TenorVerseMusic
+            \keepWithTag #'usePartials' \TenorVerseMusic
           }
           {
             \global
-            \keepWithTag #'usePartials \BassVerseMusic
+            \keepWithTag #'usePartials' \BassVerseMusic
           }
       >>
     >>

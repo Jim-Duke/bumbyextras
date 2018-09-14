@@ -17,6 +17,7 @@ Source/*.ps
 Source/*.eps
 Build/*.pdf
 Build/*.mid
+Build/*.mp3
 *.log
 *~
 *.swp

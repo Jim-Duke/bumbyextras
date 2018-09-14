@@ -67,3 +67,9 @@ just_for_today_pages = #2
 ah_holy_jesus_number = "B-011"
 ah_holy_jesus_number_rhs = ##f
 ah_holy_jesus_pages = #1
+
+% B-012 - One Page
+% Be Thou My Vision
+be_thou_my_vision_number = "B-012"
+be_thou_my_vision_number_rhs = ##t
+be_thou_my_vision_pages = #1
