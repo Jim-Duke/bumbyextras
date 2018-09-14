@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<contents xmlns="http://schema.PresentationCreator.net/HymnalInformation.xsd">
+  <hymnal key="SDF5QW0ybmJzMyBDRjRvZHI1IEVXNm9mcjdzR2g4aWhwOSBJZTBDamhhb0JpY2NEZWVlRkNnaEhvaWlKY2tlSw==" guid="e9a91054-1b0c-4e56-8e8d-05f3f06c0774" sku="rjseceChoice" xmlns="http://schema.PresentationCreator.net/HymnalInformation.xsd">
+    <name>Hymns For Worship eChoice</name>
+    <alias>eChoice</alias>
+    <ISBN></ISBN>
+    <hymnalId>3</hymnalId>
+    <electronicVersion>1.3.702.44219</electronicVersion>
+    <hymn number="20158" title="LISTEN TO OUR HEARTS" key="SDF5QW0ybmJzMyBDRjRvZHI1IEVXNm9mcjdzR2g4aWhwOSBJZTBDamhhb0JpY2NEZWVlRkNnaEhvaWlKY2tlSw==" hymnId="1167">
+      <songLeaderInfo beatPattern="4" key="F" startingPitch="DO" time="4/4" startingBeat="2+" />
+      <printSmallPortable>20158\20158 - LISTEN TO OUR HEARTS - Print Small.PDF</printSmallPortable>
+      <printLargePortable>20158\20158 - LISTEN TO OUR HEARTS - Print Large.PDF</printLargePortable>
+      <originator name="Geoff Moore" role="Composer" type="Individual" stakeHolderId="418" />
+      <originator name="Steven Curtis Chapman" role="Composer" type="Individual" stakeHolderId="1133" />
+      <originator name="Tin Roof Music and Hat Songs, Inc" role="Copyright Holder" type="Business" stakeHolderId="1183" />
+      <originator name="Geoff Moore" role="Lyricist" type="Individual" stakeHolderId="418" />
+      <scripture>Romans 8:26</scripture>
+      <topicalIndex>Aspiration</topicalIndex>
+      <topicalIndex>Devotion</topicalIndex>
+      <topicalIndex>Praise/Adoration - Of God</topicalIndex>
+      <topicalIndex>Prayer - Petition</topicalIndex>
+      <hymnPortion portion="Verse 1" hymnPortionId="4389">
+        <text>How do you explain, how do you describe A love that goes from east to west, and runs as deep as it is wide. You know all our hopes, Lord, You know all our fears. And words cannot express the love we feel but we long for You to hear.</text>
+      </hymnPortion>
+      <hymnPortion portion="Verse 2" hymnPortionId="7455">
+        <text>If words could fall like rain from these lips of mine, And if I had a thousand years, Lord, I would still run out of time. If You listen to my heart, ev'ry beat will say: "Thank You for the Life,   Thank You for the  Truth, Thank You for the Way."</text>
+      </hymnPortion>
+      <hymnPortion portion="Chorus" hymnPortionId="8581">
+        <text>So listen to our hearts, hear our spirits sing A song of praise that flows from those You have redeemed. We will use the words we know to tell You what an awesome God You are. But words are not enough to tell You of our love, so listen to our hearts.</text>
+      </hymnPortion>
+    </hymn>
+  </hymnal>
+</contents>

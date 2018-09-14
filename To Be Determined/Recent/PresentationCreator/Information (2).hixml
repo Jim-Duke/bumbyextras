@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<contents xmlns="http://schema.PresentationCreator.net/HymnalInformation.xsd">
+  <hymnal key="SDF5QW0ybmJzMyBDRjRvZHI1IEVXNm9mcjdzR2g4aWhwOSBJZTBDamhhb0JpY2NEZWVlRkNnaEhvaWlKY2tlSw==" guid="e9a91054-1b0c-4e56-8e8d-05f3f06c0774" sku="rjseceChoice" xmlns="http://schema.PresentationCreator.net/HymnalInformation.xsd">
+    <name>Hymns For Worship eChoice</name>
+    <alias>eChoice</alias>
+    <ISBN></ISBN>
+    <hymnalId>3</hymnalId>
+    <electronicVersion>1.3.702.44648</electronicVersion>
+    <hymn number="20275A" title="DAYS OF ELIJAH" key="SDF5QW0ybmJzMyBDRjRvZHI1IEVXNm9mcjdzR2g4aWhwOSBJZTBDamhhb0JpY2NEZWVlRkNnaEhvaWlKY2tlSw==" hymnId="1289">
+      <songLeaderInfo beatPattern="4" key="Ab" startingPitch="SOL" time="4/4" startingBeat="1" startingPitchDirection="Down" />
+      <printSmallPortable>20275A\20275A - DAYS OF ELIJAH - Print Small.PDF</printSmallPortable>
+      <originator name="Robin Mark" role="Composer" type="Individual" stakeHolderId="1049" />
+      <originator name="Daybreak Music" role="Copyright Holder" type="Business" stakeHolderId="266" />
+      <originator name="Robin Mark" role="Lyricist" type="Individual" stakeHolderId="1049" />
+      <scripture>Revelation 1:7</scripture>
+      <topicalIndex>Affirmation</topicalIndex>
+      <topicalIndex>Exhortation/Admonition</topicalIndex>
+      <topicalIndex>Soul Winning</topicalIndex>
+      <hymnPortion portion="Verse 1" hymnPortionId="4758">
+        <text>These are the days of Elijah declaring the Word of the the Lord; And these are the days of Your servant Moses, righteousness being restored. And tho' these are days of great trials,  of famine and darkness and sword;  Still we are the voice in the desert crying, "Prepare ye the way of the Lord."  Behold, He comes riding on the clouds, shining like the sun at the trumpet call. So lift your voice, it's the year of Jubilee, and out of Zion's Hill salvation comes.</text>
+      </hymnPortion>
+      <hymnPortion portion="Verse 2" hymnPortionId="4759">
+        <text>These are the days of Ezekiel, the dry bones becoming as as flesh; And these are the days of Your servant David, rebuilding a temple of praise.  And these are the days of the harvest,  the fields are as white in Your world, and we are the laborers in Your vineyard declaring the Word of the Lord. Behold, He comes riding on the clouds, shining like the sun at the trumpet call. So lift your voice, it's the year of Jubilee, and out of Zion's Hill salvation comes.</text>
+      </hymnPortion>
+      <hymnPortion portion="Coda" hymnPortionId="7985">
+        <text>There's no God like Jehovah Behold, He comes riding on the clouds, shining like the sun at the trumpet call. So lift your voice, it's 
+ Behold, He comes riding on the clouds, shining like the sun at the trumpet call. So lift your voice, it's the year of Jubilee, and out of Zion's Hill salvation 
+
+Who was and Who is and Who is to come! Who was and Who is and Who is to come!
+
+Who was and Who is, and Who is to come! Who was and Who is, and Who is to come!</text>
+      </hymnPortion>
+    </hymn>
+  </hymnal>
+</contents>

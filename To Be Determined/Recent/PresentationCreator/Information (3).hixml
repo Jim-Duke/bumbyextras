@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<contents xmlns="http://schema.PresentationCreator.net/HymnalInformation.xsd">
+  <hymnal key="SDF5QW0ybmJzMyBDRjRvZHI1IEVXNm9mcjdzR2g4aWhwOSBJZTBDamhhb0JpY2NEZWVlRkNnaEhvaWlKY2tlSw==" guid="e9a91054-1b0c-4e56-8e8d-05f3f06c0774" sku="rjseceChoice" xmlns="http://schema.PresentationCreator.net/HymnalInformation.xsd">
+    <name>Hymns For Worship eChoice</name>
+    <alias>eChoice</alias>
+    <ISBN></ISBN>
+    <hymnalId>3</hymnalId>
+    <electronicVersion>1.3.702.44658</electronicVersion>
+    <hymn number="20277" title="THE MOUNTAIN SONG" key="SDF5QW0ybmJzMyBDRjRvZHI1IEVXNm9mcjdzR2g4aWhwOSBJZTBDamhhb0JpY2NEZWVlRkNnaEhvaWlKY2tlSw==" hymnId="1291">
+      <songLeaderInfo beatPattern="2" key="Eb" startingPitch="DO" time="2/4" startingBeat="2+" />
+      <printSmallPortable>20277\20277 - THE MOUNTAIN SONG - Print Small.PDF</printSmallPortable>
+      <originator name="Roger Carson" role="Composer" type="Individual" stakeHolderId="1052" />
+      <originator name="Kingsmen Publishing Co." role="Copyright Holder" type="Business" stakeHolderId="748" />
+      <originator name="Roger Carson" role="Lyricist" type="Individual" stakeHolderId="1052" />
+      <scripture>Luke 6:12</scripture>
+      <topicalIndex>Fellowship - With Christ</topicalIndex>
+      <topicalIndex>Prayer - Exhortation</topicalIndex>
+      <topicalIndex>Prayer - Petition</topicalIndex>
+      <hymnPortion portion="Verse 1" hymnPortionId="4765">
+        <text>O Lord, I need a mountain to climb on; Just a quiet place to go  and know You’re there.  O Lord, I need to spend some time with You; Spend the night with You, dear Lord, in prayer. And the greatest Friend  you’ll ever find  is on a lonely mountain.  And the highest high  you’ll ever feel  is when you kneel  to pray. And the brightest light  you’ll ever see  is when you close your eyes. O Lord, You are my first love;  at last I realize. O Lord, You are my first love; at last I realize.     </text>
+      </hymnPortion>
+      <hymnPortion portion="Verse 2" hymnPortionId="4766">
+        <text>O Lord, I tho't the day  would never dawn,  When I’d lay my burdens down  and walk with You;  But this morning as I met  the rising sun; I felt, dear Lord, my dreams  had all come true.  And the greatest Friend  you’ll ever find  is on a lonely mountain.  And the highest high  you’ll ever feel  is when you kneel  to pray. And the brightest light  you’ll ever see  is when you close your eyes. O Lord, You are my first love;  at last I realize. O Lord, You are my first love; at last I realize.      </text>
+      </hymnPortion>
+    </hymn>
+  </hymnal>
+</contents>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<contents xmlns="http://schema.PresentationCreator.net/HymnalInformation.xsd">
+  <hymnal key="SDF5QW0ybmJzMyBDRjRvZHI1IEVXNm9mcjdzR2g4aWhwOSBJZTBDamhhb0JpY2NEZWVlRkNnaEhvaWlKY2tlSw==" guid="e9a91054-1b0c-4e56-8e8d-05f3f06c0774" sku="rjseceChoice" xmlns="http://schema.PresentationCreator.net/HymnalInformation.xsd">
+    <name>Hymns For Worship eChoice</name>
+    <alias>eChoice</alias>
+    <ISBN></ISBN>
+    <hymnalId>3</hymnalId>
+    <electronicVersion>1.3.702.46505</electronicVersion>
+    <hymn number="20704" title="LORD REIGN IN ME" key="SDF5QW0ybmJzMyBDRjRvZHI1IEVXNm9mcjdzR2g4aWhwOSBJZTBDamhhb0JpY2NEZWVlRkNnaEhvaWlKY2tlSw==" hymnId="1731">
+      <songLeaderInfo beatPattern="4" key="Bb" startingPitch="DO" time="4/4" startingBeat="2" />
+      <printSmallPortable>20704\20704 - LORD REIGN IN ME - Print Small.PDF</printSmallPortable>
+      <originator name="Brenton Brown" role="Composer" type="Individual" stakeHolderId="1393" />
+      <originator name="Vineyard Songs/Vineyard Publishing in N.A." role="Copyright Holder" type="Business" stakeHolderId="1427" />
+      <originator name="Brenton Brown" role="Lyricist" type="Individual" stakeHolderId="1393" />
+      <scripture>Revelation 11:17</scripture>
+      <topicalIndex>Christ - Kingship/Lordship</topicalIndex>
+      <topicalIndex>Christlikeness/Godly Living</topicalIndex>
+      <hymnPortion portion="Verse 1" hymnPortionId="6231">
+        <text>Over all the earth You reign on high, Ev'ry mountain stream ev'ry sunset sky, But my one request Lord my only aim, Is that You'd reign in me again!</text>
+      </hymnPortion>
+      <hymnPortion portion="Verse 2" hymnPortionId="6232">
+        <text>Over ev'ry tho't over ev'ry word May my life reflect the beauty of my Lord "Cause you mean  more to me than any earthly thing, So won't you reign in me again!</text>
+      </hymnPortion>
+      <hymnPortion portion="Chorus" hymnPortionId="6233">
+        <text>Lord reign in me, Reign in your power, Over all my dreams, In my darkest hour, You are the Lord of all I am, So won't You reign in me again! Won't You reign in me again!</text>
+      </hymnPortion>
+    </hymn>
+  </hymnal>
+</contents>
