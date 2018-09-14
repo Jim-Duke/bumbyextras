@@ -2,4 +2,6 @@
 
 BuildDir = "../../Build/"
 
-\include "in_christ_alone.ly"
+\include "Sheet-Music.ly"
+\include "Slides.ly"
+\include "Audio.ly"

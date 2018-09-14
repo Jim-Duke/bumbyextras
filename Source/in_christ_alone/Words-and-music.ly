@@ -3,7 +3,6 @@
 
 #(ly:set-option 'relative-includes #t)
 \include "../../../LilypondTemplates/functions.ly"
-\include "../../../LilypondTemplates/midi.ly"
 \include "../../../LilypondTemplates/hymns.ly"
 \include "../hymn_settings.ly"
 
@@ -50,12 +49,11 @@ ShowScriptureOnSheetMusic = ##t
 %% Music and Lyrics Variables
 %%
 
-Key = \key ees \major
-MajorKey = ##t
-
-Time = {
+global = {
+  \key ees \major
   \time 3/4
   \tempo 4=80
+  \aikenHeads
 }
 
 SopranoVerseMusic = \relative c' {
@@ -315,5 +313,3 @@ VerseFour = \lyricmode {
    Till He re -- turns or calls me home,  
    Here in the pow'r of Christ I'll stand.
 }
-
-\include "../../../LilypondTemplates/bumby-hymnal-template.ly"
