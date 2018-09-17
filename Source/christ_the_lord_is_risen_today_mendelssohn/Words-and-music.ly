@@ -11,8 +11,9 @@ global = {
   \key g \major
   \time 4/4
   \tempo 4=125
-  \aikenHeads
 }
+
+MajorKey = ##t
 
 Title = "Christ the Lord is Risen Today"
 SongNumber = \christ_the_lord_is_risen_today_mendelssohn_number

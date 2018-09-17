@@ -10,8 +10,9 @@ global = {
   \key ees \major
   \time 3/4
   \tempo 4 = 100
-  \aikenHeads
 }
+
+MajorKey = ##t
 
 %%
 %% Hymn Metadata Variables

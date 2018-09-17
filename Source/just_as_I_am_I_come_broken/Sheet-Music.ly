@@ -83,8 +83,8 @@
     % Verses Section
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \sopranoVerse
@@ -115,9 +115,9 @@
           \verseThree
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \tenorVerse
@@ -137,8 +137,8 @@
   \score {
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \sopranoChorus
@@ -159,9 +159,9 @@
           \chorusLyrics
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \tenorChorus
@@ -183,8 +183,8 @@
   \score {
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \sopranoCoda
@@ -201,9 +201,9 @@
           \codaLyrics
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \tenorCoda

@@ -86,8 +86,8 @@ ShowScriptureOnSheetMusic = ##t
     % Verses Section
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'(usePartials sheetMusicRhythms) \sopranoVerse
@@ -137,8 +137,8 @@ ShowScriptureOnSheetMusic = ##t
   \score {
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \sopranoChorus
@@ -155,9 +155,9 @@ ShowScriptureOnSheetMusic = ##t
           \chorusLyrics
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \tenorChorus

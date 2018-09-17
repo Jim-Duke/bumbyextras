@@ -84,12 +84,11 @@
     #(layout-set-staff-size 44)
   }
   \pageBreak
-  #(ly:message "first verse")
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \sopranoVerse
@@ -110,9 +109,9 @@
           \huge \verseOne
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \tenorVerse
@@ -125,11 +124,10 @@
     >>
     \SlideLayout
   }
-  #(ly:message "second verse")
   \score {
     <<
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \sopranoVerse
@@ -150,9 +148,9 @@
           \huge \verseTwo
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \tenorVerse
@@ -165,11 +163,10 @@
     >>
     \SlideLayout
   }
-  #(ly:message "third verse")
   \score {
     <<
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \sopranoVerse
@@ -190,9 +187,9 @@
           \huge \verseThree
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \tenorVerse
@@ -205,11 +202,10 @@
     >>
     \SlideLayout
   }
-  #(ly:message "chorus")
   \score {
     <<
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \sopranoChorus
@@ -230,9 +226,9 @@
           \huge \chorusLyrics
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \tenorChorus
@@ -245,12 +241,11 @@
     >>
     \SlideLayout
   }
-  #(ly:message "coda")
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \sopranoCoda
@@ -267,9 +262,9 @@
           \codaLyrics
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \tenorCoda

@@ -83,8 +83,8 @@ SlideLyricFontSize = 1.4
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \SopranoVerseMusic
@@ -105,9 +105,9 @@ SlideLyricFontSize = 1.4
           \huge \VerseOne
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \TenorVerseMusic
@@ -123,8 +123,8 @@ SlideLyricFontSize = 1.4
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \SopranoVerseMusic
@@ -145,9 +145,9 @@ SlideLyricFontSize = 1.4
           \huge \VerseTwo
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \TenorVerseMusic
@@ -163,8 +163,8 @@ SlideLyricFontSize = 1.4
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \SopranoVerseMusic
@@ -185,9 +185,9 @@ SlideLyricFontSize = 1.4
           \huge \VerseThree
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \TenorVerseMusic
@@ -204,7 +204,7 @@ SlideLyricFontSize = 1.4
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \SopranoVerseMusic
@@ -227,7 +227,7 @@ SlideLyricFontSize = 1.4
       >>
       \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \TenorVerseMusic

@@ -8,8 +8,6 @@
        "Audio"
        (string-append BuildDir songNumber " - " title " - Audio")))
 
-defaultTempo = 100
-
 \book {
   \bookOutputName #(string-append outputName " - All")
   \score {
@@ -85,7 +83,6 @@ defaultTempo = 100
         \Voice
           \consists "Staff_performer"
       }
-      \tempo 4 = \defaultTempo
     }
   }
 }
@@ -165,7 +162,6 @@ defaultTempo = 100
         \Voice
           \consists "Staff_performer"
       }
-      \tempo 4 = \defaultTempo
     }
   }
 }
@@ -245,7 +241,6 @@ defaultTempo = 100
         \Voice
           \consists "Staff_performer"
       }
-      \tempo 4 = \defaultTempo
     }
   }
 }
@@ -325,7 +320,6 @@ defaultTempo = 100
         \Voice
           \consists "Staff_performer"
       }
-      \tempo 4 = \defaultTempo
     }
   }
 }
@@ -405,7 +399,6 @@ defaultTempo = 100
         \Voice
           \consists "Staff_performer"
       }
-      \tempo 4 = \defaultTempo
     }
   }
 }

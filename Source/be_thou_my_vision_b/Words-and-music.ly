@@ -10,8 +10,9 @@ global = {
   \key ees \major
   \time 3/4
   \tempo 4 = 100
-  \aikenHeads
 }
+
+MajorKey = ##t
 
 %%
 %% Hymn Metadata Variables
@@ -116,7 +117,7 @@ BassVerseMusic = \relative c' {
   g4 aes4 g4 |
   f8( ees8) d4 ees4 |
   c4 bes4 aes4 |
-  ees4 bes'4 ees4 |
+  ees4( bes'4 ees4) |
   
   d4 c4 bes4 |
   bes8( a8) g8( f'8) ees8( d8) |

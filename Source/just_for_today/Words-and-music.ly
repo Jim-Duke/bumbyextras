@@ -7,34 +7,34 @@
 global = {
   \key e \major
   \time 4/4
-  \aikenHeads
+  \tempo 4 = 65
 }
 
-title = "Just For Today"
-songNumber = \just_for_today_number
-leaderHints = \markup {
+Title = "Just For Today"
+SongNumber = \just_for_today_number
+LeaderHints = \markup {
   \fontsize #-4
   \normal-text { "E - 4 - DO" }
 }
 number_on_rhs = \just_for_today_number_rhs
-FirstPage = \just_for_today_pages
+FirstPage = #(if just_for_today_number_rhs 1 2)
 
 #(if number_on_rhs
      (begin
-      (define lhs leaderHints)
-      (define rhs songNumber))
+      (define lhs LeaderHints)
+      (define rhs SongNumber))
      (begin
-      (define lhs songNumber)
-      (define rhs leaderHints)))
+      (define lhs SongNumber)
+      (define rhs LeaderHints)))
 
 \header {
-  title = \title
+  title = \Title
   tune = "FATHER GOD"
   meter = "7.7.7.7 with Chorus"
   composer = "Marc Schelske (1995)"
   poet = "Marc Schelske (1995)"
   altered = ##t
-  songNumber = \songNumber
+  songNumber = \SongNumber
   lhs = \lhs
   rhs = \rhs
   copyright = \markup { \char ##x00A9 " Copyright 1995 Marc Schelske Music." }

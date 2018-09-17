@@ -94,8 +94,8 @@
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials' \sopranoVerse
@@ -116,9 +116,9 @@
           \huge \verseOne \verseCommon
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials' \tenorVerse
@@ -134,8 +134,8 @@
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials' \sopranoVerse
@@ -156,9 +156,9 @@
           \huge \verseTwo \verseCommon
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials' \tenorVerse
@@ -174,8 +174,8 @@
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials' \sopranoBridge
@@ -196,9 +196,9 @@
           \huge \bridgeLyrics
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials' \tenorBridge
@@ -214,8 +214,8 @@
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials' \sopranoVerse
@@ -236,9 +236,9 @@
           \huge \verseThree \verseCommon
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials' \tenorVerse
@@ -254,8 +254,8 @@
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials' \sopranoVerse
@@ -276,9 +276,9 @@
           \huge \verseFour \verseCommon \bridgeLyrics
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials' \tenorVerse

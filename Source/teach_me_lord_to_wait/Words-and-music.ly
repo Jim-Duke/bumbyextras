@@ -7,8 +7,10 @@
 global = {
   \key f \major
   \time 3/4
-  \aikenHeads
+  \tempo 4 = 100
 }
+
+MajorKey = ##t
 
 title = "Teach Me Lord to Wait"
 songNumber = \teach_me_lord_to_wait_number
@@ -17,7 +19,7 @@ leaderHints = \markup {
   \normal-text { "F - 3 - SOL" }
 }
 number_on_rhs = \teach_me_lord_to_wait_number_rhs
-FirstPage = \just_for_today_pages
+FirstPage = #(if number_on_rhs 1 2)
 
 #(if number_on_rhs
      (begin

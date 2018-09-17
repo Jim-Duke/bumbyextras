@@ -13,6 +13,8 @@ global = {
   \tempo 4=90
 }
 
+MajorKey = ##t
+
 Title = "Hark! I Hear the Harps Eternal!"
 SongNumber = \hark_I_hear_the_harps_eternal_number
 

@@ -8,8 +8,6 @@
        "Audio"
        (string-append BuildDir songNumber " - " title " - Audio")))
 
-defaultTempo = 65
-
 \book {
   \bookOutputName #(string-append outputName " - All")
   \score {

@@ -10,8 +10,9 @@ global = {
   \key ees \major
   \time 3/4
   \tempo 4 = 100
-  \aikenHeads
 }
+
+MajorKey = ##t
 
 %%
 %% Hymn Metadata Variables
@@ -159,7 +160,7 @@ SheetMusicVerseBreaks = \relative c {
 SlidesVerseBreaks = \relative c {
   \setSystemOffset \defaultTopSystemOffset
   s2. | \noBreak
-  s2  \bar "" \break
+  s2  \bar "" \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s4  | \noBreak
@@ -168,7 +169,7 @@ SlidesVerseBreaks = \relative c {
   
   \setSystemOffset \defaultTopSystemOffset
   s2. | \noBreak
-  s2. | \break
+  s2. | \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s2. | \noBreak
@@ -176,7 +177,7 @@ SlidesVerseBreaks = \relative c {
   
   \setSystemOffset \defaultTopSystemOffset
   s2. | \noBreak
-  s2. | \break
+  s2. | \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s2. | \noBreak
@@ -184,7 +185,7 @@ SlidesVerseBreaks = \relative c {
 
   \setSystemOffset \defaultTopSystemOffset
   s2. | \noBreak
-  s2  \bar "" \break
+  s2  \bar "" \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s4  | \noBreak

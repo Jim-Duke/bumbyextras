@@ -78,8 +78,8 @@
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'(usePartials verseOneRhythms) \sopranoVerse
@@ -100,9 +100,9 @@
       \new Lyrics \lyricsto "alignVoice" {
         \huge \verseOneLyrics
       }
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'(usePartials verseOneRhythms) \tenorVerse
@@ -118,8 +118,8 @@
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'(usePartials verseTwoRhythms) \sopranoVerse
@@ -140,9 +140,9 @@
           \huge \verseTwoLyrics
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'(usePartials verseTwoRhythms) \tenorVerse
@@ -158,8 +158,8 @@
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \sopranoRefrain
@@ -180,9 +180,9 @@
           \huge \refrainLyrics
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \tenorRefrain

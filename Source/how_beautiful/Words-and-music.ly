@@ -7,8 +7,10 @@
 global = {
   \key ees \major
   \time 3/4
-  \aikenHeads
+  \tempo 4 = 110
 }
+
+MajorKey = ##t
 
 Title = "How Beautiful"
 SongNumber = \how_beautiful_number
@@ -21,19 +23,19 @@ number_on_rhs = \how_beautiful_number_rhs
 
 #(if number_on_rhs
      (begin
-      (define lhs leaderHints)
-      (define rhs songNumber))
+      (define lhs LeaderHints)
+      (define rhs SongNumber))
      (begin
-      (define lhs songNumber)
-      (define rhs leaderHints)))
+      (define lhs SongNumber)
+      (define rhs LeaderHints)))
 
 \header {
-  title = \title
+  title = \Title
   tune = "How Beautiful"
   meter = "8.8.8.8 with Chorus"
   composer = "Twila Paris"
   poet = "Twila Paris"
-  songNumber = \songNumber
+  songNumber = \SongNumber
   lhs = \lhs
   rhs = \rhs
   copyright = "Copyright (c) 1990 Ariose Music and Mountain Spring Music"

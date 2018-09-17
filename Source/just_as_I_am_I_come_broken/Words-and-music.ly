@@ -7,32 +7,35 @@
 global = {
   \key bes \major
   \time 3/4
-  \aikenHeads
+  \tempo 4 = 100
 }
 
-title = "Just As I Am - I Come Broken"
-songNumber = \just_as_I_am_I_come_broken_number
-leaderHints = \markup {
+Title = "Just As I Am - I Come Broken"
+SongNumber = \just_as_I_am_I_come_broken_number
+LeaderHints = \markup {
   \fontsize #-4
   \normal-text { "B" \musicglyph #"accidentals.flat" " - 3 - DO" }
 }
+
 number_on_rhs = \just_as_I_am_I_come_broken_number_rhs
 
 #(if number_on_rhs
      (begin
-      (define lhs leaderHints)
-      (define rhs songNumber))
+      (define lhs LeaderHints)
+      (define rhs SongNumber))
      (begin
-      (define lhs songNumber)
-      (define rhs leaderHints)))
+      (define lhs SongNumber)
+      (define rhs LeaderHints)))
+
+FirstPage = #(if just_as_I_am_I_come_boken_number_rhs 1 2)
 
 \header {
-  title = "Just As I Am - I Come Broken"
+  title = \Title
   tune = "Just As I Am - I Come Broken"
   meter = ""
   composer = "Charlotte Elliott, David Moffitt, Sue C. Smith, Travis Cottrell, William Batchelder Bradbury"
   poet = "Charlotte Elliott, David Moffitt, Sue C. Smith, Travis Cottrell, William Batchelder Bradbury"
-  songNumber = \songNumber
+  songNumber = \SongNumber
   lhs = \lhs
   rhs = \rhs
   copyright = \markup {

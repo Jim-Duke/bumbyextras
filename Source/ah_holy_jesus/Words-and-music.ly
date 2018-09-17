@@ -21,8 +21,9 @@ global = {
   \key g \minor
   \time 4/4
   \tempo 4 = 85
-  \aikenHeads
 }
+
+MajorKey = ##f
 
 %%
 %% Hymn Metadata Variables

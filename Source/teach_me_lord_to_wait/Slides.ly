@@ -80,8 +80,8 @@ SlideLyricFontSize = 2.5
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'(usePartials verseOneRhythms) \sopranoVerse
@@ -102,9 +102,9 @@ SlideLyricFontSize = 2.5
           \huge \verseOne
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'(usePartials verseOneRhythms) \tenorVerse
@@ -120,8 +120,8 @@ SlideLyricFontSize = 2.5
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'(usePartials verseTwoRhythms) \sopranoVerse
@@ -142,9 +142,9 @@ SlideLyricFontSize = 2.5
           \huge \verseTwo
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'(usePartials verseTwoRhythms) \tenorVerse
@@ -161,8 +161,8 @@ SlideLyricFontSize = 2.5
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \sopranoChorus
@@ -183,9 +183,9 @@ SlideLyricFontSize = 2.5
           \huge \chorusLyrics
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \tenorChorus

@@ -53,8 +53,9 @@ global = {
   \key ees \major
   \time 3/4
   \tempo 4=80
-  \aikenHeads
 }
+
+MajorKey = ##t
 
 SopranoVerseMusic = \relative c' {
   \tag #'usePartials { \partial 4. }

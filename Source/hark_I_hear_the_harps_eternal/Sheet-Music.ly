@@ -86,8 +86,8 @@ SheetMusicLyricsMinimumDistance = 2
     % Verses Section
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \SopranoVerseMusic
@@ -114,9 +114,9 @@ SheetMusicLyricsMinimumDistance = 2
           \VerseThree
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \TenorVerseMusic
@@ -137,8 +137,8 @@ SheetMusicLyricsMinimumDistance = 2
     % Verses Section
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper \with { printPartCombineTexts = ##f } <<
-        \partcombine
+      \context Staff = upper <<
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \SopranoChorusMusic
@@ -159,9 +159,9 @@ SheetMusicLyricsMinimumDistance = 2
           \ChorusLyrics
         }
       >>
-      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+      \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \TenorChorusMusic
