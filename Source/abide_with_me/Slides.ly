@@ -103,7 +103,7 @@
       >>
       \context Staff = lower <<
         \clef bass
-        \partcombine
+        \partCombine
           {
             \global
             \keepWithTag #'usePartials \TenorVerseMusic
