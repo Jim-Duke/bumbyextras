@@ -3,6 +3,7 @@
 \include "Words-and-music.ly"
 
 SlideStaffStaffSpacing = #16
+SlideLyricMinimumDistance = #2
 
 \include "../../../LilypondTemplates/standard-elements.ly"
 

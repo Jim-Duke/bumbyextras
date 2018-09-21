@@ -45,21 +45,19 @@
           \line {
             "Hymn:"
             \fromproperty #'header:meter
-            \char ##x2022
-            \fromproperty #'header:poet
+            \optional-field "• " #'header:poet
+            \optional-field "• tr. " #'header:translator
+            \optional-field "• vs. " #'header:versifier
           }
           \line {
             "Tune:"
             \fromproperty #'header:tune
-            \char ##x2022
-            \fromproperty #'header:composer
-            #(if header:arranger #{
-              \char ##x2022 "arr. "
-              \fromproperty #'header:arranger
-                 #})
+            \optional-field "• " #'header:composer
+            \optional-field "• arr. " #'header:arranger
           }
           \line {
             \fromproperty #'header:copyright
+            \optional-field "• " #'header:license
           }
         }
       }

@@ -1,6 +1,10 @@
 \version "2.19.49"
 
 \include "Words-and-music.ly"
+
+SlideStaffStaffSpacing = #16
+SlideLyricMinimumDistance = #5
+
 \include "../../../LilypondTemplates/standard-elements.ly"
 
 #(ly:parser-define! (string->symbol "outputName")
@@ -32,22 +36,23 @@
           \line {
             "Hymn:"
             \fromproperty #'header:meter
-            \char ##x2022
-            \fromproperty #'header:poet
+            \optional-field "• " #'header:poet
+          }
+          \line {
+            \optional-field "Translator: " #'header:translator
+          }
+          \line {
+            \optional-field "Versifier: " #'header:versifier
           }
           \line {
             "Tune:"
             \fromproperty #'header:tune
-            \char ##x2022
-            \fromproperty #'header:composer
-            \char ##x2022 "arr."
-            \fromproperty #'header:arranger
+            \optional-field "• " #'header:composer
+            \optional-field "• arr. " #'header:arranger
           }
           \line {
             \fromproperty #'header:copyright
-          }
-          \line {
-            \fromproperty #'header:license
+            \optional-field "• " #'header:license
           }
         }
       }

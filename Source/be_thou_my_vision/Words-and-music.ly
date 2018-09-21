@@ -39,11 +39,14 @@ ShowScriptureOnSheetMusic = ##f
   meter = "10.10.9.10"
   composer = "Joyce's Old Irish Folk Music and Songs (1909)"
   arranger = "C. E. Couchman"
-  poet = "Irish Fok Hymn (c. 750) tr. Mary E. Byrne (1905) ver. Eleanor H. Hull alt."
+  poet = "Irish Fok Hymn (c. 750)"
+  translator = "Mary E. Byrne (1905)"
+  versifier = "Eleanor H. Hull (1912)"
+  altered = ##t
   songNumber = \SongNumber
   lhs = #(if RightFirstPage LeaderHints SongNumber)
   rhs = #(if RightFirstPage SongNumber LeaderHints)
-  copyright = "arr. Copyright C. E. Couchman"
+  copyright = "arr. © 2009 C. E. Couchman"
   license = "Used by permission"
   tagline = ##f
 }
