@@ -1,0 +1,102 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      {{ content }}
+    </div>
+    <div class="col-sm-4">
+      <div class="list-group">
+        <div class="list-group-item panel panel-default">
+          <div class="panel-heading">Status</div>
+	  <div class="panel-body">
+            <div class="list-group">
+              <div class="list-item">{{ page.status }}</div>
+	      {% if page.date %}
+              <div class="list-item">Last Updated: {{ page.date | date_to_long_string }}</div>
+	      {% endif %}
+	    </div>
+	  </div>
+        </div>
+	<div class="list-group-item panel panel-default">
+          <div class="panel-heading">Copyright</div>
+	  {% if page.copyright %}
+          <ul class="panel-body list-group">
+            <li class="list-group-item">{{ page.copyright }}</li>
+	    {% if page.license %}
+	    <li class="list-group-item">{{ page.license }}</li>
+	    {% endif %}
+	    {% if page.ccli_song %}
+	    <li class="list-group-item"><a href="https://songselect.ccli.com/songs/{{ page.ccli_song }}">CCLI Song #{{ page.ccli_song }}</a></li>
+            {% endif %}
+          </ul>
+	  {% else %}
+	  <p class="panel-body">Copyright information is not available.</p>
+	  {% endif %}
+	</div>
+	<div class="list-group-item panel panel-default">
+          <div class="panel-heading">Materials</div>
+          <div class="panel-body list-group">
+            <h2 class="list-item">Sheet Music</h2>
+	    {% if page.sheet_music %}
+            <a class="list-item" href="{{ site.baseurl }}{{ page.sheet_music }}.pdf">
+              <img src="{{ site.baseurl }}{{ page.sheet_music }}_thumbnail.png" alt="Abide With Me Sheet Music" width=150/>
+            </a>
+	    {% else %}
+	    <p class="list-item">Sheet music is not available.</p>
+	    {% endif %}
+	    <h2 class="list-item">Sides</h2>
+	    {% if page.slides %}
+	    <a href="{{ site.baseurl }}{{ page.slides }}.pdf">
+              <img src="{{ site.baseurl }}{{ page.slides }}_thumbnail.png" alt="Abide With Me Slides" width=200/>
+            </a>
+	    {% else %}
+	    <p class="list-item">Slides are not available.</p>
+	    {% endif %}
+	    <h2 class="list-item">Practice MP3s</h2>
+	    {% if page.audio %}
+            <p class="list-item">
+	      All:
+	      <audio controls>
+                <source src="{{ site.baseurl }}{{ page.audio }}_all.mp3" type="audio/mpeg">
+	        Your browser does not support this audio element
+              </audio>
+            </p>
+            <p class="list-item">
+	      Soprano: 
+	      <audio controls>
+                <source src="{{ site.baseurl }}{{ page.audio }}_soprano.mp3" type="audio/mpeg">
+	        Your browser does not support this audio element
+              </audio>
+            </p>
+            <p class="list-item">
+	      Alto:
+	      <audio controls>
+                <source src="{{ site.baseurl }}{{ page.audio }}_alto.mp3" type="audio/mpeg">
+	        Your browser does not support this audio element
+              </audio>
+            </p>
+            <p class="list-item">
+	      Tenor:
+	      <audio controls class="list-item">
+                <source src="{{ site.baseurl }}{{ page.audio }}_tenor.mp3" type="audio/mpeg">
+	        Your browser does not support this audio element
+              </audio>
+            </p>
+            <p class="list-item">
+	      Bass:
+	      <audio controls class="list-item">
+                <source src="{{ site.baseurl }}{{ page.audio }}_bass.mp3" type="audio/mpeg">
+	        Your browser does not support this audio element
+              </audio>
+            </p>
+	    {% else %}
+	    Practice audio files are not available.
+	    {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
