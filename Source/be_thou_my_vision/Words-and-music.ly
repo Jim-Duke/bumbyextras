@@ -18,7 +18,7 @@ MajorKey = ##t
 %% Hymn Metadata Variables
 %%
 
-Title = "Be Thou My Vision (C)"
+Title = "Be Thou My Vision"
 SongNumber = \be_thou_my_vision_number
 RightFirstPage = \be_thou_my_vision_number_rhs
 FirstPage = #(if RightFirstPage 1 2)
@@ -37,13 +37,14 @@ ShowScriptureOnSheetMusic = ##f
   title = \Title
   tune = "SLANE"
   meter = "10.10.9.10"
-  composer = "Joyce's Old Irish Folk Music and Songs (1909) arr. C"
+  composer = "Joyce's Old Irish Folk Music and Songs (1909)"
+  arranger = "C. E. Couchman"
   poet = "Irish Fok Hymn (c. 750) tr. Mary E. Byrne (1905) ver. Eleanor H. Hull alt."
   songNumber = \SongNumber
   lhs = #(if RightFirstPage LeaderHints SongNumber)
   rhs = #(if RightFirstPage SongNumber LeaderHints)
-  copyright = "In the Public Domain"
-  license = ##f
+  copyright = "arr. Copyright C. E. Couchman"
+  license = "Used by permission"
   tagline = ##f
 }
 

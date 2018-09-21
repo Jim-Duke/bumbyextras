@@ -1,6 +1,9 @@
 \version "2.19.49"
 
 \include "Words-and-music.ly"
+
+SlideStaffStaffSpacing = #16
+
 \include "../../../LilypondTemplates/standard-elements.ly"
 
 #(ly:parser-define! (string->symbol "outputName")
@@ -83,19 +86,19 @@
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
+            \keepWithTag #'verseOneRhythms \SopranoVerseMusic
           }
           {
             \global
-            \keepWithTag #'usePartials \AltoVerseMusic
+            \keepWithTag #'verseOneRhythms \AltoVerseMusic
           }
         \new NullVoice = breaks {
           \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
+          \keepWithTag #'verseOneRhythms \SlidesVerseBreaks
         }
         \new NullVoice = alignVoice {
           \global
-          \keepWithTag #'usePartials \SopranoVerseMusic
+          \keepWithTag #'verseOneRhythms \SopranoVerseMusic
         }
         \new Lyrics \lyricsto "alignVoice" {
           \huge \VerseOne
@@ -106,11 +109,11 @@
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \TenorVerseMusic
+            \keepWithTag #'verseOneRhythms \TenorVerseMusic
           }
           {
             \global
-            \keepWithTag #'usePartials \BassVerseMusic
+            \keepWithTag #'verseOneRhythms \BassVerseMusic
           }
       >>
     >>
@@ -123,19 +126,19 @@
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
+            \keepWithTag #'verseTwoRhythms \SopranoVerseMusic
           }
           {
             \global
-            \keepWithTag #'usePartials \AltoVerseMusic
+            \keepWithTag #'verseTwoRhythms \AltoVerseMusic
           }
         \new NullVoice = breaks {
           \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
+          \keepWithTag #'verseTwoRhythms \SlidesVerseBreaks
         }
         \new NullVoice = alignVoice {
           \global
-          \keepWithTag #'usePartials \SopranoVerseMusic
+          \keepWithTag #'verseTwoRhythms \SopranoVerseMusic
         }
         \new Lyrics \lyricsto "alignVoice" {
           \huge \VerseTwo
@@ -146,51 +149,11 @@
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \TenorVerseMusic
+            \keepWithTag #'verseTwoRhythms \TenorVerseMusic
           }
           {
             \global
-            \keepWithTag #'usePartials \BassVerseMusic
-          }
-      >>
-    >>
-    \SlideLayout
-  }
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \AltoVerseMusic
-          }
-        \new NullVoice = breaks {
-          \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
-        }
-        \new NullVoice = alignVoice {
-          \global
-          \keepWithTag #'usePartials \SopranoVerseMusic
-        }
-        \new Lyrics \lyricsto "alignVoice" {
-          \huge \VerseThree
-        }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \TenorVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \BassVerseMusic
+            \keepWithTag #'verseTwoRhythms \BassVerseMusic
           }
       >>
     >>

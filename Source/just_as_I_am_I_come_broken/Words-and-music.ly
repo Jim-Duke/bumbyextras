@@ -27,7 +27,7 @@ number_on_rhs = \just_as_I_am_I_come_broken_number_rhs
       (define lhs SongNumber)
       (define rhs LeaderHints)))
 
-FirstPage = #(if just_as_I_am_I_come_boken_number_rhs 1 2)
+FirstPage = #(if number_on_rhs 1 2)
 
 \header {
   title = \Title

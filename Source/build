@@ -44,18 +44,10 @@ pushd teach_me_lord_to_wait
 lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
 popd
 
-pushd be_thou_my_vision_a
+pushd be_thou_my_vision
 lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
 popd
 
-pushd be_thou_my_vision_b
-lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
-popd
-
-pushd be_thou_my_vision_c
-lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
-popd
-
-pushd be_thou_my_vision_d
+pushd lord_reign_in_me
 lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
 popd

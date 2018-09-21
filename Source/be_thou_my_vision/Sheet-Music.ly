@@ -53,6 +53,10 @@
             \fromproperty #'header:tune
             \char ##x2022
             \fromproperty #'header:composer
+            #(if header:arranger #{
+              \char ##x2022 "arr. "
+              \fromproperty #'header:arranger
+                 #})
           }
           \line {
             \fromproperty #'header:copyright

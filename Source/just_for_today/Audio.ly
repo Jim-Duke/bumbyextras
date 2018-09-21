@@ -6,7 +6,7 @@
 #(ly:parser-define! (string->symbol "outputName")
    (if (null? (ly:parser-lookup (string->symbol "BuildDir")))
        "Audio"
-       (string-append BuildDir songNumber " - " title " - Audio")))
+       (string-append BuildDir SongNumber " - " Title " - Audio")))
 
 \book {
   \bookOutputName #(string-append outputName " - All")
@@ -83,7 +83,6 @@
         \Voice
           \consists "Staff_performer"
       }
-      \tempo 4 = \defaultTempo
     }
   }
 }
@@ -163,7 +162,6 @@
         \Voice
           \consists "Staff_performer"
       }
-      \tempo 4 = \defaultTempo
     }
   }
 }
@@ -243,7 +241,6 @@
         \Voice
           \consists "Staff_performer"
       }
-      \tempo 4 = \defaultTempo
     }
   }
 }
@@ -323,7 +320,6 @@
         \Voice
           \consists "Staff_performer"
       }
-      \tempo 4 = \defaultTempo
     }
   }
 }
@@ -403,7 +399,6 @@
         \Voice
           \consists "Staff_performer"
       }
-      \tempo 4 = \defaultTempo
     }
   }
 }

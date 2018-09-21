@@ -4,9 +4,9 @@
 \include "../../../LilypondTemplates/standard-elements.ly"
 
 #(ly:parser-define! (string->symbol "outputName")
-   (if (null? (ly:parser-lookup (string->symbol "build_dir")))
+   (if (null? (ly:parser-lookup (string->symbol "BuildDir")))
        "Sheet-Music"
-       (string-append build_dir songNumber " - " title " - Sheet Music")))
+       (string-append BuildDir SongNumber " - " Title " - Sheet Music")))
 
 \book {
   \bookOutputName \outputName

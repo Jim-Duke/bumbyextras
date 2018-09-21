@@ -6,7 +6,7 @@
 #(ly:parser-define! (string->symbol "outputName")
    (if (null? (ly:parser-lookup (string->symbol "BuildDir")))
        "Sheet-Music"
-       (string-append BuildDir songNumber " - " title " - Sheet Music")))
+       (string-append BuildDir SongNumber " - " Title " - Sheet Music")))
 
 \book {
   \bookOutputName \outputName

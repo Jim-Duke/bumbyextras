@@ -4,9 +4,9 @@
 \include "../../../LilypondTemplates/midi.ly"
 
 #(ly:parser-define! (string->symbol "outputName")
-   (if (null? (ly:parser-lookup (string->symbol "build_dir")))
+   (if (null? (ly:parser-lookup (string->symbol "BuildDir")))
        "Audio"
-       (string-append build_dir songNumber " - " title " - Audio")))
+       (string-append BuildDir SongNumber " - " Title " - Audio")))
 
 \book {
   \bookOutputName #(string-append outputName " - All")

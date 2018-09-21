@@ -70,10 +70,10 @@ SopranoVerseMusic = \relative c' {
   \tag #'verseTwoRhythms { r8 bes8 }
    bes8 bes8 a8. bes8. bes8 |
   
-  \tag #'sheetMusicRhythms { r8 bes,8 }
-  \tag #'verseOneRhythms { r4 }
-  \tag #'verseTwoRhythms { r8 bes,8 }
-  bes'8 bes'8 a8. bes8. g8 |
+  \tag #'sheetMusicRhythms { r8 bes,8 bes'8 }
+  \tag #'verseOneRhythms { r4 bes,8 }
+  \tag #'verseTwoRhythms { r8 bes8 bes'8 }
+  bes8 a8. bes8. g8 |
   \tag #'sheetMusicRhythms { r8 bes8 }
   \tag #'verseOneRhythms { r4 }
   \tag #'verseTwoRhythms { r8 bes8 }
@@ -88,10 +88,10 @@ AltoVerseMusic = \relative c' {
   \autoBeamOff
   r4 bes8 d8 f8. f8. ees8 |
   r4
-  \tag #'sheetMusicRhythms { ees8( ees8) }
-  \tag #'verseOneRhythms { ees4 }
-  \tag #'verseTwoRhythms { ees8 ees8 }
-  ees8. ees8. d8 |
+  \tag #'sheetMusicRhythms { ees8( ees8) ees8. }
+  \tag #'verseOneRhythms { ees4 ees8. }
+  \tag #'verseTwoRhythms { ees8 ees8 ees8. }
+  ees8. d8 |
   
   r4 bes8 d8 f8. f8. ees8 |
   \tag #'sheetMusicRhythms { r8 f8 }
@@ -99,10 +99,10 @@ AltoVerseMusic = \relative c' {
   \tag #'verseTwoRhythms { r8 f8 }
    f8 f8 f8. f8. f8 |
   
-  \tag #'sheetMusicRhythms { r8 bes,8 }
-  \tag #'verseOneRhythms { r4 }
-  \tag #'verseTwoRhythms { r8 bes,8 }
-  bes'8 g'8 f8. f8. ees8 |
+  \tag #'sheetMusicRhythms { r8 bes,8 bes'8 }
+  \tag #'verseOneRhythms { r4 bes,8 }
+  \tag #'verseTwoRhythms { r8 bes8 bes'8 }
+  g8 f8. f8. ees8 |
   \tag #'sheetMusicRhythms { r8 ees8 }
   \tag #'verseOneRhythms { r4 }
   \tag #'verseTwoRhythms { r8 ees8 }
@@ -117,10 +117,10 @@ TenorVerseMusic = \relative c {
   \autoBeamOff
   r4 f8 bes8 c8. d8. bes8 |
   r4
-  \tag #'sheetMusicRhythms { bes8( bes8) }
-  \tag #'verseOneRhythms { bes4 }
-  \tag #'verseTwoRhythms { bes8 bes8 }
-  bes8. bes8. bes8 |
+  \tag #'sheetMusicRhythms { bes8( bes8) bes8. }
+  \tag #'verseOneRhythms { bes4 bes8. }
+  \tag #'verseTwoRhythms { bes8 bes8 bes8. }
+  bes8. bes8 |
   
   r4 f8 bes8 c8. d8. bes8 |
   \tag #'sheetMusicRhythms { r8 ees8 }
@@ -187,6 +187,18 @@ SheetMusicVerseBreaks = \relative c {
 }
 
 SlidesVerseBreaks = \relative c {
+  r1 | \break \noPageBreak
+  r1 | \pageBreak
+  
+  r1 | \break \noPageBreak
+  r1 | \pageBreak
+  
+  r1 | \break \noPageBreak
+  r1 | \noBreak
+  r2 \bar "" \pageBreak
+  
+  r2 | \break \noPageBreak
+  r1 | \pageBreak
 }
 
 SopranoChorusMusic = \relative c'' {
@@ -294,6 +306,34 @@ SheetMusicChorusBreaks = \relative c {
 }
 
 SlidesChorusBreaks = \relative c {
+  \setSystemOffset \defaultTopSystemOffset
+  r1 | \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  r1 | \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  r1 | \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  r1 | \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  r1 | \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  r1 | \noBreak
+  r2 \bar "" \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  r2 | \noBreak
+  r1 | \noBreak
+  r2 \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  r2 | \noBreak
+  r1 | \noBreak
+  r1 | \pageBreak
 }
 
 VerseOne = \lyricmode {
