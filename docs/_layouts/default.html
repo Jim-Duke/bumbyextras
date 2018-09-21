@@ -16,24 +16,20 @@
     <link href="{{ "/css/site.css" | relative_url }}" rel="stylesheet">
   </head>
   <body>
-    <!-- Fixed navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand navbar-light bg-light fixed-top">
       <div class="container">
         <a class="navbar-brand" href="{{ "/" | relative_url }}">{{ site.title }}</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-	<div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item{% if page.navButton == "Home" %} active{% endif %}"><a href="{{ "/" | relative_url }}">Home</a></li>
-            <li class="nav-item">
-	    <a class="nav-link" href="{{ "/about" | relative_url }}">About</a>
-            </li>
-            <li class="nav-item">
-	    <a class="nav-link" href="{{ "/hymns" | relative_url }}">Hymns</a>
-            </li>
-          </ul>
-        </div>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ "/" | relative_url }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ "/about" | relative_url }}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ "/hymns" | relative_url }}">Hymns</a>
+          </li>
+        </ul>
       </div>
     </nav>
     <div class="container">

@@ -37,3 +37,44 @@ body > .container {
 code {
   font-size: 80%;
 }
+
+#main-navbar.navbar-default .navbar-brand {
+  color: rgba(119, 119, 119, 1)
+}
+
+#main-navbar.navbar-default {
+    font-size: 14px;
+    background-color: rgba(248, 248, 248, 1);
+    border-width: 1px;
+    border-radius: 4px;
+}
+
+#main-navbar.navbar-default .navbar-nav>li>a {
+    color: rgba(119, 119, 119, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+#main-navbar.navbar-default .navbar-nav>li>a:hover,
+#main-navbar.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(51, 51, 51, 1);
+    background-color: rgba(222, 222, 222, 1);
+}
+#main-navbar.navbar-default .navbar-nav>.active>a,
+#main-navbar.navbar-default .navbar-nav>.active>a:hover,
+#main-navbar.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(85, 85, 85, 1);
+    background-color: rgba(231, 231, 231, 1);
+}
+#main-navbar.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+#main-navbar.navbar-default .navbar-toggle:hover,
+#main-navbar.navbar-default .navbar-toggle:focus {
+    background-color: #ddd;
+}
+#main-navbar.navbar-default .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+#main-navbar.navbar-default .navbar-toggle:hover .icon-bar,
+#main-navbar.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #888;
+}
