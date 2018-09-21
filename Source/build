@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 pushd abide_with_me
 lilypond-windows.exe -dno-point-and-click -ddelete-intermediate-files Build.ly
