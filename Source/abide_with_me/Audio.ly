@@ -11,7 +11,7 @@
 NumVerses = 6
 
 \book {
-  \bookOutputName #(string-append outputName " - All")
+  \bookOutputName #(string-append outputName "_all")
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
@@ -78,7 +78,7 @@ NumVerses = 6
 }
 
 \book {
-  \bookOutputName #(string-append outputName " - Soprano")
+  \bookOutputName #(string-append outputName "_soprano")
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
@@ -145,7 +145,7 @@ NumVerses = 6
 }
 
 \book {
-  \bookOutputName #(string-append outputName " - Alto")
+  \bookOutputName #(string-append outputName "_alto")
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
@@ -212,7 +212,7 @@ NumVerses = 6
 }
 
 \book {
-  \bookOutputName #(string-append outputName " - Tenor")
+  \bookOutputName #(string-append outputName "_tenor")
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
@@ -279,7 +279,7 @@ NumVerses = 6
 }
 
 \book {
-  \bookOutputName #(string-append outputName " - Bass")
+  \bookOutputName #(string-append outputName "_bass")
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
