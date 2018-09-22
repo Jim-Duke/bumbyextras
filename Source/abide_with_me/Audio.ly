@@ -3,15 +3,10 @@
 \include "Words-and-music.ly"
 \include "../../../LilypondTemplates/midi.ly"
 
-#(ly:parser-define! (string->symbol "outputName")
-   (if (null? (ly:parser-lookup (string->symbol "BuildDir")))
-       "Audio"
-       (string-append BuildDir SongNumber " - " Title " - Audio")))
-
 NumVerses = 6
 
 \book {
-  \bookOutputName #(string-append outputName "_all")
+  \bookOutputName "Audio_all"
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
@@ -78,7 +73,7 @@ NumVerses = 6
 }
 
 \book {
-  \bookOutputName #(string-append outputName "_soprano")
+  \bookOutputName "Audio_soprano"
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
@@ -145,7 +140,7 @@ NumVerses = 6
 }
 
 \book {
-  \bookOutputName #(string-append outputName "_alto")
+  \bookOutputName "Audio_alto"
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
@@ -212,7 +207,7 @@ NumVerses = 6
 }
 
 \book {
-  \bookOutputName #(string-append outputName "_tenor")
+  \bookOutputName "Audio_tenor"
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<
@@ -279,7 +274,7 @@ NumVerses = 6
 }
 
 \book {
-  \bookOutputName #(string-append outputName "_bass")
+  \bookOutputName "Audio_bass"
   \score {
     \context ChoirStaff <<
       \context Staff = upper <<

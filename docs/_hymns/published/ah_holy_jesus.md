@@ -3,13 +3,20 @@ layout: hymn
 title: Ah Holy Jesus
 navButton: Hymns
 status: Published
+hymn_elements:
+- 11.11.11.5
+- Johann Heermann (1630)
+- "translator: Robert S. Bridges (1899)"
+tune_elements:
+- HERZLIEBSTER JESU
+- Johann Cruger (1640)
 copyright: Public Domain
 synopsis: Ah Holy Jesus is an English translation of a 17th century German hymn that is in turn based upon an 11th century Latin work.  It is a beautiful and poignant statement of the suffering and death of Jesus as a result of our own sin; and our response to such a gift.
 date: 2016-12-30 12:00:00 -0500
-source_path: /Source/ah_holy_jesus
-sheet_music: /Source/ah_holy_jesus/ah_holy_jesus_sheet_music
-slides: /Source/ah_holy_jesus/ah_holy_jesus_slides
-audio: /Source/ah_holy_jesus/ah_holy_jesus_music
+source_path: /Source/published/ah_holy_jesus
+sheet_music: /Source/published/ah_holy_jesus/ah_holy_jesus_sheet_music
+slides: /Source/published/ah_holy_jesus/ah_holy_jesus_slides
+audio: /Source/published/ah_holy_jesus/ah_holy_jesus_audio
 ---
 # {{ page.title }}
 Ah Holy Jesus is an English translation of a 17th century German hymn that is in turn based upon an 11th century Latin

@@ -39,7 +39,6 @@ FirstPage = #(if just_for_today_number_rhs 1 2)
   rhs = \rhs
   copyright = \markup { \char ##x00A9 " Copyright 1995 Marc Schelske Music." }
   license = #(string-append "CCLI Song #1984677, License #" ccli_license)
-  arranger = "Jim Duke"
   tagline = ##f
 }
 

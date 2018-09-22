@@ -3,13 +3,19 @@ layout: hymn
 title: Abide With Me
 navButton: Hymns
 status: Published
+hymn_elements:
+- 10.10.10.10
+- Henry F. Lyte (1847)
+tune_elements:
+- EVENTIDE
+- William H. Monk (1861)
 copyright: Public Domain
 date: 2016-12-30 12:00:00 -0500
 synopsis: This version of Abide With Me includes 6 of the original 8 verses.
-source_path: /Source/abide_with_me
-sheet_music: /Source/abide_with_me/abide_with_me_sheet_music
-slides: /Source/abide_with_me/abide_with_me_slides
-audio: /Source/abide_with_me/abide_with_me_music
+source_path: /Source/published/abide_with_me
+sheet_music: /Source/published/abide_with_me/abide_with_me_sheet_music
+slides: /Source/published/abide_with_me/abide_with_me_slides
+audio: /Source/published/abide_with_me/abide_with_me_audio
 ---
 # {{ page.title }}
 According to an edition of the British Weekly, in the late summer of 1847, after preaching his final sermon, knowing

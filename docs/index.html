@@ -13,3 +13,38 @@ provide full access to the finished materials, which will include PDF's of
 sheet music, slides, and a collection of MP3 files that can be used as
 training aids to learn the song.  You can read more about the project on our
 <a href="about">About</a> page.</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="mx-auto" style="width: 400px;">
+        <h1>Recent Changes</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+{% assign hymns=(site.hymns | sort: 'date' | reverse) %}
+{% for i in (0..3) %}
+{% assign hymn=hymns[i] %}
+    <div class="card border shadow border-dark bg-white rounded mx-2 mb-3 p-2">
+      <span style="width: 30rem; height: 15rem;">
+{% case hymn.status %}
+{% when 'Published' %}
+      <span class="badge badge-pill badge-success">Published</span>
+{% when 'Requested' %}
+      <span class="badge badge-pill badge-info">Requested</span>
+{% when 'In Review' %}
+      <span class="badge badge-pill badge-warning">In Review</span>
+{% else %}
+      <span class="badge badge-pill badge-danger">{{ hymn.status }}</span>
+{% endcase %}<br/>
+      <a href="{{ hymn.url | relative_url }}">{{ hymn.title }}</a><br/>
+      Last Updated: {{ hymn.date | date_to_long_string }}<br/>
+      Hymn: {{ hymn.hymn_elements | join: " • " }}<br/>
+      Tune: {{ hymn.tune_elements | join: " • " }}<br/>
+      Copyright: {{ hymn.copyright }}
+      </span>
+    </div>
+{% endfor %}
+  </div>
+</div>

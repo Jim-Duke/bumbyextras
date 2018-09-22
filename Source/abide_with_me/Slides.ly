@@ -3,13 +3,7 @@
 \include "Words-and-music.ly"
 \include "../../../LilypondTemplates/standard-elements.ly"
 
-#(ly:parser-define! (string->symbol "outputName")
-   (if (null? (ly:parser-lookup (string->symbol "BuildDir")))
-       "Slides"
-       (string-append BuildDir SongNumber " - " Title " - Slides")))
-
 \book {
-  \bookOutputName \outputName
   \paper {
     #(set-paper-size "arch alandscape" )
 

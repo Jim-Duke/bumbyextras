@@ -3,13 +3,7 @@
 \include "Words-and-music.ly"
 \include "../../../LilypondTemplates/standard-elements.ly"
 
-#(ly:parser-define! (string->symbol "outputName")
-   (if (null? (ly:parser-lookup (string->symbol "BuildDir")))
-       "Sheet-Music"
-       (string-append BuildDir SongNumber " - " Title " - Sheet Music")))
-
 \book {
-  \bookOutputName \outputName
   \paper {
     #(set-paper-size "letter")
       

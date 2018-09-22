@@ -3,21 +3,7 @@
 \include "Words-and-music.ly"
 \include "../../../LilypondTemplates/standard-elements.ly"
 
-#(ly:parser-define! (string->symbol "outputName")
-   (if (null? (ly:parser-lookup (string->symbol "BuildDir")))
-       "Slides"
-       (string-append BuildDir SongNumber " - " Title " - Slides")))
-
-%
-% Common layout controls.
-%
-% This allows us to either use the defaults or override them.  We try to use
-% the same local variable names in the body in order to maintain as common a
-% template as possible.
-%
-
 \book {
-  \bookOutputName \outputName
   \paper {
     #(set-paper-size "arch alandscape" )
 
