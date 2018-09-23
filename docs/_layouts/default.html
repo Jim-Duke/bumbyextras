@@ -15,18 +15,18 @@
     <!-- Custome styles -->
     <link href="{{ "/css/site.css" | relative_url }}" rel="stylesheet">
   </head>
-  <body>
-    <nav class="navbar navbar-expand navbar-light bg-light fixed-top">
+  <body style="background-image: url({{ "/assets/images/old-paper.jpg" | relative_url }}); background-repeat: repeat;">
+    <nav class="navbar navbar-expand navbar-dark fixed-top" style="background-image: url({{ "/assets/images/background-pattern-of-rough-fabric.jpg" | relative_url }}); background-repeat: repeat;">
       <div class="container">
         <a class="navbar-brand" href="{{ "/" | relative_url }}">{{ site.title }}</a>
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item{% if page.navButton == "Home" %} active{% endif %}">
             <a class="nav-link" href="{{ "/" | relative_url }}">Home</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item{% if page.navButton == "About" %} active{% endif %}">
             <a class="nav-link" href="{{ "/about" | relative_url }}">About</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item{% if page.navButton == "Hymns" %} active{% endif %}">
             <a class="nav-link" href="{{ "/hymns" | relative_url }}">Hymns</a>
           </li>
         </ul>

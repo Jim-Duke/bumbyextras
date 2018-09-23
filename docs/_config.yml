@@ -31,6 +31,15 @@ collections:
   hymns:
     output: true
     permalink: /hymns/:path/
+  updates:
+    output: true
+    permalink: /updates/:path/
+  requests:
+    output: true
+    permalink: /requests/:path/
+  articles:
+    output: true
+    permalink: /articles/:path/
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #

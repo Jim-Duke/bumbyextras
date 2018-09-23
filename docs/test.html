@@ -1,0 +1,24 @@
+---
+layout: default
+title: Bumby Hymnal Project
+navButton: Home
+---
+<b>Array Size Test:</b>{{ site.hymns.size }}<br/>
+{% assign blah=site.blah %}
+<b>Non-existent Collection Test:</b>{{ blah.size }}<br/>
+<b>Collection Test:</b>
+{% assign hymns=(site.hymns | where:"hymn_id", "abide_with_me") %}
+<u>{{ hymns.size }}</u>{% if hymns[0] %}
+<i>True</i>
+{% else %}
+<i>False</i>
+{% endif %}</br>
+{% assign hymns=(site.hymns | sort: 'title') %}
+{% for hymn in hymns %}
+{% assign updates=(site.updates | where:"hymn_id", hymn.hymn_id) %}
+<b>Hymn:</b> {{ hymn.url }}<br/>
+{% for update in updates %}
+<b>Update:</b> {{ update.url }}<br/>
+{% endfor %}
+<hr/>
+{% endfor %}
