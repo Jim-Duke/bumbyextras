@@ -3,6 +3,7 @@ layout: products
 hymn_id: abide_with_me
 title: Abide With Me
 status: Published
+synopsis: This version of Abide With Me includes 6 of the original 8 verses.
 navButton: Hymns
 hymn_elements:
 - 10.10.10.10
