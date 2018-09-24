@@ -1,7 +1,8 @@
-# B-005: Abide With Me
-This version of Abide with Me includes 5 of the 8 original verses.  Over the years most hymnals only include 3 verses.  Several include 5, a few 6.  Hardly any include all 8..
-
-## Submission
+---
+title: Research into "Abide with Me"
+hymn_id: abide_with_me
+---
+This version of Abide with Me includes 6 of the 8 original verses.  Over the years most hymnals only include 3 verses.  Several include 5, a few 6.  Hardly any include all 8..
 
 ### Submitted By
 
@@ -10,8 +11,6 @@ This song was requested by Tim Duke
 ### Reason for the Submission
 
 After becoming aware of the additional verses of the original Hymn and how meaningful some of them are, Tim felt that adding two additional verses from the original would greatly enhance the hymn in our worship.
-
-## Research
 
 ### Research Conducted By
 
@@ -24,8 +23,10 @@ The hymn and tune are in the Public Domain.  The most noteable aspect of the his
 ### Sources
 
 1. [Hymnary Entry on Abide With Me](http://www.hymnary.org/text/abide_with_me_fast_falls_the_eventide)
-2. [Cyber Hymnal Entry on Abide With Me](http://www.cyberhymnal.org/htm/a/b/abidewme.htm)
-3. [1880 Evangelical Lutheran Hymnal #440](Sources/AllVersesFrom1880Hymnal.pdf)
+2. [Cyber Hymnal Entry on Abide With Me](http://www.hymntime.org/tch/htm/a/b/abidewme.htm)
+3. [1880 Evangelical Lutheran Hymnal #440]({{ "/assets/abide_with_me/AllVersesFrom1880Hymnal.pdf" | relative_url }})
+4. [From A Collection of Hymns Supplementary to the Psalms and Hymns of Dr. Watts - 1859.pdf]({{ "/assets/abide_with_me/supplement_to_psalms_and_hymns_1859.pdf" | relative_url }})
+
 
 ### Hymn
 
@@ -33,7 +34,7 @@ See the Hymnary or Cyberhymnal entries to see the history of the hymn.
 
 ## Original Verses
 
-I was not able to locate an authoritative source of the original verses.  The earliest copy of the hymn that I was able to find containing all 8 verses is from the [1880 Evangelical Lutheran Hymnal](Sources/AllVersesFrom1880Hymnal.pdf).  The following text, including punctuation, spelling, and capitalization is copied here:
+I was not able to locate an authoritative source of the original verses.  The earliest copy of the hymn that I was able to find containing all 8 verses is from the [1880 Evangelical Lutheran Hymnal]({{ "/assets/abide_with_me/AllVersesFrom1880Hymnal.pdf" | relative_url }})).  The following text, including punctuation, spelling, and capitalization is copied here:
 
 1. Abide with me! fast falls the eventide;  
    The darkness deepens; Lord, with me abide!  

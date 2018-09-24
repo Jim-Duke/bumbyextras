@@ -266,7 +266,13 @@
       </div>
 {%- endif -%}
 {%- if external_available -%}
-      <div class="tab-pane fade" id="{{ id }}_external" role="tabpanel" aria-labelledby="{{ id }}_external_tab">Information available externally that is related to {{ include.hymn.title }}.</div>
+      <div class="tab-pane fade" id="{{ id }}_external" role="tabpanel" aria-labelledby="{{ id }}_external_tab">Information available externally that is related to {{ include.hymn.title }}:
+        <ul>
+{%- for external_resource in include.hymn.external_resources -%}
+          <li><a href="{{ external_resource.url }}">{{ external_resource.name }}</a></li>
+{%- endfor -%}
+        </ul>
+      </div>
 {%- endif -%}
     </div>
   </div>
