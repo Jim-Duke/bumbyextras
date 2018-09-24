@@ -1,7 +1,7 @@
 ---
-layout: update_review
-hymn_id: how_beautiful
-title: Updates to "How Beautiful"
+layout: review
+hymn_id: magnificat
+title: Updates to "Magnificat"
 navButton: Hymns
 date: 2018-09-21 14:03:00 -0500
 ---

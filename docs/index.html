@@ -21,8 +21,6 @@ training aids to learn the song.  You can read more about the project on our
     </div>
   </div>
   <div class="row">
-{% assign all_hymns=(site.hymns | concat: site.requests) %}
-{% assign update_line=nil %}
 {% assign hymns=(site.hymns | sort: 'date' | reverse) %}
 {% for i in (0..3) %}
 {% assign hymn=hymns[i] %}

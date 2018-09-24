@@ -1,5 +1,5 @@
 ---
-layout: update_review
+layout: review
 hymn_id: just_for_today
 title: Updates to "Just for Today"
 navButton: Hymns

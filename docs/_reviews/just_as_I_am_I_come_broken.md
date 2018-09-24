@@ -1,5 +1,5 @@
 ---
-layout: update_review
+layout: review
 hymn_id: just_as_I_am_I_come_broken
 title: Updates to "Just As I Am - I Come Broken"
 navButton: Hymns

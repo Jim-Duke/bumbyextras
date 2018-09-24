@@ -1,7 +1,7 @@
 ---
-layout: update_review
-hymn_id: in_christ_alone
-title: Updates to "In Christ Alone"
+layout: review
+hymn_id: christ_the_lord_is_risen_today_mendelssohn
+title: Update to "Christ the Lord is Risen Today (Mendelssohn)"
 navButton: Hymns
 date: 2018-09-21 14:03:00 -0500
 ---

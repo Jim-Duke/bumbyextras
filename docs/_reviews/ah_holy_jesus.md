@@ -1,7 +1,7 @@
 ---
-layout: update_review
-hymn_id: magnificat
-title: Updates to "Magnificat"
+layout: review
+hymn_id: ah_holy_jesus
+title: Updates to "Ah Holy Jesus"
 navButton: Hymns
 date: 2018-09-21 14:03:00 -0500
 ---

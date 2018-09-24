@@ -1,7 +1,7 @@
 ---
-layout: update_review
-hymn_id: hark_I_hear_the_harps_eternal
-title: Updates to "Hark! I Hear the Harps Eternal"
+layout: review
+hymn_id: teach_me_lord_to_wait
+title: Updates to "Teach Me Lord to Wait"
 navButton: Hymns
 date: 2018-09-21 14:03:00 -0500
 ---

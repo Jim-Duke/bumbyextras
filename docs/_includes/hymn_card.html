@@ -1,27 +1,273 @@
-    <div class="card border shadow border-dark bg-color-1 rounded mx-2 mb-3 p-2">
-      <span style="width: 30rem;">
-{% if include.hymn.status == "Published" %}
-      <a class="badge badge-pi11 badge-success" href="{{ include.hymn.url | relative_url }}">Products</a>
-{% assign updates=(site.updates | where: "hymn_id", include.hymn.hymn_id) %}
-{% if updates[0] %}
-{% assign update=updates[0] %}
-      <a class="badge badge-pi11 badge-warning" href="{{ update.url | relative_url }}">Review Materials</a>
-{% assign update_line=(update.date | date_to_long_string) %}
-{% endif %}
-{% else %}
-      <a class="badge badge-pi11 badge-info" href="{{ include.hymn.url | relative_url }}">Requested</a>
-{% endif %}
-      <br/>
-      <h2>{{ include.hymn.title }}</h2>
-{% if include.hymn.synopsis %}
-      <p><i>{{ include.hymn.synopsis }}</i></p>
-{% endif %}
-      {{ include.hymn.status }}: {{ include.hymn.date | date_to_long_string }}<br/>
-{% if update_line %}
-      Last Update: {{ update_line }}<br/>
-{% endif %}
-      Hymn: {{ include.hymn.hymn_elements | join: " • " }}<br/>
-      Tune: {{ include.hymn.tune_elements | join: " • " }}<br/>
-      Copyright: {{ include.hymn.copyright }}
-      </span>
+{%- assign id=include.hymn.hymn_id -%}
+{%- if include.hymn.products -%}
+{%- assign products_available=true -%}
+{%- else -%}
+{%- assign products_available=nil -%}
+{%- endif -%}
+{%- if include.hymn.products and include.hymn.products contains 'published' and include.hymn.products contains 'review' -%}
+{%- assign updates_available=true -%}
+{%- else -%}
+{%- assign updates_available=nil -%}
+{%- endif -%}
+{%- assign reviews=(site.reviews | where: "hymn_id", include.hymn.hymn_id) -%}
+{%- if reviews.size > 0 -%}
+{%- assign reviews_available=true -%}
+{%- else -%}
+{%- assign reviews_available=nil -%}
+{%- endif -%}
+{%- assign research=(site.research | where: "hymn_id", include.hymn.hymn_id) -%}
+{%- if research.size > 0 -%}
+{%- assign research_available=true -%}
+{%- else -%}
+{%- assign research_available=nil -%}
+{%- endif -%}
+{%- assign articles=(site.posts | where: "hymn_id", id) -%}
+{%- if articles.size > 0 -%}
+{%- assign articles_available=true -%}
+{%- else -%}
+{%- assign articles_available=nil -%}
+{%- endif -%}
+{%- if include.hymn.external_resources -%}
+{%- assign external_available=true -%}
+{%- else -%}
+{%- assign external_available=nil -%}
+{%- endif -%}
+<div class="card border shadow border-dark bg-color-1 rounded mx-2 mb-3 p-2" style="width: 100%;">
+  <div class="card-body">
+    <h2 class="card-title">{{ include.hymn.title }}</h2>
+    <ul class="nav nav-tabs" id="{{ id }}_tab" role="tablist">
+      <li class="nav-item border">
+        <a class="nav-link active" id="{{ id }}_info_tab" data-toggle="tab" href="#{{ id }}_info" role="tab" aria-controls="info" aria-selected="true">Info</a>
+      </li>
+{%- if products_available -%}
+      <li class="nav-item border">
+        <a class="nav-link" id="{{ id }}_products_tab" data-toggle="tab" href="#{{ id }}_products" role="tab" aria-controls="products" aria-selected="true">Products</a>
+      </li>
+{%- endif -%}
+{%- if updates_available -%}
+      <li class="nav-item border">
+        <a class="nav-link" id="{{ id }}_updates_tab" data-toggle="tab" href="#{{ id }}_updates" role="tab" aria-controls="updates" aria-selected="true">Updates</a>
+      </li>
+{%- endif -%}
+{%- if reviews_available -%}
+      <li class="nav-item border">
+        <a class="nav-link" id="{{ id }}_reviews_tab" data-toggle="tab" href="#{{ id }}_reviews" role="tab" aria-controls="reviews" aria-selected="true">Review Instructions</a>
+      </li>
+{%- endif -%}
+{%- if research_available -%}
+      <li class="nav-item border">
+        <a class="nav-link" id="{{ id }}_research_tab" data-toggle="tab" href="#{{ id }}_research" role="tab" aria-controls="research" aria-selected="true">Research</a>
+      </li>
+{%- endif -%}
+{%- if articles_available -%}
+      <li class="nav-item border">
+        <a class="nav-link" id="{{ id }}_articles_tab" data-toggle="tab" href="#{{ id }}_articles" role="tab" aria-controls="articles" aria-selected="true">Articles</a>
+      </li>
+{%- endif -%}
+{%- if external_available -%}
+      <li class="nav-item border">
+        <a class="nav-link" id="{{ id }}_external_tab" data-toggle="tab" href="#{{ id }}_external" role="tab" aria-controls="external" aria-selected="true">External</a>
+      </li>
+{%- endif -%}
+    </ul>
+    <div class="tab-content border" id="{{ id }}_tab_content">
+      <div class="tab-pane fade container-fluid show active" id="{{ id }}_info" role="tabpanel" aria-labelledby="{{ id }}_info_tab">
+        <div class="row">
+          <div class="col-4">
+            <h4>Poetry Information</h4>
+{%- if include.hymn.poetry_elements -%}
+              <dl>
+{%- if include.hymn.poetry_elements.meter -%}
+                <dt>Meter:</dt>
+                <dd>{{ include.hymn.poetry_elements.meter }}</dd>
+{%- endif %}
+{%- if include.hymn.poetry_elements.poet -%}
+                <dt>Poet:</dt>
+                <dd>{{ include.hymn.poetry_elements.poet }}</dd>
+{%- endif %}
+{%- if include.hymn.poetry_elements.translator -%}
+                <dt>Translator:</dt>
+                <dd>{{ include.hymn.poetry_elements.translator }}</dd>
+{%- endif %}
+{%- if include.hymn.poetry_elements.versifier -%}
+                <dt>Versifier:</dt>
+                <dd>{{ include.hymn.poetry_elements.versifier }}</dd>
+{%- endif %}
+{%- if include.hymn.poetry_elements.altered -%}
+                <dt>Altered:</dt>
+                <dd>{{ include.hymn.poetry_elements.altered }}</dd>
+{%- endif %}
+              </dl>
+{%- else -%}
+              <p>No poetry information is available for this hymn</p>
+{%- endif -%}
+          </div>
+          <div class="col-4">
+            <h4>Tune Information</h4>
+{%- if include.hymn.tune_elements -%}
+              <dl>
+{%- if include.hymn.tune_elements.name -%}
+                <dt>name:</dt>
+                <dd>{{ include.hymn.tune_elements.name }}</dd>
+{%- endif %}
+{%- if include.hymn.tune_elements.composer -%}
+                <dt>composer:</dt>
+                <dd>{{ include.hymn.tune_elements.composer }}</dd>
+{%- endif %}
+{%- if include.hymn.tune_elements.arranger -%}
+                <dt>arranger:</dt>
+                <dd>{{ include.hymn.tune_elements.arranger }}</dd>
+{%- endif %}
+{%- if include.hymn.tune_elements.altered -%}
+                <dt>Altered:</dt>
+                <dd>{{ include.hymn.tune_elements.altered }}</dd>
+{%- endif %}
+              </dl>
+{%- else -%}
+              <p>No tune information is available for this hymn</p>
+{%- endif -%}
+          </div>
+          <div class="col-4">
+            <h4>Status</h4>
+          </div>
+        </div>
+      </div>
+{%- if products_available -%}
+      <div class="tab-pane fade container-fluid" id="{{ id }}_products" role="tabpanel" aria-labelledby="{{ id }}_products_tab">
+{%- if include.hymn.products contains 'published' -%}
+{%- assign location="published" -%}
+{%- else -%}
+{%- assign location="review" -%}
+{%- endif -%}
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="list-group">
+              <h2 class="list-item" style="width: 100%; text-align: center;">Sheet Music</h2>
+              <a class="list-item mx-auto border shadow-lg bg-light m-1 p-2" href="{{ site.baseurl }}/Source/{{ location }}/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_sheet_music.pdf">
+                <img src="{{ site.baseurl }}/Source/{{ location }}/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_sheet_music_thumbnail.png" alt="{{ include.hymn.title }} Sheet Music" width=300/>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="list-group">
+              <h2 class="list-item" style="width: 100%; text-align: center;">Slides</h2>
+              <a class="list-item mx-auto border shadow-lg bg-light m-1 p-2" href="{{ site.baseurl }}/Source/{{ location }}/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_slides.pdf">
+                <img src="{{ site.baseurl }}/Source/{{ location }}/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_slides_thumbnail.png" alt="{{ include.hymn.title }} Slides" width=300/>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="list-group">
+              <h2 class="list-item" style="width: 100%; text-align: center;">Practice MP3s</h2>
+              <div class="list-item list-group border shadow-lg bg-light m-1 p-2">
+                <h4 class="list-item mt-2">All:</h4>
+                <audio class="list-item" controls>
+                  <source src="{{ site.baseurl }}/Source/{{ location }}/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_audio_all.mp3" type="audio/mpeg">
+                  Your browser does not support this audio element
+                </audio>
+                <h4 class="list-item mt-2">Soprano:</h4>
+                <audio class="list-item" controls>
+                  <source src="{{ site.baseurl }}/Source/{{ location }}/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_audio_soprano.mp3" type="audio/mpeg">
+                  Your browser does not support this audio element
+                </audio>
+                <h4 class="list-item mt-2">Alto:</h4>
+                <audio class="list-item" controls>
+                  <source src="{{ site.baseurl }}/Source/{{ location }}/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_audio_alto.mp3" type="audio/mpeg">
+                  Your browser does not support this audio element
+                </audio>
+                <h4 class="list-item mt-2">Tenor:</h4>
+                <audio class="list-item" controls>
+                  <source src="{{ site.baseurl }}/Source/{{ location }}/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_audio_tenor.mp3" type="audio/mpeg">
+                  Your browser does not support this audio element
+                </audio>
+                <h4 class="list-item mt-2">Bass:</h4>
+                <audio class="list-item" controls>
+                  <source src="{{ site.baseurl }}/Source/{{ location }}/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_audio_bass.mp3" type="audio/mpeg">
+                  Your browser does not support this audio element
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{%- endif -%}
+{%- if updates_available -%}
+      <div class="tab-pane fade container-fluid" id="{{ id }}_updates" role="tabpanel" aria-labelledby="{{ id }}_updates_tab">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="list-group">
+              <h2 class="list-item" style="width: 100%; text-align: center;">Sheet Music</h2>
+              <a class="list-item mx-auto border shadow-lg bg-light m-1 p-2" href="{{ site.baseurl }}/Source/review/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_sheet_music.pdf">
+                <img src="{{ site.baseurl }}/Source/review/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_sheet_music_thumbnail.png" alt="{{ include.hymn.title }} Sheet Music" width=300/>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="list-group">
+              <h2 class="list-item" style="width: 100%; text-align: center;">Slides</h2>
+              <a class="list-item mx-auto border shadow-lg bg-light m-1 p-2" href="{{ site.baseurl }}/Source/review/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_slides.pdf">
+                <img src="{{ site.baseurl }}/Source/review/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_slides_thumbnail.png" alt="{{ include.hymn.title }} Slides" width=300/>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="list-group">
+              <h2 class="list-item" style="width: 100%; text-align: center;">Practice MP3s</h2>
+              <div class="list-item list-group border shadow-lg bg-light m-1 p-2">
+                <h4 class="list-item mt-2">All:</h4>
+                <audio class="list-item" controls>
+                  <source src="{{ site.baseurl }}/Source/review/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_audio_all.mp3" type="audio/mpeg">
+                  Your browser does not support this audio element
+                </audio>
+                <h4 class="list-item mt-2">Soprano:</h4>
+                <audio class="list-item" controls>
+                  <source src="{{ site.baseurl }}/Source/review/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_audio_soprano.mp3" type="audio/mpeg">
+                  Your browser does not support this audio element
+                </audio>
+                <h4 class="list-item mt-2">Alto:</h4>
+                <audio class="list-item" controls>
+                  <source src="{{ site.baseurl }}/Source/review/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_audio_alto.mp3" type="audio/mpeg">
+                  Your browser does not support this audio element
+                </audio>
+                <h4 class="list-item mt-2">Tenor:</h4>
+                <audio class="list-item" controls>
+                  <source src="{{ site.baseurl }}/Source/review/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_audio_tenor.mp3" type="audio/mpeg">
+                  Your browser does not support this audio element
+                </audio>
+                <h4 class="list-item mt-2">Bass:</h4>
+                <audio class="list-item" controls>
+                  <source src="{{ site.baseurl }}/Source/review/{{ include.hymn.hymn_id }}/{{ include.hymn.hymn_id }}_audio_bass.mp3" type="audio/mpeg">
+                  Your browser does not support this audio element
+                </audio>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{%- endif -%}
+{%- if reviews_available -%}
+      <div class="tab-pane fade" id="{{ id }}_reviews" role="tabpanel" aria-labelledby="{{ id }}_reviews_tab">
+        {{ reviews[0].content | markdownify }}
+      </div>
+{%- endif -%}
+{%- if research_available -%}
+      <div class="tab-pane fade" id="{{ id }}_research" role="tabpanel" aria-labelledby="{{ id }}_research_tab">
+        {{ research[0].content | markdownify }}
+      </div>
+{%- endif -%}
+{%- if articles_available -%}
+      <div class="tab-pane fade" id="{{ id }}_articles" role="tabpanel" aria-labelledby="{{ id }}_articles_tab">
+        <h4>{{ articles.size }}{% if articles.size == 1 %} article{% else %} articles{% endif %} related to this hymn {% if articles.size == 1 %}is{% else %}are{% endif %} available:</h4>
+        <ul>
+{%- for article in articles -%}
+          <li><a href="{{ article.url | relative_url }}">{{ article.title }}</a></li>
+{%- endfor -%}
+        </ul>
+      </div>
+{%- endif -%}
+{%- if external_available -%}
+      <div class="tab-pane fade" id="{{ id }}_external" role="tabpanel" aria-labelledby="{{ id }}_external_tab">Information available externally that is related to {{ include.hymn.title }}.</div>
+{%- endif -%}
     </div>
+  </div>
+</div>

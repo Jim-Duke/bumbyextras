@@ -4,10 +4,8 @@ title: Hymns in Bumby Hymnal Project
 navButton: Hymns
 ---
 <div class="container">
-  <div class="row mt-5 justify-content-left">
-{% assign all_hymns=(site.hymns | concat: site.requests) %}
-{% assign update_line=nil %}
-{% assign hymns=(all_hymns | sort: 'title') %}
+  <div class="row mt-5 justify-content-center">
+{% assign hymns=(site.hymns | sort: 'title') %}
 {% for hymn in hymns %}
 {% include hymn_card.html hymn=hymn %}
 {% endfor %}

@@ -1,7 +1,7 @@
 ---
-layout: update_review
-hymn_id: ah_holy_jesus
-title: Updates to "Ah Holy Jesus"
+layout: review
+hymn_id: abide_with_me
+title: Updates to "Abide With Me"
 navButton: Hymns
 date: 2018-09-21 14:03:00 -0500
 ---

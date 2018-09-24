@@ -1,7 +1,7 @@
 ---
-layout: update_review
-hymn_id: abide_with_me
-title: Updates to "Abide With Me"
+layout: review
+hymn_id: my_shepherd_will_supply_my_need
+title: Updates to "My Shepherd Will Supply My Need"
 navButton: Hymns
 date: 2018-09-21 14:03:00 -0500
 ---

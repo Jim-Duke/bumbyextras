@@ -1,5 +1,5 @@
 ---
-layout: hymn
+layout: products
 hymn_id: all_glory_laud_and_honor
 title: All Glory Laud and Honor
 navButton: Hymns

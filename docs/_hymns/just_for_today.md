@@ -1,33 +1,23 @@
 ---
-layout: products
+layout: hymn
 hymn_id: just_for_today
 title: Just For Today
-status: Published
+in_hymnal: true
+products:
+- published
+- review
 navButton: Hymns
-hymn_elements:
-- 7.7.7.7 with Chorus
-- Marc Schelske (1995)
-- altered
-tune_elements:
-- FATHER GOD
-- March Schelske (1995)
-- altered
+poetry_elements: {
+    meter: "7.7.7.7 with Chorus",
+    poet: "Marc Schelske (1995)",
+    altered: true
+}
+tune_elements: {
+    composer: "March Schelske (1995)",
+    altered: true
+}
 copyright: Copyright (c) 1995 Marc Schelske Music.
 license: CCLI License #2055442
 ccli_song: 1984677
 date: 2016-12-30 12:00:00 -0500
 ---
-# {{ page.title }}
-TBD
-
-## Text
-TBD
-
-## Tune
-TBD
-
-## About This Version
-TBD
-
-## Original Verses
-TBD

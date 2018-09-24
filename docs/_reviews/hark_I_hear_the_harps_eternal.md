@@ -1,7 +1,7 @@
 ---
-layout: update_review
-hymn_id: christ_the_lord_is_risen_today_mendelssohn
-title: Update to "Christ the Lord is Risen Today (Mendelssohn)"
+layout: review
+hymn_id: hark_I_hear_the_harps_eternal
+title: Updates to "Hark! I Hear the Harps Eternal"
 navButton: Hymns
 date: 2018-09-21 14:03:00 -0500
 ---

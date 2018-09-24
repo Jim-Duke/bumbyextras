@@ -1,7 +1,7 @@
 ---
-layout: update_review
-hymn_id: teach_me_lord_to_wait
-title: Updates to "Teach Me Lord to Wait"
+layout: review
+hymn_id: in_christ_alone
+title: Updates to "In Christ Alone"
 navButton: Hymns
 date: 2018-09-21 14:03:00 -0500
 ---

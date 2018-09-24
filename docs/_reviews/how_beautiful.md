@@ -1,7 +1,7 @@
 ---
-layout: update_review
-hymn_id: my_shepherd_will_supply_my_need
-title: Updates to "My Shepherd Will Supply My Need"
+layout: review
+hymn_id: how_beautiful
+title: Updates to "How Beautiful"
 navButton: Hymns
 date: 2018-09-21 14:03:00 -0500
 ---
