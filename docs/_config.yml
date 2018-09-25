@@ -25,6 +25,8 @@ author :
 #
 production_url : https://jim-duke.github.io/bumbyextras
 
+future: true
+
 gems: ["jekyll-sitemap"]
 
 collections:

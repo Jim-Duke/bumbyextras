@@ -1,52 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tages -->
-    <meta name="description" content="{{ site.description }}">
-    <meta name="author" content="{{ site.author.name }}">
-    <title>{{ page.title }}</title>
+<html lang="en">
 
-    <!-- Bootstrap core CSS -->
-    <link href="{{ "/css/bootstrap.min.css" | relative_url }}" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="{{ site.author.name }}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{{ "/css/bootstrap.min.css" | relative_url }}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{{ "/css/mdb.min.css" | relative_url }}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{{ "/css/style.css" | relative_url }}" rel="stylesheet">
+</head>
 
-    <!-- Custome styles -->
-    <link href="{{ "/css/site.css" | relative_url }}" rel="stylesheet">
-  </head>
-  <body style="background-image: url({{ "/assets/images/old-paper.jpg" | relative_url }}); background-repeat: repeat;">
-    <nav class="navbar navbar-expand navbar-dark fixed-top" style="background-image: url({{ "/assets/images/background-pattern-of-rough-fabric.jpg" | relative_url }}); background-repeat: repeat;">
-      <div class="container">
-        <a class="navbar-brand" href="{{ "/" | relative_url }}">{{ site.title }}</a>
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item{% if page.navButton == "Home" %} active{% endif %}">
-            <a class="nav-link" href="{{ "/" | relative_url }}">Home</a>
-          </li>
-          <li class="nav-item{% if page.navButton == "About" %} active{% endif %}">
-            <a class="nav-link" href="{{ "/about" | relative_url }}">About</a>
-          </li>
-          <li class="nav-item{% if page.navButton == "Hymns" %} active{% endif %}">
-            <a class="nav-link" href="{{ "/hymns" | relative_url }}">Hymns</a>
-          </li>
-          <li class="nav-item{% if page.navButton == "Posts" %} active{% endif %}">
-            <a class="nav-link" href="{{ "/posts" | relative_url }}">Posts</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+<body style="background-image: url({{ "/assets/images/old-paper.jpg" | relative_url }}); background-repeat: repeat;">
+  <nav class="navbar navbar-expand navbar-dark fixed-top" style="background-image: url({{ "/assets/images/background-pattern-of-rough-fabric.jpg" | relative_url }}); background-repeat: repeat;">
     <div class="container">
-      {{ content }}
+      <a class="navbar-brand" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item{% if page.navButton == "Home" %} active{% endif %}">
+          <a class="nav-link" href="{{ "/" | relative_url }}">Home</a>
+        </li>
+        <li class="nav-item{% if page.navButton == "About" %} active{% endif %}">
+          <a class="nav-link" href="{{ "/about" | relative_url }}">About</a>
+        </li>
+        <li class="nav-item{% if page.navButton == "Hymns" %} active{% endif %}">
+          <a class="nav-link" href="{{ "/hymns" | relative_url }}">Hymns</a>
+        </li>
+        <li class="nav-item{% if page.navButton == "Reviews" %} active{% endif %}">
+          <a class="nav-link" href="{{ "/reviews" | relative_url }}">Reviews</a>
+        </li>
+        <li class="nav-item{% if page.navButton == "Posts" %} active{% endif %}">
+          <a class="nav-link" href="{{ "/posts" | relative_url }}">Posts</a>
+        </li>
+      </ul>
     </div>
-    <footer class="footer">
-      <div class="container">
-        <p class="text-muted">{{ site.title }} brought to you by <a href="mailto:{{ site.author.email }}">{{ site.author.name }}</a>.</p>
-      </div>
-    </footer>
+  </nav>
+  <div style="margin-top: 4rem;">
+  {{ content }}
+  </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <!-- Place at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="{{ "/js/bootstrap.min.js" | relative_url }}"></script>
-  </body>
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">{{ site.title }} brought to you by <a href="mailto:{{ site.author.email }}">{{ site.author.name }}</a>.</p>
+    </div>
+  </footer>
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{{ "/js/jquery-3.3.1.min.js" | relative_url }}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{{ "js/popper.min.js" | relative_url }}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{{ "js/bootstrap.min.js" | relative_url }}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{{ "js/mdb.min.js" | relative_url }}"></script>
+</body>
+
 </html>

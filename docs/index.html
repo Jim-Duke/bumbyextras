@@ -3,28 +3,64 @@ layout: default
 title: Bumby Hymnal Project
 navButton: Home
 ---
-<h1>Bumby Hymnal Project</h1>
-<p>Welcome to the Bumby Hymnal Project website.  On this site you can monitor
-the status of the various hymns the Bumby Hymnal Project is working on, and
-read about songs that have been completed.  For Public Domain Songs we will
-provide full access to the finished materials, which will include PDF's of
-sheet music, slides, and a collection of MP3 files that can be used as
-training aids to learn the song.  You can read more about the project on our
-<a href="about">About</a> page.</p>
+<!--BannerTitle-->
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-image mx-4 mt-4 mb-4" style="background-image: url({{ "/assets/images/HymnBannerDim.png" | relative_url }}); background-position: center; background-repeat: no-repeat; background-size: cover;">
+      <div class="text-black px-4 py-2 rgba-white-light">
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="mx-auto" style="width: 400px;">
-        <h1>Recent Changes</h1>
+        <!--Content-->
+          <h1 class="card-title pt-4 mb-5 display-3 font-weight-bold text-center">{{ site.title }}</h1>
+        <!--/Content-->
+
       </div>
     </div>
   </div>
-  <div class="row">
-{% assign hymns=(site.hymns | sort: 'date' | reverse) %}
-{% for i in (0..3) %}
-{% assign hymn=hymns[i] %}
-{% include hymn_card.html hymn=hymn %}
-{% endfor %}
+</div>
+<!--/BannerTitle-->
+
+<!--WelcomeBlurb-->
+<div class="row mb-2">
+  <div class="col-md-12">
+    <div class="text-black px-4 py-1 mx-5">
+
+      <!--Content-->
+        <p class="px-5 h4-responsive text-left">
+          Welcome to the Bumby Hymnal Project website.  The aim of the project is to provide high quality hymns for use by the
+          South Bumby Church of Christ in their worship and devotionals.  We produce sheet music, slides, and practice MP3s for
+          hymns that are not otherwise available in our regular hymnals.  We have produced 11 hymns in our first edition from
+          late 2016 which we bound in simple folders to put in the pews.  We are currently engaged in greatly expanding the
+          number of hymns which we will eventually bind in a larger booklet with 100 or more hymns.
+        </p>
+      <!--/Content-->
+
+    </div>
   </div>
 </div>
+<!--/WelcomeBlurb-->
+
+<!--NewsTitle-->
+<div class="row">
+  <div class="col-md-12">
+    <div class="m-4">
+      <div class="text-black rgba-white-slight">
+
+        <!--Content-->
+          <h1 class="display-5 font-weight-bold text-center">News</h1>
+        <!--/Content-->
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--/NewsTitle-->
+
+<!--RecentNewsList-->
+<div class="row">
+{%- for news_item in site.categories.news -%}
+  <div class="col-md-12">
+{% include post_card.html post=news_item %}
+{%- endfor -%}
+  </div>
+</div>
+<!--RecentNewsList-->

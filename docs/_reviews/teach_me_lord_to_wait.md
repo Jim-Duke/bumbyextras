@@ -2,11 +2,14 @@
 layout: review
 hymn_id: teach_me_lord_to_wait
 title: Updates to "Teach Me Lord to Wait"
-navButton: Hymns
+navButton: Reviews
 date: 2018-09-21 14:03:00 -0500
 ---
-# {{ page.title }}
-This is a new version of {{ page.title }} that has improved formatting.
+{%- assign hymns=(site.hymns | where: "hymn_id", page.hymn_id) -%}
+{%- assign hymn=hymns[0] -%}
+# Review Instructions
+
+This is a new version of "{{ hymn.title }}" that has improved formatting.
 
 - New shape note font
 - Much larger staff and font size on the slides

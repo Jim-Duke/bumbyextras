@@ -1,5 +1,5 @@
-    <div class="card border shadow border-dark bg-color-1 rounded mx-2 mb-3 p-2">
-      <span style="width: 30rem;">
-      <a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a>
-      </span>
-    </div>
+<div class="card text-black p-4 mx-5 my-2">
+  <h3 class="card-title font-weight-bold">{{ include.post.title }}</h3>
+  <h6 class="mb-4">{{ include.post.date | date_to_string: "ordinal", "US" }}</h6>
+{{ include.post.content | markdownify }}
+</div>

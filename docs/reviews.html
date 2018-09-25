@@ -1,0 +1,11 @@
+---
+layout: default
+title: Active Reviews in Bumby Hymnal Project
+navButton: Reviews
+---
+<div class="row mt-5">
+{% assign reviews=(site.reviews | sort: 'date') %}
+{% for review in reviews %}
+{% include review_card.html review=review %}
+{% endfor %}
+</div>
