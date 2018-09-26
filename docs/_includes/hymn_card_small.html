@@ -1,0 +1,69 @@
+{%- comment -%}
+This include builds a Bootstrap 4 Card for a quick summary of a hymn.
+
+It must be able to handle all the kinds of hymns - no matter what their state
+is, and provide easy to understand clues about the hymn.
+
+The basic structure of the card is to show the a slide thumbnail on the top (if
+available) with a few basic things on the bottom.  If no slides exist, and thus
+no thumbnail, we'll use a generic box with the name of the hymn in it.
+
+{%- endcomment -%}
+{%- assign id=include.hymn.hymn_id -%}
+{%- if include.hymn.products -%}
+{%- assign products_available=true -%}
+{%- if include.hymn.products contains 'published' -%}
+{%- assign location="published" -%}
+{%- else -%}
+{%- assign location="review" -%}
+{%- endif -%}
+{%- else -%}
+{%- assign products_available=nil -%}
+{%- endif -%}
+{%- if include.hymn.products and include.hymn.products contains 'published' and include.hymn.products contains 'review' -%}
+{%- assign updates_available=true -%}
+{%- else -%}
+{%- assign updates_available=nil -%}
+{%- endif -%}
+{%- assign reviews=(site.reviews | where: "hymn_id", include.hymn.hymn_id) -%}
+{%- if reviews.size > 0 -%}
+{%- assign reviews_available=true -%}
+{%- else -%}
+{%- assign reviews_available=nil -%}
+{%- endif -%}
+{%- assign research=(site.research | where: "hymn_id", include.hymn.hymn_id) -%}
+{%- if research.size > 0 -%}
+{%- assign research_available=true -%}
+{%- else -%}
+{%- assign research_available=nil -%}
+{%- endif -%}
+{%- assign articles=(site.posts | where: "hymn_id", id) -%}
+{%- if articles.size > 0 -%}
+{%- assign articles_available=true -%}
+{%- else -%}
+{%- assign articles_available=nil -%}
+{%- endif -%}
+{%- if include.hymn.external_resources -%}
+{%- assign external_available=true -%}
+{%- else -%}
+{%- assign external_available=nil -%}
+{%- endif -%}
+<a href="{{ include.hymn.url | relative_url }}" class="card border shadow border-dark bg-color-1 rounded mx-2 mb-3"
+style="max-width: 18rem; color: inherit; text-decoration: none;">
+  <img class="card-img-top"
+{%- if products_available -%}
+src="{{ site.baseurl }}/Source/{{ location }}/{{ id }}/{{ id }}_slides_thumbnail.png"
+{%- else -%}
+src="{{ site.baseurl }}/assets/images/blank_slide.jpg"
+{%- endif -%}
+alt="{{ include.hymn.title }} Slides"/>
+{%- unless products_available -%}
+  <div class="card-img-overlay text-center">
+    <h5 class="mt-4 font-weight-bold">{{ include.hymn.title }}</h5>
+    <h6>Requested</h6>
+  </div>
+{%- endunless -%}
+  <div class="card-body">
+    <h4 class="font-weight-heavy" style="width: w-100">{{ include.hymn.title }}</h4>
+  </div>
+</a>

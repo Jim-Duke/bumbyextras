@@ -6,24 +6,38 @@ navButton: Hymns
 {%- assign published=(site.hymns | where: "status", "published") -%}
 {%- assign prepared=(site.hymns | where: "status", "prepared") -%}
 {%- assign proposed=(site.hymns | where: "status", "proposed") -%}
-<div class="listgroup">
-  <div class="listitem">
-    <div class="listgroup">
-      <h4 class="listitem">Published Hymns</h4>
+<div class="mx-auto w-75">
+  <h2 class="text-center font-weight-bold">Published</h2>
+  <div class="w-100 mx-auto">
+    <div class="card-deck mx-auto">
 {%- for hymn in published -%}
-      <p class="listitem">{{ hymn.title }}</p>
+      <div class="w-25">
+{% include hymn_card_small.html hymn=hymn %}
+      </div>
 {%- endfor -%}
     </div>
-    <div class="listgroup">
-      <h4 class="listitem">Hymns in Review</h4>
+  </div>
+</div>
+<div class="mx-auto w-75 mt-5">
+  <h2 class="text-center font-weight-bold">New</h2>
+  <div class="w-100 mx-auto">
+    <div class="card-deck mx-auto">
 {%- for hymn in prepared -%}
-      <p class="listitem">{{ hymn.title }}</p>
+      <div class="w-25">
+{% include hymn_card_small.html hymn=hymn %}
+      </div>
 {%- endfor -%}
     </div>
-    <div class="listgroup">
-      <h4 class="listitem">Proposed Hymns</h4>
+  </div>
+</div>
+<div class="mx-auto w-75 mt-5">
+  <h2 class="text-center font-weight-bold">Requested</h2>
+  <div class="w-100 mx-auto">
+    <div class="card-deck mx-auto">
 {%- for hymn in proposed -%}
-      <p class="listitem">{{ hymn.title }}</p>
+      <div class="w-25">
+{% include hymn_card_small.html hymn=hymn %}
+      </div>
 {%- endfor -%}
     </div>
   </div>
