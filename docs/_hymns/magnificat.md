@@ -2,7 +2,7 @@
 layout: hymn
 hymn_id: magnificat
 title: Magnificat
-in_hymnal: true
+status: published
 products:
 - published
 - review

@@ -2,7 +2,7 @@
 layout: hymn
 hymn_id: my_shepherd_will_supply_my_need
 title: My Shepherd Will Supply My Need
-in_hymnal: true
+status: published
 products:
 - published
 - review

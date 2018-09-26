@@ -2,7 +2,7 @@
 layout: hymn
 hymn_id: teach_me_lord_to_wait
 title: Teach Me Lord To Wait
-in_hymnal: true
+status: published
 products:
 - published
 - review

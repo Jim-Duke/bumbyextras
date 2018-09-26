@@ -2,7 +2,7 @@
 layout: hymn
 hymn_id: how_beautiful
 title: How Beautiful
-in_hymnal: true
+status: published
 products:
 - published
 - review

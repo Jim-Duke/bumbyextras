@@ -2,7 +2,7 @@
 layout: hymn
 hymn_id: in_christ_alone
 title: In Christ Alone
-in_hymnal: true
+status: published
 products:
 - published
 - review

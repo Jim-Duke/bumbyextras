@@ -2,7 +2,7 @@
 layout: hymn
 hymn_id: ah_holy_jesus
 title: Ah Holy Jesus
-in_hymnal: true
+status: published
 navButton: Hymns
 products:
 - published

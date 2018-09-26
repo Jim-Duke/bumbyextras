@@ -3,11 +3,28 @@ layout: default
 title: Hymns in Bumby Hymnal Project
 navButton: Hymns
 ---
-<div class="container">
-  <div class="row mt-5 justify-content-center">
-{% assign hymns=(site.hymns | sort: 'title') %}
-{% for hymn in hymns %}
-{% include hymn_card.html hymn=hymn %}
-{% endfor %}
+{%- assign published=(site.hymns | where: "status", "published") -%}
+{%- assign prepared=(site.hymns | where: "status", "prepared") -%}
+{%- assign proposed=(site.hymns | where: "status", "proposed") -%}
+<div class="listgroup">
+  <div class="listitem">
+    <div class="listgroup">
+      <h4 class="listitem">Published Hymns</h4>
+{%- for hymn in published -%}
+      <p class="listitem">{{ hymn.title }}</p>
+{%- endfor -%}
+    </div>
+    <div class="listgroup">
+      <h4 class="listitem">Hymns in Review</h4>
+{%- for hymn in prepared -%}
+      <p class="listitem">{{ hymn.title }}</p>
+{%- endfor -%}
+    </div>
+    <div class="listgroup">
+      <h4 class="listitem">Proposed Hymns</h4>
+{%- for hymn in proposed -%}
+      <p class="listitem">{{ hymn.title }}</p>
+{%- endfor -%}
+    </div>
   </div>
 </div>

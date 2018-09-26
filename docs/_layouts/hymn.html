@@ -3,6 +3,130 @@ layout: default
 ---
 <div class="container">
   <div class="row">
+    <h1 class="col-sm-8 mx-auto border shadow bg-light my-1 p-2">{{ page.title }}</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 m-1 p-2">
+      {{ content }}
+    </div>
+    <div class="col-sm-4 m-1 p-2">
+{%- if page.poetry_elements -%}
+      <dl>
+{%- if page.poetry_elements.meter -%}
+        <dt>Meter:</dt>
+        <dd>{{ page.poetry_elements.meter }}</dd>
+{%- endif %}
+{%- if page.poetry_elements.poet -%}
+        <dt>Poet:</dt>
+        <dd>{{ page.poetry_elements.poet }}</dd>
+{%- endif %}
+{%- if page.poetry_elements.translator -%}
+        <dt>Translator:</dt>
+        <dd>{{ page.poetry_elements.translator }}</dd>
+{%- endif %}
+{%- if page.poetry_elements.versifier -%}
+        <dt>Versifier:</dt>
+        <dd>{{ page.poetry_elements.versifier }}</dd>
+{%- endif %}
+{%- if page.poetry_elements.altered -%}
+        <dt>Altered:</dt>
+        <dd>{{ page.poetry_elements.altered }}</dd>
+{%- endif %}
+      </dl>
+{%- else -%}
+      <p>No poetry information is available for this hymn</p>
+{%- endif -%}
+    </div>
+  </div>
+{%- if page.products.size == 2 -%}
+<!--Side by Side list of products-->
+  <div class="row">
+    <h1 class="col-sm-12 mt-5 mx-auto" style="width: 100%; text-align: center;">Sheet Music</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 list-group">
+      <h2 class="list-item" style="width: 100%; text-align: center;">Current</h2>
+      <div class="list-item mx-auto border shadow-lg bg-light m1 p-2">
+{%- include sheet_music.html hymn=page version="published" -%}
+      </div>
+    </div>
+    <div class="col-sm-6 list-group">
+      <h2 class="list-item" style="width: 100%; text-align: center;">Updated</h2>
+      <div class="list-item mx-auto border shadow-lg bg-light m1 p-2">
+{%- include sheet_music.html hymn=page version="review" -%}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h1 class="col-sm-12 mt-5 mx-auto" style="width: 100%; text-align: center;">Slides</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 list-group">
+      <h2 class="list-item" style="width: 100%; text-align: center;">Current</h2>
+      <div class="list-item mx-auto border shadow-lg bg-light m1 p-2">
+{%- include slides.html hymn=page version="published" -%}
+      </div>
+    </div>
+    <div class="col-sm-6 list-group">
+      <h2 class="list-item" style="width: 100%; text-align: center;">Updated</h2>
+      <div class="list-item mx-auto border shadow-lg bg-light m1 p-2">
+{%- include slides.html hymn=page version="review" -%}
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h1 class="col-sm-12 mt-5 mx-auto" style="width: 100%; text-align: center;">Practice MP3s</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="list-group">
+        <h2 class="list-item" style="width: 100%; text-align: center;">Current</h2>
+        <div class="list-item border shadow-lg bg-light m-1 p-2">
+{%- include audio.html hymn=page version="published" -%}
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="list-group">
+        <h2 class="list-item" style="width: 100%; text-align: center;">Updated</h2>
+        <div class="list-item border shadow-lg bg-light m-1 p-2">
+{%- include audio.html hymn=page version="review" -%}
+        </div>
+      </div>
+    </div>
+  </div>
+{%- else -%}
+<!--Just the review materials-->
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="list-group">
+        <h2 class="list-item" style="width: 100%; text-align: center;">Sheet Music</h2>
+        <div class="list-item mx-auto border shadow-lg bg-light m1 p-2">
+{%- include sheet_music.html hymn=page version="review" -%}
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="list-group">
+        <h2 class="list-item" style="width: 100%; text-align: center;">Slides</h2>
+        <div class="list-item mx-auto border shadow-lg bg-light m1 p-2">
+{%- include slides.html hymn=page version="review" -%}
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="list-group">
+        <h2 class="list-item" style="width: 100%; text-align: center;">Practice MP3s</h2>
+        <div class="list-item border shadow-lg bg-light m-1 p-2">
+{%- include audio.html hymn=page version="review" -%}
+        </div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+</div>
+<div class="container">
+  <div class="row">
     <h1 class="mb-5" style="width: 100%; text-align: center;">{{ page.title }}</h1>
   </div>
 </div>

@@ -18,11 +18,13 @@ Source/*.eps
 Build/*.pdf
 Build/*.mid
 Build/*.mp3
+docs/vendor
 *.log
 *~
 *.swp
 
 _site
+.sass-cache
 
 # =========================
 # Operating System Files

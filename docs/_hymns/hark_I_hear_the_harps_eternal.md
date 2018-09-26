@@ -2,7 +2,7 @@
 layout: hymn
 hymn_id: hark_I_hear_the_harps_eternal
 title: Hark! I Hear the Harps Eternal
-in_hymnal: true
+status: published
 products:
 - published
 - review

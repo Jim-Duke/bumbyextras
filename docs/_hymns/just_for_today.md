@@ -2,7 +2,7 @@
 layout: hymn
 hymn_id: just_for_today
 title: Just For Today
-in_hymnal: true
+status: published
 products:
 - published
 - review

@@ -2,7 +2,7 @@
 layout: hymn
 hymn_id: abide_with_me
 title: Abide With Me
-in_hymnal: true
+status: published
 products:
 - published
 - review

@@ -2,7 +2,7 @@
 layout: hymn
 hymn_id: be_thou_my_vision
 title: Be Thou My Vision
-in_hymnal: false
+status: prepared
 products:
 - review
 synopsis: English version of an ancient Irish hymn
