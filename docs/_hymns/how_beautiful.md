@@ -14,8 +14,10 @@ poetry_elements: {
 tune_elements: {
     composer: "Twila Paris"
 }
-copyright: Copyright (c) 1990 Ariose Music and Mountain Spring Music
-license: CCLI License #2055442
-ccli_song: 443594
+copyright_elements: {
+    copyright: "Copyright (c) 1990 Ariose Music and Mountain Spring Music",
+    license: "CCLI License #2055442",
+    ccli_song: "443594"
+}
 date: 2016-12-30 12:00:00 -0500
 ---

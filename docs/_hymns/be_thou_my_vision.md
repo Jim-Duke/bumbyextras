@@ -18,7 +18,9 @@ tune_elements: {
     composer: "Joyce's Old Irish Folk Music and Songs (1909)",
     arranger: "C. E. Couchman"
 }
+copyright_elements: {
+    copyright: "arr. 2009 C. E. Couchman",
+    license: "Used by permission"
+}
 date: 2016-12-30 12:00:00 -0500
-copyright: arr. 2009 C. E. Couchman
-license: Used by permission
 ---

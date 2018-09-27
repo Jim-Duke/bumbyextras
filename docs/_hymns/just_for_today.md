@@ -16,8 +16,10 @@ tune_elements: {
     composer: "March Schelske (1995)",
     altered: true
 }
-copyright: Copyright (c) 1995 Marc Schelske Music.
-license: CCLI License #2055442
-ccli_song: 1984677
+copyright_elements: {
+    copyright: "Copyright (c) 1995 Marc Schelske Music.",
+    license: "CCLI License #2055442",
+    ccli_song: "1984677"
+}
 date: 2016-12-30 12:00:00 -0500
 ---

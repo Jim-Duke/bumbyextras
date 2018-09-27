@@ -48,7 +48,7 @@ no thumbnail, we'll use a generic box with the name of the hymn in it.
 {%- else -%}
 {%- assign external_available=nil -%}
 {%- endif -%}
-<a href="{{ include.hymn.url | relative_url }}" class="card border shadow border-dark bg-color-1 rounded mx-2 mb-3"
+<a href="{{ include.hymn.url | relative_url }}" class="card border shadow border-dark bg-color-1 rounded"
 style="max-width: 18rem; color: inherit; text-decoration: none;">
   <img class="card-img-top"
 {%- if products_available -%}
@@ -63,7 +63,4 @@ alt="{{ include.hymn.title }} Slides"/>
     <h6>Requested</h6>
   </div>
 {%- endunless -%}
-  <div class="card-body">
-    <h4 class="font-weight-heavy" style="width: w-100">{{ include.hymn.title }}</h4>
-  </div>
 </a>

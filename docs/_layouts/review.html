@@ -5,8 +5,17 @@ layout: default
 {%- assign hymn=hymns[0] -%}
 <div class="container">
   <div class="row">
-    <div class="col-sm-8 mx-auto border shadow bg-light m-1 p-2">
-      {{ content }}
+    <div class="col-sm-8 mx-auto border shadow m-1 p-2">
+      <div class="card">
+        <div class="card-body">
+          {{ content }}
+        </div>
+{%- if page.github_issue -%}
+        <div class="card-footer">
+          <a class="btn text-dark" href="https://github.com/{{ site.github_project.owner }}/{{ site.github_project.project }}/issues/{{ page.github_issue }}">GitHub Issue</a>
+{%- endif -%}
+        </div>
+      </div>
     </div>
   </div>
 {%- if hymn.products.size == 2 -%}

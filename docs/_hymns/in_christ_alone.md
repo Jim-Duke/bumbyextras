@@ -14,8 +14,10 @@ poetry_elements: {
 tune_elements: {
     composer: "Keith Getty and Stuart Townend (2001)"
 }
-copyright: Copyright (c) 2001 Thankyou Music (admin. Capitol CMG Publishing)
-license: CCLI License #2055442
-ccli_song: 3350395
+copyright_elements: {
+    copyright: "Copyright (c) 2001 Thankyou Music (admin. Capitol CMG Publishing)",
+    license: "CCLI License #2055442",
+    ccli_song: "3350395"
+}
 date: 2016-12-30 12:00:00 -0500
 ---

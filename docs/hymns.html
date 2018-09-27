@@ -6,39 +6,59 @@ navButton: Hymns
 {%- assign published=(site.hymns | where: "status", "published") -%}
 {%- assign prepared=(site.hymns | where: "status", "prepared") -%}
 {%- assign proposed=(site.hymns | where: "status", "proposed") -%}
-<div class="mx-auto w-75">
+<div class="container w-100">
   <h2 class="text-center font-weight-bold">Published</h2>
-  <div class="w-100 mx-auto">
-    <div class="card-deck mx-auto">
+{%- assign i = 0 -%}
 {%- for hymn in published -%}
-      <div class="w-25">
+{%- if i == 0 -%}
+  <div class="row">
+{%- endif -%}
+    <div class="col-sm-4 mb-4">
 {% include hymn_card_small.html hymn=hymn %}
-      </div>
-{%- endfor -%}
     </div>
+{%- assign i = i | plus: 1 -%}
+{%- if i == 3 -%}
   </div>
-</div>
-<div class="mx-auto w-75 mt-5">
-  <h2 class="text-center font-weight-bold">New</h2>
-  <div class="w-100 mx-auto">
-    <div class="card-deck mx-auto">
+{%- assign i=0 -%}
+{%- endif -%}
+{%- endfor -%}
+{%- if i != 0 -%}
+  </div>
+{%- endif -%}
+  <h2 class="text-center font-weight-bold">New - In Review</h2>
+{%- assign i = 0 -%}
 {%- for hymn in prepared -%}
-      <div class="w-25">
+{%- if i == 0 -%}
+  <div class="row">
+{%- endif -%}
+    <div class="col-sm-4 mb-4">
 {% include hymn_card_small.html hymn=hymn %}
-      </div>
-{%- endfor -%}
     </div>
+{%- assign i = i | plus: 1 -%}
+{%- if i == 3 -%}
   </div>
-</div>
-<div class="mx-auto w-75 mt-5">
+{%- assign i=0 -%}
+{%- endif -%}
+{%- endfor -%}
+{%- if i != 0 -%}
+  </div>
+{%- endif -%}
   <h2 class="text-center font-weight-bold">Requested</h2>
-  <div class="w-100 mx-auto">
-    <div class="card-deck mx-auto">
+{%- assign i = 0 -%}
 {%- for hymn in proposed -%}
-      <div class="w-25">
+{%- if i == 0 -%}
+  <div class="row">
+{%- endif -%}
+    <div class="col-sm-4 mb-4">
 {% include hymn_card_small.html hymn=hymn %}
-      </div>
-{%- endfor -%}
     </div>
+{%- assign i = i | plus: 1 -%}
+{%- if i == 3 -%}
   </div>
+{%- assign i=0 -%}
+{%- endif -%}
+{%- endfor -%}
+{%- if i != 0 -%}
+  </div>
+{%- endif -%}
 </div>

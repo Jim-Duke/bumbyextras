@@ -76,8 +76,9 @@ layout: default
     <div class="tab-content border" id="{{ id }}_tab_content">
       <div class="tab-pane fade container-fluid show active" id="{{ id }}_info" role="tabpanel" aria-labelledby="{{ id }}_info_tab">
         <div class="row">
-          <div class="col-4">
-            <h4>Poetry Information</h4>
+          <div class="col-md">
+            <div class="border shadow p-4 mt-2 mb-5" style="background-color: #FCFBE3;">
+              <h4 class="font-weight-bold">Poetry Information</h4>
 {%- if page.poetry_elements -%}
               <dl>
 {%- if page.poetry_elements.meter -%}
@@ -104,21 +105,21 @@ layout: default
 {%- else -%}
               <p>No poetry information is available for this hymn</p>
 {%- endif -%}
-          </div>
-          <div class="col-4">
-            <h4>Tune Information</h4>
+            </div>
+            <div class="border shadow p-4 mt-2 mb-5" style="background-color: #FCFBE3;">
+              <h4 class="font-weight-bold mb-3">Tune Information</h4>
 {%- if page.tune_elements -%}
               <dl>
 {%- if page.tune_elements.name -%}
-                <dt>name:</dt>
+                <dt>Name:</dt>
                 <dd>{{ page.tune_elements.name }}</dd>
 {%- endif %}
 {%- if page.tune_elements.composer -%}
-                <dt>composer:</dt>
+                <dt>Composer:</dt>
                 <dd>{{ page.tune_elements.composer }}</dd>
 {%- endif %}
 {%- if page.tune_elements.arranger -%}
-                <dt>arranger:</dt>
+                <dt>Arranger:</dt>
                 <dd>{{ page.tune_elements.arranger }}</dd>
 {%- endif %}
 {%- if page.tune_elements.altered -%}
@@ -129,9 +130,54 @@ layout: default
 {%- else -%}
               <p>No tune information is available for this hymn</p>
 {%- endif -%}
+            </div>
+            <div class="border shadow p-4 mt-2 mb-5" style="background-color: #FCFBE3;">
+              <h4 class="font-weight-bold mb-3">Copyright Information</h4>
+{%- if page.copyright_elements -%}
+              <dl>
+{%- if page.copyright_elements.copyright -%}
+                <dt>Copyright:</dt>
+                <dd>{{ page.copyright_elements.copyright }}</dd>
+{%- endif %}
+{%- if page.copyright_elements.license -%}
+                <dt>License:</dt>
+                <dd>{{ page.copyright_elements.license }}</dd>
+{%- endif %}
+{%- if page.copyright_elements.ccli_song -%}
+                <dt>CCLI Song Number:</dt>
+                <dd>
+                  {{ page.copyright_elements.ccli_song }}
+                  <a class="btn text-dark" href="https://songselect.ccli.com/songs/{{ page.copyright_elements.ccli_song }}">CCLI Song Page</a>
+                </dd>
+{%- endif %}
+{%- if page.tune_elements.altered -%}
+                <dt>Altered:</dt>
+                <dd>{{ page.tune_elements.altered }}</dd>
+{%- endif %}
+              </dl>
+{%- else -%}
+              <p>No copyright information is available for this hymn</p>
+{%- endif -%}
+            </div>
           </div>
-          <div class="col-4">
-            <h4>Status</h4>
+          <div class="col-md">
+            <div class="border shadow p-4 mt-2 mb-5" style="background-color: #FCFBE3;">
+              <h4 class="font-weight-bold mb-3">Lyrics</h4>
+{%- if page.lyrics -%}
+              <dl>
+{%- for lyric in page.lyrics -%}
+                <dt>{{ lyric.name }}</dt>
+                <dd>
+{%- for line in lyric.lines -%}
+                  {{ line }}<br/>
+{%- endfor -%}
+                </dd>
+{%- endfor -%}
+              </dl>
+{%- else -%}
+<p>No Lyrics are available for this hymn.</p>
+{%- endif -%}
+            </div>
           </div>
         </div>
       </div>

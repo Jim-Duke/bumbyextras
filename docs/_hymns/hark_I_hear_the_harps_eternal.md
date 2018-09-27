@@ -15,6 +15,8 @@ tune_elements: {
     name: "INVITATION NEW",
     composer: "North American Traditional"
 }
-copyright: Public Domain
+copyright_elements: {
+    copyright: Public Domain
+}
 date: 2016-12-30 12:00:00 -0500
 ---

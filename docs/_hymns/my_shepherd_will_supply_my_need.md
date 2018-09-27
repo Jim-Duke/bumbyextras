@@ -16,6 +16,8 @@ tune_elements: {
     name: "RESIGNATION",
     composer: "Traditional North American"
 }
-copyright: Public Domain
+copyright_elements: {
+    copyright: Public Domain
+}
 date: 2016-12-30 12:00:00 -0500
 ---
