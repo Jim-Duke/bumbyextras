@@ -12,19 +12,19 @@ layout: default
 {%- else -%}
 {%- assign updates_available=nil -%}
 {%- endif -%}
-{%- assign reviews=(site.reviews | where: "hymn_id", page.hymn_id) -%}
+{%- assign reviews=site.reviews | where: "hymn_id", page.hymn_id -%}
 {%- if reviews.size > 0 -%}
 {%- assign reviews_available=true -%}
 {%- else -%}
 {%- assign reviews_available=nil -%}
 {%- endif -%}
-{%- assign research=(site.research | where: "hymn_id", page.hymn_id) -%}
+{%- assign research=site.research | where: "hymn_id", page.hymn_id -%}
 {%- if research.size > 0 -%}
 {%- assign research_available=true -%}
 {%- else -%}
 {%- assign research_available=nil -%}
 {%- endif -%}
-{%- assign articles=(site.posts | where: "hymn_id", id) -%}
+{%- assign articles=site.posts | where: "hymn_id", id -%}
 {%- if articles.size > 0 -%}
 {%- assign articles_available=true -%}
 {%- else -%}
@@ -52,24 +52,9 @@ layout: default
         <a class="nav-link" id="{{ id }}_updates_tab" data-toggle="tab" href="#{{ id }}_updates" role="tab" aria-controls="updates" aria-selected="true">Updates</a>
       </li>
 {%- endif -%}
-{%- if reviews_available -%}
+{%- if reviews_available or research_available or articles_available or external_available or page.github_issue -%}
       <li class="nav-item border">
-        <a class="nav-link" id="{{ id }}_reviews_tab" data-toggle="tab" href="#{{ id }}_reviews" role="tab" aria-controls="reviews" aria-selected="true">Review Instructions</a>
-      </li>
-{%- endif -%}
-{%- if research_available -%}
-      <li class="nav-item border">
-        <a class="nav-link" id="{{ id }}_research_tab" data-toggle="tab" href="#{{ id }}_research" role="tab" aria-controls="research" aria-selected="true">Research</a>
-      </li>
-{%- endif -%}
-{%- if articles_available -%}
-      <li class="nav-item border">
-        <a class="nav-link" id="{{ id }}_articles_tab" data-toggle="tab" href="#{{ id }}_articles" role="tab" aria-controls="articles" aria-selected="true">Articles</a>
-      </li>
-{%- endif -%}
-{%- if external_available -%}
-      <li class="nav-item border">
-        <a class="nav-link" id="{{ id }}_external_tab" data-toggle="tab" href="#{{ id }}_external" role="tab" aria-controls="external" aria-selected="true">External</a>
+        <a class="nav-link" id="{{ id }}_related_tab" data-toggle="tab" href="#{{ id }}_related" role="tab" aria-controls="related" aria-selected="true">Related</a>
       </li>
 {%- endif -%}
     </ul>
@@ -294,33 +279,33 @@ layout: default
         </div>
       </div>
 {%- endif -%}
-{%- if reviews_available -%}
-      <div class="tab-pane fade" id="{{ id }}_reviews" role="tabpanel" aria-labelledby="{{ id }}_reviews_tab">
-        {{ reviews[0].content | markdownify }}
-      </div>
-{%- endif -%}
-{%- if research_available -%}
-      <div class="tab-pane fade" id="{{ id }}_research" role="tabpanel" aria-labelledby="{{ id }}_research_tab">
-        {{ research[0].content | markdownify }}
-      </div>
-{%- endif -%}
+{%- if reviews_available or research_available or articles_available or external_available or page.github_issue -%}
+      <div class="tab-pane fade" id="{{ id }}_related" role="tabpanel" aria-labelledby="{{ id }}_related_tab">
 {%- if articles_available -%}
-      <div class="tab-pane fade" id="{{ id }}_articles" role="tabpanel" aria-labelledby="{{ id }}_articles_tab">
         <h4>{{ articles.size }}{% if articles.size == 1 %} article{% else %} articles{% endif %} related to this hymn {% if articles.size == 1 %}is{% else %}are{% endif %} available:</h4>
         <ul>
 {%- for article in articles -%}
           <li><a href="{{ article.url | relative_url }}">{{ article.title }}</a></li>
 {%- endfor -%}
         </ul>
-      </div>
 {%- endif -%}
 {%- if external_available -%}
-      <div class="tab-pane fade" id="{{ id }}_external" role="tabpanel" aria-labelledby="{{ id }}_external_tab">Information available externally that is related to {{ page.title }}:
+        <h4>{{ page.external_resources.size }}{% if page.external_resources.size == 1 %} External resource{% else %} External resources{% endif %} related to this hymn {% if page.external_resources.size == 1 %}is{% else %}are{% endif %} available:</h4>
         <ul>
 {%- for external_resource in page.external_resources -%}
           <li><a href="{{ external_resource.url }}">{{ external_resource.name }}</a></li>
 {%- endfor -%}
         </ul>
+{%- endif -%}
+{%- if page.github_issue -%}
+        <a class="btn btn-info" href="https://github.com/{{ site.github_project.owner }}/{{ site.github_project.project }}/issues/{{ page.github_issue }}">GitHub Issue</a>
+{%- endif -%}
+{%- if reviews_available -%}
+        <a class="btn btn-info" href="{{ reviews[0].url | relative_url }}">Review Page</a>
+{%- endif -%}
+{%- if research_available -%}
+        <a class="btn btn-info" href="{{ research[0].url | relative_url }}">Research Page</a>
+{%- endif -%}
       </div>
 {%- endif -%}
     </div>

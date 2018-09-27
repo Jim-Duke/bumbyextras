@@ -3,6 +3,7 @@ layout: hymn
 hymn_id: christ_the_lord_is_risen_today_mendelssohn
 title: Christ the Lord is Risen Today
 status: published
+github_issue: 10
 products:
 - published
 - review

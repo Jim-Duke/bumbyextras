@@ -3,6 +3,7 @@ layout: hymn
 hymn_id: abide_with_me
 title: Abide With Me
 status: published
+github_issue: 18
 products:
 - published
 - review

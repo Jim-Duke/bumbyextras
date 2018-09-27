@@ -1,12 +1,19 @@
 {%- assign review=include.review -%}
-{%- assign hymns=(site.hymns | where: "hymn_id", review.hymn_id -%}
-{%- assign hymn=hymns[0] -%}
 <div class="card text-black mx-auto p-4 mb-4 col-sm-8">
   <h3 class="card-title font-weight-bold">{{ review.title }}</h3>
   <h6 class="mb-4">{{ review.date | date_to_string: "ordinal", "US" }}</h6>
 {{ review.content | markdownify }}
   <div class"button-group">
     <a class="btn btn-info" href="{{ review.url | relative_url }}">Review Page</a>
+{%- if review.hymn_id -%}
+{%- assign hymns=site.hymns | where: "hymn_id", review.hymn_id -%}
+{%- if hymns.size > 0 -%}
+{%- assign hymn=hymns[0] -%}
     <a class="btn btn-info" href="{{ hymn.url | relative_url }}">Hymn Page</a>
+{%- endif -%}
+{%- endif -%}
+{%- if review.github_issue -%}
+    <a class="btn btn-info" href="https://github.com/{{ site.github_project.owner }}/{{ site.github_project.project }}/issues/{{ review.github_issue }}">GitHub Issue</a>
+{%- endif -%}
   </div>
 </div>

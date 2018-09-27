@@ -3,9 +3,9 @@ layout: default
 title: Hymns in Bumby Hymnal Project
 navButton: Hymns
 ---
-{%- assign published=(site.hymns | where: "status", "published") -%}
-{%- assign prepared=(site.hymns | where: "status", "prepared") -%}
-{%- assign proposed=(site.hymns | where: "status", "proposed") -%}
+{%- assign published=site.hymns | where: "status", "published" -%}
+{%- assign prepared=site.hymns | where: "status", "prepared" -%}
+{%- assign proposed=site.hymns | where: "status", "proposed" -%}
 <div class="container w-100">
   <h2 class="text-center font-weight-bold">Published</h2>
 {%- assign i = 0 -%}

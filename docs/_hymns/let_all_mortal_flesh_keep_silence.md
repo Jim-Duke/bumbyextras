@@ -4,10 +4,6 @@ hymn_id: let_all_mortal_flesh_keep_silence
 title: Let All Mortal Flesh Keep Silence
 status: proposed
 navButton: Hymns
-in_hymnal: false
+github_issue: 64
 date: 2016-12-18 12:00:00 -0500
 ---
-# {{ page.title }}
-Recommended new song.
-
-[http://www.hymnary.org/text/let_all_mortal_flesh_keep_silence](http://www.hymnary.org/text/let_all_mortal_flesh_keep_silence)

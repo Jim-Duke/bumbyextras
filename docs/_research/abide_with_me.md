@@ -1,7 +1,9 @@
 ---
+layout: research
 title: Research into "Abide with Me"
 hymn_id: abide_with_me
 ---
+# {{ page.title }}
 This version of Abide with Me includes 6 of the 8 original verses.  Over the years most hymnals only include 3 verses.  Several include 5, a few 6.  Hardly any include all 8..
 
 ### Submitted By
@@ -23,10 +25,9 @@ The hymn and tune are in the Public Domain.  The most noteable aspect of the his
 ### Sources
 
 1. [Hymnary Entry on Abide With Me](http://www.hymnary.org/text/abide_with_me_fast_falls_the_eventide)
-2. [Cyber Hymnal Entry on Abide With Me](http://www.hymntime.org/tch/htm/a/b/abidewme.htm)
+2. [Cyber Hymnal Entry on Abide With Me](http://www.hymntime.com/tch/htm/a/b/i/abidewme.htm)
 3. [1880 Evangelical Lutheran Hymnal #440]({{ "/assets/abide_with_me/AllVersesFrom1880Hymnal.pdf" | relative_url }})
 4. [From A Collection of Hymns Supplementary to the Psalms and Hymns of Dr. Watts - 1859.pdf]({{ "/assets/abide_with_me/supplement_to_psalms_and_hymns_1859.pdf" | relative_url }})
-
 
 ### Hymn
 

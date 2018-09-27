@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: About Bumby Hymnal Project
 navButton: About
 ---

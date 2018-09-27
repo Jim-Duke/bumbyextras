@@ -4,7 +4,7 @@ title: Posts in Bumby Hymnal Project
 navButton: Posts
 ---
 <div class="row mt-5">
-{% assign posts=(site.posts | sort: 'date' | reverse) %}
+{% assign posts=site.posts | sort: 'date' | reverse %}
 {% for post in posts %}
 {% include post_card.html post=post %}
 {% endfor %}

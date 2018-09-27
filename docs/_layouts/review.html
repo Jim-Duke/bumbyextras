@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-{%- assign hymns=(site.hymns | where: "hymn_id", page.hymn_id) -%}
-{%- assign hymn=hymns[0] -%}
 <div class="container">
   <div class="row">
     <div class="col-sm-8 mx-auto border shadow m-1 p-2">
@@ -12,12 +10,15 @@ layout: default
         </div>
 {%- if page.github_issue -%}
         <div class="card-footer">
-          <a class="btn text-dark" href="https://github.com/{{ site.github_project.owner }}/{{ site.github_project.project }}/issues/{{ page.github_issue }}">GitHub Issue</a>
+          <a class="btn btn-info" href="https://github.com/{{ site.github_project.owner }}/{{ site.github_project.project }}/issues/{{ page.github_issue }}">GitHub Issue</a>
 {%- endif -%}
         </div>
       </div>
     </div>
   </div>
+{%- if page.hymn_id -%}
+{%- assign hymns = site.hymns | where: "hymn_id", page.hymn_id -%}
+{%- assign hymn=hymns[0] -%}
 {%- if hymn.products.size == 2 -%}
 <!--Side by Side list of products-->
   <div class="row">
@@ -103,5 +104,6 @@ layout: default
       </div>
     </div>
   </div>
+{%- endif -%}
 {%- endif -%}
 </div>
