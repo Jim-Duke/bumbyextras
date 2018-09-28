@@ -107,3 +107,7 @@ lord_reign_in_me_pages = 2
 what_the_lord_has_done_in_me_number = "X-001"
 what_the_lord_has_done_in_me_number_rhs = ##t
 what_the_lord_has_done_in_me_pages = 1
+
+immortal_invisible_god_only_wise_number = "X-002"
+immortal_invisible_god_only_wise_number_rhs = ##t
+immortal_invisible_god_only_wise_pages = 1
