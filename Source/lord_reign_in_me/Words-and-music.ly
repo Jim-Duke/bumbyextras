@@ -21,7 +21,7 @@ SongNumber = \lord_reign_in_me_number
 
 LeaderHints = \markup {
   \fontsize #-4
-  \normal-text { "F - 3 - DO" }
+  \normal-text { "B" \musicglyph #"accidentals.flat" " - 4 - DO" }
 }
 
 number_on_rhs = \lord_reign_in_me_number_rhs
@@ -36,8 +36,8 @@ ShowScriptureOnSheetMusic = ##t
 \header {
   title = \Title
   songNumber = \SongNumber
-  lhs = #(if lord_reign_in_me_number_rhs LeaderHints christ_the_lord_is_risen_today_mendelssohn_number)
-  rhs = #(if lord_reign_in_me_number_rhs christ_the_lord_is_risen_today_mendelssohn_number LeaderHints)
+  lhs = #(if lord_reign_in_me_number_rhs LeaderHints lord_reign_in_me_number)
+  rhs = #(if lord_reign_in_me_number_rhs lord_reign_in_me_number LeaderHints)
   meter = "Irregular"
   poet = "Brenton Brown"
   translator = ##f
