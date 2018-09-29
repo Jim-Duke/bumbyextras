@@ -1,13 +1,12 @@
 ---
 layout: hymn
+navButton: Hymns
 hymn_id: be_thou_my_vision
 title: Be Thou My Vision
 status: prepared
 github_issue: 55
 products:
 - review
-synopsis: English version of an ancient Irish hymn
-navButton: Hymns
 poetry_elements: {
     meter: "10.10.9.10",
     poet: "Irish Fok Hymn (c. 750)",
