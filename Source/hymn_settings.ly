@@ -115,3 +115,7 @@ immortal_invisible_god_only_wise_pages = 1
 god_of_the_living_in_whose_eyes_number = "X-003"
 god_of_the_living_in_whose_eyes_number_rhs = ##t
 god_of_the_living_in_whose_eyes_pages = 1
+
+listen_to_our_hearts_number = "X-004"
+listen_to_our_hearts_number_rhs = ##t
+listen_to_our_hearts_pages = 1
