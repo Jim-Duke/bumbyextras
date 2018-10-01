@@ -117,5 +117,9 @@ god_of_the_living_in_whose_eyes_number_rhs = ##t
 god_of_the_living_in_whose_eyes_pages = 1
 
 listen_to_our_hearts_number = "X-004"
-listen_to_our_hearts_number_rhs = ##t
-listen_to_our_hearts_pages = 1
+listen_to_our_hearts_number_rhs = ##f
+listen_to_our_hearts_pages = 2
+
+all_glory_laud_and_honor_number = "X-005"
+all_glory_laud_and_honor_number_rhs = ##t
+all_glory_laud_and_honor_pages = 1

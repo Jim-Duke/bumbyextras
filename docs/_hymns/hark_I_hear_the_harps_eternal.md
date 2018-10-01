@@ -3,6 +3,7 @@ layout: hymn
 hymn_id: hark_I_hear_the_harps_eternal
 title: Hark! I Hear the Harps Eternal
 status: published
+access: public
 github_issue: 7
 products:
 - published

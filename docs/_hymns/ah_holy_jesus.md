@@ -3,6 +3,7 @@ layout: hymn
 hymn_id: ah_holy_jesus
 title: Ah Holy Jesus
 status: published
+access: public
 github_issue: 9
 navButton: Hymns
 products:

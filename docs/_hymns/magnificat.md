@@ -3,6 +3,7 @@ layout: hymn
 hymn_id: magnificat
 title: Magnificat
 status: published
+access: private
 github_issue: 12
 products:
 - published

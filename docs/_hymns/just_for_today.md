@@ -3,6 +3,7 @@ layout: hymn
 hymn_id: just_for_today
 title: Just For Today
 status: published
+access: private
 github_issue: 26
 products:
 - published

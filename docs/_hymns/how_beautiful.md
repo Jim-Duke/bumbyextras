@@ -3,6 +3,7 @@ layout: hymn
 hymn_id: how_beautiful
 title: How Beautiful
 status: published
+access: private
 github_issue: 4
 products:
 - published

@@ -4,6 +4,7 @@ navButton: Hymns
 hymn_id: be_thou_my_vision
 title: Be Thou My Vision
 status: prepared
+access: private
 github_issue: 55
 products:
 - review

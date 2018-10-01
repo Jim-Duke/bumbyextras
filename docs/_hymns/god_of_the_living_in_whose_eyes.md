@@ -1,10 +1,11 @@
 ---
 layout: hymn
-navButton: Hymns
-date: 2018-09-28
 hymn_id: god_of_the_living_in_whose_eyes
 title: God of the Living, in Whose Eyes
 status: prepared
+access: private
+navButton: Hymns
+date: 2018-09-28
 github_issue: 65
 products:
 - review

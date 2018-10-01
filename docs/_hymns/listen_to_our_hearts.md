@@ -3,6 +3,7 @@ layout: hymn
 hymn_id: listen_to_our_hearts
 title: Listen to Our Hearts
 status: prepared
+access: private
 navButton: Hymns
 github_issue: 54
 products:

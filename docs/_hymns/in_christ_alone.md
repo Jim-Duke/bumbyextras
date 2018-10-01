@@ -3,6 +3,7 @@ layout: hymn
 hymn_id: in_christ_alone
 title: In Christ Alone
 status: published
+access: private
 github_issue: 3
 products:
 - published

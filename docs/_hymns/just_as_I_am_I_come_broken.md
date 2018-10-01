@@ -3,6 +3,7 @@ layout: hymn
 hymn_id: just_as_I_am_I_come_broken
 title: Just As I Am - I Come Broken
 status: published
+access: private
 github_issue: 8
 products:
 - published

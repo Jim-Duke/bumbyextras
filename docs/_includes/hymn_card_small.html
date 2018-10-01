@@ -9,10 +9,11 @@ available) with a few basic things on the bottom.  If no slides exist, and thus
 no thumbnail, we'll use a generic box with the name of the hymn in it.
 
 {%- endcomment -%}
-{%- assign id=include.hymn.hymn_id -%}
-{%- if include.hymn.products -%}
+{%- assign hymn=include.hymn -%}
+{%- assign id=hymn.hymn_id -%}
+{%- if hymn.products -%}
 {%- assign products_available=true -%}
-{%- if include.hymn.products contains 'published' -%}
+{%- if hymn.products contains 'published' -%}
 {%- assign location="published" -%}
 {%- else -%}
 {%- assign location="review" -%}
@@ -20,18 +21,18 @@ no thumbnail, we'll use a generic box with the name of the hymn in it.
 {%- else -%}
 {%- assign products_available=nil -%}
 {%- endif -%}
-{%- if include.hymn.products and include.hymn.products contains 'published' and include.hymn.products contains 'review' -%}
+{%- if hymn.products and hymn.products contains 'published' and hymn.products contains 'review' -%}
 {%- assign updates_available=true -%}
 {%- else -%}
 {%- assign updates_available=nil -%}
 {%- endif -%}
-{%- assign reviews=(site.reviews | where: "hymn_id", include.hymn.hymn_id) -%}
+{%- assign reviews=(site.reviews | where: "hymn_id", hymn.hymn_id) -%}
 {%- if reviews.size > 0 -%}
 {%- assign reviews_available=true -%}
 {%- else -%}
 {%- assign reviews_available=nil -%}
 {%- endif -%}
-{%- assign research=(site.research | where: "hymn_id", include.hymn.hymn_id) -%}
+{%- assign research=(site.research | where: "hymn_id", hymn.hymn_id) -%}
 {%- if research.size > 0 -%}
 {%- assign research_available=true -%}
 {%- else -%}
@@ -43,23 +44,23 @@ no thumbnail, we'll use a generic box with the name of the hymn in it.
 {%- else -%}
 {%- assign articles_available=nil -%}
 {%- endif -%}
-{%- if include.hymn.external_resources -%}
+{%- if hymn.external_resources -%}
 {%- assign external_available=true -%}
 {%- else -%}
 {%- assign external_available=nil -%}
 {%- endif -%}
-<a href="{{ include.hymn.url | relative_url }}" class="card border shadow border-dark bg-color-1 rounded"
+<a href="{{ hymn.url | relative_url }}" class="card border shadow border-dark bg-color-1 rounded"
 style="max-width: 18rem; color: inherit; text-decoration: none;">
   <img class="card-img-top"
 {%- if products_available -%}
-src="{{ site.baseurl }}/Source/{{ location }}/{{ id }}/{{ id }}_slides_thumbnail.png"
+src="{{ site.baseurl }}/Source/{{ hymn.access }}/{{ location }}/{{ id }}/{{ id }}_slides_thumbnail.png"
 {%- else -%}
 src="{{ site.baseurl }}/assets/images/blank_slide.jpg"
 {%- endif -%}
-alt="{{ include.hymn.title }} Slides"/>
+alt="{{ hymn.title }} Slides"/>
 {%- unless products_available -%}
   <div class="card-img-overlay text-center">
-    <h5 class="mt-4 font-weight-bold">{{ include.hymn.title }}</h5>
+    <h5 class="mt-4 font-weight-bold">{{ hymn.title }}</h5>
     <h6>Requested</h6>
   </div>
 {%- endunless -%}

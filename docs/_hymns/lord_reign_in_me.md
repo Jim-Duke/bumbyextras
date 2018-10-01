@@ -3,6 +3,7 @@ layout: hymn
 hymn_id: lord_reign_in_me
 title: Lord, Reign in Me
 status: prepared
+access: private
 navButton: Hymns
 github_issue: 51
 products:

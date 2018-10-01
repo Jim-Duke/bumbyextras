@@ -3,6 +3,7 @@ layout: hymn
 hymn_id: immortal_invisible_god_only_wise
 title: Immortal, Invisible, God Only Wise
 status: prepared
+access: public
 navButton: Hymns
 github_issue: 76
 products:

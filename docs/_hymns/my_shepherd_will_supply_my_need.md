@@ -3,6 +3,7 @@ layout: hymn
 hymn_id: my_shepherd_will_supply_my_need
 title: My Shepherd Will Supply My Need
 status: published
+access: public
 github_issue: 1
 products:
 - published
