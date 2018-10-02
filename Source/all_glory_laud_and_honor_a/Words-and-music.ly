@@ -18,7 +18,7 @@ MajorKey = ##t
 %% Hymn Metadata Variables
 %%
 
-Title = "All Glory, Laud and Honor"
+Title = "All Glory, Laud and Honor (A)"
 SongNumber = \all_glory_laud_and_honor_number
 RightFirstPage = \all_glory_laud_and_honor_number_rhs
 FirstPage = #(if RightFirstPage 1 2)
@@ -28,9 +28,12 @@ LeaderHints = \markup {
   \normal-text { "C - 4 - DO" }
 }
 
-Scripture = ""
+Scripture = "The next day a great multitude that had come to the feast, when
+ they heard the Jesus was coming to Jerusalem, took branches of palm trees and
+ went out to meet Him, and cried out: \"Hosanna! \'Blessed is He who comes in
+ the name of the Lord!\' The King of Israel!\" - John 12:12-13 NASB95"
 
-ShowScriptureOnSheetMusic = ##f
+ShowScriptureOnSheetMusic = ##t
 
 \header {
   title = \Title
@@ -408,8 +411,49 @@ SheetMusicRefrainBreaks = \relative c {
 }
 
 SlidesVerseBreaks = \relative c {
+  \tag #'usePartials { \partial 4 }
   \setSystemOffset \defaultTopSystemOffset
+  s4  | \noBreak
+  s1  | \noBreak
+  s2. \bar "" \break \noPageBreak
+  
   \setSystemOffset \defaultBottomSystemOffset
+  s4  | \noBreak
+  s1  | \noBreak
+  s2. \bar "" \pageBreak
+
+  \setSystemOffset \defaultTopSystemOffset
+  s4  | \noBreak
+  s1  | \noBreak
+  s2. \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4  | \noBreak
+  s1  | \noBreak
+  s2. \bar "|." \pageBreak
+}
+
+SlidesRefrainBreaks = \relative c {
+  \tag #'usePartials { \partial 4 }
+  \setSystemOffset \defaultTopSystemOffset
+  s4  | \noBreak
+  s1  | \noBreak
+  s2. \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4  | \noBreak
+  s1  | \noBreak
+  s2. \bar "" \pageBreak
+
+  \setSystemOffset \defaultTopSystemOffset
+  s4  | \noBreak
+  s1  | \noBreak
+  s2. \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4  | \noBreak
+  s1  | \noBreak
+  s2. \bar "||" \pageBreak
 }
 
 Refrain = \lyricmode {

@@ -59,6 +59,19 @@
   <script type="text/javascript" src="{{ "js/bootstrap.min.js" | relative_url }}"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="{{ "js/mdb.min.js" | relative_url }}"></script>
+  <script>
+    var refTagger = {
+      settings: {
+        bibleVersion: "NASB",			
+        socialSharing: []
+      }
+    };
+    (function(d, t) {
+      var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      g.src = "//api.reftagger.com/v2/RefTagger.js";
+      s.parentNode.insertBefore(g, s);
+    }(document, "script"));
+  </script>
 </body>
 
 </html>

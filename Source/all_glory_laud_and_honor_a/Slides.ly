@@ -1,6 +1,9 @@
 \version "2.19.49"
 
 \include "Words-and-music.ly"
+
+SlideStaffStaffSpacing = #18.0
+
 \include "../../../LilypondTemplates/standard-elements.ly"
 
 \book {
@@ -93,10 +96,10 @@
           \global
           \keepWithTag #'usePartials \SopranoVerseMusic
         }
-        \new Lyrics \lyricsto "alignVoice" {
-          \huge \VerseOne
-        }
       >>
+      \new Lyrics \lyricsto "alignVoice" {
+        \huge \VerseOne
+      }
       \context Staff = lower <<
         \clef bass
         \partCombine
@@ -133,10 +136,10 @@
           \global
           \keepWithTag #'usePartials \SopranoVerseMusic
         }
-        \new Lyrics \lyricsto "alignVoice" {
-          \huge \VerseTwo
-        }
       >>
+      \new Lyrics \lyricsto "alignVoice" {
+        \huge \VerseTwo
+      }
       \context Staff = lower <<
         \clef bass
         \partCombine
@@ -173,10 +176,10 @@
           \global
           \keepWithTag #'usePartials \SopranoVerseMusic
         }
-        \new Lyrics \lyricsto "alignVoice" {
-          \huge \VerseThree
-        }
       >>
+      \new Lyrics \lyricsto "alignVoice" {
+        \huge \VerseThree
+      }
       \context Staff = lower <<
         \clef bass
         \partCombine
@@ -213,10 +216,10 @@
           \global
           \keepWithTag #'usePartials \SopranoVerseMusic
         }
-        \new Lyrics \lyricsto "alignVoice" {
-          \huge \VerseFour
-        }
       >>
+      \new Lyrics \lyricsto "alignVoice" {
+        \huge \VerseFour
+      }
       \context Staff = lower <<
         \clef bass
         \partCombine
@@ -253,10 +256,10 @@
           \global
           \keepWithTag #'usePartials \SopranoVerseMusic
         }
-        \new Lyrics \lyricsto "alignVoice" {
-          \huge \VerseFive
-        }
       >>
+      \new Lyrics \lyricsto "alignVoice" {
+        \huge \VerseFive
+      }
       \context Staff = lower <<
         \clef bass
         \partCombine
@@ -279,34 +282,34 @@
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
+            \keepWithTag #'usePartials \SopranoRefrainMusic
           }
           {
             \global
-            \keepWithTag #'usePartials \AltoVerseMusic
+            \keepWithTag #'usePartials \AltoRefrainMusic
           }
         \new NullVoice = breaks {
           \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
+          \keepWithTag #'usePartials \SlidesRefrainBreaks
         }
         \new NullVoice = alignVoice {
           \global
-          \keepWithTag #'usePartials \SopranoVerseMusic
-        }
-        \new Lyrics \lyricsto "alignVoice" {
-          \huge \VerseSix
+          \keepWithTag #'usePartials \SopranoRefrainMusic
         }
       >>
+      \new Lyrics \lyricsto "alignVoice" {
+        \huge \Refrain
+      }
       \context Staff = lower <<
         \clef bass
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \TenorVerseMusic
+            \keepWithTag #'usePartials \TenorRefrainMusic
           }
           {
             \global
-            \keepWithTag #'usePartials \BassVerseMusic
+            \keepWithTag #'usePartials \BassRefrainMusic
           }
       >>
     >>

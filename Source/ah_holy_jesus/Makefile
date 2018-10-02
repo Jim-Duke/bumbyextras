@@ -7,6 +7,7 @@
 #
 PROD_BASE_NAME = ah_holy_jesus
 STATUS = review
+ACCESS = public
 
 LIBRARY_DIR = ../../../LilypondTemplates
 LIBRARY_FILES = $(LIBRARY_DIR)/functions.ly $(LIBRARY_DIR)/hymns.ly $(LIBRARY_DIR)/standard-elements.ly
@@ -14,7 +15,7 @@ LILYPOND = lilypond.exe
 LILYPOND_PROD_OPTIONS = -dno-point-and-click -ddelete-intermediate-files
 COMMON_DEPS = Words-and-music.ly ../hymn_settings.ly $(LIBRARY_FILES)
 MIDI_FILES = Audio_all.mid Audio_soprano.mid Audio_alto.mid Audio_tenor.mid Audio_bass.mid
-BUILD_DIR = ../../docs/Source/$(STATUS)/$(PROD_BASE_NAME)
+BUILD_DIR = ../../docs/Source/$(ACCESS)/$(STATUS)/$(PROD_BASE_NAME)
 PROD_SHEET_MUSIC = $(BUILD_DIR)/$(PROD_BASE_NAME)_sheet_music.pdf
 PROD_SHEET_MUSIC_THUMBNAIL = $(BUILD_DIR)/$(PROD_BASE_NAME)_sheet_music_thumbnail.png
 PROD_SLIDES_MUSIC = $(BUILD_DIR)/$(PROD_BASE_NAME)_slides.pdf
