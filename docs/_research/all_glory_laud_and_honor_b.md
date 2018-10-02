@@ -49,7 +49,11 @@ during Advent. --Psalter Hymnal Handbook
 
 ### Tune
 
-The tune that is almost universally paired with Be Thou My Vision is SLANE.  There are several arrangements.
+The most dominant pairing is to a tune written by Melchior Teschner in 1615.  This was then harmonized by
+William H. Monk when this hymn was added to the influencial hymnal Hymns Ancient and Modern in 1861.  Two
+slight variations of that arrangement are found in hymnals today; both attributed to Monk.  The arrangement found
+in our "B" version is the one that is not in the 1861 edition of Hymns Ancient and Modern and must have occurred
+later.  Perhaps Monk revised the harmonization; but I haven't found any evidence for that.
 
 ### Recommendation
 
@@ -60,3 +64,5 @@ There are two ways that hymnals arrange the verses.  In the first, and I believe
 laud, and honor..." as a Refrain that is repeated at the beginning of every verse; making 5 verses with refrain.  The
 other way is to take the refrain, and each of the five verses and pair them off into 3 verses.  Both have appeal.
 I suggest supporting both versions.
+
+There are also two harmonizations - I couldn't decide which to use, so I typeset both and made them available.

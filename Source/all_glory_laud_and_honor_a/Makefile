@@ -5,7 +5,7 @@
 #
 # The following two variables are probably all that needs to be customized for any hymn
 #
-PROD_BASE_NAME = all_glory_laud_and_honor
+PROD_BASE_NAME = all_glory_laud_and_honor_a
 STATUS = review
 ACCESS = public
 

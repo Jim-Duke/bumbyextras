@@ -18,7 +18,7 @@ tune_elements: {
 copyright_elements: {
     copyright: "Copyright 1972 by Kinsmen Publishing Co.",
     administrator: "Brentwood-Benson Music Publishing, Inc.",
-    license: "CCLI License #2055442"
+    license: "CCLI License #2055442",
     ccli_song: "85969"
 }
 lyrics:

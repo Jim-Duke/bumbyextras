@@ -1,7 +1,7 @@
 ---
 layout: hymn
-hymn_id: all_glory_laud_and_honor
-title: All Glory Laud and Honor
+hymn_id: all_glory_laud_and_honor_a
+title: All Glory Laud and Honor (A)
 status: prepared
 access: public
 navButton: Hymns

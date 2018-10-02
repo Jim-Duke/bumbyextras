@@ -73,7 +73,7 @@ SopranoVerseMusic_A = \relative c'' {
   % 7
   c4 |
   e4 e4 d4 c4 |
-  b4( a4) g4
+  d2 b4
   % 6
   b4 |
   c4 b4 a4 a4 |
@@ -92,7 +92,7 @@ AltoRefrainMusic_A = \relative c' {
   \tag #'usePartials { \partial 4 }
   % 7
   c4 |
-  d4 e4 f4 f4 |
+  d4 c4 c4 f4 |
   f4( e8 d8) e4
   % 6
   g4 |
@@ -100,7 +100,7 @@ AltoRefrainMusic_A = \relative c' {
   e2.
   % 7
   c4 |
-  d4 e4 f4 f4 |
+  d4 c4 c4 f4 |
   f4( e8 d8) e4
   % 6
   g4 |
@@ -111,17 +111,17 @@ AltoRefrainMusic_A = \relative c' {
 AltoVerseMusic_A = \relative c' {
   \tag #'usePartials { \partial 4 }
   % 7
-  e4 |
-  g4 a4 a4 a4 |
-  g4( fis4) g4
+  f4 |
+  g4 g4 g4 e4 |
+  fis4( a4) g4
   % 6
-  e4 |
-  e4 e4 e4 d8( c8) |
-  b2.
+  g4 |
+  e4 e4 e4 fis4 |
+  d2.
   % 7
-  b4 |
-  c4 c4 c4 c4 |
-  b2 c4
+  d4 |
+  c4 c4 f4 e4 |
+  d4( b4) c4
   % 6
   c4 |
   c4 c4 c4 b4 |
@@ -132,7 +132,7 @@ TenorRefrainMusic_A = \relative c {
   \tag #'usePartials { \partial 4 }
   % 7
   e4 |
-  g4 c4 c4 g4 |
+  g4 e4 f4 g4 |
   g2 g4
   % 6
   c4 |
@@ -140,7 +140,7 @@ TenorRefrainMusic_A = \relative c {
   g2.
   % 7
   e4 |
-  g4 c4 c4 g4 |
+  g4 e4 f4 g4 |
   g2 g4
   % 6
   c4 |
@@ -151,16 +151,16 @@ TenorRefrainMusic_A = \relative c {
 TenorVerseMusic_A = \relative c' {
   \tag #'usePartials { \partial 4 }
   % 7
-  c4 |
-  c4 c4 d4 d4 |
-  d4( c4) b4
+  a4 |
+  c4 c4 b4 a4 |
+  a4( d4) d4
   % 6
-  b4 |
-  a4 g4 g4 fis4 |
-  g2.
+  g,4 |
+  a4 g4 a4 d8( c8) |
+  b2.
   % 7
   g4 |
-  g4 g4 f4 e4 |
+  g4 c4 c4 c4 |
   g2 g4
   % 6
   g4 |
@@ -188,20 +188,20 @@ BassRefrainMusic_A = \relative c {
   c,2. \bar "||"
 }
 
-BassVerseMusic_A = \relative c' {
+BassVerseMusic_A = \relative c {
   \tag #'usePartials { \partial 4 }
   % 7
-  c4 |
-  c8( b8) a8( g8) fis4 fis4 |
-  g4( d4) g4
+  f4 |
+  c4 d4 g4 a4 |
+  d,4( fis4) g4
   % 6
-  g,4 |
-  a4 b4 c4 d4 |
+  e4 |
+  a,4 b4 c4 d4 |
   g,2.
   % 7
-  g4 |
+  b4 |
   c4 e4 f4 c4 |
-  g2 c4
+  b4( g4) c4
   % 6
   e4 |
   f4 c4 g4 g4 |
@@ -233,7 +233,7 @@ SopranoVerseMusic_B = \relative c'' {
   % 7
   c4 |
   e4 e4 d4 c4 |
-  d2 b4
+  b4( a4) g4
   % 6
   b4 |
   c4 b4 a4 a4 |
@@ -252,7 +252,7 @@ AltoRefrainMusic_B = \relative c' {
   \tag #'usePartials { \partial 4 }
   % 7
   c4 |
-  d4 c4 c4 f4 |
+  d4 e4 f4 f4 |
   f4( e8 d8) e4
   % 6
   g4 |
@@ -260,7 +260,7 @@ AltoRefrainMusic_B = \relative c' {
   e2.
   % 7
   c4 |
-  d4 c4 c4 f4 |
+  d4 e4 f4 f4 |
   f4( e8 d8) e4
   % 6
   g4 |
@@ -271,17 +271,17 @@ AltoRefrainMusic_B = \relative c' {
 AltoVerseMusic_B = \relative c' {
   \tag #'usePartials { \partial 4 }
   % 7
-  f4 |
-  g4 g4 g4 e4 |
-  fis4( a4) g4
+  e4 |
+  g4 a4 a4 a4 |
+  g4( fis4) g4
   % 6
-  g4 |
-  e4 e4 e4 fis4 |
-  d2.
+  e4 |
+  e4 e4 e4 d8( c8) |
+  b2.
   % 7
-  d4 |
-  c4 c4 f4 e4 |
-  d4( b4) c4
+  b4 |
+  c4 c4 c4 c4 |
+  b2 c4
   % 6
   c4 |
   c4 c4 c4 b4 |
@@ -292,7 +292,7 @@ TenorRefrainMusic_B = \relative c {
   \tag #'usePartials { \partial 4 }
   % 7
   e4 |
-  g4 e4 f4 g4 |
+  g4 c4 c4 g4 |
   g2 g4
   % 6
   c4 |
@@ -300,7 +300,7 @@ TenorRefrainMusic_B = \relative c {
   g2.
   % 7
   e4 |
-  g4 e4 f4 g4 |
+  g4 c4 c4 g4 |
   g2 g4
   % 6
   c4 |
@@ -311,16 +311,16 @@ TenorRefrainMusic_B = \relative c {
 TenorVerseMusic_B = \relative c' {
   \tag #'usePartials { \partial 4 }
   % 7
-  a4 |
-  c4 c4 b4 a4 |
-  a4( d4) d4
+  c4 |
+  c4 c4 d4 d4 |
+  d4( c4) b4
   % 6
-  g,4 |
-  a4 g4 a4 d8( c8) |
-  b2.
+  b4 |
+  a4 g4 g4 fis4 |
+  g2.
   % 7
   g4 |
-  g4 c4 c4 c4 |
+  g4 g4 f4 e4 |
   g2 g4
   % 6
   g4 |
@@ -348,34 +348,34 @@ BassRefrainMusic_B = \relative c {
   c,2. \bar "||"
 }
 
-BassVerseMusic_B = \relative c {
+BassVerseMusic_B = \relative c' {
   \tag #'usePartials { \partial 4 }
   % 7
-  f4 |
-  c4 d4 g4 a4 |
-  d,4( fis4) g4
+  c4 |
+  c8( b8) a8( g8) fis4 fis4 |
+  g4( d4) g4
   % 6
-  e4 |
-  a,4 b4 c4 d4 |
+  g,4 |
+  a4 b4 c4 d4 |
   g,2.
   % 7
-  b4 |
+  g4 |
   c4 e4 f4 c4 |
-  b4( g4) c4
+  g2 c4
   % 6
   e4 |
   f4 c4 g4 g4 |
   c2. \bar "|."
 }
 
-SopranoVerseMusic = \SopranoVerseMusic_B
-SopranoRefrainMusic = \SopranoRefrainMusic_B
-AltoVerseMusic = \AltoVerseMusic_B
-AltoRefrainMusic = \AltoRefrainMusic_B
-TenorVerseMusic = \TenorVerseMusic_B
-TenorRefrainMusic = \TenorRefrainMusic_B
-BassVerseMusic = \BassVerseMusic_B
-BassRefrainMusic = \BassRefrainMusic_B
+SopranoVerseMusic = \SopranoVerseMusic_A
+SopranoRefrainMusic = \SopranoRefrainMusic_A
+AltoVerseMusic = \AltoVerseMusic_A
+AltoRefrainMusic = \AltoRefrainMusic_A
+TenorVerseMusic = \TenorVerseMusic_A
+TenorRefrainMusic = \TenorRefrainMusic_A
+BassVerseMusic = \BassVerseMusic_A
+BassRefrainMusic = \BassRefrainMusic_A
 
 SheetMusicVerseBreaks = \relative c {
   \tag #'usePartials { \partial 4 }
