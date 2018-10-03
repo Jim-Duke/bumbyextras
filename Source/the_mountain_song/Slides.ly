@@ -1,6 +1,9 @@
 \version "2.19.49"
 
 \include "Words-and-music.ly"
+
+SlideStaffStaffSpacing = #16
+
 \include "../../../LilypondTemplates/standard-elements.ly"
 
 \book {
@@ -151,164 +154,84 @@
     >>
     \SlideLayout
   }
-%  \score {
-%    <<
-%      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-%      \context Staff = upper <<
-%        \partCombine
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \sopranoVerse
-%          }
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \altoVerse
-%          }
-%        \new NullVoice = breaks {
-%          \global
-%          \keepWithTag #'usePartials' \slideMusicBreaks
-%        }
-%        \new NullVoice = alignVoice {
-%          \global
-%          \keepWithTag #'usePartials \sopranoVerse
-%        }
-%        \new Lyrics \lyricsto "alignVoice" {
-%          \huge \verseTwo \verseCommon
-%        }
-%      >>
-%      \context Staff = lower <<
-%        \clef bass
-%        \partCombine
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \tenorVerse
-%          }
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \bassVerse
-%          }
-%      >>
-%    >>
-%    \SlideLayout
-%  }
-%  \score {
-%    <<
-%      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-%      \context Staff = upper <<
-%        \partCombine
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \sopranoBridge
-%          }
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \altoBridge
-%          }
-%        \new NullVoice = breaks {
-%          \global
-%          \keepWithTag #'usePartials' \slideMusicBridgeBreaks
-%        }
-%        \new NullVoice = alignVoice {
-%          \global
-%          \keepWithTag #'usePartials \sopranoBridge
-%        }
-%        \new Lyrics \lyricsto "alignVoice" {
-%          \huge \bridgeLyrics
-%        }
-%      >>
-%      \context Staff = lower <<
-%        \clef bass
-%        \partCombine
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \tenorBridge
-%          }
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \bassBridge
-%          }
-%      >>
-%    >>
-%    \SlideLayout
-%  }
-%  \score {
-%    <<
-%      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-%      \context Staff = upper <<
-%        \partCombine
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \sopranoVerse
-%          }
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \altoVerse
-%          }
-%        \new NullVoice = breaks {
-%          \global
-%          \keepWithTag #'usePartials' \slideMusicBreaks
-%        }
-%        \context NullVoice = align {
-%          \global
-%          \alignVerse
-%        }
-%        \new Lyrics \lyricsto "align" {
-%          \huge \verseThree \verseCommon
-%        }
-%      >>
-%      \context Staff = lower <<
-%        \clef bass
-%        \partCombine
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \tenorVerse
-%          }
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \bassVerse
-%          }
-%      >>
-%    >>
-%    \SlideLayout
-%  }
-%  \score {
-%    <<
-%      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-%      \context Staff = upper <<
-%        \partCombine
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \sopranoVerse
-%          }
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \altoVerse
-%          }
-%        \new NullVoice = breaks {
-%          \global
-%          \keepWithTag #'usePartials' \slideMusicBreaks
-%        }
-%        \new NullVoice = alignVoice {
-%          \global
-%          \keepWithTag #'usePartials \sopranoVerse
-%        }
-%        \new Lyrics \lyricsto "alignVoice" {
-%          \huge \verseFour \verseCommon \bridgeLyrics
-%        }
-%      >>
-%      \context Staff = lower <<
-%        \clef bass
-%        \partCombine
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \tenorVerse
-%          }
-%          {
-%            \global
-%            \keepWithTag #'usePartials' \bassVerse
-%          }
-%      >>
-%    >>
-%    \SlideLayout
-%  }
+  \score {
+    <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
+      \context Staff = upper <<
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \SopranoChorusMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \AltoChorusMusic
+          }
+        \new NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials \SlidesChorusBreaks
+        }
+        \new NullVoice = alignVoice {
+          \global
+          \keepWithTag #'usePartials \SopranoChorusMusic
+        }
+        \new Lyrics \lyricsto "alignVoice" {
+          \huge \Chorus
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \TenorChorusMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \BassChorusMusic
+          }
+      >>
+    >>
+    \SlideLayout
+  }
+  \score {
+    <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
+      \context Staff = upper <<
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \SopranoChorusTailMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \AltoChorusTailMusic
+          }
+        \new NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials \SlidesChorusTailBreaks
+        }
+        \new NullVoice = alignVoice {
+          \global
+          \keepWithTag #'usePartials \SopranoChorusTailMusic
+        }
+        \new Lyrics \lyricsto "alignVoice" {
+          \huge \ChorusTail
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \TenorChorusTailMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \BassChorusTailMusic
+          }
+      >>
+    >>
+    \SlideLayout
+  }
 }

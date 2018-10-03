@@ -163,11 +163,33 @@ AltoVerseMusic = \relative c' {
 AltoChorusMusic = \relative c' {
   \tag #'usePartials { \partial 8 }
   \autoBeamOff
+  ees16 ees16 |
+  aes16 aes8 aes8. aes8 |
+  bes16 bes8 bes8. bes8 |
+  g8 g16 g8 ees16
+  
+  g8 |
+  bes,4 r8 ees16 ees16 |
+  aes16 aes8 aes8. aes8 |
+  bes16 bes8 bes8. bes8 |
+  
+  g8 g16 g8 ees16 g8~ |
+  g4 r8 ees16 ees16 |
+  aes16 aes8 aes8. aes8 |
+  
+  bes16 bes8 bes8. bes8 |
+  g8 g16 g8 ees16 g8~ |
+  g4 r8 \bar ""
 }
 
 AltoChorusTailMusic = \relative c' {
   \tag #'usePartials { \partial 8 }
   \autoBeamOff
+  bes8 |
+  ees8 g16 g8. aes8 |
+  g8 ees8 r8 bes8 |
+  ees8 ees8 d16 d8. |
+  bes4. \bar "|."
 }
 
 TenorVerseMusic = \relative c' {
@@ -201,14 +223,36 @@ TenorVerseMusic = \relative c' {
   g4 r8 \bar "||"
 }
 
-TenorChorusMusic = \relative c {
+TenorChorusMusic = \relative c' {
   \tag #'usePartials { \partial 8 }
   \autoBeamOff
+  bes16 bes16 |
+  ees16 ees8 ees8. ees8 |
+  f16 f8 f8. f8 |
+  ees8 ees16 ees8 bes16
+  
+  ees8 |
+  g,4 r8 bes16 bes16 |
+  ees16 ees8 ees8. ees8 |
+  f16 f8 f8. f8 |
+  
+  ees8 ees16 ees8 bes16 ees8~ |
+  ees4 r8 bes16 bes16 |
+  ees16 ees8 ees8. ees8 |
+  
+  f16 f8 f8. f8 |
+  ees8 ees16 ees8 bes16 ees8~ |
+  ees4 r8 \bar ""
 }
 
-TenorChorusTailMusic = \relative c {
+TenorChorusTailMusic = \relative c' {
   \tag #'usePartials { \partial 8 }
   \autoBeamOff
+  g8 |
+  bes8 ees16 ees8. ees8 |
+  ees8 bes8 r8 g8 |
+  bes8 bes8 bes16 aes8. |
+  g4. \bar "|."
 }
 
 BassVerseMusic = \relative c {
@@ -242,14 +286,36 @@ BassVerseMusic = \relative c {
   ees4 r8 \bar "||"
 }
 
-BassChorusMusic = \relative c {
+BassChorusMusic = \relative c' {
   \tag #'usePartials { \partial 8 }
   \autoBeamOff
+  <g g,>16 <g g,>16 |
+  <aes aes,>16 <aes aes,>8 <aes aes,>8. <aes aes,>8 |
+  <bes bes,>16 <bes bes,>8 <bes bes,>8. <bes bes,>8 |
+  ees,8 ees16 ees8 ees16
+  
+  ees8 |
+  ees4 r8 <g g,>16 <g g,>16 |
+  <aes aes,>16 <aes aes,>8 <aes aes,>8. <aes aes,>8 |
+  <bes bes,>16 <bes bes,>8 <bes bes,>8. <bes bes,>8 |
+  
+  ees,8 ees16 ees8 ees16 ees8~ |
+  ees4 r8 <g g,>16 <g g,>16 |
+  <aes aes,>16 <aes aes,>8 <aes aes,>8. <aes aes,>8 |
+  
+  <bes bes,>16 <bes bes,>8 <bes bes,>8. <bes bes,>8 |
+  ees,8 ees16 ees8 ees16 ees8~ |
+  ees4 r8 \bar ""
 }
 
 BassChorusTailMusic = \relative c {
   \tag #'usePartials { \partial 8 }
   \autoBeamOff
+  ees8 |
+  ees8 ees16 ees8. ees8 |
+  ees8 ees8 r8 ees8 |
+  ees8 bes8 bes16 bes8. |
+  ees4. \bar "|."
 }
 
 SheetMusicVerseBreaks = {
@@ -350,6 +416,70 @@ SlidesVerseBreaks = {
   s4. | \noBreak
   s2  | \noBreak
   s4. \bar "||" \pageBreak
+}
+
+SlidesChorusBreaks = {
+  \tag #'usePartials { \partial 8 }
+  \setSystemOffset \defaultTopSystemOffset
+  s8 | \noBreak
+  s4. \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s8 | \noBreak
+  s4. \bar "" \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s8 | \noBreak
+  s4. \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s8 | \noBreak
+  s4. \bar "" \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s8 | \noBreak
+  s4. \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s8 | \noBreak
+  s4. \bar "" \pageBreak
+
+  \setSystemOffset \defaultTopSystemOffset
+  s8 | \noBreak
+  s4. \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s8 | \noBreak
+  s4. \bar "" \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s8 | \noBreak
+  s4. \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s8 | \noBreak
+  s4. \bar "" \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s8 | \noBreak
+  s4. \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s8 | \noBreak
+  s4. \bar "" \pageBreak
+}
+
+SlidesChorusTailBreaks = {
+  \tag #'usePartials { \partial 8 }
+  \setSystemOffset \defaultTopSystemOffset
+  s8 | \noBreak
+  s2 | \noBreak
+  s4. \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s8 | \noBreak
+  s2 | \noBreak
+  s4. \bar "" \pageBreak
 }
 
 lyricRest = \markup { \raise #1.0 \musicglyph #"rests.4" }
