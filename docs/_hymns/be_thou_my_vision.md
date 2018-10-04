@@ -34,7 +34,7 @@ lyrics:
     lines:
     - "Be Thou my wisdom and thou my true word;"
     - "I ever with Thee and Thou with me, Lord."
-    - "Thou my great Fater, I Thy true son;"
+    - "Thou my great Father, I Thy true son;"
     - "Thou in me dwelling, and I with Thee one."
   - name: "Verse 3"
     lines:
@@ -54,5 +54,12 @@ lyrics:
     - "May I reach heaven's joys, O bright heav'n's Sun!"
     - "Heart of my heart, whatever befall,"
     - "Still be my vision, O Ruler of all."
+scriptures:
+  - "Ephesians 1:18"
+  - "Romans 12:1-2"
+  - "Proverbs 4:7"
+  - "Ephesians 6:13-17"
+  - "Luke 12:34"
+  - "Malachi 4:2"
 date: 2016-12-30 12:00:00 -0500
 ---
