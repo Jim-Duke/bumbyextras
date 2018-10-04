@@ -34,12 +34,12 @@ lyrics:
     lines:
     - "Be Thou my wisdom and thou my true word;"
     - "I ever with Thee and Thou with me, Lord."
-    - "Thou my great Fater, I Thy true son;"
+    - "Thou my great Father, I Thy true son;"
     - "Thou in me dwelling, and I with Thee one."
   - name: "Verse 3"
     lines:
     - "Be Thou my battle Shield, Sword for the fight;"
-    - "Be Thou my Dignity, Thou my Delight;"
+    - "Be Thou my Armour, and be Thou my might;"
     - "Thou my soul's Shelter, Thou my high Tow'r;"
     - "Raise Thou me heav'nward, O Pow'r of my pow'r."
   - name: "Verse 4"

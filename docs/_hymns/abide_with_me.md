@@ -21,6 +21,20 @@ tune_elements: {
 copyright_elements: {
     copyright: Public Domain
 }
+external_resources:
+  - name: "Hymnary article on Abide with me: fast falls the eventide"
+    url: "https://hymnary.org/text/abide_with_me_fast_falls_the_eventide"
+  - name: "@Challies blog - Hymn Stories: Abide with Me"
+    url: "https://www.challies.com/articles/hymn-stories-abide-with-me/"
+scriptures:
+  - "Luke 24:29"
+  - "1 Corinthians 15:55-57"
+notes: "Henry Francis Lyte is said to have written this hymn after he had contracted tuberculosis.
+ It was during this time of decline that he wrote this hymn.  Each line of the hymn ends with
+ an appeal for God to \"Abide with me\".  Many hymnals mistakenly categorize this hymn with
+ evening hymns.  While the hymn references the close of a day - the figure is referring to the
+ end of life.  As life dims, as the body fails, as joys diminish - the yearning for the presence
+ of God increases."
 date: 2016-12-30 12:00:00 -0500
 lyrics:
   - name: "Verse 1"
