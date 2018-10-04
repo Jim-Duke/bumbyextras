@@ -28,8 +28,10 @@ LeaderHints = \markup {
   \normal-text { "E - 3 - DO" }
 }
 
-Scripture = "The eyes of your understanding being enlightened; that you may know
-  what is the hope of His calling, what are the riches of the glory of His inheritance in the saints"
+Scripture = "Thus says the Lord: \"Let not the wise man glory in his wisdom, Let not the mighty man
+ glory in his might, Nor let the rich man glory in his riches; But let him who glories glory in this,
+ That he understands and knows Me, that I am the Lord, exercising lovingkindness, judgment, and
+ righteousness in the earth.  For in these I delight,\" says the Lord -- Jeremiah 9:23-24"
 
 ShowScriptureOnSheetMusic = ##f
 
@@ -216,7 +218,7 @@ VerseTwo = \lyricmode {
 VerseThree = \lyricmode {
   \set stanza = "3. "
   Be Thou my bat -- tle Shield, Sword for the fight;
-  Be Thou my Dig -- ni -- ty, Thou my De -- light;
+  Be Thou my Ar -- mour, and be Thou my might;
   Thou my soul's Shel -- ter, Thou my high Tow'r;
   Raise Thou me heav'n -- ward, O Pow'r of my pow'r.
 }

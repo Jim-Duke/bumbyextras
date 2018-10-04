@@ -15,7 +15,7 @@
     %
     % Various variables that can be used to tweak vertical spacing
     %
-    system-system-spacing.basic-distance = #10
+    system-system-spacing.basic-distance = #8
     system-system-spacing.minimum-distance = #6
     score-markup-spacing.basic-distance = #0
     markup-system-spacing.basic-distance = #0
@@ -52,6 +52,9 @@
           \line {
             \fromproperty #'header:copyright
             \optional-field "• " #'header:license
+          }
+          \line {
+            "Visit https://hymnal.bumby.org/ for more information about this and other hymns in the Bumby Hymnal"
           }
         }
       }
