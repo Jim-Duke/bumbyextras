@@ -151,85 +151,102 @@ SlideStaffStaffSpacing = #20
     >>
     \SlideLayout
   }
-%  \score {
-%    <<
-%      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-%      \context Staff = upper <<
-%        \partCombine
-%          {
-%            \global
-%            \keepWithTag #'(usePartials verseTwoRhythms) \sopranoVerse
-%          }
-%          {
-%            \global
-%            \keepWithTag #'(usePartials verseTwoRhythms) \altoVerse
-%          }
-%        \context NullVoice = slideMusicBreaks {
-%          \global
-%          \slideMusicBreaks
-%        }
-%        \context NullVoice = align {
-%          \global
-%          \keepWithTag #'(usePartials verseTwoRhythms) \sopranoVerse
-%        }
-%        \new Lyrics \lyricsto "align" {
-%          \huge \verseTwo
-%        }
-%      >>
-%      \context Staff = lower <<
-%        \clef bass
-%        \partCombine
-%          {
-%            \global
-%            \keepWithTag #'(usePartials verseTwoRhythms) \tenorVerse
-%          }
-%          {
-%            \global
-%            \keepWithTag #'(usePartials verseTwoRhythms) \bassVerse
-%          }
-%      >>
-%    >>
-%    \SlideLayout
-%  }
-%  \pageBreak
-%  \score {
-%    <<
-%      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-%      \context Staff = upper <<
-%        \partCombine
-%          {
-%            \global
-%            \keepWithTag #'usePartials \sopranoChorus
-%          }
-%          {
-%            \global
-%            \keepWithTag #'usePartials \altoChorus
-%          }
-%        \context NullVoice = slideChorusBreaks {
-%          \global
-%          \slideChorusBreaks
-%        }
-%        \context NullVoice = align {
-%          \global
-%          \keepWithTag #'usePartials \sopranoChorus
-%        }
-%        \new Lyrics \lyricsto "align" {
-%          \huge \chorusLyrics
-%        }
-%      >>
-%      \context Staff = lower <<
-%        \clef bass
-%        \partCombine
-%          {
-%            \global
-%            \keepWithTag #'usePartials \tenorChorus
-%          }
-%          {
-%            \global
-%            \keepWithTag #'usePartials \bassChorus
-%          }
-%      >>
-%    >>
-%    \SlideLayout
-%  }
+  \score {
+    <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
+      \context Staff = upper <<
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \SopranoChorusMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \AltoChorusMusic
+          }
+        \context NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials \SlideChorusBreaks
+        }
+        \context NullVoice = align {
+          \global
+          \keepWithTag #'usePartials \SopranoChorusMusic
+        }
+        \new Lyrics \lyricsto "align" {
+          \huge \ChorusLyrics
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \TenorChorusMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \BassChorusMusic
+          }
+      >>
+    >>
+    \SlideLayout
+  }
+  \pageBreak
+  \score {
+    <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
+      \context Staff = upper <<
+        \partCombine
+          {
+            \global
+            \SopranoCodaMusic
+          }
+          {
+            \global
+            \AltoCodaMusic
+          }
+        \context NullVoice = breaks {
+          \global
+          \SlideCodaBreaks
+        }
+        \context NullVoice = alignTop {
+          \global
+          \AlignTopCodaMusic
+        }
+        \context NullVoice = alignBot {
+          \global
+          \AlignBotCodaMusic
+        }
+        \new Lyrics \lyricsto "alignTop" {
+          \huge \CodaLyrics
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        {
+          \partCombine
+            {
+              \global
+              \TenorCodaMusic
+            }
+            {
+              \global
+              \BassCodaMusic
+            }
+          <<
+            \context Voice = tenor {
+              \voiceOne \TenorCodaTailMusic
+            }
+            \context Voice = bass {
+              \voiceTwo \BassCodeTailMusic
+            }
+          >>
+        }
+      >>
+      \new Lyrics \lyricsto "alignBot" {
+        \huge \CodaBotLyrics
+      }
+    >>
+    \SlideLayout
+  }
 }

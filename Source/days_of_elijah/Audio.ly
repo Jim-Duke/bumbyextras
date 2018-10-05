@@ -18,8 +18,9 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \SopranoVerseMusic
             \removeWithTag #'usePartials \SopranoChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \SopranoVerseMusic
-            %\removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic s8
+            \SopranoCodaMusic
           }
         }
         \context Voice = altos \with {
@@ -32,8 +33,9 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \AltoVerseMusic
             \removeWithTag #'usePartials \AltoChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \AltoVerseMusic
-            %\removeWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic s8
+            \AltoCodaMusic
           }
         }
       >>
@@ -49,8 +51,9 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \TenorVerseMusic
             \removeWithTag #'usePartials \TenorChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \TenorVerseMusic
-            %\removeWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic s8
+            \TenorCodaMusic
           }
         }
         \context Voice = basses \with {
@@ -63,8 +66,9 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \BassVerseMusic
             \removeWithTag #'usePartials \BassChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \BassVerseMusic
-            %\removeWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic s8
+            \BassCodaMusic
           }
         }
       >>
@@ -97,8 +101,8 @@
             \global
            \keepWithTag #'(usePartials verseOneSlideRhythms) \SopranoVerseMusic
             \removeWithTag #'usePartials \SopranoChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \SopranoVerseMusic
-            %\removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
            }
         }
         \context Voice = altos \with {
@@ -111,8 +115,8 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \AltoVerseMusic
             \removeWithTag #'usePartials \AltoChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \AltoVerseMusic
-            %\removeWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
           }
         }
       >>
@@ -128,8 +132,8 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \TenorVerseMusic
             \removeWithTag #'usePartials \TenorChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \TenorVerseMusic
-            %\removeWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
           }
         }
         \context Voice = basses \with {
@@ -142,8 +146,8 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \BassVerseMusic
             \removeWithTag #'usePartials \BassChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \BassVerseMusic
-            %\removeWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
           }
         }
       >>
@@ -176,8 +180,8 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \SopranoVerseMusic
             \removeWithTag #'usePartials \SopranoChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \SopranoVerseMusic
-            %\removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
            }
         }
         \context Voice = altos \with {
@@ -190,8 +194,8 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \AltoVerseMusic
             \removeWithTag #'usePartials \AltoChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \AltoVerseMusic
-            %\removeWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
           }
         }
       >>
@@ -207,8 +211,8 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \TenorVerseMusic
             \removeWithTag #'usePartials \TenorChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \TenorVerseMusic
-            %\removeWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
           }
         }
         \context Voice = basses \with {
@@ -221,8 +225,8 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \BassVerseMusic
             \removeWithTag #'usePartials \BassChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \BassVerseMusic
-            %\removeWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
           }
         }
       >>
@@ -255,8 +259,8 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \SopranoVerseMusic
             \removeWithTag #'usePartials \SopranoChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \SopranoVerseMusic
-            %\removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
            }
         }
         \context Voice = altos \with {
@@ -269,8 +273,8 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \AltoVerseMusic
             \removeWithTag #'usePartials \AltoChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \AltoVerseMusic
-            %\removeWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
           }
         }
       >>
@@ -286,8 +290,8 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \TenorVerseMusic
             \removeWithTag #'usePartials \TenorChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \TenorVerseMusic
-            %\removeWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
           }
         }
         \context Voice = basses \with {
@@ -300,8 +304,8 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \BassVerseMusic
             \removeWithTag #'usePartials \BassChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \BassVerseMusic
-            %\removeWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
           }
         }
       >>
@@ -334,8 +338,8 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \SopranoVerseMusic
             \removeWithTag #'usePartials \SopranoChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \SopranoVerseMusic
-            %\removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \SopranoVerseMusic
+            \removeWithTag #'usePartials \SopranoChorusMusic
           }
         }
         \context Voice = altos \with {
@@ -348,8 +352,8 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \AltoVerseMusic
             \removeWithTag #'usePartials \AltoChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \AltoVerseMusic
-            %\removeWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \AltoVerseMusic
+            \removeWithTag #'usePartials \AltoChorusMusic
           }
         }
       >>
@@ -365,8 +369,8 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \TenorVerseMusic
             \removeWithTag #'usePartials \TenorChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \TenorVerseMusic
-            %\removeWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \TenorVerseMusic
+            \removeWithTag #'usePartials \TenorChorusMusic
           }
         }
         \context Voice = basses \with {
@@ -379,8 +383,8 @@
             \global
             \keepWithTag #'(usePartials verseOneSlideRhythms) \BassVerseMusic
             \removeWithTag #'usePartials \BassChorusMusic
-            %\removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \BassVerseMusic
-            %\removeWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \keepWithTag #'verseTwoSlideRhythms \BassVerseMusic
+            \removeWithTag #'usePartials \BassChorusMusic
           }
         }
       >>

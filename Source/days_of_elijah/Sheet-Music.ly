@@ -138,6 +138,10 @@ ShowScriptureOnSheetMusic = ##t
             \global
             \keepWithTag #'usePartials \AltoChorusMusic
           }
+        \context NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials \SheetMusicChorusBreaks
+        }
         \context NullVoice = align {
             \global
             \keepWithTag #'usePartials \SopranoChorusMusic
@@ -158,6 +162,66 @@ ShowScriptureOnSheetMusic = ##t
             \keepWithTag #'usePartials \BassChorusMusic
           }
       >>
+    >>
+    \SheetMusicChorusLayout
+  }
+  \markup {	
+    \huge \bold "Coda:"
+  }
+  \score {
+    \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
+      \context Staff = upper <<
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \SopranoCodaMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \AltoCodaMusic
+          }
+        \context NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials \SheetMusicCodaBreaks
+        }
+        \context NullVoice = alignTop {
+            \global
+            \keepWithTag #'usePartials \AlignTopCodaMusic
+        }
+        \context NullVoice = alignBot {
+            \global
+            \keepWithTag #'usePartials \AlignBotCodaMusic
+        }
+        \new Lyrics \lyricsto "alignTop" {
+          \CodaLyrics
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        {
+          \partCombine
+            {
+              \global
+              \keepWithTag #'usePartials \TenorCodaMusic
+            }
+            {
+              \global
+              \keepWithTag #'usePartials \BassCodaMusic
+            }
+          <<
+            \context Voice = tenor {
+              \voiceOne \TenorCodaTailMusic
+            }
+            \context Voice = bass {
+              \voiceTwo \BassCodeTailMusic
+            }
+          >>
+        }
+      >>
+      \new Lyrics \lyricsto "alignBot" {
+        \CodaBotLyrics
+      }
     >>
     \SheetMusicChorusLayout
   }

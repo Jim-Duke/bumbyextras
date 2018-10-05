@@ -123,3 +123,7 @@ listen_to_our_hearts_pages = 2
 all_glory_laud_and_honor_number = "X-005"
 all_glory_laud_and_honor_number_rhs = ##t
 all_glory_laud_and_honor_pages = 1
+
+immanuel_god_with_us_number = "X-006"
+immanuel_god_with_us_number_rhs = ##t
+immanuel_god_with_us_pages = 1
