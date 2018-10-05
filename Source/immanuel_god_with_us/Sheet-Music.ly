@@ -1,6 +1,10 @@
 \version "2.19.49"
 
 \include "Words-and-music.ly"
+
+SheetMusicLyricsMinimumDistance = #1
+SheetStaffStaffSpacing = #15
+
 \include "../../../LilypondTemplates/standard-elements.ly"
 
 \book {
@@ -29,7 +33,7 @@
     top-margin = 0.25\in
     bottom-margin = 0.25\in
     ragged-right = ##f
-    ragged-last = \SheetMusicRaggedLast
+    ragged-last = ##t
     print-page-number = ##f
     ragged-bottom = \SheetMusicRaggedBottom
     oddFooterMarkup = \markup {
@@ -80,41 +84,52 @@
     % Verses Section
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
+      \context Staff = upper \with { printPartCombineTexts = ##f } <<
         \partCombine
           {
             \global
-            \SopranoVerseMusic
+            \keepWithTag #'(notForMIDI allVerses) \SopranoVerseMusic
           }
           {
             \global
-            \AltoVerseMusic
+            \keepWithTag #'(notForMIDI allVerses) \AltoVerseMusic
           }
-        %\context NullVoice = breaks {
-        %  \global
-        %  \keepWithTag #'usePartials \SheetMusicVerseBreaks
-        %}
-        \context NullVoice = align {
+        \context NullVoice = breaks {
           \global
-          \SopranoVerseMusic
+          \SheetMusicVerseBreaks
         }
-        \new Lyrics \lyricsto "align" {
-          \VerseOne \Common \Common \Close
+        \context NullVoice = alignOne {
+          \global
+          \keepWithTag #'(verseOne) \AlignMusic
         }
-        \new Lyrics \lyricsto "align" {
-          \VerseTwo
+        \context NullVoice = alignTwo {
+          \global
+          \keepWithTag #'(verseTwo) \AlignMusic
+        }
+        \context NullVoice = alignThree {
+          \global
+          \keepWithTag #'(verseThree) \AlignMusic
         }
       >>
-      \context Staff = lower <<
+      \new Lyrics \lyricsto "alignOne" {
+        \VerseOne \Common \Common \Close
+      }
+      \new Lyrics \lyricsto "alignTwo" {
+        \VerseTwo
+      }
+      \new Lyrics \lyricsto "alignThree" {
+        \VerseThree
+      }
+      \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass
         \partCombine
           {
             \global
-            \TenorVerseMusic
+            \keepWithTag #'(notForMIDI allVerses) \TenorVerseMusic
           }
           {
             \global
-            \BassVerseMusic
+            \keepWithTag #'(notForMIDI allVerses) \BassVerseMusic
           }
       >>
     >>

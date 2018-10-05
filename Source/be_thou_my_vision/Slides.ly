@@ -5,6 +5,7 @@
 SlideStaffStaffSpacing = #16
 SlideLyricMinimumDistance = #5
 
+\include "../../../LilypondTemplates/functions.ly"
 \include "../../../LilypondTemplates/standard-elements.ly"
 
 \book {

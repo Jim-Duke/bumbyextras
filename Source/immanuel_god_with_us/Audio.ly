@@ -3,8 +3,6 @@
 \include "Words-and-music.ly"
 \include "../../../LilypondTemplates/midi.ly"
 
-NumVerses = 6
-
 \book {
   \bookOutputName "Audio_all"
   \score {
@@ -18,7 +16,13 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \SopranoVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \SopranoVerseBody
+            \keepWithTag #'(forMIDI) \SopranoFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \SopranoVerseBody
+            \keepWithTag #'(forMIDI) \SopranoFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \SopranoVerseBody
+            \keepWithTag #'(forMIDI) \SopranoSecondRepeatPart
+            \keepWithTag #'(forMIDI) \SopranoEnding
           }
         }
         \context Voice = altos \with {
@@ -29,7 +33,13 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \AltoVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \AltoVerseBody
+            \keepWithTag #'(forMIDI) \AltoFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \AltoVerseBody
+            \keepWithTag #'(forMIDI) \AltoFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \AltoVerseBody
+            \keepWithTag #'(forMIDI) \AltoSecondRepeatPart
+            \keepWithTag #'(forMIDI) \AltoEnding
           }
         }
       >>
@@ -43,7 +53,13 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \TenorVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \TenorVerseBody
+            \keepWithTag #'(forMIDI) \TenorFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \TenorVerseBody
+            \keepWithTag #'(forMIDI) \TenorFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \TenorVerseBody
+            \keepWithTag #'(forMIDI) \TenorSecondRepeatPart
+            \keepWithTag #'(forMIDI) \TenorEnding
           }
         }
         \context Voice = basses \with {
@@ -54,7 +70,13 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \BassVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \BassVerseBody
+            \keepWithTag #'(forMIDI) \BassFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \BassVerseBody
+            \keepWithTag #'(forMIDI) \BassFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \BassVerseBody
+            \keepWithTag #'(forMIDI) \BassSecondRepeatPart
+            \keepWithTag #'(forMIDI) \BassEnding
           }
         }
       >>
@@ -85,7 +107,13 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \SopranoVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \SopranoVerseBody
+            \keepWithTag #'(forMIDI) \SopranoFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \SopranoVerseBody
+            \keepWithTag #'(forMIDI) \SopranoFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \SopranoVerseBody
+            \keepWithTag #'(forMIDI) \SopranoSecondRepeatPart
+            \keepWithTag #'(forMIDI) \SopranoEnding
           }
         }
         \context Voice = altos \with {
@@ -96,7 +124,13 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \AltoVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \AltoVerseBody
+            \keepWithTag #'(forMIDI) \AltoFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \AltoVerseBody
+            \keepWithTag #'(forMIDI) \AltoFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \AltoVerseBody
+            \keepWithTag #'(forMIDI) \AltoSecondRepeatPart
+            \keepWithTag #'(forMIDI) \AltoEnding
           }
         }
       >>
@@ -110,7 +144,13 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \TenorVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \TenorVerseBody
+            \keepWithTag #'(forMIDI) \TenorFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \TenorVerseBody
+            \keepWithTag #'(forMIDI) \TenorFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \TenorVerseBody
+            \keepWithTag #'(forMIDI) \TenorSecondRepeatPart
+            \keepWithTag #'(forMIDI) \TenorEnding
           }
         }
         \context Voice = basses \with {
@@ -121,7 +161,13 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \BassVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \BassVerseBody
+            \keepWithTag #'(forMIDI) \BassFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \BassVerseBody
+            \keepWithTag #'(forMIDI) \BassFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \BassVerseBody
+            \keepWithTag #'(forMIDI) \BassSecondRepeatPart
+            \keepWithTag #'(forMIDI) \BassEnding
           }
         }
       >>
@@ -152,7 +198,13 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \SopranoVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \SopranoVerseBody
+            \keepWithTag #'(forMIDI) \SopranoFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \SopranoVerseBody
+            \keepWithTag #'(forMIDI) \SopranoFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \SopranoVerseBody
+            \keepWithTag #'(forMIDI) \SopranoSecondRepeatPart
+            \keepWithTag #'(forMIDI) \SopranoEnding
           }
         }
         \context Voice = altos \with {
@@ -163,7 +215,13 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \AltoVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \AltoVerseBody
+            \keepWithTag #'(forMIDI) \AltoFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \AltoVerseBody
+            \keepWithTag #'(forMIDI) \AltoFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \AltoVerseBody
+            \keepWithTag #'(forMIDI) \AltoSecondRepeatPart
+            \keepWithTag #'(forMIDI) \AltoEnding
           }
         }
       >>
@@ -177,7 +235,13 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \TenorVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \TenorVerseBody
+            \keepWithTag #'(forMIDI) \TenorFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \TenorVerseBody
+            \keepWithTag #'(forMIDI) \TenorFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \TenorVerseBody
+            \keepWithTag #'(forMIDI) \TenorSecondRepeatPart
+            \keepWithTag #'(forMIDI) \TenorEnding
           }
         }
         \context Voice = basses \with {
@@ -188,7 +252,13 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \BassVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \BassVerseBody
+            \keepWithTag #'(forMIDI) \BassFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \BassVerseBody
+            \keepWithTag #'(forMIDI) \BassFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \BassVerseBody
+            \keepWithTag #'(forMIDI) \BassSecondRepeatPart
+            \keepWithTag #'(forMIDI) \BassEnding
           }
         }
       >>
@@ -219,7 +289,13 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \SopranoVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \SopranoVerseBody
+            \keepWithTag #'(forMIDI) \SopranoFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \SopranoVerseBody
+            \keepWithTag #'(forMIDI) \SopranoFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \SopranoVerseBody
+            \keepWithTag #'(forMIDI) \SopranoSecondRepeatPart
+            \keepWithTag #'(forMIDI) \SopranoEnding
           }
         }
         \context Voice = altos \with {
@@ -230,7 +306,13 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \AltoVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \AltoVerseBody
+            \keepWithTag #'(forMIDI) \AltoFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \AltoVerseBody
+            \keepWithTag #'(forMIDI) \AltoFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \AltoVerseBody
+            \keepWithTag #'(forMIDI) \AltoSecondRepeatPart
+            \keepWithTag #'(forMIDI) \AltoEnding
           }
         }
       >>
@@ -244,7 +326,13 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \TenorVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \TenorVerseBody
+            \keepWithTag #'(forMIDI) \TenorFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \TenorVerseBody
+            \keepWithTag #'(forMIDI) \TenorFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \TenorVerseBody
+            \keepWithTag #'(forMIDI) \TenorSecondRepeatPart
+            \keepWithTag #'(forMIDI) \TenorEnding
           }
         }
         \context Voice = basses \with {
@@ -255,7 +343,13 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \BassVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \BassVerseBody
+            \keepWithTag #'(forMIDI) \BassFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \BassVerseBody
+            \keepWithTag #'(forMIDI) \BassFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \BassVerseBody
+            \keepWithTag #'(forMIDI) \BassSecondRepeatPart
+            \keepWithTag #'(forMIDI) \BassEnding
           }
         }
       >>
@@ -286,7 +380,13 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \SopranoVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \SopranoVerseBody
+            \keepWithTag #'(forMIDI) \SopranoFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \SopranoVerseBody
+            \keepWithTag #'(forMIDI) \SopranoFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \SopranoVerseBody
+            \keepWithTag #'(forMIDI) \SopranoSecondRepeatPart
+            \keepWithTag #'(forMIDI) \SopranoEnding
           }
         }
         \context Voice = altos \with {
@@ -297,7 +397,13 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \AltoVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \AltoVerseBody
+            \keepWithTag #'(forMIDI) \AltoFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \AltoVerseBody
+            \keepWithTag #'(forMIDI) \AltoFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \AltoVerseBody
+            \keepWithTag #'(forMIDI) \AltoSecondRepeatPart
+            \keepWithTag #'(forMIDI) \AltoEnding
           }
         }
       >>
@@ -311,7 +417,13 @@ NumVerses = 6
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \TenorVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \TenorVerseBody
+            \keepWithTag #'(forMIDI) \TenorFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \TenorVerseBody
+            \keepWithTag #'(forMIDI) \TenorFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \TenorVerseBody
+            \keepWithTag #'(forMIDI) \TenorSecondRepeatPart
+            \keepWithTag #'(forMIDI) \TenorEnding
           }
         }
         \context Voice = basses \with {
@@ -322,7 +434,13 @@ NumVerses = 6
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \BassVerseMusic
+            \keepWithTag #'(verseOne forMIDI) \BassVerseBody
+            \keepWithTag #'(forMIDI) \BassFirstRepeatPart
+            \keepWithTag #'(verseTwo forMIDI) \BassVerseBody
+            \keepWithTag #'(forMIDI) \BassFirstRepeatPart
+            \keepWithTag #'(verseThree forMIDI) \BassVerseBody
+            \keepWithTag #'(forMIDI) \BassSecondRepeatPart
+            \keepWithTag #'(forMIDI) \BassEnding
           }
         }
       >>
