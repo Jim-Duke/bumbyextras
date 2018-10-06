@@ -127,3 +127,7 @@ all_glory_laud_and_honor_pages = 1
 immanuel_god_with_us_number = "X-006"
 immanuel_god_with_us_number_rhs = ##t
 immanuel_god_with_us_pages = 1
+
+let_all_mortal_flesh_keep_silence_number = "X-007"
+let_all_mortal_flesh_keep_silence_number_rhs = ##t
+let_all_mortal_flesh_keep_silence_pages = 1
