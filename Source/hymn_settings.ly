@@ -131,3 +131,11 @@ immanuel_god_with_us_pages = 1
 let_all_mortal_flesh_keep_silence_number = "X-007"
 let_all_mortal_flesh_keep_silence_number_rhs = ##t
 let_all_mortal_flesh_keep_silence_pages = 1
+
+my_god_I_thank_you_who_have_made_number = "X-008"
+my_god_I_thank_you_who_have_made_number_rhs = ##t
+my_god_I_thank_you_who_have_made_pages = 1
+
+o_sacred_head_number = "X-009"
+o_sacred_head_number_rhs = ##t
+o_sacred_head_pages = 1
