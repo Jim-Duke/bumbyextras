@@ -27,6 +27,7 @@ docs/*/review/*.mp3
 *.log
 *~
 *.swp
+*.wav
 
 _site
 .sass-cache

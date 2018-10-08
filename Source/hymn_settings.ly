@@ -147,3 +147,7 @@ the_rock_of_my_heart_pages = 1
 blessed_be_your_name_number = "X-011"
 blessed_be_your_name_number_rhs = ##t
 blessed_be_your_name_pages = 1
+
+thomas_song_number = "X-012"
+thomas_song_number_rhs = ##t
+thomas_song_pages = 2
