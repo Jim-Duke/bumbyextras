@@ -139,3 +139,11 @@ my_god_I_thank_you_who_have_made_pages = 1
 o_sacred_head_number = "X-009"
 o_sacred_head_number_rhs = ##t
 o_sacred_head_pages = 1
+
+the_rock_of_my_heart_number = "X-010"
+the_rock_of_my_heart_number_rhs = ##t
+the_rock_of_my_heart_pages = 1
+
+blessed_be_your_name_number = "X-011"
+blessed_be_your_name_number_rhs = ##t
+blessed_be_your_name_pages = 1
