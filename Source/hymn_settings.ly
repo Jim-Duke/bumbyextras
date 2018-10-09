@@ -151,3 +151,7 @@ blessed_be_your_name_pages = 1
 thomas_song_number = "X-012"
 thomas_song_number_rhs = ##t
 thomas_song_pages = 2
+
+naked_as_from_the_earth_we_came_number = "X-013"
+naked_as_from_the_earth_we_came_number_rhs = ##t
+naked_as_from_the_earth_we_came_pages = 2

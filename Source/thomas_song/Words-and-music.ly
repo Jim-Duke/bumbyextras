@@ -43,7 +43,7 @@ ShowScriptureOnSheetMusic = ##t
   songNumber = \SongNumber
   lhs = #(if RightFirstPage LeaderHints SongNumber)
   rhs = #(if RightFirstPage SongNumber LeaderHints)
-  copyright = "Copyright 1993 Hallal Music, Preseton Christian Music and Toddler Tunes."
+  copyright = "Copyright 1993 Hallal Music, Toddler Tunes Music, and Dayspring Music."
   license = #(string-append "CCLI Song #1222903, License #" ccli_license)
   tagline = ##f
 }
@@ -352,11 +352,106 @@ SlidesVerseBreaks = {
   
   \setSystemOffset \defaultBottomSystemOffset
   s2. s8 \bar "" \pageBreak
+  
+  %---------------------------------------------
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s8 | \noBreak
+  s2. s8 \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s8 | \noBreak
+  s2. s8 \bar "" \pageBreak
+  
+  %---------------------------------------------
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s8 | \noBreak
+  s2. s8 \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s8 | \noBreak
+  s2. s8 \bar "" \pageBreak
+  
+  %---------------------------------------------
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s8 | \noBreak
+  s2 s8 \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4. | \noBreak
+  s2. s8 \bar "" \pageBreak
+}
+
+SlidesChorusBreaks = {
+  \setSystemOffset \defaultTopSystemOffset
+  s8 | \noBreak
+  s1 | \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s2. s8 \bar "" \pageBreak
+  
+  %-----------------------------------------
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s8 | \noBreak
+  s2. s8 \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s8 | \noBreak
+  s1 | \pageBreak
+  
+  %-----------------------------------------
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s2. s8 \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s8 | \noBreak
+  s2. s8 \bar "" \pageBreak
+  
+  %-----------------------------------------
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s8 | \noBreak
+  s2. s8 \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s8 | \noBreak
+  s1 | \pageBreak
+  
+  %-----------------------------------------
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s1 | \noBreak
+  s2. \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s4 | \noBreak
+  s1 | \noBreak
+  s2. s8 \bar "" \pageBreak
+  
+  %-----------------------------------------
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s8 | \noBreak
+  s1 | \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s2. s8 \bar "||"
 }
 
 SlidesCodaBreaks = {
-%  \setSystemOffset \defaultTopSystemOffset
-%  \setSystemOffset \defaultBottomSystemOffset
+  \setSystemOffset \defaultTopSystemOffset
+  s8 | \noBreak
+  s1 | \noBreak
+  s1 | \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 \bar "|."
 }
 
 lyricRest = \markup { \raise #1.0 \musicglyph #"rests.3" }

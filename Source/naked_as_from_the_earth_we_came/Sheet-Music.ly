@@ -1,6 +1,9 @@
 \version "2.19.49"
 
 \include "Words-and-music.ly"
+
+SheetStaffStaffSpacing = 16
+
 \include "../../../LilypondTemplates/standard-elements.ly"
 
 \book {
@@ -45,11 +48,15 @@
           \line {
             "Tune:"
             \fromproperty #'header:tune
-            \char ##x2022
-            \fromproperty #'header:composer
+            \optional-field "• " #'header:composer
+            \optional-field "• arr. " #'header:arranger
           }
           \line {
             \fromproperty #'header:copyright
+            \optional-field "• " #'header:license
+          }
+          \line {
+            "Visit https://hymnal.bumby.org/ for more information about this and other hymns in the Bumby Hymnal"
           }
         }
       }
@@ -77,7 +84,7 @@
     % Verses Section
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
+      \context Staff = upper \with { printPartCombineTexts = ##f } <<
         \partCombine
           {
             \global
@@ -101,20 +108,8 @@
         \new Lyrics \lyricsto "align" {
           \VerseTwo
         }
-        \new Lyrics \lyricsto "align" {
-          \VerseThree
-        }
-        \new Lyrics \lyricsto "align" {
-          \VerseFour
-        }
-        \new Lyrics \lyricsto "align" {
-          \VerseFive
-        }
-        \new Lyrics \lyricsto "align" {
-          \VerseSix
-        }
       >>
-      \context Staff = lower <<
+      \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass
         \partCombine
           {

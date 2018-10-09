@@ -41,7 +41,9 @@ SlideStaffStaffSpacing = #16
           }
           \line {
             \fromproperty #'header:copyright
-            \optional-field "• " #'header:license
+          }
+          \line {
+            \fromproperty #'header:license
           }
         }
       }
@@ -123,25 +125,26 @@ SlideStaffStaffSpacing = #16
         \partCombine
           {
             \global
-            \keepWithTag #'(usePartials verseTwo) \SopranoVerseBodyMusic
+            \keepWithTag #'(verseTwo usePartials) \SopranoVerseBodyMusic
             \SopranoVerseEndingMusic
-            \keepWithTag #'(slideMusic verseTwo) \SopranoChorusMusic
+            \keepWithTag #'(verseTwo slideMusic) \SopranoChorusMusic
           }
           {
             \global
-            \keepWithTag #'(usePartials verseTwo) \AltoVerseBodyMusic
+            \keepWithTag #'(verseTwo usePartials) \AltoVerseBodyMusic
             \AltoVerseEndingMusic
-            \keepWithTag #'(slideMusic verseTwo) \AltoChorusMusic
+            \keepWithTag #'(verseTwo) \AltoChorusMusic
           }
         \new NullVoice = breaks {
           \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
+          \keepWithTag #'(usePartials verseTwo) \SlidesVerseBreaks
+          \keepWithTag #'(verseTwo) \SlidesChorusBreaks
         }
         \new NullVoice = alignVoice {
           \global
-          \keepWithTag #'(usePartials verseTwo) \SopranoVerseBodyMusic
+          \keepWithTag #'(verseTwo usePartials) \SopranoVerseBodyMusic
           \SopranoVerseEndingMusic
-          \keepWithTag #'(usePartials slideMusic verseTwo) \SopranoChorusMusic
+          \keepWithTag #'(verseTwo slideMusic) \SopranoChorusMusic
         }
         \new Lyrics \lyricsto "alignVoice" {
           \huge \removeWithTag #'sheetMusic { \VerseTwo }
@@ -152,15 +155,15 @@ SlideStaffStaffSpacing = #16
         \partCombine
           {
             \global
-            \keepWithTag #'(usePartials verseTwo) \TenorVerseBodyMusic
+            \keepWithTag #'(verseTwo usePartials) \TenorVerseBodyMusic
             \TenorVerseEndingMusic
-            \keepWithTag #'(usePartials slideMusic verseTwo) \TenorChorusMusic
+            \keepWithTag #'(verseTwo) \TenorChorusMusic
           }
           {
             \global
-            \keepWithTag #'(usePartials verseTwo) \BassVerseBodyMusic
+            \keepWithTag #'(verseTwo usePartials) \BassVerseBodyMusic
             \BassVerseEndingMusic
-            \keepWithTag #'(usePartials slideMusic verseTwo) \BassChorusMusic
+            \keepWithTag #'(verseTwo) \BassChorusMusic
           }
       >>
     >>
@@ -184,7 +187,7 @@ SlideStaffStaffSpacing = #16
           }
         \new NullVoice = breaks {
           \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
+          \keepWithTag #'(usePartials verseThree) \SlidesVerseBreaks
         }
         \new NullVoice = alignVoice {
           \global
@@ -220,25 +223,26 @@ SlideStaffStaffSpacing = #16
         \partCombine
           {
             \global
-            \keepWithTag #'(usePartials verseFour) \SopranoVerseBodyMusic
+            \keepWithTag #'(verseFour usePartials) \SopranoVerseBodyMusic
             \SopranoVerseEndingMusic
-            \keepWithTag #'(slideMusic verseFour) \SopranoChorusMusic
+            \keepWithTag #'(verseFour slideMusic) \SopranoChorusMusic
           }
           {
             \global
-            \keepWithTag #'(usePartials verseFour) \AltoVerseBodyMusic
+            \keepWithTag #'(verseFour usePartials) \AltoVerseBodyMusic
             \AltoVerseEndingMusic
-            \keepWithTag #'(slideMusic verseFour) \AltoChorusMusic
+            \keepWithTag #'(verseFour) \AltoChorusMusic
           }
         \new NullVoice = breaks {
           \global
           \keepWithTag #'(usePartials verseFour) \SlidesVerseBreaks
+          \keepWithTag #'(verseFour) \SlidesChorusBreaks
         }
         \new NullVoice = alignVoice {
           \global
-          \keepWithTag #'(usePartials verseFour) \SopranoVerseBodyMusic
+          \keepWithTag #'(verseFour usePartials) \SopranoVerseBodyMusic
           \SopranoVerseEndingMusic
-          \keepWithTag #'(usePartials slideMusic verseFour) \SopranoChorusMusic
+          \keepWithTag #'(verseFour slideMusic) \SopranoChorusMusic
         }
         \new Lyrics \lyricsto "alignVoice" {
           \huge \removeWithTag #'sheetMusic { \VerseFour }
@@ -249,15 +253,15 @@ SlideStaffStaffSpacing = #16
         \partCombine
           {
             \global
-            \keepWithTag #'(usePartials verseFour) \TenorVerseBodyMusic
+            \keepWithTag #'(verseFour usePartials) \TenorVerseBodyMusic
             \TenorVerseEndingMusic
-            \keepWithTag #'(usePartials slideMusic verseFour) \TenorChorusMusic
+            \keepWithTag #'(verseFour) \TenorChorusMusic
           }
           {
             \global
-            \keepWithTag #'(usePartials verseFour) \BassVerseBodyMusic
+            \keepWithTag #'(verseFour usePartials) \BassVerseBodyMusic
             \BassVerseEndingMusic
-            \keepWithTag #'(usePartials slideMusic verseFour) \BassChorusMusic
+            \keepWithTag #'(verseFour) \BassChorusMusic
           }
       >>
     >>

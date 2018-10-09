@@ -19,11 +19,11 @@ Build/*.pdf
 Build/*.mid
 Build/*.mp3
 docs/vendor
-docs/*/review/*.pdf
-docs/*/review/*.png
-docs/*/review/*.mid
-docs/*/review/*.midi
-docs/*/review/*.mp3
+docs/**/review/**/*.pdf
+docs/**/review/**/*.png
+docs/**/review/**/*.mid
+docs/**/review/**/*.midi
+docs/**/review/**/*.mp3
 *.log
 *~
 *.swp

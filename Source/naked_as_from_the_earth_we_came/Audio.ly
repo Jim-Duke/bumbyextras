@@ -3,7 +3,7 @@
 \include "Words-and-music.ly"
 \include "../../../LilypondTemplates/midi.ly"
 
-NumVerses = 6
+NumVerses = 2
 
 \book {
   \bookOutputName "Audio_all"

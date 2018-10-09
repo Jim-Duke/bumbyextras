@@ -5,7 +5,7 @@
 #
 # The following two variables are probably all that needs to be customized for any hymn
 #
-PROD_BASE_NAME = abide_with_me
+PROD_BASE_NAME = naked_as_from_the_earth_we_came
 STATUS = review
 ACCESS = public
 

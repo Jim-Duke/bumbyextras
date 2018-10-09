@@ -20,13 +20,13 @@
             \SopranoVerseEndingMusic
             \keepWithTag #'verseTwo \SopranoVerseBodyMusic
             \SopranoVerseEndingMusic
-            \keepWithTag #'verseTwo \SopranoChorusMusic r8
+            \keepWithTag #'(verseTwo slideMusic) \SopranoChorusMusic r8
             \keepWithTag #'verseThree \SopranoVerseBodyMusic
             \SopranoVerseEndingMusic
             \keepWithTag #'verseFour \SopranoVerseBodyMusic
             \SopranoVerseEndingMusic
-            \keepWithTag #'verseFour \SopranoChorusMusic
-            \SopranoCodaMusic
+            \keepWithTag #'(verseFour slideMusic) \SopranoChorusMusic
+            \removeWithTag #'usePartials \SopranoCodaMusic
           }
         }
         \context Voice = altos \with {
