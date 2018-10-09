@@ -119,8 +119,14 @@
             }
           }
           \partCombine
-            \SopranoChorusMusic
-            \AltoChorusMusic
+            {
+              \keepWithTag #'sheetMusic \SopranoChorusMusic
+              \SopranoCodaMusic
+            }
+            {
+              \keepWithTag #'sheetMusic \AltoChorusMusic
+              \AltoCodaMusic
+            }
         }
         \context NullVoice = breaks {
           \global
@@ -134,6 +140,9 @@
             \SopranoVerseEndingMusic
             \SopranoChorusMusic
           }
+          \removeWithTag #'(usePartials slideMusic) \keepWithTag #'sheetMusic {
+            \SopranoCodaMusic
+          }
         }
         \new Lyrics \lyricsto "align" {
           \keepWithTag #'sheetMusic \VerseOne
@@ -145,22 +154,56 @@
           \keepWithTag #'sheetMusic \VerseThree
         }
         \new Lyrics \lyricsto "align" {
-          \keepWithTag #'sheetMusic \VerseFour
+          \keepWithTag #'sheetMusic \VerseFour \Coda
         }
       >>
       \context Staff = lower \with { printPartCombineTexts = ##f } <<
-        \clef bass
-        \partCombine
-          {
-            \global
-            \keepWithTag #'(usePartials sheetMusic) \TenorVerseMusic
-            \TenorChorusMusic
+        {
+          \clef bass
+          \repeat volta 2 {
+            \partCombine
+              {
+                \global
+                \keepWithTag #'(usePartials sheetMusic) \TenorVerseBodyMusic
+              }
+              {
+                \global
+                \keepWithTag #'(usePartials sheetMusic) \BassVerseBodyMusic
+              }
           }
-          {
-            \global
-            \keepWithTag #'(usePartials sheetMusic) \BassVerseMusic
-            \BassChorusMusic
+          \alternative {
+            {
+              \set Score.repeatCommands = #(list (list 'volta voltaOneThree))
+              \partCombine
+                {
+                  \TenorVerseEndingMusic
+                }
+                {
+                  \BassVerseEndingMusic
+                }
+              \bar ":|."
+            }
+            {
+              \set Score.repeatCommands = #(list (list 'volta voltaTwoFour))
+              \partCombine
+                {
+                  \TenorVerseEndingMusic
+                }
+                {
+                  \BassVerseEndingMusic
+                }
+            }
           }
+          \partCombine
+            {
+              \keepWithTag #'sheetMusic \TenorChorusMusic
+              \TenorCodaMusic
+            }
+            {
+              \keepWithTag #'sheetMusic \BassChorusMusic
+              \BassCodaMusic
+            }
+        }
       >>
     >>
     \SheetMusicVerseLayout

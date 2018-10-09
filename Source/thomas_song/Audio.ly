@@ -3,8 +3,6 @@
 \include "Words-and-music.ly"
 \include "../../../LilypondTemplates/midi.ly"
 
-NumVerses = 3
-
 \book {
   \bookOutputName "Audio_all"
   \score {
@@ -18,10 +16,17 @@ NumVerses = 3
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses {
-              \SopranoVerseMusic
-              \SopranoRefrainMusic
-            }
+            \keepWithTag #'verseOne \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseTwo \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseTwo \SopranoChorusMusic r8
+            \keepWithTag #'verseThree \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseFour \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseFour \SopranoChorusMusic
+            \SopranoCodaMusic
           }
         }
         \context Voice = altos \with {
@@ -32,10 +37,17 @@ NumVerses = 3
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses {
-              \AltoVerseMusic
-              \AltoRefrainMusic
-            }
+            \keepWithTag #'verseOne \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseTwo \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseTwo \AltoChorusMusic r8
+            \keepWithTag #'verseThree \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseFour \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseFour \AltoChorusMusic
+            \AltoCodaMusic
           }
         }
       >>
@@ -49,10 +61,17 @@ NumVerses = 3
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses {
-              \TenorVerseMusic
-              \TenorRefrainMusic
-            }
+            \keepWithTag #'verseOne \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseTwo \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseTwo \TenorChorusMusic r8
+            \keepWithTag #'verseThree \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseFour \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseFour \TenorChorusMusic
+            \TenorCodaMusic
           }
         }
         \context Voice = basses \with {
@@ -63,10 +82,17 @@ NumVerses = 3
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses {
-              \BassVerseMusic
-              \BassRefrainMusic
-            }
+            \keepWithTag #'verseOne \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseTwo \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseTwo \BassChorusMusic r8
+            \keepWithTag #'verseThree \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseFour \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseFour \BassChorusMusic
+            \BassCodaMusic
           }
         }
       >>
@@ -97,7 +123,17 @@ NumVerses = 3
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \SopranoVerseMusic
+            \keepWithTag #'verseOne \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseTwo \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseTwo \SopranoChorusMusic r8
+            \keepWithTag #'verseThree \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseFour \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseFour \SopranoChorusMusic
+            \SopranoCodaMusic
           }
         }
         \context Voice = altos \with {
@@ -108,7 +144,17 @@ NumVerses = 3
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \AltoVerseMusic
+            \keepWithTag #'verseOne \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseTwo \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseTwo \AltoChorusMusic r8
+            \keepWithTag #'verseThree \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseFour \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseFour \AltoChorusMusic
+            \AltoCodaMusic
           }
         }
       >>
@@ -122,7 +168,17 @@ NumVerses = 3
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \TenorVerseMusic
+            \keepWithTag #'verseOne \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseTwo \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseTwo \TenorChorusMusic r8
+            \keepWithTag #'verseThree \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseFour \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseFour \TenorChorusMusic
+            \TenorCodaMusic
           }
         }
         \context Voice = basses \with {
@@ -133,7 +189,17 @@ NumVerses = 3
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \BassVerseMusic
+            \keepWithTag #'verseOne \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseTwo \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseTwo \BassChorusMusic r8
+            \keepWithTag #'verseThree \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseFour \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseFour \BassChorusMusic
+            \BassCodaMusic
           }
         }
       >>
@@ -164,7 +230,17 @@ NumVerses = 3
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \SopranoVerseMusic
+            \keepWithTag #'verseOne \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseTwo \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseTwo \SopranoChorusMusic r8
+            \keepWithTag #'verseThree \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseFour \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseFour \SopranoChorusMusic
+            \SopranoCodaMusic
           }
         }
         \context Voice = altos \with {
@@ -175,7 +251,17 @@ NumVerses = 3
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \AltoVerseMusic
+            \keepWithTag #'verseOne \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseTwo \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseTwo \AltoChorusMusic r8
+            \keepWithTag #'verseThree \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseFour \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseFour \AltoChorusMusic
+            \AltoCodaMusic
           }
         }
       >>
@@ -189,7 +275,17 @@ NumVerses = 3
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \TenorVerseMusic
+            \keepWithTag #'verseOne \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseTwo \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseTwo \TenorChorusMusic r8
+            \keepWithTag #'verseThree \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseFour \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseFour \TenorChorusMusic
+            \TenorCodaMusic
           }
         }
         \context Voice = basses \with {
@@ -200,7 +296,17 @@ NumVerses = 3
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \BassVerseMusic
+            \keepWithTag #'verseOne \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseTwo \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseTwo \BassChorusMusic r8
+            \keepWithTag #'verseThree \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseFour \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseFour \BassChorusMusic
+            \BassCodaMusic
           }
         }
       >>
@@ -231,7 +337,17 @@ NumVerses = 3
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \SopranoVerseMusic
+            \keepWithTag #'verseOne \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseTwo \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseTwo \SopranoChorusMusic r8
+            \keepWithTag #'verseThree \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseFour \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseFour \SopranoChorusMusic
+            \SopranoCodaMusic
           }
         }
         \context Voice = altos \with {
@@ -242,7 +358,17 @@ NumVerses = 3
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \AltoVerseMusic
+            \keepWithTag #'verseOne \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseTwo \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseTwo \AltoChorusMusic r8
+            \keepWithTag #'verseThree \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseFour \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseFour \AltoChorusMusic
+            \AltoCodaMusic
           }
         }
       >>
@@ -256,7 +382,17 @@ NumVerses = 3
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \TenorVerseMusic
+            \keepWithTag #'verseOne \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseTwo \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseTwo \TenorChorusMusic r8
+            \keepWithTag #'verseThree \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseFour \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseFour \TenorChorusMusic
+            \TenorCodaMusic
           }
         }
         \context Voice = basses \with {
@@ -267,7 +403,17 @@ NumVerses = 3
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \BassVerseMusic
+            \keepWithTag #'verseOne \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseTwo \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseTwo \BassChorusMusic r8
+            \keepWithTag #'verseThree \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseFour \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseFour \BassChorusMusic
+            \BassCodaMusic
           }
         }
       >>
@@ -284,7 +430,6 @@ NumVerses = 3
     }
   }
 }
-
 \book {
   \bookOutputName "Audio_bass"
   \score {
@@ -298,7 +443,17 @@ NumVerses = 3
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \SopranoVerseMusic
+            \keepWithTag #'verseOne \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseTwo \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseTwo \SopranoChorusMusic r8
+            \keepWithTag #'verseThree \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseFour \SopranoVerseBodyMusic
+            \SopranoVerseEndingMusic
+            \keepWithTag #'verseFour \SopranoChorusMusic
+            \SopranoCodaMusic
           }
         }
         \context Voice = altos \with {
@@ -309,7 +464,17 @@ NumVerses = 3
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \AltoVerseMusic
+            \keepWithTag #'verseOne \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseTwo \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseTwo \AltoChorusMusic r8
+            \keepWithTag #'verseThree \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseFour \AltoVerseBodyMusic
+            \AltoVerseEndingMusic
+            \keepWithTag #'verseFour \AltoChorusMusic
+            \AltoCodaMusic
           }
         }
       >>
@@ -323,7 +488,17 @@ NumVerses = 3
         } {
           \voiceOne {
             \global
-            \repeat unfold \NumVerses \TenorVerseMusic
+            \keepWithTag #'verseOne \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseTwo \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseTwo \TenorChorusMusic r8
+            \keepWithTag #'verseThree \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseFour \TenorVerseBodyMusic
+            \TenorVerseEndingMusic
+            \keepWithTag #'verseFour \TenorChorusMusic
+            \TenorCodaMusic
           }
         }
         \context Voice = basses \with {
@@ -334,7 +509,17 @@ NumVerses = 3
         } {
           \voiceTwo {
             \global
-            \repeat unfold \NumVerses \BassVerseMusic
+            \keepWithTag #'verseOne \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseTwo \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseTwo \BassChorusMusic r8
+            \keepWithTag #'verseThree \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseFour \BassVerseBodyMusic
+            \BassVerseEndingMusic
+            \keepWithTag #'verseFour \BassChorusMusic
+            \BassCodaMusic
           }
         }
       >>

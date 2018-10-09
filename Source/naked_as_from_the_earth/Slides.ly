@@ -1,9 +1,6 @@
 \version "2.19.49"
 
 \include "Words-and-music.ly"
-
-SlideStaffStaffSpacing = #16
-
 \include "../../../LilypondTemplates/standard-elements.ly"
 
 \book {
@@ -29,19 +26,22 @@ SlideStaffStaffSpacing = #16
           \line {
             "Hymn:"
             \fromproperty #'header:meter
-            \optional-field "• " #'header:poet
-            \optional-field "• tr. " #'header:translator
-            \optional-field "• vs. " #'header:versifier
+            \char ##x2022
+            \fromproperty #'header:poet
           }
           \line {
             "Tune:"
             \fromproperty #'header:tune
-            \optional-field "• " #'header:composer
-            \optional-field "• arr. " #'header:arranger
+            \char ##x2022
+            \fromproperty #'header:composer
+            \char ##x2022 "arr."
+            \fromproperty #'header:arranger
           }
           \line {
             \fromproperty #'header:copyright
-            \optional-field "• " #'header:license
+          }
+          \line {
+            \fromproperty #'header:license
           }
         }
       }
@@ -77,61 +77,11 @@ SlideStaffStaffSpacing = #16
         \partCombine
           {
             \global
-            \keepWithTag #'verseOne \SopranoVerseBodyMusic
-            \SopranoVerseEndingMusic
+            \keepWithTag #'usePartials \SopranoVerseMusic
           }
           {
             \global
-            \keepWithTag #'verseOne \AltoVerseBodyMusic
-            \AltoVerseEndingMusic
-          }
-        \new NullVoice = breaks {
-          \global
-          \keepWithTag #'(usePartials verseOne) \SlidesVerseBreaks
-        }
-        \new NullVoice = alignVoice {
-          \global
-          \keepWithTag #'verseOne \SopranoVerseBodyMusic
-          \SopranoVerseEndingMusic
-        }
-        \new Lyrics \lyricsto "alignVoice" {
-          \huge \removeWithTag #'sheetMusic { \VerseOne }
-        }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \partCombine
-          {
-            \global
-            \keepWithTag #'verseOne \TenorVerseBodyMusic
-            \TenorVerseEndingMusic
-          }
-          {
-            \global
-            \keepWithTag #'verseOne \BassVerseBodyMusic
-            \BassVerseEndingMusic
-          }
-      >>
-    >>
-    \SlideLayout
-  }
-  \pageBreak
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \partCombine
-          {
-            \global
-            \keepWithTag #'(usePartials verseTwo) \SopranoVerseBodyMusic
-            \SopranoVerseEndingMusic
-            \keepWithTag #'(slideMusic verseTwo) \SopranoChorusMusic
-          }
-          {
-            \global
-            \keepWithTag #'(usePartials verseTwo) \AltoVerseBodyMusic
-            \AltoVerseEndingMusic
-            \keepWithTag #'(slideMusic verseTwo) \AltoChorusMusic
+            \keepWithTag #'usePartials \AltoVerseMusic
           }
         \new NullVoice = breaks {
           \global
@@ -139,12 +89,10 @@ SlideStaffStaffSpacing = #16
         }
         \new NullVoice = alignVoice {
           \global
-          \keepWithTag #'(usePartials verseTwo) \SopranoVerseBodyMusic
-          \SopranoVerseEndingMusic
-          \keepWithTag #'(usePartials slideMusic verseTwo) \SopranoChorusMusic
+          \keepWithTag #'usePartials \SopranoVerseMusic
         }
         \new Lyrics \lyricsto "alignVoice" {
-          \huge \removeWithTag #'sheetMusic { \VerseTwo }
+          \huge \VerseOne
         }
       >>
       \context Staff = lower <<
@@ -152,21 +100,16 @@ SlideStaffStaffSpacing = #16
         \partCombine
           {
             \global
-            \keepWithTag #'(usePartials verseTwo) \TenorVerseBodyMusic
-            \TenorVerseEndingMusic
-            \keepWithTag #'(usePartials slideMusic verseTwo) \TenorChorusMusic
+            \keepWithTag #'usePartials \TenorVerseMusic
           }
           {
             \global
-            \keepWithTag #'(usePartials verseTwo) \BassVerseBodyMusic
-            \BassVerseEndingMusic
-            \keepWithTag #'(usePartials slideMusic verseTwo) \BassChorusMusic
+            \keepWithTag #'usePartials \BassVerseMusic
           }
       >>
     >>
     \SlideLayout
   }
-  \pageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -174,13 +117,11 @@ SlideStaffStaffSpacing = #16
         \partCombine
           {
             \global
-            \keepWithTag #'verseThree \SopranoVerseBodyMusic
-            \SopranoVerseEndingMusic
+            \keepWithTag #'usePartials \SopranoVerseMusic
           }
           {
             \global
-            \keepWithTag #'verseThree \AltoVerseBodyMusic
-            \AltoVerseEndingMusic
+            \keepWithTag #'usePartials \AltoVerseMusic
           }
         \new NullVoice = breaks {
           \global
@@ -188,11 +129,10 @@ SlideStaffStaffSpacing = #16
         }
         \new NullVoice = alignVoice {
           \global
-          \keepWithTag #'verseThree \SopranoVerseBodyMusic
-          \SopranoVerseEndingMusic
+          \keepWithTag #'usePartials \SopranoVerseMusic
         }
         \new Lyrics \lyricsto "alignVoice" {
-          \huge \removeWithTag #'sheetMusic { \VerseThree }
+          \huge \VerseTwo
         }
       >>
       \context Staff = lower <<
@@ -200,19 +140,16 @@ SlideStaffStaffSpacing = #16
         \partCombine
           {
             \global
-            \keepWithTag #'verseThree \TenorVerseBodyMusic
-            \TenorVerseEndingMusic
+            \keepWithTag #'usePartials \TenorVerseMusic
           }
           {
             \global
-            \keepWithTag #'verseThree \BassVerseBodyMusic
-            \BassVerseEndingMusic
+            \keepWithTag #'usePartials \BassVerseMusic
           }
       >>
     >>
     \SlideLayout
   }
-  \pageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -220,28 +157,22 @@ SlideStaffStaffSpacing = #16
         \partCombine
           {
             \global
-            \keepWithTag #'(usePartials verseFour) \SopranoVerseBodyMusic
-            \SopranoVerseEndingMusic
-            \keepWithTag #'(slideMusic verseFour) \SopranoChorusMusic
+            \keepWithTag #'usePartials \SopranoVerseMusic
           }
           {
             \global
-            \keepWithTag #'(usePartials verseFour) \AltoVerseBodyMusic
-            \AltoVerseEndingMusic
-            \keepWithTag #'(slideMusic verseFour) \AltoChorusMusic
+            \keepWithTag #'usePartials \AltoVerseMusic
           }
         \new NullVoice = breaks {
           \global
-          \keepWithTag #'(usePartials verseFour) \SlidesVerseBreaks
+          \keepWithTag #'usePartials \SlidesVerseBreaks
         }
         \new NullVoice = alignVoice {
           \global
-          \keepWithTag #'(usePartials verseFour) \SopranoVerseBodyMusic
-          \SopranoVerseEndingMusic
-          \keepWithTag #'(usePartials slideMusic verseFour) \SopranoChorusMusic
+          \keepWithTag #'usePartials \SopranoVerseMusic
         }
         \new Lyrics \lyricsto "alignVoice" {
-          \huge \removeWithTag #'sheetMusic { \VerseFour }
+          \huge \VerseThree
         }
       >>
       \context Staff = lower <<
@@ -249,21 +180,16 @@ SlideStaffStaffSpacing = #16
         \partCombine
           {
             \global
-            \keepWithTag #'(usePartials verseFour) \TenorVerseBodyMusic
-            \TenorVerseEndingMusic
-            \keepWithTag #'(usePartials slideMusic verseFour) \TenorChorusMusic
+            \keepWithTag #'usePartials \TenorVerseMusic
           }
           {
             \global
-            \keepWithTag #'(usePartials verseFour) \BassVerseBodyMusic
-            \BassVerseEndingMusic
-            \keepWithTag #'(usePartials slideMusic verseFour) \BassChorusMusic
+            \keepWithTag #'usePartials \BassVerseMusic
           }
       >>
     >>
     \SlideLayout
   }
-  \pageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -271,22 +197,22 @@ SlideStaffStaffSpacing = #16
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \SopranoCodaMusic
+            \keepWithTag #'usePartials \SopranoVerseMusic
           }
           {
             \global
-            \keepWithTag #'usePartials \AltoCodaMusic
+            \keepWithTag #'usePartials \AltoVerseMusic
           }
         \new NullVoice = breaks {
           \global
-          \keepWithTag #'usePartials \SlidesCodaBreaks
+          \keepWithTag #'usePartials \SlidesVerseBreaks
         }
         \new NullVoice = alignVoice {
           \global
-          \keepWithTag #'usePartials \SopranoCodaMusic
+          \keepWithTag #'usePartials \SopranoVerseMusic
         }
         \new Lyrics \lyricsto "alignVoice" {
-          \huge \Coda
+          \huge \VerseFour
         }
       >>
       \context Staff = lower <<
@@ -294,11 +220,91 @@ SlideStaffStaffSpacing = #16
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \TenorCodaMusic
+            \keepWithTag #'usePartials \TenorVerseMusic
           }
           {
             \global
-            \keepWithTag #'usePartials \BassCodaMusic
+            \keepWithTag #'usePartials \BassVerseMusic
+          }
+      >>
+    >>
+    \SlideLayout
+  }
+  \score {
+    <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
+      \context Staff = upper <<
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \SopranoVerseMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \AltoVerseMusic
+          }
+        \new NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials \SlidesVerseBreaks
+        }
+        \new NullVoice = alignVoice {
+          \global
+          \keepWithTag #'usePartials \SopranoVerseMusic
+        }
+        \new Lyrics \lyricsto "alignVoice" {
+          \huge \VerseFive
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \TenorVerseMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \BassVerseMusic
+          }
+      >>
+    >>
+    \SlideLayout
+  }
+  \score {
+    <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
+      \context Staff = upper <<
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \SopranoVerseMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \AltoVerseMusic
+          }
+        \new NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials \SlidesVerseBreaks
+        }
+        \new NullVoice = alignVoice {
+          \global
+          \keepWithTag #'usePartials \SopranoVerseMusic
+        }
+        \new Lyrics \lyricsto "alignVoice" {
+          \huge \VerseSix
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \TenorVerseMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \BassVerseMusic
           }
       >>
     >>

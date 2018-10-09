@@ -52,7 +52,7 @@ voltaOneThree = \markup { "1., 3." }
 voltaTwoFour = \markup { "2., 4." }
 
 SopranoVerseBodyMusic = \relative c'' {
-  \tag #'sheetMusic {
+  \tag #'(sheetMusic verseTwo verseFour) {
     \tag #'usePartials { \partial 8 }
     g8 |
   }
@@ -62,8 +62,12 @@ SopranoVerseBodyMusic = \relative c'' {
   
   d8 |
   ees8( d8) c8 c8~ c4. c8 |
-  c4 bes8 bes8~ bes4. g8 |
-  g4 f8 ees8~ ees4. ees8 |
+  c4 bes8 bes8~ bes4.
+  
+  g8 |
+  g4 f8 ees8~ ees4.
+  \tag #'(sheetMusic verseOne verseTwo) { ees8 }
+  \tag #'(verseThree verseFour) { r8 } |
   ees8 f8 g8 f8~ f8 ees8 d4 |
 }
 
@@ -72,7 +76,8 @@ SopranoVerseEndingMusic = \relative c' {
 }
 
 SopranoChorusMusic = \relative c'' {
-  ees8 |
+  \tag #'(sheetMusic verseTwo) { ees8 }
+  \tag #'(verseFour) { r8 } |
   ees4 ees8 ees8~ ees4. ees8 |
   d4 d8 d8~ d4. c8 |
   bes4 bes8 bes8~ bes4. ees8 |
@@ -89,12 +94,32 @@ SopranoChorusMusic = \relative c'' {
   aes8 |
   aes4 g8 f8~ f4. ees8 |
   ees8 f8 g8 f8~ f8 ees8 d4 |
-  ees2. r8^\markup { \right-align \italic "First time D.C., second time to CODA"
-    \raise #0.8 \musicglyph #"scripts.coda" } \bar "|."
+  ees2.
+  \tag #'sheetMusic {
+    r8^\markup { \right-align \italic "First time D.C., second time to CODA"
+    \raise #0.8 \musicglyph #"scripts.coda" }
+  }
+  \tag #'slideMusic { r8 } \bar "||"
+}
+
+SopranoCodaMusic = \relative c'' {
+  \tag #'usePartials { \partial 8 }
+  g8^\markup {
+      \left-align \raise #0.8 \musicglyph #"scripts.coda"
+      "CODA"
+  } |
+  \set Score.tempoHideNote = ##t
+  \tempo 4=90
+  g4 bes8 bes8~ bes4. g8 |
+  \tempo 4=70
+  g4 c4
+  c2^\fermata |
+  c8 d8 ees8 c8~ c8 ees8 d4 |
+  ees1 \bar "|."
 }
 
 AltoVerseBodyMusic = \relative c' {
-  \tag #'sheetMusic {
+  \tag #'(sheetMusic verseTwo verseFour) {
     \tag #'usePartials { \partial 8 }
     ees8 |
   }
@@ -106,7 +131,9 @@ AltoVerseBodyMusic = \relative c' {
   aes4 aes8 aes8~ aes4. aes8 |
   aes8( g8) g8 g8~ g4. ees8 |
   
-  ees4 d8 c8~ c4. c8 |
+  ees4 d8 c8~ c4.
+  \tag #'(sheetMusic verseOne verseTwo) { c8 }
+  \tag #'(verseThree verseFour) { r8 } |
   c8 c8 c8 d8~ d8 bes8 bes4 |
 }
 
@@ -115,7 +142,8 @@ AltoVerseEndingMusic = \relative c' {
 }
 
 AltoChorusMusic = \relative c'' {
-  g8 |
+  \tag #'(sheetMusic verseTwo) { g8 }
+  \tag #'(verseFour) { r8 } |
   aes4 aes8 aes8~ aes4. aes8 |
   f4 f8 f8~ f4. f8 |
   
@@ -138,8 +166,16 @@ AltoChorusMusic = \relative c'' {
   bes2. r8 \bar "||"
 }
 
-TenorVerseMusic = \relative c' {
-  \tag #'sheetMusic {
+AltoCodaMusic = \relative c' {
+  ees8 |
+  ees4 g8 g8~ g4. d8 |
+  ees4 g4 g2^\fermata |
+  aes8 aes8 aes8 aes8~ aes8 aes8 aes4 |
+  aes2( g2) \bar "|."
+}
+
+TenorVerseBodyMusic = \relative c' {
+  \tag #'(sheetMusic verseTwo verseFour) {
     \tag #'usePartials { \partial 8 }
     bes8 |
   }
@@ -151,14 +187,19 @@ TenorVerseMusic = \relative c' {
   ees4 ees8 ees8~ ees8( d8 c8) c8 |
   c4 bes8 bes8~ bes4. bes8 |
   
-  bes4 aes8 g8~ g4. c8 |
+  bes4 aes8 g8~ g4.
+  \tag #'(sheetMusic verseOne verseTwo) { c8 }
+  \tag #'(verseThree verseFour) { r8 } |
   c8 c8 c8 bes8~ bes8 bes8 aes4 |
-  g2. r8
+}
+
+TenorVerseEndingMusic = \relative c' {
   g2. r8
 }
 
 TenorChorusMusic = \relative c' {
-  bes8 |
+  \tag #'(sheetMusic verseTwo) { bes8 }
+  \tag #'(verseFour) { r8 } |
   c4 c8 c8~ c4. c8 |
   bes4 bes8 bes8~ bes4. bes8 |
   
@@ -181,8 +222,21 @@ TenorChorusMusic = \relative c' {
   g2. r8 \bar "||"
 }
 
-BassVerseMusic = \relative c {
-  \tag #'sheetMusic {
+TenorCodaMusic = \relative c' {
+  bes8 |
+  bes4 bes8 bes8~ bes4. bes8 |
+  ees8 d8 c8 d8
+  f4( 
+  \set Score.tempoHideNote = ##t
+  \tempo 4=40
+  ees4)^\fermata |
+  \tempo 4=70
+  ees8 d8 c8 bes8~ bes8 c8 bes4 |
+  c2( bes2) \bar "|."
+}
+
+BassVerseBodyMusic = \relative c {
+  \tag #'(sheetMusic verseTwo verseFour) {
     \tag #'usePartials { \partial 8 }
     ees8 |
   }
@@ -194,14 +248,19 @@ BassVerseMusic = \relative c {
   c4 c8 c8~ c8( d8 ees8) ees8 |
   ees4 ees8 ees8~ ees4. ees8 |
   
-  bes4 bes8 c8~ c4. aes8 |
+  bes4 bes8 c8~ c4.
+  \tag #'(sheetMusic verseOne verseTwo) { aes8 }
+  \tag #'(verseThree verseFour) { r8 } |
   aes8 aes8 aes8 bes8~ bes8 bes8 bes4 |
-  <ees ees,>2. r8
+}
+
+BassVerseEndingMusic = \relative c {
   <ees ees,>2. r8
 }
 
 BassChorusMusic = \relative c {
-  ees8 |
+  \tag #'(sheetMusic verseTwo) { ees8 }
+  \tag #'(verseFour) { r8 } |
   ees4 ees8 ees8~ ees4. ees8 |
   bes4 bes8 bes8~ bes4. bes8 |
   
@@ -221,7 +280,15 @@ BassChorusMusic = \relative c {
   des8 |
   c4 c8 c8~ c4. c8 |
   c8 c8 c8 bes8~ bes8 bes8 bes4 |
-  <ees ees,>2. r8 \bar "|."
+  <ees ees,>2. r8 \bar "||"
+}
+
+BassCodaMusic = \relative c {
+  ees8 |
+  ees4 ees8 ees4( bes4) bes8 |
+  c8 d8 ees8 f8 g2^\fermata |
+  aes8 g8 f8 bes,8~ bes8 ees8 d4 |
+  <ees ees,>1 \bar "|."
 }
 
 SheetMusicVerseBreaks = {
@@ -263,18 +330,31 @@ SheetMusicVerseBreaks = {
   s8 | \noBreak
   s1 | \noBreak
   s1 | \noBreak
-  s2. s8 \bar "|."
+  s2. s8 \bar "||" \break
+  
+  s8 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 \bar "|."
 }
 
 SheetMusicChorusBreaks = {
 }
 
 SlidesVerseBreaks = {
-%  \setSystemOffset \defaultTopSystemOffset
-%  \setSystemOffset \defaultBottomSystemOffset
+  \setSystemOffset \defaultTopSystemOffset
+  \tag #'(verseTwo verseFour) {
+    \tag #'usePartials { \partial 8 }
+    s8 | \noBreak
+  }
+  s1 | \break
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s2. s8 \bar "" \pageBreak
 }
 
-SlidesRefrainBreaks = {
+SlidesCodaBreaks = {
 %  \setSystemOffset \defaultTopSystemOffset
 %  \setSystemOffset \defaultBottomSystemOffset
 }
@@ -287,7 +367,7 @@ VerseOne = \lyricmode {
   Je -- sus, you were all to me,
   Why did You die on Cal -- va -- ry?
   O Lamb of God, I fail to see
-  How this could be part of the plan. ""
+  How this could be part of the plan. \tag #'sheetMusic { "" }
 }
 
 VerseTwo = \lyricmode {
@@ -295,7 +375,8 @@ VerseTwo = \lyricmode {
   They say that You're a -- live a -- gain,
   But I saw death and ev -- 'ry sin
   Reach out to claim their dark -- est win.
-  How could this be part of the "" plan?
+  How could this be part of the
+  \tag #'sheetMusic { "" } plan?
   
   If I could on -- ly hold Your hand,
   And touch the scars where nails were driv -- en;
@@ -312,7 +393,7 @@ VerseThree = \lyricmode {
   A vis -- ion fill -- ing time and space.
   Your near -- ness makes my spir -- it race.
   \tag #'sheetMusic { \lyricRest }
-  Could this be part of the plan? ""
+  Could this be part of the plan? \tag #'sheetMusic { "" }
 }
 
 VerseFour = \lyricmode {
@@ -321,7 +402,7 @@ VerseFour = \lyricmode {
   From heav -- en o -- cean, earth and sky;
   When peo -- ple watched their sav -- ior die.
   \tag #'sheetMusic { \lyricRest }
-  Could this be part of the "" plan?
+  Could this be part of the \tag #'sheetMusic { "" } plan?
 
   \tag #'sheetMusic { \lyricRest } Reach -- ing out to hold your hand,
   And touch the scars where nails were driv -- en;
