@@ -1,9 +1,9 @@
 ---
 layout: review
-hymn_id: let_all_mortal_flesh_keep_silence
-title: "New Hymn: \"Let All Mortal Flesh Keep Silence\""
+hymn_id: thomas_song
+title: "New Hymn: \"Thomas' Song\""
 navButton: Reviews
-github_issue: 64
+github_issue: 70
 date: 2018-10-05
 ---
 # Review Instructions

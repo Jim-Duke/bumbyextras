@@ -1,9 +1,9 @@
 ---
 layout: review
-hymn_id: let_all_mortal_flesh_keep_silence
-title: "New Hymn: \"Let All Mortal Flesh Keep Silence\""
+hymn_id: naked_as_from_the_earth_we_came
+title: "New Hymn: \"Naked As From the Earth We Came\""
 navButton: Reviews
-github_issue: 64
+github_issue: 91
 date: 2018-10-05
 ---
 # Review Instructions

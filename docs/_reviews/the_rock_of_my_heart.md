@@ -1,9 +1,9 @@
 ---
 layout: review
-hymn_id: let_all_mortal_flesh_keep_silence
-title: "New Hymn: \"Let All Mortal Flesh Keep Silence\""
+hymn_id: the_rock_of_my_heart
+title: "New Hymn: \"The Rock of My Heart\""
 navButton: Reviews
-github_issue: 64
+github_issue: 68
 date: 2018-10-05
 ---
 # Review Instructions
