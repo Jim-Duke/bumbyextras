@@ -46,21 +46,21 @@ prod:	$(PROD_SHEET_MUSIC) \
 local: Sheet-Music.pdf Slides.pdf $(MIDI_FILES)
 
 clean:
-	rm *.pdf
-	rm *.mid
-	rm *.wav
-	rm *.mp3
+	-rm *.pdf
+	-rm *.mid
+	-rm *.wav
+	-rm *.mp3
 
 prodclean:
-	rm $(PROD_SHEET_MUSIC)
-	rm $(PROD_SHEET_MUSIC_THUMBNAIL)
-	rm $(PROD_SLIDES_MUSIC)
-	rm $(PROD_SLIDES_MUSIC_THUMBNAIL)
-	rm $(PROD_ALL_MUSIC)
-	rm $(PROD_SOPRANO_MUSIC)
-	rm $(PROD_ALTO_MUSIC)
-	rm $(PROD_TENOR_MUSIC)
-	rm $(PROD_BASS_MUSIC)
+	-rm $(PROD_SHEET_MUSIC)
+	-rm $(PROD_SHEET_MUSIC_THUMBNAIL)
+	-rm $(PROD_SLIDES_MUSIC)
+	-rm $(PROD_SLIDES_MUSIC_THUMBNAIL)
+	-rm $(PROD_ALL_MUSIC)
+	-rm $(PROD_SOPRANO_MUSIC)
+	-rm $(PROD_ALTO_MUSIC)
+	-rm $(PROD_TENOR_MUSIC)
+	-rm $(PROD_BASS_MUSIC)
 
 Sheet-Music.pdf: Sheet-Music.ly $(COMMON_DEPS)
 	$(LILYPOND) $(LILYPOND_PROD_OPTIONS) Sheet-Music.ly

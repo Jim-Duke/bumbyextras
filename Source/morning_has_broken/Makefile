@@ -5,7 +5,7 @@
 #
 # The following two variables are probably all that needs to be customized for any hymn
 #
-PROD_BASE_NAME = thomas_song
+PROD_BASE_NAME = morning_has_broken
 STATUS = review
 ACCESS = private
 
