@@ -3,6 +3,7 @@ layout: hymn
 hymn_id: the_cost
 title: The Cost
 status: prepared
+access: private
 navButton: Hymns
 github_issue: 75
 date: 2018-10-09

@@ -7,7 +7,7 @@
 #
 PROD_BASE_NAME = o_sacred_head
 STATUS = review
-ACCESS = private
+ACCESS = public
 
 LIBRARY_DIR = ../../../LilypondTemplates
 LIBRARY_FILES = $(LIBRARY_DIR)/functions.ly $(LIBRARY_DIR)/hymns.ly $(LIBRARY_DIR)/standard-elements.ly

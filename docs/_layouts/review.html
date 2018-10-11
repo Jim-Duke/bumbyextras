@@ -1,6 +1,18 @@
 ---
 layout: default
 ---
+{%- assign research=site.research | where: "hymn_id", page.hymn_id -%}
+{%- if research.size > 0 -%}
+{%- assign research_available=true -%}
+{%- else -%}
+{%- assign research_available=nil -%}
+{%- endif -%}
+{%- assign hymn=site.hymns | where: "hymn_id", page.hymn_id -%}
+{%- if hymn.size > 0 -%}
+{%- assign hymn_available=true -%}
+{%- else -%}
+{%- assign hymn_available=nil -%}
+{%- endif -%}
 <div class="container">
   <h1 class="text-center mb-4 font-weight-bold">{{ page.title }}</h1>
   <div class="row">
@@ -12,6 +24,12 @@ layout: default
 {%- if page.github_issue -%}
         <div class="card-footer">
           <a class="btn btn-info" href="https://github.com/{{ site.github_project.owner }}/{{ site.github_project.project }}/issues/{{ page.github_issue }}">GitHub Issue</a>
+{%- endif -%}
+{%- if research_available -%}
+          <a class="btn btn-info" href="{{ research[0].url | relative_url }}">Research Page</a>
+{%- endif -%}
+{%- if hymn_available -%}
+          <a class="btn btn-info" href="{{ hymn[0].url | relative_url }}">Hymn Page</a>
 {%- endif -%}
         </div>
       </div>

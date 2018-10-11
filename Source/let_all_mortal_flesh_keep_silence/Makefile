@@ -7,7 +7,7 @@
 #
 PROD_BASE_NAME = let_all_mortal_flesh_keep_silence
 STATUS = review
-ACCESS = public
+ACCESS = private
 
 LIBRARY_DIR = ../../../LilypondTemplates
 LIBRARY_FILES = $(LIBRARY_DIR)/functions.ly $(LIBRARY_DIR)/hymns.ly $(LIBRARY_DIR)/standard-elements.ly

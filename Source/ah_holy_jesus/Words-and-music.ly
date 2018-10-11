@@ -79,6 +79,7 @@ SopranoVerseMusic = \relative c'' {
 
   \newSpacingSection
   \override Score.SpacingSpanner.spacing-increment = #3.8
+  \override Score.SpacingSpanner.shortest-duration-space = #2.5
 
   d'2 c4 bes4 |
   a2 g2 \bar "|."

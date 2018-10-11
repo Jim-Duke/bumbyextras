@@ -26,10 +26,11 @@ The hymn and tune are in the Public Domain.
 ### Sources
 
 1. [Hymnary Entry](https://hymnary.org/text/immortal_invisible_god_only_wise)
-2. [Cyber Hymnal Entry](www.hymntime.com/tch/htm/i/i/g/iigowise.htm)
+2. [Cyber Hymnal Entry](https://www.hymntime.com/tch/htm/i/i/g/iigowise.htm)
 3. [Original from Hymns of Christ and the Christian Life (1867)]({{ "/assets/immortal_invisible_god_only_wise/original_immortal_invisible_god_only_wise.pdf" | relative_url }})
 4. [Version in "Worship Songs"]({{ "/assets/immortal_invisible_god_only_wise/from_worship_songs.pdf" | relative_url }})
 5. [Version in English Hymns (1906)]({{ "/assets/immortal_invisible_god_only_wise/from_english_hymnal_1906.pdf" | relative_url }})
+6. [Version in The Riverdale Hymn Book (1912)](https://hymnary.org/hymn/RHB1912/page/55)
 
 ### Hymn
 
@@ -44,7 +45,7 @@ The hymn underwent many modifications over the years, by the author as well as b
 were never used except in the original publication.  W.C. Smith revised it in several later publications.  The one in
 "Worship Songs" is the best example.  Sometimes attribution is given to Horder, the editor of the hymnal, but evidence
 suggests that Smith did the revision.  The version published in the influential "English Hymns" of 1906 appears to have been
-modified by the editors of that hymnal.  That version is the one most commonly used in the original.
+modified by the editors of that hymnal.  That version is the one most commonly used.
 
 ### TUNE
 
@@ -58,4 +59,6 @@ Both the hymn and the tune are in the public domain.
 ### Recommendation
 
 In examining the various versions I prefer the English Hymns revision.  I think it is faithful to the original but is actually
-easier to both sing and understand.
+easier to both sing and understand.  I cannot find a scan of the version of the English Hymnal with tunes; so had to resort
+to using later editions.  The Riverdale Hymn Book is the oldest version that seems to have the favored arrangement, which
+I believe to be the one that Ralph Vaughan Williams harmonized.

@@ -218,7 +218,7 @@ VerseTwo = \lyricmode {
 VerseThree = \lyricmode {
   \set stanza = "3. "
   Be Thou my bat -- tle Shield, Sword for the fight;
-  Be Thou my Ar -- mour, and be Thou my might;
+  Be Thou my whole Ar -- mour, be Thou my might;
   Thou my soul's Shel -- ter, Thou my high Tow'r;
   Raise Thou me heav'n -- ward, O Pow'r of my pow'r.
 }

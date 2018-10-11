@@ -15,3 +15,8 @@ date: 2018-09-24 23:14:00 -0500
 - Look at the slides to be sure they would be easily readable when projected
 - Any overall comments or suggestions
 - Be sure to look at the research which provide sources for the original verses
+
+# HYMN and Tune
+
+See the research for the analysis.  The recommendation was to take the Sumphonia version
+from Psalms Hymns and Spiritual songs without modification.
