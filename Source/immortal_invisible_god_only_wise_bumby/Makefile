@@ -5,7 +5,7 @@
 #
 # The following two variables are probably all that needs to be customized for any hymn
 #
-PROD_BASE_NAME = ah_holy_jesus_bumby
+PROD_BASE_NAME = immortal_invisible_god_only_wise_bumby
 STATUS = review
 ACCESS = public
 

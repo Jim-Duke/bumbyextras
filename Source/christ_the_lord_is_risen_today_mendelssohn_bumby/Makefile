@@ -5,7 +5,7 @@
 #
 # The following two variables are probably all that needs to be customized for any hymn
 #
-PROD_BASE_NAME = ah_holy_jesus_bumby
+PROD_BASE_NAME = christ_the_lord_is_risen_today_mendelssohn_bumby
 STATUS = review
 ACCESS = public
 

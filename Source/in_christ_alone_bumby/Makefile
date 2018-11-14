@@ -5,9 +5,9 @@
 #
 # The following two variables are probably all that needs to be customized for any hymn
 #
-PROD_BASE_NAME = ah_holy_jesus_bumby
+PROD_BASE_NAME = in_christ_alone_bumby
 STATUS = review
-ACCESS = public
+ACCESS = private
 
 LIBRARY_DIR = ../../../LilypondTemplates
 LIBRARY_FILES = $(LIBRARY_DIR)/functions.ly $(LIBRARY_DIR)/hymns.ly $(LIBRARY_DIR)/standard-elements.ly

@@ -1,4 +1,4 @@
-TOPTARGETS := all clean prodclean
+TOPTARGETS := clean prodclean local prod
 
 SUBDIRS := $(wildcard */.)
 

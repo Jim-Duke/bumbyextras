@@ -5,9 +5,9 @@
 #
 # The following two variables are probably all that needs to be customized for any hymn
 #
-PROD_BASE_NAME = ah_holy_jesus_bumby
+PROD_BASE_NAME = listen_to_our_hearts_bumby
 STATUS = review
-ACCESS = public
+ACCESS = private
 
 LIBRARY_DIR = ../../../LilypondTemplates
 LIBRARY_FILES = $(LIBRARY_DIR)/functions.ly $(LIBRARY_DIR)/hymns.ly $(LIBRARY_DIR)/standard-elements.ly
@@ -44,43 +44,6 @@ prod:	$(PROD_SHEET_MUSIC) \
 	$(PROD_BASS_MUSIC)
 
 local: Sheet-Music.pdf Slides.pdf $(MIDI_FILES)
-
-clean:
-	-rm *.pdf
-	-rm *.mid
-	-rm *.mp3
-
-prodclean:
-	-rm $(PROD_SHEET_MUSIC)
-	-rm $(PROD_SHEET_MUSIC_THUMBNAIL)
-	-rm $(PROD_SLIDES_MUSIC)
-	-rm $(PROD_SLIDES_MUSIC_THUMBNAIL)
-	-rm $(PROD_ALL_MUSIC)
-	-rm $(PROD_SOPRANO_MUSIC)
-	-rm $(PROD_ALTO_MUSIC)
-	-rm $(PROD_TENOR_MUSIC)
-	-rm $(PROD_BASS_MUSIC)
-
-Sheet-Music.pdf: Sheet-Music.ly $(COMMON_DEPS)
-	$(LILYPOND) $(LILYPOND_PROD_OPTIONS) Sheet-Music.ly
-
-Slides.pdf: Slides.ly $(COMMON_DEPS)
-	$(LILYPOND) $(LILYPOND_PROD_OPTIONS) Slides.ly
-
-$(MIDI_FILES): Audio.ly $(COMMON_DEPS) $(LIBRARY_DIR)/midi.ly
-	$(LILYPOND) $(LILYPOND_PROD_OPTIONS) Audio.ly
-
-$(PROD_SHEET_MUSIC): $(BUILD_DIR) Sheet-Music.pdf
-	cp Sheet-Music.pdf $(PROD_SHEET_MUSIC)
-
-$(PROD_SHEET_MUSIC_THUMBNAIL): $(PUBLIC_BUILD_DIR) Sheet-Music.pdf
-	convert -thumbnail $(THUMBNAIL_RESOLUTION) -background white -alpha remove Sheet-Music.pdf[0] $(PROD_SHEET_MUSIC_THUMBNAIL)
-
-$(PROD_SLIDES_MUSIC): $(BUILD_DIR) Slides.pdf
-	pdftk Slides.pdf multibackground ../../media/slide_background_4x3.pdf output $(PROD_SLIDES_MUSIC)
-
-$(PROD_SLIDES_MUSIC_THUMBNAIL): $(PUBLIC_BUILD_DIR) $(PROD_SLIDES_MUSIC)
-	convert -thumbnail $(THUMBNAIL_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[0] $(PROD_SLIDES_MUSIC_THUMBNAIL)
 
 #Audio_all.wav: Audio_all.mid
 #	fluidsynth -F $@ $(SOUNDFONT) $<
@@ -126,6 +89,43 @@ $(PROD_TENOR_MUSIC): Audio_tenor.mp3 $(PUBLIC_BUILD_DIR)
 
 $(PROD_BASS_MUSIC): Audio_bass.mp3 $(PUBLIC_BUILD_DIR)
 	cp $< $@
+
+clean:
+	-rm *.pdf
+	-rm *.mid
+	-rm *.mp3
+
+prodclean:
+	-rm $(PROD_SHEET_MUSIC)
+	-rm $(PROD_SHEET_MUSIC_THUMBNAIL)
+	-rm $(PROD_SLIDES_MUSIC)
+	-rm $(PROD_SLIDES_MUSIC_THUMBNAIL)
+	-rm $(PROD_ALL_MUSIC)
+	-rm $(PROD_SOPRANO_MUSIC)
+	-rm $(PROD_ALTO_MUSIC)
+	-rm $(PROD_TENOR_MUSIC)
+	-rm $(PROD_BASS_MUSIC)
+
+Sheet-Music.pdf: Sheet-Music.ly $(COMMON_DEPS)
+	$(LILYPOND) $(LILYPOND_PROD_OPTIONS) Sheet-Music.ly
+
+Slides.pdf: Slides.ly $(COMMON_DEPS)
+	$(LILYPOND) $(LILYPOND_PROD_OPTIONS) Slides.ly
+
+$(MIDI_FILES): Audio.ly $(COMMON_DEPS) $(LIBRARY_DIR)/midi.ly
+	$(LILYPOND) $(LILYPOND_PROD_OPTIONS) Audio.ly
+
+$(PROD_SHEET_MUSIC): $(BUILD_DIR) Sheet-Music.pdf
+	cp Sheet-Music.pdf $(PROD_SHEET_MUSIC)
+
+$(PROD_SHEET_MUSIC_THUMBNAIL): $(PUBLIC_BUILD_DIR) Sheet-Music.pdf
+	convert -thumbnail $(THUMBNAIL_RESOLUTION) -background white -alpha remove Sheet-Music.pdf[0] $(PROD_SHEET_MUSIC_THUMBNAIL)
+
+$(PROD_SLIDES_MUSIC): $(BUILD_DIR) Slides.pdf
+	pdftk Slides.pdf multibackground ../../media/slide_background_4x3.pdf output $(PROD_SLIDES_MUSIC)
+
+$(PROD_SLIDES_MUSIC_THUMBNAIL): $(PUBLIC_BUILD_DIR) $(PROD_SLIDES_MUSIC)
+	convert -thumbnail $(THUMBNAIL_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[0] $(PROD_SLIDES_MUSIC_THUMBNAIL)
 
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
