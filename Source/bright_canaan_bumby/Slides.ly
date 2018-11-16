@@ -45,15 +45,15 @@ VerseTitleMarkup = \markup {
           \line {
             "Hymn:"
             \fromproperty #'header:meter
-            \char ##x2022
-            \fromproperty #'header:poet
+            \optional-field "• " #'header:poet
           }
           \line {
             "Tune:"
             \fromproperty #'header:tune
-            \char ##x2022
-            \fromproperty #'header:composer
-            \char ##x2022 "arr."
+            \optional-field "• " #'header:composer
+          }
+          \line {
+            "Arranger: "
             \fromproperty #'header:arranger
           }
           \line {
@@ -89,7 +89,7 @@ VerseTitleMarkup = \markup {
     #(layout-set-staff-size 44)
   }
   \pageBreak
-  \VerseTitleMarkup
+  \VerseTitleMarkup \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -130,7 +130,7 @@ VerseTitleMarkup = \markup {
     >>
     \SlideLayout
   }
-  \VerseTitleMarkup
+  \VerseTitleMarkup \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -171,7 +171,7 @@ VerseTitleMarkup = \markup {
     >>
     \SlideLayout
   }
-  \VerseTitleMarkup
+  \VerseTitleMarkup \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -212,7 +212,7 @@ VerseTitleMarkup = \markup {
     >>
     \SlideLayout
   }
-  \VerseTitleMarkup
+  \VerseTitleMarkup \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -253,7 +253,6 @@ VerseTitleMarkup = \markup {
     >>
     \SlideLayout
   }
-  \VerseTitleMarkup
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -261,22 +260,22 @@ VerseTitleMarkup = \markup {
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
+            \keepWithTag #'usePartials \SopranoChorusMusic
           }
           {
             \global
-            \keepWithTag #'usePartials \AltoVerseMusic
+            \keepWithTag #'usePartials \AltoChorusMusic
           }
         \new NullVoice = breaks {
           \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
+          \keepWithTag #'usePartials \SlidesChorusBreaks
         }
         \new NullVoice = alignVoice {
           \global
-          \keepWithTag #'usePartials \SopranoVerseMusic
+          \keepWithTag #'usePartials \SopranoChorusMusic
         }
         \new Lyrics \lyricsto "alignVoice" {
-          \huge \VerseFive
+          \huge \ChorusLyrics
         }
       >>
       \context Staff = lower <<
@@ -284,11 +283,11 @@ VerseTitleMarkup = \markup {
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \TenorVerseMusic
+            \keepWithTag #'usePartials \TenorChorusMusic
           }
           {
             \global
-            \keepWithTag #'usePartials \BassVerseMusic
+            \keepWithTag #'usePartials \BassChorusMusic
           }
       >>
     >>

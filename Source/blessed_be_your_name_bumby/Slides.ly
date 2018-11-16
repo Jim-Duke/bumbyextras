@@ -6,6 +6,25 @@ SlideStaffStaffSpacing = #16
 
 \include "../../../LilypondTemplates/standard-elements.ly"
 
+VerseTitleMarkup = \markup {
+    \fill-line {
+      \null
+      \raise #1
+      \override #'(line-width . 70)
+      \center-column {
+        \abs-fontsize #40
+        \bold
+        \Title
+      }
+      {
+        \abs-fontsize #40
+        \bold
+        \raise #1
+        \SongNumber
+      }
+    }
+  }
+
 \book {
   \paper {
     #(set-paper-size "arch alandscape" )
@@ -70,6 +89,7 @@ SlideStaffStaffSpacing = #16
     #(layout-set-staff-size 44)
   }
   \pageBreak
+  \VerseTitleMarkup
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -110,6 +130,7 @@ SlideStaffStaffSpacing = #16
     >>
     \SlideLayout
   }
+  \VerseTitleMarkup
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)

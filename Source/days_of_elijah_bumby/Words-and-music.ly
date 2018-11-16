@@ -12,8 +12,8 @@ global = {
 
 MajorKey = ##t
 
-title = "Days of Elijah"
-songNumber = \days_of_elijah_bumby_number
+Title = "Days of Elijah"
+SongNumber = \days_of_elijah_bumby_number
 leaderHints = \markup {
   \fontsize #-4
   \normal-text { "A" \musicglyph #"accidentals.flat" " - 4 - SOL" }
@@ -24,9 +24,9 @@ FirstPage = #(if number_on_rhs 1 2)
 #(if number_on_rhs
      (begin
       (define lhs leaderHints)
-      (define rhs songNumber))
+      (define rhs SongNumber))
      (begin
-      (define lhs songNumber)
+      (define lhs SongNumber)
       (define rhs leaderHints)))
 
 \header {
@@ -35,7 +35,7 @@ FirstPage = #(if number_on_rhs 1 2)
   meter = "Irregular"
   composer = "Robin Mark"
   poet = "Robin Mark"
-  songNumber = \songNumber
+  songNumber = \SongNumber
   lhs = \lhs
   rhs = \rhs
   copyright = \markup {

@@ -12,8 +12,8 @@ global = {
 
 MajorKey = ##t
 
-title = "Teach Me Lord to Wait"
-songNumber = \teach_me_lord_to_wait_bumby_number
+Title = "Teach Me Lord to Wait"
+SongNumber = \teach_me_lord_to_wait_bumby_number
 leaderHints = \markup {
   \fontsize #-4
   \normal-text { "F - 3 - SOL" }
@@ -24,9 +24,9 @@ FirstPage = #(if number_on_rhs 1 2)
 #(if number_on_rhs
      (begin
       (define lhs leaderHints)
-      (define rhs songNumber))
+      (define rhs SongNumber))
      (begin
-      (define lhs songNumber)
+      (define lhs SongNumber)
       (define rhs leaderHints)))
 
 \header {
@@ -35,7 +35,7 @@ FirstPage = #(if number_on_rhs 1 2)
   meter = ""
   composer = "Stuart Hamblen, 1953"
   poet = "Stuart Hamblen, 1953"
-  songNumber = \songNumber
+  songNumber = \SongNumber
   lhs = \lhs
   rhs = \rhs
   copyright = \markup {

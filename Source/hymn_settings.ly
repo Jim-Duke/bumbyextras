@@ -167,3 +167,11 @@ morning_has_broken_bumby_pages = 1
 naked_as_from_the_earth_we_came_winchester_old_bumby_number = "X-016"
 naked_as_from_the_earth_we_came_winchester_old_bumby_number_rhs = ##t
 naked_as_from_the_earth_we_came_winchester_old_bumby_pages = 1
+
+bright_canaan_bumby_number = "X-017"
+bright_canaan_bumby_number_rhs = ##t
+bright_canaan_bumby_pages = 1
+
+what_wondrous_love_is_this_bumby_number = "X-018"
+what_wondrous_love_is_this_bumby_number_rhs = ##t
+what_wondrous_love_is_this_bumby_pages = 1

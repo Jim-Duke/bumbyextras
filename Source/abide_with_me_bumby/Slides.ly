@@ -22,7 +22,6 @@ VerseTitleMarkup = \markup {
     }
   }
 
-
 \book {
   \paper {
     #(set-paper-size "arch alandscape" )

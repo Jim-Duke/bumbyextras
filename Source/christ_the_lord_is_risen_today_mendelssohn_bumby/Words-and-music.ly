@@ -185,39 +185,39 @@ SheetMusicVerseBreaks = \relative c {
 SlidesVerseBreaks = \relative c {
   \setSystemOffset \defaultTopSystemOffset
   s1 | \noBreak
-  s1 | \break
+  s1 | \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s1 | \noBreak
-  s1 | \break
+  s1 | \pageBreak
 
   \setSystemOffset \defaultTopSystemOffset
   s1 | \noBreak
-  s1 | \break
+  s1 | \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s1 | \noBreak
-  s1 | \break
+  s1 | \pageBreak
 
   \setSystemOffset \defaultTopSystemOffset
   s1 | \noBreak
-  s1 | \break
+  s1 | \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s1 | \noBreak
-  s1 | \break
+  s1 | \pageBreak
 
   \setSystemOffset \defaultTopSystemOffset
   s1 | \noBreak
-  s1 | \break
+  s1 | \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s1 | \noBreak
-  s1 | \break
+  s1 | \pageBreak
 
   \setSystemOffset \defaultTopSystemOffset
   s1 | \noBreak
-  s1 | \break
+  s1 | \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s1 | \noBreak
