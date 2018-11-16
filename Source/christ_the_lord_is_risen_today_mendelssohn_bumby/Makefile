@@ -82,35 +82,35 @@ $(PROD_SLIDES_MUSIC): $(BUILD_DIR) Slides.pdf
 $(PROD_SLIDES_MUSIC_THUMBNAIL): $(PUBLIC_BUILD_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(THUMBNAIL_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[0] $(PROD_SLIDES_MUSIC_THUMBNAIL)
 
-#Audio_all.wav: Audio_all.mid
-#	fluidsynth -F $@ $(SOUNDFONT) $<
-#
-#Audio_all.mp3: Audio_all.wav
-#	lame -V2 $< $@
-#
-#Audio_soprano.wav: Audio_soprano.mid
-#	fluidsynth -F $@ $(SOUNDFONT) $<
-#
-#Audio_soprano.mp3: Audio_soprano.wav
-#	lame -V2 $< $@
-#
-#Audio_alto.wav: Audio_alto.mid
-#	fluidsynth -F $@ $(SOUNDFONT) $<
-#
-#Audio_alto.mp3: Audio_alto.wav
-#	lame -V2 $< $@
-#
-#Audio_tenor.wav: Audio_tenor.mid
-#	fluidsynth -F $@ $(SOUNDFONT) $<
-#
-#Audio_tenor.mp3: Audio_tenor.mid
-#	lame -V2 $< $@
-#
-#Audio_bass.wav: Audio_bass.mid
-#	fluidsynth -F $@ $(SOUNDFONT) $<
-#
-#Audio_bass.mp3: Audio_bass.wav
-#	lame -V2 $< $@
+Audio_all.wav: Audio_all.mid
+	fluidsynth -F $@ $(SOUNDFONT) $<
+
+Audio_all.mp3: Audio_all.wav
+	lame -V2 $< $@
+
+Audio_soprano.wav: Audio_soprano.mid
+	fluidsynth -F $@ $(SOUNDFONT) $<
+
+Audio_soprano.mp3: Audio_soprano.wav
+	lame -V2 $< $@
+
+Audio_alto.wav: Audio_alto.mid
+	fluidsynth -F $@ $(SOUNDFONT) $<
+
+Audio_alto.mp3: Audio_alto.wav
+	lame -V2 $< $@
+
+Audio_tenor.wav: Audio_tenor.mid
+	fluidsynth -F $@ $(SOUNDFONT) $<
+
+Audio_tenor.mp3: Audio_tenor.wav
+	lame -V2 $< $@
+
+Audio_bass.wav: Audio_bass.mid
+	fluidsynth -F $@ $(SOUNDFONT) $<
+
+Audio_bass.mp3: Audio_bass.wav
+	lame -V2 $< $@
 
 $(PROD_ALL_MUSIC): Audio_all.mp3 $(PUBLIC_BUILD_DIR)
 	cp $< $@

@@ -227,7 +227,7 @@ VerseOne = \lyricmode {
   that caused the Lord of bliss
   to bear the dread -- ful curse
   for my soul, for my soul,
-  to ber the dread -- ful curse
+  to bear the dread -- ful curse
   for my soul!
 }
 
