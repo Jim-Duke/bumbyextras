@@ -98,80 +98,82 @@ lord_reign_in_me_bumby_number = "B-016"
 lord_reign_in_me_bumby_number_rhs = ##f
 lord_reign_in_me_bumby_pages = 2
 
+the_rock_of_my_heart_bumby_number = "B-017"
+the_rock_of_my_heart_bumby_number_rhs = ##f
+the_rock_of_my_heart_bumby_pages = 2
+
+thomas_song_bumby_number = "B-018"
+thomas_song_bumby_number_rhs = ##f
+thomas_song_bumby_pages = 2
+
+the_cost_bumby_number = "B-019"
+the_cost_bumby_number_rhs = ##f
+the_cost_bumby_pages = 1
+
+god_of_the_living_in_whose_eyes_bumby_number = "B-020"
+god_of_the_living_in_whose_eyes_bumby_number_rhs = ##t
+god_of_the_living_in_whose_eyes_bumby_pages = 1
+
+blessed_be_your_name_bumby_number = "B-021"
+blessed_be_your_name_bumby_number_rhs = ##f
+blessed_be_your_name_bumby_pages = 2
+
+immanuel_god_with_us_bumby_number = "B-022"
+immanuel_god_with_us_bumby_number_rhs = ##f
+immanuel_god_with_us_bumby_pages = 1
+
+morning_has_broken_bumby_number = "B-023"
+morning_has_broken_bumby_number_rhs = ##t
+morning_has_broken_bumby_pages = 1
+
+my_god_I_thank_you_who_have_made_bumby_number = "B-024"
+my_god_I_thank_you_who_have_made_bumby_number_rhs = ##f
+my_god_I_thank_you_who_have_made_bumby_pages = 1
+
+bright_canaan_bumby_number = "B-025"
+bright_canaan_bumby_number_rhs = ##t
+bright_canaan_bumby_pages = 1
+
+what_the_lord_has_done_in_me_bumby_number = "B-026"
+what_the_lord_has_done_in_me_bumby_number_rhs = ##f
+what_the_lord_has_done_in_me_bumby_pages = 1
+
+o_sacred_head_bumby_number = "B-027"
+o_sacred_head_bumby_number_rhs = ##t
+o_sacred_head_bumby_pages = 1
+
+all_glory_laud_and_honor_bumby_a_number = "B-028"
+all_glory_laud_and_honor_bumby_a_number_rhs = ##f
+all_glory_laud_and_honor_bumby_a_pages = 1
+
+all_glory_laud_and_honor_bumby_b_number = "B-028"
+all_glory_laud_and_honor_bumby_b_number_rhs = ##t
+all_glory_laud_and_honor_bumby_b_pages = 1
+
+immortal_invisible_god_only_wise_bumby_number = "B-029"
+immortal_invisible_god_only_wise_bumby_number_rhs = ##f
+immortal_invisible_god_only_wise_bumby_pages = 1
+
+what_wondrous_love_is_this_bumby_number = "B-030"
+what_wondrous_love_is_this_bumby_number_rhs = ##t
+what_wondrous_love_is_this_bumby_pages = 1
+
+naked_as_from_the_earth_we_came_hatfield_bumby_number = "B-031"
+naked_as_from_the_earth_we_came_hatfield_bumby_number_rhs = ##f
+naked_as_from_the_earth_we_came_hatfield_bumby_pages = 1
+
+naked_as_from_the_earth_we_came_winchester_old_bumby_number = "B-032"
+naked_as_from_the_earth_we_came_winchester_old_bumby_number_rhs = ##t
+naked_as_from_the_earth_we_came_winchester_old_bumby_pages = 1
+
+let_all_mortal_flesh_keep_silence_bumby_number = "B-033"
+let_all_mortal_flesh_keep_silence_bumby_number_rhs = ##f
+let_all_mortal_flesh_keep_silence_bumby_pages = 1
+
 %%%
 %%% Unassigned
 %%%
 
-% X-001
-% What the Lord Has Done in Me
-what_the_lord_has_done_in_me_bumby_number = "X-001"
-what_the_lord_has_done_in_me_bumby_number_rhs = ##t
-what_the_lord_has_done_in_me_bumby_pages = 1
-
-immortal_invisible_god_only_wise_bumby_number = "X-002"
-immortal_invisible_god_only_wise_bumby_number_rhs = ##t
-immortal_invisible_god_only_wise_bumby_pages = 1
-
-god_of_the_living_in_whose_eyes_bumby_number = "X-003"
-god_of_the_living_in_whose_eyes_bumby_number_rhs = ##t
-god_of_the_living_in_whose_eyes_bumby_pages = 1
-
-listen_to_our_hearts_bumby_number = "X-004"
-listen_to_our_hearts_bumby_number_rhs = ##f
-listen_to_our_hearts_bumby_pages = 2
-
-all_glory_laud_and_honor_bumby_number = "X-005"
-all_glory_laud_and_honor_bumby_number_rhs = ##t
-all_glory_laud_and_honor_bumby_pages = 1
-
-immanuel_god_with_us_bumby_number = "X-006"
-immanuel_god_with_us_bumby_number_rhs = ##t
-immanuel_god_with_us_bumby_pages = 1
-
-let_all_mortal_flesh_keep_silence_bumby_number = "X-007"
-let_all_mortal_flesh_keep_silence_bumby_number_rhs = ##t
-let_all_mortal_flesh_keep_silence_bumby_pages = 1
-
-my_god_I_thank_you_who_have_made_bumby_number = "X-008"
-my_god_I_thank_you_who_have_made_bumby_number_rhs = ##t
-my_god_I_thank_you_who_have_made_bumby_pages = 1
-
-o_sacred_head_bumby_number = "X-009"
-o_sacred_head_bumby_number_rhs = ##t
-o_sacred_head_bumby_pages = 1
-
-the_rock_of_my_heart_bumby_number = "X-010"
-the_rock_of_my_heart_bumby_number_rhs = ##t
-the_rock_of_my_heart_bumby_pages = 1
-
-blessed_be_your_name_bumby_number = "X-011"
-blessed_be_your_name_bumby_number_rhs = ##t
-blessed_be_your_name_bumby_pages = 1
-
-thomas_song_bumby_number = "X-012"
-thomas_song_bumby_number_rhs = ##t
-thomas_song_bumby_pages = 2
-
-naked_as_from_the_earth_we_came_hatfield_bumby_number = "X-013"
-naked_as_from_the_earth_we_came_hatfield_bumby_number_rhs = ##t
-naked_as_from_the_earth_we_came_hatfield_bumby_pages = 1
-
-the_cost_bumby_number = "X-014"
-the_cost_bumby_number_rhs = ##t
-the_cost_bumby_pages = 1
-
-morning_has_broken_bumby_number = "X-015"
-morning_has_broken_bumby_number_rhs = ##t
-morning_has_broken_bumby_pages = 1
-
-naked_as_from_the_earth_we_came_winchester_old_bumby_number = "X-016"
-naked_as_from_the_earth_we_came_winchester_old_bumby_number_rhs = ##t
-naked_as_from_the_earth_we_came_winchester_old_bumby_pages = 1
-
-bright_canaan_bumby_number = "X-017"
-bright_canaan_bumby_number_rhs = ##t
-bright_canaan_bumby_pages = 1
-
-what_wondrous_love_is_this_bumby_number = "X-018"
-what_wondrous_love_is_this_bumby_number_rhs = ##t
-what_wondrous_love_is_this_bumby_pages = 1
+weeping_garden_bumby_number ="X-001"
+weeping_garden_bumby_number_rhs = ##t
+weeping_garden_bumby_pages = 1

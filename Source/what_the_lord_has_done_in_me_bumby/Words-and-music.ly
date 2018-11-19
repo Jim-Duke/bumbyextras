@@ -203,7 +203,7 @@ AlignRefrainMusic = \relative c {
   c2 \bar "|."
 }
 
-SheetMusicVerseBreaks = \relative c {
+SheetMusicVerseBreaks = {
   \tag #'usePartials { \partial 4 }
   s4  | \noBreak
   s2. | \noBreak
@@ -216,6 +216,21 @@ SheetMusicVerseBreaks = \relative c {
   s2. | \noBreak
   s2. | \noBreak
   s2  \bar "" \break
+}
+
+SheetMusicRefrainBreaks = {
+  \tag #'usePartials { \partial 4 }
+  s4  | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break \noPageBreak
+  
+  s4  | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2  \bar "|."
 }
 
 SlidesVerseBreaks = \relative c {

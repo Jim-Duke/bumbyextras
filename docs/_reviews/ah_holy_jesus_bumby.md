@@ -1,6 +1,6 @@
 ---
 layout: review
-hymn_id: ah_holy_jesus
+hymn_id: ah_holy_jesus_bumby
 title: Updates to "Ah Holy Jesus"
 navButton: Reviews
 github_issue: 78

@@ -31,7 +31,7 @@ SheetMusicLyricsMinimumDistance = #1
     binding-offset = 0.5\in
     top-margin = 0.25\in
     bottom-margin = 0.25\in
-    ragged-right = ##f
+    ragged-right = ##t
     ragged-last = \SheetMusicRaggedLast
     print-page-number = ##f
     ragged-bottom = \SheetMusicRaggedBottom
@@ -42,19 +42,22 @@ SheetMusicLyricsMinimumDistance = #1
           \line {
             "Hymn:"
             \fromproperty #'header:meter
-            \char ##x2022
-            \fromproperty #'header:poet
+            \optional-field "• " #'header:poet
+            \optional-field "• tr. " #'header:translator
+            \optional-field "• vs. " #'header:versifier
           }
           \line {
             "Tune:"
             \fromproperty #'header:tune
-            \char ##x2022
-            \fromproperty #'header:composer
+            \optional-field "• " #'header:composer
+            \optional-field "• arr. " #'header:arranger
           }
           \line {
             \fromproperty #'header:copyright
-            \char ##x2022
-            \fromproperty #'header:license
+            \optional-field "• " #'header:license
+          }
+          \line {
+            "Visit https://hymnal.bumby.org/ for more information about this and other hymns in the Bumby Hymnal"
           }
         }
       }
@@ -125,7 +128,6 @@ SheetMusicLyricsMinimumDistance = #1
     >>
     \SheetMusicVerseLayout
   }
-  \pageBreak
   \markup { \bold "Refrain:" }
   \score {
     \context ChoirStaff <<
@@ -140,10 +142,10 @@ SheetMusicLyricsMinimumDistance = #1
             \global
             \keepWithTag #'usePartials \AltoRefrainMusic
           }
-%        \context NullVoice = refreainBreaks {
-%          \global
-%          \keepWithTag #'usePartials \sheetMusicRefrainBreaks
-%        }
+        \context NullVoice = refreainBreaks {
+          \global
+          \keepWithTag #'usePartials \SheetMusicRefrainBreaks
+        }
         \context NullVoice = alignTop {
           \global
           \keepWithTag #'usePartials \SopranoRefrainMusic

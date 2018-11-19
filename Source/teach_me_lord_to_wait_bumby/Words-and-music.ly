@@ -54,7 +54,7 @@ Scripture = #"“But those who wait on the LORD Shall renew their strength;
 %
 % Rhythms for the sheet music with line break controls
 %
-sheetMusicBreaks = \relative c {
+SheetMusicBreaks = {
   \tag #'usePartials { \partial 4 }
   s4  | \noBreak
   s2. | \noBreak
@@ -81,43 +81,83 @@ sheetMusicBreaks = \relative c {
   s2 \bar "|."
 }
 
+SheetMusicChorusBreaks = {
+  \tag #'usePartials { \partial 4 }
+  s4  | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break \noPageBreak
+  
+  s4  | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break \noPageBreak
+  
+  s4  | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2  \bar "" \break \noPageBreak
+  
+  s4  | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2 \bar "|."
+}
+
+EchoAlign = {
+  \tag #'usePartials { \partial 4 }
+  s4 |
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  
+  s2. |
+  s2. |
+  s2. |
+  c2 c4 |
+}
+
 slideMusicBreaks = \relative c {
   \tag #'usePartials { \partial 4 }
   
   \setSystemOffset \defaultTopSystemOffset
   s4    | \noBreak
   s2.   | \noBreak
-  s2 s8 \bar "" \break
+  s2 s8 \bar "" \break \noPageBreak
   
-  \setSystemOffset \defaultBottomSystemOffset
+  \setSystemOffset #32
   s8  | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break \pageBreak
+  s2  \bar "" \pageBreak
   
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break
+  s2  \bar "" \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s4  | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break \pageBreak
+  s2  \bar "" \pageBreak
   
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break
+  s2  \bar "" \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s4  | \noBreak
   s2. | \noBreak
-  s2 \bar "" \break \pageBreak
+  s2 \bar "" \pageBreak
   
   \setSystemOffset \defaultTopSystemOffset
   s4  | \noBreak
   s2. | \noBreak
-  s2  \bar "" \break
+  s2  \bar "" \break \noPageBreak
   
   \setSystemOffset \defaultBottomSystemOffset
   s4  | \noBreak
@@ -135,7 +175,7 @@ slideChorusBreaks = \relative c {
   s2  \bar "" \break \noPageBreak
   
   % shall renew their strength,
-  \setSystemOffset \defaultBottomSystemOffset
+  \setSystemOffset #32
   s4  | \noBreak
   s2. | \noBreak
   s2  \bar "" \break \pageBreak
@@ -185,13 +225,13 @@ sopranoVerse = \relative c' {
   f2 f4 |
   f8.( d16 c4.) f8 |
   a4 a4 a4 |
-  a8.( g16 f4) \bar ""
+  a8.( g16 f4)
   
   e8. f16 |
   g4 g4 g4 |
   g4( f4) g4 |
   a4 a4 gis4 |
-  a8.( g16 f4) \bar ""
+  a8.( g16 f4)
   
   g8. a16 |
   \tag #'verseOneRhythms { bes4 bes4 }
@@ -203,7 +243,7 @@ sopranoVerse = \relative c' {
   \tag #'verseTwoRhythms { a2 }
   \tag #'sheetMusicRhythms { a4( a4) }
   gis4 |
-  a8.( g16 f4) \bar ""
+  a8.( g16 f4)
   
   e8. f16 |
   \tag #'verseOneRhythms { g2 }
@@ -221,13 +261,13 @@ altoVerse = \relative c' {
   c2 c4 |
   c8.( d16 c4.) c8 |
   f4 f4 f4 |
-  f8.( d16 c4) \bar ""
+  f8.( d16 c4)
   
   c8. d16 |
   e4 e4 e4 |
   e4( d4) e4 |
   f4 f4 d4 |
-  f8.( d16 c4) \bar ""
+  f8.( d16 c4)
   
   c8. f16 |
   \tag #'verseOneRhythms { f4 f4 }
@@ -239,7 +279,7 @@ altoVerse = \relative c' {
   \tag #'verseTwoRhythms { f2 }
   \tag #'sheetMusicRhythms { f4( f4) }
   f4 |
-  f8.( d16 c4) \bar ""
+  f8.( d16 c4)
   
   c8. d16 |
   \tag #'verseOneRhythms { e2 }
@@ -256,13 +296,13 @@ tenorVerse = \relative c' {
   a8. a16 |
   a2 a4 |
   a8.( bes16 a4.) a8 |
-  a4 a4 a4 | c8.( bes16 a4) \bar ""
+  a4 a4 a4 | c8.( bes16 a4)
   
   g8. a16 |
   bes4 bes4 bes4 |
   bes4( a4) bes4 |
   c4 c4 b4 |
-  c8.( bes16 a4) \bar ""
+  c8.( bes16 a4)
   
   ees'8. ees16 |
   \tag #'verseOneRhythms { d4 d4 }
@@ -274,7 +314,7 @@ tenorVerse = \relative c' {
   \tag #'verseTwoRhythms { c2 }
   \tag #'sheetMusicRhythms { c4( c4) }
   b4 |
-  c8.( bes16 a4) \bar ""
+  c8.( bes16 a4)
   
   g8. a16 |
   \tag #'verseOneRhythms { bes2 }
@@ -292,13 +332,13 @@ bassVerse = \relative c {
   f2 f4 |
   f4~ f4. f8 |
   f4 f4 f4 |
-  f2 \bar ""
+  f2
   
   c8. c16 |
   c4 c4 c4 |
   c4~ c4 c4 |
   f4 f4 f4 |
-  f2 \bar ""
+  f2
   
   c'8. c16 |
   \tag #'verseOneRhythms { bes4 bes4 }
@@ -310,7 +350,7 @@ bassVerse = \relative c {
   \tag #'verseTwoRhythms { f2 }
   \tag #'sheetMusicRhythms { f4( f4) }
   f4 |
-  f2 \bar ""
+  f2
   
   c8. c16 |
   \tag #'verseOneRhythms { c2 }
@@ -326,15 +366,16 @@ sopranoChorus = \relative c' {
   \tag #'usePartials { \partial 4 }
   c8. d16 |
   f4. d8 f8. d16 |
-  f8.( d16 c4) \bar ""
+  f8.( d16 c4)
   
   f8. g16 |
   a2 a4 |
-  a8.( g16 f4) \bar ""
+  a8.( g16 f4)
   
   e8. f16 |
   g4 g4. g8 |
-  g4( f4) \bar ""
+  g4( f4)
+  
   g4 |
   a4 c2~ |
   c2 f8 e8 |
@@ -351,15 +392,15 @@ altoChorus = \relative c' {
   \tag #'usePartials { \partial 4 }
   c8. d16 |
   c4. d8 c8. d16 |
-  c8.( d16 c4) \bar ""
+  c8.( d16 c4)
   
   c8. e16 |
   f2 f4 |
-  f8.( d16 c4) \bar ""
+  f8.( d16 c4)
   
   c8. d16 |
   e4 e4. e8 |
-  e4( d4) \bar ""
+  e4( d4)
   e4 |
   f4 f2 |
   a4( bes4) c4 |
@@ -376,18 +417,18 @@ tenorChorus = \relative c' {
   \tag #'usePartials { \partial 4 }
   a8. bes16 |
   a4. bes8 a8. bes16 |
-  a8.( bes16 a4) \bar ""
+  a8.( bes16 a4)
   
   a8. bes16 |
   c2 c4 |
-  c8.( bes16 a4) \bar ""
+  c8.( bes16 a4)
   
   g8. a16 |
   bes4 bes4. bes8 |
-  bes4( a4) \bar ""
+  bes4( a4)
   bes4 |
   c4 a2 |
-  f'2^"They" f4^"shall" |
+  f'2 f4 |
   f4. f8 f8. f16 |
   f4 d4 d8. f16 |
   f4. a,8 c4 |
@@ -401,15 +442,16 @@ bassChorus = \relative c {
   \tag #'usePartials { \partial 4 }
   f8. f16 |
   f4. f8 f8. f16 |
-  f2 \bar ""
+  f2
   
   a8. g16 |
   f2 f4 |
-  f2 \bar ""
+  f2
   
   c8. c16 |
   c4 c4. c8 |
-  c2 \bar ""
+  c2
+  
   c4 |
   f4 f2 |
   f4( g4) a4 |
@@ -444,4 +486,8 @@ chorusLyrics = \lyricmode {
   They shall run and not be wea -- ry,
   they shall walk and not "faint.\""
   Teach me, Lord, teach me, Lord, to wait.
+}
+
+EchoLyrics = \lyricmode {
+  They shall
 }

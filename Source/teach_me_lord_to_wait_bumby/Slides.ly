@@ -90,7 +90,7 @@ VerseTitleMarkup = \markup {
     #(layout-set-staff-size 44)
   }
   \pageBreak
-  \VerseTitleMarkup
+  \VerseTitleMarkup \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -131,7 +131,7 @@ VerseTitleMarkup = \markup {
     >>
     \SlideLayout
   }
-  \VerseTitleMarkup
+  \VerseTitleMarkup \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -194,8 +194,15 @@ VerseTitleMarkup = \markup {
           \global
           \keepWithTag #'usePartials \sopranoChorus
         }
+        \context NullVoice = echoAlign {
+          \global
+          \keepWithTag #'usePartials \EchoAlign
+        }
         \new Lyrics \lyricsto "align" {
           \huge \chorusLyrics
+        }
+        \new Lyrics \lyricsto "echoAlign" {
+          \huge \EchoLyrics
         }
       >>
       \context Staff = lower <<

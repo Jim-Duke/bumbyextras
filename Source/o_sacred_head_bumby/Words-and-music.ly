@@ -289,7 +289,7 @@ VerseFour = \lyricmode {
 
 VerseFive = \lyricmode {
   \set stanza = "5. "
-  Be near me when I am dy -- ing,
+  Be near me when I'm dy -- ing,
   Oh! show thy cross to me;
   And for my suc -- cor fly -- ing,
   Come, Lord, and set me free!

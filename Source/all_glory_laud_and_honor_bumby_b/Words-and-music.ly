@@ -19,8 +19,8 @@ MajorKey = ##t
 %%
 
 Title = "All Glory, Laud and Honor (B)"
-SongNumber = \all_glory_laud_and_honor_bumby_number
-RightFirstPage = \all_glory_laud_and_honor_bumby_number_rhs
+SongNumber = \all_glory_laud_and_honor_bumby_b_number
+RightFirstPage = \all_glory_laud_and_honor_bumby_b_number_rhs
 FirstPage = #(if RightFirstPage 1 2)
 
 LeaderHints = \markup {

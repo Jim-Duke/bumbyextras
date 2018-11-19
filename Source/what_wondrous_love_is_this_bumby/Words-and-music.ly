@@ -213,8 +213,56 @@ SheetMusicVerseBreaks = \relative c {
 }
 
 SlidesVerseBreaks = \relative c {
+  \tag #'usePartials { \partial 2 }
   \setSystemOffset \defaultTopSystemOffset
+  s2 | \noBreak
+  s1 | \noBreak
+  s2 \bar "" \break \noPageBreak
+  
   \setSystemOffset \defaultBottomSystemOffset
+  s2 | \noBreak
+  s1 | \noBreak
+  s2 \bar "" \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s2 | \noBreak
+  s1 | \noBreak
+  s2 \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s2 | \noBreak
+  s1 | \noBreak
+  s2 \bar "" \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s2 | \noBreak
+  s1 | \noBreak
+  s2 \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s2 | \noBreak
+  s1 | \noBreak
+  s2 \bar "" \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s2 | \noBreak
+  s1 | \noBreak
+  s2 \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s2 | \noBreak
+  s1 | \noBreak
+  s2 \bar "" \pageBreak
+  
+  \setSystemOffset \defaultTopSystemOffset
+  s2 | \noBreak
+  s1 | \noBreak
+  s2 \bar "" \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s2 | \noBreak
+  s1 | \noBreak
+  s2 \bar "" \pageBreak
 }
 
 VerseOne = \lyricmode {

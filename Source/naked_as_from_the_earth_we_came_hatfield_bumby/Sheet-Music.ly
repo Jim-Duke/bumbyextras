@@ -42,8 +42,9 @@ SheetStaffStaffSpacing = 16
           \line {
             "Hymn:"
             \fromproperty #'header:meter
-            \char ##x2022
-            \fromproperty #'header:poet
+            \optional-field "• " #'header:poet
+            \optional-field "• tr. " #'header:translator
+            \optional-field "• vs. " #'header:versifier
           }
           \line {
             "Tune:"

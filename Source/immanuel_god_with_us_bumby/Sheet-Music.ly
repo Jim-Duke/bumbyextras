@@ -43,20 +43,22 @@ SheetStaffStaffSpacing = #15
           \line {
             "Hymn:"
             \fromproperty #'header:meter
-            \char ##x2022
-            \fromproperty #'header:poet
+            \optional-field "• " #'header:poet
+            \optional-field "• tr. " #'header:translator
+            \optional-field "• vs. " #'header:versifier
           }
           \line {
             "Tune:"
             \fromproperty #'header:tune
-            \char ##x2022
-            \fromproperty #'header:composer
+            \optional-field "• " #'header:composer
+            \optional-field "• arr. " #'header:arranger
           }
           \line {
             \fromproperty #'header:copyright
+            \optional-field "• " #'header:license
           }
           \line {
-            \fromproperty #'header:license
+            "Visit https://hymnal.bumby.org/ for more information about this and other hymns in the Bumby Hymnal"
           }
         }
       }

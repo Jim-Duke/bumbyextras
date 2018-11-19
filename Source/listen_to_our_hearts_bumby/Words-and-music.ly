@@ -475,6 +475,43 @@ SheetMusicVerseBreaks = \relative c {
   s1    | \noBreak
   s1    | \noBreak
   s4.   \bar "" \break
+  
+  s2 s8 | \noBreak
+  s1    | \noBreak
+  s4    \bar "" \break
+
+  \newSpacingSection
+  \override Score.SpacingSpanner.shortest-duration-space = #6.0
+  s2.   | \noBreak
+  s1    | \noBreak
+  s4.   \bar "||" \pageBreak
+}
+
+SheetMusicRefrainBreaks = \relative c {
+  \tag #'usePartials { \partial $(ly:make-duration 0 0 5/8) }
+  s2 s8 | \noBreak
+  s1    | \noBreak
+  s1    | \noBreak
+  s1    | \noBreak
+  s4.   \bar "" \break \noPageBreak
+  
+  s2 s8 | \noBreak
+  s1    | \noBreak
+  s1    | \noBreak
+  s1    | \noBreak
+  s2    \bar "" \break \noPageBreak
+  
+  s2    | \noBreak
+  s1    | \noBreak
+  s1    | \noBreak
+  s1    | \noBreak
+  s4.   \bar "" \break \noPageBreak
+  
+  s2 s8 | \noBreak
+  s1    | \noBreak
+  s1    | \noBreak
+  s1    | \noBreak
+  s4.   \bar "|."
 }
 
 SlideMusicVerseOneBreaks = \relative c {

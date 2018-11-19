@@ -211,4 +211,45 @@ VerseTitleMarkup = \markup {
     >>
     \SlideLayout
   }
+  \VerseTitleMarkup \noPageBreak
+  \score {
+    <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
+      \context Staff = upper <<
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \SopranoVerseMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \AltoVerseMusic
+          }
+        \new NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials \SlidesVerseBreaks
+        }
+        \new NullVoice = alignVoice {
+          \global
+          \keepWithTag #'usePartials \SopranoVerseMusic
+        }
+        \new Lyrics \lyricsto "alignVoice" {
+          \huge \VerseFour
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \TenorVerseMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \BassVerseMusic
+          }
+      >>
+    >>
+    \SlideLayout
+  }
 }

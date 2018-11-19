@@ -42,17 +42,22 @@ ShowScriptureOnSheetMusic = ##t
           \line {
             "Hymn:"
             \fromproperty #'header:meter
-            \char ##x2022
-            \fromproperty #'header:poet
+            \optional-field "• " #'header:poet
+            \optional-field "• tr. " #'header:translator
+            \optional-field "• vs. " #'header:versifier
           }
           \line {
             "Tune:"
             \fromproperty #'header:tune
-            \char ##x2022
-            \fromproperty #'header:composer
+            \optional-field "• " #'header:composer
+            \optional-field "• arr. " #'header:arranger
           }
           \line {
             \fromproperty #'header:copyright
+            \optional-field "• " #'header:license
+          }
+          \line {
+            "Visit https://hymnal.bumby.org/ for more information about this and other hymns in the Bumby Hymnal"
           }
         }
       }
@@ -92,7 +97,7 @@ ShowScriptureOnSheetMusic = ##t
           }
         \context NullVoice = sheetMusicBreaks {
           \global
-          \sheetMusicBreaks
+          \SheetMusicBreaks
         }
         \context NullVoice = verseOneAlign {
           \global
@@ -141,12 +146,23 @@ ShowScriptureOnSheetMusic = ##t
             \global
             \keepWithTag #'usePartials \altoChorus
           }
+        \context NullVoice = ChorusBreaks {
+          \global
+          \keepWithTag #'usePartials \SheetMusicChorusBreaks
+        }
         \context NullVoice = chorusAlign {
             \global
             \keepWithTag #'usePartials \sopranoChorus
         }
+        \context NullVoice = echoAlign {
+          \global
+          \keepWithTag #'usePartials \EchoAlign
+        }
         \new Lyrics \lyricsto "chorusAlign" {
           \chorusLyrics
+        }
+        \new Lyrics \lyricsto "echoAlign" {
+          \EchoLyrics
         }
       >>
       \context Staff = lower <<

@@ -43,6 +43,8 @@ SheetMusicLyricsMinimumDistance = 2
             "Hymn:"
             \fromproperty #'header:meter
             \optional-field "• " #'header:poet
+            \optional-field "• tr. " #'header:translator
+            \optional-field "• vs. " #'header:versifier
           }
           \line {
             "Tune:"
@@ -52,6 +54,10 @@ SheetMusicLyricsMinimumDistance = 2
           }
           \line {
             \fromproperty #'header:copyright
+            \optional-field "• " #'header:license
+          }
+          \line {
+            "Visit https://hymnal.bumby.org/ for more information about this and other hymns in the Bumby Hymnal"
           }
         }
       }

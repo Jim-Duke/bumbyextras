@@ -42,18 +42,24 @@ SheetMusicLyricsMinimumDistance = #1
           \line {
             "Hymn:"
             \fromproperty #'header:meter
-            \char ##x2022
-            \fromproperty #'header:poet
+            \optional-field "• " #'header:poet
+            \optional-field "• tr. " #'header:translator
+            \optional-field "• vs. " #'header:versifier
           }
           \line {
             "Tune:"
             \fromproperty #'header:tune
-            \char ##x2022
-            \fromproperty #'header:composer
+            \optional-field "• " #'header:composer
+            \optional-field "• arr. " #'header:arranger
           }
           \line {
             \fromproperty #'header:copyright
+          }
+          \line {
             \fromproperty #'header:license
+          }
+          \line {
+            "Visit https://hymnal.bumby.org/ for more information about this and other hymns in the Bumby Hymnal"
           }
         }
       }
@@ -152,9 +158,13 @@ SheetMusicLyricsMinimumDistance = #1
             \global
             \keepWithTag #'usePartials \AltoRefrainMusic
           }
+        \context NullVoice = chorusBreaks {
+          \global
+          \keepWithTag #'usePartials \SheetMusicRefrainBreaks
+        }
         \context NullVoice = chorusAlign {
-            \global
-            \keepWithTag #'usePartials \AlignRefrainMusic
+          \global
+          \keepWithTag #'usePartials \AlignRefrainMusic
         }
         \new Lyrics \lyricsto "chorusAlign" {
           \RefrainLyrics

@@ -1,9 +1,6 @@
 \version "2.19.49"
 
 \include "Words-and-music.ly"
-
-SheetMusicLyricsMinimumDistance = #1.5
-
 \include "../../../LilypondTemplates/standard-elements.ly"
 
 \book {
@@ -18,8 +15,8 @@ SheetMusicLyricsMinimumDistance = #1.5
     %
     % Various variables that can be used to tweak vertical spacing
     %
-    system-system-spacing.basic-distance = #12
-    system-system-spacing.minimum-distance = #8
+    system-system-spacing.basic-distance = #0
+    system-system-spacing.minimum-distance = #0
     score-markup-spacing.basic-distance = #0
     markup-system-spacing.basic-distance = #0
       
@@ -85,7 +82,7 @@ SheetMusicLyricsMinimumDistance = #1.5
     % Verses Section
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
+      \context Staff = upper \with { printPartCombineTexts = ##f } <<
         \partCombine
           {
             \global
@@ -101,7 +98,7 @@ SheetMusicLyricsMinimumDistance = #1.5
         }
         \context NullVoice = align {
           \global
-          \keepWithTag #'usePartials \AlignVerseMusic
+          \keepWithTag #'usePartials \SopranoVerseMusic
         }
         \new Lyrics \lyricsto "align" {
           \VerseOne
@@ -115,11 +112,8 @@ SheetMusicLyricsMinimumDistance = #1.5
         \new Lyrics \lyricsto "align" {
           \VerseFour
         }
-        \new Lyrics \lyricsto "align" {
-          \VerseFive
-        }
       >>
-      \context Staff = lower <<
+      \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass
         \partCombine
           {
