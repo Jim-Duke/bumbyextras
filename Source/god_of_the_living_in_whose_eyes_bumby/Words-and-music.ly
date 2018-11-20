@@ -43,7 +43,7 @@ ShowScriptureOnSheetMusic = ##t
   songNumber = \SongNumber
   lhs = #(if RightFirstPage LeaderHints SongNumber)
   rhs = #(if RightFirstPage SongNumber LeaderHints)
-  copyright = "2011 C. E. Couchman"
+  copyright = "Music Copyright © 2011 C. E. Couchman.  All rights reserved."
   license = "Used by permission"
   tagline = ##f
 }

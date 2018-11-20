@@ -47,7 +47,7 @@ ShowScriptureOnSheetMusic = ##t
 
   maintainer = "Jim Duke"
   maintainerEmail = "jim@dukeboys.org"
-  maintainerWeb = ##f
+  maintainerWeb = "hymnal.bumby.org"
   
   copyright = "In the Public Domain"
   license = ##f

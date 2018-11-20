@@ -43,7 +43,7 @@ ShowScriptureOnSheetMusic = ##t
   songNumber = \SongNumber
   lhs = #(if RightFirstPage LeaderHints SongNumber)
   rhs = #(if RightFirstPage SongNumber LeaderHints)
-  copyright = "Copyright 2000 by Lynn & Janet Wall.  All Rights Reserved."
+  copyright = "Words and Music Copyright © 2000 by Lynn & Janet Wall. All Rights Reserved."
   license = "Used by Permission"
   tagline = ##f
 }

@@ -37,9 +37,8 @@ ShowScriptureOnSheetMusic = ##t
   songNumber = \SongNumber
   lhs = #(if in_christ_alone_bumby_number_rhs LeaderHints in_christ_alone_bumby_number)
   rhs = #(if in_christ_alone_bumby_number_rhs in_christ_alone_bumby_number LeaderHints)
-  copyright = \markup {
-     \char ##x00A9 "2001 Thankyou Music (admin. Capitol CMG Publishing)"
-  }
+  copyright = "Words and Music Copyright © 2001 Thankyou Music.  All rights reserved."
+  copyright_admin = "Admin. Capitol CMG Publishing"
   license = #(string-append "CCLI Song #3350395, License #" bumby_ccli_license)
   arranger = "D. J. Bulls"
   tagline = ##f

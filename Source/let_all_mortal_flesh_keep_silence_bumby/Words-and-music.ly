@@ -44,9 +44,7 @@ ShowScriptureOnSheetMusic = ##t
   songNumber = \SongNumber
   lhs = #(if RightFirstPage LeaderHints SongNumber)
   rhs = #(if RightFirstPage SongNumber LeaderHints)
-  copyright = \markup {
-    "Arrangement " \char ##x00A9 " 2011 C. E. Couchman.  All rights reserved."
-  }
+  copyright = "Arrangement Copyright © 2011 C. E. Couchman.  All rights reserved."
   license = "Used by permission"
   tagline = ##f
 }

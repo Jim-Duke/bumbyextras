@@ -43,7 +43,8 @@ ShowScriptureOnSheetMusic = ##t
   songNumber = \SongNumber
   lhs = #(if RightFirstPage LeaderHints SongNumber)
   rhs = #(if RightFirstPage SongNumber LeaderHints)
-  copyright = "Copyright 1998, arr. 2010 Reuben Morgan and Hillsong Publishing (admin. by EMI Christian Music Group, Inc.)"
+  copyright = "Words and Music Copyright © 1998, arr. 2010 Reuben Morgan and Hillsong Publishing. All rights reserved."
+  copyright_admin = "EMI Christian Music Group, Inc."
   license = #(string-append "CCLI Song #2582803, License #" bumby_ccli_license)
   tagline = ##f
 }

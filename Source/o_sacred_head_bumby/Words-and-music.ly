@@ -48,7 +48,7 @@ ShowScriptureOnSheetMusic = ##t
   songNumber = \SongNumber
   lhs = #(if RightFirstPage LeaderHints SongNumber)
   rhs = #(if RightFirstPage SongNumber LeaderHints)
-  copyright = "Public Domain"
+  copyright = "In the Public Domain"
   license = ##f
   tagline = ##f
 }

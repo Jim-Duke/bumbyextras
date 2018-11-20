@@ -45,7 +45,8 @@ ShowScriptureOnSheetMusic = ##t
   songNumber = \SongNumber
   lhs = #(if RightFirstPage LeaderHints SongNumber)
   rhs = #(if RightFirstPage SongNumber LeaderHints)
-  copyright = "Copyright 2002 Thankyou Music (admin worldwide by worshiptogether.com Songs, except UK and Europe by Kingsway music) / ASCAP"
+  copyright = "Words and Music Copyright © 2002 Thankyou Music. All rights reserved."
+  copyright_admin = "worshiptogether.com Songs, except UK and Europe by Kingsway music"
   license = #(string-append "CCLI Song #3798438, License #" bumby_ccli_license)
   tagline = ##f
 }

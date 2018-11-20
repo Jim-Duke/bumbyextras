@@ -42,7 +42,7 @@ ShowScriptureOnSheetMusic = ##t
   songNumber = \SongNumber
   lhs = #(if RightFirstPage LeaderHints SongNumber)
   rhs = #(if RightFirstPage SongNumber LeaderHints)
-  copyright = "Copyright (c) 2000 by Glenda Barnhart Schales"
+  copyright = "Words and Music Copyright © 2000 Glenda Barnhart Schales. All rights reserved."
   license = "Used by permission"
   tagline = ##f
 }

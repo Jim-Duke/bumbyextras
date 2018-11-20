@@ -7,7 +7,7 @@
 #
 PROD_BASE_NAME = weeping_garden_bumby
 STATUS = review
-ACCESS = public
+ACCESS = private
 
 LIBRARY_DIR = ../../../LilypondTemplates
 LIBRARY_FILES = $(LIBRARY_DIR)/functions.ly $(LIBRARY_DIR)/hymns.ly $(LIBRARY_DIR)/standard-elements.ly

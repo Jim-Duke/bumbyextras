@@ -37,7 +37,7 @@ FirstPage = #(if listen_to_our_hearts_bumby_number_rhs 1 2)
   songNumber = \SongNumber
   lhs = \lhs
   rhs = \rhs
-  copyright = \markup { \char ##x00A9 " Copyright 1992 Primary Wave Brian (Chapman Sp Acct) Songs On The ForefrontSparrow Song" }
+  copyright = "Words and Music Copyright © 1992 Primary Wave Brian (Chapman Sp Acct) Songs On The ForefrontSparrow Song"
   license = #(string-append "CCLI Song #903151, License #" bumby_ccli_license)
   tagline = ##f
 }

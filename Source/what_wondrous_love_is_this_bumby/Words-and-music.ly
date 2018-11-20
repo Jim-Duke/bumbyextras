@@ -8,7 +8,7 @@
 \include "../hymn_settings.ly"
 
 global = {
-  \key c \major
+  \key d \major
   \numericTimeSignature
   \time 2/2
   \tempo 2=55
@@ -21,7 +21,7 @@ SongNumber = \what_wondrous_love_is_this_bumby_number
 
 LeaderHints = \markup {
   \fontsize #-4
-  \normal-text { "D - 2 - DO" }
+  \normal-text { "D (E dorian) - 2 - RE" }
 }
 
 FirstPage = #(if what_wondrous_love_is_this_bumby_number_rhs 1 2)
@@ -47,7 +47,7 @@ ShowScriptureOnSheetMusic = ##t
   tagline = ##f
 }
 
-SopranoVerseMusic = \relative c' {
+SopranoVerseMusic = \transpose c d \relative c' {
   \tag #'usePartials { \partial 2 }
   d2 |
   d4 c4 e4 g4 |
@@ -80,7 +80,7 @@ SopranoVerseMusic = \relative c' {
   d2 \bar "|."
 }
 
-AltoVerseMusic = \relative c' {
+AltoVerseMusic = \transpose c d \relative c' {
   \tag #'usePartials { \partial 2 }
   a2 |
   a4 a4 c4 b4 |
@@ -113,7 +113,7 @@ AltoVerseMusic = \relative c' {
   a2 \bar "|."
 }
 
-TenorVerseMusic = \relative c {
+TenorVerseMusic = \transpose c d \relative c {
   \tag #'usePartials { \partial 2 }
   f2 |
   f4 e4 g4 e4 |
@@ -146,7 +146,7 @@ TenorVerseMusic = \relative c {
   f2 \bar "|."
 }
 
-BassVerseMusic = \relative c {
+BassVerseMusic = \transpose c d \relative c {
   \tag #'usePartials { \partial 2 }
   d2 |
   d4 a4 g4 g4 |

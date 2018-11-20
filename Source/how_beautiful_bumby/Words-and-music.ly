@@ -38,7 +38,7 @@ number_on_rhs = \how_beautiful_bumby_number_rhs
   songNumber = \SongNumber
   lhs = \lhs
   rhs = \rhs
-  copyright = "Copyright (c) 1990 Ariose Music and Mountain Spring Music"
+  copyright = "Words and Music Copyright © 1990 Ariose Music and Mountain Spring Music.  All rights reserved."
   license = #(string-append "CCLI Song #443594, License #" bumby_ccli_license)
   scripture = #"How lovely on the mountains
          are the feet of him who brings good news,

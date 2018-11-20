@@ -49,9 +49,7 @@ ShowScriptureOnSheetMusic = ##t
   maintainerEmail = "jim@dukeboys.org"
   maintainerWeb = ##f
   
-  copyright = \markup {
-    "Copyright " \char ##x00A9 " 1998 Vineyard Songs / Vineyard Publishing in N.A."
-  }
+  copyright = "Words and Music Copyright © 1998 Vineyard Songs / Vineyard Publishing in N.A."
   license = #(string-append "CCLI Song #2490706, License #" bumby_ccli_license)
 }
 

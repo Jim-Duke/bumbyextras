@@ -39,9 +39,7 @@ SlideStaffStaffSpacing = 12
   songNumber = \SongNumber
   lhs = \lhs
   rhs = \rhs
-  copyright = \markup {
-    "Copyright " \char ##x00A9 " 2003 Randy Gill"
-  }
+  copyright = "Words and Music Copyright © 2003 Randy Gill.  All rights reserved."
   license = #(string-append "CCLI Song #5107766, License #" bumby_ccli_license)
   arranger = ##f
   tagline = ##f

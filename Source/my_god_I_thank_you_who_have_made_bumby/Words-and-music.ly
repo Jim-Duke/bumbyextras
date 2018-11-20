@@ -44,7 +44,7 @@ ShowScriptureOnSheetMusic = ##t
   songNumber = \SongNumber
   lhs = #(if RightFirstPage LeaderHints SongNumber)
   rhs = #(if RightFirstPage SongNumber LeaderHints)
-  copyright = "Copyright 2011 Matthew L. Harber"
+  copyright = "Music Copyright © 2011 Matthew L. Harber. All rights reserved."
   license = "Used by Permission"
   tagline = ##f
 }

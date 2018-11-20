@@ -38,9 +38,7 @@ FirstPage = #(if number_on_rhs 1 2)
   songNumber = \SongNumber
   lhs = \lhs
   rhs = \rhs
-  copyright = \markup {
-    "Copyright " \char ##x00A9 " 2009 CCTB Music, First Hand Revelation Music, Universal Music - Brentwood Benson Publishing"
-  }
+  copyright = "Words and Music Copyright © 2009 CCTB Music, First Hand Revelation Music, Universal Music - Brentwood Benson Publishing.  All rights reserved."
   license = #(string-append "CCLI Song #5635850, License #" bumby_ccli_license)
   arranger = "Sam Souder"
   scripture = #"“Your sins shall be as white as snow” - Isaiah 1:18"

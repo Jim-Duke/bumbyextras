@@ -43,8 +43,8 @@ ShowScriptureOnSheetMusic = ##t
   songNumber = \SongNumber
   lhs = #(if RightFirstPage LeaderHints SongNumber)
   rhs = #(if RightFirstPage SongNumber LeaderHints)
-  copyright = "2016 by Jon Gardner and Aneva Peirce"
-  license = ##f
+  copyright = "Words and Music Copyright © 2016 Jon Gardner and Aneva Peirce. All rights reserved."
+  license = "Used by permission"
   tagline = ##f
 }
 
@@ -140,7 +140,32 @@ SheetMusicVerseBreaks = \relative c {
 
 SlidesVerseBreaks = \relative c {
   \setSystemOffset \defaultTopSystemOffset
+  s1 \break \noPageBreak
+  
   \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 | \pageBreak
+
+  \setSystemOffset \defaultTopSystemOffset
+  s1 \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 | \pageBreak
+
+  \setSystemOffset \defaultTopSystemOffset
+  s1 \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 | \pageBreak
+
+  \setSystemOffset \defaultTopSystemOffset
+  s1 \break \noPageBreak
+  
+  \setSystemOffset \defaultBottomSystemOffset
+  s1 | \noBreak
+  s1 \bar "|."
 }
 
 VerseOne = \lyricmode {

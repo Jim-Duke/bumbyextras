@@ -38,9 +38,7 @@ FirstPage = #(if number_on_rhs 1 2)
   songNumber = \SongNumber
   lhs = \lhs
   rhs = \rhs
-  copyright = \markup {
-    \char ##x00A9 " Copyright 1996 by Daybreak Music.  All rights reserved."
-  }
+  copyright = "Words and Music Copyright © 1996 Daybreak Music.  All rights reserved."
   license = #(string-append "CCLI Song #1537904, License #" bumby_ccli_license)
   tagline = ##f
 }

@@ -38,9 +38,7 @@ FirstPage = #(if number_on_rhs 1 2)
   songNumber = \SongNumber
   lhs = \lhs
   rhs = \rhs
-  copyright = \markup {
-    "Copyright " \char ##x00A9 " 1953.  Renewal 1981 by Hamblen Music Co., Inc."
-  }
+  copyright = "Words and Music Copyright © 1953, Renewal 1981 by Hamblen Music Co., Inc. All rights reserved."
   license = #(string-append "CCLI Song #31463, License #" bumby_ccli_license)
   arranger = "Gerald Moore, 1992"
   tagline = ##f

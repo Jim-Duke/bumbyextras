@@ -38,7 +38,7 @@ number_on_rhs = \the_mountain_song_bumby_number_rhs
   songNumber = \SongNumber
   lhs = \lhs
   rhs = \rhs
-  copyright = "Copyright (c) 1972 by Kingsmen Publishing Co."
+  copyright = "Words and Music Copyright © 1972 by Kingsmen Publishing Co. All rights reserved."
   license = #(string-append "CCLI Song #85969, License #" bumby_ccli_license)
   tagline = ##f
 }

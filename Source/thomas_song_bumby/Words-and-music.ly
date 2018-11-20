@@ -43,7 +43,7 @@ ShowScriptureOnSheetMusic = ##t
   songNumber = \SongNumber
   lhs = #(if RightFirstPage LeaderHints SongNumber)
   rhs = #(if RightFirstPage SongNumber LeaderHints)
-  copyright = "Copyright 1993 Hallal Music, Toddler Tunes Music, and Dayspring Music."
+  copyright = "Words and Music Copyright © 1993 Hallal Music, Toddler Tunes Music, and Dayspring Music. All rights reserved."
   license = #(string-append "CCLI Song #1222903, License #" bumby_ccli_license)
   tagline = ##f
 }

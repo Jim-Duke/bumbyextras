@@ -42,7 +42,8 @@ ShowScriptureOnSheetMusic = ##t
   songNumber = \SongNumber
   lhs = #(if RightFirstPage LeaderHints SongNumber)
   rhs = #(if RightFirstPage SongNumber LeaderHints)
-  copyright = "Copyright administered by David Higham Associates Limited, London"
+  copyright = "Words Copyright © 1931 Eleanor Farjeon.  All rights reserved."
+  copyright_admin = "Copyright administered by David Higham Associates Limited, London"
   license = "Used by permission"
   tagline = ##f
 }

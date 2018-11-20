@@ -38,6 +38,7 @@ FirstPage = #(if just_for_today_bumby_number_rhs 1 2)
   lhs = \lhs
   rhs = \rhs
   copyright = \markup { \char ##x00A9 " Copyright 1995 Marc Schelske Music." }
+  copyright = "Words and Music Copyright © 1995 Marc Schelske Music.  All rights reserved."
   license = #(string-append "CCLI Song #1984677, License #" bumby_ccli_license)
   tagline = ##f
 }
