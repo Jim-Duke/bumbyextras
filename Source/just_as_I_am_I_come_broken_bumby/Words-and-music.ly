@@ -510,6 +510,15 @@ bassChorus = \relative c {
   bes4) r4 \bar "|."
 }
 
+SheetMusicCodaBreaks = {
+  \tag #'usePartials { \partial 4 }
+  s4  | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2. | \noBreak
+  s2  \bar "|."
+}
+
 sopranoCoda = \relative c'' {
   \tag #'usePartials { \partial 4 }
   \set Staff.autoBeaming = ##f
