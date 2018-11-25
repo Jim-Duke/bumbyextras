@@ -94,6 +94,7 @@ clean:
 	-rm *.pdf
 	-rm *.mid
 	-rm *.mp3
+	-rm *.wav
 
 prodclean:
 	-rm $(PROD_SHEET_MUSIC)

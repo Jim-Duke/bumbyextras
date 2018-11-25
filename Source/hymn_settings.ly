@@ -142,11 +142,11 @@ o_sacred_head_bumby_number = "B-027"
 o_sacred_head_bumby_number_rhs = ##t
 o_sacred_head_bumby_pages = 1
 
-all_glory_laud_and_honor_bumby_a_number = "B-028"
+all_glory_laud_and_honor_bumby_a_number = "B-028a"
 all_glory_laud_and_honor_bumby_a_number_rhs = ##f
 all_glory_laud_and_honor_bumby_a_pages = 1
 
-all_glory_laud_and_honor_bumby_b_number = "B-028"
+all_glory_laud_and_honor_bumby_b_number = "B-028b"
 all_glory_laud_and_honor_bumby_b_number_rhs = ##t
 all_glory_laud_and_honor_bumby_b_pages = 1
 
@@ -158,22 +158,26 @@ what_wondrous_love_is_this_bumby_number = "B-030"
 what_wondrous_love_is_this_bumby_number_rhs = ##t
 what_wondrous_love_is_this_bumby_pages = 1
 
-naked_as_from_the_earth_we_came_hatfield_bumby_number = "B-031"
+naked_as_from_the_earth_we_came_hatfield_bumby_number = "B-031a"
 naked_as_from_the_earth_we_came_hatfield_bumby_number_rhs = ##f
 naked_as_from_the_earth_we_came_hatfield_bumby_pages = 1
 
-naked_as_from_the_earth_we_came_winchester_old_bumby_number = "B-032"
+naked_as_from_the_earth_we_came_winchester_old_bumby_number = "B-031b"
 naked_as_from_the_earth_we_came_winchester_old_bumby_number_rhs = ##t
 naked_as_from_the_earth_we_came_winchester_old_bumby_pages = 1
 
-let_all_mortal_flesh_keep_silence_bumby_number = "B-033"
+let_all_mortal_flesh_keep_silence_bumby_number = "B-032"
 let_all_mortal_flesh_keep_silence_bumby_number_rhs = ##f
 let_all_mortal_flesh_keep_silence_bumby_pages = 1
+
+weeping_garden_bumby_number ="B-033"
+weeping_garden_bumby_number_rhs = ##t
+weeping_garden_bumby_pages = 1
+
+highest_hope_bumby_number = "B-034"
+highest_hope_bumby_number_rhs = ##f
+highest_hope_bumby_pages = 2
 
 %%%
 %%% Unassigned
 %%%
-
-weeping_garden_bumby_number ="X-001"
-weeping_garden_bumby_number_rhs = ##t
-weeping_garden_bumby_pages = 1

@@ -5,7 +5,6 @@
 
 VerseTitleMarkup = \markup {
     \fill-line {
-      \null
       \raise #1
       \override #'(line-width . 70)
       \center-column {
@@ -59,8 +58,9 @@ VerseTitleMarkup = \markup {
             \fromproperty #'header:arranger
           }
           \line {
-            \fromproperty #'header:copyright
+            \wordwrap-field #'header:copyright
           }
+          \vspace #0.4
           \line {
             \fromproperty #'header:license
           }
@@ -217,6 +217,11 @@ VerseTitleMarkup = \markup {
       >>
     >>
     \SlideLayout
+  }
+  \markup {
+    \abs-fontsize #40
+    \bold
+    "Chorus:"
   }
   \score {
     <<

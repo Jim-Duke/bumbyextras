@@ -23,7 +23,7 @@
             \removeWithTag #'usePartials \SopranoVerseMusic
             \removeWithTag #'usePartials \SopranoChorusMusic
             \removeWithTag #'usePartials \SopranoVerseMusic
-            \removeWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \SopranoChorusLastVerseMusic
           }
         }
         \context Voice = altos \with {

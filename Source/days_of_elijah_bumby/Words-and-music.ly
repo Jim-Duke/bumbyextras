@@ -144,6 +144,12 @@ SheetMusicCodaBreaks = {
   s1 | \noBreak
   s1 | \noBreak
   s2. \bar "" \break
+  
+  s4 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 | \noBreak
+  s1 \bar "|."
 }
 
 SlideMusicBreaks = \relative c {

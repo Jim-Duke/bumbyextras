@@ -50,7 +50,6 @@ clean:
 	-rm *.mid
 	-rm *.mp3
 	-rm *.wav
-	-rm *.m4a
 
 prodclean:
 	-rm $(PROD_SHEET_MUSIC)

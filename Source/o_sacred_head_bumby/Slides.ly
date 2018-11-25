@@ -49,8 +49,11 @@ VerseTitleMarkup = \markup {
             "Hymn:"
             \fromproperty #'header:meter
             \optional-field "• " #'header:poet
-            \optional-field "• tr. " #'header:translator
-            \optional-field "• vs. " #'header:versifier
+          }
+          \line {
+            "Translator: "
+            \fromproperty #'header:translator
+            \optional-field "• versefier: " #'header:versifier
           }
           \line {
             "Tune:"

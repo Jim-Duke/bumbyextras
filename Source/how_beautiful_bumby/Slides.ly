@@ -57,8 +57,9 @@ VerseTitleMarkup = \markup {
             \fromproperty #'header:arranger
           }
           \line {
-            \fromproperty #'header:copyright
+            \wordwrap-field #'header:copyright
           }
+          \vspace #0.4
           \line {
             \fromproperty #'header:license
           }
@@ -177,7 +178,11 @@ VerseTitleMarkup = \markup {
     >>
     \SlideLayout
   }
-  \VerseTitleMarkup
+  \markup {
+    \abs-fontsize #40
+    \bold
+    "Bridge:"
+  }
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)

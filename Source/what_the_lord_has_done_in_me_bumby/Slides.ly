@@ -59,6 +59,7 @@ VerseTitleMarkup = \markup {
           \line {
             \wordwrap-field #'header:copyright
           }
+          \vspace #0.4
           \line {
             \fromproperty #'header:license
           }
@@ -211,6 +212,11 @@ VerseTitleMarkup = \markup {
       >>
     >>
     \SlideLayout
+  }
+  \markup {
+    \abs-fontsize #40
+    \bold
+    "Chorus:"
   }
   \score {
     <<

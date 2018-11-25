@@ -2,7 +2,7 @@
 
 \include "Words-and-music.ly"
 
-SlideStaffStaffSpacing = #20
+SlideStaffStaffSpacing = #16.0
 
 \include "../../../LilypondTemplates/standard-elements.ly"
 
@@ -24,6 +24,12 @@ VerseTitleMarkup = \markup {
       }
     }
   }
+  
+CodaMarkup = \markup {
+  \abs-fontsize #40
+  \bold
+  "CODA:"
+}
 
 \book {
   \paper {
@@ -58,9 +64,8 @@ VerseTitleMarkup = \markup {
             \fromproperty #'header:composer
           }
           \line {
-            \wordwrap-field #'header:copyright
+            \fromproperty #'header:copyright
           }
-          \vspace #0.4
           \line {
             \fromproperty #'header:license
           }
@@ -91,88 +96,7 @@ VerseTitleMarkup = \markup {
     #(layout-set-staff-size 44)
   }
   \pageBreak
-  \VerseTitleMarkup
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \partCombine
-          {
-            \global
-            \keepWithTag #'(usePartials verseOneSlidesRhythms) \SopranoVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'(usePartials verseOneSlidesRhythms) \AltoVerseMusic
-          }
-        \context NullVoice = slideMusicVerseBreaks {
-          \global
-          \SlideMusicVerseOneBreaks
-        }
-        \context NullVoice = alignVoice {
-          \global
-          \keepWithTag #'(usePartials verseOneSlidesRhythms) \SopranoVerseMusic
-        }
-      >>
-      \new Lyrics \lyricsto "alignVoice" {
-        \huge \removeWithTag #'sheetMusicRhythms \VerseOneLyrics
-      }
-      \context Staff = lower <<
-        \clef bass
-        \partCombine
-          {
-            \global
-            \keepWithTag #'(usePartials verseOneSlidesRhythms) \TenorVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'(usePartials verseOneSlidesRhythms) \BassVerseMusic
-          }
-      >>
-    >>
-    \SlideLayout
-  }
-  \VerseTitleMarkup
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \partCombine
-          {
-            \global
-            \keepWithTag #'(usePartials verseTwoSlidesRhythms) \SopranoVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'(usePartials verseTwoSlidesRhythms) \AltoVerseMusic
-          }
-        \context NullVoice = slideMusicBreaks {
-          \global
-          \SlideMusicVerseTwoBreaks
-        }
-        \context NullVoice = alignVoice {
-          \global
-          \keepWithTag #'(usePartials verseTwoSlidesRhythms) \SopranoVerseMusic
-        }
-        \new Lyrics \lyricsto "alignVoice" {
-          \huge \removeWithTag #'sheetMusicRhythms \VerseTwoLyrics
-        }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \partCombine
-          {
-            \global
-            \keepWithTag #'(usePartials verseTwoSlidesRhythms) \TenorVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'(usePartials verseTwoSlidesRhythms) \BassVerseMusic
-          }
-      >>
-    >>
-    \SlideLayout
-  }
+  \VerseTitleMarkup \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -180,41 +104,153 @@ VerseTitleMarkup = \markup {
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \SopranoRefrainMusic
+            \SopranoVerseOneIntro
+            \keepWithTag #'verseOneSlide \SopranoCommon
+            \keepWithTag #'verseOneSlide \SopranoRefrain
           }
           {
             \global
-            \keepWithTag #'usePartials \AltoRefrainMusic
+            \AltoVerseOneIntro
+            \keepWithTag #'verseOneSlide \AltoCommon
+            \AltoRefrain
           }
-        \context NullVoice = slideMusicRefrainBreaks {
+        \new NullVoice = breaks {
           \global
-          \SlideMusicRefrainBreaks
+          \SlideVerseOneIntroBreaks
+          \SlideCommonBreaksOne
+          \SlideRefrainBreaks
         }
-        \context NullVoice = alignTop {
+        \context NullVoice = align {
           \global
-          \keepWithTag #'usePartials \SopranoRefrainMusic
+          \SopranoVerseOneIntro
+          \keepWithTag #'verseOneSlide \SopranoCommon
+          \keepWithTag #'verseOneSlide \SopranoRefrain
         }
-        \context NullVoice = alignBot {
-          \global
-          \keepWithTag #'usePartials \AltLyricsAlign
+        \new Lyrics \lyricsto "align" {
+          \huge \VerseOneIntro \VerseOneCommon \Refrain
         }
       >>
-      \new Lyrics \lyricsto "alignTop" {
-        \huge \RefrainLyrics
-      }
-      \new Lyrics \lyricsto "alignBot" {
-        \huge \AltRefrainLyrics
-      }
       \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \TenorRefrainMusic
+            \TenorVerseOneIntro
+            \keepWithTag #'verseOneSlide \TenorCommon
+            \TenorRefrain
           }
           {
             \global
-            \keepWithTag #'usePartials \BassRefrainMusic
+            \BassVerseOneIntro
+            \keepWithTag #'verseOneSlide \BassCommon
+            \BassRefrain
+          }
+      >>
+    >>
+    \SlideLayout
+  }
+  \pageBreak
+  \VerseTitleMarkup \noPageBreak
+  \score {
+    <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
+      \context Staff = upper \with { printPartCombineTexts = ##f } <<
+        \partCombine
+          {
+            \global
+            \keepWithTag #'verseTwoSlide \SopranoCommon
+            \keepWithTag #'verseTwoSlide \SopranoRefrain
+          }
+          {
+            \global
+            \keepWithTag #'verseTwoSlide \AltoCommon
+            \AltoRefrain
+          }
+        \new NullVoice = breaks {
+          \global
+          \SlideCommonBreaksTwo
+          \SlideRefrainBreaks
+        }
+        \context NullVoice = align {
+          \global
+          \keepWithTag #'verseTwoSlide \SopranoCommon
+          \keepWithTag #'verseTwoSlide \SopranoRefrain
+        }
+        \new Lyrics \lyricsto "align" {
+          \huge
+          \keepWithTag #'verseTwoSlide \VerseTwoCommon
+          \Refrain
+        }
+      >>
+      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+        \clef bass
+        \partCombine
+          {
+            \global
+            \keepWithTag #'verseTwoSlide \TenorCommon
+            \TenorRefrain
+          }
+          {
+            \global
+            \keepWithTag #'verseTwoSlide \BassCommon
+            \BassRefrain
+          }
+      >>
+    >>
+    \SlideLayout
+  }
+  \pageBreak
+  \CodaMarkup \noPageBreak
+  \score {
+    <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
+      \context Staff = upper \with { printPartCombineTexts = ##f } <<
+        \partCombine
+          {
+            \global
+            \keepWithTag #'verseOneSlide \SopranoCoda
+            \keepWithTag #'verseOneSlide \SopranoCommon
+            \keepWithTag #'verseOneSlide \SopranoRefrain
+          }
+          {
+            \global
+            \AltoCoda
+            \keepWithTag #'verseOneSlide \AltoCommon
+            \keepWithTag #'verseOneSlide \AltoRefrain
+          }
+        \new NullVoice = breaks {
+          \global
+          \SlideCodaBreaks
+          \SlideCommonBreaksOne
+          \SlideRefrainBreaks
+        }
+        \context NullVoice = align {
+          \global
+          \keepWithTag #'verseOneSlide \SopranoCoda
+          \keepWithTag #'verseOneSlide \SopranoCommon
+          \keepWithTag #'verseOneSlide \SopranoRefrain
+        }
+        \new Lyrics \lyricsto "align" {
+          \huge
+          \Coda
+          \keepWithTag #'verseOneSlide \VerseOneCommon
+          \Refrain
+        }
+      >>
+      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+        \clef bass
+        \partCombine
+          {
+            \global
+            \TenorCoda
+            \keepWithTag #'verseOneSlide \TenorCommon
+            \TenorRefrain
+          }
+          {
+            \global
+            \BassCoda
+            \keepWithTag #'verseOneSlide \BassCommon
+            \BassRefrain
           }
       >>
     >>

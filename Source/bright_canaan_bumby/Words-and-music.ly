@@ -57,18 +57,18 @@ SopranoVerseMusic = \relative c' {
   \tag #'usePartials { \partial 4 }
   c4 |
   f4 a4 g4 bes4 |
-  a8( f8) f'8( d8) c4
+  a4 f'8( d8) c4
   
   a8 bes8 |
-  c4 a8. f16 bes8( a8) g4 |
+  c4 a8 f8 bes8( a8) g4 |
   f2 f4
 
   c4 |
   f4 a4 g4 bes4 |
-  a8( f8) f'8( d8) c4
+  a4 f'8( d8) c4
   
   a8 bes8 |
-  c4 a8. f16 bes8( a8) g4 |
+  c4 a8 f8 bes8( a8) g4 |
   f2 f4 \bar "|."
 }
 
@@ -79,13 +79,13 @@ AltoVerseMusic = \relative c' {
   f4 f4 f4
   
   f8 g8 |
-  f4 f8. f16 f4 e4 |
+  f4 f8 f8 f4 e4 |
   f2 f4
   
   c4 |
   c4 f4 e4 g4 |
   f4 f4 f4 f8 g8 |
-  f4 f8. f16 f4 e4 |
+  f4 f8 f8 f4 e4 |
   f2 f4
 }
 
@@ -93,18 +93,18 @@ TenorVerseMusic = \relative c' {
   \tag #'usePartials { \partial 4 }
   a4 |
   a4 c4 c4 c4 |
-  c8( a8) d8( bes8) a4
+  c4 d8( bes8) a4
   
   c8 bes8 |
-  a4 c8. a16 d4 c8( bes8) |
+  a4 c8 a8 d4 c8( bes8) |
   a2 a4
   
   a4 |
   a4 c4 c4 c4 |
-  c8( a8) d8( bes8) a4
+  c4 d8( bes8) a4
   
   c8 bes8 |
-  a4 c8. a16 d4 c8( bes8) |
+  a4 c8 a8 d4 c8( bes8) |
   a2 a4
 }
 
@@ -115,7 +115,7 @@ BassVerseMusic = \relative c {
   f4 f4 f4
   
   f8 f8 |
-  f4 f8. f16 bes,4 c4 |
+  f4 f8 f8 bes,4 c4 |
   f2 f4
   
   f4 |
@@ -123,7 +123,7 @@ BassVerseMusic = \relative c {
   f4 f4 f4
   
   f8 f8 |
-  f4 f8. f16 bes,4 c4 |
+  f4 f8 f8 bes,4 c4 |
   f2 f4 \bar "|."
 }
 
@@ -165,15 +165,51 @@ SlidesVerseBreaks = \relative c {
 SopranoChorusMusic = \relative c'' {
   \tag #'usePartials { \partial 4 }
   a8( bes8) |
-  c2 c4 a4 |
-  bes2 bes4 g8 g8 |
-  a4 f8 a8 c4 a4 |
-  g2 c4
+  c2 c8( bes8) a4 |
+  bes2 bes8( a8) g4 |
+  a4 f8 a8 c4
+  \set Score.tempoHideNote = ##t
+  \tempo 4=95
+  a4 |
+  g2
+  \tempo 4=35
+  c4\fermata
+  \tempo 4=105
   
   c8( a8) |
   f4 f8 a8 g4 bes4 |
-  a8( f8) f'8( d8) c4\fermata a8 bes8 |
-  c4 a8. f16 bes8( a8) g4 |
+  a4 f'8( d8) c4
+  
+  a8 bes8 |
+  c4 a8 f8 bes8( a8) g4 |
+  f2 f4 \bar "|."
+}
+
+SopranoChorusLastVerseMusic = \relative c'' {
+  \tag #'usePartials { \partial 4 }
+  a8( bes8) |
+  c2 c8( bes8) a4 |
+  bes2 bes8( a8) g4 |
+  a4 f8 a8 c4
+  \set Score.tempoHideNote = ##t
+  \tempo 4=95
+  a4 |
+  g2
+  \tempo 4=35
+  c4\fermata
+  \tempo 4=105
+  
+  c8( a8) |
+  f4 f8 a8 g4 bes4 |
+  
+  \set Score.tempoHideNote = ##t
+  \tempo 4=95
+  a4 f'8( d8)
+  \tempo 4=35
+  c4^\markup { \hspace #1 \fermata "(last verse only)" }
+  \tempo 4=105
+  a8 bes8 |
+  c4 a8 f8 bes8( a8) g4 |
   f2 f4 \bar "|."
 }
 
@@ -181,16 +217,16 @@ AltoChorusMusic = \relative c' {
   \tag #'usePartials { \partial 4 }
   c4 |
   f2 f4 f4 |
-  g2 g4 e8 e8 |
+  g2 g4 e4 |
   f4 f8 f8 a4 f4 |
-  e2 e4
+  e2 e4\fermata
   
   f4 |
   c4 c8 f8 e4 g4 |
-  f4 f4 f4\fermata
+  f4 f4 f4
   
   f8 g8 |
-  f4 f8. f16 f4 e4 |
+  f4 f8 f8 f4 e4 |
   f2 f4 \bar "|."
 }
 
@@ -200,15 +236,15 @@ TenorChorusMusic = \relative c {
   a2 a4 c4 |
   c2 c4
   
-  c8 c8 |
+  c4 |
   c4 a8 c8 c4 c4 |
-  c2 bes4
+  c2 bes4\fermata
   
   a8( f8) |
   a4 a8 a8 c4 c4 |
-  c8( a8) d8( bes8) a4\fermata
+  c4 d8( bes8) a4^\markup { \hspace #0.7 \fermata "(last verse only)" }
   c8 bes8 |
-  a4 c8. a16 d4 c8( bes8) |
+  a4 c8 a8 d4 c8( bes8) |
   a2 a4 \bar "|."
 }
 
@@ -218,17 +254,17 @@ BassChorusMusic = \relative c {
   f2 f4 f4 |
   c2 c4
   
-  c8 c8 |
+  c4 |
   f4 f8 f8 f4 f4 |
-  c2 c4
+  c2 c4\fermata
   
   c4 |
   f4 f8 f8 c4 c4 |
-  f4 f4 f4\fermata
+  f4 f4 f4
   
   f8 f8 |
-  f4 f8. f16 bes,4 c4 |
-  f2 f4\fermata
+  f4 f8 f8 bes,4 c4 |
+  f2 f4
 }
 
 SheetMusicChorusBreaks = \relative c {
@@ -258,12 +294,12 @@ SlidesChorusBreaks = \relative c {
   s1 | \noBreak
   s2. \bar "" \pageBreak
 
-  \setSystemOffset \defaultTopSystemOffset
+  \setSystemOffset #0
   s4 | \noBreak
   s1 | \noBreak
   s2. \bar "" \break \noPageBreak
   
-  \setSystemOffset \defaultBottomSystemOffset
+  \setSystemOffset #31
   s4 | \noBreak
   s1 | \noBreak
   s2. \bar "" \pageBreak
@@ -303,7 +339,7 @@ VerseFour = \lyricmode {
 
 ChorusLyrics = \lyricmode {
   O Ca -- naan, bright Ca -- naan,
-  I am bound for the land of Ca -- naan.
+  I'm bound for the land of Ca -- naan.
   O Ca -- naan, it is my hap -- py home,
   I am bound for the land of Ca -- naan.
 }

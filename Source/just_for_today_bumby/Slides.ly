@@ -87,7 +87,7 @@ VerseTitleMarkup = \markup {
     #(layout-set-staff-size 44)
   }
   \pageBreak
-  \VerseTitleMarkup
+  \VerseTitleMarkup \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -128,7 +128,7 @@ VerseTitleMarkup = \markup {
     >>
     \SlideLayout
   }
-  \VerseTitleMarkup
+  \VerseTitleMarkup \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -168,6 +168,11 @@ VerseTitleMarkup = \markup {
       >>
     >>
     \SlideLayout
+  }
+  \markup {
+    \abs-fontsize #40
+    \bold
+    "Chorus:"
   }
   \score {
     <<

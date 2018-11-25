@@ -60,7 +60,9 @@ VerseTitleMarkup = \markup {
           }
           \line {
             \fromproperty #'header:copyright
-            \optional-field "• " #'header:license
+          }
+          \line {
+            \fromproperty #'header:license
           }
         }
       }

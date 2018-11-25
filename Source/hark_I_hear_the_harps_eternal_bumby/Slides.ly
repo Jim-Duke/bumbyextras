@@ -5,7 +5,6 @@
 
 VerseTitleMarkup = \markup {
     \fill-line {
-      \null
       \raise #1
       \override #'(line-width . 70)
       \center-column {
@@ -211,6 +210,11 @@ VerseTitleMarkup = \markup {
       >>
     >>
     \SlideLayout
+  }
+  \markup {
+    \abs-fontsize #40
+    \bold
+    "Chorus:"
   }
   \score {
     <<

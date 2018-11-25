@@ -46,6 +46,23 @@ Configure the bundler/gem path so bundle doesn't prompt for sudo
 
     sudo apt-get install imagemagick
 
+    Because of some recent changes to the security settings of imagmagick, the
+    default settings won't allow you to make images from PDF files - go figure.
+    To fix this behavior you need to modify the Imagmagick policy.xml file to
+    uncomment this line:
+
+    <!-- <policy domain="module" rights="none" pattern="{PS,PDF,XPS}" /> -->
+
+    And change it from rights="none" to rights="read|write"
+
+    <policy domain="module" rights="read|writ" pattern="{PS,PDF,XPS}" />
+
+    Or, you might find the following form:
+
+    <policy domain="coder" rights="none" pattern="PDF" />
+
+    In which case, change the "none" to "read|write".
+
 ## Install pdftk
 
     sudo add-apt-repository ppa:malteworld/ppa

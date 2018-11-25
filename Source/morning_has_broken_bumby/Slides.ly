@@ -89,7 +89,7 @@ VerseTitleMarkup = \markup {
     #(layout-set-staff-size 44)
   }
   \pageBreak
-  \VerseTitleMarkup
+  \VerseTitleMarkup \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -130,7 +130,7 @@ VerseTitleMarkup = \markup {
     >>
     \SlideLayout
   }
-  \VerseTitleMarkup
+  \VerseTitleMarkup \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -171,7 +171,7 @@ VerseTitleMarkup = \markup {
     >>
     \SlideLayout
   }
-  \VerseTitleMarkup
+  \VerseTitleMarkup \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)

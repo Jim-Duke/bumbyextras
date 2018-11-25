@@ -8,16 +8,15 @@ SlideStaffStaffSpacing = #16
 
 VerseTitleMarkup = \markup {
     \fill-line {
-      \null
       \raise #1
       \override #'(line-width . 70)
       \center-column {
-        \abs-fontsize #40
+        \abs-fontsize #36
         \bold
         \Title
       }
       {
-        \abs-fontsize #40
+        \abs-fontsize #36
         \bold
         \raise #1
         \SongNumber

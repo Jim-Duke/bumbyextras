@@ -260,7 +260,7 @@ VerseTitleMarkup = \markup {
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \SopranoChorusMusic
+            \keepWithTag #'usePartials \SopranoChorusLastVerseMusic
           }
           {
             \global

@@ -58,8 +58,9 @@ VerseTitleMarkup = \markup {
             \fromproperty #'header:composer
           }
           \line {
-            \fromproperty #'header:copyright
+            \wordwrap-field #'header:copyright
           }
+          \vspace #0.4
           \line {
             \fromproperty #'header:license
           }
@@ -173,6 +174,10 @@ VerseTitleMarkup = \markup {
     \SlideLayout
   }
   \pageBreak
+  \markup {
+    \abs-fontsize #40
+    \bold "Chorus:"
+  }
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)

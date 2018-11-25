@@ -143,7 +143,7 @@ SheetMusicLyricsMinimumDistance = 2
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \SopranoChorusMusic
+            \keepWithTag #'usePartials \SopranoChorusLastVerseMusic
           }
           {
             \global

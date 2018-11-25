@@ -52,8 +52,9 @@
             \fromproperty #'header:arranger
           }
           \line {
-            \fromproperty #'header:copyright
+            \wordwrap-field #'header:copyright
           }
+          \vspace #0.4
           \line {
             \fromproperty #'header:license
           }

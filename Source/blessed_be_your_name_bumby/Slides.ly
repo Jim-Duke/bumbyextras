@@ -56,11 +56,16 @@ VerseTitleMarkup = \markup {
             "Tune:"
             \fromproperty #'header:tune
             \optional-field "• " #'header:composer
-            \optional-field "• arr. " #'header:arranger
+          }
+          \line {
+            "Arranger:"
+            \fromproperty #'header:arranger
           }
           \line {
             \fromproperty #'header:copyright
-            \optional-field "• " #'header:license
+          }
+          \line {
+            \fromproperty #'header:license
           }
         }
       }
