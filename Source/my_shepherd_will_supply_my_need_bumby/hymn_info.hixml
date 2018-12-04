@@ -1,0 +1,7 @@
+﻿    <hymn number="B-001" title="My Shepherd Will Supply My Need">
+      <songLeaderInfo beatPattern="3" key="C" startingPitch="DO" time="3/4" startingBeat="3" />
+      <originator name="Isaac Watts" role="Writer" type="Individual" />
+      <originator name="Traditional Noth American" role="Composer" type="Individual" />
+      <originator name="Michael Duke" role="Arranger" type="Individual" />
+      <scripture>Psalm 23</scripture>
+    </hymn>

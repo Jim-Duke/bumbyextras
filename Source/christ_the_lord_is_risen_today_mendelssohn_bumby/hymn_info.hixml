@@ -1,0 +1,7 @@
+﻿    <hymn number="B-006" title="Christ the Lord is Risen Today (Mendellsohn)">
+      <songLeaderInfo beatPattern="4" key="G" startingPitch="SOL" time="4/4" startingBeat="1" />
+      <originator name="Charles Wesley" role="Writer" type="Individual"/>
+      <originator name="Felix Mendelssohn (1840)" role="Composer" type="Individual"/>
+      <originator name="William H. Cummings" role="Arranger" type="Individual"/>
+      <scripture>Matthew 28:5-6</scripture>
+    </hymn>

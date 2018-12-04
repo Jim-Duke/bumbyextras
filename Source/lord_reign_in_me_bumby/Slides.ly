@@ -175,6 +175,12 @@ VerseTitleMarkup = \markup {
     >>
     \SlideLayout
   }
+  \pageBreak
+  \markup {
+    \abs-fontsize #40
+    \bold
+    "Chorus:"
+  } \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)

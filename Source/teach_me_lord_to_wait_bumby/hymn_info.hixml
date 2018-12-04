@@ -1,0 +1,12 @@
+﻿    <hymn number="B-002" title="Teach Me Lord To Wait">
+      <songLeaderInfo beatPattern="3" key="F" startingPitch="SOL" time="3/4" startingBeat="3" />
+      <originator name="Stuart Hamblen" role="Writer" type="Individual" />
+      <originator name="Stuart Hamblen" role="Composer" type="Individual" />
+      <copyright>
+        <copyrightHolder name="Hamblen Music Company" type="Business"></copyrightHolder>
+        <startYear>1953</startYear>
+        <scope>Standard</scope>
+        <portionCopyrighted>Hymn</portionCopyrighted>
+      </copyright>
+      <scripture>Isaiah 40:31</scripture>
+    </hymn>

@@ -178,6 +178,18 @@ highest_hope_bumby_number = "B-034"
 highest_hope_bumby_number_rhs = ##f
 highest_hope_bumby_pages = 2
 
+speak_o_lord_bumby_number = "B-035"
+speak_o_lord_bumby_number_rhs = ##f
+speak_o_lord_bumby_pages = 2
+
+o_church_arise_bumby_number = "B-036"
+o_church_arise_bumby_number_rhs = ##f
+o_church_arise_bumby_pages = 2
+
+how_deep_the_fathers_love_bumby_number = "B-037"
+how_deep_the_fathers_love_bumby_number_rhs = ##f
+how_deep_the_fathers_love_bumby_pages = 1
+
 %%%
 %%% Unassigned
 %%%

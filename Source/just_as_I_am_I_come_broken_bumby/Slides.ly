@@ -262,6 +262,12 @@ VerseTitleMarkup = \markup {
     >>
     \SlideLayout
   }
+  \pageBreak
+  \markup {
+    \abs-fontsize #40
+    \bold
+    "CODA:"
+  } \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)

@@ -1,0 +1,14 @@
+﻿    <hymn number="B-021" title="Blessed Be Your Name">
+      <songLeaderInfo beatPattern="4" key="A" startingPitch="MI" time="4/4" startingBeat="3" />
+      <originator name="Matt Redman" role="Writer" type="Individual" />
+      <originator name="Beth Redman" role="Writer" type="Individual" />
+      <originator name="Matt Redman" role="Composer" type="Individual" />
+      <originator name="Beth Redman" role="Composer" type="Individual" />
+      <originator name="Clarissa Cox" role="Arranger" type="Individual" />
+      <copyright>
+        <copyrightHolder name="ThankYou Music" type="Business"></copyrightHolder>
+        <startYear>2002</startYear>
+        <scope>Standard</scope>
+        <portionCopyrighted>Hymn</portionCopyrighted>
+      </copyright>
+    </hymn>

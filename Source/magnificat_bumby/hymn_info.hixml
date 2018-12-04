@@ -1,0 +1,12 @@
+﻿    <hymn number="B-009" title="Magnificat">
+      <songLeaderInfo beatPattern="3" key="E" startingPitch="DO" time="3/4" startingBeat="3"/>
+      <originator name="Randy Gill" type="Individual" role="Writer"/>
+      <originator name="Randy Gill" type="Individual" role="Composer"/>
+      <copyright>
+        <copyrightHolder name="Randy Gill" type="Individual"/>
+        <startYear>2003</startYear>
+        <scope>Standard</scope>
+        <portionCopyrighted>Hymn</portionCopyrighted>
+      </copyright>
+      <scripture>Luke 1:46-49</scripture>
+    </hymn>

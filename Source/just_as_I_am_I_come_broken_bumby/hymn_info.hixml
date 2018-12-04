@@ -1,0 +1,31 @@
+﻿    <hymn number="B-008" title="Just As I Am - I Come Broken">
+      <songLeaderInfo beatPattern="3" key="Eb" startingPitch="DO" time="3/4" startingBeat="3" />
+      <originator name="Charlotte Elliott" role="Writer" type="Individual" />
+      <originator name="William B. Bradbury (1849)" role="Composer" type="Individual" />
+      <originator name="David Moffitt" role="Writer" type="Individual" />
+      <originator name="David Moffitt" role="Composer" type="Individual" />
+      <originator name="Sue C. Smith" role="Writer" type="Individual" />
+      <originator name="Sue C. Smith" role="Composer" type="Individual" />
+      <originator name="Travis Cottrell" role="Writer" type="Individual" />
+      <originator name="Travis Cottrell" role="Composer" type="Individual" />
+      <originator name="Sam Souder" role="Arranger" type="Individual" />
+      <copyright>
+        <copyrightHolder name="CCTB Music" type="Business"></copyrightHolder>
+        <startYear>2009</startYear>
+        <scope>Standard</scope>
+        <portionCopyrighted>Hymn</portionCopyrighted>
+      </copyright>
+      <copyright>
+        <copyrightHolder name="First Hand Revelation Music" type="Business"></copyrightHolder>
+        <startYear>2009</startYear>
+        <scope>Standard</scope>
+        <portionCopyrighted>Hymn</portionCopyrighted>
+      </copyright>
+      <copyright>
+        <copyrightHolder name="Universal Music" type="Business"></copyrightHolder>
+        <startYear>2009</startYear>
+        <scope>Standard</scope>
+        <portionCopyrighted>Hymn</portionCopyrighted>
+      </copyright>
+      <scripture>Isaiah 1:18</scripture>
+    </hymn>

@@ -1,0 +1,13 @@
+﻿    <hymn number="B-010" title="Just For Today">
+      <songLeaderInfo beatPattern="4" key="E" startingPitch="DO" time="4/4" startingBeat="4"/>
+      <originator name="Marc Schelske (1995)" type="Individual" role="Writer"/>
+      <originator name="Marc Schelske (1995)" type="Individual" role="Composer"/>
+      <originator name="Jim Duke" type="Individual" role="Arranger"/>
+      <copyright>
+        <copyrightHolder name="Marc Schelske Music" type="Business"/>
+        <startYear>1995</startYear>
+        <scope>Standard</scope>
+        <portionCopyrighted>Hymn</portionCopyrighted>
+      </copyright>
+      <scripture>Romans 12:1-2</scripture>
+    </hymn>

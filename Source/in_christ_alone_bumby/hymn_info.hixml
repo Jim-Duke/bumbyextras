@@ -1,0 +1,12 @@
+﻿    <hymn number="B-003" title="In Christ Alone">
+      <songLeaderInfo beatPattern="3" key="Eb" startingPitch="SOL" time="3/4" startingBeat="1.5" />
+      <originator name="Keith Getty and Stuart Townsend" role="Writer" type="Individual" />
+      <originator name="Keith Getty and Stuart Townsend" role="Composer" type="Individual" />
+      <copyright>
+        <copyrightHolder name="Thankyou Music" type="Business"></copyrightHolder>
+        <startYear>2001</startYear>
+        <scope>Standard</scope>
+        <portionCopyrighted>Hymn</portionCopyrighted>
+      </copyright>
+      <scripture>romans 8:38-39</scripture>
+    </hymn>

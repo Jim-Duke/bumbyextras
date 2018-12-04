@@ -1,0 +1,7 @@
+﻿    <hymn number="B-007" title="Hark! I Hear the Harps Eternal">
+      <songLeaderInfo beatPattern="3" key="F" startingPitch="DO" time="3/4" startingBeat="3" />
+      <originator name="F. R. Warren" role="Writer" type="Individual" />
+      <originator name="Traditional" role="Composer" type="Individual" />
+      <originator name="Michael Duke" role="Arranger" type="Individual" />
+      <scripture>Revelation 14:2</scripture>
+    </hymn>
