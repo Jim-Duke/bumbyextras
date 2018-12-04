@@ -174,6 +174,12 @@ VerseTitleMarkup = \markup {
     >>
     \SlideLayout
   }
+  \pageBreak
+  \markup {
+    \abs-fontsize #40
+    \bold
+    "Chorus:"
+  } \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -214,6 +220,52 @@ VerseTitleMarkup = \markup {
     >>
     \SlideLayout
   }
+  \score {
+    <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
+      \context Staff = upper <<
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \SopranoChorusTailMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \AltoChorusTailMusic
+          }
+        \new NullVoice = breaks {
+          \global
+          \keepWithTag #'usePartials \SlidesChorusTailBreaks
+        }
+        \new NullVoice = alignVoice {
+          \global
+          \keepWithTag #'usePartials \SopranoChorusTailMusic
+        }
+        \new Lyrics \lyricsto "alignVoice" {
+          \huge \ChorusTail
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \TenorChorusTailMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \BassChorusTailMusic
+          }
+      >>
+    >>
+    \SlideLayout
+  }
+  \pageBreak
+  \markup {
+    \abs-fontsize #40
+    \bold
+    "CODA:"
+  } \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)

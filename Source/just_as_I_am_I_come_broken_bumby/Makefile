@@ -9,32 +9,10 @@ PROD_BASE_NAME = just_as_I_am_I_come_broken_bumby
 STATUS = review
 ACCESS = private
 SLIDE_NAME = JUST\ AS\ I\ AM\ I\ COME\ BROKEN
-HYMNAL_VERSION = v1.1.0.0
 HYMN_NUMBER = B-008
+ROOT_DIR = ../..
 
-LIBRARY_DIR = ../../../LilypondTemplates
-LIBRARY_FILES = $(LIBRARY_DIR)/functions.ly $(LIBRARY_DIR)/hymns.ly $(LIBRARY_DIR)/standard-elements.ly
-LILYPOND = lilypond.exe
-LILYPOND_PROD_OPTIONS = -dno-point-and-click -ddelete-intermediate-files
-COMMON_DEPS = Words-and-music.ly ../hymn_settings.ly $(LIBRARY_FILES)
-MIDI_FILES = Audio_all.mid Audio_soprano.mid Audio_alto.mid Audio_tenor.mid Audio_bass.mid
-BUILD_DIR = ../../docs/Source/$(ACCESS)/$(STATUS)/$(PROD_BASE_NAME)
-PUBLIC_BUILD_DIR = ../../docs/Source/public/$(STATUS)/$(PROD_BASE_NAME)
-SLIDE_DIR = ../../Published/$(HYMNAL_VERSION)/$(HYMN_NUMBER)
-PROD_SHEET_MUSIC = $(BUILD_DIR)/$(PROD_BASE_NAME)_sheet_music.pdf
-PROD_SHEET_MUSIC_THUMBNAIL = $(PUBLIC_BUILD_DIR)/$(PROD_BASE_NAME)_sheet_music_thumbnail.png
-PROD_SLIDES_MUSIC = $(BUILD_DIR)/$(PROD_BASE_NAME)_slides.pdf
-PROD_SLIDES_MUSIC_THUMBNAIL = $(PUBLIC_BUILD_DIR)/$(PROD_BASE_NAME)_slides_thumbnail.png
-THUMBNAIL_RESOLUTION = x500
-SLIDE_RESOLUTION = 3000x2250
-# SOUNDFONT = ../../media/CT8MGM.SF2
-SOUNDFONT = /usr/share/sounds/sf2/FluidR3_GM.sf2
-# SOUNDFONT = ../../media/dsf_vocal_expressions.sf2
-PROD_ALL_MUSIC = $(PUBLIC_BUILD_DIR)/$(PROD_BASE_NAME)_audio_all.mp3
-PROD_SOPRANO_MUSIC = $(PUBLIC_BUILD_DIR)/$(PROD_BASE_NAME)_audio_soprano.mp3
-PROD_ALTO_MUSIC = $(PUBLIC_BUILD_DIR)/$(PROD_BASE_NAME)_audio_alto.mp3
-PROD_TENOR_MUSIC = $(PUBLIC_BUILD_DIR)/$(PROD_BASE_NAME)_audio_tenor.mp3
-PROD_BASS_MUSIC = $(PUBLIC_BUILD_DIR)/$(PROD_BASE_NAME)_audio_bass.mp3
+include ../common.mk
 
 .PHONY: local prod clean prodclean
 

@@ -25,7 +25,7 @@ FirstPage = #(if RightFirstPage 1 2)
 
 LeaderHints = \markup {
   \fontsize #-4
-  \normal-text { "F" \musicglyph #"accidentals.flat" " - 4 - MI" }
+  \normal-text { "E" \musicglyph #"accidentals.flat" " - 4 - MI" }
 }
 
 Scripture = "Then He said to Thomas, \"Reach here with your finger, and see My hands;

@@ -138,21 +138,26 @@
           {
             \global
             \keepWithTag #'usePartials \SopranoChorusMusic
+            \removeWithTag #'usePartials \SopranoChorusTailMusic
           }
           {
             \global
             \keepWithTag #'usePartials \AltoChorusMusic
+            \removeWithTag #'usePartials \AltoChorusTailMusic
           }
         \context NullVoice = breaks {
           \global
           \keepWithTag #'usePartials \SheetMusicChorusBreaks
+          \removeWithTag #'usePartials \SheetMusicChorusTailBreaks
         }
         \context NullVoice = alignVoice {
           \global
           \keepWithTag #'usePartials \SopranoChorusMusic
+          \removeWithTag #'usePartials \SopranoChorusTailMusic
         }
         \new Lyrics \lyricsto "alignVoice" {
           \Chorus
+          \ChorusTail
         }
       >>
       \context Staff = lower <<
@@ -161,17 +166,19 @@
           {
             \global
             \keepWithTag #'usePartials \TenorChorusMusic
+            \removeWithTag #'usePartials \TenorChorusTailMusic
           }
           {
             \global
             \keepWithTag #'usePartials \BassChorusMusic
+            \removeWithTag #'usePartials \BassChorusTailMusic
           }
       >>
     >>
     \SheetMusicChorusLayout
   }
   \markup {
-    \huge \italic "Repeat the last line softly at the end only."
+    \huge \bold "CODA:"
   }
   \score {
     \context ChoirStaff <<
