@@ -84,7 +84,7 @@ $(SUBDIRS):
 
 book: ../Published/hymnal.pdf
 
-slides: ../Published/slides.pdf
+#slides: ../Published/slides.pdf
 
 ../Published/hymnal.pdf: $(BOOK_FILES)
 	pdftk $(BOOK_FILES) cat output $@ compress

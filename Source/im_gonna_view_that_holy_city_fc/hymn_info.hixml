@@ -1,0 +1,7 @@
+﻿    <hymn number="F-001" title="I'm Gonna View That Holy City">
+      <songLeaderInfo beatPattern="2" key="G" startingPitch="SOL" time="4/4" startingBeat="1" />
+      <originator name="Traditional" role="Writer" type="Individual" />
+      <originator name="Traditional" role="Composer" type="Individual" />
+      <originator name="David Sexton" role="Arranger" type="Individual" />
+      <scripture>Revelation 21:2</scripture>
+    </hymn>

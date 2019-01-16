@@ -191,5 +191,9 @@ how_deep_the_fathers_love_bumby_number_rhs = ##f
 how_deep_the_fathers_love_bumby_pages = 1
 
 %%%
-%%% Unassigned
+%%% FC Alumni Chorus hymns
 %%%
+
+im_gonna_view_that_holy_city_fc_number = "F-001"
+im_gonna_view_that_holy_city_fc_number_rhs = ##f
+im_gonna_view_that_holy_city_fc_number_pages = 1
