@@ -197,3 +197,11 @@ how_deep_the_fathers_love_bumby_pages = 1
 im_gonna_view_that_holy_city_fc_number = "F-001"
 im_gonna_view_that_holy_city_fc_number_rhs = ##f
 im_gonna_view_that_holy_city_fc_number_pages = 1
+
+listen_to_our_hearts_fc_number = "F-002"
+listen_to_our_hearts_fc_number_rhs = ##f
+listen_to_our_hearts_fc_pages = 2
+
+make_me_new_fc_number = "F-003"
+make_me_new_fc_number_rhs = ##f
+make_me_new_fc_pages = 1

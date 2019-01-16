@@ -15,8 +15,8 @@
     %
     % Various variables that can be used to tweak vertical spacing
     %
-    system-system-spacing.basic-distance = #10
-    system-system-spacing.minimum-distance = #6
+    system-system-spacing.basic-distance = #0
+    system-system-spacing.minimum-distance = #0
     score-markup-spacing.basic-distance = #0
     markup-system-spacing.basic-distance = #0
       
@@ -79,87 +79,38 @@
     % Verses Section
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
+      \context Staff = upper \with { printPartCombineTexts = ##f } <<
         \partCombine
           {
             \global
-            \keepWithTag #'sheetMusic \SopranoVerseBody
-            \keepWithTag #'sheetMusic \SopranoVerseRepeat
-            \keepWithTag #'sheetMusic \SopranoVerseEnd
+            \keepWithTag #'usePartials \SopranoVerseMusic
           }
           {
             \global
-            \keepWithTag #'sheetMusic \AltoVerseBody
-            \keepWithTag #'sheetMusic \AltoVerseRepeat
-            \keepWithTag #'sheetMusic \AltoVerseEnd
+            \keepWithTag #'usePartials \AltoVerseMusic
           }
         \context NullVoice = breaks {
           \global
-          \keepWithTag #'sheetMusic \SheetMusicVerseBodyBreaks
-          \keepWithTag #'sheetMusic \SheetMusicVerseRepeatBreaks
-          \keepWithTag #'sheetMusic \SheetMusicVerseEndBreaks
+          \keepWithTag #'usePartials \SheetMusicVerseBreaks
         }
-        \context NullVoice = alignOne {
+        \context NullVoice = align {
           \global
-          \keepWithTag #'verseOne \SopranoVerseBody
-          \keepWithTag #'verseOne \SopranoVerseRepeat
-          \keepWithTag #'verseOne \SopranoVerseEnd
+          \keepWithTag #'usePartials \SopranoVerseMusic
         }
-        \context NullVoice = alignTwo {
-          \global
-          \keepWithTag #'verseTwo \SopranoVerseBody
-          \keepWithTag #'verseTwo \SopranoVerseRepeat
-          \keepWithTag #'verseTwo \SopranoVerseEnd
-        }
-        \context NullVoice = alignThree {
-          \global
-          \keepWithTag #'verseThree \SopranoVerseBody
-          \keepWithTag #'verseThree \SopranoVerseRepeat
-          \keepWithTag #'verseThree \SopranoVerseEnd
-        }
-        \context NullVoice = alignFour {
-          \global
-          \keepWithTag #'verseFour \SopranoVerseBody
-          \keepWithTag #'verseFour \SopranoVerseRepeat
-          \keepWithTag #'verseFour \SopranoVerseEnd
-        }
-        \context NullVoice = alignFive {
-          \global
-          \keepWithTag #'verseFive \SopranoVerseBody
-          \keepWithTag #'verseFive \SopranoVerseRepeat
-          \keepWithTag #'verseFive \SopranoVerseEnd
-        }
-        \new Lyrics \lyricsto "alignOne" {
+        \new Lyrics \lyricsto "align" {
           \VerseOne
         }
-        \new Lyrics \lyricsto "alignTwo" {
-          \VerseTwo
-        }
-        \new Lyrics \lyricsto "alignThree" {
-          \VerseThree
-          \Tag
-        }
-        \new Lyrics \lyricsto "alignFour" {
-          \VerseFour
-        }
-        \new Lyrics \lyricsto "alignFive" {
-          \VerseFive
-        }
       >>
-      \context Staff = lower <<
+      \context Staff = lower \with { printPartCombineTexts = ##f } <<
         \clef bass
         \partCombine
           {
             \global
-            \keepWithTag #'sheetMusic \TenorVerseBody
-            \keepWithTag #'sheetMusic \TenorVerseRepeat
-            \TenorVerseEnd
+            \keepWithTag #'usePartials \TenorVerseMusic
           }
           {
             \global
-            \keepWithTag #'sheetMusic \BassVerseBody
-            \keepWithTag #'sheetMusic \BassVerseRepeat
-            \BassVerseEnd
+            \keepWithTag #'usePartials \BassVerseMusic
           }
       >>
     >>

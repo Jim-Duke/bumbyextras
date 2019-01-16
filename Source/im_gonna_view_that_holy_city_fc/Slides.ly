@@ -89,7 +89,7 @@ VerseTitleMarkup = \markup {
     #(layout-set-staff-size 44)
   }
   \pageBreak
-  \VerseTitleMarkup
+  \VerseTitleMarkup \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -97,19 +97,19 @@ VerseTitleMarkup = \markup {
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
+            \keepWithTag #'verseOne \SopranoVerseBody
           }
           {
             \global
-            \keepWithTag #'usePartials \AltoVerseMusic
+            \keepWithTag #'verseOne \AltoVerseBody
           }
         \new NullVoice = breaks {
           \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
+          \SlidesVerseBodyBreaks
         }
         \new NullVoice = alignVoice {
           \global
-          \keepWithTag #'usePartials \SopranoVerseMusic
+          \keepWithTag #'verseOne \SopranoVerseBody
         }
       >>
       \new Lyrics \lyricsto "alignVoice" {
@@ -120,216 +120,11 @@ VerseTitleMarkup = \markup {
         \partCombine
           {
             \global
-            \keepWithTag #'usePartials \TenorVerseMusic
+            \keepWithTag #'verseOne \TenorVerseBody
           }
           {
             \global
-            \keepWithTag #'usePartials \BassVerseMusic
-          }
-      >>
-    >>
-    \SlideLayout
-  }
-  \VerseTitleMarkup
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \AltoVerseMusic
-          }
-        \new NullVoice = breaks {
-          \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
-        }
-        \new NullVoice = alignVoice {
-          \global
-          \keepWithTag #'usePartials \SopranoVerseMusic
-        }
-      >>
-      \new Lyrics \lyricsto "alignVoice" {
-        \huge \VerseTwo
-      }
-      \context Staff = lower <<
-        \clef bass
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \TenorVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \BassVerseMusic
-          }
-      >>
-    >>
-    \SlideLayout
-  }
-  \VerseTitleMarkup
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \AltoVerseMusic
-          }
-        \new NullVoice = breaks {
-          \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
-        }
-        \new NullVoice = alignVoice {
-          \global
-          \keepWithTag #'usePartials \SopranoVerseMusic
-        }
-      >>
-      \new Lyrics \lyricsto "alignVoice" {
-        \huge \VerseThree
-      }
-      \context Staff = lower <<
-        \clef bass
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \TenorVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \BassVerseMusic
-          }
-      >>
-    >>
-    \SlideLayout
-  }
-  \VerseTitleMarkup
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \AltoVerseMusic
-          }
-        \new NullVoice = breaks {
-          \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
-        }
-        \new NullVoice = alignVoice {
-          \global
-          \keepWithTag #'usePartials \SopranoVerseMusic
-        }
-      >>
-      \new Lyrics \lyricsto "alignVoice" {
-        \huge \VerseFour
-      }
-      \context Staff = lower <<
-        \clef bass
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \TenorVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \BassVerseMusic
-          }
-      >>
-    >>
-    \SlideLayout
-  }
-  \VerseTitleMarkup
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \AltoVerseMusic
-          }
-        \new NullVoice = breaks {
-          \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
-        }
-        \new NullVoice = alignVoice {
-          \global
-          \keepWithTag #'usePartials \SopranoVerseMusic
-        }
-      >>
-      \new Lyrics \lyricsto "alignVoice" {
-        \huge \VerseFive
-      }
-      \context Staff = lower <<
-        \clef bass
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \TenorVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \BassVerseMusic
-          }
-      >>
-    >>
-    \SlideLayout
-  }
-  \VerseTitleMarkup
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \AltoVerseMusic
-          }
-        \new NullVoice = breaks {
-          \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
-        }
-        \new NullVoice = alignVoice {
-          \global
-          \keepWithTag #'usePartials \SopranoVerseMusic
-        }
-      >>
-      \new Lyrics \lyricsto "alignVoice" {
-        \huge \VerseSix
-      }
-      \context Staff = lower <<
-        \clef bass
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \TenorVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \BassVerseMusic
+            \keepWithTag #'verseOne \BassVerseBody
           }
       >>
     >>

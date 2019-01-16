@@ -1,6 +1,9 @@
 \version "2.19.49"
 
 \include "Words-and-music.ly"
+
+SheetMusicLyricsMinimumDistance = #1
+
 \include "../../../LilypondTemplates/standard-elements.ly"
 
 \book {
@@ -28,7 +31,7 @@
     binding-offset = 0.5\in
     top-margin = 0.25\in
     bottom-margin = 0.25\in
-    ragged-right = ##f
+    ragged-right = ##t
     ragged-last = \SheetMusicRaggedLast
     print-page-number = ##f
     ragged-bottom = \SheetMusicRaggedBottom
@@ -51,7 +54,9 @@
           }
           \line {
             \fromproperty #'header:copyright
-            \optional-field "• " #'header:license
+          }
+          \line {
+            \fromproperty #'header:license
           }
         }
       }
@@ -76,93 +81,102 @@
     }
   }
   \score {
-    % Verses Section
     \context ChoirStaff <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
       \context Staff = upper <<
         \partCombine
           {
             \global
-            \keepWithTag #'sheetMusic \SopranoVerseBody
-            \keepWithTag #'sheetMusic \SopranoVerseRepeat
-            \keepWithTag #'sheetMusic \SopranoVerseEnd
+            \keepWithTag #'(usePartials sheetMusicRhythms) \SopranoVerseMusic
           }
           {
             \global
-            \keepWithTag #'sheetMusic \AltoVerseBody
-            \keepWithTag #'sheetMusic \AltoVerseRepeat
-            \keepWithTag #'sheetMusic \AltoVerseEnd
+            \keepWithTag #'(usePartials sheetMusicRhythms) \AltoVerseMusic
           }
-        \context NullVoice = breaks {
+        \context NullVoice = sheetMusicVerseBreaks {
           \global
-          \keepWithTag #'sheetMusic \SheetMusicVerseBodyBreaks
-          \keepWithTag #'sheetMusic \SheetMusicVerseRepeatBreaks
-          \keepWithTag #'sheetMusic \SheetMusicVerseEndBreaks
+          \keepWithTag #'usePartials \SheetMusicVerseBreaks
         }
-        \context NullVoice = alignOne {
+        \context NullVoice = sopranosVerseOneRhythms {
           \global
-          \keepWithTag #'verseOne \SopranoVerseBody
-          \keepWithTag #'verseOne \SopranoVerseRepeat
-          \keepWithTag #'verseOne \SopranoVerseEnd
+          \keepWithTag #'(usePartials verseOneSheetRhythms) \SopranoVerseMusic
         }
-        \context NullVoice = alignTwo {
+        \context NullVoice = sopranosVerseTwoRhythms {
           \global
-          \keepWithTag #'verseTwo \SopranoVerseBody
-          \keepWithTag #'verseTwo \SopranoVerseRepeat
-          \keepWithTag #'verseTwo \SopranoVerseEnd
-        }
-        \context NullVoice = alignThree {
-          \global
-          \keepWithTag #'verseThree \SopranoVerseBody
-          \keepWithTag #'verseThree \SopranoVerseRepeat
-          \keepWithTag #'verseThree \SopranoVerseEnd
-        }
-        \context NullVoice = alignFour {
-          \global
-          \keepWithTag #'verseFour \SopranoVerseBody
-          \keepWithTag #'verseFour \SopranoVerseRepeat
-          \keepWithTag #'verseFour \SopranoVerseEnd
-        }
-        \context NullVoice = alignFive {
-          \global
-          \keepWithTag #'verseFive \SopranoVerseBody
-          \keepWithTag #'verseFive \SopranoVerseRepeat
-          \keepWithTag #'verseFive \SopranoVerseEnd
-        }
-        \new Lyrics \lyricsto "alignOne" {
-          \VerseOne
-        }
-        \new Lyrics \lyricsto "alignTwo" {
-          \VerseTwo
-        }
-        \new Lyrics \lyricsto "alignThree" {
-          \VerseThree
-          \Tag
-        }
-        \new Lyrics \lyricsto "alignFour" {
-          \VerseFour
-        }
-        \new Lyrics \lyricsto "alignFive" {
-          \VerseFive
+          \keepWithTag #'(usePartials verseTwoSheetRhythms) \SopranoVerseMusic
         }
       >>
+      \new Lyrics \lyricsto "sopranosVerseOneRhythms" {
+        \keepWithTag #'sheetMusicRhythms \VerseOneLyrics
+      }
+      \new Lyrics \lyricsto "sopranosVerseTwoRhythms" {
+        \VerseTwoLyrics
+      }
       \context Staff = lower <<
         \clef bass
         \partCombine
           {
             \global
-            \keepWithTag #'sheetMusic \TenorVerseBody
-            \keepWithTag #'sheetMusic \TenorVerseRepeat
-            \TenorVerseEnd
+            \keepWithTag #'(usePartials sheetMusicRhythms) \TenorVerseMusic
           }
           {
             \global
-            \keepWithTag #'sheetMusic \BassVerseBody
-            \keepWithTag #'sheetMusic \BassVerseRepeat
-            \BassVerseEnd
+            \keepWithTag #'(usePartials sheetMusicRhythms) \BassVerseMusic
           }
       >>
     >>
     \SheetMusicVerseLayout
+  }
+  \markup { \bold "Refrain:" }
+  \score {
+    \context ChoirStaff <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
+      \context Staff = upper \with { printPartCombineTexts = ##f } <<
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \SopranoRefrainMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \AltoRefrainMusic
+          }
+        \context NullVoice = refreainBreaks {
+          \global
+          \keepWithTag #'usePartials \SheetMusicRefrainBreaks
+        }
+        \context NullVoice = alignTop {
+          \global
+          \keepWithTag #'usePartials \SopranoRefrainMusic
+        }
+        \context NullVoice = alignBot {
+          \global
+          \keepWithTag #'usePartials \AltLyricsAlign
+        }
+%        \context NullVoice = alignBot {
+%          \global
+%         \keepWithTag #'usePartials \CounterAlignMusic
+%        }
+      >>
+      \new Lyrics \lyricsto "alignTop" {
+        \RefrainLyrics
+      }
+      \new Lyrics \lyricsto "alignBot" {
+        \AltRefrainLyrics
+      }
+      \context Staff = lower \with { printPartCombineTexts = ##f } <<
+        \clef bass
+        \partCombine
+          {
+            \global
+            \keepWithTag #'usePartials \TenorRefrainMusic
+          }
+          {
+            \global
+            \keepWithTag #'usePartials \BassRefrainMusic
+          }
+      >>
+    >>
+    \SheetMusicChorusLayout
   }
 }
