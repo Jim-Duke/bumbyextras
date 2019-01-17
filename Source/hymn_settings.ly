@@ -195,7 +195,7 @@ how_deep_the_fathers_love_bumby_pages = 1
 %%%
 
 im_gonna_view_that_holy_city_fc_number = "F-001"
-im_gonna_view_that_holy_city_fc_number_rhs = ##f
+im_gonna_view_that_holy_city_fc_number_rhs = ##t
 im_gonna_view_that_holy_city_fc_number_pages = 1
 
 listen_to_our_hearts_fc_number = "F-002"
@@ -205,3 +205,19 @@ listen_to_our_hearts_fc_pages = 2
 make_me_new_fc_number = "F-003"
 make_me_new_fc_number_rhs = ##f
 make_me_new_fc_pages = 1
+
+praise_god_fc_number = "F-004"
+praise_god_fc_number_rhs = ##t
+praise_god_fc_pages = 1
+
+highest_hope_fc_number = "F-005"
+highest_hope_fc_number_rhs = ##f
+highest_hope_fc_pages = 2
+
+magnificat_fc_number = "F-006"
+magnificat_fc_number_rhs = ##f
+magnificat_fc_pages = 2
+
+thomas_song_fc_number = "F-007"
+thomas_song_fc_number_rhs = ##f
+thomas_song_fc_pages = 2

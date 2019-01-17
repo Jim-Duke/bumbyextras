@@ -11,13 +11,13 @@ global = {
 }
 
 Title = "Listen to Our Hearts"
-SongNumber = \listen_to_our_hearts_bumby_number
+SongNumber = \listen_to_our_hearts_fc_number
 LeaderHints = \markup {
   \fontsize #-4
   \normal-text { "F - 4 - MI" }
 }
-number_on_rhs = \listen_to_our_hearts_bumby_number_rhs
-FirstPage = #(if listen_to_our_hearts_bumby_number_rhs 1 2)
+number_on_rhs = \listen_to_our_hearts_fc_number_rhs
+FirstPage = #(if listen_to_our_hearts_fc_number_rhs 1 2)
 
 #(if number_on_rhs
      (begin
@@ -38,7 +38,7 @@ FirstPage = #(if listen_to_our_hearts_bumby_number_rhs 1 2)
   lhs = \lhs
   rhs = \rhs
   copyright = "Words and Music Copyright © 1992 Primary Wave Brian (Chapman Sp Acct) Songs On The ForefrontSparrow Song"
-  license = #(string-append "CCLI Song #903151, License #" bumby_ccli_license)
+  license = ##f
   tagline = ##f
 }
 
