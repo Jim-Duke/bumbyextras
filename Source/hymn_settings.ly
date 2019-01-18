@@ -221,3 +221,51 @@ magnificat_fc_pages = 2
 thomas_song_fc_number = "F-007"
 thomas_song_fc_number_rhs = ##f
 thomas_song_fc_pages = 2
+
+i_am_crucified_with_christ_fc_number = "F-008"
+i_am_crucified_with_christ_fc_number_rhs = ##f
+i_am_crucified_with_christ_fc_pages = 1
+
+pierce_my_ear_fc_number = "F-009"
+pierce_my_ear_fc_number_rhs = ##t
+pierce_my_ear_fc_pages = 1
+
+more_precious_than_silver_fc_number = "F-010"
+more_precious_than_silver_fc_number_rhs = ##f
+more_precious_than_silver_fc_pages = 1
+
+o_lord_youre_beautiful_fc_number = "F-011"
+o_lord_youre_beautiful_fc_number_rhs = ##t
+o_lord_youre_beautiful_fc_pages = 1
+
+we_will_glorify_the_king_of_kings_fc_number = "F-012"
+we_will_glorify_the_king_of_kings_fc_number_rhs = ##f
+we_will_glorify_the_king_of_kings_fc_pages = 1
+
+lord_be_glorified_fc_number = "F-013"
+lord_be_glorified_fc_number_rhs = ##t
+lord_be_glorified_fc_pages = 1
+
+we_shall_assemble_fc_number = "F-014"
+we_shall_assemble_fc_number_rhs = ##f
+we_shall_assemble_fc_pages = 2
+
+jesus_let_us_come_to_know_you_fc_number = "F-015"
+jesus_let_us_come_to_know_you_fc_number_rhs = ##f
+jesus_let_us_come_to_know_you_fc_pages = 1
+
+down_in_the_river_to_pray_fc_number = "F-016"
+down_in_the_river_to_pray_fc_number_rhs = ##t
+down_in_the_river_to_pray_fc_pages = 1
+
+faithful_love_fc_number = "F-017"
+faithful_love_fc_number_rhs = ##f
+faithful_love_fc_pages = 2
+
+in_need_fc_number = "F-018"
+in_need_fc_number_rhs = ##f
+in_need_fc_pages = 2
+
+he_is_wonderful_fc_number = "F-019"
+he_is_wonderful_fc_number_rhs = ##f
+he_is_wonderful_fc_pages = 1
