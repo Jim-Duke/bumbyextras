@@ -111,92 +111,10 @@ VerseTitleMarkup = \markup {
         }
         \new NullVoice = alignVoice {
           \global
-          \keepWithTag #'usePartials \AlignVerseMusic
+          \keepWithTag #'usePartials \SopranoVerseMusic
         }
         \new Lyrics \lyricsto "alignVoice" {
           \huge \VerseOne
-        }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \TenorVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \BassVerseMusic
-          }
-      >>
-    >>
-    \SlideLayout
-  }
-  \VerseTitleMarkup
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \AltoVerseMusic
-          }
-        \new NullVoice = breaks {
-          \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
-        }
-        \new NullVoice = alignVoice {
-          \global
-          \keepWithTag #'usePartials \AlignVerseMusic
-        }
-        \new Lyrics \lyricsto "alignVoice" {
-          \huge \VerseTwo
-        }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \TenorVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \BassVerseMusic
-          }
-      >>
-    >>
-    \SlideLayout
-  }
-  \VerseTitleMarkup
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \SopranoVerseMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \AltoVerseMusic
-          }
-        \new NullVoice = breaks {
-          \global
-          \keepWithTag #'usePartials \SlidesVerseBreaks
-        }
-        \new NullVoice = alignVoice {
-          \global
-          \keepWithTag #'usePartials \AlignVerseMusic
-        }
-        \new Lyrics \lyricsto "alignVoice" {
-          \huge \VerseThree
         }
       >>
       \context Staff = lower <<
