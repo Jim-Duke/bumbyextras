@@ -88,36 +88,81 @@ SheetMusicLyricsMinimumDistance = #1
         \partCombine
           {
             \global
-            \keepWithTag #'(usePartials sheetMusicRhythms) \SopranoVerseMusic
+            \partial 8
+            \repeat volta 3 {
+              \keepWithTag #'sheetMusic \SopranoVerseStartMusic
+              \keepWithTag #'sheetMusic \SopranoVerseBodyMusic
+            }
+            \alternative {
+              {
+                \keepWithTag #'sheetMusic \SopranoFirstEnding
+              }
+              {
+                \keepWithTag #'sheetMusic \SopranoLastEnding
+              }
+            }
+            \SopranoEnding
           }
           {
             \global
-            \keepWithTag #'(usePartials sheetMusicRhythms) \AltoVerseMusic
+            \partial 8
+            \repeat volta 3 {
+              \keepWithTag #'sheetMusic \AltoVerseStartMusic
+              \keepWithTag #'sheetMusic \AltoVerseBodyMusic
+            }
+            \alternative {
+              {
+                \keepWithTag #'sheetMusic \AltoFirstEnding
+              }
+              {
+                \keepWithTag #'sheetMusic \AltoLastEnding
+              }
+            }
+            \AltoEnding
           }
         \context NullVoice = breaks {
           \global
-          \keepWithTag #'usePartials \SheetMusicVerseBreaks
+          \partial 8
+          \SheetMusicVerseBreaks
         }
         \context NullVoice = alignOne {
           \global
-          \keepWithTag #'(usePartials verseOneRhythms) \SopranoVerseMusic
+          \partial 8
+          \keepWithTag #'sheetMusicVerseOne \SopranoVerseStartMusic
+          \keepWithTag #'verseOne \SopranoVerseBodyMusic
+          \keepWithTag #'verseOne \SopranoFirstEnding
+          \keepWithTag #'verseOne \SopranoLastEnding
+          \keepWithTag #'verseOne \SopranoEnding
         }
         \context NullVoice = alignTwo {
           \global
-          \keepWithTag #'(usePartials verseTwoRhythms) \SopranoVerseMusic
+          \partial 8
+          \keepWithTag #'verseTwo \SopranoVerseStartMusic
+          \keepWithTag #'verseTwo \SopranoVerseBodyMusic
+          \keepWithTag #'verseTwo \SopranoFirstEnding
+          \keepWithTag #'verseTwo \SopranoLastEnding
+          \keepWithTag #'verseTwo \SopranoEnding
         }
         \context NullVoice = alignThree {
           \global
-          \keepWithTag #'(usePartials verseThreeRhythms) \SopranoVerseMusic
+          \partial 8
+          \keepWithTag #'verseThree \SopranoVerseStartMusic
+          \keepWithTag #'verseThree \SopranoVerseBodyMusic
+          \keepWithTag #'verseThree \SopranoFirstEnding
+          \keepWithTag #'verseThree \SopranoLastEnding
+          \keepWithTag #'verseThree \SopranoEnding
         }
         \new Lyrics \lyricsto "alignOne" {
           \VerseOne
+          \VerseOneEnding
         }
         \new Lyrics \lyricsto "alignTwo" {
           \VerseTwo
+          \VerseTwoEnding
         }
         \new Lyrics \lyricsto "alignThree" {
           \VerseThree
+          \VerseThreeEnd
         }
       >>
       \context Staff = lower <<
@@ -125,61 +170,40 @@ SheetMusicLyricsMinimumDistance = #1
         \partCombine
           {
             \global
-            \keepWithTag #'(usePartials sheetMusicRhythms) \TenorVerseMusic
+            \partial 8
+            \repeat volta 3 {
+              \keepWithTag #'sheetMusic \TenorVerseStartMusic
+              \keepWithTag #'sheetMusic \TenorVerseBodyMusic
+            }
+            \alternative {
+              {
+                \keepWithTag #'sheetMusic \TenorFirstEnding
+              }
+              {
+                \keepWithTag #'sheetMusic \TenorLastEnding
+              }
+            }
+            \TenorEnding
           }
           {
             \global
-            \keepWithTag #'(usePartials sheetMusicRhythms) \BassVerseMusic
+            \partial 8
+            \repeat volta 3 {
+              \keepWithTag #'sheetMusic \BassVerseStartMusic
+              \keepWithTag #'sheetMusic \BassVerseBodyMusic
+            }
+            \alternative {
+              {
+                \keepWithTag #'sheetMusic \BassFirstEnding
+              }
+              {
+                \keepWithTag #'sheetMusic \BassLastEnding
+              }
+            }
+            \BassEnding
           }
       >>
     >>
     \SheetMusicVerseLayout
-  }
-  \markup {
-    \vspace #4
-    \huge \bold "REFRAIN"
-  }
-  \markup {
-    \vspace #1
-  }
-  \score {
-    \context ChoirStaff <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \SopranoRefrainMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \AltoRefrainMusic
-          }
-        \context NullVoice = chorusBreaks {
-          \global
-          \keepWithTag #'usePartials \SheetMusicRefrainBreaks
-        }
-        \context NullVoice = chorusAlign {
-          \global
-          \keepWithTag #'usePartials \AlignRefrainMusic
-        }
-        \new Lyrics \lyricsto "chorusAlign" {
-          \RefrainLyrics
-        }
-      >>
-      \context Staff = lower <<
-        \clef bass
-        \partCombine
-          {
-            \global
-            \keepWithTag #'usePartials \TenorRefrainMusic
-          }
-          {
-            \global
-            \keepWithTag #'usePartials \BassRefrainMusic
-          }
-      >>
-    >>
-    \SheetMusicChorusLayout
   }
 }

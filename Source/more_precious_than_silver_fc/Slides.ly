@@ -8,6 +8,7 @@ SlideStaffStaffSpacing = #16
 
 VerseTitleMarkup = \markup {
     \fill-line {
+      \null
       \raise #1
       \override #'(line-width . 70)
       \center-column {
@@ -47,19 +48,19 @@ VerseTitleMarkup = \markup {
           \line {
             "Hymn:"
             \fromproperty #'header:meter
-            \char ##x2022
-            \fromproperty #'header:poet
+            \optional-field "• " #'header:poet
+            \optional-field "• tr. " #'header:translator
+            \optional-field "• vs. " #'header:versifier
           }
           \line {
             "Tune:"
             \fromproperty #'header:tune
-            \char ##x2022
-            \fromproperty #'header:composer
+            \optional-field "• " #'header:composer
+            \optional-field "• arr. " #'header:arranger
           }
           \line {
-            \wordwrap-field #'header:copyright
+            \fromproperty #'header:copyright
           }
-          \vspace #0.4
           \line {
             \fromproperty #'header:license
           }
@@ -108,43 +109,8 @@ VerseTitleMarkup = \markup {
         \new NullVoice = alignVoice {
           \global
         }
-      >>
-      \new Lyrics \lyricsto "alignVoice" {
-        \huge \VerseOne
-      }
-      \context Staff = lower <<
-        \clef bass
-        \partCombine
-          {
-            \global
-          }
-          {
-            \global
-          }
-      >>
-    >>
-    \SlideLayout
-  }
-  \VerseTitleMarkup
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \partCombine
-          {
-            \global
-          }
-          {
-            \global
-          }
-        \new NullVoice = breaks {
-          \global
-        }
-        \new NullVoice = alignVoice {
-          \global
-        }
         \new Lyrics \lyricsto "alignVoice" {
-          \huge \VerseTwo
+          \huge \VerseOne
         }
       >>
       \context Staff = lower <<

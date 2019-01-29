@@ -7,9 +7,9 @@
 \include "../hymn_settings.ly"
 
 global = {
-  \key ees \major
-  \time 3/4
-  \tempo 4 = 90
+  \key f \major
+  \time 6/8
+  \tempo 4. = 40
 }
 
 MajorKey = ##t
@@ -46,269 +46,319 @@ ShowScriptureOnSheetMusic = ##t
   tagline = ##f
 }
 
-SopranoVerseMusic = \relative c' {
+SopranoVerseStartMusic = {
   \autoBeamOff
-  \tag #'usePartials { \partial 4 }
-  ees8 f8 |
-  g4 g4 f8. ees16 |
-  ees4. r8 g8 bes8 |
-  c4 c4 c8. bes16 |
-  g4. r8 \bar ""
-  
-  ees8 f8 |
-  g4 g4 f8. ees16 |
-  ees4
-  \tag #'(verseOneRhythms sheetMusicRhythms) { r8 c8 }
-  \tag #'(verseTwoRhythms verseThreeRhythms) { r4 }
-  c8 d8 |
-  ees4 g4 f8. ees16 |
-  ees4 r4 \bar "||"
+  \tag #'sheetMusic { c'8 | a'4 }
+  \tag #'sheetMusicVerseOne { c'8 | a'4 }
+  \tag #'verseOne { a'4 }
+  \tag #'verseTwo { c'8 | a'4 }
+  \tag #'verseThree { c'8 | a'4 }
 }
 
-SopranoRefrainMusic = \relative c'' {
+SopranoVerseBodyMusic = {
   \autoBeamOff
-  \tag #'usePartials { \partial 4 }
-  ees8.[ d16] |
-  d4 d8 r8 c8[ d8] |
-  ees8.[ c16] c8 r8 g8 bes8 |
-  c2 c8. bes16 |
-  bes4. r8 \bar ""
+  a'8 g'4 g'8 |
+  f'4 d'8 c'4. |
+  d'8[ e'8] f'8 f'8[ e'8] f'8 |
   
-  ees8.[ d16] |
-  d4 d8 r8 c8[ d8] |
-  ees8.[ c16] c8 r8 ees,8 f8 |
-  g4. g8 f8. ees16 |
-  ees2 \bar "|."
+  g'4 a'8
+  \tag #'sheetMusic { g'4( c'8) | }
+  \tag #'verseOne { g'4( c'8) | }
+  \tag #'verseTwo { g'4 c'8 | }
+  \tag #'verseThree { g'4( c'8) | }
+  a'4 a'8 g'4 g'8 |
+  \tag #'sheetMusic { f'8~ f'8 }
+  \tag #'verseOne { f'4 }
+  \tag #'verseTwo { f'8 f'8 }
+  \tag #'verseThree { f'4 }
+  d'8
+  \tag #'sheetMusic { c'4~ c'8 }
+  \tag #'verseOne { c'4. }
+  \tag #'verseTwo { c'4 c'8 }
+  \tag #'verseThree { c'4. } |
 }
 
-AltoVerseMusic = \relative c' {
-  \autoBeamOff
-  \tag #'usePartials { \partial 4 }
-  ees8 d8 |
-  ees4 ees4 d8. bes16 |
-  bes4. r8 ees8 ees8 |
-  ees4 ees4 ees8. d16 |
-  ees4. r8 \bar ""
-  
-  ees8 d8 |
-  ees4 ees4 d8. c16 |
-  c4
-  \tag #'(verseOneRhythms sheetMusicRhythms) { r8 c8 }
-  \tag #'(verseTwoRhythms verseThreeRhythms) { r4 }
-  c8 d8 |
-  c4 c4 d8. ees16 |
-  ees4 r4 \bar "||"
+SopranoFirstEnding = \relative c' {
+  \tag #'sheetMusic {
+    d8( e8)
+    f8 bes8( a8) g8 |
+    f4.~ f8 r8
+  }
+  \tag #'verseOne {
+    d8( e8)
+    f8 bes8( a8) g8 |
+    f4.~ f8 r8
+  }
+  \tag #'verseTwo {
+    d8 e8
+    f8 bes8( a8) g8 |
+    f4.~ f8 r8
+  }
+  \tag #'verseThree {
+    r2. |
+    r4. r4
+  }
 }
 
-AltoRefrainMusic = \relative c'' {
-  \autoBeamOff
-  \tag #'usePartials { \partial 4 }
-  g8. f16 |
-  f4 f8 r8 aes4 |
-  g8. ees16 ees8 r8 ees8 g8 |
-  aes2 aes8. g16 |
-  g4. r8 \bar ""
-  
-  g8. f16 |
-  f4 f8 r8 aes4 |
-  g8. ees16 ees8 r8 ees8 ees8 |
-  ees4. ees8 d8. ees16 |
-  ees2 \bar "|."
+SopranoLastEnding = \relative c' {
+  d8( e8) f8 bes8( a8) g8 |
+  a2. |
 }
 
-TenorVerseMusic = \relative c' {
-  \autoBeamOff
-  \tag #'usePartials { \partial 4 }
-  g8 bes8 |
-  bes4 bes4 aes8. g16 |
-  g4. r8 bes8 g8 |
-  aes4 aes4 aes8. aes16 |
-  g4. r8 \bar ""
-  
-  g8 bes8 |
-  bes4 bes4 aes8. g16 |
-  g4
-  \tag #'(verseOneRhythms sheetMusicRhythms) { r8 aes8 }
-  \tag #'(verseTwoRhythms verseThreeRhythms) { r4 }
-  aes8 aes8 |
-  aes4 aes4 aes8. g16 |
-  g4 r4 \bar "||"
+SopranoEnding = \relative c' {
+  d8( e8) f8 bes8( a8) g8 |
+  f2. \bar "|."
 }
 
-TenorRefrainMusic = \relative c' {
+AltoVerseStartMusic = {
   \autoBeamOff
-  \tag #'usePartials { \partial 4 }
-  bes4 |
-  bes4 bes8 r8 d4 |
-  c4 c8 r8 c8 d8 |
-  ees2 ees8. ees16 |
-  ees4. r8 \bar ""
-  
-  bes4 |
-  bes4 bes8 r8 d4 |
-  c4 c8 r8 c8 c8 |
-  bes4. bes8 aes8. g16 |
-  g2 \bar "|."
+  \tag #'sheetMusic { c'8 | f'4 }
+  \tag #'sheetMusicVerseOne { c'8 | f'4 }
+  \tag #'verseOne { f'4 }
+  \tag #'verseTwo { c'8 | f'4 }
+  \tag #'verseThree { c'8 | f'4 }
 }
 
-BassVerseMusic = \relative c {
+AltoVerseBodyMusic = \relative c' {
   \autoBeamOff
-  \tag #'usePartials { \partial 4 }
-  ees8 bes8 |
-  ees4 ees4 bes8. bes16 |
-  ees4. r8 ees8 ees8 |
-  aes,4 aes4 aes8. bes16 |
-  c4. r8 \bar ""
+  f8 e4 e8 |
+  d4 bes8 a4. |
+  bes8[ c8] d8 c8[ c8] c8 |
   
-  bes8 bes8 |
-  ees4 ees4 bes8. c16 |
-  c4
-  \tag #'(verseOneRhythms sheetMusicRhythms) { r8 c8 }
-  \tag #'(verseTwoRhythms verseThreeRhythms) { r4 }
-  c8 bes8 |
-  aes4 aes4 bes8. bes16 |
-  ees4 r4 \bar "||"
+  b4 b8
+  \tag #'sheetMusic { c4( c8) | }
+  \tag #'verseOne { c4. | }
+  \tag #'verseTwo { c4( c8) | }
+  \tag #'verseThree { c4. | }
+  f4 f8 e4 e8 |
+  \tag #'sheetMusic { d8~ d8 }
+  \tag #'verseOne { d4 }
+  \tag #'verseTwo { d8 d8 }
+  \tag #'verseThree { d4 }
+  bes8
+  \tag #'sheetMusic { a4~ a8 }
+  \tag #'verseOne { a4. }
+  \tag #'verseTwo { a4 a8 }
+  \tag #'verseThree { a4. } |
 }
 
-BassRefrainMusic = \relative c {
-  \autoBeamOff
-  \tag #'usePartials { \partial 4 }
-  ees4 |
-  bes4 bes8 r8 bes4 |
-  c4 c8 r8 c8 bes8 |
-  aes2 aes8. aes16 |
-  ees'4. r8 \bar ""
-  
-  ees4 |
-  bes4 bes8 r8 bes4 |
-  c4 c8 r8 aes8 aes8 |
-  ees'4. ees8 bes8. bes16 |
-  ees2 \bar "|."
+AltoFirstEnding = \relative c' {
+  \tag #'sheetMusic {
+    bes8( c8)
+    d8 e8( e8) e8 |
+    c4.~ c8 r8
+  }
+  \tag #'verseOne {
+    bes8( c8)
+    d8 e8( e8) e8 |
+    c4.~ c8 r8
+  }
+  \tag #'verseTwo {
+    bes8 c8
+    d8 e8( e8) e8 |
+    c4.~ c8 r8
+  }
+  \tag #'verseThree {
+    r2. |
+    r4. r4
+  }
 }
 
-AlignRefrainMusic = \relative c {
-  \tag #'usePartials { \partial 4 }
-  c4 |
-  c4 c8 r8 c4 |
-  c4 c8 r8 c8 c8 |
-  c2 c8. c16 |
-  c4. r8 \bar ""
+AltoLastEnding = \relative c' {
+  bes8( c8) d8 e8( e8) e8 |
+  f2. |
+}
+
+AltoEnding = \relative c' {
+  bes8( c8) d8 e8( e8) e8 |
+  c2. |
+}
+
+TenorVerseStartMusic = {
+  \autoBeamOff
+  \tag #'sheetMusic { c'8 | c'4 }
+  \tag #'sheetMusicVerseOne { c'8 | c'4 }
+  \tag #'verseOne { c'4 }
+  \tag #'verseTwo { c'8 | c'4 }
+  \tag #'verseThree { c'8 | c'4 }
+}
+
+TenorVerseBodyMusic = \relative c' {
+  \autoBeamOff
+  c8 c4 bes8 |
+  a4 f8 f4. |
+  f4 f8 f4 f8 |
   
-  c4 |
-  c4 c8 r8 c4 |
-  c4 c8 r8 c8 c8 |
-  c4. c8 c8. c16 |
-  c2 \bar "|."
+  g4 f8
+  \tag #'sheetMusic { e8( f8 g8) | }
+  \tag #'verseOne { e8( f8 g8) | }
+  \tag #'verseTwo { e8( f8) g8 | }
+  \tag #'verseThree { e8( f8 g8) | }
+  c4 c8 c4 bes8 |
+  \tag #'sheetMusic { a8~ a8 }
+  \tag #'verseOne { a4 }
+  \tag #'verseTwo { a8 a8 }
+  \tag #'verseThree { a4 }
+  f8
+  \tag #'sheetMusic { f4~ f8 }
+  \tag #'verseOne { f4. }
+  \tag #'verseTwo { f4 f8 }
+  \tag #'verseThree { f4. } |
+}
+
+TenorFirstEnding = \relative c {
+  \tag #'sheetMusic {
+    f8( f8)
+    f8 g4 bes8 |
+    a4.~ a8 r8
+  }
+  \tag #'verseOne {
+    f8( f8)
+    f8 g4 bes8 |
+    a4.~ a8 r8
+  }
+  \tag #'verseTwo {
+    f8 f8
+    f8 g4 bes8 |
+    a4.~ a8 r8
+  }
+  \tag #'verseThree {
+    r2. |
+    r4. r4
+  }
+}
+
+TenorLastEnding = \relative c {
+  f4 f8 g4 bes8 |
+  a2. |
+}
+
+TenorEnding = \relative c {
+  f4 f8 g4 bes8 |
+  a2. |
+}
+
+BassVerseStartMusic = {
+  \autoBeamOff
+  \tag #'sheetMusic { c8 | f4 }
+  \tag #'sheetMusicVerseOne { c8 | f4 }
+  \tag #'verseOne { f4 }
+  \tag #'verseTwo { c8 | f4 }
+  \tag #'verseThree { c8 | f4 }
+}
+
+BassVerseBodyMusic = \relative c {
+  \autoBeamOff
+  f8 c4 c8 |
+  d4 bes8 f4. |
+  bes4 bes8 a4 a8 |
+  
+  g4 g8
+  \tag #'sheetMusic { c8( d8 e8) | }
+  \tag #'verseOne { c8( d8 e8) | }
+  \tag #'verseTwo { c8( d8) e8 | }
+  \tag #'verseThree { c8( d8 e8) | }
+  f4 f8 c4 c8 |
+  \tag #'sheetMusic { d8~ d8 }
+  \tag #'verseOne { d4 }
+  \tag #'verseTwo { d8 d8 }
+  \tag #'verseThree { d4 }
+  bes8
+  \tag #'sheetMusic { f4~ f8 }
+  \tag #'verseOne { f4. }
+  \tag #'verseTwo { f4 f8 }
+  \tag #'verseThree { f4. } |
+}
+
+BassFirstEnding = \relative c {
+  \tag #'sheetMusic {
+    bes8( bes8)
+    bes8 c4 c8 |
+    f4.~ f8 r8
+  }
+  \tag #'verseOne {
+    bes,8( bes8)
+    bes8 c4 c8 |
+    f4.~ f8 r8
+  }
+  \tag #'verseTwo {
+    bes,8 bes8
+    bes8 c4 c8 |
+    f4.~ f8 r8
+  }
+  \tag #'verseThree {
+    r2. |
+    r4. r4
+  }
+}
+
+BassLastEnding = \relative c {
+  bes4 bes8 c4 c8 |
+  d2. |
+}
+
+BassEnding = \relative c {
+  bes4 bes8 c4 c8 |
+  f2. |
 }
 
 SheetMusicVerseBreaks = {
-  \tag #'usePartials { \partial 4 }
-  s4  | \noBreak
+  s8 | \noBreak
   s2. | \noBreak
   s2. | \noBreak
-  s2. | \noBreak
-  s2  \bar "" \break
+  s2. | \break \noPageBreak
   
-  s4  | \noBreak
   s2. | \noBreak
   s2. | \noBreak
-  s2. | \noBreak
-  s2  \bar "" \break
-}
-
-SheetMusicRefrainBreaks = {
-  \tag #'usePartials { \partial 4 }
-  s4  | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2  \bar "" \break \noPageBreak
+  s2. | \break \noPageBreak
   
-  s4  | \noBreak
   s2. | \noBreak
-  s2. | \noBreak
-  s2. | \noBreak
-  s2  \bar "|."
+  s4. s4 \noBreak
+  s2. \noBreak
+  s2. \break \noPageBreak
+  
+  s2. \noBreak
+  s2. \bar "|." \pageBreak
 }
 
 SlidesVerseBreaks = \relative c {
-  \tag #'usePartials { \partial 4 }
   \setSystemOffset \defaultTopSystemOffset
-  s4  | \noBreak
-  s2. | \noBreak
-  s2  \bar "" \break \noPageBreak
-  
   \setSystemOffset \defaultBottomSystemOffset
-  s4  | \noBreak
-  s2. | \noBreak
-  s2  \bar "" \pageBreak
-  
-  \setSystemOffset \defaultTopSystemOffset
-  s4  | \noBreak
-  s2. | \noBreak
-  s4
-  \tag #'verseOneRhythms { r8 }
-  \tag #'(verseTwoRhythms verseThreeRhythms) { r4 }
-  \bar "" \break \noPageBreak 
-  
-  \setSystemOffset \defaultBottomSystemOffset
-  \tag #'verseOneRhythms { s4. }
-  \tag #'(verseTwoRhythms verseThreeRhythms) { s4 }
-  | \noBreak
-  s2. | \noBreak
-  s2  \bar "" \pageBreak
 }
 
-SlidesRefrainBreaks = \relative c {
-  \tag #'usePartials { \partial 4 }
-  \setSystemOffset \defaultTopSystemOffset
-  s4  | \noBreak
-  s2. | \noBreak
-  s2  \bar "" \break \noPageBreak
-  
-  \setSystemOffset \defaultBottomSystemOffset
-  s4  | \noBreak
-  s2. | \noBreak
-  s2  \bar "" \pageBreak
-
-  \setSystemOffset \defaultTopSystemOffset
-  s4  | \noBreak
-  s2. | \noBreak
-  s2  \bar "" \break \noPageBreak
-  
-  \setSystemOffset \defaultBottomSystemOffset
-  s4  | \noBreak
-  s2. | \noBreak
-  s2  \bar "|." \pageBreak
-}
+lyricRest = \markup { \raise #1.0 \musicglyph #"rests.3" }
 
 VerseOne = \lyricmode {
   \set stanza = "1. "
-  Let the weak say, \markup { "\" I" } am \markup { "strong\";" }
-  Let the poor say, \markup { "\"I" } am \markup { "rich\";" }
-  Let the blind say, \markup { "\"I" } can \markup { "see\";" }
-  It's what the Lord has done in me.
+  \lyricRest Pierce my ear, O Lord, my God;
+  Take me to your door this day.
+  I will serve no o -- ther god;
+}
+
+VerseOneEnding = \lyricmode {
+  Lord, I'm here to stay.
 }
 
 VerseTwo = \lyricmode {
   \set stanza = "2. "
-  In the riv -- er I will wade;
-  There my sins are washed a -- way
-  By the heav -- en's mer -- cy stream
-  Of the Sav -- ior's love for me.
+  For You have paid the price for me;
+  With Your blood You ran -- somed me.
+  Now I will serve You e -- ter -- nal -- ly;
+  A
+}
+
+VerseTwoEnding = \lyricmode {
+  free man I'll ne -- ver be.
 }
 
 VerseThree = \lyricmode {
   \set stanza = "3. "
-  I will rise from wa -- ters deep
-  To the sav -- ing arms of God.
-  I will sing sal -- va -- tion's songs.
-  Je -- sus Christ has set me free.
+  So pierce my ear, O Lord, my God;
+  Take me to Your door this day.
+  I will serve no o -- ther god;
 }
 
-RefrainLyrics = \lyricmode {
-  Ho -- san -- na, Ho -- san -- na
-  To the Lamb that was slain.
-  Ho -- san -- na, Ho -- san -- na
-  Je -- sus died and rose a -- gain.
+VerseThreeEnd = \lyricmode {
+  Lord, I'm here to stay.
+  Lord, I'm here to stay.
 }
