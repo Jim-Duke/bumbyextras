@@ -9,7 +9,7 @@
 global = {
   \key f \major
   \time 4/4
-  \tempo 4 = 115
+  \tempo 4 = 70
 }
 
 MajorKey = ##t
@@ -35,7 +35,7 @@ ShowScriptureOnSheetMusic = ##t
 \header {
   title = \Title
   tune = "O LORD"
-  meter = "6.6.7.6"
+  meter = "6.6.8.6"
   composer = "Keith Green"
   poet = "Keith Green"
   songNumber = \SongNumber
@@ -46,93 +46,65 @@ ShowScriptureOnSheetMusic = ##t
   tagline = ##f
 }
 
-SopranoVerseMusic = \relative c' {
-  \tag #'usePartials { \partial 4 }
-  d4 |
-  d4 g4 a4 b4 |
-  a4 g4 e4. e8 |
-  fis4 g4 a4 fis4 |
-  g2.
+SopranoVerseMusic = \relative c'' {
+  \tag #'usePartials { \partial 8 }
+  a8 |
+  a4. a8 bes4 a4 |
+  g2. g4 |
+  a4. c8 d4 c4 |
+  c2. g4 |
   
-  d4 |
-  d4 g4 a4 b4 |
-  a4 g4 e4. e8 |
-  fis4 g4 a4 fis4 |
-  g2.
-  
-  b4 |
-  d2. e4 |
-  d2. b4 |
-  a4 g4 e4 fis4 |
-  g2. \bar "|."
+  a4. bes8 a4. a8 |
+  a4 g4 f4. a8 |
+  bes4 a4 g4. f8 |
+  f2. r8 \bar "|."
 }
 
 AltoVerseMusic = \relative c' {
-  \tag #'usePartials { \partial 4 }
-  d4 |
-  d4 d4 d4 g4 |
-  e4 e4 c4. e8 |
-  d4 d4 d4 d4 |
-  d2.
+  \tag #'usePartials { \partial 8 }
+  f8 |
+  f4. f8 f4 f4 |
+  e2. e4 |
+  f4. f8 f4 f4 |
+  f2( e4) g4 |
   
-  d4 |
-  d4 d4 d4 g4 |
-  e4 e4 c4. e8 |
-  d4 d4 d4 d4 |
-  d2.
-  
-  g4 |
-  g4 fis4 g4 g4 |
-  g4 fis4 g4 g4 |
-  e4 e4 c4 d4 |
-  d2. \bar "|."
+  f4. f8 e4 e4 |
+  f4 c4 c4. f8 |
+  f4 f4 f4( e8) d8 |
+  c2. r8 \bar "|."
 }
 
 TenorVerseMusic = \relative c' {
-  \tag #'usePartials { \partial 4 }
-  b4 |
-  b4 b4 c4 d4 |
-  c4 c4 g4. c8 |
-  a4 b4 c4 a4 |
-  b2.
+  \tag #'usePartials { \partial 8 }
+  c8 |
+  c4. c8 d4 c4 |
+  c2. c4 |
+  c4. a8 bes4 a4 |
+  g2. c4 |
   
-  b4 |
-  b4 b4 c4 d4 |
-  c4 c4 g4. c8 |
-  a4 g4 c4 a4 |
-  b2.
-  
-  d4 |
-  b4 a4 b4 c4 |
-  b4 a4 b4 d4 |
-  c4 c4 a4 c4 |
-  b2. \bar "|."
+  c4. c8 cis4 cis4 |
+  d4 c8 bes8 a4. c8 |
+  d4 d4 c4. bes8 |
+  a2. r8 \bar "|."
 }
 
-BassVerseMusic = \relative c' {
-  \tag #'usePartials { \partial 4 }
-  g4 |
-  g4 g4 g4 g4 |
-  c,4 c4 c4. c8 |
-  d4 d4 d4 d4 |
-  g2.
+BassVerseMusic = \relative c {
+  \tag #'usePartials { \partial 8 }
+  f8 |
+  f4. f8 f4 f4 |
+  c2. c4 |
+  f4. f8 bes,4 c4 |
+  c2. e4 |
   
-  g4 |
-  g4 g4 g4 g4 |
-  c,4 c4 c4. c8 |
-  d4 d4 d4 d4 |
-  g2.
-  
-  g4 |
-  g2. g4 |
-  g2. g4 |
-  c,4 c4 d4 d4 |
-  <g g,>2. \bar "|."
+  f4. f8 e4 a,4 |
+  d4 e4 f4. f8 |
+  bes,4 bes4 c4. c8 |
+  f2. r8 \bar "|."
 }
 
 SheetMusicVerseBreaks = {
-  \tag #'usePartials { \partial 4 }
-  s4 | \noBreak
+  \tag #'usePartials { \partial 8 }
+  s8 | \noBreak
   s1 | \noBreak
   s1 | \noBreak
   s1 | \noBreak
@@ -142,20 +114,14 @@ SheetMusicVerseBreaks = {
   s1 | \noBreak
   s1 | \noBreak
   s1 | \noBreak
-  s2. \bar "" \break
-  
-  s4 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s1 | \noBreak
-  s2. \bar "|."
+  s2. s8 \bar "|." \break
 }
 
-AlignVerseMusic = \AltoVerseMusic
+AlignVerseMusic = \SopranoVerseMusic
 
 SlidesVerseBreaks = \relative c {
   \setSystemOffset \defaultTopSystemOffset
-  s4 | \noBreak
+  s8 | \noBreak
   s1 | \noBreak
   s2. s8 \bar "" \break \noPageBreak
   
@@ -191,30 +157,24 @@ SlidesVerseBreaks = \relative c {
 
 VerseOne = \lyricmode {
   \set stanza = "1. "
-  My Lord, when first I came to You,
-  You prom -- ised me a price;
-  To give up self for life made new,
-  To toil and sc -- ri -- fice.
-  To give (to give) up self, (up self)
-  to toil and sac -- ri -- fice.
+  O Lord, You're beau -- ti -- ful,
+  Your face is all I seek;
+  And when Your eyes are on this child,
+  Your grace a -- bounds in me.
 }
 
 VerseTwo = \lyricmode {
   \set stanza = "2. "
-  But as I lived Your sac -- ri -- fice,
-  I left the things be -- fore;
-  I could not love what once en -- ticed,
-  For now I loved You more
-  I could (I could) not love, (not love)
-  for now I loved You more.
+  O Lord, You're beau -- ti -- ful,
+  Your touch is all I need;
+  when Your hand is on this child,
+  Your heal -- ing I re -- ceive.
 }
 
 VerseThree = \lyricmode {
   \set stanza = "3. "
-  In You, I learned that all I'd lost
-  Was worth -- less, vain, and small,
-  So when I turned to count the cost,
-  I saw no cost at all.
-  So when (So when) I turned, (I turned)
-  I saw no cost at all.
+  O Lord, please light the fire
+  That once burned bright and clear;
+  Re -- place the lamp of my first love
+  That burns with ho -- ly fear.
 }
