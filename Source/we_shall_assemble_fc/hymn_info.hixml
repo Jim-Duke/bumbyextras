@@ -1,0 +1,7 @@
+﻿    <hymn number="B-011" title="Ah Holy Jesus">
+      <songLeaderInfo beatPattern="4" key="Gm" startingPitch="LA" time="4/4" startingBeat="1"/>
+      <originator name="Johann Heermann (1630)" type="Individual" role="Writer"/>
+      <originator name="Johann Crüger (1640)" type="Individual" role="Composer"/>
+      <originator name="Robert S. Bridges (1899)" type="Individual" role="Writer"/>
+      <scripture>Romans Isaiah 53:4-5</scripture>
+    </hymn>
