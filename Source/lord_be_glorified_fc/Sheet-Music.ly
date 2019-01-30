@@ -53,9 +53,6 @@
             \fromproperty #'header:copyright
             \optional-field "• " #'header:license
           }
-          \line {
-            "Visit https://hymnal.bumby.org/ for more information about this and other hymns in the Bumby Hymnal"
-          }
         }
       }
     }

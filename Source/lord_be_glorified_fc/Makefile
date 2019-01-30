@@ -5,11 +5,11 @@
 #
 # The following two variables are probably all that needs to be customized for any hymn
 #
-PROD_BASE_NAME = the_cost_bumby
+PROD_BASE_NAME = lord_be_glorified_fc
 STATUS = review
 ACCESS = private
-SLIDE_NAME = THE\ COST
-HYMN_NUMBER = B-019
+SLIDE_NAME = LORD\ BE\ GLORIFIED
+HYMN_NUMBER = F-013
 ROOT_DIR = ../..
 
 include ../common.mk
