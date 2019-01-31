@@ -18,12 +18,12 @@ SheetMusicRaggedLast = ##t
 %%
 
 global = {
-  \key c \minor
+  \key ees \major
   \time 4/4
   \tempo 4 = 90
 }
 
-MajorKey = ##f
+MajorKey = ##t
 
 %%
 %% Hymn Metadata Variables
@@ -74,18 +74,21 @@ SopranoVerseMusic = \relative c'' {
 }
 
 SopranoChorusMusic = \relative c'' {
-  r8 c8 c8 d8 ees8 d8 c8 bes16[ c16] |
+  r8^"Chorus" c8 c8 d8 ees8 d8 c8 bes16( c16) |
   c4 c2. |
-  r8 c8 c8 c8 c8 bes8 bes8 aes16[ bes16] |
+  r8 c8 c8 c8 c8 bes8 bes8 aes16( bes16) |
   bes1 |
   r8 g8 g8 g8 g8 f8 f8 ees8 |
-  f8.[ ees16] ees2. |
+  f8.( ees16) ees2. |
   r8 ees8 ees8 bes'8 bes8 g8 f8. ees16 |
   ees1 \bar "|."
 }
 
 AltoVerseMusic = \relative c' {
-  r8 ees8 ees8 ees8 ees8 d8 d8( c8) |
+  r8 ees8 ees8 ees8 ees8 d8
+  \tag #'sheetMusic { d8( c8) }
+  \tag #'verseOne { d8 c8 }
+  \tag #'verseTwo { d8( c8) } |
   d8.( c16) c2. |
   r8 c8 c8 c8 c8 d8 d8 ees8 |
   ees1 |
@@ -95,10 +98,64 @@ AltoVerseMusic = \relative c' {
   ees1 \bar "||"
 }
 
-TenorVerseMusic = \relative c' {
+AltoChorusMusic = \relative c'' {
+  r1 |
+  r8 aes8 aes8 aes8 aes8 g8 f8 ees8 |
+  f8.( ees16) ees4( d2) |
+  r8 ees8 ees8 f8 g8 g8 f8 d8 |
+  c2( bes2) |
+  r8 ees8 ees8 c8 c4 d4 |
+  r8 c8 c8 ees8 d8 d8 d8. bes16 |
+  bes1 \bar "|."
 }
 
-BassVerseMusic = \relative c' {
+TenorVerseMusic = \relative c' {
+  r8 c8 c8 c8 c8 g8
+  \tag #'sheetMusic { g8( g8) }
+  \tag #'verseOne { g8 g8 }
+  \tag #'verseTwo { g4 } |
+  aes4 aes2. |
+  r8 aes8 aes8 g8 f8 bes8 bes8 g8 |
+  c1 |
+  r8 c8 c8 c8 c8 g8 g8 g8 |
+  aes4 aes2. |
+  r8 aes8 aes8 g8 f8 bes8 bes8 g8 |
+  g1 \bar "||"
+}
+
+TenorChorusMusic = \relative c' {
+  r1 |
+  r8 c8 c8 c8 c8 bes8 aes8 aes8 |
+  aes4 aes4( bes2) |
+  r8 g8 g8 aes8 bes8 bes8 bes8 d8 ees2( d2) |
+  r8 c8 c8 aes8 aes4 bes4 |
+  r8 aes8 aes8 c8 aes8 aes8 aes8. aes16 |
+  g1 \bar "|."
+}
+
+BassVerseMusic = \relative c {
+  r8 c8 c8 c8 bes8 bes8
+  \tag #'sheetMusic { bes8( bes8) }
+  \tag #'verseOne { bes8 bes8 }
+  \tag #'verseTwo { bes4 } |
+  aes4 aes2. |
+  r8 aes8 aes8 aes8 aes8 bes8 bes8 c8 |
+  c1 |
+  r8 c8 c8 c8 bes8 bes8 bes8 bes8 |
+  aes4 aes2. |
+  r8 aes8 aes8 aes8 aes8 bes8 bes8 ees8 |
+  ees1 \bar "||"
+}
+
+BassChorusMusic = \relative c {
+  r8 ees8 ees8 ees8 ees8 ees8 ees8 ees8 |
+  ees4 ees2. |
+  r8 ees8 ees8 ees8 bes8 bes8 bes8 bes8 |
+  ees2.( d4 |
+  c8) c8 c8 c8 bes8 bes8 bes8 bes8 |
+  aes4 aes2. |
+  r8 aes8 aes8 aes8 bes8 bes8 bes8. bes16 |
+  ees1 \bar "|."
 }
 
 SheetMusicVerseBreaks = {
@@ -112,10 +169,21 @@ SheetMusicVerseBreaks = {
   s1 | \break
   
   s1 | \noBreak
-  s1 | \break
+  s1 | \pageBreak
 }
 
 SheetMusicChorusBreaks = {
+  s1 | \noBreak
+  s1 | \break
+  
+  s1 | \noBreak
+  s1 | \break
+  
+  s1 | \noBreak
+  s1 | \break
+  
+  s1 | \noBreak
+  s1 | \break
 }
 
 SlidesVerseBreaks = \relative c {
@@ -142,9 +210,12 @@ VerseTwo = \lyricmode {
 ChorusA = \lyricmode {
   Glo -- ry and hon -- or and do -- min -- ion
   un -- to the Lamb, un -- to the King.
-  O, hal -- le -- lu -- jah, hal -- le -- lu - jah!
+  O, hal -- le -- lu -- jah, hal -- le -- lu -- jah!
   We sing the song of the re -- deemed.
 }
 
 ChorusB = \lyricmode {
+  Glo -- ry and hon -- or and do -- min -- ion
+  un -- to the Lamb, un -- to the King,
+  O, hal -- le -- lu -- jah!
 }

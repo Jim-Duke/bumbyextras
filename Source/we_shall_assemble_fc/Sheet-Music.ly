@@ -84,28 +84,35 @@
           {
             \global
             \keepWithTag #'sheetMusic \SopranoVerseMusic
+            \partcombineApart
+            \SopranoChorusMusic
           }
           {
             \global
-            \AltoVerseMusic
+            \keepWithTag #'sheetMusic \AltoVerseMusic
+            \partcombineApart
+            \AltoChorusMusic
           }
         \context NullVoice = breaks {
           \global
           \SheetMusicVerseBreaks
+          \SheetMusicChorusBreaks
         }
         \context NullVoice = alignOne {
           \global
           \keepWithTag #'verseOne \SopranoVerseMusic
+          \SopranoChorusMusic
         }
         \context NullVoice = alignTwo {
           \global
           \keepWithTag #'verseTwo \SopranoVerseMusic
+          \AltoChorusMusic
         }
         \new Lyrics \lyricsto "alignOne" {
-          \VerseOne
+          \VerseOne \ChorusA
         }
         \new Lyrics \lyricsto "alignTwo" {
-          \VerseTwo
+          \VerseTwo \ChorusB
         }
       >>
       \context Staff = lower <<
@@ -113,11 +120,15 @@
         \partCombine
           {
             \global
-            \TenorVerseMusic
+            \keepWithTag #'sheetMusic \TenorVerseMusic
+            \partcombineApart
+            \TenorChorusMusic
           }
           {
             \global
-            \BassVerseMusic
+            \keepWithTag #'sheetMusic \BassVerseMusic
+            \partcombineApart
+            \BassChorusMusic
           }
       >>
     >>

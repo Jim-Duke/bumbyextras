@@ -3,6 +3,38 @@
 \include "Words-and-music.ly"
 \include "../../../LilypondTemplates/midi.ly"
 
+SopranoUnfolded = {
+  \global
+  \keepWithTag #'verseOne \SopranoVerseMusic
+  \SopranoChorusMusic
+  \keepWithTag #'verseTwo \SopranoVerseMusic
+  \SopranoChorusMusic
+}
+
+AltoUnfolded = {
+  \global
+  \keepWithTag #'verseOne \AltoVerseMusic
+  \AltoChorusMusic
+  \keepWithTag #'verseTwo \AltoVerseMusic
+  \AltoChorusMusic
+}
+
+TenorUnfolded = {
+  \global
+  \keepWithTag #'verseOne \TenorVerseMusic
+  \TenorChorusMusic
+  \keepWithTag #'verseTwo \TenorVerseMusic
+  \TenorChorusMusic
+}
+
+BassUnfolded = {
+  \global
+  \keepWithTag #'verseOne \BassVerseMusic
+  \BassChorusMusic
+  \keepWithTag #'verseTwo \BassVerseMusic
+  \BassChorusMusic
+}
+
 \book {
   \bookOutputName "Audio_all"
   \score {
@@ -14,10 +46,7 @@
           midiMinimumVolume = \allMinVolume
           midiPanPosition = \allPan
         } {
-          \voiceOne {
-            \global
-            \repeat unfold 5 \SopranoVerseMusic
-          }
+          \voiceOne \SopranoUnfolded
         }
         \context Voice = altos \with {
           midiInstrument = \allInstrument
@@ -25,10 +54,7 @@
           midiMinimumVolume = \allMinVolume
           midiPanPosition = \allPan
         } {
-          \voiceTwo {
-            \global
-            \repeat unfold 5 \AltoVerseMusic
-          }
+          \voiceTwo \AltoUnfolded
         }
       >>
       \context Staff = lower <<
@@ -39,10 +65,7 @@
           midiMinimumVolume = \allMinVolume
           midiPanPosition = \allPan
         } {
-          \voiceOne {
-            \global
-            \repeat unfold 5 \TenorVerseMusic
-          }
+          \voiceOne \TenorUnfolded
         }
         \context Voice = basses \with {
           midiInstrument = \allInstrument
@@ -50,10 +73,7 @@
           midiMinimumVolume = \allMinVolume
           midiPanPosition = \allPan
         } {
-          \voiceTwo {
-            \global
-            \repeat unfold 5 \BassVerseMusic
-          }
+          \voiceTwo \BassUnfolded
         }
       >>
     >>
@@ -81,10 +101,7 @@
           midiMinimumVolume = \dominantMinVolume
           midiPanPosition = \dominantPan
         } {
-          \voiceOne {
-            \global
-            \repeat unfold 5 \SopranoVerseMusic
-          }
+          \voiceOne \SopranoUnfolded
         }
         \context Voice = altos \with {
           midiInstrument = \diminishedInstrument
@@ -92,10 +109,7 @@
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
-          \voiceTwo {
-            \global
-            \repeat unfold 5 \AltoVerseMusic
-          }
+          \voiceTwo \AltoUnfolded
         }
       >>
       \context Staff = lower <<
@@ -106,10 +120,7 @@
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
-          \voiceOne {
-            \global
-            \repeat unfold 5 \TenorVerseMusic
-          }
+          \voiceOne \TenorUnfolded
         }
         \context Voice = basses \with {
           midiInstrument = \diminishedInstrument
@@ -117,10 +128,7 @@
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
-          \voiceTwo {
-            \global
-            \repeat unfold 5 \BassVerseMusic
-          }
+          \voiceTwo \BassUnfolded
         }
       >>
     >>
@@ -148,10 +156,7 @@
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
-          \voiceOne {
-            \global
-            \repeat unfold 5 \SopranoVerseMusic
-          }
+          \voiceOne \SopranoUnfolded
         }
         \context Voice = altos \with {
           midiInstrument = \dominantInstrument
@@ -159,10 +164,7 @@
           midiMinimumVolume = \dominantMinVolume
           midiPanPosition = \dominantPan
         } {
-          \voiceTwo {
-            \global
-            \repeat unfold 5 \AltoVerseMusic
-          }
+          \voiceTwo \AltoUnfolded
         }
       >>
       \context Staff = lower <<
@@ -173,10 +175,7 @@
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
-          \voiceOne {
-            \global
-            \repeat unfold 5 \TenorVerseMusic
-          }
+          \voiceOne \TenorUnfolded
         }
         \context Voice = basses \with {
           midiInstrument = \diminishedInstrument
@@ -184,10 +183,7 @@
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
-          \voiceTwo {
-            \global
-            \repeat unfold 5 \BassVerseMusic
-          }
+          \voiceTwo \BassUnfolded
         }
       >>
     >>
@@ -215,10 +211,7 @@
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
-          \voiceOne {
-            \global
-            \repeat unfold 5 \SopranoVerseMusic
-          }
+          \voiceOne \SopranoUnfolded
         }
         \context Voice = altos \with {
           midiInstrument = \diminishedInstrument
@@ -226,10 +219,7 @@
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
-          \voiceTwo {
-            \global
-            \repeat unfold 5 \AltoVerseMusic
-          }
+          \voiceTwo \AltoUnfolded
         }
       >>
       \context Staff = lower <<
@@ -240,10 +230,7 @@
           midiMinimumVolume = \dominantMinVolume
           midiPanPosition = \dominantPan
         } {
-          \voiceOne {
-            \global
-            \repeat unfold 5 \TenorVerseMusic
-          }
+          \voiceOne \TenorUnfolded
         }
         \context Voice = basses \with {
           midiInstrument = \diminishedInstrument
@@ -251,10 +238,7 @@
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
-          \voiceTwo {
-            \global
-            \repeat unfold 5 \BassVerseMusic
-          }
+          \voiceTwo \BassUnfolded
         }
       >>
     >>
@@ -282,10 +266,7 @@
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
-          \voiceOne {
-            \global
-            \repeat unfold 5 \SopranoVerseMusic
-          }
+          \voiceOne \SopranoUnfolded
         }
         \context Voice = altos \with {
           midiInstrument = \diminishedInstrument
@@ -293,10 +274,7 @@
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
-          \voiceTwo {
-            \global
-            \repeat unfold 5 \AltoVerseMusic
-          }
+          \voiceTwo \AltoUnfolded
         }
       >>
       \context Staff = lower <<
@@ -307,10 +285,7 @@
           midiMinimumVolume = \diminishedMinVolume
           midiPanPosition = \diminishedPan
         } {
-          \voiceOne {
-            \global
-            \repeat unfold 5 \TenorVerseMusic
-          }
+          \voiceOne \TenorUnfolded
         }
         \context Voice = basses \with {
           midiInstrument = \dominantInstrument
@@ -318,10 +293,7 @@
           midiMinimumVolume = \dominantMinVolume
           midiPanPosition = \dominantPan
         } {
-          \voiceTwo {
-            \global
-            \repeat unfold 5 \BassVerseMusic
-          }
+          \voiceTwo \BassUnfolded
         }
       >>
     >>
