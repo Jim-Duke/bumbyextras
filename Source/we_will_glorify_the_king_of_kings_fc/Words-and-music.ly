@@ -19,8 +19,8 @@ MajorKey = ##t
 %%
 
 Title = "We Will Glorify The King of Kings"
-SongNumber = \the_cost_bumby_number
-RightFirstPage = \the_cost_bumby_number_rhs
+SongNumber = \we_will_glorify_the_king_of_kings_fc_number
+RightFirstPage = \we_will_glorify_the_king_of_kings_fc_number_rhs
 FirstPage = #(if RightFirstPage 1 2)
 
 LeaderHints = \markup {

@@ -77,16 +77,61 @@ SopranoPartTwoMusic = \relative c' {
 
 AltoPartOneMusic = \relative c' {
   \tag #'usePartials { \partial 8 }
+  gis8 |
+  gis8 a8 b8 b16 b16 b16 b16 b8 b4 |
+  dis16 dis16 dis16 e16 dis8 cis8 e8 cis8 b8
+  
+  gis8 |
+  b8 gis8 b8 r16 gis16 b8 gis8 b8 cis8 |
+  dis4 b16 b8 a16 gis2 \bar "|."
 }
 
 AltoPartTwoMusic = \relative c' {
+  dis4 dis8 cis8 dis8 gis8 b,4 |
+  \tag #'sheetMusic {
+    b16~ b16( cis8) cis8~ cis16~ cis16 cis16 cis16~ cis8 a16( gis8) r16 |
+  }
+  \tag #'(verseOne verseTwo verseThree verseFive) {
+    b8 cis8 cis4 cis16 cis8. a16( gis8) r16 |
+  }
+  \tag #'verseFour {
+    b16 b16( cis8) cis8 cis16 cis16 cis16 cis16 cis8 a16( gis8) r16 |
+  }
+  
+  \tag #'sheetMusic { dis'16~ dis8. }
+  \tag #'(verseOne verseThree verseFive) { dis4 }
+  \tag #'(verseTwo verseFour) { dis16 dis8. }
+  dis8 cis8 e8 gis8 e4 |
+  e8 cis16 cis16 cis16 cis16 a8 gis4. \bar "|."
 }
 
 TenorPartOneMusic = \relative c' {
   \tag #'usePartials { \partial 8 }
+  gis8 |
+  gis8 a8 gis8 gis16 gis16 gis16 gis16 gis8 gis4 |
+  b16 b16 b16 b16 b8 gis8 b8 a8 gis8
+  
+  gis8 |
+  gis8 e8 gis8 r16 gis16 gis8 gis8 gis8 b8 |
+  b4 a16 a8 a16 gis2 \bar "|."
 }
 
 TenorPartTwoMusic = \relative c' {
+  b4 b8 gis8 b8 e8 b16( a16 gis8) |
+  \tag #'sheetMusic {
+    b16~ b16( gis8) a8~ a16~ a16 a16 a16~ a8 a16( gis8) r16 |
+  }
+  \tag #'(verseOne verseTwo verseThree verseFive) {
+    b8 gis8 a4 a16 a8. a16( gis8) r16 |
+  }
+  \tag #'verseFour {
+    b16 b16( gis8) a8 a16 a16 a16 a16 a8 a16( gis8) r16 |
+  }
+  \tag #'sheetMusic { b16~ b8. }
+  \tag #'(verseOne verseThree verseFive) { b4 }
+  \tag #'(verseTwo verseFour) { b16 b8. }
+  b8 gis8 b8 e8 b16( a16 gis8) |
+  b8 a16 a16 a16 a16 a8 gis4. \bar "|."
 }
 
 BassPartOneMusic = \relative c {
@@ -221,6 +266,6 @@ VerseFivePartTwo = \lyricmode {
   O sin -- ners, let's go down,
   let's go down,
   come on down.
-  O sis -- ters, let's go down,
+  O sin -- ners, let's go down,
   down in the riv -- er to pray.
 }
