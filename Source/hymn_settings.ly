@@ -190,6 +190,14 @@ how_deep_the_fathers_love_bumby_number = "B-037"
 how_deep_the_fathers_love_bumby_number_rhs = ##f
 how_deep_the_fathers_love_bumby_pages = 1
 
+down_in_the_river_to_pray_bumby_number = "B-038"
+down_in_the_river_to_pray_bumby_number_rhs = ##t
+down_in_the_river_to_pray_bumby_pages = 1
+
+in_need_bumby_number = "B-039"
+in_need_bumby_number_rhs = ##f
+in_need_bumby_pages = 2
+
 %%%
 %%% FC Alumni Chorus hymns
 %%%
