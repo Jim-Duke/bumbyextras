@@ -411,16 +411,17 @@ SlidesVerseTwoBreaks = \relative c {
   % I am in need.
   \setSystemOffset \defaultBottomSystemOffset
   s4 s8 | \noBreak
-  s2 \bar "" \pageBreak
+  s2 s8 \bar "" \pageBreak
 
   % I am Your child,
   \setSystemOffset \defaultTopSystemOffset
-  s2 | \noBreak
-  s2 s8 \bar "" \break
+  s4 s8 | \noBreak
+  s1 | \noBreak
+  s2 \bar "" \break \noPageBreak
 
   % I am in need.
   \setSystemOffset \defaultBottomSystemOffset
-  s4 s8 | \noBreak
+  s2 | \noBreak
   s2 \bar "|." \pageBreak
 }
 
