@@ -277,3 +277,11 @@ in_need_fc_pages = 2
 he_is_wonderful_fc_number = "F-019"
 he_is_wonderful_fc_number_rhs = ##f
 he_is_wonderful_fc_pages = 1
+
+%%%
+%%% Concordia Sacrae Hymns
+%%%
+
+the_road_to_emmaus_cs_number = "C-001"
+the_road_to_emmaus_cs_number_rhs = ##f
+the_road_to_emmaus_cs_pages = 6
