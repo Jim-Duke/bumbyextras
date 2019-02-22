@@ -83,78 +83,45 @@
         \partCombine
           {
             \global
-            \bar ".|:"
-            \keepWithTag #'sheetMusic \SopranoVerseBodyMusic
-            \set Score.repeatCommands = #'((volta "1"))
-            \keepWithTag #'sheetMusic \SopranoVerseFirstEnding
-            \set Score.repeatCommands = #'((volta #f) (volta "2") end-repeat)
-            \keepWithTag #'sheetMusic \SopranoVerseSecondEnding
+            \SopranoVerseBodyMusic
+            \set Score.repeatCommands = #'((volta "1, 2, 3"))
+            \SopranoVerseFirstEnding
+            \set Score.repeatCommands = #'((volta #f) (volta "4") end-repeat)
+            \SopranoVerseSecondEnding
             \set Score.repeatCommands = #'((volta #f))
-            \bar "||"
-            \SopranoChorusMusic
           }
           {
             \global
-            \keepWithTag #'sheetMusic \AltoVerseBodyMusic
-            \keepWithTag #'sheetMusic \AltoVerseFirstEnding
-            \keepWithTag #'sheetMusic \AltoVerseSecondEnding
-            \AltoChorusMusic
+            \AltoVerseBodyMusic
+            \AltoVerseFirstEnding
+            \AltoVerseSecondEnding
           }
         \context NullVoice = breaks {
           \global
-          \keepWithTag #'sheetMusic \SheetMusicVerseBreaks
+          \SheetMusicVerseBreaks
         }
-        \context NullVoice = alignOneA {
+        \context NullVoice = alignA {
           \global
-          \keepWithTag #'verseOneA \SopranoVerseBodyMusic
-          \keepWithTag #'verseOneA \SopranoVerseFirstEnding
+          \SopranoVerseBodyMusic
+          \SopranoVerseFirstEnding
         }
-        \context NullVoice = alignOneB {
+        \context NullVoice = alignB {
           \global
-          \keepWithTag #'verseOneB \SopranoVerseBodyMusic
-          \EmptyFirstEnding
-          \keepWithTag #'verseOneB \SopranoVerseSecondEnding
-          \SopranoChorusMusic
+          \SopranoVerseBodyMusic
+          \EmptyVerseFirstEnding
+          \SopranoVerseSecondEnding
         }
-        \context NullVoice = alignTwoA {
-          \global
-          \keepWithTag #'verseTwoA \SopranoVerseBodyMusic
-          \keepWithTag #'verseTwoA \SopranoVerseFirstEnding
+        \new Lyrics \lyricsto "alignA" {
+          \VerseOne
         }
-        \context NullVoice = alignTwoB {
-          \global
-          \keepWithTag #'verseTwoB \SopranoVerseBodyMusic
-          \EmptyFirstEnding
-          \keepWithTag #'verseTwoB \SopranoVerseSecondEnding
+        \new Lyrics \lyricsto "alignA" {
+          \VerseTwo
         }
-        \context NullVoice = alignThreeA {
-          \global
-          \keepWithTag #'verseThreeA \SopranoVerseBodyMusic
-          \keepWithTag #'verseThreeA \SopranoVerseFirstEnding
+        \new Lyrics \lyricsto "alignA" {
+          \VerseThree
         }
-        \context NullVoice = alignThreeB {
-          \global
-          \keepWithTag #'verseThreeB \SopranoVerseBodyMusic
-          \EmptyFirstEnding
-          \keepWithTag #'verseThreeB \SopranoVerseSecondEnding
-        }
-        \new Lyrics \lyricsto "alignOneA" {
-          \VerseOneA
-        }
-        \new Lyrics \lyricsto "alignOneB" {
-          \VerseOneB \Chorus
-        }
-        \new Lyrics \lyricsto "alignTwoA" {
-          \VerseTwoA
-        }
-        \new Lyrics \lyricsto "alignTwoB" {
-          \VerseTwoB
-        }
-        \new Lyrics \lyricsto "alignThreeA" {
-          \VerseThreeA
-        }
-        \new Lyrics \lyricsto "alignThreeB" {
-          \VerseThreeB
+        \new Lyrics \lyricsto "alignB" {
+          \VerseFour
         }
       >>
       \context Staff = lower \with { printPartCombineTexts = ##f } <<
@@ -162,17 +129,15 @@
         \partCombine
           {
             \global
-            \keepWithTag #'sheetMusic \TenorVerseBodyMusic
-            \keepWithTag #'sheetMusic \TenorVerseFirstEnding
-            \keepWithTag #'sheetMusic \TenorVerseSecondEnding
-            \TenorChorusMusic
+            \TenorVerseBodyMusic
+            \TenorVerseFirstEnding
+            \TenorVerseSecondEnding
           }
           {
             \global
-            \keepWithTag #'sheetMusic \BassVerseBodyMusic
-            \keepWithTag #'sheetMusic \BassVerseFirstEnding
-            \keepWithTag #'sheetMusic \BassVerseSecondEnding
-            \BassChorusMusic
+            \BassVerseBodyMusic
+            \BassVerseFirstEnding
+            \BassVerseSecondEnding
           }
       >>
     >>

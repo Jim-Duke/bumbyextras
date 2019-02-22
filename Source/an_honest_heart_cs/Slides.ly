@@ -91,7 +91,7 @@ VerseTitleMarkup = \markup {
     #(layout-set-staff-size 44)
   }
   \pageBreak
-  \VerseTitleMarkup
+  \VerseTitleMarkup \noPageBreak
   \score {
     <<
       \override Score.BarNumber.break-visibility = ##(#f #f #f)
@@ -99,31 +99,26 @@ VerseTitleMarkup = \markup {
         \partCombine
           {
             \global
-            \keepWithTag #'verseOneA \SopranoVerseBodyMusic
-            \keepWithTag #'verseOneA \SopranoVerseFirstEnding
-            \keepWithTag #'verseOneB \SopranoVerseBodyMusic
-            \keepWithTag #'verseOneB \SopranoVerseSecondEnding
+            \partial 8
+            \SopranoVerseMusic
           }
           {
             \global
-            \keepWithTag #'verseOneA \AltoVerseBodyMusic
-            \keepWithTag #'verseOneA \AltoVerseFirstEnding
-            \keepWithTag #'verseOneB \AltoVerseBodyMusic
-            \keepWithTag #'verseOneB \AltoVerseSecondEnding
+            \partial 8
+            \AltoVerseMusic
           }
         \new NullVoice = breaks {
           \global
+          \partial 8
           \SlidesVerseBreaks
         }
         \new NullVoice = alignVoice {
           \global
-          \keepWithTag #'verseOneA \SopranoVerseBodyMusic
-          \keepWithTag #'verseOneA \SopranoVerseFirstEnding
-          \keepWithTag #'verseOneB \SopranoVerseBodyMusic
-          \keepWithTag #'verseOneB \SopranoVerseSecondEnding
+          \partial 8
+          \SopranoVerseMusic
         }
         \new Lyrics \lyricsto "alignVoice" {
-          \huge \VerseOneA \VerseOneB
+          \huge \VerseOne
         }
       >>
       \context Staff = lower <<
@@ -131,17 +126,60 @@ VerseTitleMarkup = \markup {
         \partCombine
           {
             \global
-            \keepWithTag #'verseOneA \TenorVerseBodyMusic
-            \keepWithTag #'verseOneA \TenorVerseFirstEnding
-            \keepWithTag #'verseOneB \TenorVerseBodyMusic
-            \keepWithTag #'verseOneB \TenorVerseSecondEnding
+            \partial 8
+            \TenorVerseMusic
           }
           {
             \global
-            \keepWithTag #'verseOneA \BassVerseBodyMusic
-            \keepWithTag #'verseOneA \BassVerseFirstEnding
-            \keepWithTag #'verseOneB \BassVerseBodyMusic
-            \keepWithTag #'verseOneB \BassVerseSecondEnding
+            \partial 8
+            \BassVerseMusic
+          }
+      >>
+    >>
+    \SlideLayout
+  }
+  \VerseTitleMarkup \noPageBreak
+  \score {
+    <<
+      \override Score.BarNumber.break-visibility = ##(#f #f #f)
+      \context Staff = upper <<
+        \partCombine
+          {
+            \global
+            \partial 8
+            \SopranoVerseMusic
+          }
+          {
+            \global
+            \partial 8
+            \AltoVerseMusic
+          }
+        \new NullVoice = breaks {
+          \global
+          \partial 8
+          \SlidesVerseBreaks
+        }
+        \new NullVoice = alignVoice {
+          \global
+          \partial 8
+          \SopranoVerseMusic
+        }
+        \new Lyrics \lyricsto "alignVoice" {
+          \huge \VerseTwo
+        }
+      >>
+      \context Staff = lower <<
+        \clef bass
+        \partCombine
+          {
+            \global
+            \partial 8
+            \TenorVerseMusic
+          }
+          {
+            \global
+            \partial 8
+            \BassVerseMusic
           }
       >>
     >>

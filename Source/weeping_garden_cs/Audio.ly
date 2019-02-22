@@ -5,78 +5,50 @@
 
 SopranoUnfolded = {
   \global
-  \keepWithTag #'verseOneA \SopranoVerseBodyMusic
-  \keepWithTag #'verseOneA \SopranoVerseFirstEnding
-  \keepWithTag #'verseOneB \SopranoVerseBodyMusic
-  \keepWithTag #'verseOneB \SopranoVerseSecondEnding
-  \SopranoChorusMusic
-  \keepWithTag #'verseTwoA \SopranoVerseBodyMusic
-  \keepWithTag #'verseTwoA \SopranoVerseFirstEnding
-  \keepWithTag #'verseTwoB \SopranoVerseBodyMusic
-  \keepWithTag #'verseTwoB \SopranoVerseSecondEnding
-  \SopranoChorusMusic
-  \keepWithTag #'verseThreeA \SopranoVerseBodyMusic
-  \keepWithTag #'verseThreeA \SopranoVerseFirstEnding
-  \keepWithTag #'verseThreeB \SopranoVerseBodyMusic
-  \keepWithTag #'verseThreeB \SopranoVerseSecondEnding
-  \SopranoChorusMusic
+  \SopranoVerseBodyMusic
+  \SopranoVerseFirstEnding
+  \SopranoVerseBodyMusic
+  \SopranoVerseFirstEnding
+  \SopranoVerseBodyMusic
+  \SopranoVerseFirstEnding
+  \SopranoVerseBodyMusic
+  \SopranoVerseSecondEnding
 }
 
 AltoUnfolded = {
   \global
-  \keepWithTag #'verseOneA \AltoVerseBodyMusic
-  \keepWithTag #'verseOneA \AltoVerseFirstEnding
-  \keepWithTag #'verseOneB \AltoVerseBodyMusic
-  \keepWithTag #'verseOneB \AltoVerseSecondEnding
-  \AltoChorusMusic
-  \keepWithTag #'verseTwoA \AltoVerseBodyMusic
-  \keepWithTag #'verseTwoA \AltoVerseFirstEnding
-  \keepWithTag #'verseTwoB \AltoVerseBodyMusic
-  \keepWithTag #'verseTwoB \AltoVerseSecondEnding
-  \AltoChorusMusic
-  \keepWithTag #'verseThreeA \AltoVerseBodyMusic
-  \keepWithTag #'verseThreeA \AltoVerseFirstEnding
-  \keepWithTag #'verseThreeB \AltoVerseBodyMusic
-  \keepWithTag #'verseThreeB \AltoVerseSecondEnding
-  \AltoChorusMusic
+  \AltoVerseBodyMusic
+  \AltoVerseFirstEnding
+  \AltoVerseBodyMusic
+  \AltoVerseFirstEnding
+  \AltoVerseBodyMusic
+  \AltoVerseFirstEnding
+  \AltoVerseBodyMusic
+  \AltoVerseSecondEnding
 }
 
 TenorUnfolded = {
   \global
-  \keepWithTag #'verseOneA \TenorVerseBodyMusic
-  \keepWithTag #'verseOneA \TenorVerseFirstEnding
-  \keepWithTag #'verseOneB \TenorVerseBodyMusic
-  \keepWithTag #'verseOneB \TenorVerseSecondEnding
-  \TenorChorusMusic
-  \keepWithTag #'verseTwoA \TenorVerseBodyMusic
-  \keepWithTag #'verseTwoA \TenorVerseFirstEnding
-  \keepWithTag #'verseTwoB \TenorVerseBodyMusic
-  \keepWithTag #'verseTwoB \TenorVerseSecondEnding
-  \TenorChorusMusic
-  \keepWithTag #'verseThreeA \TenorVerseBodyMusic
-  \keepWithTag #'verseThreeA \TenorVerseFirstEnding
-  \keepWithTag #'verseThreeB \TenorVerseBodyMusic
-  \keepWithTag #'verseThreeB \TenorVerseSecondEnding
-  \TenorChorusMusic
+  \TenorVerseBodyMusic
+  \TenorVerseFirstEnding
+  \TenorVerseBodyMusic
+  \TenorVerseFirstEnding
+  \TenorVerseBodyMusic
+  \TenorVerseFirstEnding
+  \TenorVerseBodyMusic
+  \TenorVerseSecondEnding
 }
 
 BassUnfolded = {
   \global
-  \keepWithTag #'verseOneA \BassVerseBodyMusic
-  \keepWithTag #'verseOneA \BassVerseFirstEnding
-  \keepWithTag #'verseOneB \BassVerseBodyMusic
-  \keepWithTag #'verseOneB \BassVerseSecondEnding
-  \BassChorusMusic
-  \keepWithTag #'verseTwoA \BassVerseBodyMusic
-  \keepWithTag #'verseTwoA \BassVerseFirstEnding
-  \keepWithTag #'verseTwoB \BassVerseBodyMusic
-  \keepWithTag #'verseTwoB \BassVerseSecondEnding
-  \BassChorusMusic
-  \keepWithTag #'verseThreeA \BassVerseBodyMusic
-  \keepWithTag #'verseThreeA \BassVerseFirstEnding
-  \keepWithTag #'verseThreeB \BassVerseBodyMusic
-  \keepWithTag #'verseThreeB \BassVerseSecondEnding
-  \BassChorusMusic
+  \BassVerseBodyMusic
+  \BassVerseFirstEnding
+  \BassVerseBodyMusic
+  \BassVerseFirstEnding
+  \BassVerseBodyMusic
+  \BassVerseFirstEnding
+  \BassVerseBodyMusic
+  \BassVerseSecondEnding
 }
 
 \book {

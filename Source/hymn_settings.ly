@@ -285,3 +285,11 @@ he_is_wonderful_fc_pages = 1
 the_road_to_emmaus_cs_number = "C-001"
 the_road_to_emmaus_cs_number_rhs = ##f
 the_road_to_emmaus_cs_pages = 6
+
+weeping_garden_cs_number = "C-002"
+weeping_garden_cs_number_rhs = ##f
+weeping_garden_cs_pages = 2
+
+an_honest_heart_cs_number = "C-003"
+an_honest_heart_cs_number_rhs = ##t
+an_honest_heart_cs_pages = 1
