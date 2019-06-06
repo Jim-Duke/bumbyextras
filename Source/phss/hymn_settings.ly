@@ -1,7 +1,66 @@
 \version "2.19.49"
 
-% Songs
-% Comment out when building for other groups
+% Hymns from Psalms, Hymns, and Spiritual Songs
+
+% P-036
+lift_up_the_light_phss_number = "P-036"
+lift_up_the_light_phss_number_rhs = ##1
+lift_up_the_light_phss_pages = #1
+
+% P-059
+all_nations_clap_your_hands_phss_number = "P-059"
+all_nations_clap_your_hands_phss_number_rhs = ##t
+all_nations_clap_your_hands_phss_pages = #1
+
+% P-076
+let_the_whole_creation_cry_phss_number = "P-076"
+let_the_whole_creation_cry_phss_number_rhs = ##t
+let_the_whole_creation_cry_phss_pages = #1
+
+% P-127
+the_day_thou_gavest_phss_number = "P-127"
+the_day_thou_gavest_phss_number_rhs = ##t
+the_day_thou_gavest_phss_pages = #1
+
+% P-140
+wisdom_and_power_phss_number = "P-140"
+wisdom_and_power_phss_number_rhs = ##t
+wisdom_and_power_phss_pages = #1
+
+% P-147
+all_glory_laud_and_honor_phss_number = "P-147"
+all_glory_laud_and_honor_phss_number_rhs = ##t
+all_glory_laud_and_honor_phss_pages = #1
+
+% P-210
+o_come_all_ye_faithful_phss_number = "P-210"
+o_come_all_ye_faithful_phss_number_rhs = ##t
+o_come_all_ye_faithful_phss_pages = #1
+
+% P-254
+hes_risen_phss_number = "P-254"
+hes_risen_phss_number_rhs = ##t
+hes_risen_phss_pages = #1
+
+% P-272
+blessed_jesus_at_your_word_phss_number = "P-272"
+blessed_jesus_at_your_word_phss_number_rhs = ##t
+blessed_jesus_at_your_word_phss_pages = #1
+
+% P-341
+son_of_god_eternal_savior_phss_number = "P-341"
+son_of_god_eternal_savior_phss_number_rhs = ##f
+son_of_god_eternal_savior_phss_pages = #1
+
+% P-342
+lord_let_us_be_like_minded_phss_number = "P-342"
+lord_let_us_be_like_minded_phss_number_rhs = ##t
+lord_let_us_be_like_minded_phss_pages = #1
+
+% P-390
+hide_me_o_my_savior_hide_me_phss_number = "B-017"
+hide_me_o_my_savior_hide_me_phss_number_rhs = ##f
+hide_me_o_my_savior_hide_me_phss_pages = #1
 
 % P-415
 my_god_i_thank_you_who_have_made_phss_number = "P-415"
@@ -13,280 +72,32 @@ lord_jesus_think_on_me_phss_number = "P-437"
 lord_jesus_think_on_me_phss_number_rhs = ##t
 lord_jesus_think_on_me_phss_pages = #1
 
-% P-272
-blessed_jesus_at_your_word_phss_number = "P-272"
-blessed_jesus_at_your_word_phss_number_rhs = ##t
-blessed_jesus_at_your_word_phss_pages = #1
+% P-421
+my_lord_my_truth_my_way_phss_number = "P-421"
+my_lord_my_truth_my_way_phss_number_rhs = ##t
+my_lord_my_truth_my_way_phss_pages = #1
 
-% P-127
-hes_risen_phss_number = "P-127"
-hes_risen_phss_number_rhs = ##t
-hes_risen_phss_pages = #1
+% P-533
+the_good_fight_phss_number = "P-533"
+the_good_fight_phss_number_rhs = ##t
+the_good_fight_phss_pages = #1
 
-% B-005
-% How Beautiful - Two Pages
-how_beautiful_bumby_number = "B-005"
-how_beautiful_bumby_number_rhs = ##f
-how_beautiful_bumby_pages = 2
+% P-621
+not_i_but_christ_phss_number = "P-621"
+not_i_but_christ_phss_number_rhs = ##t
+not_i_but_christ_phss_pages = #1
 
-% B-006
-% Christ the Lord is Risen Today - Mendelssohn - One Page
-christ_the_lord_is_risen_today_mendelssohn_bumby_number = "B-006"
-christ_the_lord_is_risen_today_mendelssohn_bumby_number_rhs = ##f
-christ_the_lord_is_risen_today_mendelssohn_bumby_pages = 1
+% P-727
+precious_in_his_sight_phss_number = "P-727"
+precious_in_his_sight_phss_number_rhs = ##1
+precious_in_his_sight_phss_pages = #1
 
-% B-007
-% Hark! I Hear the Harps Eternal - One Page
-hark_I_hear_the_harps_eternal_bumby_number = "B-007"
-hark_I_hear_the_harps_eternal_bumby_number_rhs = ##t
-hark_I_hear_the_harps_eternal_bumby_pages = 1
+% P-748
+when_i_can_read_my_title_clear_phss_number = "P-748"
+when_i_can_read_my_title_clear_phss_number_rhs = ##t
+when_i_can_read_my_title_clear_phss_pages = #1
 
-% B-008
-% Just As I Am - I Come Broken - Two Pages
-just_as_I_am_I_come_broken_bumby_number = "B-008"
-just_as_I_am_I_come_broken_bumby_number_rhs = ##f
-just_as_I_am_I_come_broken_bumby_pages = 2
-
-% B-009
-% Magnificat - Two Pages
-magnificat_bumby_number = "B-009"
-magnificat_bumby_number_rhs = ##f
-magnificat_bumby_pages = 2
-
-% B-010
-% Just For Today - Two Pages
-just_for_today_bumby_number = "B-010"
-just_for_today_bumby_number_rhs = ##f
-just_for_today_bumby_pages = 2
-
-% B-011
-% Ah Holy Jesus - Guess One Page
-ah_holy_jesus_bumby_number = "B-011"
-ah_holy_jesus_bumby_number_rhs = ##f
-ah_holy_jesus_bumby_pages = 1
-
-% B-012
-% Be Thou My Vision
-be_thou_my_vision_bumby_number = "B-012"
-be_thou_my_vision_bumby_number_rhs = ##t
-be_thou_my_vision_bumby_pages = 1
-
-% B-013
-% Listen to our hearts
-listen_to_our_hearts_bumby_number = "B-013"
-listen_to_our_hearts_bumby_number_rhs = ##f
-listen_to_our_hearts_bumby_pages = 2
-
-% B-014
-% Days of Elijah
-days_of_elijah_bumby_number = "B-014"
-days_of_elijah_bumby_number_rhs = ##f
-days_of_elijah_bumby_pages = 6
-
-% B-015
-% The Mountain Song
-the_mountain_song_bumby_number = "B-015"
-the_mountain_song_bumby_number_rhs = ##f
-the_mountain_song_bumby_pages = 2
-
-% B-016
-% Lord, Reign in Me
-lord_reign_in_me_bumby_number = "B-016"
-lord_reign_in_me_bumby_number_rhs = ##f
-lord_reign_in_me_bumby_pages = 2
-
-the_rock_of_my_heart_bumby_number = "B-017"
-the_rock_of_my_heart_bumby_number_rhs = ##f
-the_rock_of_my_heart_bumby_pages = 2
-
-thomas_song_bumby_number = "B-018"
-thomas_song_bumby_number_rhs = ##f
-thomas_song_bumby_pages = 2
-
-the_cost_bumby_number = "B-019"
-the_cost_bumby_number_rhs = ##f
-the_cost_bumby_pages = 1
-
-god_of_the_living_in_whose_eyes_bumby_number = "B-020"
-god_of_the_living_in_whose_eyes_bumby_number_rhs = ##t
-god_of_the_living_in_whose_eyes_bumby_pages = 1
-
-blessed_be_your_name_bumby_number = "B-021"
-blessed_be_your_name_bumby_number_rhs = ##f
-blessed_be_your_name_bumby_pages = 2
-
-immanuel_god_with_us_bumby_number = "B-022"
-immanuel_god_with_us_bumby_number_rhs = ##f
-immanuel_god_with_us_bumby_pages = 1
-
-morning_has_broken_bumby_number = "B-023"
-morning_has_broken_bumby_number_rhs = ##t
-morning_has_broken_bumby_pages = 1
-
-my_god_I_thank_you_who_have_made_bumby_number = "B-024"
-my_god_I_thank_you_who_have_made_bumby_number_rhs = ##f
-my_god_I_thank_you_who_have_made_bumby_pages = 1
-
-bright_canaan_bumby_number = "B-025"
-bright_canaan_bumby_number_rhs = ##t
-bright_canaan_bumby_pages = 1
-
-what_the_lord_has_done_in_me_bumby_number = "B-026"
-what_the_lord_has_done_in_me_bumby_number_rhs = ##f
-what_the_lord_has_done_in_me_bumby_pages = 1
-
-o_sacred_head_bumby_number = "B-027"
-o_sacred_head_bumby_number_rhs = ##t
-o_sacred_head_bumby_pages = 1
-
-all_glory_laud_and_honor_bumby_a_number = "B-028a"
-all_glory_laud_and_honor_bumby_a_number_rhs = ##f
-all_glory_laud_and_honor_bumby_a_pages = 1
-
-all_glory_laud_and_honor_bumby_b_number = "B-028b"
-all_glory_laud_and_honor_bumby_b_number_rhs = ##t
-all_glory_laud_and_honor_bumby_b_pages = 1
-
-immortal_invisible_god_only_wise_bumby_number = "B-029"
-immortal_invisible_god_only_wise_bumby_number_rhs = ##f
-immortal_invisible_god_only_wise_bumby_pages = 1
-
-what_wondrous_love_is_this_bumby_number = "B-030"
-what_wondrous_love_is_this_bumby_number_rhs = ##t
-what_wondrous_love_is_this_bumby_pages = 1
-
-naked_as_from_the_earth_we_came_hatfield_bumby_number = "B-031a"
-naked_as_from_the_earth_we_came_hatfield_bumby_number_rhs = ##f
-naked_as_from_the_earth_we_came_hatfield_bumby_pages = 1
-
-naked_as_from_the_earth_we_came_winchester_old_bumby_number = "B-031b"
-naked_as_from_the_earth_we_came_winchester_old_bumby_number_rhs = ##t
-naked_as_from_the_earth_we_came_winchester_old_bumby_pages = 1
-
-let_all_mortal_flesh_keep_silence_bumby_number = "B-032"
-let_all_mortal_flesh_keep_silence_bumby_number_rhs = ##f
-let_all_mortal_flesh_keep_silence_bumby_pages = 1
-
-weeping_garden_bumby_number ="B-033"
-weeping_garden_bumby_number_rhs = ##t
-weeping_garden_bumby_pages = 1
-
-highest_hope_bumby_number = "B-034"
-highest_hope_bumby_number_rhs = ##f
-highest_hope_bumby_pages = 2
-
-speak_o_lord_bumby_number = "B-035"
-speak_o_lord_bumby_number_rhs = ##f
-speak_o_lord_bumby_pages = 2
-
-o_church_arise_bumby_number = "B-036"
-o_church_arise_bumby_number_rhs = ##f
-o_church_arise_bumby_pages = 2
-
-how_deep_the_fathers_love_bumby_number = "B-037"
-how_deep_the_fathers_love_bumby_number_rhs = ##f
-how_deep_the_fathers_love_bumby_pages = 1
-
-down_in_the_river_to_pray_bumby_number = "B-038"
-down_in_the_river_to_pray_bumby_number_rhs = ##t
-down_in_the_river_to_pray_bumby_pages = 1
-
-in_need_bumby_number = "B-039"
-in_need_bumby_number_rhs = ##f
-in_need_bumby_pages = 2
-
-%%%
-%%% FC Alumni Chorus hymns
-%%%
-
-im_gonna_view_that_holy_city_fc_number = "F-001"
-im_gonna_view_that_holy_city_fc_number_rhs = ##t
-im_gonna_view_that_holy_city_fc_number_pages = 1
-
-listen_to_our_hearts_fc_number = "F-002"
-listen_to_our_hearts_fc_number_rhs = ##f
-listen_to_our_hearts_fc_pages = 2
-
-make_me_new_fc_number = "F-003"
-make_me_new_fc_number_rhs = ##t
-make_me_new_fc_pages = 1
-
-praise_god_fc_number = "F-004"
-praise_god_fc_number_rhs = ##t
-praise_god_fc_pages = 1
-
-highest_hope_fc_number = "F-005"
-highest_hope_fc_number_rhs = ##f
-highest_hope_fc_pages = 2
-
-magnificat_fc_number = "F-006"
-magnificat_fc_number_rhs = ##f
-magnificat_fc_pages = 2
-
-thomas_song_fc_number = "F-007"
-thomas_song_fc_number_rhs = ##f
-thomas_song_fc_pages = 2
-
-i_am_crucified_with_christ_fc_number = "F-008"
-i_am_crucified_with_christ_fc_number_rhs = ##f
-i_am_crucified_with_christ_fc_pages = 1
-
-pierce_my_ear_fc_number = "F-009"
-pierce_my_ear_fc_number_rhs = ##t
-pierce_my_ear_fc_pages = 1
-
-more_precious_than_silver_fc_number = "F-010"
-more_precious_than_silver_fc_number_rhs = ##f
-more_precious_than_silver_fc_pages = 1
-
-o_lord_youre_beautiful_fc_number = "F-011"
-o_lord_youre_beautiful_fc_number_rhs = ##t
-o_lord_youre_beautiful_fc_pages = 1
-
-we_will_glorify_the_king_of_kings_fc_number = "F-012"
-we_will_glorify_the_king_of_kings_fc_number_rhs = ##f
-we_will_glorify_the_king_of_kings_fc_pages = 1
-
-lord_be_glorified_fc_number = "F-013"
-lord_be_glorified_fc_number_rhs = ##t
-lord_be_glorified_fc_pages = 1
-
-we_shall_assemble_fc_number = "F-014"
-we_shall_assemble_fc_number_rhs = ##f
-we_shall_assemble_fc_pages = 2
-
-jesus_let_us_come_to_know_you_fc_number = "F-015"
-jesus_let_us_come_to_know_you_fc_number_rhs = ##f
-jesus_let_us_come_to_know_you_fc_pages = 1
-
-down_in_the_river_to_pray_fc_number = "F-016"
-down_in_the_river_to_pray_fc_number_rhs = ##t
-down_in_the_river_to_pray_fc_pages = 1
-
-faithful_love_fc_number = "F-017"
-faithful_love_fc_number_rhs = ##f
-faithful_love_fc_pages = 2
-
-in_need_fc_number = "F-018"
-in_need_fc_number_rhs = ##f
-in_need_fc_pages = 2
-
-he_is_wonderful_fc_number = "F-019"
-he_is_wonderful_fc_number_rhs = ##f
-he_is_wonderful_fc_pages = 1
-
-%%%
-%%% Concordia Sacrae Hymns
-%%%
-
-the_road_to_emmaus_cs_number = "C-001"
-the_road_to_emmaus_cs_number_rhs = ##f
-the_road_to_emmaus_cs_pages = 6
-
-weeping_garden_cs_number = "C-002"
-weeping_garden_cs_number_rhs = ##f
-weeping_garden_cs_pages = 2
-
-an_honest_heart_cs_number = "C-003"
-an_honest_heart_cs_number_rhs = ##t
-an_honest_heart_cs_pages = 1
+% P-826
+only_a_sinner_saved_by_grace_phss_number = "P-826"
+only_a_sinner_saved_by_grace_phss_number_rhs = ##t
+only_a_sinner_saved_by_grace_phss_pages = #1
