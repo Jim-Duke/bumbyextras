@@ -4,7 +4,7 @@
 
 % P-036
 lift_up_the_light_phss_number = "P-036"
-lift_up_the_light_phss_number_rhs = ##1
+lift_up_the_light_phss_number_rhs = ##t
 lift_up_the_light_phss_pages = #1
 
 % P-059
@@ -89,7 +89,7 @@ not_i_but_christ_phss_pages = #1
 
 % P-727
 precious_in_his_sight_phss_number = "P-727"
-precious_in_his_sight_phss_number_rhs = ##1
+precious_in_his_sight_phss_number_rhs = ##t
 precious_in_his_sight_phss_pages = #1
 
 % P-748
