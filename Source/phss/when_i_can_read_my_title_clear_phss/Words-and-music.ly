@@ -52,19 +52,19 @@ AlignVerseMusic = {
   c4 c4 c4 c4 |
   c4 c4 c4 c4 |
   c2.
-
+  
   c4 |
   c4 c4 c4 c4 |
   c4 c4 c4 c4 |
   c4 c4 c4 c4 |
   c2.
-
+  
   c4 |
   c4 c4 c4 c4 |
-  c4 c4 c2 |
-  c4 c8 c8 c4 c4 |
+  c2. c4 |
+  c4 c4 c4 c4 |
   c2.
-
+  
   c4 |
   c4 c4 c4 c4 |
   c4 c4 c4 c4 |
@@ -72,108 +72,108 @@ AlignVerseMusic = {
   c2. \bar "|."
 }
 
-SopranoVerseMusic = \relative c'' {
-  a8[ gis8] |
-  fis4 fis4 fis4 e8[ fis8] |
-  a4 a4 b4 a8[ b8] |
-  cis4 cis4 b8[ a8] fis4 |
-  e2.
-
-  a8[ gis8] |
-  fis4 fis4 fis4 e8[ fis8] |
-  a4 a4 b4 a8[ b8] |
-  cis4 cis4 b8[ a8] fis4 |
-  fis2.
-
-  cis'4 |
-  e4 cis4 cis4 b8[ a8] |
-  b4 b4 b2 |
-  cis4 cis8 b8 a4 fis4 |
-  e2.
-
-  a8[ gis8] |
-  fis4 fis4 fis8[ e8] fis8[ gis8] |
-  a4 a4 b4 a8[ b8] |
-  cis4 cis4 b8[ a8] fis4 |
-  fis2. \bar "|."
+SopranoVerseMusic = \relative c' {
+  ees4 |
+  aes4 aes4 aes8[ bes8] c8[ aes8] |
+  f4 f4 f8[ ees8] c4 |
+  ees4 ees4 f4 aes4 |
+  c8.[( bes16] aes8[ c8] bes4)
+  
+  aes8[ c8] |
+  ees4 ees4 ees4 f8[ ees8] |
+  c4 c4 bes4 aes4 |
+  f4 aes8[ f8] ees4 f8[ g8] |
+  aes2.
+  
+  ees4 |
+  aes4 aes4 aes8[ bes8] c8[ aes8] |
+  f4.( g8 f8[ ees8]) c4 |
+  ees4 ees4 f4 aes4 |
+  c8.[( bes16] aes8[ c8] bes4)
+  
+  aes8[ c8] |
+  ees4 ees4 ees4 f8[ ees8] |
+  c4 c4 bes4 aes4 |
+  f4 aes8[ f8] ees4 f8[ g8] |
+  aes2. \bar "|."
 }
 
 AltoVerseMusic = \relative c' {
-  cis4 |
-  cis4 cis4 d4 d4 |
-  cis4 e4 e4 cis8[ e8] |
-  e4 e4 d4 d8[ cis8] |
-  b2.
-
-  e4 |
-  d4 d4 d4 d4 |
-  e4 e4 e4 cis8[ e8] |
-  e4 e4 fis4 fis4 |
-  fis2.
-
-  fis4 |
-  e4 e4 e4 e4 |
-  e4 e4 e2 |
-  e4 e8 e8 e4 d8[ cis8] |
-  b2.
-
-  e4 |
-  d4 d4 d4 d4 |
-  e4 e4 e4 cis8[ e8] |
-  e4 e4 d4 d4 |
-  cis2. \bar "|."
+  c4 |
+  ees4 ees4 ees4 ees8[ c8] |
+  des4 des4 des8[ c8] aes4 |
+  c4 c4 des4 f4 |
+  ees4( c4 ees4)
+  
+  c8[ ees8] |
+  aes4 aes4 aes4 aes4 |
+  aes4 f4 f4 f4 |
+  f4 f8[ des8] c4 des4 |
+  c2.
+  
+  c4 |
+  ees4 ees4 ees4 ees8[ c8] |
+  des4.( ees8 des8[ c8]) aes4 |
+  c4 c4 des4 f4 |
+  ees4( c4 ees4)
+  
+  c8[ ees8] |
+  aes4 aes4 aes4 aes4 |
+  aes4 f4 f4 f4 |
+  f4 f8[ des8] c4 des4 |
+  c2. \bar "|."
 }
 
 TenorVerseMusic = \relative c' {
-  a4 |
-  a4 a4 a4 a4 |
-  a4 a4 gis4 a8[ gis8] |
-  a4 a4 fis4 a4 |
-  gis2.
-
-  a4 |
-  a4 a4 b4 b4 |
-  cis4 b8[ a8] gis4 a8[ gis8] |
-  a4 a4 a4 a4 |
-  a2.
-
-  a4 |
-  cis4 a4 a4 a4 |
-  gis4 gis4 gis2 |
-  a4 a8 gis8 a4 a4 |
-  gis2.
-
-  a4 |
-  a4 a4 b4 b4 |
-  cis4 b8[ a8] gis4 a8[ gis8] |
-  a4 a4 fis4 a4 |
-  a2. \bar "|."
+  aes4 |
+  c4 c4 c4 aes4 |
+  aes4 aes4 aes4 ees4 |
+  aes4 aes4 aes4 aes4 |
+  aes2( g4)
+  
+  aes4 |
+  c4 c4 c4 des8[ c8] |
+  aes4 aes4 des4 c4 |
+  des4 aes4 aes4 ees4 |
+  ees2.
+  
+  aes4 |
+  c4 c4 c4 aes4 |
+  aes2. ees4 |
+  aes4 aes4 aes4 aes4 |
+  aes2( g4)
+  
+  aes4 |
+  c4 c4 c4 des8[ c8] |
+  aes4 aes4 des4 c4 |
+  des4 aes4 aes4 ees4 |
+  ees2. \bar "|."
 }
 
 BassVerseMusic = \relative c {
-  fis4 |
-  fis4 fis8[ e8] d4 d4 |
-  a4 cis4 e4 e4 |
-  a,4 a4 d4 d4 |
-  e2.
-
-  cis4 |
-  d4 d8[ cis8] b4 b4 |
-  a4 cis4 e4 e4 |
-  a,4 a4 d4 d4 |
-  fis2.
-
-  fis4 |
-  a,4 a4 a4 cis4 |
-  e4 e4 e2 |
-  a,4 a8 b8 cis4 d4 |
-  e2.
-
-  cis4 |
-  d4 d8[ cis8] b4 b4 |
-  a4 cis4 e4 e4 |
-  a,4 a4 d4 d4 |
-  <fis fis,>2. \bar "|."
+  aes4 |
+  aes4 aes4 aes4 aes4 |
+  des4 des4 aes4 aes4 |
+  aes4 aes4 aes4 aes4 |
+  ees'2.
+  
+  aes4 |
+  aes4 aes4 aes,4 aes4 |
+  f'4 f4 f4 f4 |
+  des4 des4 ees4 ees4 |
+  aes,2.
+  
+  aes4 |
+  aes4 aes4 aes4 aes4 |
+  des2( aes4) aes4 |
+  aes4 aes4 aes4 aes4 |
+  ees'2.
+  
+  aes4 |
+  aes4 aes4 aes,4 aes4 |
+  f'4 f4 f4 f4 |
+  des4 des4 ees4 ees4 |
+  aes,2. \bar "|."
 }
 
 SheetMusicVerseBreaks = \relative c {
@@ -209,24 +209,32 @@ SlidesVerseBreaks = \relative c {
 
 VerseOne = \lyricmode {
   \set stanza = "1. "
-  En -- camped a -- long the hills of light, Ye Chris -- tian sol -- diers, rise,
-  And press the bat -- tle ere the night Shall veil the glow -- ing skies.
-  Sal -- va -- tion's hel -- met on each head, With truth all girt a -- bout,
-  The earth shall trem -- ble 'neath our tread And ech -- o with our shout.
+  When I can read my ti -- tle clear To man -- sions in the skies,
+  I'll bid fare -- well to eve -- ry fear And wipe my weep -- ing eyes,
+  And wipe my weep -- ing eyes, And wipe my weep -- ing eyes.
+  I'll bid fare -- well to eve -- ry fear And wipe my weep -- ing eyes.
 }
 
 VerseTwo = \lyricmode {
   \set stanza = "2. "
-  Our Lord sees eve -- ry Chris -- tian die, And feels each dy -- ing breath,
-  And calls out from a field near -- by, "\"Be" faith -- ful un -- to "death\""
-  Our breth -- ren, dead be -- neath the plain, Whose spir -- its nev -- er died,
-  Rise up to march and shout a -- gain, "\"O" Christ, be glo -- ri -- "fied!\""
+  Should earth a -- gainst my soul en -- gage And fier -- y darts be hurled,
+  Then I can smile at Sa -- tan's rage And face a frown -- ing world,
+  And face a frown -- ing world, And face a frown -- ing world.
+  Then I can smile at Sa -- tan's rage And face a frown -- ing world.
 }
 
 VerseThree = \lyricmode {
   \set stanza = "3. "
-  Must I be car -- ried to the skies On flow -- 'ry beds of ease,
-  While oth -- ers fought to win the prize And saled thru blood -- y seas?
-  Sure I must fight if I would reign; In -- crease my cour -- age, Lord.
-  I'll bear the toil, en -- dure the pain, Sup -- port -- ed by Thy word.
+  Let cares, like wild del -- ug -- es come, And storms of sor -- row fall!
+  May I but safe -- ly reach my home, My God, my heav'n, my all.
+  My God, my heav'n, my all, My God, my heav'n, my all.
+  May I but safe -- ly reach my home, My God, my heav'n, my all.
+}
+
+VerseFour = \lyricmode {
+  \set stanza = "4. "
+  There shall I bathe my wea -- ry soul In seas of heav'n -- ly rest,
+  And not a wave of trou -- ble roll A -- cross my peace -- ful breast.
+  A -- cross my peace -- ful breast, A -- cross my peace -- ful breast.
+  And not a wave of trou -- ble A -- cross my peace -- ful breast.
 }
