@@ -75,7 +75,7 @@ SopranoVerseMusic = \relative c'' {
 AltoVerseMusic = \relative c'' {
   g2 g4 g4 |
   g4 fis8 fis8 g8 g8 d8 d8 |
-  e8[ fis8] g8[ a8] g4. a8 |
+  e8[ fis8] g8[ a8] d,4. fis8 |
   g4 g8[ a8] fis4.
 
   g8 |
