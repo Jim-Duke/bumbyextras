@@ -223,40 +223,24 @@ SlidesVerseBreaks = \relative c {
 
 VerseOne = \lyricmode {
   \set stanza = "1. "
-  The day Thou gav -- est, Lord, is end -- ed;
-  The dark -- ness falls at Thy be -- hest.
-  To Thee our morn -- ing hymns as -- cend -- ed;
-  Thy praise shall sanc -- ti -- fy our rest.
+  Not I, but Christ, be hon -- ored, loved, ex -- alt -- ed;
+  Not I, but Christ, be seen, be known, be heard;
+  Not I, but Christ, in eve -- ry look and ac -- tion,
+  Not I, but Christ, in eve -- ry thought and word.
 }
 
 VerseTwo = \lyricmode {
   \set stanza = "2. "
-  We thank Thee that Thy church, un -- sleep -- ing,
-  While earth rolls on -- ward in -- to light.
-  Through all the world her watch is keep -- ing.
-  And rests not now by day or night.
+  Not I, but Christ, to gen -- tly soothe in sor -- row,
+  Not I, but Christ, to wipe the fall -- ing tear,
+  Not I, but Christ, to lift the wea -- ry bur -- den,
+  Not I, but Christ, to hush a -- way all fear.
 }
 
 VerseThree = \lyricmode {
   \set stanza = "3. "
-  As o'er each con -- ti -- nent and is -- land
-  The dawn leads on an -- oth -- er day,
-  The voice of prayer is nev -- er si -- lent,
-  Nor dies the strain of praise a -- way.
-}
-
-VerseFour = \lyricmode {
-  \set stanza = "4. "
-  The sun that bids us rest is wak -- ing
-  Our breth -- ren 'neath the west -- ern sky,
-  And hour by hour fresh lips are mak -- ing
-  Thy won -- drous do -- ings heard on high.
-}
-
-VerseFive = \lyricmode {
-  \set stanza = "5. "
-  So be it, Lord; Thy throne shall nev -- er,
-  Like earth's proud em -- pires, pass a -- way;
-  Thy king -- dom stands, and grows for -- ev -- er,
-  Till all Thy crea -- tures own Thy sway.
+  Not I, but Christ, my eve -- ry need sup -- ply -- ing,
+  Not I, but Christ, my strength and health to be,
+  Not I, but Christ, for bod -- y, soul, and spir -- it,
+  Christ, on -- ly Christ, here and e -- ter -- nal -- ly.
 }

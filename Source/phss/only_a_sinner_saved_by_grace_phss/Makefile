@@ -5,11 +5,11 @@
 #
 # The following two variables are probably all that needs to be customized for any hymn
 #
-PROD_BASE_NAME = not_i_but_christ
+PROD_BASE_NAME = only_a_sinner_saved_by_grace
 STATUS = review
 ACCESS = public
-SLIDE_NAME = NOT\ I\ BUT\ CHRIST
-HYMN_NUMBER = P-621
+SLIDE_NAME = ONLY\ A\ SINNER\ SAVED\ BY\ GRACE
+HYMN_NUMBER = P-826
 ROOT_DIR = $(realpath ../../..)
 
 include ../common.mk

@@ -109,12 +109,6 @@
         \new Lyrics \lyricsto "align" {
           \VerseThree
         }
-        \new Lyrics \lyricsto "align" {
-          \VerseFour
-        }
-        \new Lyrics \lyricsto "align" {
-          \VerseFive
-        }
       >>
       \context Staff = lower <<
         \clef bass

@@ -18,8 +18,7 @@ NumVerses = 2
         } {
           \voiceOne {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \SopranoVerseMusic \SopranoChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \SopranoVerseMusic \SopranoChorusMusic }
           }
         }
         \context Voice = altos \with {
@@ -30,8 +29,7 @@ NumVerses = 2
         } {
           \voiceTwo {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \AltoVerseMusic \AltoChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \AltoVerseMusic \AltoChorusMusic }
           }
         }
       >>
@@ -45,8 +43,7 @@ NumVerses = 2
         } {
           \voiceOne {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \TenorVerseMusic \TenorChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \TenorVerseMusic \TenorChorusMusic }
           }
         }
         \context Voice = basses \with {
@@ -57,8 +54,7 @@ NumVerses = 2
         } {
           \voiceTwo {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \BassVerseMusic \BassChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \BassVerseMusic \BassChorusMusic }
           }
         }
       >>
@@ -89,8 +85,7 @@ NumVerses = 2
         } {
           \voiceOne {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \SopranoVerseMusic \SopranoChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \SopranoVerseMusic \SopranoChorusMusic }
           }
         }
         \context Voice = altos \with {
@@ -101,8 +96,7 @@ NumVerses = 2
         } {
           \voiceTwo {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \AltoVerseMusic \AltoChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \AltoVerseMusic \AltoChorusMusic }
           }
         }
       >>
@@ -116,8 +110,7 @@ NumVerses = 2
         } {
           \voiceOne {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \TenorVerseMusic \TenorChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \TenorVerseMusic \TenorChorusMusic }
           }
         }
         \context Voice = basses \with {
@@ -128,8 +121,7 @@ NumVerses = 2
         } {
           \voiceTwo {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \BassVerseMusic \BassChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \BassVerseMusic \BassChorusMusic }
           }
         }
       >>
@@ -160,8 +152,7 @@ NumVerses = 2
         } {
           \voiceOne {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \SopranoVerseMusic \SopranoChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \SopranoVerseMusic \SopranoChorusMusic }
           }
         }
         \context Voice = altos \with {
@@ -172,8 +163,7 @@ NumVerses = 2
         } {
           \voiceTwo {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \AltoVerseMusic \AltoChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \AltoVerseMusic \AltoChorusMusic }
           }
         }
       >>
@@ -187,8 +177,7 @@ NumVerses = 2
         } {
           \voiceOne {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \TenorVerseMusic \TenorChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \TenorVerseMusic \TenorChorusMusic }
           }
         }
         \context Voice = basses \with {
@@ -199,8 +188,7 @@ NumVerses = 2
         } {
           \voiceTwo {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \BassVerseMusic \BassChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \BassVerseMusic \BassChorusMusic }
           }
         }
       >>
@@ -231,8 +219,7 @@ NumVerses = 2
         } {
           \voiceOne {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \SopranoVerseMusic \SopranoChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \SopranoVerseMusic \SopranoChorusMusic }
           }
         }
         \context Voice = altos \with {
@@ -243,8 +230,7 @@ NumVerses = 2
         } {
           \voiceTwo {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \AltoVerseMusic \AltoChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \AltoVerseMusic \AltoChorusMusic }
           }
         }
       >>
@@ -258,8 +244,7 @@ NumVerses = 2
         } {
           \voiceOne {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \TenorVerseMusic \TenorChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \TenorVerseMusic \TenorChorusMusic }
           }
         }
         \context Voice = basses \with {
@@ -270,8 +255,7 @@ NumVerses = 2
         } {
           \voiceTwo {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \BassVerseMusic \BassChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \BassVerseMusic \BassChorusMusic }
           }
         }
       >>
@@ -302,8 +286,7 @@ NumVerses = 2
         } {
           \voiceOne {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \SopranoVerseMusic \SopranoChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \SopranoVerseMusic \SopranoChorusMusic }
           }
         }
         \context Voice = altos \with {
@@ -314,8 +297,7 @@ NumVerses = 2
         } {
           \voiceTwo {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \AltoVerseMusic \AltoChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \AltoVerseMusic \AltoChorusMusic }
           }
         }
       >>
@@ -329,8 +311,7 @@ NumVerses = 2
         } {
           \voiceOne {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \TenorVerseMusic \TenorChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \TenorVerseMusic \TenorChorusMusic }
           }
         }
         \context Voice = basses \with {
@@ -341,8 +322,7 @@ NumVerses = 2
         } {
           \voiceTwo {
             \global
-            \partial 4
-            \repeat unfold \NumVerses { \BassVerseMusic \BassChorusMusic }
+            \repeat unfold \NumVerses { \partial 4 \BassVerseMusic \BassChorusMusic }
           }
         }
       >>

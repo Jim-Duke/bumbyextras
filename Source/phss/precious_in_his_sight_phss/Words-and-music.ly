@@ -9,7 +9,7 @@
 global = {
   \key f \major
   \time 4/4
-  \tempo 4 = 96
+  \tempo 4 = 80 - 82
 }
 
 MajorKey = ##t
@@ -184,8 +184,7 @@ BassChorusMusic = \relative c {
   r2 r4
 
   f4 |
-  bes,4 bes4 |
-  f'8 f8 f8 f8 |
+  bes,4 bes4 f'8 f8 f8 f8 |
   c4 g'4 g4
 
   a8[ g8] |
@@ -206,7 +205,7 @@ SheetMusicVerseBreaks = \relative c {
   s1 | \noBreak
   s1 | \noBreak
   s1 | \noBreak
-  s2. \bar "||" \break
+  s2 \bar "||" \break
 }
 
 SheetMusicChorusBreaks = {

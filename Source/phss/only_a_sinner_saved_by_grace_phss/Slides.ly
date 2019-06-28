@@ -97,19 +97,19 @@ VerseTitleMarkup = \markup {
         \partCombine
           {
             \global
-            \partial 4 \SopranoVerseMusic
+            \SopranoVerseMusic
           }
           {
             \global
-            \partial 4 \AltoVerseMusic
+            \AltoVerseMusic
           }
         \new NullVoice = breaks {
           \global
-          \partial 4 \SlidesVerseBreaks
+          \SlidesVerseBreaks
         }
         \new NullVoice = alignVoice {
           \global
-          \partial 4 \AlignVerseMusic
+          \AlignVerseMusic
         }
       >>
       \new Lyrics \lyricsto "alignVoice" {
@@ -120,93 +120,11 @@ VerseTitleMarkup = \markup {
         \partCombine
           {
             \global
-            \partial 4 \TenorVerseMusic
+            \TenorVerseMusic
           }
           {
             \global
-            \partial 4 \BassVerseMusic
-          }
-      >>
-    >>
-    \SlideLayout
-  }
-  \VerseTitleMarkup
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \partCombine
-          {
-            \global
-            \partial 4 \SopranoVerseMusic
-          }
-          {
-            \global
-            \partial 4 \AltoVerseMusic
-          }
-        \new NullVoice = breaks {
-          \global
-          \partial 4 \SlidesVerseBreaks
-        }
-        \new NullVoice = alignVoice {
-          \global
-          \partial 4 \AlignVerseMusic
-        }
-      >>
-      \new Lyrics \lyricsto "alignVoice" {
-        \huge \VerseTwo
-      }
-      \context Staff = lower <<
-        \clef bass
-        \partCombine
-          {
-            \global
-            \partial 4 \TenorVerseMusic
-          }
-          {
-            \global
-            \partial 4 \BassVerseMusic
-          }
-      >>
-    >>
-    \SlideLayout
-  }
-  \VerseTitleMarkup
-  \score {
-    <<
-      \override Score.BarNumber.break-visibility = ##(#f #f #f)
-      \context Staff = upper <<
-        \partCombine
-          {
-            \global
-            \partial 4 \SopranoVerseMusic
-          }
-          {
-            \global
-            \partial 4 \AltoVerseMusic
-          }
-        \new NullVoice = breaks {
-          \global
-          \partial 4 \SlidesVerseBreaks
-        }
-        \new NullVoice = alignVoice {
-          \global
-          \partial 4 \AlignVerseMusic
-        }
-      >>
-      \new Lyrics \lyricsto "alignVoice" {
-        \huge \VerseThree
-      }
-      \context Staff = lower <<
-        \clef bass
-        \partCombine
-          {
-            \global
-            \partial 4 \TenorVerseMusic
-          }
-          {
-            \global
-            \partial 4 \BassVerseMusic
+            \BassVerseMusic
           }
       >>
     >>

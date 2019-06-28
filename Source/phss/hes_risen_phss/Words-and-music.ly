@@ -9,7 +9,7 @@
 global = {
   \key d \major
   \time 3/4
-  \tempo 4 = 102
+  \tempo 4 = 94
 }
 
 MajorKey = ##t
