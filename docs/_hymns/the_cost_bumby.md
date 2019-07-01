@@ -6,10 +6,7 @@ hymnal: Bumby
 status: prepared
 access: private
 navButton: Hymns
-github_issue: 75
 date: 2018-10-09
-products:
-- review
 poetry_elements: {
     meter: "8.6.8.6.4.6",
     poet: "M. W. Bassford"

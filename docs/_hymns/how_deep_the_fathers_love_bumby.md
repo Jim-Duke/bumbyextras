@@ -6,9 +6,6 @@ hymnal: Bumby
 status: prepared
 access: private
 navButton: Hymns
-github_issue: 96
-products:
-  - review
 poetry_elements: {
     meter: "Irregular",
     poet: "Stuart Townend (1995)"

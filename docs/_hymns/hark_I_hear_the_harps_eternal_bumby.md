@@ -5,10 +5,6 @@ title: Hark! I Hear the Harps Eternal
 hymnal: Bumby
 status: published
 access: public
-github_issue: 7
-products:
-- published
-- review
 navButton: Hymns
 poetry_elements: {
     meter: "8.7.8.7",

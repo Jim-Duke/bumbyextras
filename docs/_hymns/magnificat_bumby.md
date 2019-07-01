@@ -5,10 +5,6 @@ title: Magnificat
 hymnal: Bumby
 status: published
 access: private
-github_issue: 12
-products:
-- published
-- review
 navButton: Hymns
 poetry_elements: {
     poet: "Randy Gill"

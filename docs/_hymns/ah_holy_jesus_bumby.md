@@ -5,11 +5,7 @@ title: Ah Holy Jesus
 hymnal: Bumby
 status: published
 access: public
-github_issue: 9
 navButton: Hymns
-products:
-- published
-- review
 poetry_elements: {
     meter: "11.11.11.5",
     poet: "Johann Heermann (1630)",

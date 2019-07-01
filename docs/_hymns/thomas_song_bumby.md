@@ -6,10 +6,7 @@ hymnal: Bumby
 status: prepared
 access: private
 navButton: Hymns
-github_issue: 70
 date: 2018-10-09
-products:
-- review
 poetry_elements: {
     meter: "Irregular",
     poet: "Ken Young"

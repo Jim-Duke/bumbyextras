@@ -7,9 +7,6 @@ status: prepared
 access: private
 navButton: Hymns
 date: 2018-09-28
-github_issue: 65
-products:
-- review
 poetry_elements: {
     meter: "8.8.8.8.8.8",
     poet: "John Ellerton (1858, expanded 1867)"

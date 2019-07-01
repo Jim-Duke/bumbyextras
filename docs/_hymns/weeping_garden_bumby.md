@@ -6,9 +6,6 @@ hymnal: Bumby
 status: prepared
 access: private
 navButton: Hymns
-github_issue: 94
-products:
-  - review
 poetry_elements: {
     meter: "9.9.9.9",
     poet: "Jon Gardner (2016)"

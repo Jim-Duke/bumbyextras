@@ -5,10 +5,6 @@ title: Just For Today
 hymnal: Bumby
 status: published
 access: private
-github_issue: 26
-products:
-- published
-- review
 navButton: Hymns
 poetry_elements: {
     meter: "7.7.7.7 with Chorus",

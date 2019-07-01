@@ -5,10 +5,6 @@ title: How Beautiful
 hymnal: Bumby
 status: published
 access: private
-github_issue: 4
-products:
-- published
-- review
 navButton: Hymns
 poetry_elements: {
     meter: "8.8.8.8 with Chorus",

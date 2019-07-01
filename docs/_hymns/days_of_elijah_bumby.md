@@ -6,9 +6,6 @@ hymnal: Bumby
 status: prepared
 access: private
 navButton: Hymns
-github_issue: 52
-products:
-- review
 poetry_elements: {
     meter: "Irregular",
     poet: "Robin Mark"

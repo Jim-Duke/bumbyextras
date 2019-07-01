@@ -6,10 +6,7 @@ hymnal: Bumby
 status: prepared
 access: private
 navButton: Hymns
-github_issue: 64
 date: 2018-10-05
-products:
-- review
 poetry_elements: {
     meter: "8.7.8.7.8.7",
     poet: "Liturgy of St. James (c 350)",

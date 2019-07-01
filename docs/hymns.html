@@ -3,49 +3,9 @@ layout: default
 title: Hymns in Bumby Hymnal Project
 navButton: Hymns
 ---
-{%- assign published=site.hymns | where: "status", "published" -%}
-{%- assign prepared=site.hymns | where: "status", "prepared" -%}
-{%- assign proposed=site.hymns | where: "status", "proposed" -%}
 <div class="container w-100">
-  <h2 class="text-center font-weight-bold">Published</h2>
 {%- assign i = 0 -%}
-{%- for hymn in published -%}
-{%- if i == 0 -%}
-  <div class="row">
-{%- endif -%}
-    <div class="col-sm-4 mb-4">
-{% include hymn_card_small.html hymn=hymn %}
-    </div>
-{%- assign i = i | plus: 1 -%}
-{%- if i == 3 -%}
-  </div>
-{%- assign i=0 -%}
-{%- endif -%}
-{%- endfor -%}
-{%- if i != 0 -%}
-  </div>
-{%- endif -%}
-  <h2 class="text-center font-weight-bold">New - In Review</h2>
-{%- assign i = 0 -%}
-{%- for hymn in prepared -%}
-{%- if i == 0 -%}
-  <div class="row">
-{%- endif -%}
-    <div class="col-sm-4 mb-4">
-{% include hymn_card_small.html hymn=hymn %}
-    </div>
-{%- assign i = i | plus: 1 -%}
-{%- if i == 3 -%}
-  </div>
-{%- assign i=0 -%}
-{%- endif -%}
-{%- endfor -%}
-{%- if i != 0 -%}
-  </div>
-{%- endif -%}
-  <h2 class="text-center font-weight-bold">Requested</h2>
-{%- assign i = 0 -%}
-{%- for hymn in proposed -%}
+{%- for hymn in site.hymns -%}
 {%- if i == 0 -%}
   <div class="row">
 {%- endif -%}

@@ -5,10 +5,6 @@ title: Abide With Me
 hymnal: Bumby
 status: published
 access: public
-github_issue: 18
-products:
-- published
-- review
 synopsis: This version of Abide With Me includes 6 of the original 8 verses.
 navButton: Hymns
 poetry_elements: {

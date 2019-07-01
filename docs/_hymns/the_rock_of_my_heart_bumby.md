@@ -6,10 +6,7 @@ hymnal: Bumby
 status: prepared
 access: private
 navButton: Hymns
-github_issue: 68
 date: 2018-10-07
-products:
-- review
 poetry_elements: {
     meter: "9.8.10.8 D",
     poet: "Matthew Bassford from Psalm 73"

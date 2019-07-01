@@ -11,27 +11,6 @@ no thumbnail, we'll use a generic box with the name of the hymn in it.
 {%- endcomment -%}
 {%- assign hymn=include.hymn -%}
 {%- assign id=hymn.hymn_id -%}
-{%- if hymn.products -%}
-{%- assign products_available=true -%}
-{%- if hymn.products contains 'published' -%}
-{%- assign location="published" -%}
-{%- else -%}
-{%- assign location="review" -%}
-{%- endif -%}
-{%- else -%}
-{%- assign products_available=nil -%}
-{%- endif -%}
-{%- if hymn.products and hymn.products contains 'published' and hymn.products contains 'review' -%}
-{%- assign updates_available=true -%}
-{%- else -%}
-{%- assign updates_available=nil -%}
-{%- endif -%}
-{%- assign reviews=(site.reviews | where: "hymn_id", hymn.hymn_id) -%}
-{%- if reviews.size > 0 -%}
-{%- assign reviews_available=true -%}
-{%- else -%}
-{%- assign reviews_available=nil -%}
-{%- endif -%}
 {%- assign research=(site.research | where: "hymn_id", hymn.hymn_id) -%}
 {%- if research.size > 0 -%}
 {%- assign research_available=true -%}
@@ -52,16 +31,6 @@ no thumbnail, we'll use a generic box with the name of the hymn in it.
 <a href="{{ hymn.url | relative_url }}" class="card border shadow border-dark bg-color-1 rounded"
 style="max-width: 18rem; color: inherit; text-decoration: none;">
   <img class="card-img-top"
-{%- if products_available -%}
-src="{{ site.baseurl }}/Source/public/{{ location }}/{{ id }}/{{ id }}_slides_thumbnail.png"
-{%- else -%}
-src="{{ site.baseurl }}/assets/images/blank_slide.jpg"
-{%- endif -%}
+src="{{ site.baseurl }}/Source/public/{{ id }}/{{ id }}_slides_thumbnail.png"
 alt="{{ hymn.title }} Slides"/>
-{%- unless products_available -%}
-  <div class="card-img-overlay text-center">
-    <h5 class="mt-4 font-weight-bold">{{ hymn.title }}</h5>
-    <h6>Requested</h6>
-  </div>
-{%- endunless -%}
 </a>

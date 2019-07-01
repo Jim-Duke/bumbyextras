@@ -6,10 +6,7 @@ hymnal: Bumby
 status: prepared
 access: private
 navButton: Hymns
-github_issue: 89
 date: 2018-10-07
-products:
-- review
 poetry_elements: {
     meter: "Irregular",
     poet: "Matt and Beth Redman"

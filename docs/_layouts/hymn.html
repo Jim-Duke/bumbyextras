@@ -2,22 +2,6 @@
 layout: default
 ---
 {%- assign id=page.hymn_id -%}
-{%- if page.products -%}
-{%- assign products_available=true -%}
-{%- else -%}
-{%- assign products_available=nil -%}
-{%- endif -%}
-{%- if page.products and page.products contains 'published' and page.products contains 'review' -%}
-{%- assign updates_available=true -%}
-{%- else -%}
-{%- assign updates_available=nil -%}
-{%- endif -%}
-{%- assign reviews=site.reviews | where: "hymn_id", page.hymn_id -%}
-{%- if reviews.size > 0 -%}
-{%- assign reviews_available=true -%}
-{%- else -%}
-{%- assign reviews_available=nil -%}
-{%- endif -%}
 {%- assign research=site.research | where: "hymn_id", page.hymn_id -%}
 {%- if research.size > 0 -%}
 {%- assign research_available=true -%}
@@ -45,17 +29,10 @@ layout: default
       <li class="nav-item border">
         <a class="nav-link" id="{{ id }}_info_tab" data-toggle="tab" href="#{{ id }}_info" role="tab" aria-controls="info" aria-selected="true">Info</a>
       </li>
-{%- if products_available -%}
       <li class="nav-item border">
         <a class="nav-link" id="{{ id }}_products_tab" data-toggle="tab" href="#{{ id }}_products" role="tab" aria-controls="products" aria-selected="true">Products</a>
       </li>
-{%- endif -%}
-{%- if updates_available -%}
-      <li class="nav-item border">
-        <a class="nav-link" id="{{ id }}_updates_tab" data-toggle="tab" href="#{{ id }}_updates" role="tab" aria-controls="updates" aria-selected="true">Updates</a>
-      </li>
-{%- endif -%}
-{%- if reviews_available or research_available or articles_available or external_available or page.github_issue -%}
+{%- if research_available or articles_available or external_available or page.github_issue -%}
       <li class="nav-item border">
         <a class="nav-link" id="{{ id }}_related_tab" data-toggle="tab" href="#{{ id }}_related" role="tab" aria-controls="related" aria-selected="true">Related</a>
       </li>
@@ -195,27 +172,21 @@ layout: default
           </div>
         </div>
       </div>
-{%- if products_available -%}
       <div class="tab-pane fade container-fluid" id="{{ id }}_products" role="tabpanel" aria-labelledby="{{ id }}_products_tab">
-{%- if page.products contains 'published' -%}
-{%- assign location="published" -%}
-{%- else -%}
-{%- assign location="review" -%}
-{%- endif -%}
         <div class="row">
           <div class="col-sm-4">
             <div class="list-group">
               <h2 class="list-item" style="width: 100%; text-align: center;">Sheet Music</h2>
-              <a class="list-item mx-auto border shadow-lg bg-light m-1 p-2" href="{{ site.baseurl }}/Source/{{ page.access }}/{{ location }}/{{ page.hymn_id }}/{{ page.hymn_id }}_sheet_music.pdf">
-                <img src="{{ site.baseurl }}/Source/public/{{ location }}/{{ page.hymn_id }}/{{ page.hymn_id }}_sheet_music_thumbnail.png" alt="{{ page.title }} Sheet Music" width=300/>
+              <a class="list-item mx-auto border shadow-lg bg-light m-1 p-2" href="{{ site.baseurl }}/Source/{{ page.access }}/{{ page.hymn_id }}/{{ page.hymn_id }}_sheet_music.pdf">
+                <img src="{{ site.baseurl }}/Source/public/{{ page.hymn_id }}/{{ page.hymn_id }}_sheet_music_thumbnail.png" alt="{{ page.title }} Sheet Music" width=300/>
               </a>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="list-group">
               <h2 class="list-item" style="width: 100%; text-align: center;">Slides</h2>
-              <a class="list-item mx-auto border shadow-lg bg-light m-1 p-2" href="{{ site.baseurl }}/Source/{{ page.access }}/{{ location }}/{{ page.hymn_id }}/{{ page.hymn_id }}_slides.pdf">
-                <img src="{{ site.baseurl }}/Source/public/{{ location }}/{{ page.hymn_id }}/{{ page.hymn_id }}_slides_thumbnail.png" alt="{{ page.title }} Slides" width=300/>
+              <a class="list-item mx-auto border shadow-lg bg-light m-1 p-2" href="{{ site.baseurl }}/Source/{{ page.access }}/{{ page.hymn_id }}/{{ page.hymn_id }}_slides.pdf">
+                <img src="{{ site.baseurl }}/Source/public/{{ page.hymn_id }}/{{ page.hymn_id }}_slides_thumbnail.png" alt="{{ page.title }} Slides" width=300/>
               </a>
             </div>
           </div>
@@ -225,27 +196,27 @@ layout: default
               <div class="list-item list-group border shadow-lg bg-light m-1 p-2">
                 <h4 class="list-item mt-2">All:</h4>
                 <audio class="list-item" controls>
-                  <source src="{{ site.baseurl }}/Source/public/{{ location }}/{{ page.hymn_id }}/{{ page.hymn_id }}_audio_all.mp3" type="audio/mpeg">
+                  <source src="{{ site.baseurl }}/Source/public/{{ page.hymn_id }}/{{ page.hymn_id }}_audio_all.mp3" type="audio/mpeg">
                   Your browser does not support this audio element
                 </audio>
                 <h4 class="list-item mt-2">Soprano:</h4>
                 <audio class="list-item" controls>
-                  <source src="{{ site.baseurl }}/Source/public/{{ location }}/{{ page.hymn_id }}/{{ page.hymn_id }}_audio_soprano.mp3" type="audio/mpeg">
+                  <source src="{{ site.baseurl }}/Source/public/{{ page.hymn_id }}/{{ page.hymn_id }}_audio_soprano.mp3" type="audio/mpeg">
                   Your browser does not support this audio element
                 </audio>
                 <h4 class="list-item mt-2">Alto:</h4>
                 <audio class="list-item" controls>
-                  <source src="{{ site.baseurl }}/Source/public/{{ location }}/{{ page.hymn_id }}/{{ page.hymn_id }}_audio_alto.mp3" type="audio/mpeg">
+                  <source src="{{ site.baseurl }}/Source/public/{{ page.hymn_id }}/{{ page.hymn_id }}_audio_alto.mp3" type="audio/mpeg">
                   Your browser does not support this audio element
                 </audio>
                 <h4 class="list-item mt-2">Tenor:</h4>
                 <audio class="list-item" controls>
-                  <source src="{{ site.baseurl }}/Source/public/{{ location }}/{{ page.hymn_id }}/{{ page.hymn_id }}_audio_tenor.mp3" type="audio/mpeg">
+                  <source src="{{ site.baseurl }}/Source/public/{{ page.hymn_id }}/{{ page.hymn_id }}_audio_tenor.mp3" type="audio/mpeg">
                   Your browser does not support this audio element
                 </audio>
                 <h4 class="list-item mt-2">Bass:</h4>
                 <audio class="list-item" controls>
-                  <source src="{{ site.baseurl }}/Source/public/{{ location }}/{{ page.hymn_id }}/{{ page.hymn_id }}_audio_bass.mp3" type="audio/mpeg">
+                  <source src="{{ site.baseurl }}/Source/public/{{ page.hymn_id }}/{{ page.hymn_id }}_audio_bass.mp3" type="audio/mpeg">
                   Your browser does not support this audio element
                 </audio>
               </div>
@@ -253,62 +224,7 @@ layout: default
           </div>
         </div>
       </div>
-{%- endif -%}
-{%- if updates_available -%}
-      <div class="tab-pane fade container-fluid" id="{{ id }}_updates" role="tabpanel" aria-labelledby="{{ id }}_updates_tab">
-        <div class="row">
-          <div class="col-sm-4">
-            <div class="list-group">
-              <h2 class="list-item" style="width: 100%; text-align: center;">Sheet Music</h2>
-              <a class="list-item mx-auto border shadow-lg bg-light m-1 p-2" href="{{ site.baseurl }}/Source/{{ page.access }}/review/{{ page.hymn_id }}/{{ page.hymn_id }}_sheet_music.pdf">
-                <img src="{{ site.baseurl }}/Source/public/review/{{ page.hymn_id }}/{{ page.hymn_id }}_sheet_music_thumbnail.png" alt="{{ page.title }} Sheet Music" width=300/>
-              </a>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="list-group">
-              <h2 class="list-item" style="width: 100%; text-align: center;">Slides</h2>
-              <a class="list-item mx-auto border shadow-lg bg-light m-1 p-2" href="{{ site.baseurl }}/Source/{{ page.access }}/review/{{ page.hymn_id }}/{{ page.hymn_id }}_slides.pdf">
-                <img src="{{ site.baseurl }}/Source/public/review/{{ page.hymn_id }}/{{ page.hymn_id }}_slides_thumbnail.png" alt="{{ page.title }} Slides" width=300/>
-              </a>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="list-group">
-              <h2 class="list-item" style="width: 100%; text-align: center;">Practice MP3s</h2>
-              <div class="list-item list-group border shadow-lg bg-light m-1 p-2">
-                <h4 class="list-item mt-2">All:</h4>
-                <audio class="list-item" controls>
-                  <source src="{{ site.baseurl }}/Source/public/review/{{ page.hymn_id }}/{{ page.hymn_id }}_audio_all.mp3" type="audio/mpeg">
-                  Your browser does not support this audio element
-                </audio>
-                <h4 class="list-item mt-2">Soprano:</h4>
-                <audio class="list-item" controls>
-                  <source src="{{ site.baseurl }}/Source/public/review/{{ page.hymn_id }}/{{ page.hymn_id }}_audio_soprano.mp3" type="audio/mpeg">
-                  Your browser does not support this audio element
-                </audio>
-                <h4 class="list-item mt-2">Alto:</h4>
-                <audio class="list-item" controls>
-                  <source src="{{ site.baseurl }}/Source/public/review/{{ page.hymn_id }}/{{ page.hymn_id }}_audio_alto.mp3" type="audio/mpeg">
-                  Your browser does not support this audio element
-                </audio>
-                <h4 class="list-item mt-2">Tenor:</h4>
-                <audio class="list-item" controls>
-                  <source src="{{ site.baseurl }}/Source/public/review/{{ page.hymn_id }}/{{ page.hymn_id }}_audio_tenor.mp3" type="audio/mpeg">
-                  Your browser does not support this audio element
-                </audio>
-                <h4 class="list-item mt-2">Bass:</h4>
-                <audio class="list-item" controls>
-                  <source src="{{ site.baseurl }}/Source/public/review/{{ page.hymn_id }}/{{ page.hymn_id }}_audio_bass.mp3" type="audio/mpeg">
-                  Your browser does not support this audio element
-                </audio>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-{%- endif -%}
-{%- if reviews_available or research_available or articles_available or external_available or page.github_issue -%}
+{%- if research_available or articles_available or external_available or page.github_issue -%}
       <div class="tab-pane fade" id="{{ id }}_related" role="tabpanel" aria-labelledby="{{ id }}_related_tab">
 {%- if articles_available -%}
         <h4>{{ articles.size }}{% if articles.size == 1 %} article{% else %} articles{% endif %} related to this hymn {% if articles.size == 1 %}is{% else %}are{% endif %} available:</h4>
@@ -325,12 +241,6 @@ layout: default
           <li><a href="{{ external_resource.url }}">{{ external_resource.name }}</a></li>
 {%- endfor -%}
         </ul>
-{%- endif -%}
-{%- if page.github_issue -%}
-        <a class="btn btn-info" href="https://github.com/{{ site.github_project.owner }}/{{ site.github_project.project }}/issues/{{ page.github_issue }}">GitHub Issue</a>
-{%- endif -%}
-{%- if reviews_available -%}
-        <a class="btn btn-info" href="{{ reviews[0].url | relative_url }}">Review Page</a>
 {%- endif -%}
 {%- if research_available -%}
         <a class="btn btn-info" href="{{ research[0].url | relative_url }}">Research Page</a>

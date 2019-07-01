@@ -6,9 +6,6 @@ hymnal: Bumby
 status: prepared
 access: public
 navButton: Hymns
-github_issue: 76
-products:
-- review
 date: 2018-09-27
 poetry_elements: {
     meter: "11.11.11.11",

@@ -1,7 +1,7 @@
 \version "2.19.49"
 
 \include "Words-and-music.ly"
-\include "../../../LilypondTemplates/midi.ly"
+\include "../../../../LilypondTemplates/midi.ly"
 
 \book {
   \bookOutputName "Audio_all"

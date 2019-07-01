@@ -5,10 +5,6 @@ title: My Shepherd Will Supply My Need
 hymnal: Bumby
 status: published
 access: public
-github_issue: 1
-products:
-- published
-- review
 navButton: Hymns
 poetry_elements: {
     meter: "CM",

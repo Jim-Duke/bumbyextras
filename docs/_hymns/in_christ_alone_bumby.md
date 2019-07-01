@@ -5,10 +5,6 @@ title: In Christ Alone
 hymnal: Bumby
 status: published
 access: private
-github_issue: 3
-products:
-- published
-- review
 navButton: Hymns
 poetry_elements: {
     meter: "LMD",

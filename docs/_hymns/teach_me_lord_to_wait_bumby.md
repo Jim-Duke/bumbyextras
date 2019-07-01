@@ -5,10 +5,6 @@ title: Teach Me Lord To Wait
 hymnal: Bumby
 status: published
 access: private
-github_issue: 2
-products:
-- published
-- review
 navButton: Hymns
 poetry_elements: {
     poet: "Stuart Hamblen (1953)"

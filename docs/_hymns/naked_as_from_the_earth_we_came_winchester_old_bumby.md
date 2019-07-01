@@ -6,10 +6,7 @@ hymnal: Bumby
 status: prepared
 access: public
 navButton: Hymns
-github_issue: 91
 date: 2018-10-16
-products:
-- review
 poetry_elements: {
     meter: "CM",
     poet: "Isaac Watts (1707)"

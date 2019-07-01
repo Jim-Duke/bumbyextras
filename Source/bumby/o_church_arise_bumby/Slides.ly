@@ -4,7 +4,7 @@
 
 SlideStaffStaffSpacing = #16
 
-\include "../../../LilypondTemplates/standard-elements.ly"
+\include "../../../../LilypondTemplates/standard-elements.ly"
 
 VerseTitleMarkup = \markup {
     \fill-line {

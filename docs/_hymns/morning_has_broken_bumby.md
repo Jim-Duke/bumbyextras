@@ -6,10 +6,7 @@ hymnal: Bumby
 status: prepared
 access: private
 navButton: Hymns
-github_issue: 90
 date: 2018-10-10
-products:
-- review
 poetry_elements: {
     meter: "5.5.5.4 D",
     poet: "Eleanor Farjeon (1931)"

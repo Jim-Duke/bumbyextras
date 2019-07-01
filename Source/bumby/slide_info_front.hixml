@@ -1,4 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contents xmlns="http://rjstevensmusic.com/PresentationCreator/Schema/HymnalInformation.xsd">
+<contents xmlns="http://schema.PresentationCreator.net/HymnalInformation.xsd">
   <hymnal>
     <name>Bumby Supplemental Hymnal</name>
+    <alias>BMBY</alias>
+    <electronicVersion>1.2.0.0</electronicVersion>

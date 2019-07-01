@@ -5,9 +5,6 @@ title: Bright Canaan
 hymnal: Bumby
 status: prepared
 access: public
-github_issue: 92
-products:
-- review
 navButton: Hymns
 poetry_elements: {
     meter: "8.9.8.9.Ref", 

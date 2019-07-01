@@ -51,9 +51,6 @@ collections:
   hymns:
     output: true
     permalink: /hymns/:path/
-  reviews:
-    output: true
-    permalink: /reviews/:path/
   research:
     output: true
     permalink: /research/:path/

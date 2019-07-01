@@ -6,10 +6,7 @@ hymnal: Bumby
 status: prepared
 access: private
 navButton: Hymns
-github_issue: 66
 date: 2018-10-06
-products:
-- review
 poetry_elements: {
     meter: "8.4.8.4.8.4",
     poet: "Adelaide Anne Proctor (1858)"

@@ -6,10 +6,7 @@ hymnal: Bumby
 status: prepared
 access: public
 navButton: Hymns
-github_issue: 67
 date: 2018-10-06
-products:
-- review
 poetry_elements: {
     meter: "7.6.7.6 D",
     poet: "Bernard of Claivaux (attributed), Arnulf, Abbot of Villers-la-Ville (attributed)",

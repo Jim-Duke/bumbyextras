@@ -8,8 +8,8 @@
 PROD_BASE_NAME = abide_with_me_bumby
 STATUS = review
 ACCESS = public
-SLIDE_NAME = ABIDE\ WITH\ ME
-HYMN_NUMBER = B-004
+SLIDE_NAME = Abide\ With\ Me
+HYMN_NUMBER = 2004
 ROOT_DIR = $(realpath ../../..)
 
 include ../common.mk
@@ -29,31 +29,31 @@ prod:	$(PROD_SHEET_MUSIC) \
 local: Sheet-Music.pdf Slides.pdf $(MIDI_FILES)
 
 slides: $(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ TITLE.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 1.1.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 1.2.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 1.3.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 1.4.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 2.1.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 2.2.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 2.3.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 2.4.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 3.1.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 3.2.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 3.3.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 3.4.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 4.1.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 4.2.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 4.3.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 4.4.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 5.1.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 5.2.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 5.3.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 5.4.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 6.1.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 6.2.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 6.3.png \
-	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 6.4.png \
-	$(SLIDE_DIR)/hymn_info.hixml
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 1.1.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 1.2.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 1.3.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 1.4.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 2.1.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 2.2.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 2.3.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 2.4.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 3.1.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 3.2.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 3.3.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 3.4.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 4.1.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 4.2.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 4.3.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 4.4.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 5.1.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 5.2.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 5.3.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 5.4.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 6.1.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 6.2.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 6.3.png \
+	$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 6.4.png \
+	$(SLIDE_DIR)/Information.hixml
 
 clean:
 	-rm *.pdf
@@ -150,77 +150,77 @@ $(SLIDE_DIR):
 $(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ TITLE.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[0] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 1.1.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 1.1.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[1] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 1.2.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 1.2.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[2] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 1.3.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 1.3.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[3] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 1.4.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 1.4.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[4] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 2.1.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 2.1.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[5] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 2.2.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 2.2.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[6] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 2.3.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 2.3.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[7] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 2.4.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 2.4.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[8] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 3.1.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 3.1.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[9] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 3.2.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 3.2.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[10] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 3.3.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 3.3.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[11] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 3.4.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 3.4.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[12] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 4.1.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 4.1.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[13] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 4.2.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 4.2.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[14] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 4.3.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 4.3.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[15] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 4.4.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 4.4.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[16] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 5.1.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 5.1.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[17] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 5.2.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 5.2.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[18] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 5.3.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 5.3.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[19] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 5.4.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 5.4.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[20] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 6.1.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 6.1.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[21] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 6.2.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 6.2.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[22] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 6.3.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 6.3.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[23] '$@'
 
-$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ 6.4.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
+$(SLIDE_DIR)/$(HYMN_NUMBER)\ -\ $(SLIDE_NAME)\ -\ VERSE\ 6.4.png: $(SLIDE_DIR) $(PROD_SLIDES_MUSIC)
 	convert -thumbnail $(SLIDE_RESOLUTION) -background white -alpha remove $(PROD_SLIDES_MUSIC)[24] '$@'
 
-$(SLIDE_DIR)/hymn_info.hixml: $(SLIDE_DIR) hymn_info.hixml
-	cp hymn_info.hixml $@
+$(SLIDE_DIR)/Information.hixml: $(SLIDE_DIR) hymn_info.hixml
+	cat ../slide_info_front.hixml hymn_info.hixml ../slide_info_back.hixml > $@

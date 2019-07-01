@@ -1,0 +1,23 @@
+﻿    <hymn number="2028" title="All Glory Laud and Honor">
+      <songLeaderInfo beatPattern="4" key="C" startingPitch="DO" time="4/4" startingBeat="4" />
+      <originator name="Melchior Teschner (1615)" role="Composer" type="Individual" />
+      <originator name="William H. Monk (1861)" role="Arranger" type="Individual" />
+      <originator name="Theodulph of Orleans (c. 820)" role="Lyricist" type="Individual" />
+      <originator name="John Mason Neale (1861)" role="Translator" type="Individual" />
+      <topicalIndex>Opening Hymns</topicalIndex>
+      <topicalIndex>Praise</topicalIndex>
+      <scripture>John 12:12-13</scripture>
+      <scripture>Matthew 21:1-17</scripture>
+      <scripture>Mark 11:1-10</scripture>
+      <scripture>Luke 19:28-38</scripture>
+      <scripture>Revelation 5:11-12</scripture>
+      <hymnPortion portion="Verse 1">
+        <text>All glory, laud, and honor To Thee, Redeemer, King! To whom the lips of children Made sweet hosannas ring, Thou art the King of Israel, Thou David's royal son, Who in the Lord's name comest, The King and Blessed One.</text>
+      </hymnPortion>
+      <hymnPortion portion="Verse 2">
+        <text>The company of angels Are praising Thee on high, And mortal men, and all things Created make reply The people of the Hebrews With palms before Thee went Our praise and prayer and anthems Before Thee we present</text>
+      </hymnPortion>
+      <hymnPortion portion="Verse 3">
+        <text>To Thee before Thy passion They sang their hymns of praise; To Thee no high exalted Our melody we raise Thou didst accept their praises; Accept the prayer we bring, Who in all good delightest, Thou good and gracious King.</text>
+      </hymnPortion>
+    </hymn>

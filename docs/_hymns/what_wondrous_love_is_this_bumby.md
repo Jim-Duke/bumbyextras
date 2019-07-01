@@ -5,9 +5,6 @@ title: What Wondrous Love Is This
 hymnal: Bumby
 status: prepared
 access: public
-github_issue: 93
-products:
-- review
 navButton: Hymns
 poetry_elements: {
     meter: "12.9.6.6.12.9",

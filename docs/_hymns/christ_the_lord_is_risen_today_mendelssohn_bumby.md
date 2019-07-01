@@ -5,10 +5,6 @@ title: Christ the Lord is Risen Today
 hymnal: Bumby
 status: published
 access: public
-github_issue: 10
-products:
-- published
-- review
 navButton: Hymns
 poetry_elements: {
     meter: "7.7.7.7.D with refrain",

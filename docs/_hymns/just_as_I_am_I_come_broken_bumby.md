@@ -5,10 +5,6 @@ title: Just As I Am - I Come Broken
 hymnal: Bumby
 status: published
 access: private
-github_issue: 8
-products:
-- published
-- review
 navButton: Hymns
 poetry_elements: {
     poet: "Charlotte Elliott, David Moffit, Sue C. Smith, Travis Cottrell, William Batchelder Bradbury"

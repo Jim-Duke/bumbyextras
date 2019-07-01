@@ -6,9 +6,6 @@ title: Be Thou My Vision
 hymnal: Bumby
 status: prepared
 access: private
-github_issue: 55
-products:
-- review
 poetry_elements: {
     meter: "10.10.9.10",
     poet: "Irish Fok Hymn (c. 750)",

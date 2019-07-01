@@ -1,7 +1,25 @@
-﻿    <hymn number="B-004" title="Abide With Me (additional verses)">
+﻿    <hymn number="2004" title="Abide With Me (additional verses)">
       <songLeaderInfo beatPattern="4" key="Eb" startingPitch="MI" time="4/4" startingBeat="1" />
-      <originator name="Henry F. Lyte, 1847" role="Writer" type="Individual" />
+      <originator name="Henry F. Lyte, 1847" role="Lyricist" type="Individual" />
       <originator name="Wm. H. Monk, 1861" role="Composer" type="Individual" />
       <scripture>Luke 24:29</scripture>
       <scripture>1 Corinthians 15:55-57</scripture>
+      <hymnPortion portion="Verse 1">
+        <text>Abide with me! fast falls the eventide; The darkness deepens: Lord, with me abide!  When other helpers fail, and comforts flee, Help of the helpless, O abide with me!</text>
+      </hymnPortion>
+      <hymnPortion portion="Verse 2">
+        <text>Swift to its close ebbs out life's little day; Earth's joys grow dim, its glories pass away; Change and decay in all around I see; O Thou who changest not, abide with me!</text>
+      </hymnPortion>
+      <hymnPortion portion="Verse 3">
+        <text>Come not in terrors as the King of kings, But kind and good, with healing in Thy wings; Tears for all woes, a heart for ev'ry plea; O Friend of sinners, thus abide with me!</text>
+      </hymnPortion>
+      <hymnPortion portion="Verse 4">
+        <text>I need Thy presence every passing hour: What but Thy grace can foil the tempter's pow'r?  Who, like Thyself, my guide and stay can be?  Through cloud and sunshine, O abide with me!</text>
+      </hymnPortion>
+      <hymnPortion portion="Verse 5">
+        <text>I fear no foe, with Thee at hand to bless: Ills have no weight, and tears no bitterness.  Where is death's sting? where, grave, thy victory?  I triumph still, if Thou abide with me!</text>
+      </hymnPortion>
+      <hymnPortion portion="Verse 6">
+        <text>Hold Thou Thy Cross before my closing eyes, Shine through the gloom and point me to the skies; Heav'n's morning breaks, and earth's vain shadows flee; In life, in death, O Lord, abide with me!</text>
+      </hymnPortion>
     </hymn>
